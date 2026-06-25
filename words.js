@@ -1,0 +1,27304 @@
+// Hungarian-English vocabulary database
+// 4550 words from 5K.csv
+const wordDatabase = [
+  {
+    "h": "nem",
+    "e": "no; not",
+    "m": "Spoken like \"nem\".",
+    "i": "/nɛm/"
+  },
+  {
+    "h": "az",
+    "e": "the (before vowels); that",
+    "m": "Sounds like 'oz' — think 'The Wizard of OZ': 'az' is THE definite article.",
+    "i": "/ɒz/"
+  },
+  {
+    "h": "hogy",
+    "e": "that (conjunction); how",
+    "m": "'Hogy' (HOJ) — 'HOW + j' — used like English 'that': 'I think THAT...' / 'I know HOW...'. Same dual meaning, similar sound to 'how'.",
+    "i": "/hoɟ/"
+  },
+  {
+    "h": "és",
+    "e": "and",
+    "m": "Sounds like the start of 'ehs-and'. Cognate-free, but tiny — Hungarian's most basic glue word.",
+    "i": "/eːʃ/"
+  },
+  {
+    "h": "egy",
+    "e": "one; a / an",
+    "m": "'Egy' (edge) — there can only be ONE EDGE to start counting from. Also the indefinite article, like English 'a'.",
+    "i": "/ɛɟ/"
+  },
+  {
+    "h": "van",
+    "e": "is; there is",
+    "m": "'Van' = 'is'. Think: 'a VAN IS parked outside.' Hungarian 'van' = English 'is/exists'.",
+    "i": "/vɒn/"
+  },
+  {
+    "h": "ez",
+    "e": "this",
+    "m": "'Ez' rhymes with 'this' (both end -z/-s). 'Ez' = THIS; 'az' = THAT. The closer sound (ez) = the closer thing.",
+    "i": "/ɛz/"
+  },
+  {
+    "h": "is",
+    "e": "also; too",
+    "m": "Literally identical to English 'is', but means 'also'. Mnemonic: 'I IS also coming' — broken English, but you'll never forget it.",
+    "i": "/iʃ/"
+  },
+  {
+    "h": "meg",
+    "e": "and; also (verb prefix: completion)",
+    "m": "'Meg' = 'and MEG MORE'. Adds, joins, completes — like 'meg-eszik' (to eat UP completely).",
+    "i": "/mɛɡ/"
+  },
+  {
+    "h": "de",
+    "e": "but",
+    "m": "Same as French 'de' visually, but means 'BUT'. 'I'd go, DE I'm tired.' Two letters, hard stop — like 'but'.",
+    "i": "/dɛ/"
+  },
+  {
+    "h": "csak",
+    "e": "only; just",
+    "m": "'Csak' (CHOCK) — 'CHOCK full of ONLY one thing.' The 'cs' = 'ch' sound. Just / only / merely.",
+    "i": "/tʃɒk/"
+  },
+  {
+    "h": "mi",
+    "e": "what; we",
+    "m": "'Mi?' = 'What?' Sounds like 'me' — but it's 'WE' (us) AND 'WHAT'. Context decides. Italian 'mi' is 'me' — false friend.",
+    "i": "/mi/"
+  },
+  {
+    "h": "ha",
+    "e": "if",
+    "m": "'Ha' = 'IF'. Mnemonic: 'HA! IF only...' — the sarcastic laugh of conditionals.",
+    "i": "/hɒ/"
+  },
+  {
+    "h": "én",
+    "e": "I (pronoun)",
+    "m": "'Én' (AYN) sounds like the start of 'ANY-one' — and 'I' am ANY-one talking. Cognate with Finnish 'minä'.",
+    "i": "/eːn/"
+  },
+  {
+    "h": "azt",
+    "e": "that (accusative — 'that thing' as object)",
+    "m": "'Az' (that) + '-t' (object marker) = 'AZT' (that-thing-being-acted-on). 'I want AZT' = 'I want THAT.'",
+    "i": "/ɒzt/"
+  },
+  {
+    "h": "vagy",
+    "e": "or; you are",
+    "m": "'Vagy' (VOJ) — 'this OR that, VOJ a choice.' Also 'you are' (2nd person sing. of 'lenni'). Two meanings, same spelling.",
+    "i": "/vɒɟ/"
+  },
+  {
+    "h": "volt",
+    "e": "was; were (past of 'van')",
+    "m": "'Volt' — like a VOLT of electricity that already FIRED (past tense). Past of 'van' (is).",
+    "i": "/volt/"
+  },
+  {
+    "h": "igen",
+    "e": "yes",
+    "m": "'Igen' (EE-gen) — 'I-GEN-uinely agree.' Yes. The opposite of 'nem'.",
+    "i": "/iɡɛn/"
+  },
+  {
+    "h": "itt",
+    "e": "here",
+    "m": "'Itt' = 'IT is here.' Two T's plant it firmly in place — HERE, right where IT is.",
+    "i": "/itː/"
+  },
+  {
+    "h": "kell",
+    "e": "is needed; must",
+    "m": "'Kell' = 'KELL the call of duty' — what's needed, what must be done. 'Nekem kell' = 'I need'.",
+    "i": "/kɛlː/"
+  },
+  {
+    "h": "el",
+    "e": "away; off",
+    "m": "Spoken like \"el\".",
+    "i": "/ɛl/"
+  },
+  {
+    "h": "már",
+    "e": "already",
+    "m": "Spoken like \"már\".",
+    "i": "/maːr/"
+  },
+  {
+    "h": "ne",
+    "e": "don't (prohibitive)",
+    "m": "'Ne' = 'NO, don't' — softer than 'nem'. Used for commands: 'Ne menj!' = 'Don't go!' Cognate-feel with German 'ne'/'nein'.",
+    "i": "/nɛ/"
+  },
+  {
+    "h": "te",
+    "e": "you (singular, informal)",
+    "m": "'Te' = 'TE-ll me, YOU' — direct address. Same root as French 'tu', Spanish 'tú', Latin 'te'. Indo-European leak into Hungarian.",
+    "i": "/tɛ/"
+  },
+  {
+    "h": "még",
+    "e": "still; yet",
+    "m": "Spoken like \"még\".",
+    "i": "/meːɡ/"
+  },
+  {
+    "h": "ki",
+    "e": "who; out (verb prefix)",
+    "m": "'Ki?' = 'Who?' Sounds like 'key' — and WHO holds the KEY? Also means 'out' as a verb prefix: 'ki-megy' = 'go OUT'.",
+    "i": "/ki/"
+  },
+  {
+    "h": "mit",
+    "e": "what; we",
+    "m": "Spoken like \"meet\" — what.",
+    "i": "/mit/"
+  },
+  {
+    "h": "jó",
+    "e": "good",
+    "m": "'Jó' (YO) — 'YO, that's GOOD!' Casual approval. The most common positive word in Hungarian.",
+    "i": "/joː/"
+  },
+  {
+    "h": "vagyok",
+    "e": "or; you are",
+    "m": "Spoken like \"vadyok\" — or.",
+    "i": "/vɒɟok/"
+  },
+  {
+    "h": "ezt",
+    "e": "this",
+    "m": "Spoken like \"ezt\" — this.",
+    "i": "/ɛzt/"
+  },
+  {
+    "h": "most",
+    "e": "now",
+    "m": "Spoken like \"most\" — now.",
+    "i": "/moʃt/"
+  },
+  {
+    "h": "tudom",
+    "e": "I know",
+    "m": "Spoken like \"toodom\" — I know.",
+    "i": "/tudom/"
+  },
+  {
+    "h": "úgy",
+    "e": "so; that way",
+    "m": "'Úgy' (OOJ) — 'OOH-J, just SO.' 'Úgy van' = 'That's so / exactly.'",
+    "i": "/uːɟ/"
+  },
+  {
+    "h": "miért",
+    "e": "what; we",
+    "m": "Spoken like \"meeért\" — what.",
+    "i": "/mieːrt/"
+  },
+  {
+    "h": "mint",
+    "e": "what; we",
+    "m": "Spoken like \"meent\" — what.",
+    "i": "/mint/"
+  },
+  {
+    "h": "akkor",
+    "e": "then",
+    "m": "Spoken like \"akkor\" — then.",
+    "i": "/ɒkːor/"
+  },
+  {
+    "h": "jól",
+    "e": "well",
+    "m": "Spoken like \"jól\".",
+    "i": "/joːl/"
+  },
+  {
+    "h": "lesz",
+    "e": "will be (future of 'van')",
+    "m": "'Lesz' (LESS) — 'it will be LESS than before' (future tense of 'is'). Past = volt, present = van, future = lesz.",
+    "i": "/lɛs/"
+  },
+  {
+    "h": "nincs",
+    "e": "there isn't; there is no",
+    "m": "'Nincs' = 'NIN-ch' = 'NO inch of it.' The negative of 'van' (is). 'Nincs idő' = 'There's no time.'",
+    "i": "/nintʃ/"
+  },
+  {
+    "h": "nagyon",
+    "e": "very",
+    "m": "Spoken like \"nadyon\" — very.",
+    "i": "/nɒɟon/"
+  },
+  {
+    "h": "minden",
+    "e": "every; all",
+    "m": "'Minden' = 'MIND every thing.' Every, all. 'Minden nap' = 'every day.'",
+    "i": "/mindɛn/"
+  },
+  {
+    "h": "mert",
+    "e": "because",
+    "m": "'Mert' = 'MERIT' has a reason behind it. Because. 'Mert akarom' = 'because I want to.'",
+    "i": "/mɛrt/"
+  },
+  {
+    "h": "be",
+    "e": "into; in",
+    "m": "Spoken like \"be\" — into.",
+    "i": "/bɛ/"
+  },
+  {
+    "h": "rendben",
+    "e": "alright; ok",
+    "m": "Spoken like \"rendben\" — alright.",
+    "i": "/rɛndbɛn/"
+  },
+  {
+    "h": "le",
+    "e": "down (verb prefix)",
+    "m": "'Le' = 'LE-t it down.' Down. 'Le-megy' = 'goes DOWN'. Pair with 'fel' (up).",
+    "i": "/lɛ/"
+  },
+  {
+    "h": "sem",
+    "e": "neither; nor",
+    "m": "Spoken like \"sem\" — neither.",
+    "i": "/ʃɛm/"
+  },
+  {
+    "h": "amit",
+    "e": "what (relative, accusative)",
+    "m": "Spoken like \"ameet\".",
+    "i": "/ɒmit/"
+  },
+  {
+    "h": "olyan",
+    "e": "such; so",
+    "m": "Spoken like \"oyan\" — such.",
+    "i": "/ojɒn/"
+  },
+  {
+    "h": "ott",
+    "e": "there",
+    "m": "'Ott' (OAT) — 'OAT-meal is OVER THERE.' Pair: 'itt' (here, close) / 'ott' (there, far). Both double-T = locked in place.",
+    "i": "/otː/"
+  },
+  {
+    "h": "így",
+    "e": "this way; like this",
+    "m": "'Így' (EEJ) — pair with 'úgy'. 'Így' = THIS way (close), 'úgy' = THAT way (far). Same i-/u- close/far pattern as ez/az.",
+    "i": "/iːɟ/"
+  },
+  {
+    "h": "tudod",
+    "e": "knows; can",
+    "m": "Spoken like \"toodod\" — knows.",
+    "i": "/tudod/"
+  },
+  {
+    "h": "fel",
+    "e": "up (verb prefix)",
+    "m": "'Fel' = 'FELL... but UP'. Counterintuitive: it means UP. 'Fel-megy' = 'goes UP'. Opposite of 'le' (down).",
+    "i": "/fɛl/"
+  },
+  {
+    "h": "nekem",
+    "e": "don't",
+    "m": "Spoken like \"nekem\" — don't.",
+    "i": "/nɛkɛm/"
+  },
+  {
+    "h": "volna",
+    "e": "would (conditional auxiliary)",
+    "m": "Spoken like \"volna\".",
+    "i": "/volnɒ/"
+  },
+  {
+    "h": "oké",
+    "e": "okay",
+    "m": "Spoken like \"oké\".",
+    "i": "/okeː/"
+  },
+  {
+    "h": "maga",
+    "e": "today",
+    "m": "Spoken like \"maga\" — today.",
+    "i": "/mɒɡɒ/"
+  },
+  {
+    "h": "majd",
+    "e": "later; eventually",
+    "m": "'Majd' (MOID) — 'MAID will do it LATER.' Procrastination word. 'Majd holnap' = 'maybe tomorrow.'",
+    "i": "/mɒjd/"
+  },
+  {
+    "h": "valami",
+    "e": "something",
+    "m": "Spoken like \"valamee\".",
+    "i": "/vɒlɒmi/"
+  },
+  {
+    "h": "hát",
+    "e": "well (particle); back",
+    "m": "Spoken like \"hát\".",
+    "i": "/haːt/"
+  },
+  {
+    "h": "lehet",
+    "e": "down",
+    "m": "Spoken like \"lehet\" — down.",
+    "i": "/lɛhɛt/"
+  },
+  {
+    "h": "hol",
+    "e": "snow",
+    "m": "Spoken like \"hol\" — snow.",
+    "i": "/hol/"
+  },
+  {
+    "h": "talán",
+    "e": "maybe",
+    "m": "Spoken like \"talán\" — maybe.",
+    "i": "/tɒlaːn/"
+  },
+  {
+    "h": "mindig",
+    "e": "what; we",
+    "m": "Spoken like \"meendeeg\" — what.",
+    "i": "/mindiɡ/"
+  },
+  {
+    "h": "köszönöm",
+    "e": "thank you",
+    "m": "Spoken like \"kösönöm\".",
+    "i": "/køsønøm/"
+  },
+  {
+    "h": "semmi",
+    "e": "neither; nor",
+    "m": "Spoken like \"semmee\" — neither.",
+    "i": "/ʃɛmːi/"
+  },
+  {
+    "h": "kis",
+    "e": "who; out",
+    "m": "Spoken like \"kees\" — who.",
+    "i": "/kiʃ/"
+  },
+  {
+    "h": "aki",
+    "e": "who (relative)",
+    "m": "Spoken like \"akee\".",
+    "i": "/ɒki/"
+  },
+  {
+    "h": "hé",
+    "e": "hey",
+    "m": "Spoken like \"hé\".",
+    "i": "/heː/"
+  },
+  {
+    "h": "neki",
+    "e": "don't",
+    "m": "Spoken like \"nekee\" — don't.",
+    "i": "/nɛki/"
+  },
+  {
+    "h": "gyerünk",
+    "e": "come on; let's go",
+    "m": "Spoken like \"dyerünk\".",
+    "i": "/ɟɛrynk/"
+  },
+  {
+    "h": "neked",
+    "e": "don't",
+    "m": "Spoken like \"neked\" — don't.",
+    "i": "/nɛkɛd/"
+  },
+  {
+    "h": "uram",
+    "e": "sir; my lord",
+    "m": "Spoken like \"ooram\".",
+    "i": "/urɒm/"
+  },
+  {
+    "h": "amikor",
+    "e": "when",
+    "m": "Spoken like \"ameekor\".",
+    "i": "/ɒmikor/"
+  },
+  {
+    "h": "szóval",
+    "e": "so; with words",
+    "m": "Spoken like \"sóval\".",
+    "i": "/soːvɒl/"
+  },
+  {
+    "h": "hiszem",
+    "e": "I believe",
+    "m": "Spoken like \"heesem\".",
+    "i": "/hisɛm/"
+  },
+  {
+    "h": "ide",
+    "e": "here (to here)",
+    "m": "Spoken like \"eede\".",
+    "i": "/idɛ/"
+  },
+  {
+    "h": "valamit",
+    "e": "something (accusative)",
+    "m": "Spoken like \"valameet\".",
+    "i": "/vɒlɒmit/"
+  },
+  {
+    "h": "ami",
+    "e": "what; which (relative)",
+    "m": "Spoken like \"amee\".",
+    "i": "/ɒmi/"
+  },
+  {
+    "h": "vissza",
+    "e": "back; return",
+    "m": "Spoken like \"veessa\".",
+    "i": "/visːɒ/"
+  },
+  {
+    "h": "nagy",
+    "e": "big",
+    "m": "Spoken like \"nady\" — big.",
+    "i": "/nɒɟ/"
+  },
+  {
+    "h": "őket",
+    "e": "them (accusative)",
+    "m": "Spoken like \"őket\".",
+    "i": "/øːkɛt/"
+  },
+  {
+    "h": "tudja",
+    "e": "knows; can",
+    "m": "Spoken like \"toodja\" — knows.",
+    "i": "/tudjɒ/"
+  },
+  {
+    "h": "elég",
+    "e": "enough; quite",
+    "m": "Spoken like \"elég\".",
+    "i": "/ɛleːɡ/"
+  },
+  {
+    "h": "fog",
+    "e": "tooth",
+    "m": "Spoken like \"fog\" — tooth.",
+    "i": "/foɡ/"
+  },
+  {
+    "h": "rá",
+    "e": "onto him/her/it",
+    "m": "Spoken like \"rá\".",
+    "i": "/raː/"
+  },
+  {
+    "h": "tényleg",
+    "e": "really; truly",
+    "m": "Spoken like \"tényleg\".",
+    "i": "/teːɲlɛɡ/"
+  },
+  {
+    "h": "lenne",
+    "e": "down",
+    "m": "Spoken like \"lenne\" — down.",
+    "i": "/lɛnːɛ/"
+  },
+  {
+    "h": "milyen",
+    "e": "what; we",
+    "m": "Spoken like \"meeyen\" — what.",
+    "i": "/mijɛn/"
+  },
+  {
+    "h": "egész",
+    "e": "whole; entire",
+    "m": "Spoken like \"egés\".",
+    "i": "/ɛɡeːs/"
+  },
+  {
+    "h": "mr",
+    "e": "Mr",
+    "m": "Spoken like \"mr\".",
+    "i": "/mr/"
+  },
+  {
+    "h": "igaz",
+    "e": "true",
+    "m": "Spoken like \"eegaz\" — true.",
+    "i": "/iɡɒz/"
+  },
+  {
+    "h": "ember",
+    "e": "person; human; man",
+    "m": "'Ember' = think 'EMBER' — every human is a glowing ember of life. (No etymological link, but vivid.) Cognate with Finnish 'ihminen'? No — Uralic native word.",
+    "i": "/ɛmbɛr/"
+  },
+  {
+    "h": "biztos",
+    "e": "sure; certain",
+    "m": "Spoken like \"beeztos\" — sure.",
+    "i": "/biztoʃ/"
+  },
+  {
+    "h": "vele",
+    "e": "with him/her/it",
+    "m": "Spoken like \"vele\".",
+    "i": "/vɛlɛ/"
+  },
+  {
+    "h": "vannak",
+    "e": "is; there is",
+    "m": "Spoken like \"vannak\" — is.",
+    "i": "/vɒnːɒk/"
+  },
+  {
+    "h": "vagyunk",
+    "e": "or; you are",
+    "m": "Spoken like \"vadyoonk\" — or.",
+    "i": "/vɒɟunk/"
+  },
+  {
+    "h": "ma",
+    "e": "today",
+    "m": "Spoken like \"ma\" — today.",
+    "i": "/mɒ/"
+  },
+  {
+    "h": "sajnálom",
+    "e": "I'm sorry",
+    "m": "Spoken like \"sajnálom\".",
+    "i": "/ʃɒjnaːlom/"
+  },
+  {
+    "h": "ilyen",
+    "e": "such; like this",
+    "m": "Spoken like \"eeyen\".",
+    "i": "/ijɛn/"
+  },
+  {
+    "h": "gyere",
+    "e": "come",
+    "m": "Spoken like \"dyere\".",
+    "i": "/ɟɛrɛ/"
+  },
+  {
+    "h": "mikor",
+    "e": "what; we",
+    "m": "Spoken like \"meekor\" — what.",
+    "i": "/mikor/"
+  },
+  {
+    "h": "két",
+    "e": "two (before nouns)",
+    "m": "Spoken like \"két\".",
+    "i": "/keːt/"
+  },
+  {
+    "h": "nos",
+    "e": "woman; grows",
+    "m": "Spoken like \"nos\" — woman.",
+    "i": "/noʃ/"
+  },
+  {
+    "h": "persze",
+    "e": "of course",
+    "m": "Spoken like \"perse\" — of course.",
+    "i": "/pɛrsɛ/"
+  },
+  {
+    "h": "túl",
+    "e": "too; over; too much",
+    "m": "Spoken like \"túl\".",
+    "i": "/tuːl/"
+  },
+  {
+    "h": "sok",
+    "e": "salt",
+    "m": "Spoken like \"sok\" — salt.",
+    "i": "/ʃok/"
+  },
+  {
+    "h": "azért",
+    "e": "the; that",
+    "m": "Spoken like \"azért\" — the.",
+    "i": "/ɒzeːrt/"
+  },
+  {
+    "h": "történt",
+    "e": "happened",
+    "m": "Spoken like \"történt\".",
+    "i": "/tørteːnt/"
+  },
+  {
+    "h": "na",
+    "e": "come on; well",
+    "m": "Spoken like \"na\".",
+    "i": "/nɒ/"
+  },
+  {
+    "h": "értem",
+    "e": "I understand; for me",
+    "m": "Spoken like \"értem\".",
+    "i": "/eːrtɛm/"
+  },
+  {
+    "h": "szia",
+    "e": "hi; bye",
+    "m": "Spoken like \"seea\".",
+    "i": "/siɒ/"
+  },
+  {
+    "h": "valaki",
+    "e": "someone",
+    "m": "Spoken like \"valakee\" — someone.",
+    "i": "/vɒlɒki/"
+  },
+  {
+    "h": "aztán",
+    "e": "the; that",
+    "m": "Spoken like \"aztán\" — the.",
+    "i": "/ɒztaːn/"
+  },
+  {
+    "h": "mondta",
+    "e": "says",
+    "m": "Spoken like \"mondta\" — says.",
+    "i": "/mondtɒ/"
+  },
+  {
+    "h": "kicsit",
+    "e": "who; out",
+    "m": "Spoken like \"keecheet\" — who.",
+    "i": "/kitʃit/"
+  },
+  {
+    "h": "ahogy",
+    "e": "as; how",
+    "m": "Spoken like \"ahody\".",
+    "i": "/ɒhoɟ/"
+  },
+  {
+    "h": "engem",
+    "e": "I",
+    "m": "Spoken like \"engem\" — I.",
+    "i": "/ɛnɡɛm/"
+  },
+  {
+    "h": "velem",
+    "e": "with me",
+    "m": "Spoken like \"velem\".",
+    "i": "/vɛlɛm/"
+  },
+  {
+    "h": "se",
+    "e": "neither; not even",
+    "m": "Spoken like \"se\".",
+    "i": "/ʃɛ/"
+  },
+  {
+    "h": "pedig",
+    "e": "however; moreover; though",
+    "m": "Spoken like \"pedeeg\".",
+    "i": "/pɛdiɡ/"
+  },
+  {
+    "h": "mondtam",
+    "e": "says",
+    "m": "Spoken like \"mondtam\" — says.",
+    "i": "/mondtɒm/"
+  },
+  {
+    "h": "arra",
+    "e": "to that (direction)",
+    "m": "Spoken like \"arra\".",
+    "i": "/ɒrːɒ/"
+  },
+  {
+    "h": "voltam",
+    "e": "was; were",
+    "m": "Spoken like \"voltam\" — was.",
+    "i": "/voltɒm/"
+  },
+  {
+    "h": "új",
+    "e": "new",
+    "m": "Spoken like \"új\".",
+    "i": "/uːj/"
+  },
+  {
+    "h": "nézd",
+    "e": "look",
+    "m": "Spoken like \"nézd\".",
+    "i": "/neːzd/"
+  },
+  {
+    "h": "mindent",
+    "e": "what; we",
+    "m": "Spoken like \"meendent\" — what.",
+    "i": "/mindɛnt/"
+  },
+  {
+    "h": "ugye",
+    "e": "so; that way",
+    "m": "Spoken like \"oodye\" — so.",
+    "i": "/uɟɛ/"
+  },
+  {
+    "h": "más",
+    "e": "other; else",
+    "m": "Spoken like \"más\".",
+    "i": "/maːʃ/"
+  },
+  {
+    "h": "akarsz",
+    "e": "you want",
+    "m": "Spoken like \"akars\".",
+    "i": "/ɒkɒrs/"
+  },
+  {
+    "h": "kérem",
+    "e": "please; I ask",
+    "m": "Spoken like \"kérem\".",
+    "i": "/keːrɛm/"
+  },
+  {
+    "h": "semmit",
+    "e": "neither; nor",
+    "m": "Spoken like \"semmeet\" — neither.",
+    "i": "/ʃɛmːit/"
+  },
+  {
+    "h": "benne",
+    "e": "into; in",
+    "m": "Spoken like \"benne\" — into.",
+    "i": "/bɛnːɛ/"
+  },
+  {
+    "h": "erre",
+    "e": "to this (direction)",
+    "m": "Spoken like \"erre\".",
+    "i": "/ɛrːɛ/"
+  },
+  {
+    "h": "kellett",
+    "e": "must; is needed",
+    "m": "Spoken like \"kellett\" — must.",
+    "i": "/kɛlːɛtː/"
+  },
+  {
+    "h": "veled",
+    "e": "with you (sing.)",
+    "m": "Spoken like \"veled\".",
+    "i": "/vɛlɛd/"
+  },
+  {
+    "h": "jobb",
+    "e": "good",
+    "m": "Spoken like \"jobb\" — good.",
+    "i": "/jobː/"
+  },
+  {
+    "h": "akarok",
+    "e": "I want",
+    "m": "Spoken like \"akarok\".",
+    "i": "/ɒkɒrok/"
+  },
+  {
+    "h": "ezért",
+    "e": "this",
+    "m": "Spoken like \"ezért\" — this.",
+    "i": "/ɛzeːrt/"
+  },
+  {
+    "h": "soha",
+    "e": "salt",
+    "m": "Spoken like \"soha\" — salt.",
+    "i": "/ʃohɒ/"
+  },
+  {
+    "h": "akarom",
+    "e": "I want it",
+    "m": "Spoken like \"akarom\".",
+    "i": "/ɒkɒrom/"
+  },
+  {
+    "h": "menj",
+    "e": "go (imperative)",
+    "m": "Spoken like \"menj\".",
+    "i": "/mɛnj/"
+  },
+  {
+    "h": "kéne",
+    "e": "should; would need",
+    "m": "Spoken like \"kéne\".",
+    "i": "/keːnɛ/"
+  },
+  {
+    "h": "baj",
+    "e": "trouble; problem",
+    "m": "Spoken like \"baj\".",
+    "i": "/bɒj/"
+  },
+  {
+    "h": "mindenki",
+    "e": "what; we",
+    "m": "Spoken like \"meendenkee\" — what.",
+    "i": "/mindɛnki/"
+  },
+  {
+    "h": "akar",
+    "e": "to want",
+    "m": "'Akar' = 'A CAR — I WANT a car.' Simple desire verb. 'Akarom' = 'I want it.'",
+    "i": "/ɒkɒr/"
+  },
+  {
+    "h": "rám",
+    "e": "onto me",
+    "m": "Spoken like \"rám\".",
+    "i": "/raːm/"
+  },
+  {
+    "h": "senki",
+    "e": "no one",
+    "m": "Spoken like \"senkee\" — no one.",
+    "i": "/ʃɛnki/"
+  },
+  {
+    "h": "több",
+    "e": "more",
+    "m": "Spoken like \"több\".",
+    "i": "/tøbː/"
+  },
+  {
+    "h": "szép",
+    "e": "beautiful",
+    "m": "Spoken like \"sép\".",
+    "i": "/seːp/"
+  },
+  {
+    "h": "nap",
+    "e": "day; sun",
+    "m": "Spoken like \"nap\" — day.",
+    "i": "/nɒp/"
+  },
+  {
+    "h": "legyen",
+    "e": "down",
+    "m": "Spoken like \"ledyen\" — down.",
+    "i": "/lɛɟɛn/"
+  },
+  {
+    "h": "magát",
+    "e": "today",
+    "m": "Spoken like \"magát\" — today.",
+    "i": "/mɒɡaːt/"
+  },
+  {
+    "h": "kérlek",
+    "e": "please (I ask you)",
+    "m": "Spoken like \"kérlek\".",
+    "i": "/keːrlɛk/"
+  },
+  {
+    "h": "őt",
+    "e": "him/her (accusative)",
+    "m": "Spoken like \"őt\".",
+    "i": "/øːt/"
+  },
+  {
+    "h": "át",
+    "e": "through; across",
+    "m": "Spoken like \"át\".",
+    "i": "/aːt/"
+  },
+  {
+    "h": "szerintem",
+    "e": "in my opinion",
+    "m": "Spoken like \"sereentem\".",
+    "i": "/sɛrintɛm/"
+  },
+  {
+    "h": "ezek",
+    "e": "this",
+    "m": "Spoken like \"ezek\" — this.",
+    "i": "/ɛzɛk/"
+  },
+  {
+    "h": "pár",
+    "e": "a few; a couple",
+    "m": "Spoken like \"pár\".",
+    "i": "/paːr/"
+  },
+  {
+    "h": "istenem",
+    "e": "also; too",
+    "m": "Spoken like \"eestenem\" — also.",
+    "i": "/iʃtɛnɛm/"
+  },
+  {
+    "h": "miatt",
+    "e": "what; we",
+    "m": "Spoken like \"meeatt\" — what.",
+    "i": "/miɒtː/"
+  },
+  {
+    "h": "rossz",
+    "e": "bad",
+    "m": "Spoken like \"ross\" — bad.",
+    "i": "/rosː/"
+  },
+  {
+    "h": "emberek",
+    "e": "person",
+    "m": "Spoken like \"emberek\" — person.",
+    "i": "/ɛmbɛrɛk/"
+  },
+  {
+    "h": "várj",
+    "e": "wait",
+    "m": "Spoken like \"várj\".",
+    "i": "/vaːrj/"
+  },
+  {
+    "h": "első",
+    "e": "first",
+    "m": "Spoken like \"első\".",
+    "i": "/ɛlʃøː/"
+  },
+  {
+    "h": "minket",
+    "e": "what; we",
+    "m": "Spoken like \"meenket\" — what.",
+    "i": "/minkɛt/"
+  },
+  {
+    "h": "este",
+    "e": "and",
+    "m": "Spoken like \"este\" — and.",
+    "i": "/ɛʃtɛ/"
+  },
+  {
+    "h": "mintha",
+    "e": "what; we",
+    "m": "Spoken like \"meentha\" — what.",
+    "i": "/minthɒ/"
+  },
+  {
+    "h": "együtt",
+    "e": "one; a",
+    "m": "Spoken like \"edyütt\" — one.",
+    "i": "/ɛɟytː/"
+  },
+  {
+    "h": "ja",
+    "e": "yeah",
+    "m": "Spoken like \"ja\".",
+    "i": "/jɒ/"
+  },
+  {
+    "h": "téged",
+    "e": "you (accusative, sing.)",
+    "m": "Spoken like \"téged\".",
+    "i": "/teːɡɛd/"
+  },
+  {
+    "h": "láttam",
+    "e": "I saw",
+    "m": "Spoken like \"láttam\".",
+    "i": "/laːtːɒm/"
+  },
+  {
+    "h": "oda",
+    "e": "there (to there)",
+    "m": "Spoken like \"oda\".",
+    "i": "/odɒ/"
+  },
+  {
+    "h": "tudok",
+    "e": "knows; can",
+    "m": "Spoken like \"toodok\" — knows.",
+    "i": "/tudok/"
+  },
+  {
+    "h": "után",
+    "e": "road; way",
+    "m": "Spoken like \"ootán\" — road.",
+    "i": "/utaːn/"
+  },
+  {
+    "h": "igazán",
+    "e": "true",
+    "m": "Spoken like \"eegazán\" — true.",
+    "i": "/iɡɒzaːn/"
+  },
+  {
+    "h": "szerint",
+    "e": "according to",
+    "m": "Spoken like \"sereent\".",
+    "i": "/sɛrint/"
+  },
+  {
+    "h": "mondja",
+    "e": "says",
+    "m": "Spoken like \"mondja\" — says.",
+    "i": "/mondjɒ/"
+  },
+  {
+    "h": "innen",
+    "e": "from here",
+    "m": "Spoken like \"eennen\".",
+    "i": "/inːɛn/"
+  },
+  {
+    "h": "egyszer",
+    "e": "one; a",
+    "m": "Spoken like \"edyser\" — one.",
+    "i": "/ɛɟsɛr/"
+  },
+  {
+    "h": "róla",
+    "e": "about him/her/it",
+    "m": "Spoken like \"róla\".",
+    "i": "/roːlɒ/"
+  },
+  {
+    "h": "hogyan",
+    "e": "that; how",
+    "m": "Spoken like \"hodyan\" — that.",
+    "i": "/hoɟɒn/"
+  },
+  {
+    "h": "dolog",
+    "e": "thing; matter",
+    "m": "Spoken like \"dolog\".",
+    "i": "/doloɡ/"
+  },
+  {
+    "h": "sosem",
+    "e": "salt",
+    "m": "Spoken like \"sosem\" — salt.",
+    "i": "/ʃoʃɛm/"
+  },
+  {
+    "h": "mondd",
+    "e": "says",
+    "m": "Spoken like \"mondd\" — says.",
+    "i": "/mondː/"
+  },
+  {
+    "h": "ön",
+    "e": "you (formal)",
+    "m": "Spoken like \"ön\".",
+    "i": "/øn/"
+  },
+  {
+    "h": "újra",
+    "e": "again",
+    "m": "Spoken like \"újra\".",
+    "i": "/uːjrɒ/"
+  },
+  {
+    "h": "tudtam",
+    "e": "knows; can",
+    "m": "Spoken like \"toodtam\" — knows.",
+    "i": "/tudtɒm/"
+  },
+  {
+    "h": "másik",
+    "e": "other (one)",
+    "m": "Spoken like \"máseek\".",
+    "i": "/maːʃik/"
+  },
+  {
+    "h": "rajta",
+    "e": "on him/her/it",
+    "m": "Spoken like \"rajta\".",
+    "i": "/rɒjtɒ/"
+  },
+  {
+    "h": "amíg",
+    "e": "until; while",
+    "m": "Spoken like \"amíg\".",
+    "i": "/ɒmiːɡ/"
+  },
+  {
+    "h": "tessék",
+    "e": "you (sing.)",
+    "m": "Spoken like \"tessék\" — you (sing.).",
+    "i": "/tɛʃːeːk/"
+  },
+  {
+    "h": "érted",
+    "e": "for you; I understand you",
+    "m": "Spoken like \"érted\".",
+    "i": "/eːrtɛd/"
+  },
+  {
+    "h": "hittem",
+    "e": "I believed",
+    "m": "Spoken like \"heettem\".",
+    "i": "/hitːɛm/"
+  },
+  {
+    "h": "kellene",
+    "e": "must; is needed",
+    "m": "Spoken like \"kellene\" — must.",
+    "i": "/kɛlːɛnɛ/"
+  },
+  {
+    "h": "megyek",
+    "e": "still; yet",
+    "m": "Spoken like \"medyek\" — still.",
+    "i": "/mɛɟɛk/"
+  },
+  {
+    "h": "apa",
+    "e": "father",
+    "m": "Spoken like \"apa\" — father.",
+    "i": "/ɒpɒ/"
+  },
+  {
+    "h": "figyelj",
+    "e": "listen; pay attention",
+    "m": "Spoken like \"feedyelj\".",
+    "i": "/fiɟɛlj/"
+  },
+  {
+    "h": "lenni",
+    "e": "down",
+    "m": "Spoken like \"lennee\" — down.",
+    "i": "/lɛnːi/"
+  },
+  {
+    "h": "elnézést",
+    "e": "excuse me",
+    "m": "Spoken like \"elnézést\".",
+    "i": "/ɛlneːzeːʃt/"
+  },
+  {
+    "h": "akartam",
+    "e": "I wanted",
+    "m": "Spoken like \"akartam\".",
+    "i": "/ɒkɒrtɒm/"
+  },
+  {
+    "h": "oh",
+    "e": "oh",
+    "m": "Spoken like \"oh\".",
+    "i": "/oh/"
+  },
+  {
+    "h": "három",
+    "e": "three",
+    "m": "Spoken like \"három\".",
+    "i": "/haːrom/"
+  },
+  {
+    "h": "annyira",
+    "e": "so; that much",
+    "m": "Spoken like \"annyeera\".",
+    "i": "/ɒɲːirɒ/"
+  },
+  {
+    "h": "isten",
+    "e": "also; too",
+    "m": "Spoken like \"eesten\" — also.",
+    "i": "/iʃtɛn/"
+  },
+  {
+    "h": "egyik",
+    "e": "one; a",
+    "m": "Spoken like \"edyeek\" — one.",
+    "i": "/ɛɟik/"
+  },
+  {
+    "h": "gondoltam",
+    "e": "I thought",
+    "m": "Spoken like \"gondoltam\".",
+    "i": "/ɡondoltɒm/"
+  },
+  {
+    "h": "jobban",
+    "e": "good",
+    "m": "Spoken like \"jobban\" — good.",
+    "i": "/jobːɒn/"
+  },
+  {
+    "h": "épp",
+    "e": "just; currently",
+    "m": "Spoken like \"épp\".",
+    "i": "/eːpː/"
+  },
+  {
+    "h": "jön",
+    "e": "comes",
+    "m": "Spoken like \"jön\".",
+    "i": "/jøn/"
+  },
+  {
+    "h": "inkább",
+    "e": "rather; instead",
+    "m": "Spoken like \"eenkább\".",
+    "i": "/inkaːbː/"
+  },
+  {
+    "h": "tud",
+    "e": "to know (how); to be able",
+    "m": "'Tud' = 'TUDOR kings KNEW how to rule.' To know how to do something; to be able. 'Tudok úszni' = 'I can swim.'",
+    "i": "/tud/"
+  },
+  {
+    "h": "magam",
+    "e": "today",
+    "m": "Spoken like \"magam\" — today.",
+    "i": "/mɒɡɒm/"
+  },
+  {
+    "h": "alatt",
+    "e": "under; during",
+    "m": "Spoken like \"alatt\" — under.",
+    "i": "/ɒlɒtː/"
+  },
+  {
+    "h": "saját",
+    "e": "own",
+    "m": "Spoken like \"saját\".",
+    "i": "/ʃɒjaːt/"
+  },
+  {
+    "h": "lett",
+    "e": "down",
+    "m": "Spoken like \"lett\" — down.",
+    "i": "/lɛtː/"
+  },
+  {
+    "h": "megy",
+    "e": "still; yet",
+    "m": "Spoken like \"medy\" — still.",
+    "i": "/mɛɟ/"
+  },
+  {
+    "h": "néhány",
+    "e": "some; a few",
+    "m": "Spoken like \"néhány\".",
+    "i": "/neːhaːɲ/"
+  },
+  {
+    "h": "ezzel",
+    "e": "this",
+    "m": "Spoken like \"ezzel\" — this.",
+    "i": "/ɛzːɛl/"
+  },
+  {
+    "h": "magad",
+    "e": "today",
+    "m": "Spoken like \"magad\" — today.",
+    "i": "/mɒɡɒd/"
+  },
+  {
+    "h": "mind",
+    "e": "what; we",
+    "m": "Spoken like \"meend\" — what.",
+    "i": "/mind/"
+  },
+  {
+    "h": "egyetlen",
+    "e": "one; a",
+    "m": "Spoken like \"edyetlen\" — one.",
+    "i": "/ɛɟɛtlɛn/"
+  },
+  {
+    "h": "úr",
+    "e": "lord; sir",
+    "m": "Spoken like \"úr\".",
+    "i": "/uːr/"
+  },
+  {
+    "h": "teljesen",
+    "e": "you (sing.)",
+    "m": "Spoken like \"teljesen\" — you (sing.).",
+    "i": "/tɛljɛʃɛn/"
+  },
+  {
+    "h": "legjobb",
+    "e": "down",
+    "m": "Spoken like \"legjobb\" — down.",
+    "i": "/lɛɡjobː/"
+  },
+  {
+    "h": "anya",
+    "e": "mother",
+    "m": "Spoken like \"anya\" — mother.",
+    "i": "/ɒɲɒ/"
+  },
+  {
+    "h": "haver",
+    "e": "if",
+    "m": "Spoken like \"haver\" — if.",
+    "i": "/hɒvɛr/"
+  },
+  {
+    "h": "ebben",
+    "e": "in this",
+    "m": "Spoken like \"ebben\".",
+    "i": "/ɛbːɛn/"
+  },
+  {
+    "h": "vége",
+    "e": "end",
+    "m": "Spoken like \"vége\".",
+    "i": "/veːɡɛ/"
+  },
+  {
+    "h": "hozzá",
+    "e": "snow",
+    "m": "Spoken like \"hozzá\" — snow.",
+    "i": "/hozːaː/"
+  },
+  {
+    "h": "akarod",
+    "e": "you want it",
+    "m": "Spoken like \"akarod\".",
+    "i": "/ɒkɒrod/"
+  },
+  {
+    "h": "dr",
+    "e": "Dr",
+    "m": "Spoken like \"dr\".",
+    "i": "/dr/"
+  },
+  {
+    "h": "mire",
+    "e": "what; we",
+    "m": "Spoken like \"meere\" — what.",
+    "i": "/mirɛ/"
+  },
+  {
+    "h": "tűnik",
+    "e": "seems",
+    "m": "Spoken like \"tűneek\".",
+    "i": "/tyːnik/"
+  },
+  {
+    "h": "mielőtt",
+    "e": "what; we",
+    "m": "Spoken like \"meeelőtt\" — what.",
+    "i": "/miɛløːtː/"
+  },
+  {
+    "h": "tovább",
+    "e": "lake",
+    "m": "Spoken like \"tovább\" — lake.",
+    "i": "/tovaːbː/"
+  },
+  {
+    "h": "egyedül",
+    "e": "one; a",
+    "m": "Spoken like \"edyedül\" — one.",
+    "i": "/ɛɟɛdyl/"
+  },
+  {
+    "h": "honnan",
+    "e": "snow",
+    "m": "Spoken like \"honnan\" — snow.",
+    "i": "/honːɒn/"
+  },
+  {
+    "h": "voltál",
+    "e": "was; were",
+    "m": "Spoken like \"voltál\" — was.",
+    "i": "/voltaːl/"
+  },
+  {
+    "h": "ők",
+    "e": "they",
+    "m": "Spoken like \"ők\".",
+    "i": "/øːk/"
+  },
+  {
+    "h": "szó",
+    "e": "word",
+    "m": "Spoken like \"só\".",
+    "i": "/soː/"
+  },
+  {
+    "h": "menjünk",
+    "e": "let's go",
+    "m": "Spoken like \"menjünk\".",
+    "i": "/mɛnjynk/"
+  },
+  {
+    "h": "csinálsz",
+    "e": "you do; you make",
+    "m": "Spoken like \"cheenáls\".",
+    "i": "/tʃinaːls/"
+  },
+  {
+    "h": "hadd",
+    "e": "if",
+    "m": "Spoken like \"hadd\" — if.",
+    "i": "/hɒdː/"
+  },
+  {
+    "h": "mondani",
+    "e": "says",
+    "m": "Spoken like \"mondanee\" — says.",
+    "i": "/mondɒni/"
+  },
+  {
+    "h": "micsoda",
+    "e": "what; we",
+    "m": "Spoken like \"meechoda\" — what.",
+    "i": "/mitʃodɒ/"
+  },
+  {
+    "h": "holnap",
+    "e": "tomorrow",
+    "m": "Spoken like \"holnap\" — tomorrow.",
+    "i": "/holnɒp/"
+  },
+  {
+    "h": "akik",
+    "e": "who (relative, plural)",
+    "m": "Spoken like \"akeek\".",
+    "i": "/ɒkik/"
+  },
+  {
+    "h": "kösz",
+    "e": "thanks",
+    "m": "Spoken like \"kös\".",
+    "i": "/køs/"
+  },
+  {
+    "h": "komolyan",
+    "e": "stone",
+    "m": "Spoken like \"komoyan\" — stone.",
+    "i": "/komojɒn/"
+  },
+  {
+    "h": "szeretném",
+    "e": "loves; likes",
+    "m": "Spoken like \"seretném\" — loves.",
+    "i": "/sɛrɛtneːm/"
+  },
+  {
+    "h": "idő",
+    "e": "time; weather",
+    "m": "Spoken like \"eedő\".",
+    "i": "/idøː/"
+  },
+  {
+    "h": "nekünk",
+    "e": "don't",
+    "m": "Spoken like \"nekünk\" — don't.",
+    "i": "/nɛkynk/"
+  },
+  {
+    "h": "nélkül",
+    "e": "without",
+    "m": "Spoken like \"nélkül\".",
+    "i": "/neːlkyl/"
+  },
+  {
+    "h": "ahol",
+    "e": "where",
+    "m": "Spoken like \"ahol\".",
+    "i": "/ɒhol/"
+  },
+  {
+    "h": "azok",
+    "e": "the; that",
+    "m": "Spoken like \"azok\" — the.",
+    "i": "/ɒzok/"
+  },
+  {
+    "h": "előtt",
+    "e": "before; in front of",
+    "m": "Spoken like \"előtt\".",
+    "i": "/ɛløːtː/"
+  },
+  {
+    "h": "áll",
+    "e": "stands",
+    "m": "Spoken like \"áll\".",
+    "i": "/aːlː/"
+  },
+  {
+    "h": "nő",
+    "e": "woman; grows",
+    "m": "Spoken like \"nő\".",
+    "i": "/nøː/"
+  },
+  {
+    "h": "mondom",
+    "e": "says",
+    "m": "Spoken like \"mondom\" — says.",
+    "i": "/mondom/"
+  },
+  {
+    "h": "ben",
+    "e": "into; in",
+    "m": "Spoken like \"ben\" — into.",
+    "i": "/bɛn/"
+  },
+  {
+    "h": "akarja",
+    "e": "he/she wants",
+    "m": "Spoken like \"akarja\".",
+    "i": "/ɒkɒrjɒ/"
+  },
+  {
+    "h": "pontosan",
+    "e": "exactly",
+    "m": "Spoken like \"pontosan\".",
+    "i": "/pontoʃɒn/"
+  },
+  {
+    "h": "voltak",
+    "e": "was; were",
+    "m": "Spoken like \"voltak\" — was.",
+    "i": "/voltɒk/"
+  },
+  {
+    "h": "rád",
+    "e": "onto you",
+    "m": "Spoken like \"rád\".",
+    "i": "/raːd/"
+  },
+  {
+    "h": "látom",
+    "e": "I see it",
+    "m": "Spoken like \"látom\".",
+    "i": "/laːtom/"
+  },
+  {
+    "h": "megvan",
+    "e": "still; yet",
+    "m": "Spoken like \"megvan\" — still.",
+    "i": "/mɛɡvɒn/"
+  },
+  {
+    "h": "tudsz",
+    "e": "knows; can",
+    "m": "Spoken like \"toods\" — knows.",
+    "i": "/tuds/"
+  },
+  {
+    "h": "ennek",
+    "e": "I",
+    "m": "Spoken like \"ennek\" — I.",
+    "i": "/ɛnːɛk/"
+  },
+  {
+    "h": "gyorsan",
+    "e": "fast",
+    "m": "Spoken like \"dyorsan\" — fast.",
+    "i": "/ɟorʃɒn/"
+  },
+  {
+    "h": "látni",
+    "e": "to see",
+    "m": "Spoken like \"látnee\".",
+    "i": "/laːtni/"
+  },
+  {
+    "h": "leszek",
+    "e": "will be",
+    "m": "Spoken like \"lesek\" — will be.",
+    "i": "/lɛsɛk/"
+  },
+  {
+    "h": "megint",
+    "e": "still; yet",
+    "m": "Spoken like \"megeent\" — still.",
+    "i": "/mɛɡint/"
+  },
+  {
+    "h": "remélem",
+    "e": "I hope",
+    "m": "Spoken like \"remélem\".",
+    "i": "/rɛmeːlɛm/"
+  },
+  {
+    "h": "tudjuk",
+    "e": "knows; can",
+    "m": "Spoken like \"toodjook\" — knows.",
+    "i": "/tudjuk/"
+  },
+  {
+    "h": "egyet",
+    "e": "one; a",
+    "m": "Spoken like \"edyet\" — one.",
+    "i": "/ɛɟɛt/"
+  },
+  {
+    "h": "pont",
+    "e": "exactly; point",
+    "m": "Spoken like \"pont\".",
+    "i": "/pont/"
+  },
+  {
+    "h": "tudni",
+    "e": "knows; can",
+    "m": "Spoken like \"toodnee\" — knows.",
+    "i": "/tudni/"
+  },
+  {
+    "h": "beszélni",
+    "e": "into; in",
+    "m": "Spoken like \"besélnee\" — into.",
+    "i": "/bɛseːlni/"
+  },
+  {
+    "h": "remek",
+    "e": "excellent",
+    "m": "Spoken like \"remek\".",
+    "i": "/rɛmɛk/"
+  },
+  {
+    "h": "igazi",
+    "e": "true",
+    "m": "Spoken like \"eegazee\" — true.",
+    "i": "/iɡɒzi/"
+  },
+  {
+    "h": "jött",
+    "e": "came",
+    "m": "Spoken like \"jött\".",
+    "i": "/jøtː/"
+  },
+  {
+    "h": "először",
+    "e": "first (time)",
+    "m": "Spoken like \"elősör\".",
+    "i": "/ɛløːsør/"
+  },
+  {
+    "h": "ti",
+    "e": "you (plural)",
+    "m": "Spoken like \"tee\".",
+    "i": "/ti/"
+  },
+  {
+    "h": "tehát",
+    "e": "you (sing.)",
+    "m": "Spoken like \"tehát\" — you (sing.).",
+    "i": "/tɛhaːt/"
+  },
+  {
+    "h": "fogja",
+    "e": "tooth",
+    "m": "Spoken like \"fogja\" — tooth.",
+    "i": "/foɡjɒ/"
+  },
+  {
+    "h": "össze",
+    "e": "together; total",
+    "m": "Spoken like \"össe\".",
+    "i": "/øsːɛ/"
+  },
+  {
+    "h": "utolsó",
+    "e": "road; way",
+    "m": "Spoken like \"ootolsó\" — road.",
+    "i": "/utolʃoː/"
+  },
+  {
+    "h": "nehéz",
+    "e": "don't",
+    "m": "Spoken like \"nehéz\" — don't.",
+    "i": "/nɛheːz/"
+  },
+  {
+    "h": "nekik",
+    "e": "don't",
+    "m": "Spoken like \"nekeek\" — don't.",
+    "i": "/nɛkik/"
+  },
+  {
+    "h": "fogok",
+    "e": "tooth",
+    "m": "Spoken like \"fogok\" — tooth.",
+    "i": "/foɡok/"
+  },
+  {
+    "h": "kész",
+    "e": "ready",
+    "m": "Spoken like \"kés\".",
+    "i": "/keːs/"
+  },
+  {
+    "h": "azzal",
+    "e": "the; that",
+    "m": "Spoken like \"azzal\" — the.",
+    "i": "/ɒzːɒl/"
+  },
+  {
+    "h": "lány",
+    "e": "girl",
+    "m": "Spoken like \"lány\".",
+    "i": "/laːɲ/"
+  },
+  {
+    "h": "haza",
+    "e": "if",
+    "m": "Spoken like \"haza\" — if.",
+    "i": "/hɒzɒ/"
+  },
+  {
+    "h": "erről",
+    "e": "about this",
+    "m": "Spoken like \"erről\".",
+    "i": "/ɛrːøːl/"
+  },
+  {
+    "h": "ugyan",
+    "e": "so; that way",
+    "m": "Spoken like \"oodyan\" — so.",
+    "i": "/uɟɒn/"
+  },
+  {
+    "h": "sokat",
+    "e": "salt",
+    "m": "Spoken like \"sokat\" — salt.",
+    "i": "/ʃokɒt/"
+  },
+  {
+    "h": "menni",
+    "e": "to go",
+    "m": "Spoken like \"mennee\".",
+    "i": "/mɛnːi/"
+  },
+  {
+    "h": "hagyd",
+    "e": "if",
+    "m": "Spoken like \"hadyd\" — if.",
+    "i": "/hɒɟd/"
+  },
+  {
+    "h": "örülök",
+    "e": "I'm glad",
+    "m": "Spoken like \"örülök\".",
+    "i": "/øryløk/"
+  },
+  {
+    "h": "francba",
+    "e": "damn it",
+    "m": "Spoken like \"francba\".",
+    "i": "/frɒnt͡sbɒ/"
+  },
+  {
+    "h": "hallottam",
+    "e": "if",
+    "m": "Spoken like \"hallottam\" — if.",
+    "i": "/hɒlːotːɒm/"
+  },
+  {
+    "h": "sincs",
+    "e": "nor is there",
+    "m": "Spoken like \"seench\".",
+    "i": "/ʃintʃ/"
+  },
+  {
+    "h": "mégis",
+    "e": "still; nevertheless",
+    "m": "Spoken like \"mégees\".",
+    "i": "/meːɡiʃ/"
+  },
+  {
+    "h": "magának",
+    "e": "today",
+    "m": "Spoken like \"magának\" — today.",
+    "i": "/mɒɡaːnɒk/"
+  },
+  {
+    "h": "szeretnék",
+    "e": "loves; likes",
+    "m": "Spoken like \"seretnék\" — loves.",
+    "i": "/sɛrɛtneːk/"
+  },
+  {
+    "h": "azonnal",
+    "e": "the; that",
+    "m": "Spoken like \"azonnal\" — the.",
+    "i": "/ɒzonːɒl/"
+  },
+  {
+    "h": "ennyi",
+    "e": "I",
+    "m": "Spoken like \"ennyee\" — I.",
+    "i": "/ɛɲːi/"
+  },
+  {
+    "h": "helló",
+    "e": "hello",
+    "m": "Spoken like \"helló\".",
+    "i": "/hɛlːoː/"
+  },
+  {
+    "h": "ezen",
+    "e": "this",
+    "m": "Spoken like \"ezen\" — this.",
+    "i": "/ɛzɛn/"
+  },
+  {
+    "h": "csinálni",
+    "e": "to do; to make",
+    "m": "Spoken like \"cheenálnee\".",
+    "i": "/tʃinaːlni/"
+  },
+  {
+    "h": "hanem",
+    "e": "if",
+    "m": "Spoken like \"hanem\" — if.",
+    "i": "/hɒnɛm/"
+  },
+  {
+    "h": "nagyszerű",
+    "e": "big",
+    "m": "Spoken like \"nadyserű\" — big.",
+    "i": "/nɒɟsɛryː/"
+  },
+  {
+    "h": "később",
+    "e": "later",
+    "m": "Spoken like \"később\".",
+    "i": "/keːʃøːbː/"
+  },
+  {
+    "h": "állj",
+    "e": "stop",
+    "m": "Spoken like \"állj\".",
+    "i": "/aːlːj/"
+  },
+  {
+    "h": "mondtad",
+    "e": "says",
+    "m": "Spoken like \"mondtad\" — says.",
+    "i": "/mondtɒd/"
+  },
+  {
+    "h": "fogom",
+    "e": "tooth",
+    "m": "Spoken like \"fogom\" — tooth.",
+    "i": "/foɡom/"
+  },
+  {
+    "h": "tetszik",
+    "e": "you (sing.)",
+    "m": "Spoken like \"tetseek\" — you (sing.).",
+    "i": "/tɛtsik/"
+  },
+  {
+    "h": "érdekel",
+    "e": "interests you",
+    "m": "Spoken like \"érdekel\".",
+    "i": "/eːrdɛkɛl/"
+  },
+  {
+    "h": "kedves",
+    "e": "kind; dear",
+    "m": "Spoken like \"kedves\".",
+    "i": "/kɛdvɛʃ/"
+  },
+  {
+    "h": "többet",
+    "e": "more",
+    "m": "Spoken like \"többet\".",
+    "i": "/tøbːɛt/"
+  },
+  {
+    "h": "srácok",
+    "e": "guys; boys",
+    "m": "Spoken like \"srácok\".",
+    "i": "/ʃraːt͡sok/"
+  },
+  {
+    "h": "halott",
+    "e": "if",
+    "m": "Spoken like \"halott\" — if.",
+    "i": "/hɒlotː/"
+  },
+  {
+    "h": "fogsz",
+    "e": "tooth",
+    "m": "Spoken like \"fogs\" — tooth.",
+    "i": "/foɡs/"
+  },
+  {
+    "h": "legalább",
+    "e": "down",
+    "m": "Spoken like \"legalább\" — down.",
+    "i": "/lɛɡɒlaːbː/"
+  },
+  {
+    "h": "néha",
+    "e": "sometimes",
+    "m": "Spoken like \"néha\".",
+    "i": "/neːhɒ/"
+  },
+  {
+    "h": "bele",
+    "e": "into; in",
+    "m": "Spoken like \"bele\" — into.",
+    "i": "/bɛlɛ/"
+  },
+  {
+    "h": "mennem",
+    "e": "I have to go",
+    "m": "Spoken like \"mennem\".",
+    "i": "/mɛnːɛm/"
+  },
+  {
+    "h": "éves",
+    "e": "years old",
+    "m": "Spoken like \"éves\".",
+    "i": "/eːvɛʃ/"
+  },
+  {
+    "h": "add",
+    "e": "gives",
+    "m": "Spoken like \"add\" — gives.",
+    "i": "/ɒdː/"
+  },
+  {
+    "h": "miről",
+    "e": "what; we",
+    "m": "Spoken like \"meeről\" — what.",
+    "i": "/mirøːl/"
+  },
+  {
+    "h": "fiam",
+    "e": "my son",
+    "m": "Spoken like \"feeam\".",
+    "i": "/fiɒm/"
+  },
+  {
+    "h": "érzem",
+    "e": "I feel",
+    "m": "Spoken like \"érzem\".",
+    "i": "/eːrzɛm/"
+  },
+  {
+    "h": "férfi",
+    "e": "man",
+    "m": "Spoken like \"férfee\".",
+    "i": "/feːrfi/"
+  },
+  {
+    "h": "végre",
+    "e": "finally",
+    "m": "Spoken like \"végre\".",
+    "i": "/veːɡrɛ/"
+  },
+  {
+    "h": "ideje",
+    "e": "time (for something)",
+    "m": "Spoken like \"eedeje\".",
+    "i": "/idɛjɛ/"
+  },
+  {
+    "h": "meghalt",
+    "e": "still; yet",
+    "m": "Spoken like \"meghalt\" — still.",
+    "i": "/mɛɡhɒlt/"
+  },
+  {
+    "h": "fontos",
+    "e": "important",
+    "m": "Spoken like \"fontos\" — important.",
+    "i": "/fontoʃ/"
+  },
+  {
+    "h": "azon",
+    "e": "the; that",
+    "m": "Spoken like \"azon\" — the.",
+    "i": "/ɒzon/"
+  },
+  {
+    "h": "perc",
+    "e": "minute",
+    "m": "Spoken like \"perc\".",
+    "i": "/pɛrt͡s/"
+  },
+  {
+    "h": "abba",
+    "e": "into that",
+    "m": "Spoken like \"abba\".",
+    "i": "/ɒbːɒ/"
+  },
+  {
+    "h": "látod",
+    "e": "you see",
+    "m": "Spoken like \"látod\".",
+    "i": "/laːtod/"
+  },
+  {
+    "h": "éve",
+    "e": "year (adverbial)",
+    "m": "Spoken like \"éve\".",
+    "i": "/eːvɛ/"
+  },
+  {
+    "h": "sokkal",
+    "e": "salt",
+    "m": "Spoken like \"sokkal\" — salt.",
+    "i": "/ʃokːɒl/"
+  },
+  {
+    "h": "szeretlek",
+    "e": "loves; likes",
+    "m": "Spoken like \"seretlek\" — loves.",
+    "i": "/sɛrɛtlɛk/"
+  },
+  {
+    "h": "öt",
+    "e": "five",
+    "m": "Spoken like \"öt\".",
+    "i": "/øt/"
+  },
+  {
+    "h": "akit",
+    "e": "whom (relative, acc.)",
+    "m": "Spoken like \"akeet\".",
+    "i": "/ɒkit/"
+  },
+  {
+    "h": "összes",
+    "e": "all; total",
+    "m": "Spoken like \"össes\".",
+    "i": "/øsːɛʃ/"
+  },
+  {
+    "h": "apám",
+    "e": "my father",
+    "m": "Spoken like \"apám\".",
+    "i": "/ɒpaːm/"
+  },
+  {
+    "h": "reggel",
+    "e": "morning",
+    "m": "Spoken like \"reggel\" — morning.",
+    "i": "/rɛɡːɛl/"
+  },
+  {
+    "h": "gond",
+    "e": "problem; trouble",
+    "m": "Spoken like \"gond\".",
+    "i": "/ɡond/"
+  },
+  {
+    "h": "hova",
+    "e": "snow",
+    "m": "Spoken like \"hova\" — snow.",
+    "i": "/hovɒ/"
+  },
+  {
+    "h": "gondolom",
+    "e": "I suppose",
+    "m": "Spoken like \"gondolom\".",
+    "i": "/ɡondolom/"
+  },
+  {
+    "h": "pénzt",
+    "e": "money (accusative)",
+    "m": "Spoken like \"pénzt\".",
+    "i": "/peːnzt/"
+  },
+  {
+    "h": "es",
+    "e": "and",
+    "m": "Spoken like \"es\" — and.",
+    "i": "/ɛʃ/"
+  },
+  {
+    "h": "tenni",
+    "e": "you (sing.)",
+    "m": "Spoken like \"tennee\" — you (sing.).",
+    "i": "/tɛnːi/"
+  },
+  {
+    "h": "szükségem",
+    "e": "I need (lit. my need)",
+    "m": "Spoken like \"sükségem\".",
+    "i": "/sykʃeːɡɛm/"
+  },
+  {
+    "h": "néz",
+    "e": "looks",
+    "m": "Spoken like \"néz\".",
+    "i": "/neːz/"
+  },
+  {
+    "h": "többé",
+    "e": "anymore",
+    "m": "Spoken like \"többé\".",
+    "i": "/tøbːeː/"
+  },
+  {
+    "h": "mivel",
+    "e": "what; we",
+    "m": "Spoken like \"meevel\" — what.",
+    "i": "/mivɛl/"
+  },
+  {
+    "h": "attól",
+    "e": "from that",
+    "m": "Spoken like \"attól\".",
+    "i": "/ɒtːoːl/"
+  },
+  {
+    "h": "annak",
+    "e": "that (dative)",
+    "m": "Spoken like \"annak\".",
+    "i": "/ɒnːɒk/"
+  },
+  {
+    "h": "tegnap",
+    "e": "you (sing.)",
+    "m": "Spoken like \"tegnap\" — you (sing.).",
+    "i": "/tɛɡnɒp/"
+  },
+  {
+    "h": "arról",
+    "e": "about that",
+    "m": "Spoken like \"arról\".",
+    "i": "/ɒrːoːl/"
+  },
+  {
+    "h": "világ",
+    "e": "world",
+    "m": "Spoken like \"veelág\".",
+    "i": "/vilaːɡ/"
+  },
+  {
+    "h": "ok",
+    "e": "reason; cause",
+    "m": "Spoken like \"ok\".",
+    "i": "/ok/"
+  },
+  {
+    "h": "szeretem",
+    "e": "loves; likes",
+    "m": "Spoken like \"seretem\" — loves.",
+    "i": "/sɛrɛtɛm/"
+  },
+  {
+    "h": "fiú",
+    "e": "boy",
+    "m": "Spoken like \"feeú\".",
+    "i": "/fiuː/"
+  },
+  {
+    "h": "hely",
+    "e": "place",
+    "m": "Spoken like \"hey\".",
+    "i": "/hɛj/"
+  },
+  {
+    "h": "john",
+    "e": "good",
+    "m": "Spoken like \"john\" — good.",
+    "i": "/john/"
+  },
+  {
+    "h": "beszélsz",
+    "e": "into; in",
+    "m": "Spoken like \"beséls\" — into.",
+    "i": "/bɛseːls/"
+  },
+  {
+    "h": "megyünk",
+    "e": "still; yet",
+    "m": "Spoken like \"medyünk\" — still.",
+    "i": "/mɛɟynk/"
+  },
+  {
+    "h": "múlva",
+    "e": "after (time)",
+    "m": "Spoken like \"múlva\".",
+    "i": "/muːlvɒ/"
+  },
+  {
+    "h": "helyzet",
+    "e": "situation",
+    "m": "Spoken like \"heyzet\".",
+    "i": "/hɛjzɛt/"
+  },
+  {
+    "h": "boldog",
+    "e": "happy",
+    "m": "Spoken like \"boldog\" — happy.",
+    "i": "/boldoɡ/"
+  },
+  {
+    "h": "vagytok",
+    "e": "or; you are",
+    "m": "Spoken like \"vadytok\" — or.",
+    "i": "/vɒɟtok/"
+  },
+  {
+    "h": "ment",
+    "e": "went",
+    "m": "Spoken like \"ment\" — went.",
+    "i": "/mɛnt/"
+  },
+  {
+    "h": "ezeket",
+    "e": "this",
+    "m": "Spoken like \"ezeket\" — this.",
+    "i": "/ɛzɛkɛt/"
+  },
+  {
+    "h": "nézze",
+    "e": "look (formal)",
+    "m": "Spoken like \"nézze\".",
+    "i": "/neːzːɛ/"
+  },
+  {
+    "h": "tedd",
+    "e": "you (sing.)",
+    "m": "Spoken like \"tedd\" — you (sing.).",
+    "i": "/tɛdː/"
+  },
+  {
+    "h": "következő",
+    "e": "next",
+    "m": "Spoken like \"következő\".",
+    "i": "/køvɛtkɛzøː/"
+  },
+  {
+    "h": "barátom",
+    "e": "my friend",
+    "m": "Spoken like \"barátom\".",
+    "i": "/bɒraːtom/"
+  },
+  {
+    "h": "szabad",
+    "e": "free; allowed",
+    "m": "Spoken like \"sabad\".",
+    "i": "/sɒbɒd/"
+  },
+  {
+    "h": "óra",
+    "e": "hour; clock; lesson",
+    "m": "Spoken like \"óra\".",
+    "i": "/oːrɒ/"
+  },
+  {
+    "h": "éppen",
+    "e": "just; currently",
+    "m": "Spoken like \"éppen\".",
+    "i": "/eːpːɛn/"
+  },
+  {
+    "h": "beszél",
+    "e": "into; in",
+    "m": "Spoken like \"besél\" — into.",
+    "i": "/bɛseːl/"
+  },
+  {
+    "h": "valaha",
+    "e": "ever",
+    "m": "Spoken like \"valaha\".",
+    "i": "/vɒlɒhɒ/"
+  },
+  {
+    "h": "jöjjön",
+    "e": "let him/her come",
+    "m": "Spoken like \"jöjjön\".",
+    "i": "/jøjːøn/"
+  },
+  {
+    "h": "történik",
+    "e": "happens",
+    "m": "Spoken like \"történeek\".",
+    "i": "/tørteːnik/"
+  },
+  {
+    "h": "jelent",
+    "e": "means; signifies",
+    "m": "Spoken like \"jelent\".",
+    "i": "/jɛlɛnt/"
+  },
+  {
+    "h": "dolgot",
+    "e": "thing (accusative)",
+    "m": "Spoken like \"dolgot\".",
+    "i": "/dolɡot/"
+  },
+  {
+    "h": "aha",
+    "e": "aha; yeah",
+    "m": "Spoken like \"aha\".",
+    "i": "/ɒhɒ/"
+  },
+  {
+    "h": "egyáltalán",
+    "e": "one; a",
+    "m": "Spoken like \"edyáltalán\" — one.",
+    "i": "/ɛɟaːltɒlaːn/"
+  },
+  {
+    "h": "hová",
+    "e": "snow",
+    "m": "Spoken like \"hová\" — snow.",
+    "i": "/hovaː/"
+  },
+  {
+    "h": "képes",
+    "e": "able; capable",
+    "m": "Spoken like \"képes\".",
+    "i": "/keːpɛʃ/"
+  },
+  {
+    "h": "neve",
+    "e": "don't",
+    "m": "Spoken like \"neve\" — don't.",
+    "i": "/nɛvɛ/"
+  },
+  {
+    "h": "fickó",
+    "e": "guy; fellow",
+    "m": "Spoken like \"feeckó\".",
+    "i": "/fit͡skoː/"
+  },
+  {
+    "h": "kurva",
+    "e": "whore; damn",
+    "m": "Spoken like \"koorva\".",
+    "i": "/kurvɒ/"
+  },
+  {
+    "h": "találkozunk",
+    "e": "maybe",
+    "m": "Spoken like \"találkozoonk\" — maybe.",
+    "i": "/tɒlaːlkozunk/"
+  },
+  {
+    "h": "régi",
+    "e": "old (thing)",
+    "m": "Spoken like \"régee\".",
+    "i": "/reːɡi/"
+  },
+  {
+    "h": "majdnem",
+    "e": "today",
+    "m": "Spoken like \"majdnem\" — today.",
+    "i": "/mɒjdnɛm/"
+  },
+  {
+    "h": "mindjárt",
+    "e": "what; we",
+    "m": "Spoken like \"meendjárt\" — what.",
+    "i": "/mindjaːrt/"
+  },
+  {
+    "h": "fél",
+    "e": "afraid; half",
+    "m": "Spoken like \"fél\".",
+    "i": "/feːl/"
+  },
+  {
+    "h": "óta",
+    "e": "since",
+    "m": "Spoken like \"óta\".",
+    "i": "/oːtɒ/"
+  },
+  {
+    "h": "míg",
+    "e": "while",
+    "m": "Spoken like \"míg\".",
+    "i": "/miːɡ/"
+  },
+  {
+    "h": "szerinted",
+    "e": "in your opinion",
+    "m": "Spoken like \"sereented\".",
+    "i": "/sɛrintɛd/"
+  },
+  {
+    "h": "maradj",
+    "e": "already",
+    "m": "Spoken like \"maradj\" — already.",
+    "i": "/mɒrɒdj/"
+  },
+  {
+    "h": "mész",
+    "e": "you go",
+    "m": "Spoken like \"més\".",
+    "i": "/meːs/"
+  },
+  {
+    "h": "nézz",
+    "e": "look",
+    "m": "Spoken like \"nézz\".",
+    "i": "/neːzː/"
+  },
+  {
+    "h": "segíteni",
+    "e": "to help",
+    "m": "Spoken like \"segítenee\".",
+    "i": "/ʃɛɡiːtɛni/"
+  },
+  {
+    "h": "biztosan",
+    "e": "sure; certain",
+    "m": "Spoken like \"beeztosan\" — sure.",
+    "i": "/biztoʃɒn/"
+  },
+  {
+    "h": "mennyi",
+    "e": "how much",
+    "m": "Spoken like \"mennyee\".",
+    "i": "/mɛɲːi/"
+  },
+  {
+    "h": "számít",
+    "e": "matters; counts",
+    "m": "Spoken like \"sámít\".",
+    "i": "/saːmiːt/"
+  },
+  {
+    "h": "öreg",
+    "e": "old (person)",
+    "m": "Spoken like \"öreg\".",
+    "i": "/ørɛɡ/"
+  },
+  {
+    "h": "abban",
+    "e": "in that",
+    "m": "Spoken like \"abban\".",
+    "i": "/ɒbːɒn/"
+  },
+  {
+    "h": "készen",
+    "e": "ready (adverbial)",
+    "m": "Spoken like \"késen\".",
+    "i": "/keːsɛn/"
+  },
+  {
+    "h": "mondott",
+    "e": "says",
+    "m": "Spoken like \"mondott\" — says.",
+    "i": "/mondotː/"
+  },
+  {
+    "h": "gyönyörű",
+    "e": "beautiful",
+    "m": "Spoken like \"dyönyörű\".",
+    "i": "/ɟøɲøryː/"
+  },
+  {
+    "h": "enyém",
+    "e": "I",
+    "m": "Spoken like \"enyém\" — I.",
+    "i": "/ɛɲeːm/"
+  },
+  {
+    "h": "között",
+    "e": "between; among",
+    "m": "Spoken like \"között\".",
+    "i": "/køzøtː/"
+  },
+  {
+    "h": "kérek",
+    "e": "I request; I ask for",
+    "m": "Spoken like \"kérek\".",
+    "i": "/keːrɛk/"
+  },
+  {
+    "h": "ellen",
+    "e": "against",
+    "m": "Spoken like \"ellen\" — against.",
+    "i": "/ɛlːɛn/"
+  },
+  {
+    "h": "velünk",
+    "e": "with us",
+    "m": "Spoken like \"velünk\".",
+    "i": "/vɛlynk/"
+  },
+  {
+    "h": "hülye",
+    "e": "stupid; fool",
+    "m": "Spoken like \"hüye\".",
+    "i": "/hyjɛ/"
+  },
+  {
+    "h": "hozzám",
+    "e": "snow",
+    "m": "Spoken like \"hozzám\" — snow.",
+    "i": "/hozːaːm/"
+  },
+  {
+    "h": "négy",
+    "e": "four",
+    "m": "Spoken like \"nédy\".",
+    "i": "/neːɟ/"
+  },
+  {
+    "h": "emlékszel",
+    "e": "do you remember",
+    "m": "Spoken like \"emléksel\".",
+    "i": "/ɛmleːksɛl/"
+  },
+  {
+    "h": "valakit",
+    "e": "someone",
+    "m": "Spoken like \"valakeet\" — someone.",
+    "i": "/vɒlɒkit/"
+  },
+  {
+    "h": "előbb",
+    "e": "earlier",
+    "m": "Spoken like \"előbb\".",
+    "i": "/ɛløːbː/"
+  },
+  {
+    "h": "király",
+    "e": "who; out",
+    "m": "Spoken like \"keeráy\" — who.",
+    "i": "/kiraːj/"
+  },
+  {
+    "h": "fiúk",
+    "e": "boys",
+    "m": "Spoken like \"feeúk\".",
+    "i": "/fiuːk/"
+  },
+  {
+    "h": "légy",
+    "e": "be (imperative)",
+    "m": "Spoken like \"lédy\".",
+    "i": "/leːɟ/"
+  },
+  {
+    "h": "köszi",
+    "e": "thanks",
+    "m": "Spoken like \"kösee\".",
+    "i": "/køsi/"
+  },
+  {
+    "h": "leszel",
+    "e": "will be",
+    "m": "Spoken like \"lesel\" — will be.",
+    "i": "/lɛsɛl/"
+  },
+  {
+    "h": "folyik",
+    "e": "flows; is going on",
+    "m": "Spoken like \"foyeek\".",
+    "i": "/fojik/"
+  },
+  {
+    "h": "kibaszott",
+    "e": "who; out",
+    "m": "Spoken like \"keebasott\" — who.",
+    "i": "/kibɒsotː/"
+  },
+  {
+    "h": "ahhoz",
+    "e": "to that",
+    "m": "Spoken like \"ahhoz\".",
+    "i": "/ɒhhoz/"
+  },
+  {
+    "h": "úgyhogy",
+    "e": "so; therefore",
+    "m": "Spoken like \"údyhody\".",
+    "i": "/uːɟhoɟ/"
+  },
+  {
+    "h": "drágám",
+    "e": "darling",
+    "m": "Spoken like \"drágám\".",
+    "i": "/draːɡaːm/"
+  },
+  {
+    "h": "jöttem",
+    "e": "I came",
+    "m": "Spoken like \"jöttem\".",
+    "i": "/jøtːɛm/"
+  },
+  {
+    "h": "gondolsz",
+    "e": "you think",
+    "m": "Spoken like \"gondols\".",
+    "i": "/ɡondols/"
+  },
+  {
+    "h": "addig",
+    "e": "gives",
+    "m": "Spoken like \"addeeg\" — gives.",
+    "i": "/ɒdːiɡ/"
+  },
+  {
+    "h": "éjjel",
+    "e": "at night",
+    "m": "Spoken like \"éjjel\".",
+    "i": "/eːjːɛl/"
+  },
+  {
+    "h": "embert",
+    "e": "person",
+    "m": "Spoken like \"embert\" — person.",
+    "i": "/ɛmbɛrt/"
+  },
+  {
+    "h": "viszlát",
+    "e": "carries; takes",
+    "m": "Spoken like \"veeslát\" — carries.",
+    "i": "/vislaːt/"
+  },
+  {
+    "h": "tőlem",
+    "e": "from me",
+    "m": "Spoken like \"tőlem\".",
+    "i": "/tøːlɛm/"
+  },
+  {
+    "h": "érte",
+    "e": "for him/her/it",
+    "m": "Spoken like \"érte\".",
+    "i": "/eːrtɛ/"
+  },
+  {
+    "h": "dolgokat",
+    "e": "things (accusative)",
+    "m": "Spoken like \"dolgokat\".",
+    "i": "/dolɡokɒt/"
+  },
+  {
+    "h": "emlékszem",
+    "e": "I remember",
+    "m": "Spoken like \"emléksem\".",
+    "i": "/ɛmleːksɛm/"
+  },
+  {
+    "h": "ég",
+    "e": "sky; burns",
+    "m": "Spoken like \"ég\".",
+    "i": "/eːɡ/"
+  },
+  {
+    "h": "gondolod",
+    "e": "you think",
+    "m": "Spoken like \"gondolod\".",
+    "i": "/ɡondolod/"
+  },
+  {
+    "h": "élet",
+    "e": "life",
+    "m": "Spoken like \"élet\".",
+    "i": "/eːlɛt/"
+  },
+  {
+    "h": "főnök",
+    "e": "boss",
+    "m": "Spoken like \"főnök\".",
+    "i": "/føːnøk/"
+  },
+  {
+    "h": "bármit",
+    "e": "anything",
+    "m": "Spoken like \"bármeet\".",
+    "i": "/baːrmit/"
+  },
+  {
+    "h": "fogd",
+    "e": "tooth",
+    "m": "Spoken like \"fogd\" — tooth.",
+    "i": "/foɡd/"
+  },
+  {
+    "h": "tiszta",
+    "e": "clean; pure",
+    "m": "Spoken like \"teesta\".",
+    "i": "/tistɒ/"
+  },
+  {
+    "h": "csinál",
+    "e": "to do; to make",
+    "m": "'Csinál' (CHEE-nahl) — 'CHIN-up, I'll MAKE it.' To do, to make. The everyday verb for action.",
+    "i": "/tʃinaːl/"
+  },
+  {
+    "h": "tőle",
+    "e": "from him/her/it",
+    "m": "Spoken like \"tőle\".",
+    "i": "/tøːlɛ/"
+  },
+  {
+    "h": "munka",
+    "e": "work; job",
+    "m": "Spoken like \"moonka\" — work.",
+    "i": "/munkɒ/"
+  },
+  {
+    "h": "mondod",
+    "e": "says",
+    "m": "Spoken like \"mondod\" — says.",
+    "i": "/mondod/"
+  },
+  {
+    "h": "vicces",
+    "e": "funny",
+    "m": "Spoken like \"veecces\".",
+    "i": "/vit͡sːɛʃ/"
+  },
+  {
+    "h": "nyugi",
+    "e": "relax; calm down",
+    "m": "Spoken like \"nyoogee\".",
+    "i": "/ɲuɡi/"
+  },
+  {
+    "h": "tettem",
+    "e": "you (sing.)",
+    "m": "Spoken like \"tettem\" — you (sing.).",
+    "i": "/tɛtːɛm/"
+  },
+  {
+    "h": "év",
+    "e": "year",
+    "m": "Spoken like \"év\".",
+    "i": "/eːv/"
+  },
+  {
+    "h": "fognak",
+    "e": "tooth",
+    "m": "Spoken like \"fognak\" — tooth.",
+    "i": "/foɡnɒk/"
+  },
+  {
+    "h": "beszélek",
+    "e": "into; in",
+    "m": "Spoken like \"besélek\" — into.",
+    "i": "/bɛseːlɛk/"
+  },
+  {
+    "h": "vigyázz",
+    "e": "watch out; be careful",
+    "m": "Spoken like \"veedyázz\".",
+    "i": "/viɟaːzː/"
+  },
+  {
+    "h": "bár",
+    "e": "although; any",
+    "m": "Spoken like \"bár\".",
+    "i": "/baːr/"
+  },
+  {
+    "h": "akár",
+    "e": "even; or",
+    "m": "Spoken like \"akár\".",
+    "i": "/ɒkaːr/"
+  },
+  {
+    "h": "dolgok",
+    "e": "things",
+    "m": "Spoken like \"dolgok\".",
+    "i": "/dolɡok/"
+  },
+  {
+    "h": "pénz",
+    "e": "money",
+    "m": "Spoken like \"pénz\".",
+    "i": "/peːnz/"
+  },
+  {
+    "h": "vedd",
+    "e": "take (imperative)",
+    "m": "Spoken like \"vedd\".",
+    "i": "/vɛdː/"
+  },
+  {
+    "h": "kapitány",
+    "e": "captain",
+    "m": "Spoken like \"kapeetány\".",
+    "i": "/kɒpitaːɲ/"
+  },
+  {
+    "h": "napot",
+    "e": "day; sun",
+    "m": "Spoken like \"napot\" — day.",
+    "i": "/nɒpot/"
+  },
+  {
+    "h": "sam",
+    "e": "Sam",
+    "m": "Spoken like \"sam\".",
+    "i": "/ʃɒm/"
+  },
+  {
+    "h": "amint",
+    "e": "as soon as",
+    "m": "Spoken like \"ameent\".",
+    "i": "/ɒmint/"
+  },
+  {
+    "h": "mond",
+    "e": "to say",
+    "m": "'Mond' = 'MOUTH speaks' — to say. 'Mit mondtál?' = 'What did you SAY?'",
+    "i": "/mond/"
+  },
+  {
+    "h": "bocs",
+    "e": "sorry",
+    "m": "Spoken like \"boch\".",
+    "i": "/botʃ/"
+  },
+  {
+    "h": "tudják",
+    "e": "knows; can",
+    "m": "Spoken like \"toodják\" — knows.",
+    "i": "/tudjaːk/"
+  },
+  {
+    "h": "vettem",
+    "e": "I bought",
+    "m": "Spoken like \"vettem\".",
+    "i": "/vɛtːɛm/"
+  },
+  {
+    "h": "mennyire",
+    "e": "how much",
+    "m": "Spoken like \"mennyeere\".",
+    "i": "/mɛɲːirɛ/"
+  },
+  {
+    "h": "eddig",
+    "e": "until now; so far",
+    "m": "Spoken like \"eddeeg\".",
+    "i": "/ɛdːiɡ/"
+  },
+  {
+    "h": "ilyet",
+    "e": "such a thing",
+    "m": "Spoken like \"eeyet\".",
+    "i": "/ijɛt/"
+  },
+  {
+    "h": "menjen",
+    "e": "let him/her go",
+    "m": "Spoken like \"menjen\".",
+    "i": "/mɛnjɛn/"
+  },
+  {
+    "h": "bármi",
+    "e": "anything",
+    "m": "Spoken like \"bármee\".",
+    "i": "/baːrmi/"
+  },
+  {
+    "h": "fogunk",
+    "e": "tooth",
+    "m": "Spoken like \"fogoonk\" — tooth.",
+    "i": "/foɡunk/"
+  },
+  {
+    "h": "gyerek",
+    "e": "child",
+    "m": "Spoken like \"dyerek\" — child.",
+    "i": "/ɟɛrɛk/"
+  },
+  {
+    "h": "fenébe",
+    "e": "to hell",
+    "m": "Spoken like \"fenébe\".",
+    "i": "/fɛneːbɛ/"
+  },
+  {
+    "h": "tökéletes",
+    "e": "perfect",
+    "m": "Spoken like \"tökéletes\".",
+    "i": "/tøkeːlɛtɛʃ/"
+  },
+  {
+    "h": "anyám",
+    "e": "my mother",
+    "m": "Spoken like \"anyám\".",
+    "i": "/ɒɲaːm/"
+  },
+  {
+    "h": "életben",
+    "e": "in life",
+    "m": "Spoken like \"életben\".",
+    "i": "/eːlɛtbɛn/"
+  },
+  {
+    "h": "helyes",
+    "e": "correct; right",
+    "m": "Spoken like \"heyes\".",
+    "i": "/hɛjɛʃ/"
+  },
+  {
+    "h": "egyszerűen",
+    "e": "one; a",
+    "m": "Spoken like \"edyserűen\" — one.",
+    "i": "/ɛɟsɛryːɛn/"
+  },
+  {
+    "h": "való",
+    "e": "real; actual",
+    "m": "Spoken like \"való\".",
+    "i": "/vɒloː/"
+  },
+  {
+    "h": "jelenti",
+    "e": "means",
+    "m": "Spoken like \"jelentee\".",
+    "i": "/jɛlɛnti/"
+  },
+  {
+    "h": "szüksége",
+    "e": "he/she needs",
+    "m": "Spoken like \"süksége\".",
+    "i": "/sykʃeːɡɛ/"
+  },
+  {
+    "h": "tudta",
+    "e": "knows; can",
+    "m": "Spoken like \"toodta\" — knows.",
+    "i": "/tudtɒ/"
+  },
+  {
+    "h": "teljes",
+    "e": "you (sing.)",
+    "m": "Spoken like \"teljes\" — you (sing.).",
+    "i": "/tɛljɛʃ/"
+  },
+  {
+    "h": "akart",
+    "e": "wanted",
+    "m": "Spoken like \"akart\".",
+    "i": "/ɒkɒrt/"
+  },
+  {
+    "h": "sikerült",
+    "e": "succeeded",
+    "m": "Spoken like \"seekerült\".",
+    "i": "/ʃikɛrylt/"
+  },
+  {
+    "h": "jövök",
+    "e": "I come",
+    "m": "Spoken like \"jövök\".",
+    "i": "/jøvøk/"
+  },
+  {
+    "h": "valóban",
+    "e": "indeed",
+    "m": "Spoken like \"valóban\".",
+    "i": "/vɒloːbɒn/"
+  },
+  {
+    "h": "annyi",
+    "e": "that much",
+    "m": "Spoken like \"annyee\".",
+    "i": "/ɒɲːi/"
+  },
+  {
+    "h": "utána",
+    "e": "road; way",
+    "m": "Spoken like \"ootána\" — road.",
+    "i": "/utaːnɒ/"
+  },
+  {
+    "h": "helyet",
+    "e": "place (accusative)",
+    "m": "Spoken like \"heyet\".",
+    "i": "/hɛjɛt/"
+  },
+  {
+    "h": "velük",
+    "e": "with them",
+    "m": "Spoken like \"velük\".",
+    "i": "/vɛlyk/"
+  },
+  {
+    "h": "uraim",
+    "e": "gentlemen",
+    "m": "Spoken like \"ooraeem\".",
+    "i": "/urɒim/"
+  },
+  {
+    "h": "otthon",
+    "e": "at home",
+    "m": "Spoken like \"otthon\".",
+    "i": "/otːhon/"
+  },
+  {
+    "h": "valószínűleg",
+    "e": "probably",
+    "m": "Spoken like \"valósínűleg\".",
+    "i": "/vɒloːsiːnyːlɛɡ/"
+  },
+  {
+    "h": "reggelt",
+    "e": "morning",
+    "m": "Spoken like \"reggelt\" — morning.",
+    "i": "/rɛɡːɛlt/"
+  },
+  {
+    "h": "sose",
+    "e": "salt",
+    "m": "Spoken like \"sose\" — salt.",
+    "i": "/ʃoʃɛ/"
+  },
+  {
+    "h": "hét",
+    "e": "week; seven",
+    "m": "Spoken like \"hét\".",
+    "i": "/heːt/"
+  },
+  {
+    "h": "hosszú",
+    "e": "snow",
+    "m": "Spoken like \"hossú\" — snow.",
+    "i": "/hosːuː/"
+  },
+  {
+    "h": "szépen",
+    "e": "nicely",
+    "m": "Spoken like \"sépen\".",
+    "i": "/seːpɛn/"
+  },
+  {
+    "h": "miután",
+    "e": "what; we",
+    "m": "Spoken like \"meeootán\" — what.",
+    "i": "/miutaːn/"
+  },
+  {
+    "h": "tart",
+    "e": "holds; lasts",
+    "m": "Spoken like \"tart\".",
+    "i": "/tɒrt/"
+  },
+  {
+    "h": "hat",
+    "e": "if",
+    "m": "Spoken like \"hat\" — if.",
+    "i": "/hɒt/"
+  },
+  {
+    "h": "mióta",
+    "e": "what; we",
+    "m": "Spoken like \"meeóta\" — what.",
+    "i": "/mioːtɒ/"
+  },
+  {
+    "h": "szól",
+    "e": "speaks; calls",
+    "m": "Spoken like \"sól\".",
+    "i": "/soːl/"
+  },
+  {
+    "h": "elment",
+    "e": "left; went away",
+    "m": "Spoken like \"elment\".",
+    "i": "/ɛlmɛnt/"
+  },
+  {
+    "h": "valójában",
+    "e": "actually",
+    "m": "Spoken like \"valójában\".",
+    "i": "/vɒloːjaːbɒn/"
+  },
+  {
+    "h": "hiszed",
+    "e": "you believe",
+    "m": "Spoken like \"heesed\".",
+    "i": "/hisɛd/"
+  },
+  {
+    "h": "belőle",
+    "e": "into; in",
+    "m": "Spoken like \"belőle\" — into.",
+    "i": "/bɛløːlɛ/"
+  },
+  {
+    "h": "természetesen",
+    "e": "you (sing.)",
+    "m": "Spoken like \"termésetesen\" — you (sing.).",
+    "i": "/tɛrmeːsɛtɛʃɛn/"
+  },
+  {
+    "h": "ezelőtt",
+    "e": "this",
+    "m": "Spoken like \"ezelőtt\" — this.",
+    "i": "/ɛzɛløːtː/"
+  },
+  {
+    "h": "fogod",
+    "e": "tooth",
+    "m": "Spoken like \"fogod\" — tooth.",
+    "i": "/foɡod/"
+  },
+  {
+    "h": "halló",
+    "e": "if",
+    "m": "Spoken like \"halló\" — if.",
+    "i": "/hɒlːoː/"
+  },
+  {
+    "h": "jaj",
+    "e": "oh; ouch",
+    "m": "Spoken like \"jaj\".",
+    "i": "/jɒj/"
+  },
+  {
+    "h": "közel",
+    "e": "near",
+    "m": "Spoken like \"közel\".",
+    "i": "/køzɛl/"
+  },
+  {
+    "h": "michael",
+    "e": "what; we",
+    "m": "Spoken like \"meechael\" — what.",
+    "i": "/mixɒɛl/"
+  },
+  {
+    "h": "mást",
+    "e": "other (accusative)",
+    "m": "Spoken like \"mást\".",
+    "i": "/maːʃt/"
+  },
+  {
+    "h": "maguk",
+    "e": "today",
+    "m": "Spoken like \"magook\" — today.",
+    "i": "/mɒɡuk/"
+  },
+  {
+    "h": "találtam",
+    "e": "maybe",
+    "m": "Spoken like \"találtam\" — maybe.",
+    "i": "/tɒlaːltɒm/"
+  },
+  {
+    "h": "tett",
+    "e": "you (sing.)",
+    "m": "Spoken like \"tett\" — you (sing.).",
+    "i": "/tɛtː/"
+  },
+  {
+    "h": "igaza",
+    "e": "true",
+    "m": "Spoken like \"eegaza\" — true.",
+    "i": "/iɡɒzɒ/"
+  },
+  {
+    "h": "bocsánat",
+    "e": "sorry; apology",
+    "m": "Spoken like \"bochánat\".",
+    "i": "/botʃaːnɒt/"
+  },
+  {
+    "h": "jár",
+    "e": "walks; goes",
+    "m": "Spoken like \"jár\".",
+    "i": "/jaːr/"
+  },
+  {
+    "h": "csináld",
+    "e": "do it (imperative)",
+    "m": "Spoken like \"cheenáld\".",
+    "i": "/tʃinaːld/"
+  },
+  {
+    "h": "belül",
+    "e": "into; in",
+    "m": "Spoken like \"belül\" — into.",
+    "i": "/bɛlyl/"
+  },
+  {
+    "h": "marad",
+    "e": "already",
+    "m": "Spoken like \"marad\" — already.",
+    "i": "/mɒrɒd/"
+  },
+  {
+    "h": "melyik",
+    "e": "which",
+    "m": "Spoken like \"meyeek\".",
+    "i": "/mɛjik/"
+  },
+  {
+    "h": "nevem",
+    "e": "don't",
+    "m": "Spoken like \"nevem\" — don't.",
+    "i": "/nɛvɛm/"
+  },
+  {
+    "h": "pillanat",
+    "e": "moment",
+    "m": "Spoken like \"peellanat\".",
+    "i": "/pilːɒnɒt/"
+  },
+  {
+    "h": "várjon",
+    "e": "wait (formal)",
+    "m": "Spoken like \"várjon\".",
+    "i": "/vaːrjon/"
+  },
+  {
+    "h": "felé",
+    "e": "up",
+    "m": "Spoken like \"felé\" — up.",
+    "i": "/fɛleː/"
+  },
+  {
+    "h": "igazából",
+    "e": "true",
+    "m": "Spoken like \"eegazából\" — true.",
+    "i": "/iɡɒzaːboːl/"
+  },
+  {
+    "h": "tette",
+    "e": "you (sing.)",
+    "m": "Spoken like \"tette\" — you (sing.).",
+    "i": "/tɛtːɛ/"
+  },
+  {
+    "h": "többi",
+    "e": "the rest",
+    "m": "Spoken like \"többee\".",
+    "i": "/tøbːi/"
+  },
+  {
+    "h": "ötlet",
+    "e": "idea",
+    "m": "Spoken like \"ötlet\".",
+    "i": "/øtlɛt/"
+  },
+  {
+    "h": "életem",
+    "e": "my life",
+    "m": "Spoken like \"életem\".",
+    "i": "/eːlɛtɛm/"
+  },
+  {
+    "h": "ismerem",
+    "e": "also; too",
+    "m": "Spoken like \"eesmerem\" — also.",
+    "i": "/iʃmɛrɛm/"
+  },
+  {
+    "h": "működik",
+    "e": "works; functions",
+    "m": "Spoken like \"működeek\".",
+    "i": "/myːkødik/"
+  },
+  {
+    "h": "igazad",
+    "e": "true",
+    "m": "Spoken like \"eegazad\" — true.",
+    "i": "/iɡɒzɒd/"
+  },
+  {
+    "h": "srác",
+    "e": "guy; boy",
+    "m": "Spoken like \"srác\".",
+    "i": "/ʃraːt͡s/"
+  },
+  {
+    "h": "üdv",
+    "e": "hello; welcome",
+    "m": "Spoken like \"üdv\".",
+    "i": "/ydv/"
+  },
+  {
+    "h": "kettő",
+    "e": "two",
+    "m": "Spoken like \"kettő\".",
+    "i": "/kɛtːøː/"
+  },
+  {
+    "h": "érti",
+    "e": "understands",
+    "m": "Spoken like \"értee\".",
+    "i": "/eːrti/"
+  },
+  {
+    "h": "hangzik",
+    "e": "if",
+    "m": "Spoken like \"hangzeek\" — if.",
+    "i": "/hɒnɡzik/"
+  },
+  {
+    "h": "fehér",
+    "e": "white",
+    "m": "Spoken like \"fehér\".",
+    "i": "/fɛheːr/"
+  },
+  {
+    "h": "él",
+    "e": "lives",
+    "m": "Spoken like \"él\".",
+    "i": "/eːl/"
+  },
+  {
+    "h": "segítség",
+    "e": "help",
+    "m": "Spoken like \"segítség\".",
+    "i": "/ʃɛɡiːtʃeːɡ/"
+  },
+  {
+    "h": "elő",
+    "e": "forward; ahead",
+    "m": "Spoken like \"elő\".",
+    "i": "/ɛløː/"
+  },
+  {
+    "h": "jössz",
+    "e": "you come",
+    "m": "Spoken like \"jöss\".",
+    "i": "/jøsː/"
+  },
+  {
+    "h": "ajtót",
+    "e": "door (accusative)",
+    "m": "Spoken like \"ajtót\".",
+    "i": "/ɒjtoːt/"
+  },
+  {
+    "h": "amerikai",
+    "e": "American",
+    "m": "Spoken like \"amereekaee\".",
+    "i": "/ɒmɛrikɒi/"
+  },
+  {
+    "h": "mozgás",
+    "e": "movement; move",
+    "m": "Spoken like \"mozgás\".",
+    "i": "/mozɡaːʃ/"
+  },
+  {
+    "h": "ügynök",
+    "e": "agent",
+    "m": "Spoken like \"üdynök\".",
+    "i": "/yɟnøk/"
+  },
+  {
+    "h": "alig",
+    "e": "hardly; barely",
+    "m": "Spoken like \"aleeg\".",
+    "i": "/ɒliɡ/"
+  },
+  {
+    "h": "aggódj",
+    "e": "don't worry",
+    "m": "Spoken like \"aggódj\".",
+    "i": "/ɒɡːoːdj/"
+  },
+  {
+    "h": "egymást",
+    "e": "one; a",
+    "m": "Spoken like \"edymást\" — one.",
+    "i": "/ɛɟmaːʃt/"
+  },
+  {
+    "h": "látta",
+    "e": "he/she saw",
+    "m": "Spoken like \"látta\".",
+    "i": "/laːtːɒ/"
+  },
+  {
+    "h": "édes",
+    "e": "sweet; dear",
+    "m": "Spoken like \"édes\".",
+    "i": "/eːdɛʃ/"
+  },
+  {
+    "h": "rólam",
+    "e": "about me",
+    "m": "Spoken like \"rólam\".",
+    "i": "/roːlɒm/"
+  },
+  {
+    "h": "magával",
+    "e": "today",
+    "m": "Spoken like \"magával\" — today.",
+    "i": "/mɒɡaːvɒl/"
+  },
+  {
+    "h": "beteg",
+    "e": "into; in",
+    "m": "Spoken like \"beteg\" — into.",
+    "i": "/bɛtɛɡ/"
+  },
+  {
+    "h": "láttad",
+    "e": "you saw",
+    "m": "Spoken like \"láttad\".",
+    "i": "/laːtːɒd/"
+  },
+  {
+    "h": "hívják",
+    "e": "they call him/her",
+    "m": "Spoken like \"hívják\".",
+    "i": "/hiːvjaːk/"
+  },
+  {
+    "h": "fekete",
+    "e": "black",
+    "m": "Spoken like \"fekete\".",
+    "i": "/fɛkɛtɛ/"
+  },
+  {
+    "h": "bennem",
+    "e": "into; in",
+    "m": "Spoken like \"bennem\" — into.",
+    "i": "/bɛnːɛm/"
+  },
+  {
+    "h": "végül",
+    "e": "finally",
+    "m": "Spoken like \"végül\".",
+    "i": "/veːɡyl/"
+  },
+  {
+    "h": "ehhez",
+    "e": "to this",
+    "m": "Spoken like \"ehhez\".",
+    "i": "/ɛhhɛz/"
+  },
+  {
+    "h": "hamarosan",
+    "e": "if",
+    "m": "Spoken like \"hamarosan\" — if.",
+    "i": "/hɒmɒroʃɒn/"
+  },
+  {
+    "h": "kérdés",
+    "e": "question",
+    "m": "Spoken like \"kérdés\".",
+    "i": "/keːrdeːʃ/"
+  },
+  {
+    "h": "gyerekek",
+    "e": "child",
+    "m": "Spoken like \"dyerekek\" — child.",
+    "i": "/ɟɛrɛkɛk/"
+  },
+  {
+    "h": "szar",
+    "e": "shit",
+    "m": "Spoken like \"sar\".",
+    "i": "/sɒr/"
+  },
+  {
+    "h": "rohadt",
+    "e": "damn; rotten",
+    "m": "Spoken like \"rohadt\".",
+    "i": "/rohɒdt/"
+  },
+  {
+    "h": "apád",
+    "e": "your father",
+    "m": "Spoken like \"apád\".",
+    "i": "/ɒpaːd/"
+  },
+  {
+    "h": "vár",
+    "e": "waits; castle",
+    "m": "Spoken like \"vár\".",
+    "i": "/vaːr/"
+  },
+  {
+    "h": "szívesen",
+    "e": "gladly; you're welcome",
+    "m": "Spoken like \"sívesen\".",
+    "i": "/siːvɛʃɛn/"
+  },
+  {
+    "h": "ebből",
+    "e": "from this",
+    "m": "Spoken like \"ebből\".",
+    "i": "/ɛbːøːl/"
+  },
+  {
+    "h": "elnök",
+    "e": "president",
+    "m": "Spoken like \"elnök\".",
+    "i": "/ɛlnøk/"
+  },
+  {
+    "h": "voltunk",
+    "e": "was; were",
+    "m": "Spoken like \"voltoonk\" — was.",
+    "i": "/voltunk/"
+  },
+  {
+    "h": "fene",
+    "e": "damn",
+    "m": "Spoken like \"fene\".",
+    "i": "/fɛnɛ/"
+  },
+  {
+    "h": "időt",
+    "e": "time (accusative)",
+    "m": "Spoken like \"eedőt\".",
+    "i": "/idøːt/"
+  },
+  {
+    "h": "alá",
+    "e": "under; beneath",
+    "m": "Spoken like \"alá\".",
+    "i": "/ɒlaː/"
+  },
+  {
+    "h": "muszáj",
+    "e": "must; have to",
+    "m": "Spoken like \"moosáj\".",
+    "i": "/musaːj/"
+  },
+  {
+    "h": "lennék",
+    "e": "down",
+    "m": "Spoken like \"lennék\" — down.",
+    "i": "/lɛnːeːk/"
+  },
+  {
+    "h": "ügy",
+    "e": "case; matter",
+    "m": "Spoken like \"üdy\".",
+    "i": "/yɟ/"
+  },
+  {
+    "h": "őrült",
+    "e": "crazy",
+    "m": "Spoken like \"őrült\".",
+    "i": "/øːrylt/"
+  },
+  {
+    "h": "akarnak",
+    "e": "they want",
+    "m": "Spoken like \"akarnak\".",
+    "i": "/ɒkɒrnɒk/"
+  },
+  {
+    "h": "annyit",
+    "e": "that much (accusative)",
+    "m": "Spoken like \"annyeet\".",
+    "i": "/ɒɲːit/"
+  },
+  {
+    "h": "maradt",
+    "e": "already",
+    "m": "Spoken like \"maradt\" — already.",
+    "i": "/mɒrɒdt/"
+  },
+  {
+    "h": "ért",
+    "e": "understands; is worth",
+    "m": "Spoken like \"ért\".",
+    "i": "/eːrt/"
+  },
+  {
+    "h": "rosszul",
+    "e": "bad",
+    "m": "Spoken like \"rossool\" — bad.",
+    "i": "/rosːul/"
+  },
+  {
+    "h": "egyszerű",
+    "e": "one; a",
+    "m": "Spoken like \"edyserű\" — one.",
+    "i": "/ɛɟsɛryː/"
+  },
+  {
+    "h": "mellett",
+    "e": "next to",
+    "m": "Spoken like \"mellett\" — next to.",
+    "i": "/mɛlːɛtː/"
+  },
+  {
+    "h": "sokáig",
+    "e": "salt",
+    "m": "Spoken like \"sokáeeg\" — salt.",
+    "i": "/ʃokaːiɡ/"
+  },
+  {
+    "h": "jönni",
+    "e": "to come",
+    "m": "Spoken like \"jönnee\".",
+    "i": "/jønːi/"
+  },
+  {
+    "h": "hány",
+    "e": "how many",
+    "m": "Spoken like \"hány\".",
+    "i": "/haːɲ/"
+  },
+  {
+    "h": "előre",
+    "e": "forward; ahead",
+    "m": "Spoken like \"előre\".",
+    "i": "/ɛløːrɛ/"
+  },
+  {
+    "h": "érdekes",
+    "e": "interesting",
+    "m": "Spoken like \"érdekes\".",
+    "i": "/eːrdɛkɛʃ/"
+  },
+  {
+    "h": "embereket",
+    "e": "person",
+    "m": "Spoken like \"embereket\" — person.",
+    "i": "/ɛmbɛrɛkɛt/"
+  },
+  {
+    "h": "hiszi",
+    "e": "believes",
+    "m": "Spoken like \"heesee\".",
+    "i": "/hisi/"
+  },
+  {
+    "h": "második",
+    "e": "second",
+    "m": "Spoken like \"másodeek\".",
+    "i": "/maːʃodik/"
+  },
+  {
+    "h": "tudunk",
+    "e": "knows; can",
+    "m": "Spoken like \"toodoonk\" — knows.",
+    "i": "/tudunk/"
+  },
+  {
+    "h": "amire",
+    "e": "which (relative, onto)",
+    "m": "Spoken like \"ameere\".",
+    "i": "/ɒmirɛ/"
+  },
+  {
+    "h": "különleges",
+    "e": "special",
+    "m": "Spoken like \"különleges\".",
+    "i": "/kylønlɛɡɛʃ/"
+  },
+  {
+    "h": "gondolja",
+    "e": "he/she thinks",
+    "m": "Spoken like \"gondolja\".",
+    "i": "/ɡondoljɒ/"
+  },
+  {
+    "h": "nézel",
+    "e": "you look",
+    "m": "Spoken like \"nézel\".",
+    "i": "/neːzɛl/"
+  },
+  {
+    "h": "csodálatos",
+    "e": "wonderful",
+    "m": "Spoken like \"chodálatos\".",
+    "i": "/tʃodaːlɒtoʃ/"
+  },
+  {
+    "h": "önnek",
+    "e": "to you (formal)",
+    "m": "Spoken like \"önnek\".",
+    "i": "/ønːɛk/"
+  },
+  {
+    "h": "lennie",
+    "e": "down",
+    "m": "Spoken like \"lenneee\" — down.",
+    "i": "/lɛnːiɛ/"
+  },
+  {
+    "h": "jézusom",
+    "e": "my God",
+    "m": "Spoken like \"jézoosom\".",
+    "i": "/jeːzuʃom/"
+  },
+  {
+    "h": "viszont",
+    "e": "carries; takes",
+    "m": "Spoken like \"veesont\" — carries.",
+    "i": "/visont/"
+  },
+  {
+    "h": "dolgozik",
+    "e": "works",
+    "m": "Spoken like \"dolgozeek\".",
+    "i": "/dolɡozik/"
+  },
+  {
+    "h": "komoly",
+    "e": "stone",
+    "m": "Spoken like \"komoy\" — stone.",
+    "i": "/komoj/"
+  },
+  {
+    "h": "mondják",
+    "e": "says",
+    "m": "Spoken like \"mondják\" — says.",
+    "i": "/mondjaːk/"
+  },
+  {
+    "h": "akinek",
+    "e": "to whom (relative)",
+    "m": "Spoken like \"akeenek\".",
+    "i": "/ɒkinɛk/"
+  },
+  {
+    "h": "nálam",
+    "e": "at my place",
+    "m": "Spoken like \"nálam\".",
+    "i": "/naːlɒm/"
+  },
+  {
+    "h": "nincsenek",
+    "e": "there isn't",
+    "m": "Spoken like \"neenchenek\" — there isn't.",
+    "i": "/nintʃɛnɛk/"
+  },
+  {
+    "h": "percet",
+    "e": "minute (accusative)",
+    "m": "Spoken like \"percet\".",
+    "i": "/pɛrt͡sɛt/"
+  },
+  {
+    "h": "keresztül",
+    "e": "asks; requests",
+    "m": "Spoken like \"kerestül\" — asks.",
+    "i": "/kɛrɛstyl/"
+  },
+  {
+    "h": "minek",
+    "e": "what; we",
+    "m": "Spoken like \"meenek\" — what.",
+    "i": "/minɛk/"
+  },
+  {
+    "h": "eltűnt",
+    "e": "disappeared",
+    "m": "Spoken like \"eltűnt\".",
+    "i": "/ɛltyːnt/"
+  },
+  {
+    "h": "kapcsolatban",
+    "e": "in connection with",
+    "m": "Spoken like \"kapcholatban\".",
+    "i": "/kɒptʃolɒtbɒn/"
+  },
+  {
+    "h": "igazság",
+    "e": "true",
+    "m": "Spoken like \"eegazhág\" — true.",
+    "i": "/iɡɒʒaːɡ/"
+  },
+  {
+    "h": "úton",
+    "e": "on the way",
+    "m": "Spoken like \"úton\".",
+    "i": "/uːton/"
+  },
+  {
+    "h": "munkát",
+    "e": "work (accusative)",
+    "m": "Spoken like \"moonkát\".",
+    "i": "/munkaːt/"
+  },
+  {
+    "h": "furcsa",
+    "e": "grass",
+    "m": "Spoken like \"foorcha\" — grass.",
+    "i": "/furtʃɒ/"
+  },
+  {
+    "h": "fegyvert",
+    "e": "weapon (accusative)",
+    "m": "Spoken like \"fedyvert\".",
+    "i": "/fɛɟvɛrt/"
+  },
+  {
+    "h": "mindegy",
+    "e": "what; we",
+    "m": "Spoken like \"meendedy\" — what.",
+    "i": "/mindɛɟ/"
+  },
+  {
+    "h": "múlt",
+    "e": "past",
+    "m": "Spoken like \"múlt\".",
+    "i": "/muːlt/"
+  },
+  {
+    "h": "héten",
+    "e": "this week",
+    "m": "Spoken like \"héten\".",
+    "i": "/heːtɛn/"
+  },
+  {
+    "h": "bent",
+    "e": "into; in",
+    "m": "Spoken like \"bent\" — into.",
+    "i": "/bɛnt/"
+  },
+  {
+    "h": "erős",
+    "e": "strong",
+    "m": "Spoken like \"erős\".",
+    "i": "/ɛrøːʃ/"
+  },
+  {
+    "h": "egyre",
+    "e": "one; a",
+    "m": "Spoken like \"edyre\" — one.",
+    "i": "/ɛɟrɛ/"
+  },
+  {
+    "h": "nagyobb",
+    "e": "big",
+    "m": "Spoken like \"nadyobb\" — big.",
+    "i": "/nɒɟobː/"
+  },
+  {
+    "h": "tőled",
+    "e": "from you",
+    "m": "Spoken like \"tőled\".",
+    "i": "/tøːlɛd/"
+  },
+  {
+    "h": "azokat",
+    "e": "the; that",
+    "m": "Spoken like \"azokat\" — the.",
+    "i": "/ɒzokɒt/"
+  },
+  {
+    "h": "kicsim",
+    "e": "who; out",
+    "m": "Spoken like \"keecheem\" — who.",
+    "i": "/kitʃim/"
+  },
+  {
+    "h": "tíz",
+    "e": "ten",
+    "m": "Spoken like \"tíz\".",
+    "i": "/tiːz/"
+  },
+  {
+    "h": "probléma",
+    "e": "problem",
+    "m": "Spoken like \"probléma\".",
+    "i": "/probleːmɒ/"
+  },
+  {
+    "h": "valahol",
+    "e": "somewhere",
+    "m": "Spoken like \"valahol\".",
+    "i": "/vɒlɒhol/"
+  },
+  {
+    "h": "csináltam",
+    "e": "I did; I made",
+    "m": "Spoken like \"cheenáltam\".",
+    "i": "/tʃinaːltɒm/"
+  },
+  {
+    "h": "akarta",
+    "e": "he/she wanted",
+    "m": "Spoken like \"akarta\".",
+    "i": "/ɒkɒrtɒ/"
+  },
+  {
+    "h": "mindenkinek",
+    "e": "what; we",
+    "m": "Spoken like \"meendenkeenek\" — what.",
+    "i": "/mindɛnkinɛk/"
+  },
+  {
+    "h": "hatalmas",
+    "e": "if",
+    "m": "Spoken like \"hatalmas\" — if.",
+    "i": "/hɒtɒlmɒʃ/"
+  },
+  {
+    "h": "kicsi",
+    "e": "who; out",
+    "m": "Spoken like \"keechee\" — who.",
+    "i": "/kitʃi/"
+  },
+  {
+    "h": "szent",
+    "e": "saint; holy",
+    "m": "Spoken like \"sent\".",
+    "i": "/sɛnt/"
+  },
+  {
+    "h": "adj",
+    "e": "gives",
+    "m": "Spoken like \"adj\" — gives.",
+    "i": "/ɒdj/"
+  },
+  {
+    "h": "apja",
+    "e": "his/her father",
+    "m": "Spoken like \"apja\".",
+    "i": "/ɒpjɒ/"
+  },
+  {
+    "h": "különben",
+    "e": "otherwise",
+    "m": "Spoken like \"különben\".",
+    "i": "/kylønbɛn/"
+  },
+  {
+    "h": "doktor",
+    "e": "doctor",
+    "m": "Spoken like \"doktor\".",
+    "i": "/doktor/"
+  },
+  {
+    "h": "jönnek",
+    "e": "they come",
+    "m": "Spoken like \"jönnek\".",
+    "i": "/jønːɛk/"
+  },
+  {
+    "h": "szívem",
+    "e": "my heart",
+    "m": "Spoken like \"sívem\".",
+    "i": "/siːvɛm/"
+  },
+  {
+    "h": "lesznek",
+    "e": "will be",
+    "m": "Spoken like \"lesnek\" — will be.",
+    "i": "/lɛsnɛk/"
+  },
+  {
+    "h": "ennyire",
+    "e": "I",
+    "m": "Spoken like \"ennyeere\" — I.",
+    "i": "/ɛɲːirɛ/"
+  },
+  {
+    "h": "vagyis",
+    "e": "or; you are",
+    "m": "Spoken like \"vadyees\" — or.",
+    "i": "/vɒɟiʃ/"
+  },
+  {
+    "h": "kaptam",
+    "e": "I received",
+    "m": "Spoken like \"kaptam\".",
+    "i": "/kɒptɒm/"
+  },
+  {
+    "h": "segít",
+    "e": "helps",
+    "m": "Spoken like \"segít\".",
+    "i": "/ʃɛɡiːt/"
+  },
+  {
+    "h": "közben",
+    "e": "meanwhile",
+    "m": "Spoken like \"közben\".",
+    "i": "/køzbɛn/"
+  },
+  {
+    "h": "rendőrség",
+    "e": "police",
+    "m": "Spoken like \"rendőrség\".",
+    "i": "/rɛndøːrʃeːɡ/"
+  },
+  {
+    "h": "szükségünk",
+    "e": "we need",
+    "m": "Spoken like \"sükségünk\".",
+    "i": "/sykʃeːɡynk/"
+  },
+  {
+    "h": "dolgozni",
+    "e": "to work",
+    "m": "Spoken like \"dolgoznee\".",
+    "i": "/dolɡozni/"
+  },
+  {
+    "h": "legnagyobb",
+    "e": "down",
+    "m": "Spoken like \"legnadyobb\" — down.",
+    "i": "/lɛɡnɒɟobː/"
+  },
+  {
+    "h": "könnyű",
+    "e": "easy; light",
+    "m": "Spoken like \"könnyű\".",
+    "i": "/køɲːyː/"
+  },
+  {
+    "h": "máris",
+    "e": "already; right away",
+    "m": "Spoken like \"márees\".",
+    "i": "/maːriʃ/"
+  },
+  {
+    "h": "halál",
+    "e": "if",
+    "m": "Spoken like \"halál\" — if.",
+    "i": "/hɒlaːl/"
+  },
+  {
+    "h": "ér",
+    "e": "reaches; is worth",
+    "m": "Spoken like \"ér\".",
+    "i": "/eːr/"
+  },
+  {
+    "h": "gyilkos",
+    "e": "killer; murderous",
+    "m": "Spoken like \"dyeelkos\".",
+    "i": "/ɟilkoʃ/"
+  },
+  {
+    "h": "mondok",
+    "e": "says",
+    "m": "Spoken like \"mondok\" — says.",
+    "i": "/mondok/"
+  },
+  {
+    "h": "esetleg",
+    "e": "and",
+    "m": "Spoken like \"esetleg\" — and.",
+    "i": "/ɛʃɛtlɛɡ/"
+  },
+  {
+    "h": "bárki",
+    "e": "anyone",
+    "m": "Spoken like \"bárkee\".",
+    "i": "/baːrki/"
+  },
+  {
+    "h": "lehetséges",
+    "e": "down",
+    "m": "Spoken like \"lehetséges\" — down.",
+    "i": "/lɛhɛtʃeːɡɛʃ/"
+  },
+  {
+    "h": "kívül",
+    "e": "outside",
+    "m": "Spoken like \"kívül\".",
+    "i": "/kiːvyl/"
+  },
+  {
+    "h": "fiatal",
+    "e": "young",
+    "m": "Spoken like \"feeatal\" — young.",
+    "i": "/fiɒtɒl/"
+  },
+  {
+    "h": "tele",
+    "e": "you (sing.)",
+    "m": "Spoken like \"tele\" — you (sing.).",
+    "i": "/tɛlɛ/"
+  },
+  {
+    "h": "szörnyű",
+    "e": "terrible",
+    "m": "Spoken like \"sörnyű\".",
+    "i": "/sørɲyː/"
+  },
+  {
+    "h": "kit",
+    "e": "who; out",
+    "m": "Spoken like \"keet\" — who.",
+    "i": "/kit/"
+  },
+  {
+    "h": "adja",
+    "e": "gives",
+    "m": "Spoken like \"adja\" — gives.",
+    "i": "/ɒdjɒ/"
+  },
+  {
+    "h": "leszünk",
+    "e": "will be",
+    "m": "Spoken like \"lesünk\" — will be.",
+    "i": "/lɛsynk/"
+  },
+  {
+    "h": "segíts",
+    "e": "help (imperative)",
+    "m": "Spoken like \"segíts\".",
+    "i": "/ʃɛɡiːtʃ/"
+  },
+  {
+    "h": "látja",
+    "e": "he/she sees",
+    "m": "Spoken like \"látja\".",
+    "i": "/laːtjɒ/"
+  },
+  {
+    "h": "például",
+    "e": "for example",
+    "m": "Spoken like \"példáool\".",
+    "i": "/peːldaːul/"
+  },
+  {
+    "h": "egészen",
+    "e": "entirely",
+    "m": "Spoken like \"egésen\".",
+    "i": "/ɛɡeːsɛn/"
+  },
+  {
+    "h": "mindketten",
+    "e": "what; we",
+    "m": "Spoken like \"meendketten\" — what.",
+    "i": "/mindkɛtːɛn/"
+  },
+  {
+    "h": "apu",
+    "e": "dad",
+    "m": "Spoken like \"apoo\".",
+    "i": "/ɒpu/"
+  },
+  {
+    "h": "ölni",
+    "e": "to kill",
+    "m": "Spoken like \"ölnee\".",
+    "i": "/ølni/"
+  },
+  {
+    "h": "köszönjük",
+    "e": "thank you (plural)",
+    "m": "Spoken like \"kösönjük\".",
+    "i": "/køsønjyk/"
+  },
+  {
+    "h": "része",
+    "e": "part of",
+    "m": "Spoken like \"rése\".",
+    "i": "/reːsɛ/"
+  },
+  {
+    "h": "korábban",
+    "e": "stone",
+    "m": "Spoken like \"korábban\" — stone.",
+    "i": "/koraːbːɒn/"
+  },
+  {
+    "h": "félek",
+    "e": "I'm afraid",
+    "m": "Spoken like \"félek\".",
+    "i": "/feːlɛk/"
+  },
+  {
+    "h": "édesem",
+    "e": "my dear",
+    "m": "Spoken like \"édesem\".",
+    "i": "/eːdɛʃɛm/"
+  },
+  {
+    "h": "szót",
+    "e": "word (accusative)",
+    "m": "Spoken like \"sót\".",
+    "i": "/soːt/"
+  },
+  {
+    "h": "mondjuk",
+    "e": "says",
+    "m": "Spoken like \"mondjook\" — says.",
+    "i": "/mondjuk/"
+  },
+  {
+    "h": "mennünk",
+    "e": "we have to go",
+    "m": "Spoken like \"mennünk\".",
+    "i": "/mɛnːynk/"
+  },
+  {
+    "h": "tartani",
+    "e": "to hold; to keep",
+    "m": "Spoken like \"tartanee\".",
+    "i": "/tɒrtɒni/"
+  },
+  {
+    "h": "élni",
+    "e": "to live",
+    "m": "Spoken like \"élnee\".",
+    "i": "/eːlni/"
+  },
+  {
+    "h": "ketten",
+    "e": "two of them",
+    "m": "Spoken like \"ketten\".",
+    "i": "/kɛtːɛn/"
+  },
+  {
+    "h": "emberi",
+    "e": "person",
+    "m": "Spoken like \"emberee\" — person.",
+    "i": "/ɛmbɛri/"
+  },
+  {
+    "h": "magukat",
+    "e": "today",
+    "m": "Spoken like \"magookat\" — today.",
+    "i": "/mɒɡukɒt/"
+  },
+  {
+    "h": "hagyja",
+    "e": "if",
+    "m": "Spoken like \"hadyja\" — if.",
+    "i": "/hɒɟjɒ/"
+  },
+  {
+    "h": "ránk",
+    "e": "onto us",
+    "m": "Spoken like \"ránk\".",
+    "i": "/raːnk/"
+  },
+  {
+    "h": "dollár",
+    "e": "dollar",
+    "m": "Spoken like \"dollár\".",
+    "i": "/dolːaːr/"
+  },
+  {
+    "h": "számára",
+    "e": "for him/her",
+    "m": "Spoken like \"sámára\".",
+    "i": "/saːmaːrɒ/"
+  },
+  {
+    "h": "út",
+    "e": "road; way",
+    "m": "Spoken like \"út\".",
+    "i": "/uːt/"
+  },
+  {
+    "h": "anyu",
+    "e": "mom",
+    "m": "Spoken like \"anyoo\".",
+    "i": "/ɒɲu/"
+  },
+  {
+    "h": "beszéltem",
+    "e": "into; in",
+    "m": "Spoken like \"beséltem\" — into.",
+    "i": "/bɛseːltɛm/"
+  },
+  {
+    "h": "veszélyes",
+    "e": "buys; takes",
+    "m": "Spoken like \"veséyes\" — buys.",
+    "i": "/vɛseːjɛʃ/"
+  },
+  {
+    "h": "rögtön",
+    "e": "immediately",
+    "m": "Spoken like \"rögtön\".",
+    "i": "/røɡtøn/"
+  },
+  {
+    "h": "tudjátok",
+    "e": "knows; can",
+    "m": "Spoken like \"toodjátok\" — knows.",
+    "i": "/tudjaːtok/"
+  },
+  {
+    "h": "kölyök",
+    "e": "kid",
+    "m": "Spoken like \"köyök\".",
+    "i": "/køjøk/"
+  },
+  {
+    "h": "venni",
+    "e": "to buy",
+    "m": "Spoken like \"vennee\".",
+    "i": "/vɛnːi/"
+  },
+  {
+    "h": "tesz",
+    "e": "you (sing.)",
+    "m": "Spoken like \"tes\" — you (sing.).",
+    "i": "/tɛs/"
+  },
+  {
+    "h": "mindenkit",
+    "e": "what; we",
+    "m": "Spoken like \"meendenkeet\" — what.",
+    "i": "/mindɛnkit/"
+  },
+  {
+    "h": "kint",
+    "e": "who; out",
+    "m": "Spoken like \"keent\" — who.",
+    "i": "/kint/"
+  },
+  {
+    "h": "onnan",
+    "e": "from there",
+    "m": "Spoken like \"onnan\".",
+    "i": "/onːɒn/"
+  },
+  {
+    "h": "mondták",
+    "e": "says",
+    "m": "Spoken like \"mondták\" — says.",
+    "i": "/mondtaːk/"
+  },
+  {
+    "h": "békén",
+    "e": "in peace (leave alone)",
+    "m": "Spoken like \"békén\".",
+    "i": "/beːkeːn/"
+  },
+  {
+    "h": "hisz",
+    "e": "believes",
+    "m": "Spoken like \"hees\".",
+    "i": "/his/"
+  },
+  {
+    "h": "körül",
+    "e": "around",
+    "m": "Spoken like \"körül\".",
+    "i": "/køryl/"
+  },
+  {
+    "h": "éjszaka",
+    "e": "night",
+    "m": "Spoken like \"éjsaka\".",
+    "i": "/eːjsɒkɒ/"
+  },
+  {
+    "h": "tiéd",
+    "e": "yours",
+    "m": "Spoken like \"teeéd\".",
+    "i": "/tieːd/"
+  },
+  {
+    "h": "látszik",
+    "e": "it shows; seems",
+    "m": "Spoken like \"látseek\".",
+    "i": "/laːtsik/"
+  },
+  {
+    "h": "ettől",
+    "e": "from this",
+    "m": "Spoken like \"ettől\".",
+    "i": "/ɛtːøːl/"
+  },
+  {
+    "h": "merre",
+    "e": "which way",
+    "m": "Spoken like \"merre\".",
+    "i": "/mɛrːɛ/"
+  },
+  {
+    "h": "igazat",
+    "e": "true",
+    "m": "Spoken like \"eegazat\" — true.",
+    "i": "/iɡɒzɒt/"
+  },
+  {
+    "h": "mármint",
+    "e": "I mean",
+    "m": "Spoken like \"mármeent\".",
+    "i": "/maːrmint/"
+  },
+  {
+    "h": "ház",
+    "e": "house",
+    "m": "Spoken like \"ház\".",
+    "i": "/haːz/"
+  },
+  {
+    "h": "kinek",
+    "e": "who; out",
+    "m": "Spoken like \"keenek\" — who.",
+    "i": "/kinɛk/"
+  },
+  {
+    "h": "fogják",
+    "e": "tooth",
+    "m": "Spoken like \"fogják\" — tooth.",
+    "i": "/foɡjaːk/"
+  },
+  {
+    "h": "fogjuk",
+    "e": "tooth",
+    "m": "Spoken like \"fogjook\" — tooth.",
+    "i": "/foɡjuk/"
+  },
+  {
+    "h": "szükség",
+    "e": "need",
+    "m": "Spoken like \"sükség\".",
+    "i": "/sykʃeːɡ/"
+  },
+  {
+    "h": "feleségem",
+    "e": "up",
+    "m": "Spoken like \"feleségem\" — up.",
+    "i": "/fɛlɛʃeːɡɛm/"
+  },
+  {
+    "h": "évvel",
+    "e": "with a year",
+    "m": "Spoken like \"évvel\".",
+    "i": "/eːvːɛl/"
+  },
+  {
+    "h": "fordította",
+    "e": "translated",
+    "m": "Spoken like \"fordította\".",
+    "i": "/fordiːtotːɒ/"
+  },
+  {
+    "h": "dehogy",
+    "e": "but",
+    "m": "Spoken like \"dehody\" — but.",
+    "i": "/dɛhoɟ/"
+  },
+  {
+    "h": "gyertek",
+    "e": "come (plural)",
+    "m": "Spoken like \"dyertek\".",
+    "i": "/ɟɛrtɛk/"
+  },
+  {
+    "h": "hozzád",
+    "e": "snow",
+    "m": "Spoken like \"hozzád\" — snow.",
+    "i": "/hozːaːd/"
+  },
+  {
+    "h": "szereti",
+    "e": "loves; likes",
+    "m": "Spoken like \"seretee\" — loves.",
+    "i": "/sɛrɛti/"
+  },
+  {
+    "h": "régen",
+    "e": "long ago",
+    "m": "Spoken like \"régen\".",
+    "i": "/reːɡɛn/"
+  },
+  {
+    "h": "újabb",
+    "e": "newer; another",
+    "m": "Spoken like \"újabb\".",
+    "i": "/uːjɒbː/"
+  },
+  {
+    "h": "jót",
+    "e": "good (accusative)",
+    "m": "Spoken like \"jót\".",
+    "i": "/joːt/"
+  },
+  {
+    "h": "adni",
+    "e": "gives",
+    "m": "Spoken like \"adnee\" — gives.",
+    "i": "/ɒdni/"
+  },
+  {
+    "h": "végig",
+    "e": "all the way; throughout",
+    "m": "Spoken like \"végeeg\".",
+    "i": "/veːɡiɡ/"
+  },
+  {
+    "h": "hátra",
+    "e": "backwards",
+    "m": "Spoken like \"hátra\".",
+    "i": "/haːtrɒ/"
+  },
+  {
+    "h": "kemény",
+    "e": "hard; tough",
+    "m": "Spoken like \"kemény\".",
+    "i": "/kɛmeːɲ/"
+  },
+  {
+    "h": "biztonsági",
+    "e": "security",
+    "m": "Spoken like \"beeztonságee\".",
+    "i": "/biztonʃaːɡi/"
+  },
+  {
+    "h": "jöttél",
+    "e": "you came",
+    "m": "Spoken like \"jöttél\".",
+    "i": "/jøtːeːl/"
+  },
+  {
+    "h": "tegye",
+    "e": "you (sing.)",
+    "m": "Spoken like \"tedye\" — you (sing.).",
+    "i": "/tɛɟɛ/"
+  },
+  {
+    "h": "hihetetlen",
+    "e": "incredible",
+    "m": "Spoken like \"heehetetlen\".",
+    "i": "/hihɛtɛtlɛn/"
+  },
+  {
+    "h": "amiért",
+    "e": "for which; because of",
+    "m": "Spoken like \"ameeért\".",
+    "i": "/ɒmieːrt/"
+  },
+  {
+    "h": "segíthetek",
+    "e": "can I help",
+    "m": "Spoken like \"segíthetek\".",
+    "i": "/ʃɛɡiːthɛtɛk/"
+  },
+  {
+    "h": "picsába",
+    "e": "to hell (vulgar)",
+    "m": "Spoken like \"peechába\".",
+    "i": "/pitʃaːbɒ/"
+  },
+  {
+    "h": "anyád",
+    "e": "your mother",
+    "m": "Spoken like \"anyád\".",
+    "i": "/ɒɲaːd/"
+  },
+  {
+    "h": "lehetne",
+    "e": "down",
+    "m": "Spoken like \"lehetne\" — down.",
+    "i": "/lɛhɛtnɛ/"
+  },
+  {
+    "h": "lányok",
+    "e": "girls",
+    "m": "Spoken like \"lányok\".",
+    "i": "/laːɲok/"
+  },
+  {
+    "h": "kifelé",
+    "e": "who; out",
+    "m": "Spoken like \"keefelé\" — who.",
+    "i": "/kifɛleː/"
+  },
+  {
+    "h": "meleg",
+    "e": "warm; hot; gay",
+    "m": "Spoken like \"meleg\".",
+    "i": "/mɛlɛɡ/"
+  },
+  {
+    "h": "szemét",
+    "e": "eye",
+    "m": "Spoken like \"semét\" — eye.",
+    "i": "/sɛmeːt/"
+  },
+  {
+    "h": "kor",
+    "e": "stone",
+    "m": "Spoken like \"kor\" — stone.",
+    "i": "/kor/"
+  },
+  {
+    "h": "kerül",
+    "e": "asks; requests",
+    "m": "Spoken like \"kerül\" — asks.",
+    "i": "/kɛryl/"
+  },
+  {
+    "h": "adott",
+    "e": "gives",
+    "m": "Spoken like \"adott\" — gives.",
+    "i": "/ɒdotː/"
+  },
+  {
+    "h": "esküszöm",
+    "e": "and",
+    "m": "Spoken like \"esküsöm\" — and.",
+    "i": "/ɛʃkysøm/"
+  },
+  {
+    "h": "tartsd",
+    "e": "hold it; keep it",
+    "m": "Spoken like \"tartsd\".",
+    "i": "/tɒrtʃd/"
+  },
+  {
+    "h": "lássuk",
+    "e": "let's see",
+    "m": "Spoken like \"lássook\".",
+    "i": "/laːʃːuk/"
+  },
+  {
+    "h": "fáj",
+    "e": "hurts",
+    "m": "Spoken like \"fáj\".",
+    "i": "/faːj/"
+  },
+  {
+    "h": "ismered",
+    "e": "also; too",
+    "m": "Spoken like \"eesmered\" — also.",
+    "i": "/iʃmɛrɛd/"
+  },
+  {
+    "h": "utat",
+    "e": "road; way",
+    "m": "Spoken like \"ootat\" — road.",
+    "i": "/utɒt/"
+  },
+  {
+    "h": "sajnos",
+    "e": "unfortunately",
+    "m": "Spoken like \"sajnos\" — unfortunately.",
+    "i": "/ʃɒjnoʃ/"
+  },
+  {
+    "h": "mondtál",
+    "e": "says",
+    "m": "Spoken like \"mondtál\" — says.",
+    "i": "/mondtaːl/"
+  },
+  {
+    "h": "asszonyom",
+    "e": "madam",
+    "m": "Spoken like \"assonyom\".",
+    "i": "/ɒsːoɲom/"
+  },
+  {
+    "h": "mai",
+    "e": "today",
+    "m": "Spoken like \"maee\" — today.",
+    "i": "/mɒi/"
+  },
+  {
+    "h": "kik",
+    "e": "who; out",
+    "m": "Spoken like \"keek\" — who.",
+    "i": "/kik/"
+  },
+  {
+    "h": "valahogy",
+    "e": "somehow",
+    "m": "Spoken like \"valahody\".",
+    "i": "/vɒlɒhoɟ/"
+  },
+  {
+    "h": "jézus",
+    "e": "Jesus",
+    "m": "Spoken like \"jézoos\".",
+    "i": "/jeːzuʃ/"
+  },
+  {
+    "h": "érzed",
+    "e": "you feel",
+    "m": "Spoken like \"érzed\".",
+    "i": "/eːrzɛd/"
+  },
+  {
+    "h": "helyen",
+    "e": "in place",
+    "m": "Spoken like \"heyen\".",
+    "i": "/hɛjɛn/"
+  },
+  {
+    "h": "hallom",
+    "e": "if",
+    "m": "Spoken like \"hallom\" — if.",
+    "i": "/hɒlːom/"
+  },
+  {
+    "h": "titeket",
+    "e": "you (plural, acc.)",
+    "m": "Spoken like \"teeteket\".",
+    "i": "/titɛkɛt/"
+  },
+  {
+    "h": "város",
+    "e": "city",
+    "m": "Spoken like \"város\".",
+    "i": "/vaːroʃ/"
+  },
+  {
+    "h": "tűnt",
+    "e": "disappeared; seemed",
+    "m": "Spoken like \"tűnt\".",
+    "i": "/tyːnt/"
+  },
+  {
+    "h": "tudtad",
+    "e": "knows; can",
+    "m": "Spoken like \"toodtad\" — knows.",
+    "i": "/tudtɒd/"
+  },
+  {
+    "h": "lassan",
+    "e": "slowly",
+    "m": "Spoken like \"lassan\" — slowly.",
+    "i": "/lɒʃːɒn/"
+  },
+  {
+    "h": "bizony",
+    "e": "indeed",
+    "m": "Spoken like \"beezony\".",
+    "i": "/bizoɲ/"
+  },
+  {
+    "h": "véget",
+    "e": "end (accusative)",
+    "m": "Spoken like \"véget\".",
+    "i": "/veːɡɛt/"
+  },
+  {
+    "h": "lehetett",
+    "e": "down",
+    "m": "Spoken like \"lehetett\" — down.",
+    "i": "/lɛhɛtɛtː/"
+  },
+  {
+    "h": "éjt",
+    "e": "night (accusative)",
+    "m": "Spoken like \"éjt\".",
+    "i": "/eːjt/"
+  },
+  {
+    "h": "család",
+    "e": "family",
+    "m": "Spoken like \"chalád\".",
+    "i": "/tʃɒlaːd/"
+  },
+  {
+    "h": "napja",
+    "e": "day; sun",
+    "m": "Spoken like \"napja\" — day.",
+    "i": "/nɒpjɒ/"
+  },
+  {
+    "h": "nyomás",
+    "e": "pressure; push",
+    "m": "Spoken like \"nyomás\".",
+    "i": "/ɲomaːʃ/"
+  },
+  {
+    "h": "víz",
+    "e": "water",
+    "m": "Spoken like \"víz\".",
+    "i": "/viːz/"
+  },
+  {
+    "h": "millió",
+    "e": "what; we",
+    "m": "Spoken like \"meelleeó\" — what.",
+    "i": "/milːioː/"
+  },
+  {
+    "h": "éreztem",
+    "e": "I felt",
+    "m": "Spoken like \"éreztem\".",
+    "i": "/eːrɛztɛm/"
+  },
+  {
+    "h": "seggfej",
+    "e": "asshole",
+    "m": "Spoken like \"seggfej\".",
+    "i": "/ʃɛɡːfɛj/"
+  },
+  {
+    "h": "senkit",
+    "e": "no one",
+    "m": "Spoken like \"senkeet\" — no one.",
+    "i": "/ʃɛnkit/"
+  },
+  {
+    "h": "hallani",
+    "e": "if",
+    "m": "Spoken like \"hallanee\" — if.",
+    "i": "/hɒlːɒni/"
+  },
+  {
+    "h": "mindannyian",
+    "e": "what; we",
+    "m": "Spoken like \"meendannyeean\" — what.",
+    "i": "/mindɒɲːiɒn/"
+  },
+  {
+    "h": "ezer",
+    "e": "this",
+    "m": "Spoken like \"ezer\" — this.",
+    "i": "/ɛzɛr/"
+  },
+  {
+    "h": "beszélt",
+    "e": "into; in",
+    "m": "Spoken like \"besélt\" — into.",
+    "i": "/bɛseːlt/"
+  },
+  {
+    "h": "ismeri",
+    "e": "also; too",
+    "m": "Spoken like \"eesmeree\" — also.",
+    "i": "/iʃmɛri/"
+  },
+  {
+    "h": "bébi",
+    "e": "baby",
+    "m": "Spoken like \"bébee\".",
+    "i": "/beːbi/"
+  },
+  {
+    "h": "csapat",
+    "e": "team",
+    "m": "Spoken like \"chapat\".",
+    "i": "/tʃɒpɒt/"
+  },
+  {
+    "h": "nektek",
+    "e": "don't",
+    "m": "Spoken like \"nektek\" — don't.",
+    "i": "/nɛktɛk/"
+  },
+  {
+    "h": "távol",
+    "e": "far",
+    "m": "Spoken like \"távol\".",
+    "i": "/taːvol/"
+  },
+  {
+    "h": "késő",
+    "e": "late",
+    "m": "Spoken like \"késő\".",
+    "i": "/keːʃøː/"
+  },
+  {
+    "h": "került",
+    "e": "asks; requests",
+    "m": "Spoken like \"került\" — asks.",
+    "i": "/kɛrylt/"
+  },
+  {
+    "h": "halt",
+    "e": "if",
+    "m": "Spoken like \"halt\" — if.",
+    "i": "/hɒlt/"
+  },
+  {
+    "h": "estét",
+    "e": "and",
+    "m": "Spoken like \"estét\" — and.",
+    "i": "/ɛʃteːt/"
+  },
+  {
+    "h": "keres",
+    "e": "asks; requests",
+    "m": "Spoken like \"keres\" — asks.",
+    "i": "/kɛrɛʃ/"
+  },
+  {
+    "h": "biztonságban",
+    "e": "safe",
+    "m": "Spoken like \"beeztonságban\".",
+    "i": "/biztonʃaːɡbɒn/"
+  },
+  {
+    "h": "rólad",
+    "e": "about you",
+    "m": "Spoken like \"rólad\".",
+    "i": "/roːlɒd/"
+  },
+  {
+    "h": "járt",
+    "e": "walked; visited",
+    "m": "Spoken like \"járt\".",
+    "i": "/jaːrt/"
+  },
+  {
+    "h": "amiket",
+    "e": "which (relative, plural, acc.)",
+    "m": "Spoken like \"ameeket\".",
+    "i": "/ɒmikɛt/"
+  },
+  {
+    "h": "tűz",
+    "e": "fire",
+    "m": "Spoken like \"tűz\".",
+    "i": "/tyːz/"
+  },
+  {
+    "h": "szegény",
+    "e": "poor",
+    "m": "Spoken like \"segény\".",
+    "i": "/sɛɡeːɲ/"
+  },
+  {
+    "h": "kapott",
+    "e": "he/she received",
+    "m": "Spoken like \"kapott\".",
+    "i": "/kɒpotː/"
+  },
+  {
+    "h": "maradjon",
+    "e": "already",
+    "m": "Spoken like \"maradjon\" — already.",
+    "i": "/mɒrɒdjon/"
+  },
+  {
+    "h": "hoztam",
+    "e": "snow",
+    "m": "Spoken like \"hoztam\" — snow.",
+    "i": "/hoztɒm/"
+  },
+  {
+    "h": "érzés",
+    "e": "feeling",
+    "m": "Spoken like \"érzés\".",
+    "i": "/eːrzeːʃ/"
+  },
+  {
+    "h": "csinálja",
+    "e": "he/she does it",
+    "m": "Spoken like \"cheenálja\".",
+    "i": "/tʃinaːljɒ/"
+  },
+  {
+    "h": "látok",
+    "e": "I see",
+    "m": "Spoken like \"látok\".",
+    "i": "/laːtok/"
+  },
+  {
+    "h": "valakinek",
+    "e": "someone",
+    "m": "Spoken like \"valakeenek\" — someone.",
+    "i": "/vɒlɒkinɛk/"
+  },
+  {
+    "h": "lányt",
+    "e": "girl (accusative)",
+    "m": "Spoken like \"lányt\".",
+    "i": "/laːɲt/"
+  },
+  {
+    "h": "gondol",
+    "e": "thinks",
+    "m": "Spoken like \"gondol\".",
+    "i": "/ɡondol/"
+  },
+  {
+    "h": "barátok",
+    "e": "friends",
+    "m": "Spoken like \"barátok\".",
+    "i": "/bɒraːtok/"
+  },
+  {
+    "h": "eléggé",
+    "e": "quite; fairly",
+    "m": "Spoken like \"eléggé\".",
+    "i": "/ɛleːɡːeː/"
+  },
+  {
+    "h": "magára",
+    "e": "today",
+    "m": "Spoken like \"magára\" — today.",
+    "i": "/mɒɡaːrɒ/"
+  },
+  {
+    "h": "felesége",
+    "e": "up",
+    "m": "Spoken like \"felesége\" — up.",
+    "i": "/fɛlɛʃeːɡɛ/"
+  },
+  {
+    "h": "fia",
+    "e": "his/her son",
+    "m": "Spoken like \"feea\".",
+    "i": "/fiɒ/"
+  },
+  {
+    "h": "mögött",
+    "e": "behind",
+    "m": "Spoken like \"mögött\".",
+    "i": "/møɡøtː/"
+  },
+  {
+    "h": "okos",
+    "e": "smart; clever",
+    "m": "Spoken like \"okos\" — smart.",
+    "i": "/okoʃ/"
+  },
+  {
+    "h": "föld",
+    "e": "earth; ground",
+    "m": "Spoken like \"föld\".",
+    "i": "/føld/"
+  },
+  {
+    "h": "senkinek",
+    "e": "no one",
+    "m": "Spoken like \"senkeenek\" — no one.",
+    "i": "/ʃɛnkinɛk/"
+  },
+  {
+    "h": "ülj",
+    "e": "sit (imperative)",
+    "m": "Spoken like \"ülj\".",
+    "i": "/ylj/"
+  },
+  {
+    "h": "hölgyem",
+    "e": "madam",
+    "m": "Spoken like \"höldyem\".",
+    "i": "/hølɟɛm/"
+  },
+  {
+    "h": "életét",
+    "e": "his/her life",
+    "m": "Spoken like \"életét\".",
+    "i": "/eːlɛteːt/"
+  },
+  {
+    "h": "szükséged",
+    "e": "you need",
+    "m": "Spoken like \"sükséged\".",
+    "i": "/sykʃeːɡɛd/"
+  },
+  {
+    "h": "beszélj",
+    "e": "into; in",
+    "m": "Spoken like \"besélj\" — into.",
+    "i": "/bɛseːlj/"
+  },
+  {
+    "h": "peter",
+    "e": "Peter",
+    "m": "Spoken like \"peter\".",
+    "i": "/pɛtɛr/"
+  },
+  {
+    "h": "benned",
+    "e": "into; in",
+    "m": "Spoken like \"benned\" — into.",
+    "i": "/bɛnːɛd/"
+  },
+  {
+    "h": "hölgyeim",
+    "e": "ladies",
+    "m": "Spoken like \"höldyeeem\".",
+    "i": "/hølɟɛim/"
+  },
+  {
+    "h": "találkoztunk",
+    "e": "maybe",
+    "m": "Spoken like \"találkoztoonk\" — maybe.",
+    "i": "/tɒlaːlkoztunk/"
+  },
+  {
+    "h": "egészet",
+    "e": "whole (accusative)",
+    "m": "Spoken like \"egéset\".",
+    "i": "/ɛɡeːsɛt/"
+  },
+  {
+    "h": "ezredes",
+    "e": "this",
+    "m": "Spoken like \"ezredes\" — this.",
+    "i": "/ɛzrɛdɛʃ/"
+  },
+  {
+    "h": "egyes",
+    "e": "one; a",
+    "m": "Spoken like \"edyes\" — one.",
+    "i": "/ɛɟɛʃ/"
+  },
+  {
+    "h": "nyisd",
+    "e": "open (imperative)",
+    "m": "Spoken like \"nyeesd\".",
+    "i": "/ɲiʃd/"
+  },
+  {
+    "h": "ennél",
+    "e": "I",
+    "m": "Spoken like \"ennél\" — I.",
+    "i": "/ɛnːeːl/"
+  },
+  {
+    "h": "egyébként",
+    "e": "one; a",
+    "m": "Spoken like \"edyébként\" — one.",
+    "i": "/ɛɟeːbkeːnt/"
+  },
+  {
+    "h": "hozott",
+    "e": "snow",
+    "m": "Spoken like \"hozott\" — snow.",
+    "i": "/hozotː/"
+  },
+  {
+    "h": "felejtsd",
+    "e": "up",
+    "m": "Spoken like \"felejtsd\" — up.",
+    "i": "/fɛlɛjtʃd/"
+  },
+  {
+    "h": "james",
+    "e": "James",
+    "m": "Spoken like \"james\".",
+    "i": "/jɒmɛʃ/"
+  },
+  {
+    "h": "bocsi",
+    "e": "sorry",
+    "m": "Spoken like \"bochee\".",
+    "i": "/botʃi/"
+  },
+  {
+    "h": "bárcsak",
+    "e": "if only",
+    "m": "Spoken like \"bárchak\".",
+    "i": "/baːrtʃɒk/"
+  },
+  {
+    "h": "vajon",
+    "e": "I wonder",
+    "m": "Spoken like \"vajon\".",
+    "i": "/vɒjon/"
+  },
+  {
+    "h": "Sarah",
+    "e": "Sarah",
+    "m": "Spoken like \"sarah\".",
+    "i": "/ʃɒrɒh/"
+  },
+  {
+    "h": "csinált",
+    "e": "he/she did",
+    "m": "Spoken like \"cheenált\".",
+    "i": "/tʃinaːlt/"
+  },
+  {
+    "h": "megölni",
+    "e": "still; yet",
+    "m": "Spoken like \"megölnee\" — still.",
+    "i": "/mɛɡølni/"
+  },
+  {
+    "h": "annál",
+    "e": "than that",
+    "m": "Spoken like \"annál\".",
+    "i": "/ɒnːaːl/"
+  },
+  {
+    "h": "dolgozom",
+    "e": "I work",
+    "m": "Spoken like \"dolgozom\".",
+    "i": "/dolɡozom/"
+  },
+  {
+    "h": "kislány",
+    "e": "who; out",
+    "m": "Spoken like \"keeslány\" — who.",
+    "i": "/kiʃlaːɲ/"
+  },
+  {
+    "h": "rengeteg",
+    "e": "plenty; a lot",
+    "m": "Spoken like \"rengeteg\".",
+    "i": "/rɛnɡɛtɛɡ/"
+  },
+  {
+    "h": "barátja",
+    "e": "his/her friend",
+    "m": "Spoken like \"barátja\".",
+    "i": "/bɒraːtjɒ/"
+  },
+  {
+    "h": "messze",
+    "e": "far",
+    "m": "Spoken like \"messe\".",
+    "i": "/mɛsːɛ/"
+  },
+  {
+    "h": "közül",
+    "e": "among them",
+    "m": "Spoken like \"közül\".",
+    "i": "/køzyl/"
+  },
+  {
+    "h": "baja",
+    "e": "his/her trouble",
+    "m": "Spoken like \"baja\".",
+    "i": "/bɒjɒ/"
+  },
+  {
+    "h": "itthon",
+    "e": "here",
+    "m": "Spoken like \"eetthon\" — here.",
+    "i": "/itːhon/"
+  },
+  {
+    "h": "napon",
+    "e": "day; sun",
+    "m": "Spoken like \"napon\" — day.",
+    "i": "/nɒpon/"
+  },
+  {
+    "h": "ugyanaz",
+    "e": "so; that way",
+    "m": "Spoken like \"oodyanaz\" — so.",
+    "i": "/uɟɒnɒz/"
+  },
+  {
+    "h": "köze",
+    "e": "closer; near",
+    "m": "Spoken like \"köze\".",
+    "i": "/køzɛ/"
+  },
+  {
+    "h": "értelme",
+    "e": "makes sense",
+    "m": "Spoken like \"értelme\".",
+    "i": "/eːrtɛlmɛ/"
+  },
+  {
+    "h": "szeret",
+    "e": "loves; likes",
+    "m": "Spoken like \"seret\" — loves.",
+    "i": "/sɛrɛt/"
+  },
+  {
+    "h": "elmúlt",
+    "e": "passed",
+    "m": "Spoken like \"elmúlt\".",
+    "i": "/ɛlmuːlt/"
+  },
+  {
+    "h": "rég",
+    "e": "long ago",
+    "m": "Spoken like \"rég\".",
+    "i": "/reːɡ/"
+  },
+  {
+    "h": "hirtelen",
+    "e": "suddenly",
+    "m": "Spoken like \"heertelen\".",
+    "i": "/hirtɛlɛn/"
+  },
+  {
+    "h": "Bill",
+    "e": "Bill",
+    "m": "Spoken like \"beell\".",
+    "i": "/bilː/"
+  },
+  {
+    "h": "kérsz",
+    "e": "would you like",
+    "m": "Spoken like \"kérs\".",
+    "i": "/keːrs/"
+  },
+  {
+    "h": "jövő",
+    "e": "future",
+    "m": "Spoken like \"jövő\".",
+    "i": "/jøvøː/"
+  },
+  {
+    "h": "keresel",
+    "e": "asks; requests",
+    "m": "Spoken like \"keresel\" — asks.",
+    "i": "/kɛrɛʃɛl/"
+  },
+  {
+    "h": "legyek",
+    "e": "down",
+    "m": "Spoken like \"ledyek\" — down.",
+    "i": "/lɛɟɛk/"
+  },
+  {
+    "h": "beszélünk",
+    "e": "into; in",
+    "m": "Spoken like \"besélünk\" — into.",
+    "i": "/bɛseːlynk/"
+  },
+  {
+    "h": "tudnak",
+    "e": "knows; can",
+    "m": "Spoken like \"toodnak\" — knows.",
+    "i": "/tudnɒk/"
+  },
+  {
+    "h": "gondolok",
+    "e": "I think",
+    "m": "Spoken like \"gondolok\".",
+    "i": "/ɡondolok/"
+  },
+  {
+    "h": "városban",
+    "e": "in the city",
+    "m": "Spoken like \"városban\".",
+    "i": "/vaːroʃbɒn/"
+  },
+  {
+    "h": "orvos",
+    "e": "doctor",
+    "m": "Spoken like \"orvos\" — doctor.",
+    "i": "/orvoʃ/"
+  },
+  {
+    "h": "nevét",
+    "e": "don't",
+    "m": "Spoken like \"nevét\" — don't.",
+    "i": "/nɛveːt/"
+  },
+  {
+    "h": "időben",
+    "e": "in time",
+    "m": "Spoken like \"eedőben\".",
+    "i": "/idøːbɛn/"
+  },
+  {
+    "h": "kivéve",
+    "e": "who; out",
+    "m": "Spoken like \"keevéve\" — who.",
+    "i": "/kiveːvɛ/"
+  },
+  {
+    "h": "utoljára",
+    "e": "road; way",
+    "m": "Spoken like \"ootoljára\" — road.",
+    "i": "/utoljaːrɒ/"
+  },
+  {
+    "h": "lényeg",
+    "e": "essence; point",
+    "m": "Spoken like \"lényeg\".",
+    "i": "/leːɲɛɡ/"
+  },
+  {
+    "h": "végén",
+    "e": "at the end",
+    "m": "Spoken like \"végén\".",
+    "i": "/veːɡeːn/"
+  },
+  {
+    "h": "mondanom",
+    "e": "says",
+    "m": "Spoken like \"mondanom\" — says.",
+    "i": "/mondɒnom/"
+  },
+  {
+    "h": "szeretne",
+    "e": "loves; likes",
+    "m": "Spoken like \"seretne\" — loves.",
+    "i": "/sɛrɛtnɛ/"
+  },
+  {
+    "h": "értettem",
+    "e": "I understood",
+    "m": "Spoken like \"értettem\".",
+    "i": "/eːrtɛtːɛm/"
+  },
+  {
+    "h": "vér",
+    "e": "blood",
+    "m": "Spoken like \"vér\".",
+    "i": "/veːr/"
+  },
+  {
+    "h": "nézni",
+    "e": "to look; to watch",
+    "m": "Spoken like \"néznee\".",
+    "i": "/neːzni/"
+  },
+  {
+    "h": "tartok",
+    "e": "I hold; I am (cautious)",
+    "m": "Spoken like \"tartok\".",
+    "i": "/tɒrtok/"
+  },
+  {
+    "h": "elmegyek",
+    "e": "I'll go",
+    "m": "Spoken like \"elmedyek\".",
+    "i": "/ɛlmɛɟɛk/"
+  },
+  {
+    "h": "titkos",
+    "e": "secret",
+    "m": "Spoken like \"teetkos\".",
+    "i": "/titkoʃ/"
+  },
+  {
+    "h": "tábornok",
+    "e": "general (military)",
+    "m": "Spoken like \"tábornok\".",
+    "i": "/taːbornok/"
+  },
+  {
+    "h": "aludni",
+    "e": "to sleep",
+    "m": "Spoken like \"aloodnee\".",
+    "i": "/ɒludni/"
+  },
+  {
+    "h": "nőt",
+    "e": "woman (accusative)",
+    "m": "Spoken like \"nőt\".",
+    "i": "/nøːt/"
+  },
+  {
+    "h": "szart",
+    "e": "shit (accusative)",
+    "m": "Spoken like \"sart\".",
+    "i": "/sɒrt/"
+  },
+  {
+    "h": "háború",
+    "e": "war",
+    "m": "Spoken like \"háború\".",
+    "i": "/haːboruː/"
+  },
+  {
+    "h": "fura",
+    "e": "grass",
+    "m": "Spoken like \"foora\" — grass.",
+    "i": "/furɒ/"
+  },
+  {
+    "h": "észre",
+    "e": "notice",
+    "m": "Spoken like \"ésre\".",
+    "i": "/eːsrɛ/"
+  },
+  {
+    "h": "szeretnél",
+    "e": "loves; likes",
+    "m": "Spoken like \"seretnél\" — loves.",
+    "i": "/sɛrɛtneːl/"
+  },
+  {
+    "h": "életet",
+    "e": "life (accusative)",
+    "m": "Spoken like \"életet\".",
+    "i": "/eːlɛtɛt/"
+  },
+  {
+    "h": "teszi",
+    "e": "you (sing.)",
+    "m": "Spoken like \"tesee\" — you (sing.).",
+    "i": "/tɛsi/"
+  },
+  {
+    "h": "lehetetlen",
+    "e": "down",
+    "m": "Spoken like \"lehetetlen\" — down.",
+    "i": "/lɛhɛtɛtlɛn/"
+  },
+  {
+    "h": "játszani",
+    "e": "to play",
+    "m": "Spoken like \"játsanee\".",
+    "i": "/jaːtsɒni/"
+  },
+  {
+    "h": "gratulálok",
+    "e": "congratulations",
+    "m": "Spoken like \"gratoolálok\".",
+    "i": "/ɡrɒtulaːlok/"
+  },
+  {
+    "h": "szereted",
+    "e": "loves; likes",
+    "m": "Spoken like \"sereted\" — loves.",
+    "i": "/sɛrɛtɛd/"
+  },
+  {
+    "h": "talált",
+    "e": "maybe",
+    "m": "Spoken like \"talált\" — maybe.",
+    "i": "/tɒlaːlt/"
+  },
+  {
+    "h": "azóta",
+    "e": "the; that",
+    "m": "Spoken like \"azóta\" — the.",
+    "i": "/ɒzoːtɒ/"
+  },
+  {
+    "h": "imádom",
+    "e": "I love it",
+    "m": "Spoken like \"eemádom\".",
+    "i": "/imaːdom/"
+  },
+  {
+    "h": "idióta",
+    "e": "idiot",
+    "m": "Spoken like \"eedeeóta\".",
+    "i": "/idioːtɒ/"
+  },
+  {
+    "h": "hiányzik",
+    "e": "I miss it",
+    "m": "Spoken like \"heeányzeek\".",
+    "i": "/hiaːɲzik/"
+  },
+  {
+    "h": "nyugodtan",
+    "e": "calmly",
+    "m": "Spoken like \"nyoogodtan\".",
+    "i": "/ɲuɡodtɒn/"
+  },
+  {
+    "h": "büszke",
+    "e": "proud",
+    "m": "Spoken like \"büske\".",
+    "i": "/byskɛ/"
+  },
+  {
+    "h": "üzenetet",
+    "e": "message (accusative)",
+    "m": "Spoken like \"üzenetet\".",
+    "i": "/yzɛnɛtɛt/"
+  },
+  {
+    "h": "hajó",
+    "e": "if",
+    "m": "Spoken like \"hajó\" — if.",
+    "i": "/hɒjoː/"
+  },
+  {
+    "h": "kezd",
+    "e": "hand",
+    "m": "Spoken like \"kezd\" — hand.",
+    "i": "/kɛzd/"
+  },
+  {
+    "h": "folyton",
+    "e": "constantly",
+    "m": "Spoken like \"foyton\".",
+    "i": "/fojton/"
+  },
+  {
+    "h": "hallgass",
+    "e": "if",
+    "m": "Spoken like \"hallgass\" — if.",
+    "i": "/hɒlːɡɒʃː/"
+  },
+  {
+    "h": "figyeljen",
+    "e": "pay attention (formal)",
+    "m": "Spoken like \"feedyeljen\".",
+    "i": "/fiɟɛljɛn/"
+  },
+  {
+    "h": "dolgom",
+    "e": "my work; my task",
+    "m": "Spoken like \"dolgom\".",
+    "i": "/dolɡom/"
+  },
+  {
+    "h": "adok",
+    "e": "gives",
+    "m": "Spoken like \"adok\" — gives.",
+    "i": "/ɒdok/"
+  },
+  {
+    "h": "sötét",
+    "e": "dark",
+    "m": "Spoken like \"sötét\".",
+    "i": "/ʃøteːt/"
+  },
+  {
+    "h": "bajod",
+    "e": "your trouble",
+    "m": "Spoken like \"bajod\".",
+    "i": "/bɒjod/"
+  },
+  {
+    "h": "hír",
+    "e": "news",
+    "m": "Spoken like \"hír\".",
+    "i": "/hiːr/"
+  },
+  {
+    "h": "világon",
+    "e": "in the world",
+    "m": "Spoken like \"veelágon\".",
+    "i": "/vilaːɡon/"
+  },
+  {
+    "h": "nálad",
+    "e": "at your place",
+    "m": "Spoken like \"nálad\".",
+    "i": "/naːlɒd/"
+  },
+  {
+    "h": "ám",
+    "e": "however",
+    "m": "Spoken like \"ám\".",
+    "i": "/aːm/"
+  },
+  {
+    "h": "játék",
+    "e": "game",
+    "m": "Spoken like \"játék\".",
+    "i": "/jaːteːk/"
+  },
+  {
+    "h": "szállj",
+    "e": "get off; land",
+    "m": "Spoken like \"sállj\".",
+    "i": "/saːlːj/"
+  },
+  {
+    "h": "nézzétek",
+    "e": "look (plural)",
+    "m": "Spoken like \"nézzétek\".",
+    "i": "/neːzːeːtɛk/"
+  },
+  {
+    "h": "terv",
+    "e": "you (sing.)",
+    "m": "Spoken like \"terv\" — you (sing.).",
+    "i": "/tɛrv/"
+  },
+  {
+    "h": "nézzük",
+    "e": "let's look",
+    "m": "Spoken like \"nézzük\".",
+    "i": "/neːzːyk/"
+  },
+  {
+    "h": "szerencsét",
+    "e": "luck (accusative)",
+    "m": "Spoken like \"serenchét\".",
+    "i": "/sɛrɛntʃeːt/"
+  },
+  {
+    "h": "helyre",
+    "e": "to place (back)",
+    "m": "Spoken like \"heyre\".",
+    "i": "/hɛjrɛ/"
+  },
+  {
+    "h": "ideig",
+    "e": "for a while",
+    "m": "Spoken like \"eedeeeg\".",
+    "i": "/idɛiɡ/"
+  },
+  {
+    "h": "hagyjuk",
+    "e": "if",
+    "m": "Spoken like \"hadyjook\" — if.",
+    "i": "/hɒɟjuk/"
+  },
+  {
+    "h": "látott",
+    "e": "he/she saw",
+    "m": "Spoken like \"látott\".",
+    "i": "/laːtotː/"
+  },
+  {
+    "h": "kap",
+    "e": "gets; receives",
+    "m": "Spoken like \"kap\".",
+    "i": "/kɒp/"
+  },
+  {
+    "h": "fegyver",
+    "e": "weapon",
+    "m": "Spoken like \"fedyver\".",
+    "i": "/fɛɟvɛr/"
+  },
+  {
+    "h": "kutya",
+    "e": "dog",
+    "m": "Spoken like \"kootya\" — dog.",
+    "i": "/kucɒ/"
+  },
+  {
+    "h": "azután",
+    "e": "the; that",
+    "m": "Spoken like \"azootán\" — the.",
+    "i": "/ɒzutaːn/"
+  },
+  {
+    "h": "oka",
+    "e": "reason (accusative)",
+    "m": "Spoken like \"oka\".",
+    "i": "/okɒ/"
+  },
+  {
+    "h": "rosszabb",
+    "e": "bad",
+    "m": "Spoken like \"rossabb\" — bad.",
+    "i": "/rosːɒbː/"
+  },
+  {
+    "h": "szét",
+    "e": "apart; to pieces",
+    "m": "Spoken like \"sét\".",
+    "i": "/seːt/"
+  },
+  {
+    "h": "drága",
+    "e": "expensive; dear",
+    "m": "Spoken like \"drága\".",
+    "i": "/draːɡɒ/"
+  },
+  {
+    "h": "rendbe",
+    "e": "in order",
+    "m": "Spoken like \"rendbe\".",
+    "i": "/rɛndbɛ/"
+  },
+  {
+    "h": "fogalmam",
+    "e": "tooth",
+    "m": "Spoken like \"fogalmam\" — tooth.",
+    "i": "/foɡɒlmɒm/"
+  },
+  {
+    "h": "hagyj",
+    "e": "if",
+    "m": "Spoken like \"hadyj\" — if.",
+    "i": "/hɒɟj/"
+  },
+  {
+    "h": "jutott",
+    "e": "reached; got",
+    "m": "Spoken like \"jootott\".",
+    "i": "/jutotː/"
+  },
+  {
+    "h": "ilyesmi",
+    "e": "something like that",
+    "m": "Spoken like \"eeyesmee\".",
+    "i": "/ijɛʃmi/"
+  },
+  {
+    "h": "megfelelő",
+    "e": "still; yet",
+    "m": "Spoken like \"megfelelő\" — still.",
+    "i": "/mɛɡfɛlɛløː/"
+  },
+  {
+    "h": "hozd",
+    "e": "snow",
+    "m": "Spoken like \"hozd\" — snow.",
+    "i": "/hozd/"
+  },
+  {
+    "h": "legyél",
+    "e": "down",
+    "m": "Spoken like \"ledyél\" — down.",
+    "i": "/lɛɟeːl/"
+  },
+  {
+    "h": "normális",
+    "e": "woman; grows",
+    "m": "Spoken like \"normálees\" — woman.",
+    "i": "/normaːliʃ/"
+  },
+  {
+    "h": "magas",
+    "e": "today",
+    "m": "Spoken like \"magas\" — today.",
+    "i": "/mɒɡɒʃ/"
+  },
+  {
+    "h": "csinálok",
+    "e": "I do; I make",
+    "m": "Spoken like \"cheenálok\".",
+    "i": "/tʃinaːlok/"
+  },
+  {
+    "h": "legközelebb",
+    "e": "down",
+    "m": "Spoken like \"legközelebb\" — down.",
+    "i": "/lɛɡkøzɛlɛbː/"
+  },
+  {
+    "h": "nyomozó",
+    "e": "detective",
+    "m": "Spoken like \"nyomozó\".",
+    "i": "/ɲomozoː/"
+  },
+  {
+    "h": "tudott",
+    "e": "knows; can",
+    "m": "Spoken like \"toodott\" — knows.",
+    "i": "/tudotː/"
+  },
+  {
+    "h": "csodás",
+    "e": "wonderful",
+    "m": "Spoken like \"chodás\".",
+    "i": "/tʃodaːʃ/"
+  },
+  {
+    "h": "tettél",
+    "e": "you (sing.)",
+    "m": "Spoken like \"tettél\" — you (sing.).",
+    "i": "/tɛtːeːl/"
+  },
+  {
+    "h": "fasz",
+    "e": "tree",
+    "m": "Spoken like \"fas\" — tree.",
+    "i": "/fɒs/"
+  },
+  {
+    "h": "megölte",
+    "e": "still; yet",
+    "m": "Spoken like \"megölte\" — still.",
+    "i": "/mɛɡøltɛ/"
+  },
+  {
+    "h": "vidd",
+    "e": "take (imperative)",
+    "m": "Spoken like \"veedd\".",
+    "i": "/vidː/"
+  },
+  {
+    "h": "bizonyos",
+    "e": "certain",
+    "m": "Spoken like \"beezonyos\".",
+    "i": "/bizoɲoʃ/"
+  },
+  {
+    "h": "anyja",
+    "e": "his/her mother",
+    "m": "Spoken like \"anyja\".",
+    "i": "/ɒɲjɒ/"
+  },
+  {
+    "h": "életed",
+    "e": "your life",
+    "m": "Spoken like \"életed\".",
+    "i": "/eːlɛtɛd/"
+  },
+  {
+    "h": "lennél",
+    "e": "down",
+    "m": "Spoken like \"lennél\" — down.",
+    "i": "/lɛnːeːl/"
+  },
+  {
+    "h": "akarják",
+    "e": "they want it",
+    "m": "Spoken like \"akarják\".",
+    "i": "/ɒkɒrjaːk/"
+  },
+  {
+    "h": "számomra",
+    "e": "for me",
+    "m": "Spoken like \"sámomra\".",
+    "i": "/saːmomrɒ/"
+  },
+  {
+    "h": "hadnagy",
+    "e": "if",
+    "m": "Spoken like \"hadnady\" — if.",
+    "i": "/hɒdnɒɟ/"
+  },
+  {
+    "h": "önt",
+    "e": "you (formal, acc.)",
+    "m": "Spoken like \"önt\".",
+    "i": "/ønt/"
+  },
+  {
+    "h": "menjetek",
+    "e": "go (plural)",
+    "m": "Spoken like \"menjetek\".",
+    "i": "/mɛnjɛtɛk/"
+  },
+  {
+    "h": "szerelem",
+    "e": "love",
+    "m": "Spoken like \"serelem\".",
+    "i": "/sɛrɛlɛm/"
+  },
+  {
+    "h": "próbáltam",
+    "e": "I tried",
+    "m": "Spoken like \"próbáltam\".",
+    "i": "/proːbaːltɒm/"
+  },
+  {
+    "h": "akivel",
+    "e": "with whom (relative)",
+    "m": "Spoken like \"akeevel\".",
+    "i": "/ɒkivɛl/"
+  },
+  {
+    "h": "mehet",
+    "e": "may go; can go",
+    "m": "Spoken like \"mehet\".",
+    "i": "/mɛhɛt/"
+  },
+  {
+    "h": "harmadik",
+    "e": "if",
+    "m": "Spoken like \"harmadeek\" — if.",
+    "i": "/hɒrmɒdik/"
+  },
+  {
+    "h": "általában",
+    "e": "usually",
+    "m": "Spoken like \"általában\".",
+    "i": "/aːltɒlaːbɒn/"
+  },
+  {
+    "h": "tehetek",
+    "e": "you (sing.)",
+    "m": "Spoken like \"tehetek\" — you (sing.).",
+    "i": "/tɛhɛtɛk/"
+  },
+  {
+    "h": "állsz",
+    "e": "you stand",
+    "m": "Spoken like \"álls\".",
+    "i": "/aːlːs/"
+  },
+  {
+    "h": "gonosz",
+    "e": "evil",
+    "m": "Spoken like \"gonos\".",
+    "i": "/ɡonos/"
+  },
+  {
+    "h": "ennyit",
+    "e": "I",
+    "m": "Spoken like \"ennyeet\" — I.",
+    "i": "/ɛɲːit/"
+  },
+  {
+    "h": "szerettem",
+    "e": "loves; likes",
+    "m": "Spoken like \"serettem\" — loves.",
+    "i": "/sɛrɛtːɛm/"
+  },
+  {
+    "h": "csináljuk",
+    "e": "let's do it",
+    "m": "Spoken like \"cheenáljook\".",
+    "i": "/tʃinaːljuk/"
+  },
+  {
+    "h": "engedd",
+    "e": "I",
+    "m": "Spoken like \"engedd\" — I.",
+    "i": "/ɛnɡɛdː/"
+  },
+  {
+    "h": "mennyit",
+    "e": "how much (acc.)",
+    "m": "Spoken like \"mennyeet\".",
+    "i": "/mɛɲːit/"
+  },
+  {
+    "h": "mások",
+    "e": "others",
+    "m": "Spoken like \"mások\".",
+    "i": "/maːʃok/"
+  },
+  {
+    "h": "miközben",
+    "e": "what; we",
+    "m": "Spoken like \"meeközben\" — what.",
+    "i": "/mikøzbɛn/"
+  },
+  {
+    "h": "csomó",
+    "e": "a lot; bunch",
+    "m": "Spoken like \"chomó\".",
+    "i": "/tʃomoː/"
+  },
+  {
+    "h": "létezik",
+    "e": "exists",
+    "m": "Spoken like \"létezeek\".",
+    "i": "/leːtɛzik/"
+  },
+  {
+    "h": "kár",
+    "e": "pity; shame",
+    "m": "Spoken like \"kár\".",
+    "i": "/kaːr/"
+  },
+  {
+    "h": "évben",
+    "e": "in a year",
+    "m": "Spoken like \"évben\".",
+    "i": "/eːvbɛn/"
+  },
+  {
+    "h": "meghalni",
+    "e": "still; yet",
+    "m": "Spoken like \"meghalnee\" — still.",
+    "i": "/mɛɡhɒlni/"
+  },
+  {
+    "h": "bassza",
+    "e": "damn it",
+    "m": "Spoken like \"bassa\".",
+    "i": "/bɒsːɒ/"
+  },
+  {
+    "h": "mama",
+    "e": "today",
+    "m": "Spoken like \"mama\" — today.",
+    "i": "/mɒmɒ/"
+  },
+  {
+    "h": "megértem",
+    "e": "still; yet",
+    "m": "Spoken like \"megértem\" — still.",
+    "i": "/mɛɡeːrtɛm/"
+  },
+  {
+    "h": "hívott",
+    "e": "he/she called",
+    "m": "Spoken like \"hívott\".",
+    "i": "/hiːvotː/"
+  },
+  {
+    "h": "amivel",
+    "e": "with which (relative)",
+    "m": "Spoken like \"ameevel\".",
+    "i": "/ɒmivɛl/"
+  },
+  {
+    "h": "vel",
+    "e": "with (short form)",
+    "m": "Spoken like \"vel\".",
+    "i": "/vɛl/"
+  },
+  {
+    "h": "elmondom",
+    "e": "I will tell; I will say",
+    "m": "Spoken like \"elmondom\".",
+    "i": "/ɛlmondom/"
+  },
+  {
+    "h": "lányom",
+    "e": "my daughter",
+    "m": "Spoken like \"lányom\".",
+    "i": "/laːɲom/"
+  },
+  {
+    "h": "max",
+    "e": "today",
+    "m": "Spoken like \"max\" — today.",
+    "i": "/mɒks/"
+  },
+  {
+    "h": "nyugalom",
+    "e": "calm; peace",
+    "m": "Spoken like \"nyoogalom\".",
+    "i": "/ɲuɡɒlom/"
+  },
+  {
+    "h": "rajtam",
+    "e": "on me",
+    "m": "Spoken like \"rajtam\".",
+    "i": "/rɒjtɒm/"
+  },
+  {
+    "h": "óvatosan",
+    "e": "carefully",
+    "m": "Spoken like \"óvatosan\".",
+    "i": "/oːvɒtoʃɒn/"
+  },
+  {
+    "h": "siess",
+    "e": "hurry",
+    "m": "Spoken like \"seeess\".",
+    "i": "/ʃiɛʃː/"
+  },
+  {
+    "h": "találni",
+    "e": "maybe",
+    "m": "Spoken like \"találnee\" — maybe.",
+    "i": "/tɒlaːlni/"
+  },
+  {
+    "h": "and",
+    "e": "and",
+    "m": "Spoken like \"and\".",
+    "i": "/ɒnd/"
+  },
+  {
+    "h": "hiszen",
+    "e": "believes (emphatic)",
+    "m": "Spoken like \"heesen\".",
+    "i": "/hisɛn/"
+  },
+  {
+    "h": "állt",
+    "e": "stood",
+    "m": "Spoken like \"állt\".",
+    "i": "/aːlːt/"
+  },
+  {
+    "h": "mostanában",
+    "e": "now",
+    "m": "Spoken like \"mostanában\" — now.",
+    "i": "/moʃtɒnaːbɒn/"
+  },
+  {
+    "h": "odakint",
+    "e": "outside",
+    "m": "Spoken like \"odakeent\".",
+    "i": "/odɒkint/"
+  },
+  {
+    "h": "al",
+    "e": "Al",
+    "m": "Spoken like \"al\".",
+    "i": "/ɒl/"
+  },
+  {
+    "h": "csináltál",
+    "e": "you did",
+    "m": "Spoken like \"cheenáltál\".",
+    "i": "/tʃinaːltaːl/"
+  },
+  {
+    "h": "nők",
+    "e": "women",
+    "m": "Spoken like \"nők\".",
+    "i": "/nøːk/"
+  },
+  {
+    "h": "kék",
+    "e": "blue",
+    "m": "Spoken like \"kék\".",
+    "i": "/keːk/"
+  },
+  {
+    "h": "ad",
+    "e": "gives",
+    "m": "Spoken like \"ad\" — gives.",
+    "i": "/ɒd/"
+  },
+  {
+    "h": "házban",
+    "e": "in the house",
+    "m": "Spoken like \"házban\".",
+    "i": "/haːzbɒn/"
+  },
+  {
+    "h": "egyenesen",
+    "e": "one; a",
+    "m": "Spoken like \"edyenesen\" — one.",
+    "i": "/ɛɟɛnɛʃɛn/"
+  },
+  {
+    "h": "utálom",
+    "e": "road; way",
+    "m": "Spoken like \"ootálom\" — road.",
+    "i": "/utaːlom/"
+  },
+  {
+    "h": "miféle",
+    "e": "what; we",
+    "m": "Spoken like \"meeféle\" — what.",
+    "i": "/mifeːlɛ/"
+  },
+  {
+    "h": "Henry",
+    "e": "Henry",
+    "m": "Spoken like \"henry\".",
+    "i": "/hɛnri/"
+  },
+  {
+    "h": "dollárt",
+    "e": "dollars (acc.)",
+    "m": "Spoken like \"dollárt\".",
+    "i": "/dolːaːrt/"
+  },
+  {
+    "h": "érzi",
+    "e": "he/she feels",
+    "m": "Spoken like \"érzee\".",
+    "i": "/eːrzi/"
+  },
+  {
+    "h": "hideg",
+    "e": "bridge",
+    "m": "Spoken like \"heedeg\" — bridge.",
+    "i": "/hidɛɡ/"
+  },
+  {
+    "h": "segítsen",
+    "e": "help (formal)",
+    "m": "Spoken like \"segítsen\".",
+    "i": "/ʃɛɡiːtʃɛn/"
+  },
+  {
+    "h": "rájuk",
+    "e": "onto them",
+    "m": "Spoken like \"rájook\".",
+    "i": "/raːjuk/"
+  },
+  {
+    "h": "beszélnünk",
+    "e": "into; in",
+    "m": "Spoken like \"besélnünk\" — into.",
+    "i": "/bɛseːlnynk/"
+  },
+  {
+    "h": "őszintén",
+    "e": "honestly",
+    "m": "Spoken like \"őseentén\".",
+    "i": "/øːsinteːn/"
+  },
+  {
+    "h": "hallottad",
+    "e": "if",
+    "m": "Spoken like \"hallottad\" — if.",
+    "i": "/hɒlːotːɒd/"
+  },
+  {
+    "h": "jut",
+    "e": "reaches; gets",
+    "m": "Spoken like \"joot\".",
+    "i": "/jut/"
+  },
+  {
+    "h": "kávét",
+    "e": "coffee (acc.)",
+    "m": "Spoken like \"kávét\".",
+    "i": "/kaːveːt/"
+  },
+  {
+    "h": "éhes",
+    "e": "hungry",
+    "m": "Spoken like \"éhes\".",
+    "i": "/eːhɛʃ/"
+  },
+  {
+    "h": "úgyis",
+    "e": "anyway",
+    "m": "Spoken like \"údyees\".",
+    "i": "/uːɟiʃ/"
+  },
+  {
+    "h": "világos",
+    "e": "clear; light",
+    "m": "Spoken like \"veelágos\".",
+    "i": "/vilaːɡoʃ/"
+  },
+  {
+    "h": "kér",
+    "e": "asks; requests",
+    "m": "Spoken like \"kér\".",
+    "i": "/keːr/"
+  },
+  {
+    "h": "rajtad",
+    "e": "on you",
+    "m": "Spoken like \"rajtad\".",
+    "i": "/rɒjtɒd/"
+  },
+  {
+    "h": "állok",
+    "e": "I stand",
+    "m": "Spoken like \"állok\".",
+    "i": "/aːlːok/"
+  },
+  {
+    "h": "alapján",
+    "e": "based on",
+    "m": "Spoken like \"alapján\".",
+    "i": "/ɒlɒpjaːn/"
+  },
+  {
+    "h": "hmm",
+    "e": "hmm",
+    "m": "Spoken like \"hmm\".",
+    "i": "/hmː/"
+  },
+  {
+    "h": "mondjam",
+    "e": "says",
+    "m": "Spoken like \"mondjam\" — says.",
+    "i": "/mondjɒm/"
+  },
+  {
+    "h": "óh",
+    "e": "oh",
+    "m": "Spoken like \"óh\".",
+    "i": "/oːh/"
+  },
+  {
+    "h": "nála",
+    "e": "at his/her place",
+    "m": "Spoken like \"nála\".",
+    "i": "/naːlɒ/"
+  },
+  {
+    "h": "őrmester",
+    "e": "sergeant",
+    "m": "Spoken like \"őrmester\".",
+    "i": "/øːrmɛʃtɛr/"
+  },
+  {
+    "h": "állunk",
+    "e": "we stand",
+    "m": "Spoken like \"álloonk\".",
+    "i": "/aːlːunk/"
+  },
+  {
+    "h": "ebbe",
+    "e": "into this",
+    "m": "Spoken like \"ebbe\".",
+    "i": "/ɛbːɛ/"
+  },
+  {
+    "h": "hogyne",
+    "e": "that; how",
+    "m": "Spoken like \"hodyne\" — that.",
+    "i": "/hoɟnɛ/"
+  },
+  {
+    "h": "kétszer",
+    "e": "twice",
+    "m": "Spoken like \"kétser\".",
+    "i": "/keːtsɛr/"
+  },
+  {
+    "h": "földre",
+    "e": "to the ground",
+    "m": "Spoken like \"földre\".",
+    "i": "/føldrɛ/"
+  },
+  {
+    "h": "részt",
+    "e": "part (accusative)",
+    "m": "Spoken like \"rést\".",
+    "i": "/reːst/"
+  },
+  {
+    "h": "világot",
+    "e": "world (accusative)",
+    "m": "Spoken like \"veelágot\".",
+    "i": "/vilaːɡot/"
+  },
+  {
+    "h": "tennem",
+    "e": "you (sing.)",
+    "m": "Spoken like \"tennem\" — you (sing.).",
+    "i": "/tɛnːɛm/"
+  },
+  {
+    "h": "amúgy",
+    "e": "by the way",
+    "m": "Spoken like \"amúdy\".",
+    "i": "/ɒmuːɟ/"
+  },
+  {
+    "h": "maradni",
+    "e": "already",
+    "m": "Spoken like \"maradnee\" — already.",
+    "i": "/mɒrɒdni/"
+  },
+  {
+    "h": "vizet",
+    "e": "water",
+    "m": "Spoken like \"veezet\" — water.",
+    "i": "/vizɛt/"
+  },
+  {
+    "h": "évek",
+    "e": "years",
+    "m": "Spoken like \"évek\".",
+    "i": "/eːvɛk/"
+  },
+  {
+    "h": "szinte",
+    "e": "color",
+    "m": "Spoken like \"seente\" — color.",
+    "i": "/sintɛ/"
+  },
+  {
+    "h": "mondj",
+    "e": "says",
+    "m": "Spoken like \"mondj\" — says.",
+    "i": "/mondj/"
+  },
+  {
+    "h": "baszd",
+    "e": "fuck",
+    "m": "Spoken like \"basd\".",
+    "i": "/bɒsd/"
+  },
+  {
+    "h": "csinálod",
+    "e": "you do it",
+    "m": "Spoken like \"cheenálod\".",
+    "i": "/tʃinaːlod/"
+  },
+  {
+    "h": "maradok",
+    "e": "already",
+    "m": "Spoken like \"maradok\" — already.",
+    "i": "/mɒrɒdok/"
+  },
+  {
+    "h": "mutasd",
+    "e": "show (imperative)",
+    "m": "Spoken like \"mootasd\".",
+    "i": "/mutɒʃd/"
+  },
+  {
+    "h": "életemben",
+    "e": "in my life",
+    "m": "Spoken like \"életemben\".",
+    "i": "/eːlɛtɛmbɛn/"
+  },
+  {
+    "h": "házat",
+    "e": "house (accusative)",
+    "m": "Spoken like \"házat\".",
+    "i": "/haːzɒt/"
+  },
+  {
+    "h": "elmondani",
+    "e": "to tell; to say",
+    "m": "Spoken like \"elmondanee\".",
+    "i": "/ɛlmondɒni/"
+  },
+  {
+    "h": "magadra",
+    "e": "today",
+    "m": "Spoken like \"magadra\" — today.",
+    "i": "/mɒɡɒdrɒ/"
+  },
+  {
+    "h": "lettem",
+    "e": "down",
+    "m": "Spoken like \"lettem\" — down.",
+    "i": "/lɛtːɛm/"
+  },
+  {
+    "h": "gyereket",
+    "e": "child",
+    "m": "Spoken like \"dyereket\" — child.",
+    "i": "/ɟɛrɛkɛt/"
+  },
+  {
+    "h": "hagyom",
+    "e": "if",
+    "m": "Spoken like \"hadyom\" — if.",
+    "i": "/hɒɟom/"
+  },
+  {
+    "h": "személyes",
+    "e": "eye",
+    "m": "Spoken like \"seméyes\" — eye.",
+    "i": "/sɛmeːjɛʃ/"
+  },
+  {
+    "h": "hiszek",
+    "e": "I believe",
+    "m": "Spoken like \"heesek\".",
+    "i": "/hisɛk/"
+  },
+  {
+    "h": "kocsi",
+    "e": "stone",
+    "m": "Spoken like \"kochee\" — stone.",
+    "i": "/kotʃi/"
+  },
+  {
+    "h": "módon",
+    "e": "in a way",
+    "m": "Spoken like \"módon\".",
+    "i": "/moːdon/"
+  },
+  {
+    "h": "évig",
+    "e": "until a year",
+    "m": "Spoken like \"éveeg\".",
+    "i": "/eːviɡ/"
+  },
+  {
+    "h": "rendes",
+    "e": "decent; proper",
+    "m": "Spoken like \"rendes\".",
+    "i": "/rɛndɛʃ/"
+  },
+  {
+    "h": "úristen",
+    "e": "my God",
+    "m": "Spoken like \"úreesten\".",
+    "i": "/uːriʃtɛn/"
+  },
+  {
+    "h": "bocsánatot",
+    "e": "apology (acc.)",
+    "m": "Spoken like \"bochánatot\".",
+    "i": "/botʃaːnɒtot/"
+  },
+  {
+    "h": "emlékszik",
+    "e": "he/she remembers",
+    "m": "Spoken like \"emlékseek\".",
+    "i": "/ɛmleːksik/"
+  },
+  {
+    "h": "fantasztikus",
+    "e": "tree",
+    "m": "Spoken like \"fantasteekoos\" — tree.",
+    "i": "/fɒntɒstikuʃ/"
+  },
+  {
+    "h": "találkoztam",
+    "e": "maybe",
+    "m": "Spoken like \"találkoztam\" — maybe.",
+    "i": "/tɒlaːlkoztɒm/"
+  },
+  {
+    "h": "vörös",
+    "e": "red",
+    "m": "Spoken like \"vörös\".",
+    "i": "/vørøʃ/"
+  },
+  {
+    "h": "nevű",
+    "e": "don't",
+    "m": "Spoken like \"nevű\" — don't.",
+    "i": "/nɛvyː/"
+  },
+  {
+    "h": "haragudj",
+    "e": "if",
+    "m": "Spoken like \"haragoodj\" — if.",
+    "i": "/hɒrɒɡudj/"
+  },
+  {
+    "h": "kocsit",
+    "e": "stone",
+    "m": "Spoken like \"kocheet\" — stone.",
+    "i": "/kotʃit/"
+  },
+  {
+    "h": "földön",
+    "e": "on the ground",
+    "m": "Spoken like \"földön\".",
+    "i": "/føldøn/"
+  },
+  {
+    "h": "szuper",
+    "e": "super",
+    "m": "Spoken like \"sooper\".",
+    "i": "/supɛr/"
+  },
+  {
+    "h": "szeretné",
+    "e": "loves; likes",
+    "m": "Spoken like \"seretné\" — loves.",
+    "i": "/sɛrɛtneː/"
+  },
+  {
+    "h": "hívd",
+    "e": "call (imperative)",
+    "m": "Spoken like \"hívd\".",
+    "i": "/hiːvd/"
+  },
+  {
+    "h": "időnk",
+    "e": "our time",
+    "m": "Spoken like \"eedőnk\".",
+    "i": "/idøːnk/"
+  },
+  {
+    "h": "fent",
+    "e": "up; above",
+    "m": "Spoken like \"fent\".",
+    "i": "/fɛnt/"
+  },
+  {
+    "h": "kapd",
+    "e": "take it (imperative)",
+    "m": "Spoken like \"kapd\".",
+    "i": "/kɒpd/"
+  },
+  {
+    "h": "hála",
+    "e": "thanks; gratitude",
+    "m": "Spoken like \"hála\".",
+    "i": "/haːlɒ/"
+  },
+  {
+    "h": "adtam",
+    "e": "gives",
+    "m": "Spoken like \"adtam\" — gives.",
+    "i": "/ɒdtɒm/"
+  },
+  {
+    "h": "eljött",
+    "e": "he/she came",
+    "m": "Spoken like \"eljött\".",
+    "i": "/ɛljøtː/"
+  },
+  {
+    "h": "emiatt",
+    "e": "because of this",
+    "m": "Spoken like \"emeeatt\".",
+    "i": "/ɛmiɒtː/"
+  },
+  {
+    "h": "hagyni",
+    "e": "if",
+    "m": "Spoken like \"hadynee\" — if.",
+    "i": "/hɒɟni/"
+  },
+  {
+    "h": "adta",
+    "e": "gives",
+    "m": "Spoken like \"adta\" — gives.",
+    "i": "/ɒdtɒ/"
+  },
+  {
+    "h": "üres",
+    "e": "empty",
+    "m": "Spoken like \"üres\".",
+    "i": "/yrɛʃ/"
+  },
+  {
+    "h": "szemben",
+    "e": "eye",
+    "m": "Spoken like \"semben\" — eye.",
+    "i": "/sɛmbɛn/"
+  },
+  {
+    "h": "hacsak",
+    "e": "if",
+    "m": "Spoken like \"hachak\" — if.",
+    "i": "/hɒtʃɒk/"
+  },
+  {
+    "h": "doki",
+    "e": "doc; doctor",
+    "m": "Spoken like \"dokee\".",
+    "i": "/doki/"
+  },
+  {
+    "h": "hívnak",
+    "e": "they call",
+    "m": "Spoken like \"hívnak\".",
+    "i": "/hiːvnɒk/"
+  },
+  {
+    "h": "kissé",
+    "e": "who; out",
+    "m": "Spoken like \"keessé\" — who.",
+    "i": "/kiʃːeː/"
+  },
+  {
+    "h": "kezét",
+    "e": "hand",
+    "m": "Spoken like \"kezét\" — hand.",
+    "i": "/kɛzeːt/"
+  },
+  {
+    "h": "hívj",
+    "e": "call (imperative)",
+    "m": "Spoken like \"hívj\".",
+    "i": "/hiːvj/"
+  },
+  {
+    "h": "mennek",
+    "e": "they go",
+    "m": "Spoken like \"mennek\".",
+    "i": "/mɛnːɛk/"
+  },
+  {
+    "h": "szerelmes",
+    "e": "in love",
+    "m": "Spoken like \"serelmes\".",
+    "i": "/sɛrɛlmɛʃ/"
+  },
+  {
+    "h": "megmondtam",
+    "e": "still; yet",
+    "m": "Spoken like \"megmondtam\" — still.",
+    "i": "/mɛɡmondtɒm/"
+  },
+  {
+    "h": "barátod",
+    "e": "your friend",
+    "m": "Spoken like \"barátod\".",
+    "i": "/bɒraːtod/"
+  },
+  {
+    "h": "fenét",
+    "e": "no way; nonsense",
+    "m": "Spoken like \"fenét\".",
+    "i": "/fɛneːt/"
+  },
+  {
+    "h": "bolond",
+    "e": "fool",
+    "m": "Spoken like \"bolond\".",
+    "i": "/bolond/"
+  },
+  {
+    "h": "várom",
+    "e": "I wait",
+    "m": "Spoken like \"várom\".",
+    "i": "/vaːrom/"
+  },
+  {
+    "h": "ügyet",
+    "e": "case (accusative)",
+    "m": "Spoken like \"üdyet\".",
+    "i": "/yɟɛt/"
+  },
+  {
+    "h": "állandóan",
+    "e": "constantly",
+    "m": "Spoken like \"állandóan\".",
+    "i": "/aːlːɒndoːɒn/"
+  },
+  {
+    "h": "csaj",
+    "e": "girl; chick",
+    "m": "Spoken like \"chaj\".",
+    "i": "/tʃɒj/"
+  },
+  {
+    "h": "enni",
+    "e": "I",
+    "m": "Spoken like \"ennee\" — I.",
+    "i": "/ɛnːi/"
+  },
+  {
+    "h": "hívja",
+    "e": "he/she calls",
+    "m": "Spoken like \"hívja\".",
+    "i": "/hiːvjɒ/"
+  },
+  {
+    "h": "gyors",
+    "e": "fast",
+    "m": "Spoken like \"dyors\" — fast.",
+    "i": "/ɟorʃ/"
+  },
+  {
+    "h": "csinos",
+    "e": "pretty",
+    "m": "Spoken like \"cheenos\".",
+    "i": "/tʃinoʃ/"
+  },
+  {
+    "h": "közös",
+    "e": "common; shared",
+    "m": "Spoken like \"közös\".",
+    "i": "/køzøʃ/"
+  },
+  {
+    "h": "eszembe",
+    "e": "and",
+    "m": "Spoken like \"esembe\" — and.",
+    "i": "/ɛsɛmbɛ/"
+  },
+  {
+    "h": "élete",
+    "e": "his/her life",
+    "m": "Spoken like \"élete\".",
+    "i": "/eːlɛtɛ/"
+  },
+  {
+    "h": "tartozik",
+    "e": "belongs; owes",
+    "m": "Spoken like \"tartozeek\".",
+    "i": "/tɒrtozik/"
+  },
+  {
+    "h": "zsaru",
+    "e": "cop",
+    "m": "Spoken like \"zharoo\".",
+    "i": "/ʒɒru/"
+  },
+  {
+    "h": "álljon",
+    "e": "let him/her stand",
+    "m": "Spoken like \"álljon\".",
+    "i": "/aːlːjon/"
+  },
+  {
+    "h": "nyolc",
+    "e": "eight",
+    "m": "Spoken like \"nyolc\".",
+    "i": "/ɲolt͡s/"
+  },
+  {
+    "h": "régóta",
+    "e": "for a long time",
+    "m": "Spoken like \"régóta\".",
+    "i": "/reːɡoːtɒ/"
+  },
+  {
+    "h": "éjszakát",
+    "e": "night (acc.)",
+    "m": "Spoken like \"éjsakát\".",
+    "i": "/eːjsɒkaːt/"
+  },
+  {
+    "h": "mondjak",
+    "e": "says",
+    "m": "Spoken like \"mondjak\" — says.",
+    "i": "/mondjɒk/"
+  },
+  {
+    "h": "őszinte",
+    "e": "honest",
+    "m": "Spoken like \"őseente\".",
+    "i": "/øːsintɛ/"
+  },
+  {
+    "h": "zárva",
+    "e": "closed",
+    "m": "Spoken like \"zárva\".",
+    "i": "/zaːrvɒ/"
+  },
+  {
+    "h": "többiek",
+    "e": "the rest",
+    "m": "Spoken like \"többeeek\".",
+    "i": "/tøbːiɛk/"
+  },
+  {
+    "h": "sokan",
+    "e": "salt",
+    "m": "Spoken like \"sokan\" — salt.",
+    "i": "/ʃokɒn/"
+  },
+  {
+    "h": "dolgozott",
+    "e": "he/she worked",
+    "m": "Spoken like \"dolgozott\".",
+    "i": "/dolɡozotː/"
+  },
+  {
+    "h": "óriási",
+    "e": "huge",
+    "m": "Spoken like \"óreeásee\".",
+    "i": "/oːriaːʃi/"
+  },
+  {
+    "h": "időm",
+    "e": "my time",
+    "m": "Spoken like \"eedőm\".",
+    "i": "/idøːm/"
+  },
+  {
+    "h": "kicsoda",
+    "e": "who; out",
+    "m": "Spoken like \"keechoda\" — who.",
+    "i": "/kitʃodɒ/"
+  },
+  {
+    "h": "képet",
+    "e": "picture (acc.)",
+    "m": "Spoken like \"képet\".",
+    "i": "/keːpɛt/"
+  },
+  {
+    "h": "abból",
+    "e": "from that",
+    "m": "Spoken like \"abból\".",
+    "i": "/ɒbːoːl/"
+  },
+  {
+    "h": "vette",
+    "e": "he/she took",
+    "m": "Spoken like \"vette\".",
+    "i": "/vɛtːɛ/"
+  },
+  {
+    "h": "meghal",
+    "e": "still; yet",
+    "m": "Spoken like \"meghal\" — still.",
+    "i": "/mɛɡhɒl/"
+  },
+  {
+    "h": "finom",
+    "e": "delicious; fine",
+    "m": "Spoken like \"feenom\".",
+    "i": "/finom/"
+  },
+  {
+    "h": "meddig",
+    "e": "until when",
+    "m": "Spoken like \"meddeeg\".",
+    "i": "/mɛdːiɡ/"
+  },
+  {
+    "h": "akarunk",
+    "e": "we want",
+    "m": "Spoken like \"akaroonk\".",
+    "i": "/ɒkɒrunk/"
+  },
+  {
+    "h": "hónapja",
+    "e": "for a month",
+    "m": "Spoken like \"hónapja\".",
+    "i": "/hoːnɒpjɒ/"
+  },
+  {
+    "h": "amely",
+    "e": "which; that",
+    "m": "Spoken like \"amey\".",
+    "i": "/ɒmɛj/"
+  },
+  {
+    "h": "kivel",
+    "e": "who; out",
+    "m": "Spoken like \"keevel\" — who.",
+    "i": "/kivɛl/"
+  },
+  {
+    "h": "lent",
+    "e": "down",
+    "m": "Spoken like \"lent\" — down.",
+    "i": "/lɛnt/"
+  },
+  {
+    "h": "magunkat",
+    "e": "today",
+    "m": "Spoken like \"magoonkat\" — today.",
+    "i": "/mɒɡunkɒt/"
+  },
+  {
+    "h": "nappal",
+    "e": "day; sun",
+    "m": "Spoken like \"nappal\" — day.",
+    "i": "/nɒpːɒl/"
+  },
+  {
+    "h": "mostantól",
+    "e": "now",
+    "m": "Spoken like \"mostantól\" — now.",
+    "i": "/moʃtɒntoːl/"
+  },
+  {
+    "h": "elé",
+    "e": "to him/her/it (forward)",
+    "m": "Spoken like \"elé\".",
+    "i": "/ɛleː/"
+  },
+  {
+    "h": "férjem",
+    "e": "my husband",
+    "m": "Spoken like \"férjem\".",
+    "i": "/feːrjɛm/"
+  },
+  {
+    "h": "teszem",
+    "e": "you (sing.)",
+    "m": "Spoken like \"tesem\" — you (sing.).",
+    "i": "/tɛsɛm/"
+  },
+  {
+    "h": "történet",
+    "e": "story",
+    "m": "Spoken like \"történet\".",
+    "i": "/tørteːnɛt/"
+  },
+  {
+    "h": "órát",
+    "e": "hour (acc.)",
+    "m": "Spoken like \"órát\".",
+    "i": "/oːraːt/"
+  },
+  {
+    "h": "próbáld",
+    "e": "try (imperative)",
+    "m": "Spoken like \"próbáld\".",
+    "i": "/proːbaːld/"
+  },
+  {
+    "h": "kedvenc",
+    "e": "favorite",
+    "m": "Spoken like \"kedvenc\".",
+    "i": "/kɛdvɛnt͡s/"
+  },
+  {
+    "h": "amiről",
+    "e": "about which (relative)",
+    "m": "Spoken like \"ameeről\".",
+    "i": "/ɒmirøːl/"
+  },
+  {
+    "h": "atyám",
+    "e": "my father",
+    "m": "Spoken like \"atyám\".",
+    "i": "/ɒcaːm/"
+  },
+  {
+    "h": "kapni",
+    "e": "to get; to receive",
+    "m": "Spoken like \"kapnee\".",
+    "i": "/kɒpni/"
+  },
+  {
+    "h": "órája",
+    "e": "his/her hour",
+    "m": "Spoken like \"órája\".",
+    "i": "/oːraːjɒ/"
+  },
+  {
+    "h": "hidd",
+    "e": "bridge",
+    "m": "Spoken like \"heedd\" — bridge.",
+    "i": "/hidː/"
+  },
+  {
+    "h": "közelebb",
+    "e": "closer",
+    "m": "Spoken like \"közelebb\".",
+    "i": "/køzɛlɛbː/"
+  },
+  {
+    "h": "embernek",
+    "e": "person",
+    "m": "Spoken like \"embernek\" — person.",
+    "i": "/ɛmbɛrnɛk/"
+  },
+  {
+    "h": "hagytam",
+    "e": "if",
+    "m": "Spoken like \"hadytam\" — if.",
+    "i": "/hɒɟtɒm/"
+  },
+  {
+    "h": "foglak",
+    "e": "tooth",
+    "m": "Spoken like \"foglak\" — tooth.",
+    "i": "/foɡlɒk/"
+  },
+  {
+    "h": "lánya",
+    "e": "his/her daughter",
+    "m": "Spoken like \"lánya\".",
+    "i": "/laːɲɒ/"
+  },
+  {
+    "h": "bocsáss",
+    "e": "forgive (imperative)",
+    "m": "Spoken like \"bocháss\".",
+    "i": "/botʃaːʃː/"
+  },
+  {
+    "h": "szomorú",
+    "e": "word",
+    "m": "Spoken like \"somorú\" — word.",
+    "i": "/somoruː/"
+  },
+  {
+    "h": "legtöbb",
+    "e": "down",
+    "m": "Spoken like \"legtöbb\" — down.",
+    "i": "/lɛɡtøbː/"
+  },
+  {
+    "h": "szeretek",
+    "e": "loves; likes",
+    "m": "Spoken like \"seretek\" — loves.",
+    "i": "/sɛrɛtɛk/"
+  },
+  {
+    "h": "félre",
+    "e": "aside; wrong",
+    "m": "Spoken like \"félre\".",
+    "i": "/feːlrɛ/"
+  },
+  {
+    "h": "tudnám",
+    "e": "knows; can",
+    "m": "Spoken like \"toodnám\" — knows.",
+    "i": "/tudnaːm/"
+  },
+  {
+    "h": "franc",
+    "e": "damn",
+    "m": "Spoken like \"franc\".",
+    "i": "/frɒnt͡s/"
+  },
+  {
+    "h": "mondasz",
+    "e": "says",
+    "m": "Spoken like \"mondas\" — says.",
+    "i": "/mondɒs/"
+  },
+  {
+    "h": "igenis",
+    "e": "yes",
+    "m": "Spoken like \"eegenees\" — yes.",
+    "i": "/iɡɛniʃ/"
+  },
+  {
+    "h": "kapsz",
+    "e": "you get",
+    "m": "Spoken like \"kaps\".",
+    "i": "/kɒps/"
+  },
+  {
+    "h": "figyelem",
+    "e": "attention",
+    "m": "Spoken like \"feedyelem\".",
+    "i": "/fiɟɛlɛm/"
+  },
+  {
+    "h": "kezed",
+    "e": "hand",
+    "m": "Spoken like \"kezed\" — hand.",
+    "i": "/kɛzɛd/"
+  },
+  {
+    "h": "baleset",
+    "e": "accident",
+    "m": "Spoken like \"baleset\".",
+    "i": "/bɒlɛʃɛt/"
+  },
+  {
+    "h": "percre",
+    "e": "for a minute",
+    "m": "Spoken like \"percre\".",
+    "i": "/pɛrt͡srɛ/"
+  },
+  {
+    "h": "gyakran",
+    "e": "often",
+    "m": "Spoken like \"dyakran\".",
+    "i": "/ɟɒkrɒn/"
+  },
+  {
+    "h": "ígérem",
+    "e": "I promise",
+    "m": "Spoken like \"ígérem\".",
+    "i": "/iːɡeːrɛm/"
+  },
+  {
+    "h": "csinálom",
+    "e": "I do it",
+    "m": "Spoken like \"cheenálom\".",
+    "i": "/tʃinaːlom/"
+  },
+  {
+    "h": "balra",
+    "e": "to the left",
+    "m": "Spoken like \"balra\".",
+    "i": "/bɒlrɒ/"
+  },
+  {
+    "h": "tök",
+    "e": "pumpkin; totally",
+    "m": "Spoken like \"tök\".",
+    "i": "/tøk/"
+  },
+  {
+    "h": "ajtó",
+    "e": "door",
+    "m": "Spoken like \"ajtó\".",
+    "i": "/ɒjtoː/"
+  },
+  {
+    "h": "látlak",
+    "e": "I see you",
+    "m": "Spoken like \"látlak\".",
+    "i": "/laːtlɒk/"
+  },
+  {
+    "h": "kedvesem",
+    "e": "my dear",
+    "m": "Spoken like \"kedvesem\".",
+    "i": "/kɛdvɛʃɛm/"
+  },
+  {
+    "h": "mester",
+    "e": "master",
+    "m": "Spoken like \"mester\".",
+    "i": "/mɛʃtɛr/"
+  },
+  {
+    "h": "valakivel",
+    "e": "someone",
+    "m": "Spoken like \"valakeevel\" — someone.",
+    "i": "/vɒlɒkivɛl/"
+  },
+  {
+    "h": "beszélnem",
+    "e": "into; in",
+    "m": "Spoken like \"besélnem\" — into.",
+    "i": "/bɛseːlnɛm/"
+  },
+  {
+    "h": "órán",
+    "e": "in class",
+    "m": "Spoken like \"órán\".",
+    "i": "/oːraːn/"
+  },
+  {
+    "h": "hónap",
+    "e": "month",
+    "m": "Spoken like \"hónap\".",
+    "i": "/hoːnɒp/"
+  },
+  {
+    "h": "áldozat",
+    "e": "victim",
+    "m": "Spoken like \"áldozat\".",
+    "i": "/aːldozɒt/"
+  },
+  {
+    "h": "jöttünk",
+    "e": "we came",
+    "m": "Spoken like \"jöttünk\".",
+    "i": "/jøtːynk/"
+  },
+  {
+    "h": "hibám",
+    "e": "my fault",
+    "m": "Spoken like \"heebám\".",
+    "i": "/hibaːm/"
+  },
+  {
+    "h": "hozta",
+    "e": "snow",
+    "m": "Spoken like \"hozta\" — snow.",
+    "i": "/hoztɒ/"
+  },
+  {
+    "h": "sohasem",
+    "e": "salt",
+    "m": "Spoken like \"sohasem\" — salt.",
+    "i": "/ʃohɒʃɛm/"
+  },
+  {
+    "h": "akartál",
+    "e": "you wanted",
+    "m": "Spoken like \"akartál\".",
+    "i": "/ɒkɒrtaːl/"
+  },
+  {
+    "h": "kezdődik",
+    "e": "hand",
+    "m": "Spoken like \"kezdődeek\" — hand.",
+    "i": "/kɛzdøːdik/"
+  },
+  {
+    "h": "vegye",
+    "e": "take it (formal)",
+    "m": "Spoken like \"vedye\".",
+    "i": "/vɛɟɛ/"
+  },
+  {
+    "h": "szólsz",
+    "e": "you call; you speak",
+    "m": "Spoken like \"sóls\".",
+    "i": "/soːls/"
+  },
+  {
+    "h": "mentem",
+    "e": "went",
+    "m": "Spoken like \"mentem\" — went.",
+    "i": "/mɛntɛm/"
+  },
+  {
+    "h": "nehogy",
+    "e": "don't",
+    "m": "Spoken like \"nehody\" — don't.",
+    "i": "/nɛhoɟ/"
+  },
+  {
+    "h": "parancsnok",
+    "e": "commander",
+    "m": "Spoken like \"paranchnok\".",
+    "i": "/pɒrɒntʃnok/"
+  },
+  {
+    "h": "szükséges",
+    "e": "necessary",
+    "m": "Spoken like \"sükséges\".",
+    "i": "/sykʃeːɡɛʃ/"
+  },
+  {
+    "h": "név",
+    "e": "name",
+    "m": "Spoken like \"név\".",
+    "i": "/neːv/"
+  },
+  {
+    "h": "hozzánk",
+    "e": "snow",
+    "m": "Spoken like \"hozzánk\" — snow.",
+    "i": "/hozːaːnk/"
+  },
+  {
+    "h": "szólj",
+    "e": "speak; call (imperative)",
+    "m": "Spoken like \"sólj\".",
+    "i": "/soːlj/"
+  },
+  {
+    "h": "átkozott",
+    "e": "damned",
+    "m": "Spoken like \"átkozott\".",
+    "i": "/aːtkozotː/"
+  },
+  {
+    "h": "kezdjük",
+    "e": "hand",
+    "m": "Spoken like \"kezdjük\" — hand.",
+    "i": "/kɛzdjyk/"
+  },
+  {
+    "h": "bíró",
+    "e": "judge",
+    "m": "Spoken like \"bíró\".",
+    "i": "/biːroː/"
+  },
+  {
+    "h": "tartja",
+    "e": "he/she holds",
+    "m": "Spoken like \"tartja\".",
+    "i": "/tɒrtjɒ/"
+  },
+  {
+    "h": "csinálta",
+    "e": "he/she did it",
+    "m": "Spoken like \"cheenálta\".",
+    "i": "/tʃinaːltɒ/"
+  },
+  {
+    "h": "jöttek",
+    "e": "they came",
+    "m": "Spoken like \"jöttek\".",
+    "i": "/jøtːɛk/"
+  },
+  {
+    "h": "várjunk",
+    "e": "let's wait",
+    "m": "Spoken like \"várjoonk\".",
+    "i": "/vaːrjunk/"
+  },
+  {
+    "h": "könnyen",
+    "e": "easily",
+    "m": "Spoken like \"könnyen\".",
+    "i": "/køɲːɛn/"
+  },
+  {
+    "h": "segítek",
+    "e": "I help",
+    "m": "Spoken like \"segítek\".",
+    "i": "/ʃɛɡiːtɛk/"
+  },
+  {
+    "h": "szeretsz",
+    "e": "loves; likes",
+    "m": "Spoken like \"serets\" — loves.",
+    "i": "/sɛrɛts/"
+  },
+  {
+    "h": "nálunk",
+    "e": "at our place",
+    "m": "Spoken like \"náloonk\".",
+    "i": "/naːlunk/"
+  },
+  {
+    "h": "kíváncsi",
+    "e": "curious",
+    "m": "Spoken like \"kívánchee\".",
+    "i": "/kiːvaːntʃi/"
+  },
+  {
+    "h": "másodperc",
+    "e": "second (time)",
+    "m": "Spoken like \"másodperc\".",
+    "i": "/maːʃodpɛrt͡s/"
+  },
+  {
+    "h": "örökké",
+    "e": "forever",
+    "m": "Spoken like \"örökké\".",
+    "i": "/ørøkːeː/"
+  },
+  {
+    "h": "nyugodj",
+    "e": "calm down",
+    "m": "Spoken like \"nyoogodj\".",
+    "i": "/ɲuɡodj/"
+  },
+  {
+    "h": "hölgy",
+    "e": "lady",
+    "m": "Spoken like \"höldy\".",
+    "i": "/hølɟ/"
+  },
+  {
+    "h": "minél",
+    "e": "what; we",
+    "m": "Spoken like \"meenél\" — what.",
+    "i": "/mineːl/"
+  },
+  {
+    "h": "olyat",
+    "e": "such a thing (acc.)",
+    "m": "Spoken like \"oyat\".",
+    "i": "/ojɒt/"
+  },
+  {
+    "h": "hívni",
+    "e": "to call",
+    "m": "Spoken like \"hívnee\".",
+    "i": "/hiːvni/"
+  },
+  {
+    "h": "neved",
+    "e": "don't",
+    "m": "Spoken like \"neved\" — don't.",
+    "i": "/nɛvɛd/"
+  },
+  {
+    "h": "vezet",
+    "e": "drives; leads",
+    "m": "Spoken like \"vezet\".",
+    "i": "/vɛzɛt/"
+  },
+  {
+    "h": "billy",
+    "e": "Billy",
+    "m": "Spoken like \"beely\".",
+    "i": "/bijː/"
+  },
+  {
+    "h": "jobbra",
+    "e": "good",
+    "m": "Spoken like \"jobbra\" — good.",
+    "i": "/jobːrɒ/"
+  },
+  {
+    "h": "találkozni",
+    "e": "maybe",
+    "m": "Spoken like \"találkoznee\" — maybe.",
+    "i": "/tɒlaːlkozni/"
+  },
+  {
+    "h": "látsz",
+    "e": "you see",
+    "m": "Spoken like \"láts\".",
+    "i": "/laːts/"
+  },
+  {
+    "h": "csinálunk",
+    "e": "we do",
+    "m": "Spoken like \"cheenáloonk\".",
+    "i": "/tʃinaːlunk/"
+  },
+  {
+    "h": "szeretnéd",
+    "e": "loves; likes",
+    "m": "Spoken like \"seretnéd\" — loves.",
+    "i": "/sɛrɛtneːd/"
+  },
+  {
+    "h": "esik",
+    "e": "and",
+    "m": "Spoken like \"eseek\" — and.",
+    "i": "/ɛʃik/"
+  },
+  {
+    "h": "valódi",
+    "e": "real; genuine",
+    "m": "Spoken like \"valódee\".",
+    "i": "/vɒloːdi/"
+  },
+  {
+    "h": "valamilyen",
+    "e": "some kind of",
+    "m": "Spoken like \"valameeyen\".",
+    "i": "/vɒlɒmijɛn/"
+  },
+  {
+    "h": "pofa",
+    "e": "face; mouth (vulgar)",
+    "m": "Spoken like \"pofa\".",
+    "i": "/pofɒ/"
+  },
+  {
+    "h": "dühös",
+    "e": "angry",
+    "m": "Spoken like \"dühös\".",
+    "i": "/dyhøʃ/"
+  },
+  {
+    "h": "tudná",
+    "e": "knows; can",
+    "m": "Spoken like \"toodná\" — knows.",
+    "i": "/tudnaː/"
+  },
+  {
+    "h": "tv",
+    "e": "TV",
+    "m": "Spoken like \"tv\".",
+    "i": "/tv/"
+  },
+  {
+    "h": "bobby",
+    "e": "Bobby",
+    "m": "Spoken like \"bobby\".",
+    "i": "/bobːi/"
+  },
+  {
+    "h": "indulás",
+    "e": "departure; let's go",
+    "m": "Spoken like \"eendoolás\".",
+    "i": "/indulaːʃ/"
+  },
+  {
+    "h": "hagyta",
+    "e": "if",
+    "m": "Spoken like \"hadyta\" — if.",
+    "i": "/hɒɟtɒ/"
+  },
+  {
+    "h": "aranyos",
+    "e": "cute",
+    "m": "Spoken like \"aranyos\".",
+    "i": "/ɒrɒɲoʃ/"
+  },
+  {
+    "h": "hinném",
+    "e": "I'd believe",
+    "m": "Spoken like \"heenném\".",
+    "i": "/hinːeːm/"
+  },
+  {
+    "h": "közt",
+    "e": "between; among",
+    "m": "Spoken like \"közt\".",
+    "i": "/køzt/"
+  },
+  {
+    "h": "terhes",
+    "e": "you (sing.)",
+    "m": "Spoken like \"terhes\" — you (sing.).",
+    "i": "/tɛrhɛʃ/"
+  },
+  {
+    "h": "maradsz",
+    "e": "already",
+    "m": "Spoken like \"marads\" — already.",
+    "i": "/mɒrɒds/"
+  },
+  {
+    "h": "örökre",
+    "e": "forever",
+    "m": "Spoken like \"örökre\".",
+    "i": "/ørøkrɛ/"
+  },
+  {
+    "h": "férje",
+    "e": "her husband",
+    "m": "Spoken like \"férje\".",
+    "i": "/feːrjɛ/"
+  },
+  {
+    "h": "mégsem",
+    "e": "yet not; nevertheless",
+    "m": "Spoken like \"mégsem\".",
+    "i": "/meːɡʃɛm/"
+  },
+  {
+    "h": "szerencsés",
+    "e": "lucky",
+    "m": "Spoken like \"serenchés\".",
+    "i": "/sɛrɛntʃeːʃ/"
+  },
+  {
+    "h": "kevés",
+    "e": "few; little",
+    "m": "Spoken like \"kevés\".",
+    "i": "/kɛveːʃ/"
+  },
+  {
+    "h": "ismét",
+    "e": "also; too",
+    "m": "Spoken like \"eesmét\" — also.",
+    "i": "/iʃmeːt/"
+  },
+  {
+    "h": "bármikor",
+    "e": "anytime",
+    "m": "Spoken like \"bármeekor\".",
+    "i": "/baːrmikor/"
+  },
+  {
+    "h": "lehetőség",
+    "e": "down",
+    "m": "Spoken like \"lehetőség\" — down.",
+    "i": "/lɛhɛtøːʃeːɡ/"
+  },
+  {
+    "h": "nézek",
+    "e": "I look",
+    "m": "Spoken like \"nézek\".",
+    "i": "/neːzɛk/"
+  },
+  {
+    "h": "esett",
+    "e": "and",
+    "m": "Spoken like \"esett\" — and.",
+    "i": "/ɛʃɛtː/"
+  },
+  {
+    "h": "bal",
+    "e": "left",
+    "m": "Spoken like \"bal\".",
+    "i": "/bɒl/"
+  },
+  {
+    "h": "hal",
+    "e": "if",
+    "m": "Spoken like \"hal\" — if.",
+    "i": "/hɒl/"
+  },
+  {
+    "h": "hallod",
+    "e": "if",
+    "m": "Spoken like \"hallod\" — if.",
+    "i": "/hɒlːod/"
+  },
+  {
+    "h": "ölte",
+    "e": "he/she killed",
+    "m": "Spoken like \"ölte\".",
+    "i": "/øltɛ/"
+  },
+  {
+    "h": "fickót",
+    "e": "guy (acc.)",
+    "m": "Spoken like \"feeckót\".",
+    "i": "/fit͡skoːt/"
+  },
+  {
+    "h": "választ",
+    "e": "chooses",
+    "m": "Spoken like \"válast\".",
+    "i": "/vaːlɒst/"
+  },
+  {
+    "h": "akiket",
+    "e": "whom (relative, plural, acc.)",
+    "m": "Spoken like \"akeeket\".",
+    "i": "/ɒkikɛt/"
+  },
+  {
+    "h": "com",
+    "e": "com",
+    "m": "Spoken like \"com\".",
+    "i": "/t͡som/"
+  },
+  {
+    "h": "elhinni",
+    "e": "to believe",
+    "m": "Spoken like \"elheennee\".",
+    "i": "/ɛlhinːi/"
+  },
+  {
+    "h": "nyitva",
+    "e": "open",
+    "m": "Spoken like \"nyeetva\".",
+    "i": "/ɲitvɒ/"
+  },
+  {
+    "h": "hozni",
+    "e": "snow",
+    "m": "Spoken like \"hoznee\" — snow.",
+    "i": "/hozni/"
+  },
+  {
+    "h": "semmilyen",
+    "e": "neither; nor",
+    "m": "Spoken like \"semmeeyen\" — neither.",
+    "i": "/ʃɛmːijɛn/"
+  },
+  {
+    "h": "rendőr",
+    "e": "police officer",
+    "m": "Spoken like \"rendőr\".",
+    "i": "/rɛndøːr/"
+  },
+  {
+    "h": "gyilkosság",
+    "e": "murder",
+    "m": "Spoken like \"dyeelkosság\".",
+    "i": "/ɟilkoʃːaːɡ/"
+  },
+  {
+    "h": "különös",
+    "e": "strange; particular",
+    "m": "Spoken like \"különös\".",
+    "i": "/kylønøʃ/"
+  },
+  {
+    "h": "dehogynem",
+    "e": "but",
+    "m": "Spoken like \"dehodynem\" — but.",
+    "i": "/dɛhoɟnɛm/"
+  },
+  {
+    "h": "állat",
+    "e": "animal",
+    "m": "Spoken like \"állat\".",
+    "i": "/aːlːɒt/"
+  },
+  {
+    "h": "ártatlan",
+    "e": "innocent",
+    "m": "Spoken like \"ártatlan\".",
+    "i": "/aːrtɒtlɒn/"
+  },
+  {
+    "h": "biztonságos",
+    "e": "safe",
+    "m": "Spoken like \"beeztonságos\".",
+    "i": "/biztonʃaːɡoʃ/"
+  },
+  {
+    "h": "vicc",
+    "e": "joke",
+    "m": "Spoken like \"veecc\".",
+    "i": "/vit͡sː/"
+  },
+  {
+    "h": "korán",
+    "e": "stone",
+    "m": "Spoken like \"korán\" — stone.",
+    "i": "/koraːn/"
+  },
+  {
+    "h": "gyorsabban",
+    "e": "fast",
+    "m": "Spoken like \"dyorsabban\" — fast.",
+    "i": "/ɟorʃɒbːɒn/"
+  },
+  {
+    "h": "jók",
+    "e": "good (plural)",
+    "m": "Spoken like \"jók\".",
+    "i": "/joːk/"
+  },
+  {
+    "h": "bármilyen",
+    "e": "any kind of",
+    "m": "Spoken like \"bármeeyen\".",
+    "i": "/baːrmijɛn/"
+  },
+  {
+    "h": "kérdést",
+    "e": "question (acc.)",
+    "m": "Spoken like \"kérdést\".",
+    "i": "/keːrdeːʃt/"
+  },
+  {
+    "h": "pillanatban",
+    "e": "at the moment",
+    "m": "Spoken like \"peellanatban\".",
+    "i": "/pilːɒnɒtbɒn/"
+  },
+  {
+    "h": "rájöttem",
+    "e": "I realized",
+    "m": "Spoken like \"rájöttem\".",
+    "i": "/raːjøtːɛm/"
+  },
+  {
+    "h": "tesó",
+    "e": "you (sing.)",
+    "m": "Spoken like \"tesó\" — you (sing.).",
+    "i": "/tɛʃoː/"
+  },
+  {
+    "h": "közepén",
+    "e": "in the middle",
+    "m": "Spoken like \"közepén\".",
+    "i": "/køzɛpeːn/"
+  },
+  {
+    "h": "tudnom",
+    "e": "knows; can",
+    "m": "Spoken like \"toodnom\" — knows.",
+    "i": "/tudnom/"
+  },
+  {
+    "h": "üzlet",
+    "e": "business; shop",
+    "m": "Spoken like \"üzlet\".",
+    "i": "/yzlɛt/"
+  },
+  {
+    "h": "szeretnénk",
+    "e": "loves; likes",
+    "m": "Spoken like \"seretnénk\" — loves.",
+    "i": "/sɛrɛtneːnk/"
+  },
+  {
+    "h": "lehetsz",
+    "e": "down",
+    "m": "Spoken like \"lehets\" — down.",
+    "i": "/lɛhɛts/"
+  },
+  {
+    "h": "viccelsz",
+    "e": "are you joking",
+    "m": "Spoken like \"veeccels\".",
+    "i": "/vit͡sːɛls/"
+  },
+  {
+    "h": "vett",
+    "e": "he/she bought",
+    "m": "Spoken like \"vett\".",
+    "i": "/vɛtː/"
+  },
+  {
+    "h": "kapok",
+    "e": "I get",
+    "m": "Spoken like \"kapok\".",
+    "i": "/kɒpok/"
+  },
+  {
+    "h": "önök",
+    "e": "they (formal)",
+    "m": "Spoken like \"önök\".",
+    "i": "/ønøk/"
+  },
+  {
+    "h": "jane",
+    "e": "Jane",
+    "m": "Spoken like \"jane\".",
+    "i": "/jɒnɛ/"
+  },
+  {
+    "h": "üdvözlöm",
+    "e": "welcome (formal)",
+    "m": "Spoken like \"üdvözlöm\".",
+    "i": "/ydvøzløm/"
+  },
+  {
+    "h": "fejét",
+    "e": "head",
+    "m": "Spoken like \"fejét\" — head.",
+    "i": "/fɛjeːt/"
+  },
+  {
+    "h": "lévő",
+    "e": "being; located",
+    "m": "Spoken like \"lévő\".",
+    "i": "/leːvøː/"
+  },
+  {
+    "h": "szólt",
+    "e": "he/she spoke; called",
+    "m": "Spoken like \"sólt\".",
+    "i": "/soːlt/"
+  },
+  {
+    "h": "asszony",
+    "e": "woman; lady",
+    "m": "Spoken like \"assony\".",
+    "i": "/ɒsːoɲ/"
+  },
+  {
+    "h": "rész",
+    "e": "part",
+    "m": "Spoken like \"rés\".",
+    "i": "/reːs/"
+  },
+  {
+    "h": "papa",
+    "e": "dad",
+    "m": "Spoken like \"papa\".",
+    "i": "/pɒpɒ/"
+  },
+  {
+    "h": "katona",
+    "e": "soldier",
+    "m": "Spoken like \"katona\" — soldier.",
+    "i": "/kɒtonɒ/"
+  },
+  {
+    "h": "találtunk",
+    "e": "maybe",
+    "m": "Spoken like \"találtoonk\" — maybe.",
+    "i": "/tɒlaːltunk/"
+  },
+  {
+    "h": "szám",
+    "e": "number",
+    "m": "Spoken like \"sám\".",
+    "i": "/saːm/"
+  },
+  {
+    "h": "szívességet",
+    "e": "favor (acc.)",
+    "m": "Spoken like \"sívességet\".",
+    "i": "/siːvɛʃːeːɡɛt/"
+  },
+  {
+    "h": "főleg",
+    "e": "mainly",
+    "m": "Spoken like \"főleg\".",
+    "i": "/føːlɛɡ/"
+  },
+  {
+    "h": "tudna",
+    "e": "knows; can",
+    "m": "Spoken like \"toodna\" — knows.",
+    "i": "/tudnɒ/"
+  },
+  {
+    "h": "véletlenül",
+    "e": "accidentally",
+    "m": "Spoken like \"véletlenül\".",
+    "i": "/veːlɛtlɛnyl/"
+  },
+  {
+    "h": "megmondom",
+    "e": "still; yet",
+    "m": "Spoken like \"megmondom\" — still.",
+    "i": "/mɛɡmondom/"
+  },
+  {
+    "h": "hinni",
+    "e": "to believe",
+    "m": "Spoken like \"heennee\".",
+    "i": "/hinːi/"
+  },
+  {
+    "h": "elől",
+    "e": "from the front",
+    "m": "Spoken like \"elől\".",
+    "i": "/ɛløːl/"
+  },
+  {
+    "h": "bírom",
+    "e": "I can; I like it",
+    "m": "Spoken like \"bírom\".",
+    "i": "/biːrom/"
+  },
+  {
+    "h": "adom",
+    "e": "gives",
+    "m": "Spoken like \"adom\" — gives.",
+    "i": "/ɒdom/"
+  },
+  {
+    "h": "tartott",
+    "e": "held; lasted",
+    "m": "Spoken like \"tartott\".",
+    "i": "/tɒrtotː/"
+  },
+  {
+    "h": "klassz",
+    "e": "cool; great",
+    "m": "Spoken like \"klass\".",
+    "i": "/klɒsː/"
+  },
+  {
+    "h": "hátul",
+    "e": "at the back",
+    "m": "Spoken like \"hátool\".",
+    "i": "/haːtul/"
+  },
+  {
+    "h": "hallasz",
+    "e": "if",
+    "m": "Spoken like \"hallas\" — if.",
+    "i": "/hɒlːɒs/"
+  },
+  {
+    "h": "mely",
+    "e": "which",
+    "m": "Spoken like \"mey\".",
+    "i": "/mɛj/"
+  },
+  {
+    "h": "küldött",
+    "e": "sent; envoy",
+    "m": "Spoken like \"küldött\".",
+    "i": "/kyldøtː/"
+  },
+  {
+    "h": "zöld",
+    "e": "green",
+    "m": "Spoken like \"zöld\".",
+    "i": "/zøld/"
+  },
+  {
+    "h": "könyvet",
+    "e": "book (acc.)",
+    "m": "Spoken like \"könyvet\".",
+    "i": "/køɲvɛt/"
+  },
+  {
+    "h": "mentek",
+    "e": "went",
+    "m": "Spoken like \"mentek\" — went.",
+    "i": "/mɛntɛk/"
+  },
+  {
+    "h": "esélyt",
+    "e": "and",
+    "m": "Spoken like \"eséyt\" — and.",
+    "i": "/ɛʃeːjt/"
+  },
+  {
+    "h": "nevetséges",
+    "e": "don't",
+    "m": "Spoken like \"nevetséges\" — don't.",
+    "i": "/nɛvɛtʃeːɡɛʃ/"
+  },
+  {
+    "h": "veszi",
+    "e": "buys; takes",
+    "m": "Spoken like \"vesee\" — buys.",
+    "i": "/vɛsi/"
+  },
+  {
+    "h": "szobában",
+    "e": "word",
+    "m": "Spoken like \"sobában\" — word.",
+    "i": "/sobaːbɒn/"
+  },
+  {
+    "h": "amiben",
+    "e": "in which (relative)",
+    "m": "Spoken like \"ameeben\".",
+    "i": "/ɒmibɛn/"
+  },
+  {
+    "h": "ötletem",
+    "e": "my idea",
+    "m": "Spoken like \"ötletem\".",
+    "i": "/øtlɛtɛm/"
+  },
+  {
+    "h": "remekül",
+    "e": "excellently",
+    "m": "Spoken like \"remekül\".",
+    "i": "/rɛmɛkyl/"
+  },
+  {
+    "h": "nevet",
+    "e": "don't",
+    "m": "Spoken like \"nevet\" — don't.",
+    "i": "/nɛvɛt/"
+  },
+  {
+    "h": "hasonló",
+    "e": "if",
+    "m": "Spoken like \"hasonló\" — if.",
+    "i": "/hɒʃonloː/"
+  },
+  {
+    "h": "anélkül",
+    "e": "without it",
+    "m": "Spoken like \"anélkül\".",
+    "i": "/ɒneːlkyl/"
+  },
+  {
+    "h": "hete",
+    "e": "week; seven",
+    "m": "Spoken like \"hete\" — week.",
+    "i": "/hɛtɛ/"
+  },
+  {
+    "h": "hagy",
+    "e": "if",
+    "m": "Spoken like \"hady\" — if.",
+    "i": "/hɒɟ/"
+  },
+  {
+    "h": "esetben",
+    "e": "and",
+    "m": "Spoken like \"esetben\" — and.",
+    "i": "/ɛʃɛtbɛn/"
+  },
+  {
+    "h": "hiba",
+    "e": "mistake; error",
+    "m": "Spoken like \"heeba\".",
+    "i": "/hibɒ/"
+  },
+  {
+    "h": "orvosi",
+    "e": "doctor",
+    "m": "Spoken like \"orvosee\" — doctor.",
+    "i": "/orvoʃi/"
+  },
+  {
+    "h": "csupán",
+    "e": "merely; only",
+    "m": "Spoken like \"choopán\".",
+    "i": "/tʃupaːn/"
+  },
+  {
+    "h": "tetszett",
+    "e": "you (sing.)",
+    "m": "Spoken like \"tetsett\" — you (sing.).",
+    "i": "/tɛtsɛtː/"
+  },
+  {
+    "h": "pokolba",
+    "e": "to hell",
+    "m": "Spoken like \"pokolba\".",
+    "i": "/pokolbɒ/"
+  },
+  {
+    "h": "hívom",
+    "e": "I call him/her",
+    "m": "Spoken like \"hívom\".",
+    "i": "/hiːvom/"
+  },
+  {
+    "h": "nemsokára",
+    "e": "no; not",
+    "m": "Spoken like \"nemsokára\" — no.",
+    "i": "/nɛmʃokaːrɒ/"
+  },
+  {
+    "h": "baba",
+    "e": "baby",
+    "m": "Spoken like \"baba\".",
+    "i": "/bɒbɒ/"
+  },
+  {
+    "h": "önnel",
+    "e": "with you (formal)",
+    "m": "Spoken like \"önnel\".",
+    "i": "/ønːɛl/"
+  },
+  {
+    "h": "csináltad",
+    "e": "you did it",
+    "m": "Spoken like \"cheenáltad\".",
+    "i": "/tʃinaːltɒd/"
+  },
+  {
+    "h": "oly",
+    "e": "such",
+    "m": "Spoken like \"oy\".",
+    "i": "/oj/"
+  },
+  {
+    "h": "használni",
+    "e": "if",
+    "m": "Spoken like \"hasnálnee\" — if.",
+    "i": "/hɒsnaːlni/"
+  },
+  {
+    "h": "élek",
+    "e": "I live",
+    "m": "Spoken like \"élek\".",
+    "i": "/eːlɛk/"
+  },
+  {
+    "h": "gép",
+    "e": "machine; computer",
+    "m": "Spoken like \"gép\".",
+    "i": "/ɡeːp/"
+  },
+  {
+    "h": "lát",
+    "e": "sees",
+    "m": "Spoken like \"lát\".",
+    "i": "/laːt/"
+  },
+  {
+    "h": "munkám",
+    "e": "my work",
+    "m": "Spoken like \"moonkám\".",
+    "i": "/munkaːm/"
+  },
+  {
+    "h": "várni",
+    "e": "to wait",
+    "m": "Spoken like \"várnee\".",
+    "i": "/vaːrni/"
+  },
+  {
+    "h": "ostoba",
+    "e": "stupid",
+    "m": "Spoken like \"ostoba\".",
+    "i": "/oʃtobɒ/"
+  },
+  {
+    "h": "hozza",
+    "e": "snow",
+    "m": "Spoken like \"hozza\" — snow.",
+    "i": "/hozːɒ/"
+  },
+  {
+    "h": "során",
+    "e": "salt",
+    "m": "Spoken like \"során\" — salt.",
+    "i": "/ʃoraːn/"
+  },
+  {
+    "h": "miattad",
+    "e": "what; we",
+    "m": "Spoken like \"meeattad\" — what.",
+    "i": "/miɒtːɒd/"
+  },
+  {
+    "h": "amik",
+    "e": "which (relative, plural)",
+    "m": "Spoken like \"ameek\".",
+    "i": "/ɒmik/"
+  },
+  {
+    "h": "hű",
+    "e": "wow",
+    "m": "Spoken like \"hű\".",
+    "i": "/hyː/"
+  },
+  {
+    "h": "mik",
+    "e": "what; we",
+    "m": "Spoken like \"meek\" — what.",
+    "i": "/mik/"
+  },
+  {
+    "h": "mehetünk",
+    "e": "we can go",
+    "m": "Spoken like \"mehetünk\".",
+    "i": "/mɛhɛtynk/"
+  },
+  {
+    "h": "önöket",
+    "e": "you (formal, plural, acc.)",
+    "m": "Spoken like \"önöket\".",
+    "i": "/ønøkɛt/"
+  },
+  {
+    "h": "jártam",
+    "e": "I visited; I walked",
+    "m": "Spoken like \"jártam\".",
+    "i": "/jaːrtɒm/"
+  },
+  {
+    "h": "évet",
+    "e": "year (acc.)",
+    "m": "Spoken like \"évet\".",
+    "i": "/eːvɛt/"
+  },
+  {
+    "h": "visszajövök",
+    "e": "I'll come back",
+    "m": "Spoken like \"veessajövök\".",
+    "i": "/visːɒjøvøk/"
+  },
+  {
+    "h": "miben",
+    "e": "what; we",
+    "m": "Spoken like \"meeben\" — what.",
+    "i": "/mibɛn/"
+  },
+  {
+    "h": "vártam",
+    "e": "I waited",
+    "m": "Spoken like \"vártam\".",
+    "i": "/vaːrtɒm/"
+  },
+  {
+    "h": "bizonyíték",
+    "e": "evidence",
+    "m": "Spoken like \"beezonyíték\".",
+    "i": "/bizoɲiːteːk/"
+  },
+  {
+    "h": "akarjuk",
+    "e": "we want it",
+    "m": "Spoken like \"akarjook\".",
+    "i": "/ɒkɒrjuk/"
+  },
+  {
+    "h": "délután",
+    "e": "afternoon",
+    "m": "Spoken like \"délootán\".",
+    "i": "/deːlutaːn/"
+  },
+  {
+    "h": "ismerek",
+    "e": "also; too",
+    "m": "Spoken like \"eesmerek\" — also.",
+    "i": "/iʃmɛrɛk/"
+  },
+  {
+    "h": "barát",
+    "e": "friend",
+    "m": "Spoken like \"barát\".",
+    "i": "/bɒraːt/"
+  },
+  {
+    "h": "egyszerre",
+    "e": "one; a",
+    "m": "Spoken like \"edyserre\" — one.",
+    "i": "/ɛɟsɛrːɛ/"
+  },
+  {
+    "h": "válasz",
+    "e": "answer",
+    "m": "Spoken like \"válas\".",
+    "i": "/vaːlɒs/"
+  },
+  {
+    "h": "kurvára",
+    "e": "fucking (intensifier)",
+    "m": "Spoken like \"koorvára\".",
+    "i": "/kurvaːrɒ/"
+  },
+  {
+    "h": "tartom",
+    "e": "I hold",
+    "m": "Spoken like \"tartom\".",
+    "i": "/tɒrtom/"
+  },
+  {
+    "h": "rövid",
+    "e": "short",
+    "m": "Spoken like \"röveed\".",
+    "i": "/røvid/"
+  },
+  {
+    "h": "próbálok",
+    "e": "I try",
+    "m": "Spoken like \"próbálok\".",
+    "i": "/proːbaːlok/"
+  },
+  {
+    "h": "hamar",
+    "e": "if",
+    "m": "Spoken like \"hamar\" — if.",
+    "i": "/hɒmɒr/"
+  },
+  {
+    "h": "szerelmére",
+    "e": "for love's sake",
+    "m": "Spoken like \"serelmére\".",
+    "i": "/sɛrɛlmeːrɛ/"
+  },
+  {
+    "h": "mekkora",
+    "e": "how big",
+    "m": "Spoken like \"mekkora\".",
+    "i": "/mɛkːorɒ/"
+  },
+  {
+    "h": "megtalálni",
+    "e": "still; yet",
+    "m": "Spoken like \"megtalálnee\" — still.",
+    "i": "/mɛɡtɒlaːlni/"
+  },
+  {
+    "h": "istennek",
+    "e": "also; too",
+    "m": "Spoken like \"eestennek\" — also.",
+    "i": "/iʃtɛnːɛk/"
+  },
+  {
+    "h": "találtak",
+    "e": "maybe",
+    "m": "Spoken like \"találtak\" — maybe.",
+    "i": "/tɒlaːltɒk/"
+  },
+  {
+    "h": "szemed",
+    "e": "eye",
+    "m": "Spoken like \"semed\" — eye.",
+    "i": "/sɛmɛd/"
+  },
+  {
+    "h": "félsz",
+    "e": "are you afraid",
+    "m": "Spoken like \"féls\".",
+    "i": "/feːls/"
+  },
+  {
+    "h": "kérni",
+    "e": "to ask for",
+    "m": "Spoken like \"kérnee\".",
+    "i": "/keːrni/"
+  },
+  {
+    "h": "ügyes",
+    "e": "clever; skillful",
+    "m": "Spoken like \"üdyes\".",
+    "i": "/yɟɛʃ/"
+  },
+  {
+    "h": "bennünket",
+    "e": "into; in",
+    "m": "Spoken like \"bennünket\" — into.",
+    "i": "/bɛnːynkɛt/"
+  },
+  {
+    "h": "előző",
+    "e": "previous",
+    "m": "Spoken like \"előző\".",
+    "i": "/ɛløːzøː/"
+  },
+  {
+    "h": "tetted",
+    "e": "you (sing.)",
+    "m": "Spoken like \"tetted\" — you (sing.).",
+    "i": "/tɛtːɛd/"
+  },
+  {
+    "h": "felség",
+    "e": "up",
+    "m": "Spoken like \"felség\" — up.",
+    "i": "/fɛlʃeːɡ/"
+  },
+  {
+    "h": "vált",
+    "e": "changes",
+    "m": "Spoken like \"vált\".",
+    "i": "/vaːlt/"
+  },
+  {
+    "h": "időre",
+    "e": "on time",
+    "m": "Spoken like \"eedőre\".",
+    "i": "/idøːrɛ/"
+  },
+  {
+    "h": "segítsek",
+    "e": "let me help",
+    "m": "Spoken like \"segítsek\".",
+    "i": "/ʃɛɡiːtʃɛk/"
+  },
+  {
+    "h": "barátaim",
+    "e": "my friends",
+    "m": "Spoken like \"barátaeem\".",
+    "i": "/bɒraːtɒim/"
+  },
+  {
+    "h": "megnézem",
+    "e": "still; yet",
+    "m": "Spoken like \"megnézem\" — still.",
+    "i": "/mɛɡneːzɛm/"
+  },
+  {
+    "h": "hogyhogy",
+    "e": "that; how",
+    "m": "Spoken like \"hodyhody\" — that.",
+    "i": "/hoɟhoɟ/"
+  },
+  {
+    "h": "menned",
+    "e": "you have to go",
+    "m": "Spoken like \"menned\".",
+    "i": "/mɛnːɛd/"
+  },
+  {
+    "h": "akarlak",
+    "e": "I want you",
+    "m": "Spoken like \"akarlak\".",
+    "i": "/ɒkɒrlɒk/"
+  },
+  {
+    "h": "ideges",
+    "e": "nervous",
+    "m": "Spoken like \"eedeges\".",
+    "i": "/idɛɡɛʃ/"
+  },
+  {
+    "h": "azelőtt",
+    "e": "the; that",
+    "m": "Spoken like \"azelőtt\" — the.",
+    "i": "/ɒzɛløːtː/"
+  },
+  {
+    "h": "kértem",
+    "e": "I asked for",
+    "m": "Spoken like \"kértem\".",
+    "i": "/keːrtɛm/"
+  },
+  {
+    "h": "hátha",
+    "e": "maybe; perhaps",
+    "m": "Spoken like \"hátha\".",
+    "i": "/haːthɒ/"
+  },
+  {
+    "h": "ribanc",
+    "e": "bitch",
+    "m": "Spoken like \"reebanc\".",
+    "i": "/ribɒnt͡s/"
+  },
+  {
+    "h": "buli",
+    "e": "party",
+    "m": "Spoken like \"boolee\".",
+    "i": "/buli/"
+  },
+  {
+    "h": "zsaruk",
+    "e": "cops",
+    "m": "Spoken like \"zharook\".",
+    "i": "/ʒɒruk/"
+  },
+  {
+    "h": "értek",
+    "e": "I understand",
+    "m": "Spoken like \"értek\".",
+    "i": "/eːrtɛk/"
+  },
+  {
+    "h": "segítséget",
+    "e": "help (acc.)",
+    "m": "Spoken like \"segítséget\".",
+    "i": "/ʃɛɡiːtʃeːɡɛt/"
+  },
+  {
+    "h": "várjatok",
+    "e": "wait (plural)",
+    "m": "Spoken like \"várjatok\".",
+    "i": "/vaːrjɒtok/"
+  },
+  {
+    "h": "várok",
+    "e": "I wait",
+    "m": "Spoken like \"várok\".",
+    "i": "/vaːrok/"
+  },
+  {
+    "h": "telefont",
+    "e": "you (sing.)",
+    "m": "Spoken like \"telefont\" — you (sing.).",
+    "i": "/tɛlɛfont/"
+  },
+  {
+    "h": "érdekli",
+    "e": "interests him/her",
+    "m": "Spoken like \"érdeklee\".",
+    "i": "/eːrdɛkli/"
+  },
+  {
+    "h": "lenned",
+    "e": "down",
+    "m": "Spoken like \"lenned\" — down.",
+    "i": "/lɛnːɛd/"
+  },
+  {
+    "h": "elmenni",
+    "e": "to leave; to go away",
+    "m": "Spoken like \"elmennee\".",
+    "i": "/ɛlmɛnːi/"
+  },
+  {
+    "h": "elmegyünk",
+    "e": "we'll go",
+    "m": "Spoken like \"elmedyünk\".",
+    "i": "/ɛlmɛɟynk/"
+  },
+  {
+    "h": "elfelejtettem",
+    "e": "I forgot",
+    "m": "Spoken like \"elfelejtettem\".",
+    "i": "/ɛlfɛlɛjtɛtːɛm/"
+  },
+  {
+    "h": "némi",
+    "e": "some",
+    "m": "Spoken like \"némee\".",
+    "i": "/neːmi/"
+  },
+  {
+    "h": "fáradt",
+    "e": "tired",
+    "m": "Spoken like \"fáradt\".",
+    "i": "/faːrɒdt/"
+  },
+  {
+    "h": "indul",
+    "e": "starts; departs",
+    "m": "Spoken like \"eendool\".",
+    "i": "/indul/"
+  },
+  {
+    "h": "csináljak",
+    "e": "should I do",
+    "m": "Spoken like \"cheenáljak\".",
+    "i": "/tʃinaːljɒk/"
+  },
+  {
+    "h": "tudnék",
+    "e": "knows; can",
+    "m": "Spoken like \"toodnék\" — knows.",
+    "i": "/tudneːk/"
+  },
+  {
+    "h": "amilyen",
+    "e": "such as",
+    "m": "Spoken like \"ameeyen\".",
+    "i": "/ɒmijɛn/"
+  },
+  {
+    "h": "keményen",
+    "e": "hard (adverbial)",
+    "m": "Spoken like \"keményen\".",
+    "i": "/kɛmeːɲɛn/"
+  },
+  {
+    "h": "láttalak",
+    "e": "I saw you",
+    "m": "Spoken like \"láttalak\".",
+    "i": "/laːtːɒlɒk/"
+  },
+  {
+    "h": "veletek",
+    "e": "with you (plural)",
+    "m": "Spoken like \"veletek\".",
+    "i": "/vɛlɛtɛk/"
+  },
+  {
+    "h": "érzek",
+    "e": "I feel",
+    "m": "Spoken like \"érzek\".",
+    "i": "/eːrzɛk/"
+  },
+  {
+    "h": "újság",
+    "e": "newspaper",
+    "m": "Spoken like \"újság\".",
+    "i": "/uːjʃaːɡ/"
+  },
+  {
+    "h": "film",
+    "e": "movie",
+    "m": "Spoken like \"feelm\" — movie.",
+    "i": "/film/"
+  },
+  {
+    "h": "láttál",
+    "e": "you saw",
+    "m": "Spoken like \"láttál\".",
+    "i": "/laːtːaːl/"
+  },
+  {
+    "h": "által",
+    "e": "by (through)",
+    "m": "Spoken like \"által\".",
+    "i": "/aːltɒl/"
+  },
+  {
+    "h": "helyett",
+    "e": "instead of",
+    "m": "Spoken like \"heyett\" — instead of.",
+    "i": "/hɛjɛtː/"
+  },
+  {
+    "h": "sziasztok",
+    "e": "hi (plural)",
+    "m": "Spoken like \"seeastok\".",
+    "i": "/siɒstok/"
+  },
+  {
+    "h": "helyi",
+    "e": "local",
+    "m": "Spoken like \"heyee\".",
+    "i": "/hɛji/"
+  },
+  {
+    "h": "örömmel",
+    "e": "with pleasure",
+    "m": "Spoken like \"örömmel\".",
+    "i": "/ørømːɛl/"
+  },
+  {
+    "h": "pete",
+    "e": "Pete",
+    "m": "Spoken like \"pete\".",
+    "i": "/pɛtɛ/"
+  },
+  {
+    "h": "börtönben",
+    "e": "in prison",
+    "m": "Spoken like \"börtönben\".",
+    "i": "/børtønbɛn/"
+  },
+  {
+    "h": "száz",
+    "e": "hundred",
+    "m": "Spoken like \"sáz\".",
+    "i": "/saːz/"
+  },
+  {
+    "h": "élő",
+    "e": "living",
+    "m": "Spoken like \"élő\".",
+    "i": "/eːløː/"
+  },
+  {
+    "h": "vinni",
+    "e": "to carry; to take",
+    "m": "Spoken like \"veennee\".",
+    "i": "/vinːi/"
+  },
+  {
+    "h": "csoda",
+    "e": "miracle",
+    "m": "Spoken like \"choda\".",
+    "i": "/tʃodɒ/"
+  },
+  {
+    "h": "kellemes",
+    "e": "must; is needed",
+    "m": "Spoken like \"kellemes\" — must.",
+    "i": "/kɛlːɛmɛʃ/"
+  },
+  {
+    "h": "tartsa",
+    "e": "hold it (formal)",
+    "m": "Spoken like \"tartsa\".",
+    "i": "/tɒrtʃɒ/"
+  },
+  {
+    "h": "végeztem",
+    "e": "I finished",
+    "m": "Spoken like \"végeztem\".",
+    "i": "/veːɡɛztɛm/"
+  },
+  {
+    "h": "halni",
+    "e": "if",
+    "m": "Spoken like \"halnee\" — if.",
+    "i": "/hɒlni/"
+  },
+  {
+    "h": "teszek",
+    "e": "you (sing.)",
+    "m": "Spoken like \"tesek\" — you (sing.).",
+    "i": "/tɛsɛk/"
+  },
+  {
+    "h": "olvastam",
+    "e": "reads",
+    "m": "Spoken like \"olvastam\" — reads.",
+    "i": "/olvɒʃtɒm/"
+  },
+  {
+    "h": "kép",
+    "e": "picture; image",
+    "m": "Spoken like \"kép\".",
+    "i": "/keːp/"
+  },
+  {
+    "h": "fogva",
+    "e": "tooth",
+    "m": "Spoken like \"fogva\" — tooth.",
+    "i": "/foɡvɒ/"
+  },
+  {
+    "h": "jöhet",
+    "e": "may come",
+    "m": "Spoken like \"jöhet\".",
+    "i": "/jøhɛt/"
+  },
+  {
+    "h": "csinálnak",
+    "e": "they do",
+    "m": "Spoken like \"cheenálnak\".",
+    "i": "/tʃinaːlnɒk/"
+  },
+  {
+    "h": "felett",
+    "e": "up",
+    "m": "Spoken like \"felett\" — up.",
+    "i": "/fɛlɛtː/"
+  },
+  {
+    "h": "megölték",
+    "e": "still; yet",
+    "m": "Spoken like \"megölték\" — still.",
+    "i": "/mɛɡølteːk/"
+  },
+  {
+    "h": "filmet",
+    "e": "movie",
+    "m": "Spoken like \"feelmet\" — movie.",
+    "i": "/filmɛt/"
+  },
+  {
+    "h": "utcán",
+    "e": "road; way",
+    "m": "Spoken like \"ootcán\" — road.",
+    "i": "/utt͡saːn/"
+  },
+  {
+    "h": "pasi",
+    "e": "guy; boyfriend",
+    "m": "Spoken like \"pasee\".",
+    "i": "/pɒʃi/"
+  },
+  {
+    "h": "rohadék",
+    "e": "bastard",
+    "m": "Spoken like \"rohadék\".",
+    "i": "/rohɒdeːk/"
+  },
+  {
+    "h": "segített",
+    "e": "he/she helped",
+    "m": "Spoken like \"segített\".",
+    "i": "/ʃɛɡiːtɛtː/"
+  },
+  {
+    "h": "meglepetés",
+    "e": "still; yet",
+    "m": "Spoken like \"meglepetés\" — still.",
+    "i": "/mɛɡlɛpɛteːʃ/"
+  },
+  {
+    "h": "pillanatra",
+    "e": "for a moment",
+    "m": "Spoken like \"peellanatra\".",
+    "i": "/pilːɒnɒtrɒ/"
+  },
+  {
+    "h": "tuti",
+    "e": "sure thing",
+    "m": "Spoken like \"tootee\".",
+    "i": "/tuti/"
+  },
+  {
+    "h": "kórházban",
+    "e": "in hospital",
+    "m": "Spoken like \"kórházban\".",
+    "i": "/koːrhaːzbɒn/"
+  },
+  {
+    "h": "keresek",
+    "e": "asks; requests",
+    "m": "Spoken like \"keresek\" — asks.",
+    "i": "/kɛrɛʃɛk/"
+  },
+  {
+    "h": "nézzen",
+    "e": "look (formal)",
+    "m": "Spoken like \"nézzen\".",
+    "i": "/neːzːɛn/"
+  },
+  {
+    "h": "számodra",
+    "e": "for you",
+    "m": "Spoken like \"sámodra\".",
+    "i": "/saːmodrɒ/"
+  },
+  {
+    "h": "professzor",
+    "e": "professor",
+    "m": "Spoken like \"professor\".",
+    "i": "/profɛsːor/"
+  },
+  {
+    "h": "gazdag",
+    "e": "rich",
+    "m": "Spoken like \"gazdag\".",
+    "i": "/ɡɒzdɒɡ/"
+  },
+  {
+    "h": "jelenleg",
+    "e": "currently",
+    "m": "Spoken like \"jelenleg\".",
+    "i": "/jɛlɛnlɛɡ/"
+  },
+  {
+    "h": "embereknek",
+    "e": "person",
+    "m": "Spoken like \"embereknek\" — person.",
+    "i": "/ɛmbɛrɛknɛk/"
+  },
+  {
+    "h": "sőt",
+    "e": "moreover",
+    "m": "Spoken like \"sőt\".",
+    "i": "/ʃøːt/"
+  },
+  {
+    "h": "tudnád",
+    "e": "knows; can",
+    "m": "Spoken like \"toodnád\" — knows.",
+    "i": "/tudnaːd/"
+  },
+  {
+    "h": "hagyott",
+    "e": "if",
+    "m": "Spoken like \"hadyott\" — if.",
+    "i": "/hɒɟotː/"
+  },
+  {
+    "h": "gyenge",
+    "e": "weak",
+    "m": "Spoken like \"dyenge\" — weak.",
+    "i": "/ɟɛnɡɛ/"
+  },
+  {
+    "h": "férfiak",
+    "e": "men",
+    "m": "Spoken like \"férfeeak\".",
+    "i": "/feːrfiɒk/"
+  },
+  {
+    "h": "rendszer",
+    "e": "system",
+    "m": "Spoken like \"rendser\".",
+    "i": "/rɛndsɛr/"
+  },
+  {
+    "h": "örvendek",
+    "e": "I'm glad",
+    "m": "Spoken like \"örvendek\".",
+    "i": "/ørvɛndɛk/"
+  },
+  {
+    "h": "rosszat",
+    "e": "bad",
+    "m": "Spoken like \"rossat\" — bad.",
+    "i": "/rosːɒt/"
+  },
+  {
+    "h": "írta",
+    "e": "he/she wrote",
+    "m": "Spoken like \"írta\".",
+    "i": "/iːrtɒ/"
+  },
+  {
+    "h": "próbálom",
+    "e": "I try",
+    "m": "Spoken like \"próbálom\".",
+    "i": "/proːbaːlom/"
+  },
+  {
+    "h": "testvér",
+    "e": "you (sing.)",
+    "m": "Spoken like \"testvér\" — you (sing.).",
+    "i": "/tɛʃtveːr/"
+  },
+  {
+    "h": "katonai",
+    "e": "soldier",
+    "m": "Spoken like \"katonaee\" — soldier.",
+    "i": "/kɒtonɒi/"
+  },
+  {
+    "h": "dolgozol",
+    "e": "you work",
+    "m": "Spoken like \"dolgozol\".",
+    "i": "/dolɡozol/"
+  },
+  {
+    "h": "fuss",
+    "e": "grass",
+    "m": "Spoken like \"fooss\" — grass.",
+    "i": "/fuʃː/"
+  },
+  {
+    "h": "tűnj",
+    "e": "disappear (imperative)",
+    "m": "Spoken like \"tűnj\".",
+    "i": "/tyːnj/"
+  },
+  {
+    "h": "kapcsolat",
+    "e": "connection; relationship",
+    "m": "Spoken like \"kapcholat\".",
+    "i": "/kɒptʃolɒt/"
+  },
+  {
+    "h": "kórházba",
+    "e": "to hospital",
+    "m": "Spoken like \"kórházba\".",
+    "i": "/koːrhaːzbɒ/"
+  },
+  {
+    "h": "szex",
+    "e": "sex",
+    "m": "Spoken like \"sex\".",
+    "i": "/sɛks/"
+  },
+  {
+    "h": "családom",
+    "e": "my family",
+    "m": "Spoken like \"chaládom\".",
+    "i": "/tʃɒlaːdom/"
+  },
+  {
+    "h": "ellenére",
+    "e": "against",
+    "m": "Spoken like \"ellenére\" — against.",
+    "i": "/ɛlːɛneːrɛ/"
+  },
+  {
+    "h": "meglátjuk",
+    "e": "still; yet",
+    "m": "Spoken like \"meglátjook\" — still.",
+    "i": "/mɛɡlaːtjuk/"
+  },
+  {
+    "h": "született",
+    "e": "was born",
+    "m": "Spoken like \"sületett\".",
+    "i": "/sylɛtɛtː/"
+  },
+  {
+    "h": "vacsora",
+    "e": "dinner",
+    "m": "Spoken like \"vachora\".",
+    "i": "/vɒtʃorɒ/"
+  },
+  {
+    "h": "mindenhol",
+    "e": "what; we",
+    "m": "Spoken like \"meendenhol\" — what.",
+    "i": "/mindɛnhol/"
+  },
+  {
+    "h": "igazságot",
+    "e": "true",
+    "m": "Spoken like \"eegazhágot\" — true.",
+    "i": "/iɡɒʒaːɡot/"
+  },
+  {
+    "h": "kormány",
+    "e": "stone",
+    "m": "Spoken like \"kormány\" — stone.",
+    "i": "/kormaːɲ/"
+  },
+  {
+    "h": "apró",
+    "e": "tiny",
+    "m": "Spoken like \"apró\".",
+    "i": "/ɒproː/"
+  },
+  {
+    "h": "mark",
+    "e": "already",
+    "m": "Spoken like \"mark\" — already.",
+    "i": "/mɒrk/"
+  },
+  {
+    "h": "veszem",
+    "e": "buys; takes",
+    "m": "Spoken like \"vesem\" — buys.",
+    "i": "/vɛsɛm/"
+  },
+  {
+    "h": "állnak",
+    "e": "they stand",
+    "m": "Spoken like \"állnak\".",
+    "i": "/aːlːnɒk/"
+  },
+  {
+    "h": "autó",
+    "e": "car",
+    "m": "Spoken like \"aootó\".",
+    "i": "/ɒutoː/"
+  },
+  {
+    "h": "életbe",
+    "e": "into life",
+    "m": "Spoken like \"életbe\".",
+    "i": "/eːlɛtbɛ/"
+  },
+  {
+    "h": "idegen",
+    "e": "stranger; foreign",
+    "m": "Spoken like \"eedegen\".",
+    "i": "/idɛɡɛn/"
+  },
+  {
+    "h": "francia",
+    "e": "French",
+    "m": "Spoken like \"franceea\" — French.",
+    "i": "/frɒnt͡siɒ/"
+  },
+  {
+    "h": "eljön",
+    "e": "he/she comes",
+    "m": "Spoken like \"eljön\".",
+    "i": "/ɛljøn/"
+  },
+  {
+    "h": "hiszik",
+    "e": "they believe",
+    "m": "Spoken like \"heeseek\".",
+    "i": "/hisik/"
+  },
+  {
+    "h": "halálra",
+    "e": "if",
+    "m": "Spoken like \"halálra\" — if.",
+    "i": "/hɒlaːlrɒ/"
+  },
+  {
+    "h": "híres",
+    "e": "famous",
+    "m": "Spoken like \"híres\".",
+    "i": "/hiːrɛʃ/"
+  },
+  {
+    "h": "no",
+    "e": "woman; grows",
+    "m": "Spoken like \"no\" — woman.",
+    "i": "/no/"
+  },
+  {
+    "h": "gyerekeket",
+    "e": "child",
+    "m": "Spoken like \"dyerekeket\" — child.",
+    "i": "/ɟɛrɛkɛkɛt/"
+  },
+  {
+    "h": "családi",
+    "e": "family (adjective)",
+    "m": "Spoken like \"chaládee\".",
+    "i": "/tʃɒlaːdi/"
+  },
+  {
+    "h": "engedj",
+    "e": "I",
+    "m": "Spoken like \"engedj\" — I.",
+    "i": "/ɛnɡɛdj/"
+  },
+  {
+    "h": "különösen",
+    "e": "especially",
+    "m": "Spoken like \"különösen\".",
+    "i": "/kylønøʃɛn/"
+  },
+  {
+    "h": "jel",
+    "e": "sign",
+    "m": "Spoken like \"jel\".",
+    "i": "/jɛl/"
+  },
+  {
+    "h": "húzd",
+    "e": "pull (imperative)",
+    "m": "Spoken like \"húzd\".",
+    "i": "/huːzd/"
+  },
+  {
+    "h": "hátsó",
+    "e": "back; rear",
+    "m": "Spoken like \"hátsó\".",
+    "i": "/haːtʃoː/"
+  },
+  {
+    "h": "szoba",
+    "e": "room",
+    "m": "Spoken like \"soba\" — room.",
+    "i": "/sobɒ/"
+  },
+  {
+    "h": "mihez",
+    "e": "what; we",
+    "m": "Spoken like \"meehez\" — what.",
+    "i": "/mihɛz/"
+  },
+  {
+    "h": "miattam",
+    "e": "what; we",
+    "m": "Spoken like \"meeattam\" — what.",
+    "i": "/miɒtːɒm/"
+  },
+  {
+    "h": "köztünk",
+    "e": "between us",
+    "m": "Spoken like \"köztünk\".",
+    "i": "/køztynk/"
+  },
+  {
+    "h": "alkalommal",
+    "e": "on an occasion",
+    "m": "Spoken like \"alkalommal\".",
+    "i": "/ɒlkɒlomːɒl/"
+  },
+  {
+    "h": "további",
+    "e": "lake",
+    "m": "Spoken like \"továbbee\" — lake.",
+    "i": "/tovaːbːi/"
+  },
+  {
+    "h": "bántani",
+    "e": "to hurt",
+    "m": "Spoken like \"bántanee\".",
+    "i": "/baːntɒni/"
+  },
+  {
+    "h": "ördög",
+    "e": "devil",
+    "m": "Spoken like \"ördög\".",
+    "i": "/ørdøɡ/"
+  },
+  {
+    "h": "akartok",
+    "e": "you (plural) want",
+    "m": "Spoken like \"akartok\".",
+    "i": "/ɒkɒrtok/"
+  },
+  {
+    "h": "forró",
+    "e": "hot",
+    "m": "Spoken like \"forró\".",
+    "i": "/forːoː/"
+  },
+  {
+    "h": "miatta",
+    "e": "what; we",
+    "m": "Spoken like \"meeatta\" — what.",
+    "i": "/miɒtːɒ/"
+  },
+  {
+    "h": "tegyek",
+    "e": "you (sing.)",
+    "m": "Spoken like \"tedyek\" — you (sing.).",
+    "i": "/tɛɟɛk/"
+  },
+  {
+    "h": "könyv",
+    "e": "book",
+    "m": "Spoken like \"könyv\".",
+    "i": "/køɲv/"
+  },
+  {
+    "h": "üljön",
+    "e": "let him/her sit",
+    "m": "Spoken like \"üljön\".",
+    "i": "/yljøn/"
+  },
+  {
+    "h": "aminek",
+    "e": "which (relative, dative)",
+    "m": "Spoken like \"ameenek\".",
+    "i": "/ɒminɛk/"
+  },
+  {
+    "h": "bajban",
+    "e": "in trouble",
+    "m": "Spoken like \"bajban\".",
+    "i": "/bɒjbɒn/"
+  },
+  {
+    "h": "előtte",
+    "e": "before it; in front of it",
+    "m": "Spoken like \"előtte\".",
+    "i": "/ɛløːtːɛ/"
+  },
+  {
+    "h": "nézett",
+    "e": "he/she looked",
+    "m": "Spoken like \"nézett\".",
+    "i": "/neːzɛtː/"
+  },
+  {
+    "h": "tied",
+    "e": "yours",
+    "m": "Spoken like \"teeed\".",
+    "i": "/tiɛd/"
+  },
+  {
+    "h": "ország",
+    "e": "country",
+    "m": "Spoken like \"orság\".",
+    "i": "/orsaːɡ/"
+  },
+  {
+    "h": "hajót",
+    "e": "if",
+    "m": "Spoken like \"hajót\" — if.",
+    "i": "/hɒjoːt/"
+  },
+  {
+    "h": "legalábbis",
+    "e": "down",
+    "m": "Spoken like \"legalábbees\" — down.",
+    "i": "/lɛɡɒlaːbːiʃ/"
+  },
+  {
+    "h": "magától",
+    "e": "today",
+    "m": "Spoken like \"magától\" — today.",
+    "i": "/mɒɡaːtoːl/"
+  },
+  {
+    "h": "legfontosabb",
+    "e": "down",
+    "m": "Spoken like \"legfontosabb\" — down.",
+    "i": "/lɛɡfontoʃɒbː/"
+  },
+  {
+    "h": "csinálj",
+    "e": "do (imperative)",
+    "m": "Spoken like \"cheenálj\".",
+    "i": "/tʃinaːlj/"
+  },
+  {
+    "h": "sört",
+    "e": "beer (acc.)",
+    "m": "Spoken like \"sört\".",
+    "i": "/ʃørt/"
+  },
+  {
+    "h": "mitől",
+    "e": "what; we",
+    "m": "Spoken like \"meetől\" — what.",
+    "i": "/mitøːl/"
+  },
+  {
+    "h": "börtönbe",
+    "e": "to prison",
+    "m": "Spoken like \"börtönbe\".",
+    "i": "/børtønbɛ/"
+  },
+  {
+    "h": "ingyen",
+    "e": "shirt",
+    "m": "Spoken like \"eendyen\" — shirt.",
+    "i": "/inɟɛn/"
+  },
+  {
+    "h": "mérges",
+    "e": "angry",
+    "m": "Spoken like \"mérges\".",
+    "i": "/meːrɡɛʃ/"
+  },
+  {
+    "h": "személyesen",
+    "e": "eye",
+    "m": "Spoken like \"seméyesen\" — eye.",
+    "i": "/sɛmeːjɛʃɛn/"
+  },
+  {
+    "h": "friss",
+    "e": "fresh",
+    "m": "Spoken like \"freess\".",
+    "i": "/friʃː/"
+  },
+  {
+    "h": "menjenek",
+    "e": "let them go",
+    "m": "Spoken like \"menjenek\".",
+    "i": "/mɛnjɛnɛk/"
+  },
+  {
+    "h": "kért",
+    "e": "he/she asked for",
+    "m": "Spoken like \"kért\".",
+    "i": "/keːrt/"
+  },
+  {
+    "h": "mért",
+    "e": "why",
+    "m": "Spoken like \"mért\".",
+    "i": "/meːrt/"
+  },
+  {
+    "h": "szabadon",
+    "e": "freely",
+    "m": "Spoken like \"sabadon\".",
+    "i": "/sɒbɒdon/"
+  },
+  {
+    "h": "érkezett",
+    "e": "he/she arrived",
+    "m": "Spoken like \"érkezett\".",
+    "i": "/eːrkɛzɛtː/"
+  },
+  {
+    "h": "hős",
+    "e": "hero",
+    "m": "Spoken like \"hős\".",
+    "i": "/høːʃ/"
+  },
+  {
+    "h": "bizonyára",
+    "e": "surely",
+    "m": "Spoken like \"beezonyára\".",
+    "i": "/bizoɲaːrɒ/"
+  },
+  {
+    "h": "beszéltünk",
+    "e": "into; in",
+    "m": "Spoken like \"beséltünk\" — into.",
+    "i": "/bɛseːltynk/"
+  },
+  {
+    "h": "hibát",
+    "e": "mistake (acc.)",
+    "m": "Spoken like \"heebát\".",
+    "i": "/hibaːt/"
+  },
+  {
+    "h": "tudnál",
+    "e": "knows; can",
+    "m": "Spoken like \"toodnál\" — knows.",
+    "i": "/tudnaːl/"
+  },
+  {
+    "h": "darab",
+    "e": "piece",
+    "m": "Spoken like \"darab\" — piece.",
+    "i": "/dɒrɒb/"
+  },
+  {
+    "h": "pénzem",
+    "e": "my money",
+    "m": "Spoken like \"pénzem\".",
+    "i": "/peːnzɛm/"
+  },
+  {
+    "h": "férfit",
+    "e": "man (acc.)",
+    "m": "Spoken like \"férfeet\".",
+    "i": "/feːrfit/"
+  },
+  {
+    "h": "élve",
+    "e": "alive",
+    "m": "Spoken like \"élve\".",
+    "i": "/eːlvɛ/"
+  },
+  {
+    "h": "zene",
+    "e": "music",
+    "m": "Spoken like \"zene\" — music.",
+    "i": "/zɛnɛ/"
+  },
+  {
+    "h": "kisasszony",
+    "e": "who; out",
+    "m": "Spoken like \"keesassony\" — who.",
+    "i": "/kiʃɒsːoɲ/"
+  },
+  {
+    "h": "valamire",
+    "e": "onto something",
+    "m": "Spoken like \"valameere\".",
+    "i": "/vɒlɒmirɛ/"
+  },
+  {
+    "h": "várost",
+    "e": "city (acc.)",
+    "m": "Spoken like \"várost\".",
+    "i": "/vaːroʃt/"
+  },
+  {
+    "h": "illeti",
+    "e": "concerns; is entitled",
+    "m": "Spoken like \"eelletee\".",
+    "i": "/ilːɛti/"
+  },
+  {
+    "h": "állni",
+    "e": "to stand",
+    "m": "Spoken like \"állnee\".",
+    "i": "/aːlːni/"
+  },
+  {
+    "h": "részeg",
+    "e": "drunk",
+    "m": "Spoken like \"réseg\".",
+    "i": "/reːsɛɡ/"
+  },
+  {
+    "h": "szólok",
+    "e": "I'll call; I speak",
+    "m": "Spoken like \"sólok\".",
+    "i": "/soːlok/"
+  },
+  {
+    "h": "tartunk",
+    "e": "we hold; we are at",
+    "m": "Spoken like \"tartoonk\".",
+    "i": "/tɒrtunk/"
+  },
+  {
+    "h": "ismertem",
+    "e": "also; too",
+    "m": "Spoken like \"eesmertem\" — also.",
+    "i": "/iʃmɛrtɛm/"
+  },
+  {
+    "h": "halála",
+    "e": "if",
+    "m": "Spoken like \"halála\" — if.",
+    "i": "/hɒlaːlɒ/"
+  },
+  {
+    "h": "egymás",
+    "e": "one; a",
+    "m": "Spoken like \"edymás\" — one.",
+    "i": "/ɛɟmaːʃ/"
+  },
+  {
+    "h": "bácsi",
+    "e": "uncle; old man",
+    "m": "Spoken like \"báchee\".",
+    "i": "/baːtʃi/"
+  },
+  {
+    "h": "gondolj",
+    "e": "think (imperative)",
+    "m": "Spoken like \"gondolj\".",
+    "i": "/ɡondolj/"
+  },
+  {
+    "h": "keresem",
+    "e": "asks; requests",
+    "m": "Spoken like \"keresem\" — asks.",
+    "i": "/kɛrɛʃɛm/"
+  },
+  {
+    "h": "bátor",
+    "e": "brave",
+    "m": "Spoken like \"bátor\".",
+    "i": "/baːtor/"
+  },
+  {
+    "h": "kevesebb",
+    "e": "few; little",
+    "m": "Spoken like \"kevesebb\" — few.",
+    "i": "/kɛvɛʃɛbː/"
+  },
+  {
+    "h": "kilenc",
+    "e": "who; out",
+    "m": "Spoken like \"keelenc\" — who.",
+    "i": "/kilɛnt͡s/"
+  },
+  {
+    "h": "eleget",
+    "e": "enough (acc.)",
+    "m": "Spoken like \"eleget\".",
+    "i": "/ɛlɛɡɛt/"
+  },
+  {
+    "h": "elmondta",
+    "e": "he/she told",
+    "m": "Spoken like \"elmondta\".",
+    "i": "/ɛlmondtɒ/"
+  },
+  {
+    "h": "menjek",
+    "e": "should I go",
+    "m": "Spoken like \"menjek\".",
+    "i": "/mɛnjɛk/"
+  },
+  {
+    "h": "matt",
+    "e": "today",
+    "m": "Spoken like \"matt\" — today.",
+    "i": "/mɒtː/"
+  },
+  {
+    "h": "olyanok",
+    "e": "such; so",
+    "m": "Spoken like \"oyanok\" — such.",
+    "i": "/ojɒnok/"
+  },
+  {
+    "h": "vezető",
+    "e": "leader; driver",
+    "m": "Spoken like \"vezető\".",
+    "i": "/vɛzɛtøː/"
+  },
+  {
+    "h": "körbe",
+    "e": "around",
+    "m": "Spoken like \"körbe\".",
+    "i": "/kørbɛ/"
+  },
+  {
+    "h": "fény",
+    "e": "light",
+    "m": "Spoken like \"fény\".",
+    "i": "/feːɲ/"
+  },
+  {
+    "h": "aznap",
+    "e": "the; that",
+    "m": "Spoken like \"aznap\" — the.",
+    "i": "/ɒznɒp/"
+  },
+  {
+    "h": "sikerül",
+    "e": "succeeds",
+    "m": "Spoken like \"seekerül\".",
+    "i": "/ʃikɛryl/"
+  },
+  {
+    "h": "tagja",
+    "e": "member of",
+    "m": "Spoken like \"tagja\".",
+    "i": "/tɒɡjɒ/"
+  },
+  {
+    "h": "kocsiban",
+    "e": "stone",
+    "m": "Spoken like \"kocheeban\" — stone.",
+    "i": "/kotʃibɒn/"
+  },
+  {
+    "h": "megtaláltam",
+    "e": "still; yet",
+    "m": "Spoken like \"megtaláltam\" — still.",
+    "i": "/mɛɡtɒlaːltɒm/"
+  },
+  {
+    "h": "basszus",
+    "e": "damn",
+    "m": "Spoken like \"bassoos\".",
+    "i": "/bɒsːuʃ/"
+  },
+  {
+    "h": "levelet",
+    "e": "down",
+    "m": "Spoken like \"levelet\" — down.",
+    "i": "/lɛvɛlɛt/"
+  },
+  {
+    "h": "nézzék",
+    "e": "look (formal, plural)",
+    "m": "Spoken like \"nézzék\".",
+    "i": "/neːzːeːk/"
+  },
+  {
+    "h": "amin",
+    "e": "which (relative, on which)",
+    "m": "Spoken like \"ameen\".",
+    "i": "/ɒmin/"
+  },
+  {
+    "h": "föl",
+    "e": "up",
+    "m": "Spoken like \"föl\".",
+    "i": "/føl/"
+  },
+  {
+    "h": "hall",
+    "e": "if",
+    "m": "Spoken like \"hall\" — if.",
+    "i": "/hɒlː/"
+  },
+  {
+    "h": "nyilván",
+    "e": "obviously",
+    "m": "Spoken like \"nyeelván\".",
+    "i": "/ɲilvaːn/"
+  },
+  {
+    "h": "ül",
+    "e": "sits",
+    "m": "Spoken like \"ül\".",
+    "i": "/yl/"
+  },
+  {
+    "h": "gáz",
+    "e": "gas; problem",
+    "m": "Spoken like \"gáz\".",
+    "i": "/ɡaːz/"
+  },
+  {
+    "h": "közé",
+    "e": "among; between",
+    "m": "Spoken like \"közé\".",
+    "i": "/køzeː/"
+  },
+  {
+    "h": "érezni",
+    "e": "to feel",
+    "m": "Spoken like \"éreznee\".",
+    "i": "/eːrɛzni/"
+  },
+  {
+    "h": "lehetek",
+    "e": "down",
+    "m": "Spoken like \"lehetek\" — down.",
+    "i": "/lɛhɛtɛk/"
+  },
+  {
+    "h": "hajlandó",
+    "e": "if",
+    "m": "Spoken like \"hajlandó\" — if.",
+    "i": "/hɒjlɒndoː/"
+  },
+  {
+    "h": "érdekében",
+    "e": "for the sake of",
+    "m": "Spoken like \"érdekében\".",
+    "i": "/eːrdɛkeːbɛn/"
+  },
+  {
+    "h": "megmutatom",
+    "e": "still; yet",
+    "m": "Spoken like \"megmootatom\" — still.",
+    "i": "/mɛɡmutɒtom/"
+  },
+  {
+    "h": "készült",
+    "e": "was prepared; was made",
+    "m": "Spoken like \"késült\".",
+    "i": "/keːsylt/"
+  },
+  {
+    "h": "alkalom",
+    "e": "occasion",
+    "m": "Spoken like \"alkalom\".",
+    "i": "/ɒlkɒlom/"
+  },
+  {
+    "h": "lettél",
+    "e": "down",
+    "m": "Spoken like \"lettél\" — down.",
+    "i": "/lɛtːeːl/"
+  },
+  {
+    "h": "törvény",
+    "e": "law",
+    "m": "Spoken like \"törvény\".",
+    "i": "/tørveːɲ/"
+  },
+  {
+    "h": "képzelni",
+    "e": "to imagine",
+    "m": "Spoken like \"képzelnee\".",
+    "i": "/keːpzɛlni/"
+  },
+  {
+    "h": "függ",
+    "e": "depends",
+    "m": "Spoken like \"függ\".",
+    "i": "/fyɡː/"
+  },
+  {
+    "h": "találom",
+    "e": "maybe",
+    "m": "Spoken like \"találom\" — maybe.",
+    "i": "/tɒlaːlom/"
+  },
+  {
+    "h": "teszed",
+    "e": "you (sing.)",
+    "m": "Spoken like \"tesed\" — you (sing.).",
+    "i": "/tɛsɛd/"
+  },
+  {
+    "h": "véletlen",
+    "e": "accident; chance",
+    "m": "Spoken like \"véletlen\".",
+    "i": "/veːlɛtlɛn/"
+  },
+  {
+    "h": "elmegy",
+    "e": "he/she leaves",
+    "m": "Spoken like \"elmedy\".",
+    "i": "/ɛlmɛɟ/"
+  },
+  {
+    "h": "napig",
+    "e": "day; sun",
+    "m": "Spoken like \"napeeg\" — day.",
+    "i": "/nɒpiɡ/"
+  },
+  {
+    "h": "mocskos",
+    "e": "dirty",
+    "m": "Spoken like \"mochkos\".",
+    "i": "/motʃkoʃ/"
+  },
+  {
+    "h": "részét",
+    "e": "part of (acc.)",
+    "m": "Spoken like \"rését\".",
+    "i": "/reːseːt/"
+  },
+  {
+    "h": "kiváló",
+    "e": "who; out",
+    "m": "Spoken like \"keeváló\" — who.",
+    "i": "/kivaːloː/"
+  },
+  {
+    "h": "belső",
+    "e": "into; in",
+    "m": "Spoken like \"belső\" — into.",
+    "i": "/bɛlʃøː/"
+  },
+  {
+    "h": "piros",
+    "e": "red",
+    "m": "Spoken like \"peeros\".",
+    "i": "/piroʃ/"
+  },
+  {
+    "h": "magadnak",
+    "e": "today",
+    "m": "Spoken like \"magadnak\" — today.",
+    "i": "/mɒɡɒdnɒk/"
+  },
+  {
+    "h": "ezúttal",
+    "e": "this",
+    "m": "Spoken like \"ezúttal\" — this.",
+    "i": "/ɛzuːtːɒl/"
+  },
+  {
+    "h": "mondanám",
+    "e": "says",
+    "m": "Spoken like \"mondanám\" — says.",
+    "i": "/mondɒnaːm/"
+  },
+  {
+    "h": "fele",
+    "e": "up",
+    "m": "Spoken like \"fele\" — up.",
+    "i": "/fɛlɛ/"
+  },
+  {
+    "h": "magamnak",
+    "e": "today",
+    "m": "Spoken like \"magamnak\" — today.",
+    "i": "/mɒɡɒmnɒk/"
+  },
+  {
+    "h": "fő",
+    "e": "main; chief",
+    "m": "Spoken like \"fő\".",
+    "i": "/føː/"
+  },
+  {
+    "h": "legrosszabb",
+    "e": "down",
+    "m": "Spoken like \"legrossabb\" — down.",
+    "i": "/lɛɡrosːɒbː/"
+  },
+  {
+    "h": "mehetek",
+    "e": "I can go",
+    "m": "Spoken like \"mehetek\".",
+    "i": "/mɛhɛtɛk/"
+  },
+  {
+    "h": "egymással",
+    "e": "one; a",
+    "m": "Spoken like \"edymással\" — one.",
+    "i": "/ɛɟmaːʃːɒl/"
+  },
+  {
+    "h": "szemem",
+    "e": "eye",
+    "m": "Spoken like \"semem\" — eye.",
+    "i": "/sɛmɛm/"
+  },
+  {
+    "h": "bocsásson",
+    "e": "forgive (formal)",
+    "m": "Spoken like \"bochásson\".",
+    "i": "/botʃaːʃːon/"
+  },
+  {
+    "h": "levegőt",
+    "e": "down",
+    "m": "Spoken like \"levegőt\" — down.",
+    "i": "/lɛvɛɡøːt/"
+  },
+  {
+    "h": "szerezni",
+    "e": "to get; to obtain",
+    "m": "Spoken like \"sereznee\".",
+    "i": "/sɛrɛzni/"
+  },
+  {
+    "h": "lehetőséget",
+    "e": "down",
+    "m": "Spoken like \"lehetőséget\" — down.",
+    "i": "/lɛhɛtøːʃeːɡɛt/"
+  },
+  {
+    "h": "tüzet",
+    "e": "fire (acc.)",
+    "m": "Spoken like \"tüzet\".",
+    "i": "/tyzɛt/"
+  },
+  {
+    "h": "tenned",
+    "e": "you (sing.)",
+    "m": "Spoken like \"tenned\" — you (sing.).",
+    "i": "/tɛnːɛd/"
+  },
+  {
+    "h": "túlságosan",
+    "e": "too; excessively",
+    "m": "Spoken like \"túlságosan\".",
+    "i": "/tuːlʃaːɡoʃɒn/"
+  },
+  {
+    "h": "perce",
+    "e": "his/her minute",
+    "m": "Spoken like \"perce\".",
+    "i": "/pɛrt͡sɛ/"
+  },
+  {
+    "h": "lássam",
+    "e": "let me see",
+    "m": "Spoken like \"lássam\".",
+    "i": "/laːʃːɒm/"
+  },
+  {
+    "h": "lehetnek",
+    "e": "down",
+    "m": "Spoken like \"lehetnek\" — down.",
+    "i": "/lɛhɛtnɛk/"
+  },
+  {
+    "h": "őrnagy",
+    "e": "major",
+    "m": "Spoken like \"őrnady\".",
+    "i": "/øːrnɒɟ/"
+  },
+  {
+    "h": "személy",
+    "e": "eye",
+    "m": "Spoken like \"seméy\" — eye.",
+    "i": "/sɛmeːj/"
+  },
+  {
+    "h": "angol",
+    "e": "English",
+    "m": "Spoken like \"angol\" — English.",
+    "i": "/ɒnɡol/"
+  },
+  {
+    "h": "kelj",
+    "e": "get up (imperative)",
+    "m": "Spoken like \"kelj\".",
+    "i": "/kɛlj/"
+  },
+  {
+    "h": "dolgoztam",
+    "e": "I worked",
+    "m": "Spoken like \"dolgoztam\".",
+    "i": "/dolɡoztɒm/"
+  },
+  {
+    "h": "lenyűgöző",
+    "e": "down",
+    "m": "Spoken like \"lenyűgöző\" — down.",
+    "i": "/lɛɲyːɡøzøː/"
+  },
+  {
+    "h": "hozom",
+    "e": "snow",
+    "m": "Spoken like \"hozom\" — snow.",
+    "i": "/hozom/"
+  },
+  {
+    "h": "fizetni",
+    "e": "to pay",
+    "m": "Spoken like \"feezetnee\".",
+    "i": "/fizɛtni/"
+  },
+  {
+    "h": "rendesen",
+    "e": "properly",
+    "m": "Spoken like \"rendesen\".",
+    "i": "/rɛndɛʃɛn/"
+  },
+  {
+    "h": "nahát",
+    "e": "well I'll be",
+    "m": "Spoken like \"nahát\".",
+    "i": "/nɒhaːt/"
+  },
+  {
+    "h": "beszéltél",
+    "e": "into; in",
+    "m": "Spoken like \"beséltél\" — into.",
+    "i": "/bɛseːlteːl/"
+  },
+  {
+    "h": "kapcsolatba",
+    "e": "in connection",
+    "m": "Spoken like \"kapcholatba\".",
+    "i": "/kɒptʃolɒtbɒ/"
+  },
+  {
+    "h": "beszélgetni",
+    "e": "into; in",
+    "m": "Spoken like \"besélgetnee\" — into.",
+    "i": "/bɛseːlɡɛtni/"
+  },
+  {
+    "h": "futás",
+    "e": "grass",
+    "m": "Spoken like \"footás\" — grass.",
+    "i": "/futaːʃ/"
+  },
+  {
+    "h": "dél",
+    "e": "noon; south",
+    "m": "Spoken like \"dél\".",
+    "i": "/deːl/"
+  },
+  {
+    "h": "nevében",
+    "e": "don't",
+    "m": "Spoken like \"nevében\" — don't.",
+    "i": "/nɛveːbɛn/"
+  },
+  {
+    "h": "álom",
+    "e": "dream",
+    "m": "Spoken like \"álom\".",
+    "i": "/aːlom/"
+  },
+  {
+    "h": "kezem",
+    "e": "hand",
+    "m": "Spoken like \"kezem\" — hand.",
+    "i": "/kɛzɛm/"
+  },
+  {
+    "h": "különböző",
+    "e": "different",
+    "m": "Spoken like \"különböző\".",
+    "i": "/kylønbøzøː/"
+  },
+  {
+    "h": "várja",
+    "e": "he/she waits for",
+    "m": "Spoken like \"várja\".",
+    "i": "/vaːrjɒ/"
+  },
+  {
+    "h": "kevin",
+    "e": "Kevin",
+    "m": "Spoken like \"keveen\".",
+    "i": "/kɛvin/"
+  },
+  {
+    "h": "jöjjenek",
+    "e": "let them come",
+    "m": "Spoken like \"jöjjenek\".",
+    "i": "/jøjːɛnɛk/"
+  },
+  {
+    "h": "alszik",
+    "e": "sleeps",
+    "m": "Spoken like \"alseek\" — sleeps.",
+    "i": "/ɒlsik/"
+  },
+  {
+    "h": "bármelyik",
+    "e": "any of them",
+    "m": "Spoken like \"bármeyeek\".",
+    "i": "/baːrmɛjik/"
+  },
+  {
+    "h": "fejem",
+    "e": "head",
+    "m": "Spoken like \"fejem\" — head.",
+    "i": "/fɛjɛm/"
+  },
+  {
+    "h": "tudd",
+    "e": "knows; can",
+    "m": "Spoken like \"toodd\" — knows.",
+    "i": "/tudː/"
+  },
+  {
+    "h": "hamis",
+    "e": "if",
+    "m": "Spoken like \"hamees\" — if.",
+    "i": "/hɒmiʃ/"
+  },
+  {
+    "h": "telefon",
+    "e": "you (sing.)",
+    "m": "Spoken like \"telefon\" — you (sing.).",
+    "i": "/tɛlɛfon/"
+  },
+  {
+    "h": "művelsz",
+    "e": "you do (vulgar)",
+    "m": "Spoken like \"művels\".",
+    "i": "/myːvɛls/"
+  },
+  {
+    "h": "külön",
+    "e": "separately",
+    "m": "Spoken like \"külön\".",
+    "i": "/kyløn/"
+  },
+  {
+    "h": "tehetem",
+    "e": "you (sing.)",
+    "m": "Spoken like \"tehetem\" — you (sing.).",
+    "i": "/tɛhɛtɛm/"
+  },
+  {
+    "h": "női",
+    "e": "women's; female",
+    "m": "Spoken like \"nőee\".",
+    "i": "/nøːi/"
+  },
+  {
+    "h": "plusz",
+    "e": "plus",
+    "m": "Spoken like \"ploos\".",
+    "i": "/plus/"
+  },
+  {
+    "h": "magányos",
+    "e": "today",
+    "m": "Spoken like \"magányos\" — today.",
+    "i": "/mɒɡaːɲoʃ/"
+  },
+  {
+    "h": "világban",
+    "e": "in the world",
+    "m": "Spoken like \"veelágban\".",
+    "i": "/vilaːɡbɒn/"
+  },
+  {
+    "h": "dobd",
+    "e": "throw (imperative)",
+    "m": "Spoken like \"dobd\".",
+    "i": "/dobd/"
+  },
+  {
+    "h": "gondolta",
+    "e": "he/she thought",
+    "m": "Spoken like \"gondolta\".",
+    "i": "/ɡondoltɒ/"
+  },
+  {
+    "h": "iskolába",
+    "e": "also; too",
+    "m": "Spoken like \"eeskolába\" — also.",
+    "i": "/iʃkolaːbɒ/"
+  },
+  {
+    "h": "fejezd",
+    "e": "head",
+    "m": "Spoken like \"fejezd\" — head.",
+    "i": "/fɛjɛzd/"
+  },
+  {
+    "h": "ellene",
+    "e": "against",
+    "m": "Spoken like \"ellene\" — against.",
+    "i": "/ɛlːɛnɛ/"
+  },
+  {
+    "h": "ügyvéd",
+    "e": "lawyer",
+    "m": "Spoken like \"üdyvéd\".",
+    "i": "/yɟveːd/"
+  },
+  {
+    "h": "szembe",
+    "e": "eye",
+    "m": "Spoken like \"sembe\" — eye.",
+    "i": "/sɛmbɛ/"
+  },
+  {
+    "h": "adjon",
+    "e": "gives",
+    "m": "Spoken like \"adjon\" — gives.",
+    "i": "/ɒdjon/"
+  },
+  {
+    "h": "végeztünk",
+    "e": "we finished",
+    "m": "Spoken like \"végeztünk\".",
+    "i": "/veːɡɛztynk/"
+  },
+  {
+    "h": "iskola",
+    "e": "also; too",
+    "m": "Spoken like \"eeskola\" — also.",
+    "i": "/iʃkolɒ/"
+  },
+  {
+    "h": "tulajdonképpen",
+    "e": "actually",
+    "m": "Spoken like \"toolajdonképpen\".",
+    "i": "/tulɒjdonkeːpːɛn/"
+  },
+  {
+    "h": "próbálja",
+    "e": "he/she tries",
+    "m": "Spoken like \"próbálja\".",
+    "i": "/proːbaːljɒ/"
+  },
+  {
+    "h": "durva",
+    "e": "rough; harsh",
+    "m": "Spoken like \"doorva\".",
+    "i": "/durvɒ/"
+  },
+  {
+    "h": "esély",
+    "e": "and",
+    "m": "Spoken like \"eséy\" — and.",
+    "i": "/ɛʃeːj/"
+  },
+  {
+    "h": "ráadásul",
+    "e": "moreover",
+    "m": "Spoken like \"ráadásool\".",
+    "i": "/raːɒdaːʃul/"
+  },
+  {
+    "h": "írja",
+    "e": "he/she writes",
+    "m": "Spoken like \"írja\".",
+    "i": "/iːrjɒ/"
+  },
+  {
+    "h": "nincsen",
+    "e": "there isn't",
+    "m": "Spoken like \"neenchen\" — there isn't.",
+    "i": "/nintʃɛn/"
+  },
+  {
+    "h": "ügyben",
+    "e": "in the matter",
+    "m": "Spoken like \"üdyben\".",
+    "i": "/yɟbɛn/"
+  },
+  {
+    "h": "hitte",
+    "e": "he/she believed",
+    "m": "Spoken like \"heette\".",
+    "i": "/hitːɛ/"
+  },
+  {
+    "h": "dns",
+    "e": "DNA",
+    "m": "Spoken like \"dns\".",
+    "i": "/dnʃ/"
+  },
+  {
+    "h": "járni",
+    "e": "to walk; to go",
+    "m": "Spoken like \"járnee\".",
+    "i": "/jaːrni/"
+  },
+  {
+    "h": "messzire",
+    "e": "far away",
+    "m": "Spoken like \"messeere\".",
+    "i": "/mɛsːirɛ/"
+  },
+  {
+    "h": "vegyél",
+    "e": "take; buy (imperative)",
+    "m": "Spoken like \"vedyél\".",
+    "i": "/vɛɟeːl/"
+  },
+  {
+    "h": "ismer",
+    "e": "also; too",
+    "m": "Spoken like \"eesmer\" — also.",
+    "i": "/iʃmɛr/"
+  },
+  {
+    "h": "akartad",
+    "e": "you wanted it",
+    "m": "Spoken like \"akartad\".",
+    "i": "/ɒkɒrtɒd/"
+  },
+  {
+    "h": "fajta",
+    "e": "tree",
+    "m": "Spoken like \"fajta\" — tree.",
+    "i": "/fɒjtɒ/"
+  },
+  {
+    "h": "kiderült",
+    "e": "who; out",
+    "m": "Spoken like \"keederült\" — who.",
+    "i": "/kidɛrylt/"
+  },
+  {
+    "h": "várunk",
+    "e": "we wait",
+    "m": "Spoken like \"vároonk\".",
+    "i": "/vaːrunk/"
+  },
+  {
+    "h": "fiút",
+    "e": "boy (acc.)",
+    "m": "Spoken like \"feeút\".",
+    "i": "/fiuːt/"
+  },
+  {
+    "h": "oldalon",
+    "e": "on the side",
+    "m": "Spoken like \"oldalon\".",
+    "i": "/oldɒlon/"
+  },
+  {
+    "h": "ugyanazt",
+    "e": "so; that way",
+    "m": "Spoken like \"oodyanazt\" — so.",
+    "i": "/uɟɒnɒzt/"
+  },
+  {
+    "h": "végzett",
+    "e": "he/she finished",
+    "m": "Spoken like \"végzett\".",
+    "i": "/veːɡzɛtː/"
+  },
+  {
+    "h": "élt",
+    "e": "he/she lived",
+    "m": "Spoken like \"élt\".",
+    "i": "/eːlt/"
+  },
+  {
+    "h": "megígérem",
+    "e": "still; yet",
+    "m": "Spoken like \"megígérem\" — still.",
+    "i": "/mɛɡiːɡeːrɛm/"
+  },
+  {
+    "h": "magához",
+    "e": "today",
+    "m": "Spoken like \"magához\" — today.",
+    "i": "/mɒɡaːhoz/"
+  },
+  {
+    "h": "képesek",
+    "e": "able (plural)",
+    "m": "Spoken like \"képesek\".",
+    "i": "/keːpɛʃɛk/"
+  },
+  {
+    "h": "fejed",
+    "e": "head",
+    "m": "Spoken like \"fejed\" — head.",
+    "i": "/fɛjɛd/"
+  },
+  {
+    "h": "tarts",
+    "e": "hold (imperative)",
+    "m": "Spoken like \"tarts\".",
+    "i": "/tɒrtʃ/"
+  },
+  {
+    "h": "továbbra",
+    "e": "lake",
+    "m": "Spoken like \"továbbra\" — lake.",
+    "i": "/tovaːbːrɒ/"
+  },
+  {
+    "h": "istenit",
+    "e": "also; too",
+    "m": "Spoken like \"eesteneet\" — also.",
+    "i": "/iʃtɛnit/"
+  },
+  {
+    "h": "megtenni",
+    "e": "still; yet",
+    "m": "Spoken like \"megtennee\" — still.",
+    "i": "/mɛɡtɛnːi/"
+  },
+  {
+    "h": "hogyha",
+    "e": "that; how",
+    "m": "Spoken like \"hodyha\" — that.",
+    "i": "/hoɟhɒ/"
+  },
+  {
+    "h": "mindkét",
+    "e": "what; we",
+    "m": "Spoken like \"meendkét\" — what.",
+    "i": "/mindkeːt/"
+  },
+  {
+    "h": "zavar",
+    "e": "bother; disturbance",
+    "m": "Spoken like \"zavar\".",
+    "i": "/zɒvɒr/"
+  },
+  {
+    "h": "inni",
+    "e": "to drink",
+    "m": "Spoken like \"eennee\".",
+    "i": "/inːi/"
+  },
+  {
+    "h": "beszéljünk",
+    "e": "into; in",
+    "m": "Spoken like \"beséljünk\" — into.",
+    "i": "/bɛseːljynk/"
+  },
+  {
+    "h": "figyeljetek",
+    "e": "pay attention (plural)",
+    "m": "Spoken like \"feedyeljetek\".",
+    "i": "/fiɟɛljɛtɛk/"
+  },
+  {
+    "h": "napra",
+    "e": "day; sun",
+    "m": "Spoken like \"napra\" — day.",
+    "i": "/nɒprɒ/"
+  },
+  {
+    "h": "cég",
+    "e": "company",
+    "m": "Spoken like \"cég\".",
+    "i": "/t͡seːɡ/"
+  },
+  {
+    "h": "hm",
+    "e": "hmm",
+    "m": "Spoken like \"hm\".",
+    "i": "/hm/"
+  },
+  {
+    "h": "legyünk",
+    "e": "down",
+    "m": "Spoken like \"ledyünk\" — down.",
+    "i": "/lɛɟynk/"
+  },
+  {
+    "h": "támadás",
+    "e": "attack",
+    "m": "Spoken like \"támadás\".",
+    "i": "/taːmɒdaːʃ/"
+  },
+  {
+    "h": "hazugság",
+    "e": "if",
+    "m": "Spoken like \"hazoogság\" — if.",
+    "i": "/hɒzuɡʃaːɡ/"
+  },
+  {
+    "h": "szíves",
+    "e": "willing; glad to",
+    "m": "Spoken like \"síves\".",
+    "i": "/siːvɛʃ/"
+  },
+  {
+    "h": "keresünk",
+    "e": "asks; requests",
+    "m": "Spoken like \"keresünk\" — asks.",
+    "i": "/kɛrɛʃynk/"
+  },
+  {
+    "h": "hozok",
+    "e": "snow",
+    "m": "Spoken like \"hozok\" — snow.",
+    "i": "/hozok/"
+  },
+  {
+    "h": "hahó",
+    "e": "if",
+    "m": "Spoken like \"hahó\" — if.",
+    "i": "/hɒhoː/"
+  },
+  {
+    "h": "elmentem",
+    "e": "I left; I went",
+    "m": "Spoken like \"elmentem\".",
+    "i": "/ɛlmɛntɛm/"
+  },
+  {
+    "h": "szokott",
+    "e": "word",
+    "m": "Spoken like \"sokott\" — word.",
+    "i": "/sokotː/"
+  },
+  {
+    "h": "hálás",
+    "e": "grateful",
+    "m": "Spoken like \"hálás\".",
+    "i": "/haːlaːʃ/"
+  },
+  {
+    "h": "barom",
+    "e": "animal; fool",
+    "m": "Spoken like \"barom\".",
+    "i": "/bɒrom/"
+  },
+  {
+    "h": "vezetni",
+    "e": "to drive; to lead",
+    "m": "Spoken like \"vezetnee\".",
+    "i": "/vɛzɛtni/"
+  },
+  {
+    "h": "ajándék",
+    "e": "gift",
+    "m": "Spoken like \"ajándék\".",
+    "i": "/ɒjaːndeːk/"
+  },
+  {
+    "h": "bátyám",
+    "e": "my brother",
+    "m": "Spoken like \"bátyám\".",
+    "i": "/baːcaːm/"
+  },
+  {
+    "h": "óvatos",
+    "e": "careful",
+    "m": "Spoken like \"óvatos\".",
+    "i": "/oːvɒtoʃ/"
+  },
+  {
+    "h": "elmondtam",
+    "e": "I told",
+    "m": "Spoken like \"elmondtam\".",
+    "i": "/ɛlmondtɒm/"
+  },
+  {
+    "h": "vért",
+    "e": "blood (acc.)",
+    "m": "Spoken like \"vért\".",
+    "i": "/veːrt/"
+  },
+  {
+    "h": "hallottál",
+    "e": "if",
+    "m": "Spoken like \"hallottál\" — if.",
+    "i": "/hɒlːotːaːl/"
+  },
+  {
+    "h": "beszéljen",
+    "e": "into; in",
+    "m": "Spoken like \"beséljen\" — into.",
+    "i": "/bɛseːljɛn/"
+  },
+  {
+    "h": "dolgod",
+    "e": "your work",
+    "m": "Spoken like \"dolgod\".",
+    "i": "/dolɡod/"
+  },
+  {
+    "h": "keresni",
+    "e": "asks; requests",
+    "m": "Spoken like \"keresnee\" — asks.",
+    "i": "/kɛrɛʃni/"
+  },
+  {
+    "h": "autót",
+    "e": "car (acc.)",
+    "m": "Spoken like \"aootót\".",
+    "i": "/ɒutoːt/"
+  },
+  {
+    "h": "rendőrséget",
+    "e": "police (acc.)",
+    "m": "Spoken like \"rendőrséget\".",
+    "i": "/rɛndøːrʃeːɡɛt/"
+  },
+  {
+    "h": "lennem",
+    "e": "down",
+    "m": "Spoken like \"lennem\" — down.",
+    "i": "/lɛnːɛm/"
+  },
+  {
+    "h": "ismersz",
+    "e": "also; too",
+    "m": "Spoken like \"eesmers\" — also.",
+    "i": "/iʃmɛrs/"
+  },
+  {
+    "h": "szél",
+    "e": "wind; edge",
+    "m": "Spoken like \"sél\".",
+    "i": "/seːl/"
+  },
+  {
+    "h": "hazudik",
+    "e": "if",
+    "m": "Spoken like \"hazoodeek\" — if.",
+    "i": "/hɒzudik/"
+  },
+  {
+    "h": "ezután",
+    "e": "this",
+    "m": "Spoken like \"ezootán\" — this.",
+    "i": "/ɛzutaːn/"
+  },
+  {
+    "h": "nővér",
+    "e": "nurse; sister",
+    "m": "Spoken like \"nővér\".",
+    "i": "/nøːveːr/"
+  },
+  {
+    "h": "veszed",
+    "e": "buys; takes",
+    "m": "Spoken like \"vesed\" — buys.",
+    "i": "/vɛsɛd/"
+  },
+  {
+    "h": "italt",
+    "e": "drink",
+    "m": "Spoken like \"eetalt\" — drink.",
+    "i": "/itɒlt/"
+  },
+  {
+    "h": "parancsot",
+    "e": "command (acc.)",
+    "m": "Spoken like \"paranchot\".",
+    "i": "/pɒrɒntʃot/"
+  },
+  {
+    "h": "hülyeség",
+    "e": "nonsense; stupidity",
+    "m": "Spoken like \"hüyeség\".",
+    "i": "/hyjɛʃeːɡ/"
+  },
+  {
+    "h": "aggódjon",
+    "e": "don't worry (formal)",
+    "m": "Spoken like \"aggódjon\".",
+    "i": "/ɒɡːoːdjon/"
+  },
+  {
+    "h": "tökéletesen",
+    "e": "perfectly",
+    "m": "Spoken like \"tökéletesen\".",
+    "i": "/tøkeːlɛtɛʃɛn/"
+  },
+  {
+    "h": "várnak",
+    "e": "they wait",
+    "m": "Spoken like \"várnak\".",
+    "i": "/vaːrnɒk/"
+  },
+  {
+    "h": "elvesztettem",
+    "e": "I lost",
+    "m": "Spoken like \"elvestettem\".",
+    "i": "/ɛlvɛstɛtːɛm/"
+  },
+  {
+    "h": "dolga",
+    "e": "his/her work",
+    "m": "Spoken like \"dolga\".",
+    "i": "/dolɡɒ/"
+  },
+  {
+    "h": "történni",
+    "e": "to happen",
+    "m": "Spoken like \"történnee\".",
+    "i": "/tørteːnːi/"
+  },
+  {
+    "h": "orosz",
+    "e": "Russian",
+    "m": "Spoken like \"oros\".",
+    "i": "/oros/"
+  },
+  {
+    "h": "súlyos",
+    "e": "serious; severe",
+    "m": "Spoken like \"súyos\".",
+    "i": "/ʃuːjoʃ/"
+  },
+  {
+    "h": "cserébe",
+    "e": "in exchange",
+    "m": "Spoken like \"cherébe\".",
+    "i": "/tʃɛreːbɛ/"
+  },
+  {
+    "h": "bomba",
+    "e": "bomb",
+    "m": "Spoken like \"bomba\".",
+    "i": "/bombɒ/"
+  },
+  {
+    "h": "szeretett",
+    "e": "loves; likes",
+    "m": "Spoken like \"seretett\" — loves.",
+    "i": "/sɛrɛtɛtː/"
+  },
+  {
+    "h": "szeretni",
+    "e": "loves; likes",
+    "m": "Spoken like \"seretnee\" — loves.",
+    "i": "/sɛrɛtni/"
+  },
+  {
+    "h": "ír",
+    "e": "writes",
+    "m": "Spoken like \"ír\".",
+    "i": "/iːr/"
+  },
+  {
+    "h": "hiszel",
+    "e": "you believe",
+    "m": "Spoken like \"heesel\".",
+    "i": "/hisɛl/"
+  },
+  {
+    "h": "elintézem",
+    "e": "I'll handle it",
+    "m": "Spoken like \"eleentézem\".",
+    "i": "/ɛlinteːzɛm/"
+  },
+  {
+    "h": "meglesz",
+    "e": "still; yet",
+    "m": "Spoken like \"megles\" — still.",
+    "i": "/mɛɡlɛs/"
+  },
+  {
+    "h": "kapcsolatot",
+    "e": "relationship (acc.)",
+    "m": "Spoken like \"kapcholatot\".",
+    "i": "/kɒptʃolɒtot/"
+  },
+  {
+    "h": "odabent",
+    "e": "inside",
+    "m": "Spoken like \"odabent\".",
+    "i": "/odɒbɛnt/"
+  },
+  {
+    "h": "sokszor",
+    "e": "salt",
+    "m": "Spoken like \"soksor\" — salt.",
+    "i": "/ʃoksor/"
+  },
+  {
+    "h": "kínai",
+    "e": "Chinese",
+    "m": "Spoken like \"kínaee\".",
+    "i": "/kiːnɒi/"
+  },
+  {
+    "h": "írni",
+    "e": "to write",
+    "m": "Spoken like \"írnee\".",
+    "i": "/iːrni/"
+  },
+  {
+    "h": "csináljunk",
+    "e": "let's do",
+    "m": "Spoken like \"cheenáljoonk\".",
+    "i": "/tʃinaːljunk/"
+  },
+  {
+    "h": "szíve",
+    "e": "his/her heart",
+    "m": "Spoken like \"síve\".",
+    "i": "/siːvɛ/"
+  },
+  {
+    "h": "herceg",
+    "e": "prince",
+    "m": "Spoken like \"herceg\".",
+    "i": "/hɛrt͡sɛɡ/"
+  },
+  {
+    "h": "válik",
+    "e": "becomes; divorces",
+    "m": "Spoken like \"váleek\".",
+    "i": "/vaːlik/"
+  },
+  {
+    "h": "halálos",
+    "e": "if",
+    "m": "Spoken like \"halálos\" — if.",
+    "i": "/hɒlaːloʃ/"
+  },
+  {
+    "h": "kérdeztem",
+    "e": "I asked",
+    "m": "Spoken like \"kérdeztem\".",
+    "i": "/keːrdɛztɛm/"
+  },
+  {
+    "h": "élsz",
+    "e": "you live",
+    "m": "Spoken like \"éls\".",
+    "i": "/eːls/"
+  },
+  {
+    "h": "másikat",
+    "e": "another (acc.)",
+    "m": "Spoken like \"máseekat\".",
+    "i": "/maːʃikɒt/"
+  },
+  {
+    "h": "mozdulj",
+    "e": "move (imperative)",
+    "m": "Spoken like \"mozdoolj\".",
+    "i": "/mozdulj/"
+  },
+  {
+    "h": "élnek",
+    "e": "they live",
+    "m": "Spoken like \"élnek\".",
+    "i": "/eːlnɛk/"
+  },
+  {
+    "h": "faszt",
+    "e": "tree",
+    "m": "Spoken like \"fast\" — tree.",
+    "i": "/fɒst/"
+  },
+  {
+    "h": "játszik",
+    "e": "plays",
+    "m": "Spoken like \"játseek\".",
+    "i": "/jaːtsik/"
+  },
+  {
+    "h": "írtam",
+    "e": "I wrote",
+    "m": "Spoken like \"írtam\".",
+    "i": "/iːrtɒm/"
+  },
+  {
+    "h": "hallotta",
+    "e": "if",
+    "m": "Spoken like \"hallotta\" — if.",
+    "i": "/hɒlːotːɒ/"
+  },
+  {
+    "h": "arany",
+    "e": "gold",
+    "m": "Spoken like \"arany\".",
+    "i": "/ɒrɒɲ/"
+  },
+  {
+    "h": "hallott",
+    "e": "if",
+    "m": "Spoken like \"hallott\" — if.",
+    "i": "/hɒlːotː/"
+  },
+  {
+    "h": "megtettem",
+    "e": "still; yet",
+    "m": "Spoken like \"megtettem\" — still.",
+    "i": "/mɛɡtɛtːɛm/"
+  },
+  {
+    "h": "mindet",
+    "e": "what; we",
+    "m": "Spoken like \"meendet\" — what.",
+    "i": "/mindɛt/"
+  },
+  {
+    "h": "látjuk",
+    "e": "we see",
+    "m": "Spoken like \"látjook\".",
+    "i": "/laːtjuk/"
+  },
+  {
+    "h": "miénk",
+    "e": "what; we",
+    "m": "Spoken like \"meeénk\" — what.",
+    "i": "/mieːnk/"
+  },
+  {
+    "h": "kevésbé",
+    "e": "less",
+    "m": "Spoken like \"kevésbé\".",
+    "i": "/kɛveːʃbeː/"
+  },
+  {
+    "h": "legjobban",
+    "e": "down",
+    "m": "Spoken like \"legjobban\" — down.",
+    "i": "/lɛɡjobːɒn/"
+  },
+  {
+    "h": "megtörtént",
+    "e": "still; yet",
+    "m": "Spoken like \"megtörtént\" — still.",
+    "i": "/mɛɡtørteːnt/"
+  },
+  {
+    "h": "esti",
+    "e": "and",
+    "m": "Spoken like \"estee\" — and.",
+    "i": "/ɛʃti/"
+  },
+  {
+    "h": "írt",
+    "e": "he/she wrote",
+    "m": "Spoken like \"írt\".",
+    "i": "/iːrt/"
+  },
+  {
+    "h": "tenne",
+    "e": "you (sing.)",
+    "m": "Spoken like \"tenne\" — you (sing.).",
+    "i": "/tɛnːɛ/"
+  },
+  {
+    "h": "találta",
+    "e": "maybe",
+    "m": "Spoken like \"találta\" — maybe.",
+    "i": "/tɒlaːltɒ/"
+  },
+  {
+    "h": "simán",
+    "e": "easily",
+    "m": "Spoken like \"seemán\".",
+    "i": "/ʃimaːn/"
+  },
+  {
+    "h": "eset",
+    "e": "and",
+    "m": "Spoken like \"eset\" — and.",
+    "i": "/ɛʃɛt/"
+  },
+  {
+    "h": "köcsög",
+    "e": "jerk",
+    "m": "Spoken like \"köchög\".",
+    "i": "/køtʃøɡ/"
+  },
+  {
+    "h": "készül",
+    "e": "prepares",
+    "m": "Spoken like \"késül\".",
+    "i": "/keːsyl/"
+  },
+  {
+    "h": "találtál",
+    "e": "maybe",
+    "m": "Spoken like \"találtál\" — maybe.",
+    "i": "/tɒlaːltaːl/"
+  },
+  {
+    "h": "ilyesmit",
+    "e": "something like that (acc.)",
+    "m": "Spoken like \"eeyesmeet\".",
+    "i": "/ijɛʃmit/"
+  },
+  {
+    "h": "képest",
+    "e": "compared to",
+    "m": "Spoken like \"képest\".",
+    "i": "/keːpɛʃt/"
+  },
+  {
+    "h": "tavaly",
+    "e": "last year",
+    "m": "Spoken like \"tavay\".",
+    "i": "/tɒvɒj/"
+  },
+  {
+    "h": "min",
+    "e": "what; we",
+    "m": "Spoken like \"meen\" — what.",
+    "i": "/min/"
+  },
+  {
+    "h": "mindenre",
+    "e": "what; we",
+    "m": "Spoken like \"meendenre\" — what.",
+    "i": "/mindɛnrɛ/"
+  },
+  {
+    "h": "megteszem",
+    "e": "still; yet",
+    "m": "Spoken like \"megtesem\" — still.",
+    "i": "/mɛɡtɛsɛm/"
+  },
+  {
+    "h": "pasas",
+    "e": "guy; fellow",
+    "m": "Spoken like \"pasas\".",
+    "i": "/pɒʃɒʃ/"
+  },
+  {
+    "h": "eredeti",
+    "e": "original",
+    "m": "Spoken like \"eredetee\".",
+    "i": "/ɛrɛdɛti/"
+  },
+  {
+    "h": "beléd",
+    "e": "into; in",
+    "m": "Spoken like \"beléd\" — into.",
+    "i": "/bɛleːd/"
+  },
+  {
+    "h": "természetes",
+    "e": "you (sing.)",
+    "m": "Spoken like \"termésetes\" — you (sing.).",
+    "i": "/tɛrmeːsɛtɛʃ/"
+  },
+  {
+    "h": "rakás",
+    "e": "pile",
+    "m": "Spoken like \"rakás\".",
+    "i": "/rɒkaːʃ/"
+  },
+  {
+    "h": "őrület",
+    "e": "madness",
+    "m": "Spoken like \"őrület\".",
+    "i": "/øːrylɛt/"
+  },
+  {
+    "h": "undorító",
+    "e": "disgusting",
+    "m": "Spoken like \"oondorító\".",
+    "i": "/undoriːtoː/"
+  },
+  {
+    "h": "könnyebb",
+    "e": "easier",
+    "m": "Spoken like \"könnyebb\".",
+    "i": "/køɲːɛbː/"
+  },
+  {
+    "h": "német",
+    "e": "German",
+    "m": "Spoken like \"német\".",
+    "i": "/neːmɛt/"
+  },
+  {
+    "h": "mellé",
+    "e": "beside it",
+    "m": "Spoken like \"mellé\".",
+    "i": "/mɛlːeː/"
+  },
+  {
+    "h": "máskor",
+    "e": "another time",
+    "m": "Spoken like \"máskor\".",
+    "i": "/maːʃkor/"
+  },
+  {
+    "h": "tartozom",
+    "e": "I owe",
+    "m": "Spoken like \"tartozom\".",
+    "i": "/tɒrtozom/"
+  },
+  {
+    "h": "kettőt",
+    "e": "two (acc.)",
+    "m": "Spoken like \"kettőt\".",
+    "i": "/kɛtːøːt/"
+  },
+  {
+    "h": "bajom",
+    "e": "my trouble",
+    "m": "Spoken like \"bajom\".",
+    "i": "/bɒjom/"
+  },
+  {
+    "h": "elegem",
+    "e": "I've had enough",
+    "m": "Spoken like \"elegem\".",
+    "i": "/ɛlɛɡɛm/"
+  },
+  {
+    "h": "elmész",
+    "e": "you leave",
+    "m": "Spoken like \"elmés\".",
+    "i": "/ɛlmeːs/"
+  },
+  {
+    "h": "ugyanúgy",
+    "e": "so; that way",
+    "m": "Spoken like \"oodyanúdy\" — so.",
+    "i": "/uɟɒnuːɟ/"
+  },
+  {
+    "h": "aggódom",
+    "e": "I worry",
+    "m": "Spoken like \"aggódom\".",
+    "i": "/ɒɡːoːdom/"
+  },
+  {
+    "h": "naná",
+    "e": "of course",
+    "m": "Spoken like \"naná\".",
+    "i": "/nɒnaː/"
+  },
+  {
+    "h": "kulcs",
+    "e": "key",
+    "m": "Spoken like \"koolch\".",
+    "i": "/kultʃ/"
+  },
+  {
+    "h": "segítségre",
+    "e": "for help",
+    "m": "Spoken like \"segítségre\".",
+    "i": "/ʃɛɡiːtʃeːɡrɛ/"
+  },
+  {
+    "h": "sehol",
+    "e": "nowhere",
+    "m": "Spoken like \"sehol\".",
+    "i": "/ʃɛhol/"
+  },
+  {
+    "h": "legyenek",
+    "e": "down",
+    "m": "Spoken like \"ledyenek\" — down.",
+    "i": "/lɛɟɛnɛk/"
+  },
+  {
+    "h": "keresi",
+    "e": "asks; requests",
+    "m": "Spoken like \"keresee\" — asks.",
+    "i": "/kɛrɛʃi/"
+  },
+  {
+    "h": "magáról",
+    "e": "today",
+    "m": "Spoken like \"magáról\" — today.",
+    "i": "/mɒɡaːroːl/"
+  },
+  {
+    "h": "földet",
+    "e": "earth (acc.)",
+    "m": "Spoken like \"földet\".",
+    "i": "/føldɛt/"
+  },
+  {
+    "h": "egység",
+    "e": "one; a",
+    "m": "Spoken like \"edység\" — one.",
+    "i": "/ɛɟʃeːɡ/"
+  },
+  {
+    "h": "semmire",
+    "e": "neither; nor",
+    "m": "Spoken like \"semmeere\" — neither.",
+    "i": "/ʃɛmːirɛ/"
+  },
+  {
+    "h": "bízz",
+    "e": "trust (imperative)",
+    "m": "Spoken like \"bízz\".",
+    "i": "/biːzː/"
+  },
+  {
+    "h": "ahogyan",
+    "e": "as; how",
+    "m": "Spoken like \"ahodyan\".",
+    "i": "/ɒhoɟɒn/"
+  },
+  {
+    "h": "kérdezd",
+    "e": "ask (imperative)",
+    "m": "Spoken like \"kérdezd\".",
+    "i": "/keːrdɛzd/"
+  },
+  {
+    "h": "sor",
+    "e": "salt",
+    "m": "Spoken like \"sor\" — salt.",
+    "i": "/ʃor/"
+  },
+  {
+    "h": "sehova",
+    "e": "nowhere (to)",
+    "m": "Spoken like \"sehova\".",
+    "i": "/ʃɛhovɒ/"
+  },
+  {
+    "h": "kisebb",
+    "e": "who; out",
+    "m": "Spoken like \"keesebb\" — who.",
+    "i": "/kiʃɛbː/"
+  },
+  {
+    "h": "hívjon",
+    "e": "let him/her call",
+    "m": "Spoken like \"hívjon\".",
+    "i": "/hiːvjon/"
+  },
+  {
+    "h": "nyilvánvalóan",
+    "e": "obviously",
+    "m": "Spoken like \"nyeelvánvalóan\".",
+    "i": "/ɲilvaːnvɒloːɒn/"
+  },
+  {
+    "h": "gondolni",
+    "e": "to think",
+    "m": "Spoken like \"gondolnee\".",
+    "i": "/ɡondolni/"
+  },
+  {
+    "h": "martin",
+    "e": "already",
+    "m": "Spoken like \"marteen\" — already.",
+    "i": "/mɒrtin/"
+  },
+  {
+    "h": "vigye",
+    "e": "take it (formal)",
+    "m": "Spoken like \"veedye\".",
+    "i": "/viɟɛ/"
+  },
+  {
+    "h": "felelős",
+    "e": "up",
+    "m": "Spoken like \"felelős\" — up.",
+    "i": "/fɛlɛløːʃ/"
+  },
+  {
+    "h": "hú",
+    "e": "wow",
+    "m": "Spoken like \"hú\".",
+    "i": "/huː/"
+  },
+  {
+    "h": "Amerika",
+    "e": "America",
+    "m": "Spoken like \"amereeka\".",
+    "i": "/ɒmɛrikɒ/"
+  },
+  {
+    "h": "ig",
+    "e": "etc.",
+    "m": "Spoken like \"eeg\".",
+    "i": "/iɡ/"
+  },
+  {
+    "h": "reméltem",
+    "e": "I hoped",
+    "m": "Spoken like \"reméltem\".",
+    "i": "/rɛmeːltɛm/"
+  },
+  {
+    "h": "talál",
+    "e": "maybe",
+    "m": "Spoken like \"talál\" — maybe.",
+    "i": "/tɒlaːl/"
+  },
+  {
+    "h": "százados",
+    "e": "captain",
+    "m": "Spoken like \"sázados\".",
+    "i": "/saːzɒdoʃ/"
+  },
+  {
+    "h": "ruhát",
+    "e": "clothes (acc.)",
+    "m": "Spoken like \"roohát\".",
+    "i": "/ruhaːt/"
+  },
+  {
+    "h": "testvérem",
+    "e": "you (sing.)",
+    "m": "Spoken like \"testvérem\" — you (sing.).",
+    "i": "/tɛʃtveːrɛm/"
+  },
+  {
+    "h": "tennünk",
+    "e": "you (sing.)",
+    "m": "Spoken like \"tennünk\" — you (sing.).",
+    "i": "/tɛnːynk/"
+  },
+  {
+    "h": "mindezt",
+    "e": "what; we",
+    "m": "Spoken like \"meendezt\" — what.",
+    "i": "/mindɛzt/"
+  },
+  {
+    "h": "akartalak",
+    "e": "I wanted you",
+    "m": "Spoken like \"akartalak\".",
+    "i": "/ɒkɒrtɒlɒk/"
+  },
+  {
+    "h": "egyesült",
+    "e": "one; a",
+    "m": "Spoken like \"edyesült\" — one.",
+    "i": "/ɛɟɛʃylt/"
+  },
+  {
+    "h": "nemrég",
+    "e": "no; not",
+    "m": "Spoken like \"nemrég\" — no.",
+    "i": "/nɛmreːɡ/"
+  },
+  {
+    "h": "életemet",
+    "e": "my life (acc.)",
+    "m": "Spoken like \"életemet\".",
+    "i": "/eːlɛtɛmɛt/"
+  },
+  {
+    "h": "ismert",
+    "e": "also; too",
+    "m": "Spoken like \"eesmert\" — also.",
+    "i": "/iʃmɛrt/"
+  },
+  {
+    "h": "esélye",
+    "e": "and",
+    "m": "Spoken like \"eséye\" — and.",
+    "i": "/ɛʃeːjɛ/"
+  },
+  {
+    "h": "totál",
+    "e": "lake",
+    "m": "Spoken like \"totál\" — lake.",
+    "i": "/totaːl/"
+  },
+  {
+    "h": "hiába",
+    "e": "in vain",
+    "m": "Spoken like \"heeába\".",
+    "i": "/hiaːbɒ/"
+  },
+  {
+    "h": "fogadok",
+    "e": "tooth",
+    "m": "Spoken like \"fogadok\" — tooth.",
+    "i": "/foɡɒdok/"
+  },
+  {
+    "h": "járok",
+    "e": "I walk; I go",
+    "m": "Spoken like \"járok\".",
+    "i": "/jaːrok/"
+  },
+  {
+    "h": "bíróság",
+    "e": "court",
+    "m": "Spoken like \"bíróság\".",
+    "i": "/biːroːʃaːɡ/"
+  },
+  {
+    "h": "szüleim",
+    "e": "my parents",
+    "m": "Spoken like \"süleeem\".",
+    "i": "/sylɛim/"
+  },
+  {
+    "h": "igazgató",
+    "e": "true",
+    "m": "Spoken like \"eegazgató\" — true.",
+    "i": "/iɡɒzɡɒtoː/"
+  },
+  {
+    "h": "megpróbáltam",
+    "e": "still; yet",
+    "m": "Spoken like \"megpróbáltam\" — still.",
+    "i": "/mɛɡproːbaːltɒm/"
+  },
+  {
+    "h": "teszel",
+    "e": "you (sing.)",
+    "m": "Spoken like \"tesel\" — you (sing.).",
+    "i": "/tɛsɛl/"
+  },
+  {
+    "h": "fordulj",
+    "e": "turn (imperative)",
+    "m": "Spoken like \"fordoolj\".",
+    "i": "/fordulj/"
+  },
+  {
+    "h": "igazam",
+    "e": "true",
+    "m": "Spoken like \"eegazam\" — true.",
+    "i": "/iɡɒzɒm/"
+  },
+  {
+    "h": "megtaláljuk",
+    "e": "still; yet",
+    "m": "Spoken like \"megtaláljook\" — still.",
+    "i": "/mɛɡtɒlaːljuk/"
+  },
+  {
+    "h": "pokol",
+    "e": "hell",
+    "m": "Spoken like \"pokol\".",
+    "i": "/pokol/"
+  },
+  {
+    "h": "övé",
+    "e": "his/hers",
+    "m": "Spoken like \"övé\".",
+    "i": "/øveː/"
+  },
+  {
+    "h": "kaptunk",
+    "e": "we received",
+    "m": "Spoken like \"kaptoonk\".",
+    "i": "/kɒptunk/"
+  },
+  {
+    "h": "kezdtem",
+    "e": "hand",
+    "m": "Spoken like \"kezdtem\" — hand.",
+    "i": "/kɛzdtɛm/"
+  },
+  {
+    "h": "élünk",
+    "e": "we live",
+    "m": "Spoken like \"élünk\".",
+    "i": "/eːlynk/"
+  },
+  {
+    "h": "izé",
+    "e": "um; thing",
+    "m": "Spoken like \"eezé\".",
+    "i": "/izeː/"
+  },
+  {
+    "h": "hónapban",
+    "e": "in a month",
+    "m": "Spoken like \"hónapban\".",
+    "i": "/hoːnɒpbɒn/"
+  },
+  {
+    "h": "jelen",
+    "e": "present",
+    "m": "Spoken like \"jelen\".",
+    "i": "/jɛlɛn/"
+  },
+  {
+    "h": "hercegnő",
+    "e": "princess",
+    "m": "Spoken like \"hercegnő\".",
+    "i": "/hɛrt͡sɛɡnøː/"
+  },
+  {
+    "h": "vigyázzon",
+    "e": "take care (formal)",
+    "m": "Spoken like \"veedyázzon\".",
+    "i": "/viɟaːzːon/"
+  },
+  {
+    "h": "mutatni",
+    "e": "to show",
+    "m": "Spoken like \"mootatnee\".",
+    "i": "/mutɒtni/"
+  },
+  {
+    "h": "nemet",
+    "e": "no; not",
+    "m": "Spoken like \"nemet\" — no.",
+    "i": "/nɛmɛt/"
+  },
+  {
+    "h": "számot",
+    "e": "number (acc.)",
+    "m": "Spoken like \"sámot\".",
+    "i": "/saːmot/"
+  },
+  {
+    "h": "miből",
+    "e": "what; we",
+    "m": "Spoken like \"meeből\" — what.",
+    "i": "/mibøːl/"
+  },
+  {
+    "h": "parancs",
+    "e": "command",
+    "m": "Spoken like \"paranch\".",
+    "i": "/pɒrɒntʃ/"
+  },
+  {
+    "h": "félj",
+    "e": "be afraid (imperative)",
+    "m": "Spoken like \"félj\".",
+    "i": "/feːlj/"
+  },
+  {
+    "h": "fájdalmat",
+    "e": "pain (acc.)",
+    "m": "Spoken like \"fájdalmat\".",
+    "i": "/faːjdɒlmɒt/"
+  },
+  {
+    "h": "joey",
+    "e": "good",
+    "m": "Spoken like \"joey\" — good.",
+    "i": "/joɛi/"
+  },
+  {
+    "h": "üzleti",
+    "e": "business (adjective)",
+    "m": "Spoken like \"üzletee\".",
+    "i": "/yzlɛti/"
+  },
+  {
+    "h": "íme",
+    "e": "behold; here is",
+    "m": "Spoken like \"íme\".",
+    "i": "/iːmɛ/"
+  },
+  {
+    "h": "ekkora",
+    "e": "this big",
+    "m": "Spoken like \"ekkora\".",
+    "i": "/ɛkːorɒ/"
+  },
+  {
+    "h": "családja",
+    "e": "his/her family",
+    "m": "Spoken like \"chaládja\".",
+    "i": "/tʃɒlaːdjɒ/"
+  },
+  {
+    "h": "elképesztő",
+    "e": "amazing",
+    "m": "Spoken like \"elképestő\".",
+    "i": "/ɛlkeːpɛstøː/"
+  },
+  {
+    "h": "barátnőm",
+    "e": "my girlfriend",
+    "m": "Spoken like \"barátnőm\".",
+    "i": "/bɒraːtnøːm/"
+  },
+  {
+    "h": "hajrá",
+    "e": "if",
+    "m": "Spoken like \"hajrá\" — if.",
+    "i": "/hɒjraː/"
+  },
+  {
+    "h": "fontosabb",
+    "e": "important",
+    "m": "Spoken like \"fontosabb\" — important.",
+    "i": "/fontoʃɒbː/"
+  },
+  {
+    "h": "dögös",
+    "e": "hot; sexy",
+    "m": "Spoken like \"dögös\".",
+    "i": "/døɡøʃ/"
+  },
+  {
+    "h": "veszek",
+    "e": "buys; takes",
+    "m": "Spoken like \"vesek\" — buys.",
+    "i": "/vɛsɛk/"
+  },
+  {
+    "h": "mindez",
+    "e": "what; we",
+    "m": "Spoken like \"meendez\" — what.",
+    "i": "/mindɛz/"
+  },
+  {
+    "h": "hivatalos",
+    "e": "official",
+    "m": "Spoken like \"heevatalos\".",
+    "i": "/hivɒtɒloʃ/"
+  },
+  {
+    "h": "észak",
+    "e": "north",
+    "m": "Spoken like \"ésak\".",
+    "i": "/eːsɒk/"
+  },
+  {
+    "h": "hamarabb",
+    "e": "if",
+    "m": "Spoken like \"hamarabb\" — if.",
+    "i": "/hɒmɒrɒbː/"
+  },
+  {
+    "h": "szörnyen",
+    "e": "terribly",
+    "m": "Spoken like \"sörnyen\".",
+    "i": "/sørɲɛn/"
+  },
+  {
+    "h": "kocsiba",
+    "e": "stone",
+    "m": "Spoken like \"kocheeba\" — stone.",
+    "i": "/kotʃibɒ/"
+  },
+  {
+    "h": "nővel",
+    "e": "with a woman",
+    "m": "Spoken like \"nővel\".",
+    "i": "/nøːvɛl/"
+  },
+  {
+    "h": "húsz",
+    "e": "twenty",
+    "m": "Spoken like \"hús\".",
+    "i": "/huːs/"
+  },
+  {
+    "h": "gépet",
+    "e": "machine (acc.)",
+    "m": "Spoken like \"gépet\".",
+    "i": "/ɡeːpɛt/"
+  },
+  {
+    "h": "üveg",
+    "e": "glass; bottle",
+    "m": "Spoken like \"üveg\".",
+    "i": "/yvɛɡ/"
+  },
+  {
+    "h": "táncolni",
+    "e": "to dance",
+    "m": "Spoken like \"táncolnee\".",
+    "i": "/taːnt͡solni/"
+  },
+  {
+    "h": "nemde",
+    "e": "no; not",
+    "m": "Spoken like \"nemde\" — no.",
+    "i": "/nɛmdɛ/"
+  },
+  {
+    "h": "nagyi",
+    "e": "big",
+    "m": "Spoken like \"nadyee\" — big.",
+    "i": "/nɒɟi/"
+  },
+  {
+    "h": "szenátor",
+    "e": "senator",
+    "m": "Spoken like \"senátor\".",
+    "i": "/sɛnaːtor/"
+  },
+  {
+    "h": "szobát",
+    "e": "word",
+    "m": "Spoken like \"sobát\" — word.",
+    "i": "/sobaːt/"
+  },
+  {
+    "h": "indulunk",
+    "e": "we depart",
+    "m": "Spoken like \"eendooloonk\".",
+    "i": "/indulunk/"
+  },
+  {
+    "h": "képtelen",
+    "e": "unable; incapable",
+    "m": "Spoken like \"képtelen\".",
+    "i": "/keːptɛlɛn/"
+  },
+  {
+    "h": "mehetsz",
+    "e": "you can go",
+    "m": "Spoken like \"mehets\".",
+    "i": "/mɛhɛts/"
+  },
+  {
+    "h": "utánam",
+    "e": "road; way",
+    "m": "Spoken like \"ootánam\" — road.",
+    "i": "/utaːnɒm/"
+  },
+  {
+    "h": "bízom",
+    "e": "I trust",
+    "m": "Spoken like \"bízom\".",
+    "i": "/biːzom/"
+  },
+  {
+    "h": "találták",
+    "e": "maybe",
+    "m": "Spoken like \"találták\" — maybe.",
+    "i": "/tɒlaːltaːk/"
+  },
+  {
+    "h": "megoldás",
+    "e": "still; yet",
+    "m": "Spoken like \"megoldás\" — still.",
+    "i": "/mɛɡoldaːʃ/"
+  },
+  {
+    "h": "kezdett",
+    "e": "hand",
+    "m": "Spoken like \"kezdett\" — hand.",
+    "i": "/kɛzdɛtː/"
+  },
+  {
+    "h": "ugyanolyan",
+    "e": "so; that way",
+    "m": "Spoken like \"oodyanoyan\" — so.",
+    "i": "/uɟɒnojɒn/"
+  },
+  {
+    "h": "hív",
+    "e": "calls",
+    "m": "Spoken like \"hív\".",
+    "i": "/hiːv/"
+  },
+  {
+    "h": "megmenteni",
+    "e": "still; yet",
+    "m": "Spoken like \"megmentenee\" — still.",
+    "i": "/mɛɡmɛntɛni/"
+  },
+  {
+    "h": "emberekkel",
+    "e": "person",
+    "m": "Spoken like \"emberekkel\" — person.",
+    "i": "/ɛmbɛrɛkːɛl/"
+  },
+  {
+    "h": "telt",
+    "e": "you (sing.)",
+    "m": "Spoken like \"telt\" — you (sing.).",
+    "i": "/tɛlt/"
+  },
+  {
+    "h": "feleséged",
+    "e": "up",
+    "m": "Spoken like \"feleséged\" — up.",
+    "i": "/fɛlɛʃeːɡɛd/"
+  },
+  {
+    "h": "üzletet",
+    "e": "business (acc.)",
+    "m": "Spoken like \"üzletet\".",
+    "i": "/yzlɛtɛt/"
+  },
+  {
+    "h": "hang",
+    "e": "if",
+    "m": "Spoken like \"hang\" — if.",
+    "i": "/hɒnɡ/"
+  },
+  {
+    "h": "mennie",
+    "e": "he/she must go",
+    "m": "Spoken like \"menneee\".",
+    "i": "/mɛnːiɛ/"
+  },
+  {
+    "h": "benneteket",
+    "e": "into; in",
+    "m": "Spoken like \"benneteket\" — into.",
+    "i": "/bɛnːɛtɛkɛt/"
+  },
+  {
+    "h": "idők",
+    "e": "times",
+    "m": "Spoken like \"eedők\".",
+    "i": "/idøːk/"
+  },
+  {
+    "h": "kapja",
+    "e": "he/she gets it",
+    "m": "Spoken like \"kapja\".",
+    "i": "/kɒpjɒ/"
+  },
+  {
+    "h": "szabály",
+    "e": "rule",
+    "m": "Spoken like \"sabáy\".",
+    "i": "/sɒbaːj/"
+  },
+  {
+    "h": "keresnek",
+    "e": "asks; requests",
+    "m": "Spoken like \"keresnek\" — asks.",
+    "i": "/kɛrɛʃnɛk/"
+  },
+  {
+    "h": "szoktam",
+    "e": "word",
+    "m": "Spoken like \"soktam\" — word.",
+    "i": "/soktɒm/"
+  },
+  {
+    "h": "zenét",
+    "e": "music (acc.)",
+    "m": "Spoken like \"zenét\".",
+    "i": "/zɛneːt/"
+  },
+  {
+    "h": "gondolkodtam",
+    "e": "I thought about it",
+    "m": "Spoken like \"gondolkodtam\".",
+    "i": "/ɡondolkodtɒm/"
+  },
+  {
+    "h": "vesz",
+    "e": "buys; takes",
+    "m": "Spoken like \"ves\" — buys.",
+    "i": "/vɛs/"
+  },
+  {
+    "h": "húzz",
+    "e": "pull (imperative)",
+    "m": "Spoken like \"húzz\".",
+    "i": "/huːzː/"
+  },
+  {
+    "h": "beszélnek",
+    "e": "into; in",
+    "m": "Spoken like \"besélnek\" — into.",
+    "i": "/bɛseːlnɛk/"
+  },
+  {
+    "h": "bonyolult",
+    "e": "complicated",
+    "m": "Spoken like \"bonyoloolt\".",
+    "i": "/boɲolult/"
+  },
+  {
+    "h": "olvasni",
+    "e": "reads",
+    "m": "Spoken like \"olvasnee\" — reads.",
+    "i": "/olvɒʃni/"
+  },
+  {
+    "h": "követ",
+    "e": "follows",
+    "m": "Spoken like \"követ\".",
+    "i": "/køvɛt/"
+  },
+  {
+    "h": "központ",
+    "e": "center",
+    "m": "Spoken like \"központ\".",
+    "i": "/køzpont/"
+  },
+  {
+    "h": "szeme",
+    "e": "eye",
+    "m": "Spoken like \"seme\" — eye.",
+    "i": "/sɛmɛ/"
+  },
+  {
+    "h": "szexi",
+    "e": "sexy",
+    "m": "Spoken like \"sexee\".",
+    "i": "/sɛksi/"
+  },
+  {
+    "h": "szedd",
+    "e": "take (imperative)",
+    "m": "Spoken like \"sedd\".",
+    "i": "/sɛdː/"
+  },
+  {
+    "h": "azonban",
+    "e": "the; that",
+    "m": "Spoken like \"azonban\" — the.",
+    "i": "/ɒzonbɒn/"
+  },
+  {
+    "h": "megpróbálom",
+    "e": "still; yet",
+    "m": "Spoken like \"megpróbálom\" — still.",
+    "i": "/mɛɡproːbaːlom/"
+  },
+  {
+    "h": "dolgunk",
+    "e": "our work",
+    "m": "Spoken like \"dolgoonk\".",
+    "i": "/dolɡunk/"
+  },
+  {
+    "h": "Krisztus",
+    "e": "Christ",
+    "m": "Spoken like \"kreestoos\".",
+    "i": "/kristuʃ/"
+  },
+  {
+    "h": "bajba",
+    "e": "into trouble",
+    "m": "Spoken like \"bajba\".",
+    "i": "/bɒjbɒ/"
+  },
+  {
+    "h": "hagyják",
+    "e": "if",
+    "m": "Spoken like \"hadyják\" — if.",
+    "i": "/hɒɟjaːk/"
+  },
+  {
+    "h": "tisztában",
+    "e": "aware",
+    "m": "Spoken like \"teestában\".",
+    "i": "/tistaːbɒn/"
+  },
+  {
+    "h": "szólnál",
+    "e": "would you speak",
+    "m": "Spoken like \"sólnál\".",
+    "i": "/soːlnaːl/"
+  },
+  {
+    "h": "irány",
+    "e": "writes",
+    "m": "Spoken like \"eerány\" — writes.",
+    "i": "/iraːɲ/"
+  },
+  {
+    "h": "kizárt",
+    "e": "who; out",
+    "m": "Spoken like \"keezárt\" — who.",
+    "i": "/kizaːrt/"
+  },
+  {
+    "h": "feje",
+    "e": "head",
+    "m": "Spoken like \"feje\" — head.",
+    "i": "/fɛjɛ/"
+  },
+  {
+    "h": "hívlak",
+    "e": "I call you",
+    "m": "Spoken like \"hívlak\".",
+    "i": "/hiːvlɒk/"
+  },
+  {
+    "h": "arcát",
+    "e": "face",
+    "m": "Spoken like \"arcát\" — face.",
+    "i": "/ɒrt͡saːt/"
+  },
+  {
+    "h": "hűha",
+    "e": "wow",
+    "m": "Spoken like \"hűha\".",
+    "i": "/hyːhɒ/"
+  },
+  {
+    "h": "elfoglalt",
+    "e": "busy",
+    "m": "Spoken like \"elfoglalt\".",
+    "i": "/ɛlfoɡlɒlt/"
+  },
+  {
+    "h": "halottak",
+    "e": "if",
+    "m": "Spoken like \"halottak\" — if.",
+    "i": "/hɒlotːɒk/"
+  },
+  {
+    "h": "tisztán",
+    "e": "clearly",
+    "m": "Spoken like \"teestán\".",
+    "i": "/tistaːn/"
+  },
+  {
+    "h": "büdös",
+    "e": "stinky",
+    "m": "Spoken like \"büdös\".",
+    "i": "/bydøʃ/"
+  },
+  {
+    "h": "harcolni",
+    "e": "if",
+    "m": "Spoken like \"harcolnee\" — if.",
+    "i": "/hɒrt͡solni/"
+  },
+  {
+    "h": "tegyük",
+    "e": "you (sing.)",
+    "m": "Spoken like \"tedyük\" — you (sing.).",
+    "i": "/tɛɟyk/"
+  },
+  {
+    "h": "szövetségi",
+    "e": "federal",
+    "m": "Spoken like \"sövetségee\".",
+    "i": "/søvɛtʃeːɡi/"
+  },
+  {
+    "h": "errefelé",
+    "e": "this way",
+    "m": "Spoken like \"errefelé\".",
+    "i": "/ɛrːɛfɛleː/"
+  },
+  {
+    "h": "szerencse",
+    "e": "luck",
+    "m": "Spoken like \"serenche\".",
+    "i": "/sɛrɛntʃɛ/"
+  },
+  {
+    "h": "tudtuk",
+    "e": "knows; can",
+    "m": "Spoken like \"toodtook\" — knows.",
+    "i": "/tudtuk/"
+  },
+  {
+    "h": "épület",
+    "e": "building",
+    "m": "Spoken like \"épület\".",
+    "i": "/eːpylɛt/"
+  },
+  {
+    "h": "vetted",
+    "e": "you took",
+    "m": "Spoken like \"vetted\".",
+    "i": "/vɛtːɛd/"
+  },
+  {
+    "h": "fájdalom",
+    "e": "pain",
+    "m": "Spoken like \"fájdalom\".",
+    "i": "/faːjdɒlom/"
+  },
+  {
+    "h": "amennyire",
+    "e": "as much as",
+    "m": "Spoken like \"amennyeere\".",
+    "i": "/ɒmɛɲːirɛ/"
+  },
+  {
+    "h": "szintén",
+    "e": "color",
+    "m": "Spoken like \"seentén\" — color.",
+    "i": "/sinteːn/"
+  },
+  {
+    "h": "néztem",
+    "e": "I looked",
+    "m": "Spoken like \"néztem\".",
+    "i": "/neːztɛm/"
+  },
+  {
+    "h": "iránt",
+    "e": "writes",
+    "m": "Spoken like \"eeránt\" — writes.",
+    "i": "/iraːnt/"
+  },
+  {
+    "h": "mély",
+    "e": "deep",
+    "m": "Spoken like \"méy\".",
+    "i": "/meːj/"
+  },
+  {
+    "h": "visszatért",
+    "e": "he/she returned",
+    "m": "Spoken like \"veessatért\".",
+    "i": "/visːɒteːrt/"
+  },
+  {
+    "h": "figyeld",
+    "e": "listen (imperative)",
+    "m": "Spoken like \"feedyeld\".",
+    "i": "/fiɟɛld/"
+  },
+  {
+    "h": "városba",
+    "e": "into the city",
+    "m": "Spoken like \"városba\".",
+    "i": "/vaːroʃbɒ/"
+  },
+  {
+    "h": "hozz",
+    "e": "snow",
+    "m": "Spoken like \"hozz\" — snow.",
+    "i": "/hozː/"
+  },
+  {
+    "h": "amióta",
+    "e": "since when",
+    "m": "Spoken like \"ameeóta\".",
+    "i": "/ɒmioːtɒ/"
+  },
+  {
+    "h": "különbség",
+    "e": "difference",
+    "m": "Spoken like \"különbség\".",
+    "i": "/kylønbʃeːɡ/"
+  },
+  {
+    "h": "megváltozott",
+    "e": "still; yet",
+    "m": "Spoken like \"megváltozott\" — still.",
+    "i": "/mɛɡvaːltozotː/"
+  },
+  {
+    "h": "ilyenkor",
+    "e": "at such times",
+    "m": "Spoken like \"eeyenkor\".",
+    "i": "/ijɛnkor/"
+  },
+  {
+    "h": "lennének",
+    "e": "down",
+    "m": "Spoken like \"lennének\" — down.",
+    "i": "/lɛnːeːnɛk/"
+  },
+  {
+    "h": "ezekkel",
+    "e": "this",
+    "m": "Spoken like \"ezekkel\" — this.",
+    "i": "/ɛzɛkːɛl/"
+  },
+  {
+    "h": "megvannak",
+    "e": "still; yet",
+    "m": "Spoken like \"megvannak\" — still.",
+    "i": "/mɛɡvɒnːɒk/"
+  },
+  {
+    "h": "múlik",
+    "e": "passes; depends",
+    "m": "Spoken like \"múleek\".",
+    "i": "/muːlik/"
+  },
+  {
+    "h": "egyetértek",
+    "e": "one; a",
+    "m": "Spoken like \"edyetértek\" — one.",
+    "i": "/ɛɟɛteːrtɛk/"
+  },
+  {
+    "h": "számú",
+    "e": "numbered",
+    "m": "Spoken like \"sámú\".",
+    "i": "/saːmuː/"
+  },
+  {
+    "h": "maguknak",
+    "e": "today",
+    "m": "Spoken like \"magooknak\" — today.",
+    "i": "/mɒɡuknɒk/"
+  },
+  {
+    "h": "fenn",
+    "e": "above",
+    "m": "Spoken like \"fenn\".",
+    "i": "/fɛnː/"
+  },
+  {
+    "h": "lépés",
+    "e": "step",
+    "m": "Spoken like \"lépés\".",
+    "i": "/leːpeːʃ/"
+  },
+  {
+    "h": "kezdeni",
+    "e": "hand",
+    "m": "Spoken like \"kezdenee\" — hand.",
+    "i": "/kɛzdɛni/"
+  },
+  {
+    "h": "tettek",
+    "e": "you (sing.)",
+    "m": "Spoken like \"tettek\" — you (sing.).",
+    "i": "/tɛtːɛk/"
+  },
+  {
+    "h": "folytasd",
+    "e": "continue (imperative)",
+    "m": "Spoken like \"foytasd\".",
+    "i": "/fojtɒʃd/"
+  },
+  {
+    "h": "reggeli",
+    "e": "morning",
+    "m": "Spoken like \"reggelee\" — morning.",
+    "i": "/rɛɡːɛli/"
+  },
+  {
+    "h": "engedje",
+    "e": "I",
+    "m": "Spoken like \"engedje\" — I.",
+    "i": "/ɛnɡɛdjɛ/"
+  },
+  {
+    "h": "célpont",
+    "e": "target",
+    "m": "Spoken like \"célpont\".",
+    "i": "/t͡seːlpont/"
+  },
+  {
+    "h": "döntöttem",
+    "e": "I decided",
+    "m": "Spoken like \"döntöttem\".",
+    "i": "/døntøtːɛm/"
+  },
+  {
+    "h": "nyissa",
+    "e": "open it (formal)",
+    "m": "Spoken like \"nyeessa\".",
+    "i": "/ɲiʃːɒ/"
+  },
+  {
+    "h": "ajtón",
+    "e": "through the door",
+    "m": "Spoken like \"ajtón\".",
+    "i": "/ɒjtoːn/"
+  },
+  {
+    "h": "éljen",
+    "e": "long live",
+    "m": "Spoken like \"éljen\".",
+    "i": "/eːljɛn/"
+  },
+  {
+    "h": "ágyban",
+    "e": "in bed",
+    "m": "Spoken like \"ádyban\".",
+    "i": "/aːɟbɒn/"
+  },
+  {
+    "h": "magáé",
+    "e": "today",
+    "m": "Spoken like \"magáé\" — today.",
+    "i": "/mɒɡaːeː/"
+  },
+  {
+    "h": "CIA",
+    "e": "CIA",
+    "m": "Spoken like \"ceea\".",
+    "i": "/t͡siɒ/"
+  },
+  {
+    "h": "hadsereg",
+    "e": "if",
+    "m": "Spoken like \"hadsereg\" — if.",
+    "i": "/hɒdʃɛrɛɡ/"
+  },
+  {
+    "h": "másképp",
+    "e": "differently",
+    "m": "Spoken like \"másképp\".",
+    "i": "/maːʃkeːpː/"
+  },
+  {
+    "h": "bűnös",
+    "e": "guilty",
+    "m": "Spoken like \"bűnös\".",
+    "i": "/byːnøʃ/"
+  },
+  {
+    "h": "használja",
+    "e": "if",
+    "m": "Spoken like \"hasnálja\" — if.",
+    "i": "/hɒsnaːljɒ/"
+  },
+  {
+    "h": "embere",
+    "e": "person",
+    "m": "Spoken like \"embere\" — person.",
+    "i": "/ɛmbɛrɛ/"
+  },
+  {
+    "h": "hagyjon",
+    "e": "if",
+    "m": "Spoken like \"hadyjon\" — if.",
+    "i": "/hɒɟjon/"
+  },
+  {
+    "h": "hozzátok",
+    "e": "snow",
+    "m": "Spoken like \"hozzátok\" — snow.",
+    "i": "/hozːaːtok/"
+  },
+  {
+    "h": "vén",
+    "e": "old",
+    "m": "Spoken like \"vén\".",
+    "i": "/veːn/"
+  },
+  {
+    "h": "öcsém",
+    "e": "my little brother",
+    "m": "Spoken like \"öchém\".",
+    "i": "/øtʃeːm/"
+  },
+  {
+    "h": "szóljon",
+    "e": "let him/her speak",
+    "m": "Spoken like \"sóljon\".",
+    "i": "/soːljon/"
+  },
+  {
+    "h": "erősen",
+    "e": "strongly",
+    "m": "Spoken like \"erősen\".",
+    "i": "/ɛrøːʃɛn/"
+  },
+  {
+    "h": "dolgozunk",
+    "e": "we work",
+    "m": "Spoken like \"dolgozoonk\".",
+    "i": "/dolɡozunk/"
+  },
+  {
+    "h": "mami",
+    "e": "today",
+    "m": "Spoken like \"mamee\" — today.",
+    "i": "/mɒmi/"
+  },
+  {
+    "h": "csendben",
+    "e": "in silence",
+    "m": "Spoken like \"chendben\".",
+    "i": "/tʃɛndbɛn/"
+  },
+  {
+    "h": "tény",
+    "e": "fact",
+    "m": "Spoken like \"tény\".",
+    "i": "/teːɲ/"
+  },
+  {
+    "h": "kapcsold",
+    "e": "connect (imperative)",
+    "m": "Spoken like \"kapchold\".",
+    "i": "/kɒptʃold/"
+  },
+  {
+    "h": "show",
+    "e": "show",
+    "m": "Spoken like \"show\".",
+    "i": "/ʃhov/"
+  },
+  {
+    "h": "mélyen",
+    "e": "deeply",
+    "m": "Spoken like \"méyen\".",
+    "i": "/meːjɛn/"
+  },
+  {
+    "h": "mögé",
+    "e": "behind it",
+    "m": "Spoken like \"mögé\".",
+    "i": "/møɡeː/"
+  },
+  {
+    "h": "tőlünk",
+    "e": "from us",
+    "m": "Spoken like \"tőlünk\".",
+    "i": "/tøːlynk/"
+  },
+  {
+    "h": "ellenség",
+    "e": "against",
+    "m": "Spoken like \"ellenség\" — against.",
+    "i": "/ɛlːɛnʃeːɡ/"
+  },
+  {
+    "h": "másnak",
+    "e": "to someone else",
+    "m": "Spoken like \"másnak\".",
+    "i": "/maːʃnɒk/"
+  },
+  {
+    "h": "ajándékot",
+    "e": "gift (acc.)",
+    "m": "Spoken like \"ajándékot\".",
+    "i": "/ɒjaːndeːkot/"
+  },
+  {
+    "h": "féltem",
+    "e": "I was worried",
+    "m": "Spoken like \"féltem\".",
+    "i": "/feːltɛm/"
+  },
+  {
+    "h": "erő",
+    "e": "strength; force",
+    "m": "Spoken like \"erő\".",
+    "i": "/ɛrøː/"
+  },
+  {
+    "h": "tudnod",
+    "e": "knows; can",
+    "m": "Spoken like \"toodnod\" — knows.",
+    "i": "/tudnod/"
+  },
+  {
+    "h": "szánalmas",
+    "e": "pathetic",
+    "m": "Spoken like \"sánalmas\".",
+    "i": "/saːnɒlmɒʃ/"
+  },
+  {
+    "h": "magaddal",
+    "e": "today",
+    "m": "Spoken like \"magaddal\" — today.",
+    "i": "/mɒɡɒdːɒl/"
+  },
+  {
+    "h": "kezdődött",
+    "e": "hand",
+    "m": "Spoken like \"kezdődött\" — hand.",
+    "i": "/kɛzdøːdøtː/"
+  },
+  {
+    "h": "szexuális",
+    "e": "sexual",
+    "m": "Spoken like \"sexooálees\".",
+    "i": "/sɛksuaːliʃ/"
+  },
+  {
+    "h": "emberei",
+    "e": "person",
+    "m": "Spoken like \"embereee\" — person.",
+    "i": "/ɛmbɛrɛi/"
+  },
+  {
+    "h": "hívták",
+    "e": "they called him/her",
+    "m": "Spoken like \"hívták\".",
+    "i": "/hiːvtaːk/"
+  },
+  {
+    "h": "csúnya",
+    "e": "ugly",
+    "m": "Spoken like \"chúnya\".",
+    "i": "/tʃuːɲɒ/"
+  },
+  {
+    "h": "kerülni",
+    "e": "asks; requests",
+    "m": "Spoken like \"kerülnee\" — asks.",
+    "i": "/kɛrylni/"
+  },
+  {
+    "h": "azoknak",
+    "e": "the; that",
+    "m": "Spoken like \"azoknak\" — the.",
+    "i": "/ɒzoknɒk/"
+  },
+  {
+    "h": "próbáljuk",
+    "e": "let's try",
+    "m": "Spoken like \"próbáljook\".",
+    "i": "/proːbaːljuk/"
+  },
+  {
+    "h": "unalmas",
+    "e": "boring",
+    "m": "Spoken like \"oonalmas\".",
+    "i": "/unɒlmɒʃ/"
+  },
+  {
+    "h": "ruha",
+    "e": "clothing",
+    "m": "Spoken like \"rooha\" — clothing.",
+    "i": "/ruhɒ/"
+  },
+  {
+    "h": "információt",
+    "e": "information (acc.)",
+    "m": "Spoken like \"eenformáceeót\".",
+    "i": "/informaːt͡sioːt/"
+  },
+  {
+    "h": "ismerjük",
+    "e": "also; too",
+    "m": "Spoken like \"eesmerjük\" — also.",
+    "i": "/iʃmɛrjyk/"
+  },
+  {
+    "h": "kérdése",
+    "e": "his/her question",
+    "m": "Spoken like \"kérdése\".",
+    "i": "/keːrdeːʃɛ/"
+  },
+  {
+    "h": "találnunk",
+    "e": "maybe",
+    "m": "Spoken like \"találnoonk\" — maybe.",
+    "i": "/tɒlaːlnunk/"
+  },
+  {
+    "h": "akkora",
+    "e": "then",
+    "m": "Spoken like \"akkora\" — then.",
+    "i": "/ɒkːorɒ/"
+  },
+  {
+    "h": "segítesz",
+    "e": "you help",
+    "m": "Spoken like \"segítes\".",
+    "i": "/ʃɛɡiːtɛs/"
+  },
+  {
+    "h": "jársz",
+    "e": "you walk; you go",
+    "m": "Spoken like \"járs\".",
+    "i": "/jaːrs/"
+  },
+  {
+    "h": "belőled",
+    "e": "into; in",
+    "m": "Spoken like \"belőled\" — into.",
+    "i": "/bɛløːlɛd/"
+  },
+  {
+    "h": "gondoltál",
+    "e": "did you think",
+    "m": "Spoken like \"gondoltál\".",
+    "i": "/ɡondoltaːl/"
+  },
+  {
+    "h": "zsidó",
+    "e": "Jewish; Jew",
+    "m": "Spoken like \"zheedó\".",
+    "i": "/ʒidoː/"
+  },
+  {
+    "h": "elérni",
+    "e": "to reach",
+    "m": "Spoken like \"elérnee\".",
+    "i": "/ɛleːrni/"
+  },
+  {
+    "h": "tehetünk",
+    "e": "you (sing.)",
+    "m": "Spoken like \"tehetünk\" — you (sing.).",
+    "i": "/tɛhɛtynk/"
+  },
+  {
+    "h": "mindegyik",
+    "e": "what; we",
+    "m": "Spoken like \"meendedyeek\" — what.",
+    "i": "/mindɛɟik/"
+  },
+  {
+    "h": "maradunk",
+    "e": "already",
+    "m": "Spoken like \"maradoonk\" — already.",
+    "i": "/mɒrɒdunk/"
+  },
+  {
+    "h": "megnézni",
+    "e": "still; yet",
+    "m": "Spoken like \"megnéznee\" — still.",
+    "i": "/mɛɡneːzni/"
+  },
+  {
+    "h": "öregem",
+    "e": "old man; mate",
+    "m": "Spoken like \"öregem\".",
+    "i": "/ørɛɡɛm/"
+  },
+  {
+    "h": "ismerlek",
+    "e": "also; too",
+    "m": "Spoken like \"eesmerlek\" — also.",
+    "i": "/iʃmɛrlɛk/"
+  },
+  {
+    "h": "öltem",
+    "e": "I killed",
+    "m": "Spoken like \"öltem\".",
+    "i": "/øltɛm/"
+  },
+  {
+    "h": "értünk",
+    "e": "for us",
+    "m": "Spoken like \"értünk\".",
+    "i": "/eːrtynk/"
+  },
+  {
+    "h": "asszem",
+    "e": "I think (short)",
+    "m": "Spoken like \"assem\".",
+    "i": "/ɒsːɛm/"
+  },
+  {
+    "h": "lánnyal",
+    "e": "with a girl",
+    "m": "Spoken like \"lánnyal\".",
+    "i": "/laːɲːɒl/"
+  },
+  {
+    "h": "látják",
+    "e": "they see",
+    "m": "Spoken like \"látják\".",
+    "i": "/laːtjaːk/"
+  },
+  {
+    "h": "tegyen",
+    "e": "you (sing.)",
+    "m": "Spoken like \"tedyen\" — you (sing.).",
+    "i": "/tɛɟɛn/"
+  },
+  {
+    "h": "hagyjátok",
+    "e": "if",
+    "m": "Spoken like \"hadyjátok\" — if.",
+    "i": "/hɒɟjaːtok/"
+  },
+  {
+    "h": "csinálják",
+    "e": "they do it",
+    "m": "Spoken like \"cheenálják\".",
+    "i": "/tʃinaːljaːk/"
+  },
+  {
+    "h": "szükségük",
+    "e": "they need",
+    "m": "Spoken like \"sükségük\".",
+    "i": "/sykʃeːɡyk/"
+  },
+  {
+    "h": "játékot",
+    "e": "game (acc.)",
+    "m": "Spoken like \"játékot\".",
+    "i": "/jaːteːkot/"
+  },
+  {
+    "h": "percig",
+    "e": "for a minute",
+    "m": "Spoken like \"perceeg\".",
+    "i": "/pɛrt͡siɡ/"
+  },
+  {
+    "h": "értékelem",
+    "e": "I appreciate",
+    "m": "Spoken like \"értékelem\".",
+    "i": "/eːrteːkɛlɛm/"
+  },
+  {
+    "h": "emberrel",
+    "e": "person",
+    "m": "Spoken like \"emberrel\" — person.",
+    "i": "/ɛmbɛrːɛl/"
+  },
+  {
+    "h": "feleségét",
+    "e": "up",
+    "m": "Spoken like \"feleségét\" — up.",
+    "i": "/fɛlɛʃeːɡeːt/"
+  },
+  {
+    "h": "üzenet",
+    "e": "message",
+    "m": "Spoken like \"üzenet\".",
+    "i": "/yzɛnɛt/"
+  },
+  {
+    "h": "kamera",
+    "e": "camera",
+    "m": "Spoken like \"kamera\".",
+    "i": "/kɒmɛrɒ/"
+  },
+  {
+    "h": "jelentést",
+    "e": "report (acc.)",
+    "m": "Spoken like \"jelentést\".",
+    "i": "/jɛlɛnteːʃt/"
+  },
+  {
+    "h": "atya",
+    "e": "father",
+    "m": "Spoken like \"atya\".",
+    "i": "/ɒcɒ/"
+  },
+  {
+    "h": "disznó",
+    "e": "pig",
+    "m": "Spoken like \"deesnó\".",
+    "i": "/disnoː/"
+  },
+  {
+    "h": "tudnia",
+    "e": "knows; can",
+    "m": "Spoken like \"toodneea\" — knows.",
+    "i": "/tudniɒ/"
+  },
+  {
+    "h": "levegő",
+    "e": "down",
+    "m": "Spoken like \"levegő\" — down.",
+    "i": "/lɛvɛɡøː/"
+  },
+  {
+    "h": "megtaláltuk",
+    "e": "still; yet",
+    "m": "Spoken like \"megtaláltook\" — still.",
+    "i": "/mɛɡtɒlaːltuk/"
+  },
+  {
+    "h": "látták",
+    "e": "they saw",
+    "m": "Spoken like \"látták\".",
+    "i": "/laːtːaːk/"
+  },
+  {
+    "h": "olyasmi",
+    "e": "something like that",
+    "m": "Spoken like \"oyasmee\".",
+    "i": "/ojɒʃmi/"
+  },
+  {
+    "h": "vársz",
+    "e": "you wait",
+    "m": "Spoken like \"várs\".",
+    "i": "/vaːrs/"
+  },
+  {
+    "h": "nézzem",
+    "e": "let me look",
+    "m": "Spoken like \"nézzem\".",
+    "i": "/neːzːɛm/"
+  },
+  {
+    "h": "máshol",
+    "e": "elsewhere",
+    "m": "Spoken like \"máshol\".",
+    "i": "/maːʃhol/"
+  },
+  {
+    "h": "akárcsak",
+    "e": "just like",
+    "m": "Spoken like \"akárchak\".",
+    "i": "/ɒkaːrtʃɒk/"
+  },
+  {
+    "h": "belőlem",
+    "e": "into; in",
+    "m": "Spoken like \"belőlem\" — into.",
+    "i": "/bɛløːlɛm/"
+  },
+  {
+    "h": "parti",
+    "e": "party",
+    "m": "Spoken like \"partee\".",
+    "i": "/pɒrti/"
+  },
+  {
+    "h": "hármas",
+    "e": "triple; threesome",
+    "m": "Spoken like \"hármas\".",
+    "i": "/haːrmɒʃ/"
+  },
+  {
+    "h": "kedvéért",
+    "e": "for the sake of",
+    "m": "Spoken like \"kedvéért\".",
+    "i": "/kɛdveːeːrt/"
+  },
+  {
+    "h": "tartanak",
+    "e": "they hold; they last",
+    "m": "Spoken like \"tartanak\".",
+    "i": "/tɒrtɒnɒk/"
+  },
+  {
+    "h": "utca",
+    "e": "street",
+    "m": "Spoken like \"ootca\" — street.",
+    "i": "/utt͡sɒ/"
+  },
+  {
+    "h": "valamikor",
+    "e": "sometime",
+    "m": "Spoken like \"valameekor\".",
+    "i": "/vɒlɒmikor/"
+  },
+  {
+    "h": "órával",
+    "e": "with an hour",
+    "m": "Spoken like \"órával\".",
+    "i": "/oːraːvɒl/"
+  },
+  {
+    "h": "döntés",
+    "e": "decision",
+    "m": "Spoken like \"döntés\".",
+    "i": "/dønteːʃ/"
+  },
+  {
+    "h": "engedélyt",
+    "e": "I",
+    "m": "Spoken like \"engedéyt\" — I.",
+    "i": "/ɛnɡɛdeːjt/"
+  },
+  {
+    "h": "elveszett",
+    "e": "lost",
+    "m": "Spoken like \"elvesett\".",
+    "i": "/ɛlvɛsɛtː/"
+  },
+  {
+    "h": "megőrültél",
+    "e": "still; yet",
+    "m": "Spoken like \"megőrültél\" — still.",
+    "i": "/mɛɡøːrylteːl/"
+  },
+  {
+    "h": "iskolában",
+    "e": "also; too",
+    "m": "Spoken like \"eeskolában\" — also.",
+    "i": "/iʃkolaːbɒn/"
+  },
+  {
+    "h": "veszélyben",
+    "e": "buys; takes",
+    "m": "Spoken like \"veséyben\" — buys.",
+    "i": "/vɛseːjbɛn/"
+  },
+  {
+    "h": "használd",
+    "e": "if",
+    "m": "Spoken like \"hasnáld\" — if.",
+    "i": "/hɒsnaːld/"
+  },
+  {
+    "h": "edző",
+    "e": "coach",
+    "m": "Spoken like \"edző\".",
+    "i": "/ɛdzøː/"
+  },
+  {
+    "h": "próbálj",
+    "e": "try (imperative)",
+    "m": "Spoken like \"próbálj\".",
+    "i": "/proːbaːlj/"
+  },
+  {
+    "h": "képzeld",
+    "e": "imagine (imperative)",
+    "m": "Spoken like \"képzeld\".",
+    "i": "/keːpzɛld/"
+  },
+  {
+    "h": "gyermek",
+    "e": "child",
+    "m": "Spoken like \"dyermek\".",
+    "i": "/ɟɛrmɛk/"
+  },
+  {
+    "h": "bank",
+    "e": "bank",
+    "m": "Spoken like \"bank\".",
+    "i": "/bɒnk/"
+  },
+  {
+    "h": "hányszor",
+    "e": "how many times",
+    "m": "Spoken like \"hánysor\".",
+    "i": "/haːɲsor/"
+  },
+  {
+    "h": "hibád",
+    "e": "your fault",
+    "m": "Spoken like \"heebád\".",
+    "i": "/hibaːd/"
+  },
+  {
+    "h": "titokban",
+    "e": "in secret",
+    "m": "Spoken like \"teetokban\".",
+    "i": "/titokbɒn/"
+  },
+  {
+    "h": "szellem",
+    "e": "wind; edge",
+    "m": "Spoken like \"sellem\" — wind.",
+    "i": "/sɛlːɛm/"
+  },
+  {
+    "h": "profi",
+    "e": "professional",
+    "m": "Spoken like \"profee\".",
+    "i": "/profi/"
+  },
+  {
+    "h": "keressük",
+    "e": "asks; requests",
+    "m": "Spoken like \"keressük\" — asks.",
+    "i": "/kɛrɛʃːyk/"
+  },
+  {
+    "h": "kezeket",
+    "e": "hand",
+    "m": "Spoken like \"kezeket\" — hand.",
+    "i": "/kɛzɛkɛt/"
+  },
+  {
+    "h": "vak",
+    "e": "blind",
+    "m": "Spoken like \"vak\".",
+    "i": "/vɒk/"
+  },
+  {
+    "h": "hajón",
+    "e": "if",
+    "m": "Spoken like \"hajón\" — if.",
+    "i": "/hɒjoːn/"
+  },
+  {
+    "h": "feledd",
+    "e": "up",
+    "m": "Spoken like \"feledd\" — up.",
+    "i": "/fɛlɛdː/"
+  },
+  {
+    "h": "felügyelő",
+    "e": "up",
+    "m": "Spoken like \"felüdyelő\" — up.",
+    "i": "/fɛlyɟɛløː/"
+  },
+  {
+    "h": "nélküled",
+    "e": "without you",
+    "m": "Spoken like \"nélküled\".",
+    "i": "/neːlkylɛd/"
+  },
+  {
+    "h": "kellenek",
+    "e": "must; is needed",
+    "m": "Spoken like \"kellenek\" — must.",
+    "i": "/kɛlːɛnɛk/"
+  },
+  {
+    "h": "nyilvánvaló",
+    "e": "obvious",
+    "m": "Spoken like \"nyeelvánvaló\".",
+    "i": "/ɲilvaːnvɒloː/"
+  },
+  {
+    "h": "lőni",
+    "e": "to shoot",
+    "m": "Spoken like \"lőnee\".",
+    "i": "/løːni/"
+  },
+  {
+    "h": "vigyél",
+    "e": "take (imperative)",
+    "m": "Spoken like \"veedyél\".",
+    "i": "/viɟeːl/"
+  },
+  {
+    "h": "had",
+    "e": "if",
+    "m": "Spoken like \"had\" — if.",
+    "i": "/hɒd/"
+  },
+  {
+    "h": "estére",
+    "e": "and",
+    "m": "Spoken like \"estére\" — and.",
+    "i": "/ɛʃteːrɛ/"
+  },
+  {
+    "h": "szólva",
+    "e": "speaking; calling",
+    "m": "Spoken like \"sólva\".",
+    "i": "/soːlvɒ/"
+  },
+  {
+    "h": "csináltok",
+    "e": "you (plural) do",
+    "m": "Spoken like \"cheenáltok\".",
+    "i": "/tʃinaːltok/"
+  },
+  {
+    "h": "érzel",
+    "e": "you feel",
+    "m": "Spoken like \"érzel\".",
+    "i": "/eːrzɛl/"
+  },
+  {
+    "h": "ifjú",
+    "e": "young",
+    "m": "Spoken like \"eefjú\".",
+    "i": "/ifjuː/"
+  },
+  {
+    "h": "folyamatosan",
+    "e": "continuously",
+    "m": "Spoken like \"foyamatosan\".",
+    "i": "/fojɒmɒtoʃɒn/"
+  },
+  {
+    "h": "kuss",
+    "e": "shut up",
+    "m": "Spoken like \"kooss\".",
+    "i": "/kuʃː/"
+  },
+  {
+    "h": "ütött",
+    "e": "struck; hit",
+    "m": "Spoken like \"ütött\".",
+    "i": "/ytøtː/"
+  },
+  {
+    "h": "lennénk",
+    "e": "down",
+    "m": "Spoken like \"lennénk\" — down.",
+    "i": "/lɛnːeːnk/"
+  },
+  {
+    "h": "küldte",
+    "e": "he/she sent",
+    "m": "Spoken like \"küldte\".",
+    "i": "/kyldtɛ/"
+  },
+  {
+    "h": "tanár",
+    "e": "teacher",
+    "m": "Spoken like \"tanár\".",
+    "i": "/tɒnaːr/"
+  },
+  {
+    "h": "anyag",
+    "e": "mother",
+    "m": "Spoken like \"anyag\" — mother.",
+    "i": "/ɒɲɒɡ/"
+  },
+  {
+    "h": "helyzetben",
+    "e": "in the situation",
+    "m": "Spoken like \"heyzetben\".",
+    "i": "/hɛjzɛtbɛn/"
+  },
+  {
+    "h": "mondanak",
+    "e": "says",
+    "m": "Spoken like \"mondanak\" — says.",
+    "i": "/mondɒnɒk/"
+  },
+  {
+    "h": "kövér",
+    "e": "fat",
+    "m": "Spoken like \"kövér\".",
+    "i": "/køveːr/"
+  },
+  {
+    "h": "segged",
+    "e": "your ass",
+    "m": "Spoken like \"segged\".",
+    "i": "/ʃɛɡːɛd/"
+  },
+  {
+    "h": "utóbbi",
+    "e": "road; way",
+    "m": "Spoken like \"ootóbbee\" — road.",
+    "i": "/utoːbːi/"
+  },
+  {
+    "h": "fa",
+    "e": "tree",
+    "m": "Spoken like \"fa\" — tree.",
+    "i": "/fɒ/"
+  },
+  {
+    "h": "felnőtt",
+    "e": "up",
+    "m": "Spoken like \"felnőtt\" — up.",
+    "i": "/fɛlnøːtː/"
+  },
+  {
+    "h": "ismeretlen",
+    "e": "also; too",
+    "m": "Spoken like \"eesmeretlen\" — also.",
+    "i": "/iʃmɛrɛtlɛn/"
+  },
+  {
+    "h": "egyelőre",
+    "e": "one; a",
+    "m": "Spoken like \"edyelőre\" — one.",
+    "i": "/ɛɟɛløːrɛ/"
+  },
+  {
+    "h": "módja",
+    "e": "way; method",
+    "m": "Spoken like \"módja\".",
+    "i": "/moːdjɒ/"
+  },
+  {
+    "h": "kim",
+    "e": "who; out",
+    "m": "Spoken like \"keem\" — who.",
+    "i": "/kim/"
+  },
+  {
+    "h": "nőket",
+    "e": "women (acc.)",
+    "m": "Spoken like \"nőket\".",
+    "i": "/nøːkɛt/"
+  },
+  {
+    "h": "hagyod",
+    "e": "if",
+    "m": "Spoken like \"hadyod\" — if.",
+    "i": "/hɒɟod/"
+  },
+  {
+    "h": "jutni",
+    "e": "to reach; to get",
+    "m": "Spoken like \"jootnee\".",
+    "i": "/jutni/"
+  },
+  {
+    "h": "eszed",
+    "e": "and",
+    "m": "Spoken like \"esed\" — and.",
+    "i": "/ɛsɛd/"
+  },
+  {
+    "h": "baromság",
+    "e": "nonsense; bullshit",
+    "m": "Spoken like \"baromság\".",
+    "i": "/bɒromʃaːɡ/"
+  },
+  {
+    "h": "okés",
+    "e": "okay",
+    "m": "Spoken like \"okés\".",
+    "i": "/okeːʃ/"
+  },
+  {
+    "h": "kérdezni",
+    "e": "to ask",
+    "m": "Spoken like \"kérdeznee\".",
+    "i": "/keːrdɛzni/"
+  },
+  {
+    "h": "nagyra",
+    "e": "big",
+    "m": "Spoken like \"nadyra\" — big.",
+    "i": "/nɒɟrɒ/"
+  },
+  {
+    "h": "harcos",
+    "e": "if",
+    "m": "Spoken like \"harcos\" — if.",
+    "i": "/hɒrt͡soʃ/"
+  },
+  {
+    "h": "mondhatom",
+    "e": "says",
+    "m": "Spoken like \"mondhatom\" — says.",
+    "i": "/mondhɒtom/"
+  },
+  {
+    "h": "lábam",
+    "e": "my leg; my foot",
+    "m": "Spoken like \"lábam\".",
+    "i": "/laːbɒm/"
+  },
+  {
+    "h": "mellettem",
+    "e": "next to",
+    "m": "Spoken like \"mellettem\" — next to.",
+    "i": "/mɛlːɛtːɛm/"
+  },
+  {
+    "h": "kézzel",
+    "e": "by hand",
+    "m": "Spoken like \"kézzel\".",
+    "i": "/keːzːɛl/"
+  },
+  {
+    "h": "szöveg",
+    "e": "text",
+    "m": "Spoken like \"söveg\".",
+    "i": "/søvɛɡ/"
+  },
+  {
+    "h": "háborút",
+    "e": "war (acc.)",
+    "m": "Spoken like \"háborút\".",
+    "i": "/haːboruːt/"
+  },
+  {
+    "h": "követni",
+    "e": "to follow",
+    "m": "Spoken like \"követnee\".",
+    "i": "/køvɛtni/"
+  },
+  {
+    "h": "hétvégén",
+    "e": "on the weekend",
+    "m": "Spoken like \"hétvégén\".",
+    "i": "/heːtveːɡeːn/"
+  },
+  {
+    "h": "állást",
+    "e": "job (acc.)",
+    "m": "Spoken like \"állást\".",
+    "i": "/aːlːaːʃt/"
+  },
+  {
+    "h": "tegyünk",
+    "e": "you (sing.)",
+    "m": "Spoken like \"tedyünk\" — you (sing.).",
+    "i": "/tɛɟynk/"
+  },
+  {
+    "h": "tönkre",
+    "e": "to ruin",
+    "m": "Spoken like \"tönkre\".",
+    "i": "/tønkrɛ/"
+  },
+  {
+    "h": "borzalmas",
+    "e": "wine",
+    "m": "Spoken like \"borzalmas\" — wine.",
+    "i": "/borzɒlmɒʃ/"
+  },
+  {
+    "h": "megértetted",
+    "e": "still; yet",
+    "m": "Spoken like \"megértetted\" — still.",
+    "i": "/mɛɡeːrtɛtːɛd/"
+  },
+  {
+    "h": "nőnek",
+    "e": "to women",
+    "m": "Spoken like \"nőnek\".",
+    "i": "/nøːnɛk/"
+  },
+  {
+    "h": "örök",
+    "e": "eternal",
+    "m": "Spoken like \"örök\".",
+    "i": "/ørøk/"
+  },
+  {
+    "h": "fej",
+    "e": "head",
+    "m": "Spoken like \"fej\" — head.",
+    "i": "/fɛj/"
+  },
+  {
+    "h": "csendes",
+    "e": "quiet",
+    "m": "Spoken like \"chendes\".",
+    "i": "/tʃɛndɛʃ/"
+  },
+  {
+    "h": "ébredj",
+    "e": "wake up (imperative)",
+    "m": "Spoken like \"ébredj\".",
+    "i": "/eːbrɛdj/"
+  },
+  {
+    "h": "amennyit",
+    "e": "as much as (acc.)",
+    "m": "Spoken like \"amennyeet\".",
+    "i": "/ɒmɛɲːit/"
+  },
+  {
+    "h": "hívta",
+    "e": "he/she called",
+    "m": "Spoken like \"hívta\".",
+    "i": "/hiːvtɒ/"
+  },
+  {
+    "h": "száma",
+    "e": "his/her number",
+    "m": "Spoken like \"sáma\".",
+    "i": "/saːmɒ/"
+  },
+  {
+    "h": "megvolt",
+    "e": "still; yet",
+    "m": "Spoken like \"megvolt\" — still.",
+    "i": "/mɛɡvolt/"
+  },
+  {
+    "h": "idáig",
+    "e": "up to here; so far",
+    "m": "Spoken like \"eedáeeg\".",
+    "i": "/idaːiɡ/"
+  },
+  {
+    "h": "ugyanezt",
+    "e": "so; that way",
+    "m": "Spoken like \"oodyanezt\" — so.",
+    "i": "/uɟɒnɛzt/"
+  },
+  {
+    "h": "karácsonyt",
+    "e": "arm",
+    "m": "Spoken like \"karáchonyt\" — arm.",
+    "i": "/kɒraːtʃoɲt/"
+  },
+  {
+    "h": "kulcsot",
+    "e": "key (acc.)",
+    "m": "Spoken like \"koolchot\".",
+    "i": "/kultʃot/"
+  },
+  {
+    "h": "tegyél",
+    "e": "you (sing.)",
+    "m": "Spoken like \"tedyél\" — you (sing.).",
+    "i": "/tɛɟeːl/"
+  },
+  {
+    "h": "tőlük",
+    "e": "from them",
+    "m": "Spoken like \"tőlük\".",
+    "i": "/tøːlyk/"
+  },
+  {
+    "h": "keresett",
+    "e": "asks; requests",
+    "m": "Spoken like \"keresett\" — asks.",
+    "i": "/kɛrɛʃɛtː/"
+  },
+  {
+    "h": "vasárnap",
+    "e": "Sunday",
+    "m": "Spoken like \"vasárnap\".",
+    "i": "/vɒʃaːrnɒp/"
+  },
+  {
+    "h": "katonák",
+    "e": "soldiers",
+    "m": "Spoken like \"katonák\".",
+    "i": "/kɒtonaːk/"
+  },
+  {
+    "h": "akiknek",
+    "e": "to whom (relative, plural)",
+    "m": "Spoken like \"akeeknek\".",
+    "i": "/ɒkiknɛk/"
+  },
+  {
+    "h": "nézzenek",
+    "e": "look (formal, plural)",
+    "m": "Spoken like \"nézzenek\".",
+    "i": "/neːzːɛnɛk/"
+  },
+  {
+    "h": "nagyjából",
+    "e": "big",
+    "m": "Spoken like \"nadyjából\" — big.",
+    "i": "/nɒɟjaːboːl/"
+  },
+  {
+    "h": "tartozol",
+    "e": "you owe",
+    "m": "Spoken like \"tartozol\".",
+    "i": "/tɒrtozol/"
+  },
+  {
+    "h": "alak",
+    "e": "form; shape",
+    "m": "Spoken like \"alak\".",
+    "i": "/ɒlɒk/"
+  },
+  {
+    "h": "szokásos",
+    "e": "word",
+    "m": "Spoken like \"sokásos\" — word.",
+    "i": "/sokaːʃoʃ/"
+  },
+  {
+    "h": "kerestem",
+    "e": "asks; requests",
+    "m": "Spoken like \"kerestem\" — asks.",
+    "i": "/kɛrɛʃtɛm/"
+  },
+  {
+    "h": "hívtam",
+    "e": "I called",
+    "m": "Spoken like \"hívtam\".",
+    "i": "/hiːvtɒm/"
+  },
+  {
+    "h": "teát",
+    "e": "you (sing.)",
+    "m": "Spoken like \"teát\" — you (sing.).",
+    "i": "/tɛaːt/"
+  },
+  {
+    "h": "érek",
+    "e": "I reach; I'm worth",
+    "m": "Spoken like \"érek\".",
+    "i": "/eːrɛk/"
+  },
+  {
+    "h": "harc",
+    "e": "if",
+    "m": "Spoken like \"harc\" — if.",
+    "i": "/hɒrt͡s/"
+  },
+  {
+    "h": "magamat",
+    "e": "today",
+    "m": "Spoken like \"magamat\" — today.",
+    "i": "/mɒɡɒmɒt/"
+  },
+  {
+    "h": "tudnánk",
+    "e": "knows; can",
+    "m": "Spoken like \"toodnánk\" — knows.",
+    "i": "/tudnaːnk/"
+  },
+  {
+    "h": "habár",
+    "e": "if",
+    "m": "Spoken like \"habár\" — if.",
+    "i": "/hɒbaːr/"
+  },
+  {
+    "h": "környéken",
+    "e": "in the area",
+    "m": "Spoken like \"környéken\".",
+    "i": "/kørɲeːkɛn/"
+  },
+  {
+    "h": "megsérült",
+    "e": "still; yet",
+    "m": "Spoken like \"megsérült\" — still.",
+    "i": "/mɛɡʃeːrylt/"
+  },
+  {
+    "h": "sara",
+    "e": "Sara",
+    "m": "Spoken like \"sara\".",
+    "i": "/ʃɒrɒ/"
+  },
+  {
+    "h": "cucc",
+    "e": "stuff",
+    "m": "Spoken like \"coocc\".",
+    "i": "/t͡sut͡sː/"
+  },
+  {
+    "h": "tudták",
+    "e": "knows; can",
+    "m": "Spoken like \"toodták\" — knows.",
+    "i": "/tudtaːk/"
+  },
+  {
+    "h": "ötlete",
+    "e": "his/her idea",
+    "m": "Spoken like \"ötlete\".",
+    "i": "/øtlɛtɛ/"
+  },
+  {
+    "h": "megölöm",
+    "e": "still; yet",
+    "m": "Spoken like \"megölöm\" — still.",
+    "i": "/mɛɡøløm/"
+  },
+  {
+    "h": "tudjam",
+    "e": "knows; can",
+    "m": "Spoken like \"toodjam\" — knows.",
+    "i": "/tudjɒm/"
+  },
+  {
+    "h": "seriff",
+    "e": "sheriff",
+    "m": "Spoken like \"sereeff\".",
+    "i": "/ʃɛrifː/"
+  },
+  {
+    "h": "mindennek",
+    "e": "what; we",
+    "m": "Spoken like \"meendennek\" — what.",
+    "i": "/mindɛnːɛk/"
+  },
+  {
+    "h": "házba",
+    "e": "into the house",
+    "m": "Spoken like \"házba\".",
+    "i": "/haːzbɒ/"
+  },
+  {
+    "h": "találok",
+    "e": "maybe",
+    "m": "Spoken like \"találok\" — maybe.",
+    "i": "/tɒlaːlok/"
+  },
+  {
+    "h": "szeretik",
+    "e": "loves; likes",
+    "m": "Spoken like \"sereteek\" — loves.",
+    "i": "/sɛrɛtik/"
+  },
+  {
+    "h": "megmondani",
+    "e": "still; yet",
+    "m": "Spoken like \"megmondanee\" — still.",
+    "i": "/mɛɡmondɒni/"
+  },
+  {
+    "h": "valamiféle",
+    "e": "some kind of",
+    "m": "Spoken like \"valameeféle\".",
+    "i": "/vɒlɒmifeːlɛ/"
+  },
+  {
+    "h": "gyáva",
+    "e": "cowardly",
+    "m": "Spoken like \"dyáva\".",
+    "i": "/ɟaːvɒ/"
+  },
+  {
+    "h": "lábad",
+    "e": "your leg; your foot",
+    "m": "Spoken like \"lábad\".",
+    "i": "/laːbɒd/"
+  },
+  {
+    "h": "hazudott",
+    "e": "if",
+    "m": "Spoken like \"hazoodott\" — if.",
+    "i": "/hɒzudotː/"
+  },
+  {
+    "h": "kaja",
+    "e": "food (slang)",
+    "m": "Spoken like \"kaja\".",
+    "i": "/kɒjɒ/"
+  },
+  {
+    "h": "eszem",
+    "e": "and",
+    "m": "Spoken like \"esem\" — and.",
+    "i": "/ɛsɛm/"
+  },
+  {
+    "h": "idős",
+    "e": "elderly",
+    "m": "Spoken like \"eedős\".",
+    "i": "/idøːʃ/"
+  },
+  {
+    "h": "meglátod",
+    "e": "still; yet",
+    "m": "Spoken like \"meglátod\" — still.",
+    "i": "/mɛɡlaːtod/"
+  },
+  {
+    "h": "hónappal",
+    "e": "with a month",
+    "m": "Spoken like \"hónappal\".",
+    "i": "/hoːnɒpːɒl/"
+  },
+  {
+    "h": "felhívom",
+    "e": "up",
+    "m": "Spoken like \"felhívom\" — up.",
+    "i": "/fɛlhiːvom/"
+  },
+  {
+    "h": "figyel",
+    "e": "pays attention",
+    "m": "Spoken like \"feedyel\".",
+    "i": "/fiɟɛl/"
+  },
+  {
+    "h": "mentél",
+    "e": "went",
+    "m": "Spoken like \"mentél\" — went.",
+    "i": "/mɛnteːl/"
+  },
+  {
+    "h": "csoport",
+    "e": "group",
+    "m": "Spoken like \"choport\".",
+    "i": "/tʃoport/"
+  },
+  {
+    "h": "telefonon",
+    "e": "you (sing.)",
+    "m": "Spoken like \"telefonon\" — you (sing.).",
+    "i": "/tɛlɛfonon/"
+  },
+  {
+    "h": "kezdek",
+    "e": "hand",
+    "m": "Spoken like \"kezdek\" — hand.",
+    "i": "/kɛzdɛk/"
+  },
+  {
+    "h": "jelet",
+    "e": "sign (acc.)",
+    "m": "Spoken like \"jelet\".",
+    "i": "/jɛlɛt/"
+  },
+  {
+    "h": "csupa",
+    "e": "all; full of",
+    "m": "Spoken like \"choopa\".",
+    "i": "/tʃupɒ/"
+  },
+  {
+    "h": "tartják",
+    "e": "they hold; they consider",
+    "m": "Spoken like \"tartják\".",
+    "i": "/tɒrtjaːk/"
+  },
+  {
+    "h": "bolygó",
+    "e": "planet",
+    "m": "Spoken like \"boygó\".",
+    "i": "/bojɡoː/"
+  },
+  {
+    "h": "ahová",
+    "e": "where to (relative)",
+    "m": "Spoken like \"ahová\".",
+    "i": "/ɒhovaː/"
+  },
+  {
+    "h": "változott",
+    "e": "changed",
+    "m": "Spoken like \"változott\".",
+    "i": "/vaːltozotː/"
+  },
+  {
+    "h": "láttuk",
+    "e": "we saw",
+    "m": "Spoken like \"láttook\".",
+    "i": "/laːtːuk/"
+  },
+  {
+    "h": "oldalán",
+    "e": "on its side",
+    "m": "Spoken like \"oldalán\".",
+    "i": "/oldɒlaːn/"
+  },
+  {
+    "h": "lefelé",
+    "e": "down",
+    "m": "Spoken like \"lefelé\" — down.",
+    "i": "/lɛfɛleː/"
+  },
+  {
+    "h": "állítja",
+    "e": "he/she claims",
+    "m": "Spoken like \"állítja\".",
+    "i": "/aːlːiːtjɒ/"
+  },
+  {
+    "h": "pisztolyt",
+    "e": "pistol (acc.)",
+    "m": "Spoken like \"peestoyt\".",
+    "i": "/pistojt/"
+  },
+  {
+    "h": "visszajön",
+    "e": "he/she comes back",
+    "m": "Spoken like \"veessajön\".",
+    "i": "/visːɒjøn/"
+  },
+  {
+    "h": "fiad",
+    "e": "your son",
+    "m": "Spoken like \"feead\".",
+    "i": "/fiɒd/"
+  },
+  {
+    "h": "életre",
+    "e": "to life",
+    "m": "Spoken like \"életre\".",
+    "i": "/eːlɛtrɛ/"
+  },
+  {
+    "h": "barátnője",
+    "e": "his/her girlfriend",
+    "m": "Spoken like \"barátnője\".",
+    "i": "/bɒraːtnøːjɛ/"
+  },
+  {
+    "h": "döntést",
+    "e": "decision (acc.)",
+    "m": "Spoken like \"döntést\".",
+    "i": "/dønteːʃt/"
+  },
+  {
+    "h": "kapta",
+    "e": "he/she got it",
+    "m": "Spoken like \"kapta\".",
+    "i": "/kɒptɒ/"
+  },
+  {
+    "h": "útra",
+    "e": "on a journey",
+    "m": "Spoken like \"útra\".",
+    "i": "/uːtrɒ/"
+  },
+  {
+    "h": "kérte",
+    "e": "he/she asked for",
+    "m": "Spoken like \"kérte\".",
+    "i": "/keːrtɛ/"
+  },
+  {
+    "h": "helyzetet",
+    "e": "situation (acc.)",
+    "m": "Spoken like \"heyzetet\".",
+    "i": "/hɛjzɛtɛt/"
+  },
+  {
+    "h": "amelyik",
+    "e": "which (one)",
+    "m": "Spoken like \"ameyeek\".",
+    "i": "/ɒmɛjik/"
+  },
+  {
+    "h": "magamra",
+    "e": "today",
+    "m": "Spoken like \"magamra\" — today.",
+    "i": "/mɒɡɒmrɒ/"
+  },
+  {
+    "h": "hagytad",
+    "e": "if",
+    "m": "Spoken like \"hadytad\" — if.",
+    "i": "/hɒɟtɒd/"
+  },
+  {
+    "h": "hazudsz",
+    "e": "if",
+    "m": "Spoken like \"hazoods\" — if.",
+    "i": "/hɒzuds/"
+  },
+  {
+    "h": "apámat",
+    "e": "my father (acc.)",
+    "m": "Spoken like \"apámat\".",
+    "i": "/ɒpaːmɒt/"
+  },
+  {
+    "h": "béke",
+    "e": "peace",
+    "m": "Spoken like \"béke\".",
+    "i": "/beːkɛ/"
+  },
+  {
+    "h": "próbál",
+    "e": "tries",
+    "m": "Spoken like \"próbál\".",
+    "i": "/proːbaːl/"
+  },
+  {
+    "h": "ébren",
+    "e": "awake",
+    "m": "Spoken like \"ébren\".",
+    "i": "/eːbrɛn/"
+  },
+  {
+    "h": "életében",
+    "e": "in his/her life",
+    "m": "Spoken like \"életében\".",
+    "i": "/eːlɛteːbɛn/"
+  },
+  {
+    "h": "mindenütt",
+    "e": "what; we",
+    "m": "Spoken like \"meendenütt\" — what.",
+    "i": "/mindɛnytː/"
+  },
+  {
+    "h": "úgysem",
+    "e": "anyway not",
+    "m": "Spoken like \"údysem\".",
+    "i": "/uːɟʃɛm/"
+  },
+  {
+    "h": "fogalmad",
+    "e": "tooth",
+    "m": "Spoken like \"fogalmad\" — tooth.",
+    "i": "/foɡɒlmɒd/"
+  },
+  {
+    "h": "pontos",
+    "e": "exact; precise",
+    "m": "Spoken like \"pontos\".",
+    "i": "/pontoʃ/"
+  },
+  {
+    "h": "vigyék",
+    "e": "take them (imperative)",
+    "m": "Spoken like \"veedyék\".",
+    "i": "/viɟeːk/"
+  },
+  {
+    "h": "elviszem",
+    "e": "I'll take it",
+    "m": "Spoken like \"elveesem\".",
+    "i": "/ɛlvisɛm/"
+  },
+  {
+    "h": "döntött",
+    "e": "he/she decided",
+    "m": "Spoken like \"döntött\".",
+    "i": "/døntøtː/"
+  },
+  {
+    "h": "találkozott",
+    "e": "maybe",
+    "m": "Spoken like \"találkozott\" — maybe.",
+    "i": "/tɒlaːlkozotː/"
+  },
+  {
+    "h": "golyó",
+    "e": "bullet",
+    "m": "Spoken like \"goyó\".",
+    "i": "/ɡojoː/"
+  },
+  {
+    "h": "tanács",
+    "e": "advice",
+    "m": "Spoken like \"tanách\".",
+    "i": "/tɒnaːtʃ/"
+  },
+  {
+    "h": "királynő",
+    "e": "who; out",
+    "m": "Spoken like \"keeráynő\" — who.",
+    "i": "/kiraːjnøː/"
+  },
+  {
+    "h": "mára",
+    "e": "for today",
+    "m": "Spoken like \"mára\".",
+    "i": "/maːrɒ/"
+  },
+  {
+    "h": "labdát",
+    "e": "leg; foot",
+    "m": "Spoken like \"labdát\" — leg.",
+    "i": "/lɒbdaːt/"
+  },
+  {
+    "h": "közelében",
+    "e": "near it",
+    "m": "Spoken like \"közelében\".",
+    "i": "/køzɛleːbɛn/"
+  },
+  {
+    "h": "elleni",
+    "e": "against",
+    "m": "Spoken like \"ellenee\" — against.",
+    "i": "/ɛlːɛni/"
+  },
+  {
+    "h": "szem",
+    "e": "eye",
+    "m": "Spoken like \"sem\" — eye.",
+    "i": "/sɛm/"
+  },
+  {
+    "h": "végső",
+    "e": "final",
+    "m": "Spoken like \"végső\".",
+    "i": "/veːɡʃøː/"
+  },
+  {
+    "h": "teszünk",
+    "e": "you (sing.)",
+    "m": "Spoken like \"tesünk\" — you (sing.).",
+    "i": "/tɛsynk/"
+  },
+  {
+    "h": "féltékeny",
+    "e": "jealous",
+    "m": "Spoken like \"féltékeny\".",
+    "i": "/feːlteːkɛɲ/"
+  },
+  {
+    "h": "jövünk",
+    "e": "we come",
+    "m": "Spoken like \"jövünk\".",
+    "i": "/jøvynk/"
+  },
+  {
+    "h": "test",
+    "e": "you (sing.)",
+    "m": "Spoken like \"test\" — you (sing.).",
+    "i": "/tɛʃt/"
+  },
+  {
+    "h": "megérteni",
+    "e": "still; yet",
+    "m": "Spoken like \"megértenee\" — still.",
+    "i": "/mɛɡeːrtɛni/"
+  },
+  {
+    "h": "méter",
+    "e": "meter",
+    "m": "Spoken like \"méter\".",
+    "i": "/meːtɛr/"
+  },
+  {
+    "h": "induljunk",
+    "e": "let's go",
+    "m": "Spoken like \"eendooljoonk\".",
+    "i": "/induljunk/"
+  },
+  {
+    "h": "kínos",
+    "e": "awkward",
+    "m": "Spoken like \"kínos\".",
+    "i": "/kiːnoʃ/"
+  },
+  {
+    "h": "segíthet",
+    "e": "can help",
+    "m": "Spoken like \"segíthet\".",
+    "i": "/ʃɛɡiːthɛt/"
+  },
+  {
+    "h": "jóképű",
+    "e": "handsome",
+    "m": "Spoken like \"jóképű\".",
+    "i": "/joːkeːpyː/"
+  },
+  {
+    "h": "északi",
+    "e": "northern",
+    "m": "Spoken like \"ésakee\".",
+    "i": "/eːsɒki/"
+  },
+  {
+    "h": "megöltem",
+    "e": "still; yet",
+    "m": "Spoken like \"megöltem\" — still.",
+    "i": "/mɛɡøltɛm/"
+  },
+  {
+    "h": "kitűnő",
+    "e": "who; out",
+    "m": "Spoken like \"keetűnő\" — who.",
+    "i": "/kityːnøː/"
+  },
+  {
+    "h": "ismerte",
+    "e": "also; too",
+    "m": "Spoken like \"eesmerte\" — also.",
+    "i": "/iʃmɛrtɛ/"
+  },
+  {
+    "h": "buzi",
+    "e": "gay (slur)",
+    "m": "Spoken like \"boozee\".",
+    "i": "/buzi/"
+  },
+  {
+    "h": "valamelyik",
+    "e": "one of them",
+    "m": "Spoken like \"valameyeek\".",
+    "i": "/vɒlɒmɛjik/"
+  },
+  {
+    "h": "semmiség",
+    "e": "neither; nor",
+    "m": "Spoken like \"semmeeség\" — neither.",
+    "i": "/ʃɛmːiʃeːɡ/"
+  },
+  {
+    "h": "kettes",
+    "e": "two's; duo",
+    "m": "Spoken like \"kettes\".",
+    "i": "/kɛtːɛʃ/"
+  },
+  {
+    "h": "csakis",
+    "e": "only; just",
+    "m": "Spoken like \"chakees\" — only.",
+    "i": "/tʃɒkiʃ/"
+  },
+  {
+    "h": "csapatot",
+    "e": "team (acc.)",
+    "m": "Spoken like \"chapatot\".",
+    "i": "/tʃɒpɒtot/"
+  },
+  {
+    "h": "ezeknek",
+    "e": "this",
+    "m": "Spoken like \"ezeknek\" — this.",
+    "i": "/ɛzɛknɛk/"
+  },
+  {
+    "h": "szerette",
+    "e": "loves; likes",
+    "m": "Spoken like \"serette\" — loves.",
+    "i": "/sɛrɛtːɛ/"
+  },
+  {
+    "h": "hírek",
+    "e": "news",
+    "m": "Spoken like \"hírek\".",
+    "i": "/hiːrɛk/"
+  },
+  {
+    "h": "tűnés",
+    "e": "get lost (imperative)",
+    "m": "Spoken like \"tűnés\".",
+    "i": "/tyːneːʃ/"
+  },
+  {
+    "h": "mesélj",
+    "e": "tell (imperative)",
+    "m": "Spoken like \"mesélj\".",
+    "i": "/mɛʃeːlj/"
+  },
+  {
+    "h": "kaptál",
+    "e": "you got",
+    "m": "Spoken like \"kaptál\".",
+    "i": "/kɒptaːl/"
+  },
+  {
+    "h": "ismerős",
+    "e": "also; too",
+    "m": "Spoken like \"eesmerős\" — also.",
+    "i": "/iʃmɛrøːʃ/"
+  },
+  {
+    "h": "mellesleg",
+    "e": "by the way",
+    "m": "Spoken like \"mellesleg\".",
+    "i": "/mɛlːɛʃlɛɡ/"
+  },
+  {
+    "h": "egymásnak",
+    "e": "one; a",
+    "m": "Spoken like \"edymásnak\" — one.",
+    "i": "/ɛɟmaːʃnɒk/"
+  },
+  {
+    "h": "vigyétek",
+    "e": "take (plural, imper.)",
+    "m": "Spoken like \"veedyétek\".",
+    "i": "/viɟeːtɛk/"
+  },
+  {
+    "h": "szóba",
+    "e": "into words; mention",
+    "m": "Spoken like \"sóba\".",
+    "i": "/soːbɒ/"
+  },
+  {
+    "h": "magában",
+    "e": "today",
+    "m": "Spoken like \"magában\" — today.",
+    "i": "/mɒɡaːbɒn/"
+  },
+  {
+    "h": "lehetünk",
+    "e": "down",
+    "m": "Spoken like \"lehetünk\" — down.",
+    "i": "/lɛhɛtynk/"
+  },
+  {
+    "h": "csajok",
+    "e": "girls",
+    "m": "Spoken like \"chajok\".",
+    "i": "/tʃɒjok/"
+  },
+  {
+    "h": "vacsorára",
+    "e": "for dinner",
+    "m": "Spoken like \"vachorára\".",
+    "i": "/vɒtʃoraːrɒ/"
+  },
+  {
+    "h": "romantikus",
+    "e": "romantic",
+    "m": "Spoken like \"romanteekoos\".",
+    "i": "/romɒntikuʃ/"
+  },
+  {
+    "h": "megegyeztünk",
+    "e": "still; yet",
+    "m": "Spoken like \"megedyeztünk\" — still.",
+    "i": "/mɛɡɛɟɛztynk/"
+  },
+  {
+    "h": "hívtál",
+    "e": "you called",
+    "m": "Spoken like \"hívtál\".",
+    "i": "/hiːvtaːl/"
+  },
+  {
+    "h": "felirat",
+    "e": "up",
+    "m": "Spoken like \"feleerat\" — up.",
+    "i": "/fɛlirɒt/"
+  },
+  {
+    "h": "feleségül",
+    "e": "up",
+    "m": "Spoken like \"feleségül\" — up.",
+    "i": "/fɛlɛʃeːɡyl/"
+  },
+  {
+    "h": "hivatalosan",
+    "e": "officially",
+    "m": "Spoken like \"heevatalosan\".",
+    "i": "/hivɒtɒloʃɒn/"
+  },
+  {
+    "h": "szív",
+    "e": "heart",
+    "m": "Spoken like \"sív\".",
+    "i": "/siːv/"
+  },
+  {
+    "h": "magán",
+    "e": "today",
+    "m": "Spoken like \"magán\" — today.",
+    "i": "/mɒɡaːn/"
+  },
+  {
+    "h": "lépni",
+    "e": "to step",
+    "m": "Spoken like \"lépnee\".",
+    "i": "/leːpni/"
+  },
+  {
+    "h": "tanultam",
+    "e": "studies; learns",
+    "m": "Spoken like \"tanooltam\" — studies.",
+    "i": "/tɒnultɒm/"
+  },
+  {
+    "h": "barátai",
+    "e": "his/her friends",
+    "m": "Spoken like \"barátaee\".",
+    "i": "/bɒraːtɒi/"
+  },
+  {
+    "h": "kávé",
+    "e": "coffee",
+    "m": "Spoken like \"kávé\".",
+    "i": "/kaːveː/"
+  },
+  {
+    "h": "országban",
+    "e": "in the country",
+    "m": "Spoken like \"orságban\".",
+    "i": "/orsaːɡbɒn/"
+  },
+  {
+    "h": "hétig",
+    "e": "until a week",
+    "m": "Spoken like \"héteeg\".",
+    "i": "/heːtiɡ/"
+  },
+  {
+    "h": "öngyilkos",
+    "e": "suicidal",
+    "m": "Spoken like \"öndyeelkos\".",
+    "i": "/ønɟilkoʃ/"
+  },
+  {
+    "h": "illik",
+    "e": "it is fitting",
+    "m": "Spoken like \"eelleek\".",
+    "i": "/ilːik/"
+  },
+  {
+    "h": "dupla",
+    "e": "double",
+    "m": "Spoken like \"doopla\".",
+    "i": "/duplɒ/"
+  },
+  {
+    "h": "kiderül",
+    "e": "who; out",
+    "m": "Spoken like \"keederül\" — who.",
+    "i": "/kidɛryl/"
+  },
+  {
+    "h": "őrültség",
+    "e": "madness",
+    "m": "Spoken like \"őrültség\".",
+    "i": "/øːryltʃeːɡ/"
+  },
+  {
+    "h": "ámen",
+    "e": "amen",
+    "m": "Spoken like \"ámen\".",
+    "i": "/aːmɛn/"
+  },
+  {
+    "h": "magammal",
+    "e": "today",
+    "m": "Spoken like \"magammal\" — today.",
+    "i": "/mɒɡɒmːɒl/"
+  },
+  {
+    "h": "állapotban",
+    "e": "in condition",
+    "m": "Spoken like \"állapotban\".",
+    "i": "/aːlːɒpotbɒn/"
+  },
+  {
+    "h": "éven",
+    "e": "on a year",
+    "m": "Spoken like \"éven\".",
+    "i": "/eːvɛn/"
+  },
+  {
+    "h": "találja",
+    "e": "maybe",
+    "m": "Spoken like \"találja\" — maybe.",
+    "i": "/tɒlaːljɒ/"
+  },
+  {
+    "h": "tudtál",
+    "e": "knows; can",
+    "m": "Spoken like \"toodtál\" — knows.",
+    "i": "/tudtaːl/"
+  },
+  {
+    "h": "következik",
+    "e": "follows",
+    "m": "Spoken like \"következeek\".",
+    "i": "/køvɛtkɛzik/"
+  },
+  {
+    "h": "megtalálta",
+    "e": "still; yet",
+    "m": "Spoken like \"megtalálta\" — still.",
+    "i": "/mɛɡtɒlaːltɒ/"
+  },
+  {
+    "h": "rendőrök",
+    "e": "police officers",
+    "m": "Spoken like \"rendőrök\".",
+    "i": "/rɛndøːrøk/"
+  },
+  {
+    "h": "előttem",
+    "e": "before me",
+    "m": "Spoken like \"előttem\".",
+    "i": "/ɛløːtːɛm/"
+  },
+  {
+    "h": "kétlem",
+    "e": "I doubt",
+    "m": "Spoken like \"kétlem\".",
+    "i": "/keːtlɛm/"
+  },
+  {
+    "h": "átlagos",
+    "e": "average",
+    "m": "Spoken like \"átlagos\".",
+    "i": "/aːtlɒɡoʃ/"
+  },
+  {
+    "h": "megállítani",
+    "e": "still; yet",
+    "m": "Spoken like \"megállítanee\" — still.",
+    "i": "/mɛɡaːlːiːtɒni/"
+  },
+  {
+    "h": "csakhogy",
+    "e": "only; just",
+    "m": "Spoken like \"chakhody\" — only.",
+    "i": "/tʃɒkhoɟ/"
+  },
+  {
+    "h": "állami",
+    "e": "state (adjective)",
+    "m": "Spoken like \"államee\".",
+    "i": "/aːlːɒmi/"
+  },
+  {
+    "h": "srácot",
+    "e": "guy (acc.)",
+    "m": "Spoken like \"srácot\".",
+    "i": "/ʃraːt͡sot/"
+  },
+  {
+    "h": "megtiszteltetés",
+    "e": "still; yet",
+    "m": "Spoken like \"megteesteltetés\" — still.",
+    "i": "/mɛɡtistɛltɛteːʃ/"
+  },
+  {
+    "h": "meghaltak",
+    "e": "still; yet",
+    "m": "Spoken like \"meghaltak\" — still.",
+    "i": "/mɛɡhɒltɒk/"
+  },
+  {
+    "h": "választásom",
+    "e": "my choice",
+    "m": "Spoken like \"válastásom\".",
+    "i": "/vaːlɒstaːʃom/"
+  },
+  {
+    "h": "szálljon",
+    "e": "let him/her land",
+    "m": "Spoken like \"sálljon\".",
+    "i": "/saːlːjon/"
+  },
+  {
+    "h": "hoztál",
+    "e": "snow",
+    "m": "Spoken like \"hoztál\" — snow.",
+    "i": "/hoztaːl/"
+  },
+  {
+    "h": "viszem",
+    "e": "carries; takes",
+    "m": "Spoken like \"veesem\" — carries.",
+    "i": "/visɛm/"
+  },
+  {
+    "h": "emlékezni",
+    "e": "to remember",
+    "m": "Spoken like \"emlékeznee\".",
+    "i": "/ɛmleːkɛzni/"
+  },
+  {
+    "h": "államok",
+    "e": "states",
+    "m": "Spoken like \"államok\".",
+    "i": "/aːlːɒmok/"
+  },
+  {
+    "h": "izgalmas",
+    "e": "exciting",
+    "m": "Spoken like \"eezgalmas\".",
+    "i": "/izɡɒlmɒʃ/"
+  },
+  {
+    "h": "befelé",
+    "e": "into; in",
+    "m": "Spoken like \"befelé\" — into.",
+    "i": "/bɛfɛleː/"
+  },
+  {
+    "h": "vacsorázni",
+    "e": "to have dinner",
+    "m": "Spoken like \"vachoráznee\".",
+    "i": "/vɒtʃoraːzni/"
+  },
+  {
+    "h": "kutyát",
+    "e": "dog (acc.)",
+    "m": "Spoken like \"kootyát\".",
+    "i": "/kucaːt/"
+  },
+  {
+    "h": "kedved",
+    "e": "your mood",
+    "m": "Spoken like \"kedved\".",
+    "i": "/kɛdvɛd/"
+  },
+  {
+    "h": "szervusz",
+    "e": "hello (formal)",
+    "m": "Spoken like \"servoos\".",
+    "i": "/sɛrvus/"
+  },
+  {
+    "h": "helye",
+    "e": "its place",
+    "m": "Spoken like \"heye\".",
+    "i": "/hɛjɛ/"
+  },
+  {
+    "h": "sárga",
+    "e": "yellow",
+    "m": "Spoken like \"sárga\".",
+    "i": "/ʃaːrɡɒ/"
+  },
+  {
+    "h": "jártál",
+    "e": "you visited",
+    "m": "Spoken like \"jártál\".",
+    "i": "/jaːrtaːl/"
+  },
+  {
+    "h": "kezdem",
+    "e": "hand",
+    "m": "Spoken like \"kezdem\" — hand.",
+    "i": "/kɛzdɛm/"
+  },
+  {
+    "h": "japán",
+    "e": "Japanese",
+    "m": "Spoken like \"japán\".",
+    "i": "/jɒpaːn/"
+  },
+  {
+    "h": "nyert",
+    "e": "he/she won",
+    "m": "Spoken like \"nyert\".",
+    "i": "/ɲɛrt/"
+  },
+  {
+    "h": "körülbelül",
+    "e": "approximately",
+    "m": "Spoken like \"körülbelül\".",
+    "i": "/kørylbɛlyl/"
+  },
+  {
+    "h": "elmondja",
+    "e": "he/she tells",
+    "m": "Spoken like \"elmondja\".",
+    "i": "/ɛlmondjɒ/"
+  },
+  {
+    "h": "találd",
+    "e": "maybe",
+    "m": "Spoken like \"találd\" — maybe.",
+    "i": "/tɒlaːld/"
+  },
+  {
+    "h": "néznek",
+    "e": "they look",
+    "m": "Spoken like \"néznek\".",
+    "i": "/neːznɛk/"
+  },
+  {
+    "h": "korai",
+    "e": "stone",
+    "m": "Spoken like \"koraee\" — stone.",
+    "i": "/korɒi/"
+  },
+  {
+    "h": "kezet",
+    "e": "hand",
+    "m": "Spoken like \"kezet\" — hand.",
+    "i": "/kɛzɛt/"
+  },
+  {
+    "h": "hasonlít",
+    "e": "if",
+    "m": "Spoken like \"hasonlít\" — if.",
+    "i": "/hɒʃonliːt/"
+  },
+  {
+    "h": "mellette",
+    "e": "next to",
+    "m": "Spoken like \"mellette\" — next to.",
+    "i": "/mɛlːɛtːɛ/"
+  },
+  {
+    "h": "egyben",
+    "e": "one; a",
+    "m": "Spoken like \"edyben\" — one.",
+    "i": "/ɛɟbɛn/"
+  },
+  {
+    "h": "hívjuk",
+    "e": "let's call",
+    "m": "Spoken like \"hívjook\".",
+    "i": "/hiːvjuk/"
+  },
+  {
+    "h": "ex",
+    "e": "ex",
+    "m": "Spoken like \"ex\".",
+    "i": "/ɛks/"
+  },
+  {
+    "h": "negatív",
+    "e": "don't",
+    "m": "Spoken like \"negatív\" — don't.",
+    "i": "/nɛɡɒtiːv/"
+  },
+  {
+    "h": "értesz",
+    "e": "you understand",
+    "m": "Spoken like \"értes\".",
+    "i": "/eːrtɛs/"
+  },
+  {
+    "h": "beszéljek",
+    "e": "into; in",
+    "m": "Spoken like \"beséljek\" — into.",
+    "i": "/bɛseːljɛk/"
+  },
+  {
+    "h": "kérdésem",
+    "e": "my question",
+    "m": "Spoken like \"kérdésem\".",
+    "i": "/keːrdeːʃɛm/"
+  },
+  {
+    "h": "kezében",
+    "e": "hand",
+    "m": "Spoken like \"kezében\" — hand.",
+    "i": "/kɛzeːbɛn/"
+  },
+  {
+    "h": "szemmel",
+    "e": "eye",
+    "m": "Spoken like \"semmel\" — eye.",
+    "i": "/sɛmːɛl/"
+  },
+  {
+    "h": "állítólag",
+    "e": "allegedly",
+    "m": "Spoken like \"állítólag\".",
+    "i": "/aːlːiːtoːlɒɡ/"
+  },
+  {
+    "h": "ahova",
+    "e": "where to (relative)",
+    "m": "Spoken like \"ahova\".",
+    "i": "/ɒhovɒ/"
+  },
+  {
+    "h": "isteni",
+    "e": "also; too",
+    "m": "Spoken like \"eestenee\" — also.",
+    "i": "/iʃtɛni/"
+  },
+  {
+    "h": "hiányozni",
+    "e": "to miss",
+    "m": "Spoken like \"heeányoznee\".",
+    "i": "/hiaːɲozni/"
+  },
+  {
+    "h": "akartak",
+    "e": "they wanted",
+    "m": "Spoken like \"akartak\".",
+    "i": "/ɒkɒrtɒk/"
+  },
+  {
+    "h": "manapság",
+    "e": "today",
+    "m": "Spoken like \"manapság\" — today.",
+    "i": "/mɒnɒpʃaːɡ/"
+  },
+  {
+    "h": "dal",
+    "e": "song",
+    "m": "Spoken like \"dal\".",
+    "i": "/dɒl/"
+  },
+  {
+    "h": "meghalok",
+    "e": "still; yet",
+    "m": "Spoken like \"meghalok\" — still.",
+    "i": "/mɛɡhɒlok/"
+  },
+  {
+    "h": "beszélhetnénk",
+    "e": "into; in",
+    "m": "Spoken like \"besélhetnénk\" — into.",
+    "i": "/bɛseːlhɛtneːnk/"
+  },
+  {
+    "h": "hó",
+    "e": "snow",
+    "m": "Spoken like \"hó\".",
+    "i": "/hoː/"
+  },
+  {
+    "h": "útból",
+    "e": "out of the way",
+    "m": "Spoken like \"útból\".",
+    "i": "/uːtboːl/"
+  },
+  {
+    "h": "érdemes",
+    "e": "worth it",
+    "m": "Spoken like \"érdemes\".",
+    "i": "/eːrdɛmɛʃ/"
+  },
+  {
+    "h": "hazug",
+    "e": "if",
+    "m": "Spoken like \"hazoog\" — if.",
+    "i": "/hɒzuɡ/"
+  },
+  {
+    "h": "válaszolj",
+    "e": "answer (imperative)",
+    "m": "Spoken like \"válasolj\".",
+    "i": "/vaːlɒsolj/"
+  },
+  {
+    "h": "napi",
+    "e": "day; sun",
+    "m": "Spoken like \"napee\" — day.",
+    "i": "/nɒpi/"
+  },
+  {
+    "h": "félig",
+    "e": "half",
+    "m": "Spoken like \"féleeg\".",
+    "i": "/feːliɡ/"
+  },
+  {
+    "h": "várjanak",
+    "e": "let them wait",
+    "m": "Spoken like \"várjanak\".",
+    "i": "/vaːrjɒnɒk/"
+  },
+  {
+    "h": "hazudtam",
+    "e": "if",
+    "m": "Spoken like \"hazoodtam\" — if.",
+    "i": "/hɒzudtɒm/"
+  },
+  {
+    "h": "vétel",
+    "e": "purchase; reception",
+    "m": "Spoken like \"vétel\".",
+    "i": "/veːtɛl/"
+  },
+  {
+    "h": "ekkor",
+    "e": "then; at this point",
+    "m": "Spoken like \"ekkor\".",
+    "i": "/ɛkːor/"
+  },
+  {
+    "h": "legszebb",
+    "e": "down",
+    "m": "Spoken like \"legsebb\" — down.",
+    "i": "/lɛɡsɛbː/"
+  },
+  {
+    "h": "vihar",
+    "e": "storm",
+    "m": "Spoken like \"veehar\".",
+    "i": "/vihɒr/"
+  },
+  {
+    "h": "tégy",
+    "e": "do (imperative)",
+    "m": "Spoken like \"tédy\".",
+    "i": "/teːɟ/"
+  },
+  {
+    "h": "meló",
+    "e": "work (slang)",
+    "m": "Spoken like \"meló\".",
+    "i": "/mɛloː/"
+  },
+  {
+    "h": "menő",
+    "e": "cool",
+    "m": "Spoken like \"menő\".",
+    "i": "/mɛnøː/"
+  },
+  {
+    "h": "politikai",
+    "e": "political",
+    "m": "Spoken like \"poleeteekaee\".",
+    "i": "/politikɒi/"
+  },
+  {
+    "h": "találjuk",
+    "e": "maybe",
+    "m": "Spoken like \"találjook\" — maybe.",
+    "i": "/tɒlaːljuk/"
+  },
+  {
+    "h": "béna",
+    "e": "lame; useless",
+    "m": "Spoken like \"béna\".",
+    "i": "/beːnɒ/"
+  },
+  {
+    "h": "belém",
+    "e": "into; in",
+    "m": "Spoken like \"belém\" — into.",
+    "i": "/bɛleːm/"
+  },
+  {
+    "h": "állítsd",
+    "e": "set; stop (imperative)",
+    "m": "Spoken like \"állítsd\".",
+    "i": "/aːlːiːtʃd/"
+  },
+  {
+    "h": "szerelmem",
+    "e": "my love",
+    "m": "Spoken like \"serelmem\".",
+    "i": "/sɛrɛlmɛm/"
+  },
+  {
+    "h": "kaját",
+    "e": "food (acc., slang)",
+    "m": "Spoken like \"kaját\".",
+    "i": "/kɒjaːt/"
+  },
+  {
+    "h": "karácsony",
+    "e": "arm",
+    "m": "Spoken like \"karáchony\" — arm.",
+    "i": "/kɒraːtʃoɲ/"
+  },
+  {
+    "h": "nézem",
+    "e": "I look",
+    "m": "Spoken like \"nézem\".",
+    "i": "/neːzɛm/"
+  },
+  {
+    "h": "elmentek",
+    "e": "they left",
+    "m": "Spoken like \"elmentek\".",
+    "i": "/ɛlmɛntɛk/"
+  },
+  {
+    "h": "azokkal",
+    "e": "the; that",
+    "m": "Spoken like \"azokkal\" — the.",
+    "i": "/ɒzokːɒl/"
+  },
+  {
+    "h": "park",
+    "e": "park",
+    "m": "Spoken like \"park\".",
+    "i": "/pɒrk/"
+  },
+  {
+    "h": "okoz",
+    "e": "causes",
+    "m": "Spoken like \"okoz\".",
+    "i": "/okoz/"
+  },
+  {
+    "h": "szád",
+    "e": "your mouth",
+    "m": "Spoken like \"sád\".",
+    "i": "/saːd/"
+  },
+  {
+    "h": "esélyünk",
+    "e": "and",
+    "m": "Spoken like \"eséyünk\" — and.",
+    "i": "/ɛʃeːjynk/"
+  },
+  {
+    "h": "egészséges",
+    "e": "healthy",
+    "m": "Spoken like \"egésséges\".",
+    "i": "/ɛɡeːsʃeːɡɛʃ/"
+  },
+  {
+    "h": "angolul",
+    "e": "English",
+    "m": "Spoken like \"angolool\" — English.",
+    "i": "/ɒnɡolul/"
+  },
+  {
+    "h": "hotel",
+    "e": "snow",
+    "m": "Spoken like \"hotel\" — snow.",
+    "i": "/hotɛl/"
+  },
+  {
+    "h": "bajt",
+    "e": "trouble (acc.)",
+    "m": "Spoken like \"bajt\".",
+    "i": "/bɒjt/"
+  },
+  {
+    "h": "fogjátok",
+    "e": "tooth",
+    "m": "Spoken like \"fogjátok\" — tooth.",
+    "i": "/foɡjaːtok/"
+  },
+  {
+    "h": "végére",
+    "e": "to the end of",
+    "m": "Spoken like \"végére\".",
+    "i": "/veːɡeːrɛ/"
+  },
+  {
+    "h": "találunk",
+    "e": "maybe",
+    "m": "Spoken like \"találoonk\" — maybe.",
+    "i": "/tɒlaːlunk/"
+  },
+  {
+    "h": "egyikük",
+    "e": "one; a",
+    "m": "Spoken like \"edyeekük\" — one.",
+    "i": "/ɛɟikyk/"
+  },
+  {
+    "h": "munkája",
+    "e": "his/her work",
+    "m": "Spoken like \"moonkája\".",
+    "i": "/munkaːjɒ/"
+  },
+  {
+    "h": "mással",
+    "e": "with someone else",
+    "m": "Spoken like \"mással\".",
+    "i": "/maːʃːɒl/"
+  },
+  {
+    "h": "pompás",
+    "e": "splendid",
+    "m": "Spoken like \"pompás\".",
+    "i": "/pompaːʃ/"
+  },
+  {
+    "h": "fizet",
+    "e": "pays",
+    "m": "Spoken like \"feezet\".",
+    "i": "/fizɛt/"
+  },
+  {
+    "h": "erősebb",
+    "e": "stronger",
+    "m": "Spoken like \"erősebb\".",
+    "i": "/ɛrøːʃɛbː/"
+  },
+  {
+    "h": "tehet",
+    "e": "you (sing.)",
+    "m": "Spoken like \"tehet\" — you (sing.).",
+    "i": "/tɛhɛt/"
+  },
+  {
+    "h": "csendet",
+    "e": "silence (acc.)",
+    "m": "Spoken like \"chendet\".",
+    "i": "/tʃɛndɛt/"
+  },
+  {
+    "h": "történetet",
+    "e": "story (acc.)",
+    "m": "Spoken like \"történetet\".",
+    "i": "/tørteːnɛtɛt/"
+  },
+  {
+    "h": "találsz",
+    "e": "maybe",
+    "m": "Spoken like \"találs\" — maybe.",
+    "i": "/tɒlaːls/"
+  },
+  {
+    "h": "keleti",
+    "e": "eastern",
+    "m": "Spoken like \"keletee\".",
+    "i": "/kɛlɛti/"
+  },
+  {
+    "h": "állatok",
+    "e": "animals",
+    "m": "Spoken like \"állatok\".",
+    "i": "/aːlːɒtok/"
+  },
+  {
+    "h": "eljöttél",
+    "e": "you came",
+    "m": "Spoken like \"eljöttél\".",
+    "i": "/ɛljøtːeːl/"
+  },
+  {
+    "h": "vitte",
+    "e": "he/she took",
+    "m": "Spoken like \"veette\".",
+    "i": "/vitːɛ/"
+  },
+  {
+    "h": "hibája",
+    "e": "his/her fault",
+    "m": "Spoken like \"heebája\".",
+    "i": "/hibaːjɒ/"
+  },
+  {
+    "h": "valahova",
+    "e": "somewhere (to)",
+    "m": "Spoken like \"valahova\".",
+    "i": "/vɒlɒhovɒ/"
+  },
+  {
+    "h": "legutóbb",
+    "e": "down",
+    "m": "Spoken like \"legootóbb\" — down.",
+    "i": "/lɛɡutoːbː/"
+  },
+  {
+    "h": "elkapni",
+    "e": "to catch",
+    "m": "Spoken like \"elkapnee\".",
+    "i": "/ɛlkɒpni/"
+  },
+  {
+    "h": "helyesen",
+    "e": "correctly",
+    "m": "Spoken like \"heyesen\".",
+    "i": "/hɛjɛʃɛn/"
+  },
+  {
+    "h": "kód",
+    "e": "code",
+    "m": "Spoken like \"kód\".",
+    "i": "/koːd/"
+  },
+  {
+    "h": "francot",
+    "e": "damn (acc.)",
+    "m": "Spoken like \"francot\".",
+    "i": "/frɒnt͡sot/"
+  },
+  {
+    "h": "perccel",
+    "e": "with a minute",
+    "m": "Spoken like \"perccel\".",
+    "i": "/pɛrt͡sːɛl/"
+  },
+  {
+    "h": "hallgatni",
+    "e": "if",
+    "m": "Spoken like \"hallgatnee\" — if.",
+    "i": "/hɒlːɡɒtni/"
+  },
+  {
+    "h": "picit",
+    "e": "a little",
+    "m": "Spoken like \"peeceet\".",
+    "i": "/pit͡sit/"
+  },
+  {
+    "h": "járnak",
+    "e": "they walk; they go",
+    "m": "Spoken like \"járnak\".",
+    "i": "/jaːrnɒk/"
+  },
+  {
+    "h": "érkezik",
+    "e": "he/she arrives",
+    "m": "Spoken like \"érkezeek\".",
+    "i": "/eːrkɛzik/"
+  },
+  {
+    "h": "halad",
+    "e": "if",
+    "m": "Spoken like \"halad\" — if.",
+    "i": "/hɒlɒd/"
+  },
+  {
+    "h": "évesen",
+    "e": "per year",
+    "m": "Spoken like \"évesen\".",
+    "i": "/eːvɛʃɛn/"
+  },
+  {
+    "h": "lettek",
+    "e": "down",
+    "m": "Spoken like \"lettek\" — down.",
+    "i": "/lɛtːɛk/"
+  },
+  {
+    "h": "megöllek",
+    "e": "still; yet",
+    "m": "Spoken like \"megöllek\" — still.",
+    "i": "/mɛɡølːɛk/"
+  },
+  {
+    "h": "telik",
+    "e": "you (sing.)",
+    "m": "Spoken like \"teleek\" — you (sing.).",
+    "i": "/tɛlik/"
+  },
+  {
+    "h": "találkozzunk",
+    "e": "maybe",
+    "m": "Spoken like \"találkozzoonk\" — maybe.",
+    "i": "/tɒlaːlkozːunk/"
+  },
+  {
+    "h": "félelem",
+    "e": "fear",
+    "m": "Spoken like \"félelem\".",
+    "i": "/feːlɛlɛm/"
+  },
+  {
+    "h": "izgatott",
+    "e": "excited",
+    "m": "Spoken like \"eezgatott\".",
+    "i": "/izɡɒtotː/"
+  },
+  {
+    "h": "megteszi",
+    "e": "still; yet",
+    "m": "Spoken like \"megtesee\" — still.",
+    "i": "/mɛɡtɛsi/"
+  },
+  {
+    "h": "hitted",
+    "e": "you believed",
+    "m": "Spoken like \"heetted\".",
+    "i": "/hitːɛd/"
+  },
+  {
+    "h": "déli",
+    "e": "southern",
+    "m": "Spoken like \"délee\".",
+    "i": "/deːli/"
+  },
+  {
+    "h": "róluk",
+    "e": "about them",
+    "m": "Spoken like \"rólook\".",
+    "i": "/roːluk/"
+  },
+  {
+    "h": "aludj",
+    "e": "sleep (imperative)",
+    "m": "Spoken like \"aloodj\".",
+    "i": "/ɒludj/"
+  },
+  {
+    "h": "gyakorlatilag",
+    "e": "practically",
+    "m": "Spoken like \"dyakorlateelag\".",
+    "i": "/ɟɒkorlɒtilɒɡ/"
+  },
+  {
+    "h": "házasság",
+    "e": "marriage",
+    "m": "Spoken like \"házasság\".",
+    "i": "/haːzɒʃːaːɡ/"
+  },
+  {
+    "h": "lélek",
+    "e": "soul",
+    "m": "Spoken like \"lélek\".",
+    "i": "/leːlɛk/"
+  },
+  {
+    "h": "tilos",
+    "e": "forbidden",
+    "m": "Spoken like \"teelos\".",
+    "i": "/tiloʃ/"
+  },
+  {
+    "h": "használt",
+    "e": "if",
+    "m": "Spoken like \"hasnált\" — if.",
+    "i": "/hɒsnaːlt/"
+  },
+  {
+    "h": "kedvelem",
+    "e": "I like it",
+    "m": "Spoken like \"kedvelem\".",
+    "i": "/kɛdvɛlɛm/"
+  },
+  {
+    "h": "megvagy",
+    "e": "still; yet",
+    "m": "Spoken like \"megvady\" — still.",
+    "i": "/mɛɡvɒɟ/"
+  },
+  {
+    "h": "levél",
+    "e": "down",
+    "m": "Spoken like \"levél\" — down.",
+    "i": "/lɛveːl/"
+  },
+  {
+    "h": "emlékezz",
+    "e": "remember (imperative)",
+    "m": "Spoken like \"emlékezz\".",
+    "i": "/ɛmleːkɛzː/"
+  },
+  {
+    "h": "bizonyítékot",
+    "e": "evidence (acc.)",
+    "m": "Spoken like \"beezonyítékot\".",
+    "i": "/bizoɲiːteːkot/"
+  },
+  {
+    "h": "érez",
+    "e": "he/she feels",
+    "m": "Spoken like \"érez\".",
+    "i": "/eːrɛz/"
+  },
+  {
+    "h": "móka",
+    "e": "fun",
+    "m": "Spoken like \"móka\".",
+    "i": "/moːkɒ/"
+  },
+  {
+    "h": "dalt",
+    "e": "song (acc.)",
+    "m": "Spoken like \"dalt\".",
+    "i": "/dɒlt/"
+  },
+  {
+    "h": "nemcsak",
+    "e": "no; not",
+    "m": "Spoken like \"nemchak\" — no.",
+    "i": "/nɛmtʃɒk/"
+  },
+  {
+    "h": "többször",
+    "e": "several times",
+    "m": "Spoken like \"többsör\".",
+    "i": "/tøbːsør/"
+  },
+  {
+    "h": "amitől",
+    "e": "from which (relative)",
+    "m": "Spoken like \"ameetől\".",
+    "i": "/ɒmitøːl/"
+  },
+  {
+    "h": "szíved",
+    "e": "your heart",
+    "m": "Spoken like \"síved\".",
+    "i": "/siːvɛd/"
+  },
+  {
+    "h": "méltó",
+    "e": "worthy",
+    "m": "Spoken like \"méltó\".",
+    "i": "/meːltoː/"
+  },
+  {
+    "h": "fölött",
+    "e": "above",
+    "m": "Spoken like \"fölött\".",
+    "i": "/føløtː/"
+  },
+  {
+    "h": "teszik",
+    "e": "you (sing.)",
+    "m": "Spoken like \"teseek\" — you (sing.).",
+    "i": "/tɛsik/"
+  },
+  {
+    "h": "házas",
+    "e": "married",
+    "m": "Spoken like \"házas\".",
+    "i": "/haːzɒʃ/"
+  },
+  {
+    "h": "töltött",
+    "e": "filled; spent",
+    "m": "Spoken like \"töltött\".",
+    "i": "/tøltøtː/"
+  },
+  {
+    "h": "képeket",
+    "e": "pictures (acc.)",
+    "m": "Spoken like \"képeket\".",
+    "i": "/keːpɛkɛt/"
+  },
+  {
+    "h": "jönne",
+    "e": "he/she would come",
+    "m": "Spoken like \"jönne\".",
+    "i": "/jønːɛ/"
+  },
+  {
+    "h": "ablakon",
+    "e": "window",
+    "m": "Spoken like \"ablakon\" — window.",
+    "i": "/ɒblɒkon/"
+  },
+  {
+    "h": "rájött",
+    "e": "he/she realized",
+    "m": "Spoken like \"rájött\".",
+    "i": "/raːjøtː/"
+  },
+  {
+    "h": "kórház",
+    "e": "hospital",
+    "m": "Spoken like \"kórház\".",
+    "i": "/koːrhaːz/"
+  },
+  {
+    "h": "dolgoznak",
+    "e": "they work",
+    "m": "Spoken like \"dolgoznak\".",
+    "i": "/dolɡoznɒk/"
+  },
+  {
+    "h": "sült",
+    "e": "baked; fried",
+    "m": "Spoken like \"sült\".",
+    "i": "/ʃylt/"
+  },
+  {
+    "h": "bort",
+    "e": "wine",
+    "m": "Spoken like \"bort\" — wine.",
+    "i": "/bort/"
+  },
+  {
+    "h": "istenverte",
+    "e": "also; too",
+    "m": "Spoken like \"eestenverte\" — also.",
+    "i": "/iʃtɛnvɛrtɛ/"
+  },
+  {
+    "h": "azaz",
+    "e": "the; that",
+    "m": "Spoken like \"azaz\" — the.",
+    "i": "/ɒzɒz/"
+  },
+  {
+    "h": "teli",
+    "e": "you (sing.)",
+    "m": "Spoken like \"telee\" — you (sing.).",
+    "i": "/tɛli/"
+  },
+  {
+    "h": "megkapja",
+    "e": "still; yet",
+    "m": "Spoken like \"megkapja\" — still.",
+    "i": "/mɛɡkɒpjɒ/"
+  },
+  {
+    "h": "vigyázni",
+    "e": "to take care",
+    "m": "Spoken like \"veedyáznee\".",
+    "i": "/viɟaːzni/"
+  },
+  {
+    "h": "régebben",
+    "e": "previously",
+    "m": "Spoken like \"régebben\".",
+    "i": "/reːɡɛbːɛn/"
+  },
+  {
+    "h": "nemzeti",
+    "e": "no; not",
+    "m": "Spoken like \"nemzetee\" — no.",
+    "i": "/nɛmzɛti/"
+  },
+  {
+    "h": "doboz",
+    "e": "box",
+    "m": "Spoken like \"doboz\".",
+    "i": "/doboz/"
+  },
+  {
+    "h": "másra",
+    "e": "onto another",
+    "m": "Spoken like \"másra\".",
+    "i": "/maːʃrɒ/"
+  },
+  {
+    "h": "kedvem",
+    "e": "my mood",
+    "m": "Spoken like \"kedvem\".",
+    "i": "/kɛdvɛm/"
+  },
+  {
+    "h": "problémát",
+    "e": "problem (acc.)",
+    "m": "Spoken like \"problémát\".",
+    "i": "/probleːmaːt/"
+  },
+  {
+    "h": "nyerni",
+    "e": "to win",
+    "m": "Spoken like \"nyernee\".",
+    "i": "/ɲɛrni/"
+  },
+  {
+    "h": "közelben",
+    "e": "nearby",
+    "m": "Spoken like \"közelben\".",
+    "i": "/køzɛlbɛn/"
+  },
+  {
+    "h": "nyugodt",
+    "e": "calm",
+    "m": "Spoken like \"nyoogodt\".",
+    "i": "/ɲuɡodt/"
+  },
+  {
+    "h": "ágyba",
+    "e": "into bed",
+    "m": "Spoken like \"ádyba\".",
+    "i": "/aːɟbɒ/"
+  },
+  {
+    "h": "halált",
+    "e": "if",
+    "m": "Spoken like \"halált\" — if.",
+    "i": "/hɒlaːlt/"
+  },
+  {
+    "h": "nehezen",
+    "e": "don't",
+    "m": "Spoken like \"nehezen\" — don't.",
+    "i": "/nɛhɛzɛn/"
+  },
+  {
+    "h": "gondolt",
+    "e": "he/she thought",
+    "m": "Spoken like \"gondolt\".",
+    "i": "/ɡondolt/"
+  },
+  {
+    "h": "érezd",
+    "e": "feel (imperative)",
+    "m": "Spoken like \"érezd\".",
+    "i": "/eːrɛzd/"
+  },
+  {
+    "h": "öröm",
+    "e": "joy",
+    "m": "Spoken like \"öröm\".",
+    "i": "/ørøm/"
+  },
+  {
+    "h": "körülmények",
+    "e": "circumstances",
+    "m": "Spoken like \"körülmények\".",
+    "i": "/kørylmeːɲɛk/"
+  },
+  {
+    "h": "titok",
+    "e": "secret",
+    "m": "Spoken like \"teetok\".",
+    "i": "/titok/"
+  },
+  {
+    "h": "állam",
+    "e": "state",
+    "m": "Spoken like \"állam\".",
+    "i": "/aːlːɒm/"
+  },
+  {
+    "h": "tűnsz",
+    "e": "you seem",
+    "m": "Spoken like \"tűns\".",
+    "i": "/tyːns/"
+  },
+  {
+    "h": "valóság",
+    "e": "reality",
+    "m": "Spoken like \"valóság\".",
+    "i": "/vɒloːʃaːɡ/"
+  },
+  {
+    "h": "buta",
+    "e": "stupid",
+    "m": "Spoken like \"boota\" — stupid.",
+    "i": "/butɒ/"
+  },
+  {
+    "h": "feküdj",
+    "e": "lie down (imperative)",
+    "m": "Spoken like \"feküdj\".",
+    "i": "/fɛkydj/"
+  },
+  {
+    "h": "megérkezett",
+    "e": "still; yet",
+    "m": "Spoken like \"megérkezett\" — still.",
+    "i": "/mɛɡeːrkɛzɛtː/"
+  },
+  {
+    "h": "végéig",
+    "e": "to the end",
+    "m": "Spoken like \"végéeeg\".",
+    "i": "/veːɡeːiɡ/"
+  },
+  {
+    "h": "hangja",
+    "e": "if",
+    "m": "Spoken like \"hangja\" — if.",
+    "i": "/hɒnɡjɒ/"
+  },
+  {
+    "h": "ajánlom",
+    "e": "I recommend",
+    "m": "Spoken like \"ajánlom\".",
+    "i": "/ɒjaːnlom/"
+  },
+  {
+    "h": "elvesztette",
+    "e": "he/she lost",
+    "m": "Spoken like \"elvestette\".",
+    "i": "/ɛlvɛstɛtːɛ/"
+  },
+  {
+    "h": "negyedik",
+    "e": "don't",
+    "m": "Spoken like \"nedyedeek\" — don't.",
+    "i": "/nɛɟɛdik/"
+  },
+  {
+    "h": "várt",
+    "e": "he/she waited",
+    "m": "Spoken like \"várt\".",
+    "i": "/vaːrt/"
+  },
+  {
+    "h": "érthető",
+    "e": "understandable",
+    "m": "Spoken like \"érthető\".",
+    "i": "/eːrthɛtøː/"
+  },
+  {
+    "h": "okozta",
+    "e": "caused",
+    "m": "Spoken like \"okozta\".",
+    "i": "/okoztɒ/"
+  },
+  {
+    "h": "mondanod",
+    "e": "says",
+    "m": "Spoken like \"mondanod\" — says.",
+    "i": "/mondɒnod/"
+  },
+  {
+    "h": "pohár",
+    "e": "glass",
+    "m": "Spoken like \"pohár\".",
+    "i": "/pohaːr/"
+  },
+  {
+    "h": "hozzák",
+    "e": "snow",
+    "m": "Spoken like \"hozzák\" — snow.",
+    "i": "/hozːaːk/"
+  },
+  {
+    "h": "öld",
+    "e": "kill (imperative)",
+    "m": "Spoken like \"öld\".",
+    "i": "/øld/"
+  },
+  {
+    "h": "létre",
+    "e": "into existence",
+    "m": "Spoken like \"létre\".",
+    "i": "/leːtrɛ/"
+  },
+  {
+    "h": "magyar",
+    "e": "today",
+    "m": "Spoken like \"madyar\" — today.",
+    "i": "/mɒɟɒr/"
+  },
+  {
+    "h": "többit",
+    "e": "the rest (acc.)",
+    "m": "Spoken like \"többeet\".",
+    "i": "/tøbːit/"
+  },
+  {
+    "h": "felvétel",
+    "e": "up",
+    "m": "Spoken like \"felvétel\" — up.",
+    "i": "/fɛlveːtɛl/"
+  },
+  {
+    "h": "rendkívül",
+    "e": "extremely",
+    "m": "Spoken like \"rendkívül\".",
+    "i": "/rɛndkiːvyl/"
+  },
+  {
+    "h": "banda",
+    "e": "gang; band",
+    "m": "Spoken like \"banda\".",
+    "i": "/bɒndɒ/"
+  },
+  {
+    "h": "lény",
+    "e": "being",
+    "m": "Spoken like \"lény\".",
+    "i": "/leːɲ/"
+  },
+  {
+    "h": "meccs",
+    "e": "match; game",
+    "m": "Spoken like \"mecch\".",
+    "i": "/mɛtʃː/"
+  },
+  {
+    "h": "voltatok",
+    "e": "was; were",
+    "m": "Spoken like \"voltatok\" — was.",
+    "i": "/voltɒtok/"
+  },
+  {
+    "h": "követtem",
+    "e": "I followed",
+    "m": "Spoken like \"követtem\".",
+    "i": "/køvɛtːɛm/"
+  },
+  {
+    "h": "tesznek",
+    "e": "you (sing.)",
+    "m": "Spoken like \"tesnek\" — you (sing.).",
+    "i": "/tɛsnɛk/"
+  },
+  {
+    "h": "pénzed",
+    "e": "your money",
+    "m": "Spoken like \"pénzed\".",
+    "i": "/peːnzɛd/"
+  },
+  {
+    "h": "vad",
+    "e": "wild",
+    "m": "Spoken like \"vad\".",
+    "i": "/vɒd/"
+  },
+  {
+    "h": "megfelel",
+    "e": "still; yet",
+    "m": "Spoken like \"megfelel\" — still.",
+    "i": "/mɛɡfɛlɛl/"
+  },
+  {
+    "h": "láb",
+    "e": "leg; foot",
+    "m": "Spoken like \"láb\".",
+    "i": "/laːb/"
+  },
+  {
+    "h": "megölt",
+    "e": "still; yet",
+    "m": "Spoken like \"megölt\" — still.",
+    "i": "/mɛɡølt/"
+  },
+  {
+    "h": "sehová",
+    "e": "nowhere (to)",
+    "m": "Spoken like \"sehová\".",
+    "i": "/ʃɛhovaː/"
+  },
+  {
+    "h": "maradjanak",
+    "e": "already",
+    "m": "Spoken like \"maradjanak\" — already.",
+    "i": "/mɒrɒdjɒnɒk/"
+  },
+  {
+    "h": "percben",
+    "e": "in a minute",
+    "m": "Spoken like \"percben\".",
+    "i": "/pɛrt͡sbɛn/"
+  },
+  {
+    "h": "vacsorát",
+    "e": "dinner (acc.)",
+    "m": "Spoken like \"vachorát\".",
+    "i": "/vɒtʃoraːt/"
+  },
+  {
+    "h": "lépj",
+    "e": "step (imperative)",
+    "m": "Spoken like \"lépj\".",
+    "i": "/leːpj/"
+  },
+  {
+    "h": "szülei",
+    "e": "his/her parents",
+    "m": "Spoken like \"süleee\".",
+    "i": "/sylɛi/"
+  },
+  {
+    "h": "erőt",
+    "e": "strength (acc.)",
+    "m": "Spoken like \"erőt\".",
+    "i": "/ɛrøːt/"
+  },
+  {
+    "h": "fegyvereket",
+    "e": "weapons (acc.)",
+    "m": "Spoken like \"fedyvereket\".",
+    "i": "/fɛɟvɛrɛkɛt/"
+  },
+  {
+    "h": "fiát",
+    "e": "his/her son (acc.)",
+    "m": "Spoken like \"feeát\".",
+    "i": "/fiaːt/"
+  },
+  {
+    "h": "viccelek",
+    "e": "I'm joking",
+    "m": "Spoken like \"veeccelek\".",
+    "i": "/vit͡sːɛlɛk/"
+  },
+  {
+    "h": "meghalsz",
+    "e": "still; yet",
+    "m": "Spoken like \"meghals\" — still.",
+    "i": "/mɛɡhɒls/"
+  },
+  {
+    "h": "hallja",
+    "e": "if",
+    "m": "Spoken like \"hallja\" — if.",
+    "i": "/hɒlːjɒ/"
+  },
+  {
+    "h": "WC",
+    "e": "WC; toilet",
+    "m": "Spoken like \"wc\".",
+    "i": "/vt͡s/"
+  },
+  {
+    "h": "fogtok",
+    "e": "tooth",
+    "m": "Spoken like \"fogtok\" — tooth.",
+    "i": "/foɡtok/"
+  },
+  {
+    "h": "cél",
+    "e": "goal; aim",
+    "m": "Spoken like \"cél\".",
+    "i": "/t͡seːl/"
+  },
+  {
+    "h": "héttel",
+    "e": "with a week",
+    "m": "Spoken like \"héttel\".",
+    "i": "/heːtːɛl/"
+  },
+  {
+    "h": "állítani",
+    "e": "to claim; to set",
+    "m": "Spoken like \"állítanee\".",
+    "i": "/aːlːiːtɒni/"
+  },
+  {
+    "h": "tetszeni",
+    "e": "you (sing.)",
+    "m": "Spoken like \"tetsenee\" — you (sing.).",
+    "i": "/tɛtsɛni/"
+  },
+  {
+    "h": "keze",
+    "e": "hand",
+    "m": "Spoken like \"keze\" — hand.",
+    "i": "/kɛzɛ/"
+  },
+  {
+    "h": "igent",
+    "e": "yes",
+    "m": "Spoken like \"eegent\" — yes.",
+    "i": "/iɡɛnt/"
+  },
+  {
+    "h": "tim",
+    "e": "Tim",
+    "m": "Spoken like \"teem\".",
+    "i": "/tim/"
+  },
+  {
+    "h": "kellemetlen",
+    "e": "must; is needed",
+    "m": "Spoken like \"kellemetlen\" — must.",
+    "i": "/kɛlːɛmɛtlɛn/"
+  },
+  {
+    "h": "találtuk",
+    "e": "maybe",
+    "m": "Spoken like \"találtook\" — maybe.",
+    "i": "/tɒlaːltuk/"
+  },
+  {
+    "h": "benn",
+    "e": "into; in",
+    "m": "Spoken like \"benn\" — into.",
+    "i": "/bɛnː/"
+  },
+  {
+    "h": "amiatt",
+    "e": "because of that",
+    "m": "Spoken like \"ameeatt\".",
+    "i": "/ɒmiɒtː/"
+  },
+  {
+    "h": "energia",
+    "e": "I",
+    "m": "Spoken like \"energeea\" — I.",
+    "i": "/ɛnɛrɡiɒ/"
+  },
+  {
+    "h": "adsz",
+    "e": "gives",
+    "m": "Spoken like \"ads\" — gives.",
+    "i": "/ɒds/"
+  },
+  {
+    "h": "utóbb",
+    "e": "road; way",
+    "m": "Spoken like \"ootóbb\" — road.",
+    "i": "/utoːbː/"
+  },
+  {
+    "h": "mód",
+    "e": "way; mode",
+    "m": "Spoken like \"mód\".",
+    "i": "/moːd/"
+  },
+  {
+    "h": "nyitott",
+    "e": "open; opened",
+    "m": "Spoken like \"nyeetott\".",
+    "i": "/ɲitotː/"
+  },
+  {
+    "h": "arc",
+    "e": "face",
+    "m": "Spoken like \"arc\" — face.",
+    "i": "/ɒrt͡s/"
+  },
+  {
+    "h": "ülni",
+    "e": "to sit",
+    "m": "Spoken like \"ülnee\".",
+    "i": "/ylni/"
+  },
+  {
+    "h": "tanulni",
+    "e": "studies; learns",
+    "m": "Spoken like \"tanoolnee\" — studies.",
+    "i": "/tɒnulni/"
+  },
+  {
+    "h": "királyi",
+    "e": "who; out",
+    "m": "Spoken like \"keeráyee\" — who.",
+    "i": "/kiraːji/"
+  },
+  {
+    "h": "rock",
+    "e": "rock",
+    "m": "Spoken like \"rock\".",
+    "i": "/rot͡sk/"
+  },
+  {
+    "h": "vicceltem",
+    "e": "I was joking",
+    "m": "Spoken like \"veecceltem\".",
+    "i": "/vit͡sːɛltɛm/"
+  },
+  {
+    "h": "bumm",
+    "e": "boom",
+    "m": "Spoken like \"boomm\".",
+    "i": "/bumː/"
+  },
+  {
+    "h": "holtan",
+    "e": "snow",
+    "m": "Spoken like \"holtan\" — snow.",
+    "i": "/holtɒn/"
+  },
+  {
+    "h": "mindenféle",
+    "e": "what; we",
+    "m": "Spoken like \"meendenféle\" — what.",
+    "i": "/mindɛnfeːlɛ/"
+  },
+  {
+    "h": "játszunk",
+    "e": "let's play",
+    "m": "Spoken like \"játsoonk\".",
+    "i": "/jaːtsunk/"
+  },
+  {
+    "h": "szerencsétlen",
+    "e": "unfortunate",
+    "m": "Spoken like \"serenchétlen\".",
+    "i": "/sɛrɛntʃeːtlɛn/"
+  },
+  {
+    "h": "trükk",
+    "e": "trick",
+    "m": "Spoken like \"trükk\".",
+    "i": "/trykː/"
+  },
+  {
+    "h": "néni",
+    "e": "aunt; old lady",
+    "m": "Spoken like \"nénee\".",
+    "i": "/neːni/"
+  },
+  {
+    "h": "repülni",
+    "e": "to fly",
+    "m": "Spoken like \"repülnee\".",
+    "i": "/rɛpylni/"
+  },
+  {
+    "h": "férjhez",
+    "e": "to get married (woman)",
+    "m": "Spoken like \"férjhez\".",
+    "i": "/feːrjhɛz/"
+  },
+  {
+    "h": "zseni",
+    "e": "genius",
+    "m": "Spoken like \"zhenee\".",
+    "i": "/ʒɛni/"
+  },
+  {
+    "h": "kezdve",
+    "e": "hand",
+    "m": "Spoken like \"kezdve\" — hand.",
+    "i": "/kɛzdvɛ/"
+  },
+  {
+    "h": "sikeres",
+    "e": "successful",
+    "m": "Spoken like \"seekeres\".",
+    "i": "/ʃikɛrɛʃ/"
+  },
+  {
+    "h": "múltkor",
+    "e": "last time",
+    "m": "Spoken like \"múltkor\".",
+    "i": "/muːltkor/"
+  },
+  {
+    "h": "lépett",
+    "e": "he/she stepped",
+    "m": "Spoken like \"lépett\".",
+    "i": "/leːpɛtː/"
+  },
+  {
+    "h": "ült",
+    "e": "he/she sat",
+    "m": "Spoken like \"ült\".",
+    "i": "/ylt/"
+  },
+  {
+    "h": "joga",
+    "e": "good",
+    "m": "Spoken like \"joga\" — good.",
+    "i": "/joɡɒ/"
+  },
+  {
+    "h": "irodában",
+    "e": "writer",
+    "m": "Spoken like \"eerodában\" — writer.",
+    "i": "/irodaːbɒn/"
+  },
+  {
+    "h": "nyoma",
+    "e": "trace of",
+    "m": "Spoken like \"nyoma\".",
+    "i": "/ɲomɒ/"
+  },
+  {
+    "h": "csend",
+    "e": "silence",
+    "m": "Spoken like \"chend\".",
+    "i": "/tʃɛnd/"
+  },
+  {
+    "h": "lábát",
+    "e": "his/her leg (acc.)",
+    "m": "Spoken like \"lábát\".",
+    "i": "/laːbaːt/"
+  },
+  {
+    "h": "melyet",
+    "e": "which (acc.)",
+    "m": "Spoken like \"meyet\".",
+    "i": "/mɛjɛt/"
+  },
+  {
+    "h": "megcsinálni",
+    "e": "still; yet",
+    "m": "Spoken like \"megcheenálnee\" — still.",
+    "i": "/mɛɡtʃinaːlni/"
+  },
+  {
+    "h": "szabályok",
+    "e": "rules",
+    "m": "Spoken like \"sabáyok\".",
+    "i": "/sɒbaːjok/"
+  },
+  {
+    "h": "USA",
+    "e": "USA",
+    "m": "Spoken like \"oosa\".",
+    "i": "/uʃɒ/"
+  },
+  {
+    "h": "ijesztő",
+    "e": "scary",
+    "m": "Spoken like \"eejestő\".",
+    "i": "/ijɛstøː/"
+  },
+  {
+    "h": "szűz",
+    "e": "virgin",
+    "m": "Spoken like \"sűz\".",
+    "i": "/syːz/"
+  },
+  {
+    "h": "idősebb",
+    "e": "older",
+    "m": "Spoken like \"eedősebb\".",
+    "i": "/idøːʃɛbː/"
+  },
+  {
+    "h": "nagyot",
+    "e": "big",
+    "m": "Spoken like \"nadyot\" — big.",
+    "i": "/nɒɟot/"
+  },
+  {
+    "h": "órára",
+    "e": "for an hour",
+    "m": "Spoken like \"órára\".",
+    "i": "/oːraːrɒ/"
+  },
+  {
+    "h": "címe",
+    "e": "its title",
+    "m": "Spoken like \"címe\".",
+    "i": "/t͡siːmɛ/"
+  },
+  {
+    "h": "anyját",
+    "e": "his/her mother (acc.)",
+    "m": "Spoken like \"anyját\".",
+    "i": "/ɒɲjaːt/"
+  },
+  {
+    "h": "tudományos",
+    "e": "I know",
+    "m": "Spoken like \"toodományos\" — I know.",
+    "i": "/tudomaːɲoʃ/"
+  },
+  {
+    "h": "háza",
+    "e": "his/her house",
+    "m": "Spoken like \"háza\".",
+    "i": "/haːzɒ/"
+  },
+  {
+    "h": "időd",
+    "e": "your time",
+    "m": "Spoken like \"eedőd\".",
+    "i": "/idøːd/"
+  },
+  {
+    "h": "kérünk",
+    "e": "we ask; please",
+    "m": "Spoken like \"kérünk\".",
+    "i": "/keːrynk/"
+  },
+  {
+    "h": "működött",
+    "e": "it worked",
+    "m": "Spoken like \"működött\".",
+    "i": "/myːkødøtː/"
+  },
+  {
+    "h": "sors",
+    "e": "salt",
+    "m": "Spoken like \"sors\" — salt.",
+    "i": "/ʃorʃ/"
+  },
+  {
+    "h": "ismétlem",
+    "e": "also; too",
+    "m": "Spoken like \"eesmétlem\" — also.",
+    "i": "/iʃmeːtlɛm/"
+  },
+  {
+    "h": "történelem",
+    "e": "history",
+    "m": "Spoken like \"történelem\".",
+    "i": "/tørteːnɛlɛm/"
+  },
+  {
+    "h": "nyugodjon",
+    "e": "rest (formal, imper.)",
+    "m": "Spoken like \"nyoogodjon\".",
+    "i": "/ɲuɡodjon/"
+  },
+  {
+    "h": "jutunk",
+    "e": "we reach",
+    "m": "Spoken like \"jootoonk\".",
+    "i": "/jutunk/"
+  },
+  {
+    "h": "sürgős",
+    "e": "urgent",
+    "m": "Spoken like \"sürgős\".",
+    "i": "/ʃyrɡøːʃ/"
+  },
+  {
+    "h": "nemzetközi",
+    "e": "no; not",
+    "m": "Spoken like \"nemzetközee\" — no.",
+    "i": "/nɛmzɛtkøzi/"
+  },
+  {
+    "h": "hallgasson",
+    "e": "if",
+    "m": "Spoken like \"hallgasson\" — if.",
+    "i": "/hɒlːɡɒʃːon/"
+  },
+  {
+    "h": "fogadni",
+    "e": "tooth",
+    "m": "Spoken like \"fogadnee\" — tooth.",
+    "i": "/foɡɒdni/"
+  },
+  {
+    "h": "információ",
+    "e": "information",
+    "m": "Spoken like \"eenformáceeó\".",
+    "i": "/informaːt͡sioː/"
+  },
+  {
+    "h": "boldoggá",
+    "e": "happy",
+    "m": "Spoken like \"boldoggá\" — happy.",
+    "i": "/boldoɡːaː/"
+  },
+  {
+    "h": "kezelni",
+    "e": "hand",
+    "m": "Spoken like \"kezelnee\" — hand.",
+    "i": "/kɛzɛlni/"
+  },
+  {
+    "h": "lord",
+    "e": "horse",
+    "m": "Spoken like \"lord\" — horse.",
+    "i": "/lord/"
+  },
+  {
+    "h": "szívét",
+    "e": "his/her heart (acc.)",
+    "m": "Spoken like \"sívét\".",
+    "i": "/siːveːt/"
+  },
+  {
+    "h": "egyél",
+    "e": "one; a",
+    "m": "Spoken like \"edyél\" — one.",
+    "i": "/ɛɟeːl/"
+  },
+  {
+    "h": "hús",
+    "e": "meat",
+    "m": "Spoken like \"hús\".",
+    "i": "/huːʃ/"
+  },
+  {
+    "h": "percen",
+    "e": "in a minute",
+    "m": "Spoken like \"percen\".",
+    "i": "/pɛrt͡sɛn/"
+  },
+  {
+    "h": "ősi",
+    "e": "ancient",
+    "m": "Spoken like \"ősee\".",
+    "i": "/øːʃi/"
+  },
+  {
+    "h": "hallok",
+    "e": "if",
+    "m": "Spoken like \"hallok\" — if.",
+    "i": "/hɒlːok/"
+  },
+  {
+    "h": "szabályokat",
+    "e": "rules (acc.)",
+    "m": "Spoken like \"sabáyokat\".",
+    "i": "/sɒbaːjokɒt/"
+  },
+  {
+    "h": "lennünk",
+    "e": "down",
+    "m": "Spoken like \"lennünk\" — down.",
+    "i": "/lɛnːynk/"
+  },
+  {
+    "h": "rólunk",
+    "e": "about us",
+    "m": "Spoken like \"róloonk\".",
+    "i": "/roːlunk/"
+  },
+  {
+    "h": "megtalálták",
+    "e": "still; yet",
+    "m": "Spoken like \"megtalálták\" — still.",
+    "i": "/mɛɡtɒlaːltaːk/"
+  },
+  {
+    "h": "stimmel",
+    "e": "it's correct",
+    "m": "Spoken like \"steemmel\".",
+    "i": "/ʃtimːɛl/"
+  },
+  {
+    "h": "háromszor",
+    "e": "three times",
+    "m": "Spoken like \"háromsor\".",
+    "i": "/haːromsor/"
+  },
+  {
+    "h": "egyike",
+    "e": "one; a",
+    "m": "Spoken like \"edyeeke\" — one.",
+    "i": "/ɛɟikɛ/"
+  },
+  {
+    "h": "keresd",
+    "e": "asks; requests",
+    "m": "Spoken like \"keresd\" — asks.",
+    "i": "/kɛrɛʃd/"
+  },
+  {
+    "h": "kapnak",
+    "e": "they get",
+    "m": "Spoken like \"kapnak\".",
+    "i": "/kɒpnɒk/"
+  },
+  {
+    "h": "ritka",
+    "e": "rare",
+    "m": "Spoken like \"reetka\".",
+    "i": "/ritkɒ/"
+  },
+  {
+    "h": "indulj",
+    "e": "start (imperative)",
+    "m": "Spoken like \"eendoolj\".",
+    "i": "/indulj/"
+  },
+  {
+    "h": "tán",
+    "e": "maybe; perhaps",
+    "m": "Spoken like \"tán\".",
+    "i": "/taːn/"
+  },
+  {
+    "h": "családod",
+    "e": "your family",
+    "m": "Spoken like \"chaládod\".",
+    "i": "/tʃɒlaːdod/"
+  },
+  {
+    "h": "működni",
+    "e": "to function",
+    "m": "Spoken like \"működnee\".",
+    "i": "/myːkødni/"
+  },
+  {
+    "h": "higgye",
+    "e": "let him/her believe",
+    "m": "Spoken like \"heegdye\".",
+    "i": "/hiɟːɛ/"
+  },
+  {
+    "h": "ahonnan",
+    "e": "from where",
+    "m": "Spoken like \"ahonnan\".",
+    "i": "/ɒhonːɒn/"
+  },
+  {
+    "h": "választás",
+    "e": "choice",
+    "m": "Spoken like \"válastás\".",
+    "i": "/vaːlɒstaːʃ/"
+  },
+  {
+    "h": "fegyverek",
+    "e": "weapons",
+    "m": "Spoken like \"fedyverek\".",
+    "i": "/fɛɟvɛrɛk/"
+  },
+  {
+    "h": "hold",
+    "e": "moon",
+    "m": "Spoken like \"hold\" — moon.",
+    "i": "/hold/"
+  },
+  {
+    "h": "megjött",
+    "e": "still; yet",
+    "m": "Spoken like \"megjött\" — still.",
+    "i": "/mɛɡjøtː/"
+  },
+  {
+    "h": "hívást",
+    "e": "call (acc.)",
+    "m": "Spoken like \"hívást\".",
+    "i": "/hiːvaːʃt/"
+  },
+  {
+    "h": "hatással",
+    "e": "if",
+    "m": "Spoken like \"hatással\" — if.",
+    "i": "/hɒtaːʃːɒl/"
+  },
+  {
+    "h": "elvitte",
+    "e": "he/she took it",
+    "m": "Spoken like \"elveette\".",
+    "i": "/ɛlvitːɛ/"
+  },
+  {
+    "h": "figyelmet",
+    "e": "attention (acc.)",
+    "m": "Spoken like \"feedyelmet\".",
+    "i": "/fiɟɛlmɛt/"
+  },
+  {
+    "h": "folyó",
+    "e": "river",
+    "m": "Spoken like \"foyó\".",
+    "i": "/fojoː/"
+  },
+  {
+    "h": "vegyen",
+    "e": "let him/her take",
+    "m": "Spoken like \"vedyen\".",
+    "i": "/vɛɟɛn/"
+  },
+  {
+    "h": "közülük",
+    "e": "among them",
+    "m": "Spoken like \"közülük\".",
+    "i": "/køzylyk/"
+  },
+  {
+    "h": "ahelyett",
+    "e": "instead of",
+    "m": "Spoken like \"aheyett\".",
+    "i": "/ɒhɛjɛtː/"
+  },
+  {
+    "h": "indulok",
+    "e": "I depart",
+    "m": "Spoken like \"eendoolok\".",
+    "i": "/indulok/"
+  },
+  {
+    "h": "bosszút",
+    "e": "revenge (acc.)",
+    "m": "Spoken like \"bossút\".",
+    "i": "/bosːuːt/"
+  },
+  {
+    "h": "eső",
+    "e": "and",
+    "m": "Spoken like \"eső\" — and.",
+    "i": "/ɛʃøː/"
+  },
+  {
+    "h": "mesélt",
+    "e": "he/she told",
+    "m": "Spoken like \"mesélt\".",
+    "i": "/mɛʃeːlt/"
+  },
+  {
+    "h": "magánál",
+    "e": "today",
+    "m": "Spoken like \"magánál\" — today.",
+    "i": "/mɒɡaːnaːl/"
+  },
+  {
+    "h": "irányba",
+    "e": "writes",
+    "m": "Spoken like \"eerányba\" — writes.",
+    "i": "/iraːɲbɒ/"
+  },
+  {
+    "h": "barátnőd",
+    "e": "your girlfriend",
+    "m": "Spoken like \"barátnőd\".",
+    "i": "/bɒraːtnøːd/"
+  },
+  {
+    "h": "miket",
+    "e": "what; we",
+    "m": "Spoken like \"meeket\" — what.",
+    "i": "/mikɛt/"
+  },
+  {
+    "h": "járunk",
+    "e": "we walk; we go",
+    "m": "Spoken like \"jároonk\".",
+    "i": "/jaːrunk/"
+  },
+  {
+    "h": "visszajött",
+    "e": "he/she came back",
+    "m": "Spoken like \"veessajött\".",
+    "i": "/visːɒjøtː/"
+  },
+  {
+    "h": "fordul",
+    "e": "turns",
+    "m": "Spoken like \"fordool\".",
+    "i": "/fordul/"
+  },
+  {
+    "h": "tévedtem",
+    "e": "I was wrong",
+    "m": "Spoken like \"tévedtem\".",
+    "i": "/teːvɛdtɛm/"
+  },
+  {
+    "h": "boldogan",
+    "e": "happy",
+    "m": "Spoken like \"boldogan\" — happy.",
+    "i": "/boldoɡɒn/"
+  },
+  {
+    "h": "munkáját",
+    "e": "his/her work (acc.)",
+    "m": "Spoken like \"moonkáját\".",
+    "i": "/munkaːjaːt/"
+  },
+  {
+    "h": "gyanúsított",
+    "e": "suspect",
+    "m": "Spoken like \"dyanúsított\".",
+    "i": "/ɟɒnuːʃiːtotː/"
+  },
+  {
+    "h": "beszéltek",
+    "e": "into; in",
+    "m": "Spoken like \"beséltek\" — into.",
+    "i": "/bɛseːltɛk/"
+  },
+  {
+    "h": "sérült",
+    "e": "injured",
+    "m": "Spoken like \"sérült\".",
+    "i": "/ʃeːrylt/"
+  },
+  {
+    "h": "börtön",
+    "e": "prison",
+    "m": "Spoken like \"börtön\".",
+    "i": "/børtøn/"
+  },
+  {
+    "h": "igyál",
+    "e": "drink (imperative)",
+    "m": "Spoken like \"eedyál\".",
+    "i": "/iɟaːl/"
+  },
+  {
+    "h": "hagylak",
+    "e": "if",
+    "m": "Spoken like \"hadylak\" — if.",
+    "i": "/hɒɟlɒk/"
+  },
+  {
+    "h": "szobába",
+    "e": "word",
+    "m": "Spoken like \"sobába\" — word.",
+    "i": "/sobaːbɒ/"
+  },
+  {
+    "h": "bűn",
+    "e": "crime; sin",
+    "m": "Spoken like \"bűn\".",
+    "i": "/byːn/"
+  },
+  {
+    "h": "néhányan",
+    "e": "some (people)",
+    "m": "Spoken like \"néhányan\".",
+    "i": "/neːhaːɲɒn/"
+  },
+  {
+    "h": "maradjatok",
+    "e": "already",
+    "m": "Spoken like \"maradjatok\" — already.",
+    "i": "/mɒrɒdjɒtok/"
+  },
+  {
+    "h": "használ",
+    "e": "if",
+    "m": "Spoken like \"hasnál\" — if.",
+    "i": "/hɒsnaːl/"
+  },
+  {
+    "h": "megöli",
+    "e": "still; yet",
+    "m": "Spoken like \"megölee\" — still.",
+    "i": "/mɛɡøli/"
+  },
+  {
+    "h": "bárhol",
+    "e": "anywhere",
+    "m": "Spoken like \"bárhol\".",
+    "i": "/baːrhol/"
+  },
+  {
+    "h": "későn",
+    "e": "late",
+    "m": "Spoken like \"későn\".",
+    "i": "/keːʃøːn/"
+  },
+  {
+    "h": "madár",
+    "e": "today",
+    "m": "Spoken like \"madár\" — today.",
+    "i": "/mɒdaːr/"
+  },
+  {
+    "h": "tanácsot",
+    "e": "advice (acc.)",
+    "m": "Spoken like \"tanáchot\".",
+    "i": "/tɒnaːtʃot/"
+  },
+  {
+    "h": "megpróbált",
+    "e": "still; yet",
+    "m": "Spoken like \"megpróbált\" — still.",
+    "i": "/mɛɡproːbaːlt/"
+  },
+  {
+    "h": "naponta",
+    "e": "day; sun",
+    "m": "Spoken like \"naponta\" — day.",
+    "i": "/nɒpontɒ/"
+  },
+  {
+    "h": "tették",
+    "e": "you (sing.)",
+    "m": "Spoken like \"tették\" — you (sing.).",
+    "i": "/tɛtːeːk/"
+  },
+  {
+    "h": "figyelsz",
+    "e": "you pay attention",
+    "m": "Spoken like \"feedyels\".",
+    "i": "/fiɟɛls/"
+  },
+  {
+    "h": "visszamegyek",
+    "e": "I'll go back",
+    "m": "Spoken like \"veessamedyek\".",
+    "i": "/visːɒmɛɟɛk/"
+  },
+  {
+    "h": "sztori",
+    "e": "story",
+    "m": "Spoken like \"storee\".",
+    "i": "/stori/"
+  },
+  {
+    "h": "babát",
+    "e": "baby (acc.)",
+    "m": "Spoken like \"babát\".",
+    "i": "/bɒbaːt/"
+  },
+  {
+    "h": "nővérem",
+    "e": "my sister",
+    "m": "Spoken like \"nővérem\".",
+    "i": "/nøːveːrɛm/"
+  },
+  {
+    "h": "hívtak",
+    "e": "they called",
+    "m": "Spoken like \"hívtak\".",
+    "i": "/hiːvtɒk/"
+  },
+  {
+    "h": "eszik",
+    "e": "and",
+    "m": "Spoken like \"eseek\" — and.",
+    "i": "/ɛsik/"
+  },
+  {
+    "h": "dobja",
+    "e": "throw it (formal)",
+    "m": "Spoken like \"dobja\".",
+    "i": "/dobjɒ/"
+  },
+  {
+    "h": "darabig",
+    "e": "piece",
+    "m": "Spoken like \"darabeeg\" — piece.",
+    "i": "/dɒrɒbiɡ/"
+  },
+  {
+    "h": "fiamat",
+    "e": "my son (acc.)",
+    "m": "Spoken like \"feeamat\".",
+    "i": "/fiɒmɒt/"
+  },
+  {
+    "h": "egymáshoz",
+    "e": "one; a",
+    "m": "Spoken like \"edymáshoz\" — one.",
+    "i": "/ɛɟmaːʃhoz/"
+  },
+  {
+    "h": "bemutatom",
+    "e": "into; in",
+    "m": "Spoken like \"bemootatom\" — into.",
+    "i": "/bɛmutɒtom/"
+  },
+  {
+    "h": "segítene",
+    "e": "would he/she help",
+    "m": "Spoken like \"segítene\".",
+    "i": "/ʃɛɡiːtɛnɛ/"
+  },
+  {
+    "h": "felét",
+    "e": "up",
+    "m": "Spoken like \"felét\" — up.",
+    "i": "/fɛleːt/"
+  },
+  {
+    "h": "javaslom",
+    "e": "I suggest",
+    "m": "Spoken like \"javaslom\".",
+    "i": "/jɒvɒʃlom/"
+  },
+  {
+    "h": "védeni",
+    "e": "to protect",
+    "m": "Spoken like \"védenee\".",
+    "i": "/veːdɛni/"
+  },
+  {
+    "h": "alól",
+    "e": "from under",
+    "m": "Spoken like \"alól\".",
+    "i": "/ɒloːl/"
+  },
+  {
+    "h": "istenek",
+    "e": "also; too",
+    "m": "Spoken like \"eestenek\" — also.",
+    "i": "/iʃtɛnɛk/"
+  },
+  {
+    "h": "vonat",
+    "e": "train",
+    "m": "Spoken like \"vonat\" — train.",
+    "i": "/vonɒt/"
+  },
+  {
+    "h": "külső",
+    "e": "outer; external",
+    "m": "Spoken like \"külső\".",
+    "i": "/kylʃøː/"
+  },
+  {
+    "h": "extra",
+    "e": "extra",
+    "m": "Spoken like \"extra\".",
+    "i": "/ɛkstrɒ/"
+  },
+  {
+    "h": "irányítani",
+    "e": "writes",
+    "m": "Spoken like \"eerányítanee\" — writes.",
+    "i": "/iraːɲiːtɒni/"
+  },
+  {
+    "h": "hívás",
+    "e": "call",
+    "m": "Spoken like \"hívás\".",
+    "i": "/hiːvaːʃ/"
+  },
+  {
+    "h": "megígértem",
+    "e": "still; yet",
+    "m": "Spoken like \"megígértem\" — still.",
+    "i": "/mɛɡiːɡeːrtɛm/"
+  },
+  {
+    "h": "valószínű",
+    "e": "probable",
+    "m": "Spoken like \"valósínű\".",
+    "i": "/vɒloːsiːnyː/"
+  },
+  {
+    "h": "vegyük",
+    "e": "let's take",
+    "m": "Spoken like \"vedyük\".",
+    "i": "/vɛɟyk/"
+  },
+  {
+    "h": "bejött",
+    "e": "into; in",
+    "m": "Spoken like \"bejött\" — into.",
+    "i": "/bɛjøtː/"
+  },
+  {
+    "h": "nyugati",
+    "e": "western",
+    "m": "Spoken like \"nyoogatee\".",
+    "i": "/ɲuɡɒti/"
+  },
+  {
+    "h": "idén",
+    "e": "this year",
+    "m": "Spoken like \"eedén\".",
+    "i": "/ideːn/"
+  },
+  {
+    "h": "feleség",
+    "e": "up",
+    "m": "Spoken like \"feleség\" — up.",
+    "i": "/fɛlɛʃeːɡ/"
+  },
+  {
+    "h": "hónapig",
+    "e": "for a month",
+    "m": "Spoken like \"hónapeeg\".",
+    "i": "/hoːnɒpiɡ/"
+  },
+  {
+    "h": "kezdesz",
+    "e": "hand",
+    "m": "Spoken like \"kezdes\" — hand.",
+    "i": "/kɛzdɛs/"
+  },
+  {
+    "h": "tenném",
+    "e": "you (sing.)",
+    "m": "Spoken like \"tenném\" — you (sing.).",
+    "i": "/tɛnːeːm/"
+  },
+  {
+    "h": "bizonyítani",
+    "e": "to prove",
+    "m": "Spoken like \"beezonyítanee\".",
+    "i": "/bizoɲiːtɒni/"
+  },
+  {
+    "h": "pénze",
+    "e": "his/her money",
+    "m": "Spoken like \"pénze\".",
+    "i": "/peːnzɛ/"
+  },
+  {
+    "h": "remény",
+    "e": "hope",
+    "m": "Spoken like \"remény\".",
+    "i": "/rɛmeːɲ/"
+  },
+  {
+    "h": "megölted",
+    "e": "still; yet",
+    "m": "Spoken like \"megölted\" — still.",
+    "i": "/mɛɡøltɛd/"
+  },
+  {
+    "h": "olasz",
+    "e": "Italian",
+    "m": "Spoken like \"olas\" — Italian.",
+    "i": "/olɒs/"
+  },
+  {
+    "h": "adtál",
+    "e": "gives",
+    "m": "Spoken like \"adtál\" — gives.",
+    "i": "/ɒdtaːl/"
+  },
+  {
+    "h": "teszt",
+    "e": "you (sing.)",
+    "m": "Spoken like \"test\" — you (sing.).",
+    "i": "/tɛst/"
+  },
+  {
+    "h": "program",
+    "e": "program",
+    "m": "Spoken like \"program\".",
+    "i": "/proɡrɒm/"
+  },
+  {
+    "h": "fejemben",
+    "e": "head",
+    "m": "Spoken like \"fejemben\" — head.",
+    "i": "/fɛjɛmbɛn/"
+  },
+  {
+    "h": "anyukád",
+    "e": "your mom",
+    "m": "Spoken like \"anyookád\".",
+    "i": "/ɒɲukaːd/"
+  },
+  {
+    "h": "lőtt",
+    "e": "he/she shot",
+    "m": "Spoken like \"lőtt\".",
+    "i": "/løːtː/"
+  },
+  {
+    "h": "megteszek",
+    "e": "still; yet",
+    "m": "Spoken like \"megtesek\" — still.",
+    "i": "/mɛɡtɛsɛk/"
+  },
+  {
+    "h": "lövés",
+    "e": "shot",
+    "m": "Spoken like \"lövés\".",
+    "i": "/løveːʃ/"
+  },
+  {
+    "h": "menet",
+    "e": "march; process",
+    "m": "Spoken like \"menet\".",
+    "i": "/mɛnɛt/"
+  },
+  {
+    "h": "barna",
+    "e": "brown",
+    "m": "Spoken like \"barna\".",
+    "i": "/bɒrnɒ/"
+  },
+  {
+    "h": "szörnyeteg",
+    "e": "monster",
+    "m": "Spoken like \"sörnyeteg\".",
+    "i": "/sørɲɛtɛɡ/"
+  },
+  {
+    "h": "adják",
+    "e": "gives",
+    "m": "Spoken like \"adják\" — gives.",
+    "i": "/ɒdjaːk/"
+  },
+  {
+    "h": "szabadság",
+    "e": "freedom; vacation",
+    "m": "Spoken like \"sabadság\".",
+    "i": "/sɒbɒdʃaːɡ/"
+  },
+  {
+    "h": "olcsó",
+    "e": "cheap",
+    "m": "Spoken like \"olchó\".",
+    "i": "/oltʃoː/"
+  },
+  {
+    "h": "reméljük",
+    "e": "we hope",
+    "m": "Spoken like \"reméljük\".",
+    "i": "/rɛmeːljyk/"
+  },
+  {
+    "h": "adnak",
+    "e": "gives",
+    "m": "Spoken like \"adnak\" — gives.",
+    "i": "/ɒdnɒk/"
+  },
+  {
+    "h": "erőszak",
+    "e": "violence",
+    "m": "Spoken like \"erősak\".",
+    "i": "/ɛrøːsɒk/"
+  },
+  {
+    "h": "szaros",
+    "e": "shitty",
+    "m": "Spoken like \"saros\".",
+    "i": "/sɒroʃ/"
+  },
+  {
+    "h": "mondhatok",
+    "e": "says",
+    "m": "Spoken like \"mondhatok\" — says.",
+    "i": "/mondhɒtok/"
+  },
+  {
+    "h": "éltem",
+    "e": "I lived",
+    "m": "Spoken like \"éltem\".",
+    "i": "/eːltɛm/"
+  },
+  {
+    "h": "tegyék",
+    "e": "you (sing.)",
+    "m": "Spoken like \"tedyék\" — you (sing.).",
+    "i": "/tɛɟeːk/"
+  },
+  {
+    "h": "ilyenek",
+    "e": "such things",
+    "m": "Spoken like \"eeyenek\".",
+    "i": "/ijɛnɛk/"
+  },
+  {
+    "h": "jobbat",
+    "e": "good",
+    "m": "Spoken like \"jobbat\" — good.",
+    "i": "/jobːɒt/"
+  },
+  {
+    "h": "megvédeni",
+    "e": "still; yet",
+    "m": "Spoken like \"megvédenee\" — still.",
+    "i": "/mɛɡveːdɛni/"
+  },
+  {
+    "h": "ételt",
+    "e": "food (acc.)",
+    "m": "Spoken like \"ételt\".",
+    "i": "/eːtɛlt/"
+  },
+  {
+    "h": "mentünk",
+    "e": "went",
+    "m": "Spoken like \"mentünk\" — went.",
+    "i": "/mɛntynk/"
+  },
+  {
+    "h": "érzésem",
+    "e": "my feeling",
+    "m": "Spoken like \"érzésem\".",
+    "i": "/eːrzeːʃɛm/"
+  },
+  {
+    "h": "hozzájuk",
+    "e": "snow",
+    "m": "Spoken like \"hozzájook\" — snow.",
+    "i": "/hozːaːjuk/"
+  },
+  {
+    "h": "polgármester",
+    "e": "mayor",
+    "m": "Spoken like \"polgármester\".",
+    "i": "/polɡaːrmɛʃtɛr/"
+  },
+  {
+    "h": "fényt",
+    "e": "light (acc.)",
+    "m": "Spoken like \"fényt\".",
+    "i": "/feːɲt/"
+  },
+  {
+    "h": "szeretet",
+    "e": "loves; likes",
+    "m": "Spoken like \"seretet\" — loves.",
+    "i": "/sɛrɛtɛt/"
+  },
+  {
+    "h": "szőke",
+    "e": "blonde",
+    "m": "Spoken like \"sőke\".",
+    "i": "/søːkɛ/"
+  },
+  {
+    "h": "esküvő",
+    "e": "and",
+    "m": "Spoken like \"esküvő\" — and.",
+    "i": "/ɛʃkyvøː/"
+  },
+  {
+    "h": "pálya",
+    "e": "field; track",
+    "m": "Spoken like \"páya\".",
+    "i": "/paːjɒ/"
+  },
+  {
+    "h": "vészhelyzet",
+    "e": "emergency",
+    "m": "Spoken like \"vésheyzet\".",
+    "i": "/veːshɛjzɛt/"
+  },
+  {
+    "h": "családot",
+    "e": "family (acc.)",
+    "m": "Spoken like \"chaládot\".",
+    "i": "/tʃɒlaːdot/"
+  },
+  {
+    "h": "keress",
+    "e": "asks; requests",
+    "m": "Spoken like \"keress\" — asks.",
+    "i": "/kɛrɛʃː/"
+  },
+  {
+    "h": "tesszük",
+    "e": "you (sing.)",
+    "m": "Spoken like \"tessük\" — you (sing.).",
+    "i": "/tɛsːyk/"
+  },
+  {
+    "h": "emberünk",
+    "e": "person",
+    "m": "Spoken like \"emberünk\" — person.",
+    "i": "/ɛmbɛrynk/"
+  },
+  {
+    "h": "tévedsz",
+    "e": "you're wrong",
+    "m": "Spoken like \"téveds\".",
+    "i": "/teːvɛds/"
+  },
+  {
+    "h": "pénzzel",
+    "e": "with money",
+    "m": "Spoken like \"pénzzel\".",
+    "i": "/peːnzːɛl/"
+  },
+  {
+    "h": "lép",
+    "e": "he/she steps",
+    "m": "Spoken like \"lép\".",
+    "i": "/leːp/"
+  },
+  {
+    "h": "látjátok",
+    "e": "you (plural) see",
+    "m": "Spoken like \"látjátok\".",
+    "i": "/laːtjaːtok/"
+  },
+  {
+    "h": "igyunk",
+    "e": "let's drink",
+    "m": "Spoken like \"eedyoonk\".",
+    "i": "/iɟunk/"
+  },
+  {
+    "h": "fogalma",
+    "e": "tooth",
+    "m": "Spoken like \"fogalma\" — tooth.",
+    "i": "/foɡɒlmɒ/"
+  },
+  {
+    "h": "szokás",
+    "e": "word",
+    "m": "Spoken like \"sokás\" — word.",
+    "i": "/sokaːʃ/"
+  },
+  {
+    "h": "odalent",
+    "e": "down there",
+    "m": "Spoken like \"odalent\".",
+    "i": "/odɒlɛnt/"
+  },
+  {
+    "h": "akarták",
+    "e": "they wanted it",
+    "m": "Spoken like \"akarták\".",
+    "i": "/ɒkɒrtaːk/"
+  },
+  {
+    "h": "orvost",
+    "e": "doctor",
+    "m": "Spoken like \"orvost\" — doctor.",
+    "i": "/orvoʃt/"
+  },
+  {
+    "h": "húgom",
+    "e": "my little sister",
+    "m": "Spoken like \"húgom\".",
+    "i": "/huːɡom/"
+  },
+  {
+    "h": "épületet",
+    "e": "building (acc.)",
+    "m": "Spoken like \"épületet\".",
+    "i": "/eːpylɛtɛt/"
+  },
+  {
+    "h": "angyal",
+    "e": "angel",
+    "m": "Spoken like \"andyal\".",
+    "i": "/ɒnɟɒl/"
+  },
+  {
+    "h": "mondjon",
+    "e": "says",
+    "m": "Spoken like \"mondjon\" — says.",
+    "i": "/mondjon/"
+  },
+  {
+    "h": "teheted",
+    "e": "you (sing.)",
+    "m": "Spoken like \"teheted\" — you (sing.).",
+    "i": "/tɛhɛtɛd/"
+  },
+  {
+    "h": "verseny",
+    "e": "blood",
+    "m": "Spoken like \"verseny\" — blood.",
+    "i": "/vɛrʃɛɲ/"
+  },
+  {
+    "h": "hárman",
+    "e": "three of them",
+    "m": "Spoken like \"hárman\".",
+    "i": "/haːrmɒn/"
+  },
+  {
+    "h": "vámpír",
+    "e": "vampire",
+    "m": "Spoken like \"vámpír\".",
+    "i": "/vaːmpiːr/"
+  },
+  {
+    "h": "töltöttem",
+    "e": "I spent; I filled",
+    "m": "Spoken like \"töltöttem\".",
+    "i": "/tøltøtːɛm/"
+  },
+  {
+    "h": "tenger",
+    "e": "you (sing.)",
+    "m": "Spoken like \"tenger\" — you (sing.).",
+    "i": "/tɛnɡɛr/"
+  },
+  {
+    "h": "megkapod",
+    "e": "still; yet",
+    "m": "Spoken like \"megkapod\" — still.",
+    "i": "/mɛɡkɒpod/"
+  },
+  {
+    "h": "beszélhetnék",
+    "e": "into; in",
+    "m": "Spoken like \"besélhetnék\" — into.",
+    "i": "/bɛseːlhɛtneːk/"
+  },
+  {
+    "h": "nehezebb",
+    "e": "don't",
+    "m": "Spoken like \"nehezebb\" — don't.",
+    "i": "/nɛhɛzɛbː/"
+  },
+  {
+    "h": "suliban",
+    "e": "at school",
+    "m": "Spoken like \"sooleeban\".",
+    "i": "/ʃulibɒn/"
+  },
+  {
+    "h": "rátok",
+    "e": "onto you (plural)",
+    "m": "Spoken like \"rátok\".",
+    "i": "/raːtok/"
+  },
+  {
+    "h": "jogi",
+    "e": "good",
+    "m": "Spoken like \"jogee\" — good.",
+    "i": "/joɡi/"
+  },
+  {
+    "h": "légyszí",
+    "e": "please",
+    "m": "Spoken like \"lédysí\".",
+    "i": "/leːɟsiː/"
+  },
+  {
+    "h": "jele",
+    "e": "its sign",
+    "m": "Spoken like \"jele\".",
+    "i": "/jɛlɛ/"
+  },
+  {
+    "h": "vélem",
+    "e": "with me",
+    "m": "Spoken like \"vélem\".",
+    "i": "/veːlɛm/"
+  },
+  {
+    "h": "áruló",
+    "e": "traitor",
+    "m": "Spoken like \"árooló\".",
+    "i": "/aːruloː/"
+  },
+  {
+    "h": "szólni",
+    "e": "to speak; to call",
+    "m": "Spoken like \"sólnee\".",
+    "i": "/soːlni/"
+  },
+  {
+    "h": "nélkülem",
+    "e": "without me",
+    "m": "Spoken like \"nélkülem\".",
+    "i": "/neːlkylɛm/"
+  },
+  {
+    "h": "munkára",
+    "e": "to work",
+    "m": "Spoken like \"moonkára\".",
+    "i": "/munkaːrɒ/"
+  },
+  {
+    "h": "művel",
+    "e": "with it",
+    "m": "Spoken like \"művel\".",
+    "i": "/myːvɛl/"
+  },
+  {
+    "h": "gondold",
+    "e": "think (imperative)",
+    "m": "Spoken like \"gondold\".",
+    "i": "/ɡondold/"
+  },
+  {
+    "h": "folytassa",
+    "e": "let him/her continue",
+    "m": "Spoken like \"foytassa\".",
+    "i": "/fojtɒʃːɒ/"
+  },
+  {
+    "h": "sima",
+    "e": "smooth; simple",
+    "m": "Spoken like \"seema\".",
+    "i": "/ʃimɒ/"
+  },
+  {
+    "h": "egyéb",
+    "e": "one; a",
+    "m": "Spoken like \"edyéb\" — one.",
+    "i": "/ɛɟeːb/"
+  },
+  {
+    "h": "melletted",
+    "e": "next to",
+    "m": "Spoken like \"melletted\" — next to.",
+    "i": "/mɛlːɛtːɛd/"
+  },
+  {
+    "h": "kisfiú",
+    "e": "who; out",
+    "m": "Spoken like \"keesfeeú\" — who.",
+    "i": "/kiʃfiuː/"
+  },
+  {
+    "h": "melyek",
+    "e": "which (plural)",
+    "m": "Spoken like \"meyek\".",
+    "i": "/mɛjɛk/"
+  },
+  {
+    "h": "szokatlan",
+    "e": "word",
+    "m": "Spoken like \"sokatlan\" — word.",
+    "i": "/sokɒtlɒn/"
+  },
+  {
+    "h": "cuccot",
+    "e": "stuff (acc.)",
+    "m": "Spoken like \"cooccot\".",
+    "i": "/t͡sut͡sːot/"
+  },
+  {
+    "h": "határozottan",
+    "e": "if",
+    "m": "Spoken like \"határozottan\" — if.",
+    "i": "/hɒtaːrozotːɒn/"
+  },
+  {
+    "h": "törődj",
+    "e": "care (imperative)",
+    "m": "Spoken like \"törődj\".",
+    "i": "/tørøːdj/"
+  },
+  {
+    "h": "álló",
+    "e": "standing",
+    "m": "Spoken like \"álló\".",
+    "i": "/aːlːoː/"
+  },
+  {
+    "h": "megkaptam",
+    "e": "still; yet",
+    "m": "Spoken like \"megkaptam\" — still.",
+    "i": "/mɛɡkɒptɒm/"
+  },
+  {
+    "h": "megcsinálom",
+    "e": "still; yet",
+    "m": "Spoken like \"megcheenálom\" — still.",
+    "i": "/mɛɡtʃinaːlom/"
+  },
+  {
+    "h": "tehetséges",
+    "e": "you (sing.)",
+    "m": "Spoken like \"tehetséges\" — you (sing.).",
+    "i": "/tɛhɛtʃeːɡɛʃ/"
+  },
+  {
+    "h": "pénzért",
+    "e": "for money",
+    "m": "Spoken like \"pénzért\".",
+    "i": "/peːnzeːrt/"
+  },
+  {
+    "h": "étel",
+    "e": "food",
+    "m": "Spoken like \"étel\".",
+    "i": "/eːtɛl/"
+  },
+  {
+    "h": "derek",
+    "e": "but",
+    "m": "Spoken like \"derek\" — but.",
+    "i": "/dɛrɛk/"
+  },
+  {
+    "h": "leginkább",
+    "e": "down",
+    "m": "Spoken like \"legeenkább\" — down.",
+    "i": "/lɛɡinkaːbː/"
+  },
+  {
+    "h": "hiányzol",
+    "e": "I miss you",
+    "m": "Spoken like \"heeányzol\".",
+    "i": "/hiaːɲzol/"
+  },
+  {
+    "h": "származik",
+    "e": "originates",
+    "m": "Spoken like \"sármazeek\".",
+    "i": "/saːrmɒzik/"
+  },
+  {
+    "h": "önöknek",
+    "e": "to you (formal, plural)",
+    "m": "Spoken like \"önöknek\".",
+    "i": "/ønøknɛk/"
+  },
+  {
+    "h": "hatalom",
+    "e": "if",
+    "m": "Spoken like \"hatalom\" — if.",
+    "i": "/hɒtɒlom/"
+  },
+  {
+    "h": "küldeni",
+    "e": "to send",
+    "m": "Spoken like \"küldenee\".",
+    "i": "/kyldɛni/"
+  },
+  {
+    "h": "idején",
+    "e": "in its time",
+    "m": "Spoken like \"eedején\".",
+    "i": "/idɛjeːn/"
+  },
+  {
+    "h": "magatokat",
+    "e": "today",
+    "m": "Spoken like \"magatokat\" — today.",
+    "i": "/mɒɡɒtokɒt/"
+  },
+  {
+    "h": "írok",
+    "e": "I write",
+    "m": "Spoken like \"írok\".",
+    "i": "/iːrok/"
+  },
+  {
+    "h": "ereje",
+    "e": "his/her strength",
+    "m": "Spoken like \"ereje\".",
+    "i": "/ɛrɛjɛ/"
+  },
+  {
+    "h": "bejön",
+    "e": "into; in",
+    "m": "Spoken like \"bejön\" — into.",
+    "i": "/bɛjøn/"
+  },
+  {
+    "h": "látnod",
+    "e": "you must see; to see (your)",
+    "m": "Spoken like \"látnod\".",
+    "i": "/laːtnod/"
+  },
+  {
+    "h": "alacsony",
+    "e": "short; low",
+    "m": "Spoken like \"alachony\" — short.",
+    "i": "/ɒlɒtʃoɲ/"
+  },
+  {
+    "h": "tér",
+    "e": "space; square",
+    "m": "Spoken like \"tér\".",
+    "i": "/teːr/"
+  },
+  {
+    "h": "golyót",
+    "e": "bullet (acc.)",
+    "m": "Spoken like \"goyót\".",
+    "i": "/ɡojoːt/"
+  },
+  {
+    "h": "szerencsére",
+    "e": "fortunately",
+    "m": "Spoken like \"serenchére\".",
+    "i": "/sɛrɛntʃeːrɛ/"
+  },
+  {
+    "h": "megöl",
+    "e": "still; yet",
+    "m": "Spoken like \"megöl\" — still.",
+    "i": "/mɛɡøl/"
+  },
+  {
+    "h": "kapunk",
+    "e": "we get",
+    "m": "Spoken like \"kapoonk\".",
+    "i": "/kɒpunk/"
+  },
+  {
+    "h": "megtudja",
+    "e": "still; yet",
+    "m": "Spoken like \"megtoodja\" — still.",
+    "i": "/mɛɡtudjɒ/"
+  },
+  {
+    "h": "kegyetlen",
+    "e": "cruel",
+    "m": "Spoken like \"kedyetlen\".",
+    "i": "/kɛɟɛtlɛn/"
+  },
+  {
+    "h": "beszéd",
+    "e": "into; in",
+    "m": "Spoken like \"beséd\" — into.",
+    "i": "/bɛseːd/"
+  },
+  {
+    "h": "drog",
+    "e": "drug",
+    "m": "Spoken like \"drog\".",
+    "i": "/droɡ/"
+  },
+  {
+    "h": "megőrült",
+    "e": "still; yet",
+    "m": "Spoken like \"megőrült\" — still.",
+    "i": "/mɛɡøːrylt/"
+  },
+  {
+    "h": "ló",
+    "e": "horse",
+    "m": "Spoken like \"ló\".",
+    "i": "/loː/"
+  },
+  {
+    "h": "értékes",
+    "e": "valuable",
+    "m": "Spoken like \"értékes\".",
+    "i": "/eːrteːkɛʃ/"
+  },
+  {
+    "h": "eszedbe",
+    "e": "and",
+    "m": "Spoken like \"esedbe\" — and.",
+    "i": "/ɛsɛdbɛ/"
+  },
+  {
+    "h": "gondoltad",
+    "e": "did you think",
+    "m": "Spoken like \"gondoltad\".",
+    "i": "/ɡondoltɒd/"
+  },
+  {
+    "h": "takarodj",
+    "e": "get lost (imperative)",
+    "m": "Spoken like \"takarodj\".",
+    "i": "/tɒkɒrodj/"
+  },
+  {
+    "h": "mer",
+    "e": "dares",
+    "m": "Spoken like \"mer\".",
+    "i": "/mɛr/"
+  },
+  {
+    "h": "megmentette",
+    "e": "still; yet",
+    "m": "Spoken like \"megmentette\" — still.",
+    "i": "/mɛɡmɛntɛtːɛ/"
+  },
+  {
+    "h": "tartottam",
+    "e": "I held; I kept",
+    "m": "Spoken like \"tartottam\".",
+    "i": "/tɒrtotːɒm/"
+  },
+  {
+    "h": "vezetett",
+    "e": "he/she led; he/she drove",
+    "m": "Spoken like \"vezetett\".",
+    "i": "/vɛzɛtɛtː/"
+  },
+  {
+    "h": "segítségével",
+    "e": "with the help of",
+    "m": "Spoken like \"segítségével\".",
+    "i": "/ʃɛɡiːtʃeːɡeːvɛl/"
+  },
+  {
+    "h": "bennük",
+    "e": "into; in",
+    "m": "Spoken like \"bennük\" — into.",
+    "i": "/bɛnːyk/"
+  },
+  {
+    "h": "nélküli",
+    "e": "without (it)",
+    "m": "Spoken like \"nélkülee\".",
+    "i": "/neːlkyli/"
+  },
+  {
+    "h": "oldal",
+    "e": "side; page",
+    "m": "Spoken like \"oldal\".",
+    "i": "/oldɒl/"
+  },
+  {
+    "h": "küldetés",
+    "e": "mission",
+    "m": "Spoken like \"küldetés\".",
+    "i": "/kyldɛteːʃ/"
+  },
+  {
+    "h": "enyémet",
+    "e": "I",
+    "m": "Spoken like \"enyémet\" — I.",
+    "i": "/ɛɲeːmɛt/"
+  },
+  {
+    "h": "gondolkoztam",
+    "e": "I thought",
+    "m": "Spoken like \"gondolkoztam\".",
+    "i": "/ɡondolkoztɒm/"
+  },
+  {
+    "h": "gondolják",
+    "e": "they think",
+    "m": "Spoken like \"gondolják\".",
+    "i": "/ɡondoljaːk/"
+  },
+  {
+    "h": "elkezdett",
+    "e": "he/she started",
+    "m": "Spoken like \"elkezdett\".",
+    "i": "/ɛlkɛzdɛtː/"
+  },
+  {
+    "h": "lady",
+    "e": "lady",
+    "m": "Spoken like \"lady\".",
+    "i": "/lɒdi/"
+  },
+  {
+    "h": "dehogyis",
+    "e": "but",
+    "m": "Spoken like \"dehodyees\" — but.",
+    "i": "/dɛhoɟiʃ/"
+  },
+  {
+    "h": "bárban",
+    "e": "in a bar",
+    "m": "Spoken like \"bárban\".",
+    "i": "/baːrbɒn/"
+  },
+  {
+    "h": "napom",
+    "e": "day; sun",
+    "m": "Spoken like \"napom\" — day.",
+    "i": "/nɒpom/"
+  },
+  {
+    "h": "helyére",
+    "e": "to its place",
+    "m": "Spoken like \"heyére\".",
+    "i": "/hɛjeːrɛ/"
+  },
+  {
+    "h": "elmondod",
+    "e": "will you tell",
+    "m": "Spoken like \"elmondod\".",
+    "i": "/ɛlmondod/"
+  },
+  {
+    "h": "megpróbálta",
+    "e": "still; yet",
+    "m": "Spoken like \"megpróbálta\" — still.",
+    "i": "/mɛɡproːbaːltɒ/"
+  },
+  {
+    "h": "fizetek",
+    "e": "I pay",
+    "m": "Spoken like \"feezetek\".",
+    "i": "/fizɛtɛk/"
+  },
+  {
+    "h": "kelljen",
+    "e": "must; is needed",
+    "m": "Spoken like \"kelljen\" — must.",
+    "i": "/kɛlːjɛn/"
+  },
+  {
+    "h": "feladat",
+    "e": "up",
+    "m": "Spoken like \"feladat\" — up.",
+    "i": "/fɛlɒdɒt/"
+  },
+  {
+    "h": "nélküle",
+    "e": "without him/her",
+    "m": "Spoken like \"nélküle\".",
+    "i": "/neːlkylɛ/"
+  },
+  {
+    "h": "életünk",
+    "e": "our life",
+    "m": "Spoken like \"életünk\".",
+    "i": "/eːlɛtynk/"
+  },
+  {
+    "h": "rajtunk",
+    "e": "on us",
+    "m": "Spoken like \"rajtoonk\".",
+    "i": "/rɒjtunk/"
+  },
+  {
+    "h": "amerikaiak",
+    "e": "Americans",
+    "m": "Spoken like \"amereekaeeak\".",
+    "i": "/ɒmɛrikɒiɒk/"
+  },
+  {
+    "h": "vírus",
+    "e": "virus",
+    "m": "Spoken like \"víroos\".",
+    "i": "/viːruʃ/"
+  },
+  {
+    "h": "all",
+    "e": "all",
+    "m": "Spoken like \"all\".",
+    "i": "/ɒlː/"
+  },
+  {
+    "h": "hajnali",
+    "e": "if",
+    "m": "Spoken like \"hajnalee\" — if.",
+    "i": "/hɒjnɒli/"
+  },
+  {
+    "h": "lányokat",
+    "e": "girls (acc.)",
+    "m": "Spoken like \"lányokat\".",
+    "i": "/laːɲokɒt/"
+  },
+  {
+    "h": "macska",
+    "e": "today",
+    "m": "Spoken like \"machka\" — today.",
+    "i": "/mɒtʃkɒ/"
+  },
+  {
+    "h": "city",
+    "e": "city",
+    "m": "Spoken like \"ceety\".",
+    "i": "/t͡sic/"
+  },
+  {
+    "h": "mondjátok",
+    "e": "says",
+    "m": "Spoken like \"mondjátok\" — says.",
+    "i": "/mondjaːtok/"
+  },
+  {
+    "h": "kapcsolja",
+    "e": "connect it (formal)",
+    "m": "Spoken like \"kapcholja\".",
+    "i": "/kɒptʃoljɒ/"
+  },
+  {
+    "h": "ülök",
+    "e": "I sit",
+    "m": "Spoken like \"ülök\".",
+    "i": "/yløk/"
+  },
+  {
+    "h": "cserben",
+    "e": "in need; abandoned",
+    "m": "Spoken like \"cherben\".",
+    "i": "/tʃɛrbɛn/"
+  },
+  {
+    "h": "sikert",
+    "e": "success (acc.)",
+    "m": "Spoken like \"seekert\".",
+    "i": "/ʃikɛrt/"
+  },
+  {
+    "h": "kölcsön",
+    "e": "loan; borrowed",
+    "m": "Spoken like \"kölchön\".",
+    "i": "/køltʃøn/"
+  },
+  {
+    "h": "változtatni",
+    "e": "to change",
+    "m": "Spoken like \"változtatnee\".",
+    "i": "/vaːltoztɒtni/"
+  },
+  {
+    "h": "nyomd",
+    "e": "press (imperative)",
+    "m": "Spoken like \"nyomd\".",
+    "i": "/ɲomd/"
+  },
+  {
+    "h": "okozott",
+    "e": "caused",
+    "m": "Spoken like \"okozott\".",
+    "i": "/okozotː/"
+  },
+  {
+    "h": "férj",
+    "e": "husband",
+    "m": "Spoken like \"férj\".",
+    "i": "/feːrj/"
+  },
+  {
+    "h": "hazudtál",
+    "e": "if",
+    "m": "Spoken like \"hazoodtál\" — if.",
+    "i": "/hɒzudtaːl/"
+  },
+  {
+    "h": "bánja",
+    "e": "mind it; care",
+    "m": "Spoken like \"bánja\".",
+    "i": "/baːnjɒ/"
+  },
+  {
+    "h": "erőszakos",
+    "e": "violent",
+    "m": "Spoken like \"erősakos\".",
+    "i": "/ɛrøːsɒkoʃ/"
+  },
+  {
+    "h": "említette",
+    "e": "he/she mentioned",
+    "m": "Spoken like \"említette\".",
+    "i": "/ɛmliːtɛtːɛ/"
+  },
+  {
+    "h": "mozogj",
+    "e": "move (imperative)",
+    "m": "Spoken like \"mozogj\".",
+    "i": "/mozoɡj/"
+  },
+  {
+    "h": "bölcs",
+    "e": "wise",
+    "m": "Spoken like \"bölch\".",
+    "i": "/bøltʃ/"
+  },
+  {
+    "h": "forduljon",
+    "e": "let him/her turn",
+    "m": "Spoken like \"fordooljon\".",
+    "i": "/forduljon/"
+  },
+  {
+    "h": "péntek",
+    "e": "Friday",
+    "m": "Spoken like \"péntek\".",
+    "i": "/peːntɛk/"
+  },
+  {
+    "h": "tennie",
+    "e": "you (sing.)",
+    "m": "Spoken like \"tenneee\" — you (sing.).",
+    "i": "/tɛnːiɛ/"
+  },
+  {
+    "h": "terület",
+    "e": "you (sing.)",
+    "m": "Spoken like \"terület\" — you (sing.).",
+    "i": "/tɛrylɛt/"
+  },
+  {
+    "h": "alaposan",
+    "e": "thoroughly",
+    "m": "Spoken like \"alaposan\".",
+    "i": "/ɒlɒpoʃɒn/"
+  },
+  {
+    "h": "elhagyta",
+    "e": "he/she left (it)",
+    "m": "Spoken like \"elhadyta\".",
+    "i": "/ɛlhɒɟtɒ/"
+  },
+  {
+    "h": "gyereke",
+    "e": "child",
+    "m": "Spoken like \"dyereke\" — child.",
+    "i": "/ɟɛrɛkɛ/"
+  },
+  {
+    "h": "akció",
+    "e": "action",
+    "m": "Spoken like \"akceeó\".",
+    "i": "/ɒkt͡sioː/"
+  },
+  {
+    "h": "egyetem",
+    "e": "one; a",
+    "m": "Spoken like \"edyetem\" — one.",
+    "i": "/ɛɟɛtɛm/"
+  },
+  {
+    "h": "km",
+    "e": "km",
+    "m": "Spoken like \"km\".",
+    "i": "/km/"
+  },
+  {
+    "h": "ugorj",
+    "e": "jump (imperative)",
+    "m": "Spoken like \"oogorj\".",
+    "i": "/uɡorj/"
+  },
+  {
+    "h": "sör",
+    "e": "beer",
+    "m": "Spoken like \"sör\".",
+    "i": "/ʃør/"
+  },
+  {
+    "h": "ötleted",
+    "e": "your idea",
+    "m": "Spoken like \"ötleted\".",
+    "i": "/øtlɛtɛd/"
+  },
+  {
+    "h": "illegális",
+    "e": "illegal",
+    "m": "Spoken like \"eellegálees\".",
+    "i": "/ilːɛɡaːliʃ/"
+  },
+  {
+    "h": "repülő",
+    "e": "airplane",
+    "m": "Spoken like \"repülő\".",
+    "i": "/rɛpyløː/"
+  },
+  {
+    "h": "erdőben",
+    "e": "in the forest",
+    "m": "Spoken like \"erdőben\".",
+    "i": "/ɛrdøːbɛn/"
+  },
+  {
+    "h": "ebéd",
+    "e": "lunch",
+    "m": "Spoken like \"ebéd\".",
+    "i": "/ɛbeːd/"
+  },
+  {
+    "h": "válni",
+    "e": "to change; to divorce",
+    "m": "Spoken like \"válnee\".",
+    "i": "/vaːlni/"
+  },
+  {
+    "h": "terrorista",
+    "e": "you (sing.)",
+    "m": "Spoken like \"terroreesta\" — you (sing.).",
+    "i": "/tɛrːoriʃtɒ/"
+  },
+  {
+    "h": "barátaid",
+    "e": "your friends",
+    "m": "Spoken like \"barátaeed\".",
+    "i": "/bɒraːtɒid/"
+  },
+  {
+    "h": "szóltam",
+    "e": "I spoke; I called",
+    "m": "Spoken like \"sóltam\".",
+    "i": "/soːltɒm/"
+  },
+  {
+    "h": "érzékeny",
+    "e": "sensitive",
+    "m": "Spoken like \"érzékeny\".",
+    "i": "/eːrzeːkɛɲ/"
+  },
+  {
+    "h": "téved",
+    "e": "he/she is wrong",
+    "m": "Spoken like \"téved\".",
+    "i": "/teːvɛd/"
+  },
+  {
+    "h": "számítottam",
+    "e": "I expected",
+    "m": "Spoken like \"sámítottam\".",
+    "i": "/saːmiːtotːɒm/"
+  },
+  {
+    "h": "piszkos",
+    "e": "dirty",
+    "m": "Spoken like \"peeskos\".",
+    "i": "/piskoʃ/"
+  },
+  {
+    "h": "tolvaj",
+    "e": "lake",
+    "m": "Spoken like \"tolvaj\" — lake.",
+    "i": "/tolvɒj/"
+  },
+  {
+    "h": "dolláros",
+    "e": "dollar (adjective)",
+    "m": "Spoken like \"dolláros\".",
+    "i": "/dolːaːroʃ/"
+  },
+  {
+    "h": "helyét",
+    "e": "its place (acc.)",
+    "m": "Spoken like \"heyét\".",
+    "i": "/hɛjeːt/"
+  },
+  {
+    "h": "tudtok",
+    "e": "knows; can",
+    "m": "Spoken like \"toodtok\" — knows.",
+    "i": "/tudtok/"
+  },
+  {
+    "h": "elején",
+    "e": "at the beginning",
+    "m": "Spoken like \"elején\".",
+    "i": "/ɛlɛjeːn/"
+  },
+  {
+    "h": "használják",
+    "e": "if",
+    "m": "Spoken like \"hasnálják\" — if.",
+    "i": "/hɒsnaːljaːk/"
+  },
+  {
+    "h": "számunkra",
+    "e": "for us",
+    "m": "Spoken like \"sámoonkra\".",
+    "i": "/saːmunkrɒ/"
+  },
+  {
+    "h": "visszatér",
+    "e": "he/she returns",
+    "m": "Spoken like \"veessatér\".",
+    "i": "/visːɒteːr/"
+  },
+  {
+    "h": "seggét",
+    "e": "his/her ass (acc.)",
+    "m": "Spoken like \"seggét\".",
+    "i": "/ʃɛɡːeːt/"
+  },
+  {
+    "h": "emberem",
+    "e": "person",
+    "m": "Spoken like \"emberem\" — person.",
+    "i": "/ɛmbɛrɛm/"
+  },
+  {
+    "h": "megértette",
+    "e": "still; yet",
+    "m": "Spoken like \"megértette\" — still.",
+    "i": "/mɛɡeːrtɛtːɛ/"
+  },
+  {
+    "h": "kinyitni",
+    "e": "who; out",
+    "m": "Spoken like \"keenyeetnee\" — who.",
+    "i": "/kiɲitni/"
+  },
+  {
+    "h": "egyértelmű",
+    "e": "one; a",
+    "m": "Spoken like \"edyértelmű\" — one.",
+    "i": "/ɛɟeːrtɛlmyː/"
+  },
+  {
+    "h": "megállni",
+    "e": "still; yet",
+    "m": "Spoken like \"megállnee\" — still.",
+    "i": "/mɛɡaːlːni/"
+  },
+  {
+    "h": "városi",
+    "e": "city (adjective)",
+    "m": "Spoken like \"városee\".",
+    "i": "/vaːroʃi/"
+  },
+  {
+    "h": "szemétláda",
+    "e": "eye",
+    "m": "Spoken like \"semétláda\" — eye.",
+    "i": "/sɛmeːtlaːdɒ/"
+  },
+  {
+    "h": "embereim",
+    "e": "person",
+    "m": "Spoken like \"embereeem\" — person.",
+    "i": "/ɛmbɛrɛim/"
+  },
+  {
+    "h": "napod",
+    "e": "day; sun",
+    "m": "Spoken like \"napod\" — day.",
+    "i": "/nɒpod/"
+  },
+  {
+    "h": "védelmi",
+    "e": "defense (adjective)",
+    "m": "Spoken like \"védelmee\".",
+    "i": "/veːdɛlmi/"
+  },
+  {
+    "h": "lopott",
+    "e": "horse",
+    "m": "Spoken like \"lopott\" — horse.",
+    "i": "/lopotː/"
+  },
+  {
+    "h": "közöm",
+    "e": "my business (none of)",
+    "m": "Spoken like \"közöm\".",
+    "i": "/køzøm/"
+  },
+  {
+    "h": "szóló",
+    "e": "speaking; about",
+    "m": "Spoken like \"sóló\".",
+    "i": "/soːloː/"
+  },
+  {
+    "h": "mostanra",
+    "e": "now",
+    "m": "Spoken like \"mostanra\" — now.",
+    "i": "/moʃtɒnrɒ/"
+  },
+  {
+    "h": "egyetemen",
+    "e": "one; a",
+    "m": "Spoken like \"edyetemen\" — one.",
+    "i": "/ɛɟɛtɛmɛn/"
+  },
+  {
+    "h": "lánynak",
+    "e": "to a girl",
+    "m": "Spoken like \"lánynak\".",
+    "i": "/laːɲnɒk/"
+  },
+  {
+    "h": "rajtuk",
+    "e": "on them",
+    "m": "Spoken like \"rajtook\".",
+    "i": "/rɒjtuk/"
+  },
+  {
+    "h": "randi",
+    "e": "date",
+    "m": "Spoken like \"randee\".",
+    "i": "/rɒndi/"
+  },
+  {
+    "h": "pilóta",
+    "e": "pilot",
+    "m": "Spoken like \"peelóta\".",
+    "i": "/piloːtɒ/"
+  },
+  {
+    "h": "marha",
+    "e": "already",
+    "m": "Spoken like \"marha\" — already.",
+    "i": "/mɒrhɒ/"
+  },
+  {
+    "h": "ettem",
+    "e": "I ate",
+    "m": "Spoken like \"ettem\".",
+    "i": "/ɛtːɛm/"
+  },
+  {
+    "h": "kéri",
+    "e": "he/she asks for",
+    "m": "Spoken like \"kéree\".",
+    "i": "/keːri/"
+  },
+  {
+    "h": "pokolban",
+    "e": "in hell",
+    "m": "Spoken like \"pokolban\".",
+    "i": "/pokolbɒn/"
+  },
+  {
+    "h": "szerzett",
+    "e": "he/she obtained",
+    "m": "Spoken like \"serzett\".",
+    "i": "/sɛrzɛtː/"
+  },
+  {
+    "h": "hírt",
+    "e": "news (acc.)",
+    "m": "Spoken like \"hírt\".",
+    "i": "/hiːrt/"
+  },
+  {
+    "h": "megkért",
+    "e": "still; yet",
+    "m": "Spoken like \"megkért\" — still.",
+    "i": "/mɛɡkeːrt/"
+  },
+  {
+    "h": "visz",
+    "e": "carries; takes",
+    "m": "Spoken like \"vees\" — carries.",
+    "i": "/vis/"
+  },
+  {
+    "h": "találkoztál",
+    "e": "maybe",
+    "m": "Spoken like \"találkoztál\" — maybe.",
+    "i": "/tɒlaːlkoztaːl/"
+  },
+  {
+    "h": "megbeszéltük",
+    "e": "still; yet",
+    "m": "Spoken like \"megbeséltük\" — still.",
+    "i": "/mɛɡbɛseːltyk/"
+  },
+  {
+    "h": "mozduljon",
+    "e": "let him/her move",
+    "m": "Spoken like \"mozdooljon\".",
+    "i": "/mozduljon/"
+  },
+  {
+    "h": "rendszert",
+    "e": "system (acc.)",
+    "m": "Spoken like \"rendsert\".",
+    "i": "/rɛndsɛrt/"
+  },
+  {
+    "h": "aludtam",
+    "e": "I slept",
+    "m": "Spoken like \"aloodtam\".",
+    "i": "/ɒludtɒm/"
+  },
+  {
+    "h": "győzni",
+    "e": "to win",
+    "m": "Spoken like \"dyőznee\".",
+    "i": "/ɟøːzni/"
+  },
+  {
+    "h": "bűnöző",
+    "e": "criminal",
+    "m": "Spoken like \"bűnöző\".",
+    "i": "/byːnøzøː/"
+  },
+  {
+    "h": "orvosok",
+    "e": "doctor",
+    "m": "Spoken like \"orvosok\" — doctor.",
+    "i": "/orvoʃok/"
+  },
+  {
+    "h": "anyámat",
+    "e": "my mother (acc.)",
+    "m": "Spoken like \"anyámat\".",
+    "i": "/ɒɲaːmɒt/"
+  },
+  {
+    "h": "változik",
+    "e": "changes",
+    "m": "Spoken like \"változeek\".",
+    "i": "/vaːltozik/"
+  },
+  {
+    "h": "hányan",
+    "e": "how many (people)",
+    "m": "Spoken like \"hányan\".",
+    "i": "/haːɲɒn/"
+  },
+  {
+    "h": "mozog",
+    "e": "moves",
+    "m": "Spoken like \"mozog\".",
+    "i": "/mozoɡ/"
+  },
+  {
+    "h": "használta",
+    "e": "if",
+    "m": "Spoken like \"hasnálta\" — if.",
+    "i": "/hɒsnaːltɒ/"
+  },
+  {
+    "h": "egyfajta",
+    "e": "one; a",
+    "m": "Spoken like \"edyfajta\" — one.",
+    "i": "/ɛɟfɒjtɒ/"
+  },
+  {
+    "h": "hátrébb",
+    "e": "further back",
+    "m": "Spoken like \"hátrébb\".",
+    "i": "/haːtreːbː/"
+  },
+  {
+    "h": "higgy",
+    "e": "believe (imperative)",
+    "m": "Spoken like \"heegdy\".",
+    "i": "/hiɟː/"
+  },
+  {
+    "h": "szörny",
+    "e": "monster",
+    "m": "Spoken like \"sörny\".",
+    "i": "/sørɲ/"
+  },
+  {
+    "h": "biztosra",
+    "e": "sure; certain",
+    "m": "Spoken like \"beeztosra\" — sure.",
+    "i": "/biztoʃrɒ/"
+  },
+  {
+    "h": "ellopta",
+    "e": "he/she stole",
+    "m": "Spoken like \"ellopta\".",
+    "i": "/ɛlːoptɒ/"
+  },
+  {
+    "h": "helyén",
+    "e": "in its place",
+    "m": "Spoken like \"heyén\".",
+    "i": "/hɛjeːn/"
+  },
+  {
+    "h": "engedjen",
+    "e": "I",
+    "m": "Spoken like \"engedjen\" — I.",
+    "i": "/ɛnɡɛdjɛn/"
+  },
+  {
+    "h": "feltétlenül",
+    "e": "up",
+    "m": "Spoken like \"feltétlenül\" — up.",
+    "i": "/fɛlteːtlɛnyl/"
+  },
+  {
+    "h": "bárkit",
+    "e": "anyone (acc.)",
+    "m": "Spoken like \"bárkeet\".",
+    "i": "/baːrkit/"
+  },
+  {
+    "h": "fájt",
+    "e": "it hurt",
+    "m": "Spoken like \"fájt\".",
+    "i": "/faːjt/"
+  },
+  {
+    "h": "bírja",
+    "e": "he/she can stand it",
+    "m": "Spoken like \"bírja\".",
+    "i": "/biːrjɒ/"
+  },
+  {
+    "h": "háborúban",
+    "e": "in war",
+    "m": "Spoken like \"háborúban\".",
+    "i": "/haːboruːbɒn/"
+  },
+  {
+    "h": "figyelembe",
+    "e": "into consideration",
+    "m": "Spoken like \"feedyelembe\".",
+    "i": "/fiɟɛlɛmbɛ/"
+  },
+  {
+    "h": "Amerikában",
+    "e": "in America",
+    "m": "Spoken like \"amereekában\".",
+    "i": "/ɒmɛrikaːbɒn/"
+  },
+  {
+    "h": "lélegezz",
+    "e": "breathe (imperative)",
+    "m": "Spoken like \"lélegezz\".",
+    "i": "/leːlɛɡɛzː/"
+  },
+  {
+    "h": "mérföldre",
+    "e": "mile (to)",
+    "m": "Spoken like \"mérföldre\".",
+    "i": "/meːrføldrɛ/"
+  },
+  {
+    "h": "suli",
+    "e": "school",
+    "m": "Spoken like \"soolee\".",
+    "i": "/ʃuli/"
+  },
+  {
+    "h": "szereztem",
+    "e": "I obtained",
+    "m": "Spoken like \"sereztem\".",
+    "i": "/sɛrɛztɛm/"
+  },
+  {
+    "h": "feltételezem",
+    "e": "up",
+    "m": "Spoken like \"feltételezem\" — up.",
+    "i": "/fɛlteːtɛlɛzɛm/"
+  },
+  {
+    "h": "természet",
+    "e": "you (sing.)",
+    "m": "Spoken like \"terméset\" — you (sing.).",
+    "i": "/tɛrmeːsɛt/"
+  },
+  {
+    "h": "mutat",
+    "e": "shows",
+    "m": "Spoken like \"mootat\".",
+    "i": "/mutɒt/"
+  },
+  {
+    "h": "donna",
+    "e": "lady",
+    "m": "Spoken like \"donna\".",
+    "i": "/donːɒ/"
+  },
+  {
+    "h": "mondtak",
+    "e": "says",
+    "m": "Spoken like \"mondtak\" — says.",
+    "i": "/mondtɒk/"
+  },
+  {
+    "h": "titkot",
+    "e": "secret (acc.)",
+    "m": "Spoken like \"teetkot\".",
+    "i": "/titkot/"
+  },
+  {
+    "h": "ára",
+    "e": "its price",
+    "m": "Spoken like \"ára\".",
+    "i": "/aːrɒ/"
+  },
+  {
+    "h": "tartasz",
+    "e": "you hold",
+    "m": "Spoken like \"tartas\".",
+    "i": "/tɒrtɒs/"
+  },
+  {
+    "h": "asztal",
+    "e": "table",
+    "m": "Spoken like \"astal\" — table.",
+    "i": "/ɒstɒl/"
+  },
+  {
+    "h": "bármire",
+    "e": "onto anything",
+    "m": "Spoken like \"bármeere\".",
+    "i": "/baːrmirɛ/"
+  },
+  {
+    "h": "akarjátok",
+    "e": "you (plural) want",
+    "m": "Spoken like \"akarjátok\".",
+    "i": "/ɒkɒrjaːtok/"
+  },
+  {
+    "h": "futni",
+    "e": "grass",
+    "m": "Spoken like \"footnee\" — grass.",
+    "i": "/futni/"
+  },
+  {
+    "h": "szívás",
+    "e": "sucks",
+    "m": "Spoken like \"sívás\".",
+    "i": "/siːvaːʃ/"
+  },
+  {
+    "h": "arca",
+    "e": "face",
+    "m": "Spoken like \"arca\" — face.",
+    "i": "/ɒrt͡sɒ/"
+  },
+  {
+    "h": "készülj",
+    "e": "prepare (imperative)",
+    "m": "Spoken like \"késülj\".",
+    "i": "/keːsylj/"
+  },
+  {
+    "h": "nép",
+    "e": "people",
+    "m": "Spoken like \"nép\".",
+    "i": "/neːp/"
+  },
+  {
+    "h": "nocsak",
+    "e": "woman; grows",
+    "m": "Spoken like \"nochak\" — woman.",
+    "i": "/notʃɒk/"
+  },
+  {
+    "h": "halljuk",
+    "e": "if",
+    "m": "Spoken like \"halljook\" — if.",
+    "i": "/hɒlːjuk/"
+  },
+  {
+    "h": "akármi",
+    "e": "anything",
+    "m": "Spoken like \"akármee\".",
+    "i": "/ɒkaːrmi/"
+  },
+  {
+    "h": "listát",
+    "e": "list (acc.)",
+    "m": "Spoken like \"leestát\".",
+    "i": "/liʃtaːt/"
+  },
+  {
+    "h": "játszol",
+    "e": "you play",
+    "m": "Spoken like \"játsol\".",
+    "i": "/jaːtsol/"
+  },
+  {
+    "h": "amelyek",
+    "e": "which (plural)",
+    "m": "Spoken like \"ameyek\".",
+    "i": "/ɒmɛjɛk/"
+  },
+  {
+    "h": "halálát",
+    "e": "if",
+    "m": "Spoken like \"halálát\" — if.",
+    "i": "/hɒlaːlaːt/"
+  },
+  {
+    "h": "megtalálja",
+    "e": "still; yet",
+    "m": "Spoken like \"megtalálja\" — still.",
+    "i": "/mɛɡtɒlaːljɒ/"
+  },
+  {
+    "h": "hiányoztál",
+    "e": "I missed you",
+    "m": "Spoken like \"heeányoztál\".",
+    "i": "/hiaːɲoztaːl/"
+  },
+  {
+    "h": "féle",
+    "e": "kind of",
+    "m": "Spoken like \"féle\".",
+    "i": "/feːlɛ/"
+  },
+  {
+    "h": "részek",
+    "e": "parts",
+    "m": "Spoken like \"rések\".",
+    "i": "/reːsɛk/"
+  },
+  {
+    "h": "parton",
+    "e": "on the shore",
+    "m": "Spoken like \"parton\".",
+    "i": "/pɒrton/"
+  },
+  {
+    "h": "egyikünk",
+    "e": "one; a",
+    "m": "Spoken like \"edyeekünk\" — one.",
+    "i": "/ɛɟikynk/"
+  },
+  {
+    "h": "szomszéd",
+    "e": "word",
+    "m": "Spoken like \"somséd\" — word.",
+    "i": "/somseːd/"
+  },
+  {
+    "h": "csapda",
+    "e": "trap",
+    "m": "Spoken like \"chapda\".",
+    "i": "/tʃɒpdɒ/"
+  },
+  {
+    "h": "szigeten",
+    "e": "on an island",
+    "m": "Spoken like \"seegeten\".",
+    "i": "/siɡɛtɛn/"
+  },
+  {
+    "h": "kezdünk",
+    "e": "hand",
+    "m": "Spoken like \"kezdünk\" — hand.",
+    "i": "/kɛzdynk/"
+  },
+  {
+    "h": "patkány",
+    "e": "rat",
+    "m": "Spoken like \"patkány\".",
+    "i": "/pɒtkaːɲ/"
+  },
+  {
+    "h": "időzítés",
+    "e": "timing",
+    "m": "Spoken like \"eedőzítés\".",
+    "i": "/idøːziːteːʃ/"
+  },
+  {
+    "h": "iszom",
+    "e": "also; too",
+    "m": "Spoken like \"eesom\" — also.",
+    "i": "/isom/"
+  },
+  {
+    "h": "kel",
+    "e": "is needed; rises",
+    "m": "Spoken like \"kel\".",
+    "i": "/kɛl/"
+  },
+  {
+    "h": "közelébe",
+    "e": "close to",
+    "m": "Spoken like \"közelébe\".",
+    "i": "/køzɛleːbɛ/"
+  },
+  {
+    "h": "követett",
+    "e": "he/she followed",
+    "m": "Spoken like \"követett\".",
+    "i": "/køvɛtɛtː/"
+  },
+  {
+    "h": "jönnöd",
+    "e": "you must come",
+    "m": "Spoken like \"jönnöd\".",
+    "i": "/jønːød/"
+  },
+  {
+    "h": "kérjük",
+    "e": "we ask; please",
+    "m": "Spoken like \"kérjük\".",
+    "i": "/keːrjyk/"
+  },
+  {
+    "h": "központi",
+    "e": "central",
+    "m": "Spoken like \"központee\".",
+    "i": "/køzponti/"
+  },
+  {
+    "h": "szerinte",
+    "e": "according to him/her",
+    "m": "Spoken like \"sereente\".",
+    "i": "/sɛrintɛ/"
+  },
+  {
+    "h": "társam",
+    "e": "my companion",
+    "m": "Spoken like \"társam\".",
+    "i": "/taːrʃɒm/"
+  },
+  {
+    "h": "robbanás",
+    "e": "explosion",
+    "m": "Spoken like \"robbanás\".",
+    "i": "/robːɒnaːʃ/"
+  },
+  {
+    "h": "szel",
+    "e": "wind; edge",
+    "m": "Spoken like \"sel\" — wind.",
+    "i": "/sɛl/"
+  },
+  {
+    "h": "korábbi",
+    "e": "stone",
+    "m": "Spoken like \"korábbee\" — stone.",
+    "i": "/koraːbːi/"
+  },
+  {
+    "h": "hangot",
+    "e": "if",
+    "m": "Spoken like \"hangot\" — if.",
+    "i": "/hɒnɡot/"
+  },
+  {
+    "h": "másodszor",
+    "e": "secondly",
+    "m": "Spoken like \"másodsor\".",
+    "i": "/maːʃodsor/"
+  },
+  {
+    "h": "segítened",
+    "e": "you must help",
+    "m": "Spoken like \"segítened\".",
+    "i": "/ʃɛɡiːtɛnɛd/"
+  },
+  {
+    "h": "borzasztó",
+    "e": "wine",
+    "m": "Spoken like \"borzastó\" — wine.",
+    "i": "/borzɒstoː/"
+  },
+  {
+    "h": "holnapra",
+    "e": "tomorrow",
+    "m": "Spoken like \"holnapra\" — tomorrow.",
+    "i": "/holnɒprɒ/"
+  },
+  {
+    "h": "megtudni",
+    "e": "still; yet",
+    "m": "Spoken like \"megtoodnee\" — still.",
+    "i": "/mɛɡtudni/"
+  },
+  {
+    "h": "lejárt",
+    "e": "down",
+    "m": "Spoken like \"lejárt\" — down.",
+    "i": "/lɛjaːrt/"
+  },
+  {
+    "h": "mérföld",
+    "e": "mile",
+    "m": "Spoken like \"mérföld\".",
+    "i": "/meːrføld/"
+  },
+  {
+    "h": "szüleid",
+    "e": "your parents",
+    "m": "Spoken like \"süleeed\".",
+    "i": "/sylɛid/"
+  },
+  {
+    "h": "vezetője",
+    "e": "its leader",
+    "m": "Spoken like \"vezetője\".",
+    "i": "/vɛzɛtøːjɛ/"
+  },
+  {
+    "h": "rák",
+    "e": "cancer",
+    "m": "Spoken like \"rák\".",
+    "i": "/raːk/"
+  },
+  {
+    "h": "találnom",
+    "e": "maybe",
+    "m": "Spoken like \"találnom\" — maybe.",
+    "i": "/tɒlaːlnom/"
+  },
+  {
+    "h": "menteni",
+    "e": "went",
+    "m": "Spoken like \"mentenee\" — went.",
+    "i": "/mɛntɛni/"
+  },
+  {
+    "h": "lefogadom",
+    "e": "down",
+    "m": "Spoken like \"lefogadom\" — down.",
+    "i": "/lɛfoɡɒdom/"
+  },
+  {
+    "h": "pontot",
+    "e": "point (acc.)",
+    "m": "Spoken like \"pontot\".",
+    "i": "/pontot/"
+  },
+  {
+    "h": "viccel",
+    "e": "he/she jokes",
+    "m": "Spoken like \"veeccel\".",
+    "i": "/vit͡sːɛl/"
+  },
+  {
+    "h": "valamiben",
+    "e": "in something",
+    "m": "Spoken like \"valameeben\".",
+    "i": "/vɒlɒmibɛn/"
+  },
+  {
+    "h": "bombát",
+    "e": "bomb (acc.)",
+    "m": "Spoken like \"bombát\".",
+    "i": "/bombaːt/"
+  },
+  {
+    "h": "elhagyott",
+    "e": "abandoned",
+    "m": "Spoken like \"elhadyott\".",
+    "i": "/ɛlhɒɟotː/"
+  },
+  {
+    "h": "nyáron",
+    "e": "in summer",
+    "m": "Spoken like \"nyáron\".",
+    "i": "/ɲaːron/"
+  },
+  {
+    "h": "látnom",
+    "e": "I must see",
+    "m": "Spoken like \"látnom\".",
+    "i": "/laːtnom/"
+  },
+  {
+    "h": "számát",
+    "e": "its number",
+    "m": "Spoken like \"sámát\".",
+    "i": "/saːmaːt/"
+  },
+  {
+    "h": "majom",
+    "e": "today",
+    "m": "Spoken like \"majom\" — today.",
+    "i": "/mɒjom/"
+  },
+  {
+    "h": "írd",
+    "e": "write (imperative)",
+    "m": "Spoken like \"írd\".",
+    "i": "/iːrd/"
+  },
+  {
+    "h": "közvetlenül",
+    "e": "directly",
+    "m": "Spoken like \"közvetlenül\".",
+    "i": "/køzvɛtlɛnyl/"
+  },
+  {
+    "h": "álmodtam",
+    "e": "I dreamed",
+    "m": "Spoken like \"álmodtam\".",
+    "i": "/aːlmodtɒm/"
+  },
+  {
+    "h": "pap",
+    "e": "priest",
+    "m": "Spoken like \"pap\".",
+    "i": "/pɒp/"
+  },
+  {
+    "h": "műsor",
+    "e": "show; program",
+    "m": "Spoken like \"műsor\".",
+    "i": "/myːʃor/"
+  },
+  {
+    "h": "lőttek",
+    "e": "they shot",
+    "m": "Spoken like \"lőttek\".",
+    "i": "/løːtːɛk/"
+  },
+  {
+    "h": "fal",
+    "e": "wall",
+    "m": "Spoken like \"fal\" — wall.",
+    "i": "/fɒl/"
+  },
+  {
+    "h": "gordon",
+    "e": "Gordon",
+    "m": "Spoken like \"gordon\".",
+    "i": "/ɡordon/"
+  },
+  {
+    "h": "napján",
+    "e": "day; sun",
+    "m": "Spoken like \"napján\" — day.",
+    "i": "/nɒpjaːn/"
+  },
+  {
+    "h": "látnak",
+    "e": "they see",
+    "m": "Spoken like \"látnak\".",
+    "i": "/laːtnɒk/"
+  },
+  {
+    "h": "fiatalember",
+    "e": "young",
+    "m": "Spoken like \"feeatalember\" — young.",
+    "i": "/fiɒtɒlɛmbɛr/"
+  },
+  {
+    "h": "pöcs",
+    "e": "dick",
+    "m": "Spoken like \"pöch\".",
+    "i": "/pøtʃ/"
+  },
+  {
+    "h": "érni",
+    "e": "to reach",
+    "m": "Spoken like \"érnee\".",
+    "i": "/eːrni/"
+  },
+  {
+    "h": "köztük",
+    "e": "among them",
+    "m": "Spoken like \"köztük\".",
+    "i": "/køztyk/"
+  },
+  {
+    "h": "munkád",
+    "e": "your work",
+    "m": "Spoken like \"moonkád\".",
+    "i": "/munkaːd/"
+  },
+  {
+    "h": "anyagot",
+    "e": "mother",
+    "m": "Spoken like \"anyagot\" — mother.",
+    "i": "/ɒɲɒɡot/"
+  },
+  {
+    "h": "iroda",
+    "e": "writer",
+    "m": "Spoken like \"eeroda\" — writer.",
+    "i": "/irodɒ/"
+  },
+  {
+    "h": "véve",
+    "e": "taking",
+    "m": "Spoken like \"véve\".",
+    "i": "/veːvɛ/"
+  },
+  {
+    "h": "legyetek",
+    "e": "down",
+    "m": "Spoken like \"ledyetek\" — down.",
+    "i": "/lɛɟɛtɛk/"
+  },
+  {
+    "h": "senkivel",
+    "e": "no one",
+    "m": "Spoken like \"senkeevel\" — no one.",
+    "i": "/ʃɛnkivɛl/"
+  },
+  {
+    "h": "történhetett",
+    "e": "could have happened",
+    "m": "Spoken like \"történhetett\".",
+    "i": "/tørteːnhɛtɛtː/"
+  },
+  {
+    "h": "tévében",
+    "e": "on TV",
+    "m": "Spoken like \"tévében\".",
+    "i": "/teːveːbɛn/"
+  },
+  {
+    "h": "szavak",
+    "e": "words",
+    "m": "Spoken like \"savak\".",
+    "i": "/sɒvɒk/"
+  },
+  {
+    "h": "zsarukat",
+    "e": "cops (acc.)",
+    "m": "Spoken like \"zharookat\".",
+    "i": "/ʒɒrukɒt/"
+  },
+  {
+    "h": "nyertem",
+    "e": "I won",
+    "m": "Spoken like \"nyertem\".",
+    "i": "/ɲɛrtɛm/"
+  },
+  {
+    "h": "testet",
+    "e": "you (sing.)",
+    "m": "Spoken like \"testet\" — you (sing.).",
+    "i": "/tɛʃtɛt/"
+  },
+  {
+    "h": "kéz",
+    "e": "hand",
+    "m": "Spoken like \"kéz\".",
+    "i": "/keːz/"
+  },
+  {
+    "h": "rájön",
+    "e": "he/she realizes",
+    "m": "Spoken like \"rájön\".",
+    "i": "/raːjøn/"
+  },
+  {
+    "h": "testét",
+    "e": "you (sing.)",
+    "m": "Spoken like \"testét\" — you (sing.).",
+    "i": "/tɛʃteːt/"
+  },
+  {
+    "h": "alszom",
+    "e": "I sleep",
+    "m": "Spoken like \"alsom\".",
+    "i": "/ɒlsom/"
+  },
+  {
+    "h": "tudhatod",
+    "e": "knows; can",
+    "m": "Spoken like \"toodhatod\" — knows.",
+    "i": "/tudhɒtod/"
+  },
+  {
+    "h": "tartjuk",
+    "e": "we hold",
+    "m": "Spoken like \"tartjook\".",
+    "i": "/tɒrtjuk/"
+  },
+  {
+    "h": "ismerik",
+    "e": "also; too",
+    "m": "Spoken like \"eesmereek\" — also.",
+    "i": "/iʃmɛrik/"
+  },
+  {
+    "h": "társaság",
+    "e": "company",
+    "m": "Spoken like \"társaság\".",
+    "i": "/taːrʃɒʃaːɡ/"
+  },
+  {
+    "h": "mindkettő",
+    "e": "what; we",
+    "m": "Spoken like \"meendkettő\" — what.",
+    "i": "/mindkɛtːøː/"
+  },
+  {
+    "h": "énekelni",
+    "e": "to sing",
+    "m": "Spoken like \"énekelnee\".",
+    "i": "/eːnɛkɛlni/"
+  },
+  {
+    "h": "játszom",
+    "e": "I play",
+    "m": "Spoken like \"játsom\".",
+    "i": "/jaːtsom/"
+  },
+  {
+    "h": "lakás",
+    "e": "apartment",
+    "m": "Spoken like \"lakás\".",
+    "i": "/lɒkaːʃ/"
+  },
+  {
+    "h": "felhívott",
+    "e": "up",
+    "m": "Spoken like \"felhívott\" — up.",
+    "i": "/fɛlhiːvotː/"
+  },
+  {
+    "h": "justin",
+    "e": "Justin",
+    "m": "Spoken like \"joosteen\".",
+    "i": "/juʃtin/"
+  },
+  {
+    "h": "keveset",
+    "e": "few; little",
+    "m": "Spoken like \"keveset\" — few.",
+    "i": "/kɛvɛʃɛt/"
+  },
+  {
+    "h": "tűnjünk",
+    "e": "let's disappear",
+    "m": "Spoken like \"tűnjünk\".",
+    "i": "/tyːnjynk/"
+  },
+  {
+    "h": "fegyveres",
+    "e": "armed",
+    "m": "Spoken like \"fedyveres\".",
+    "i": "/fɛɟvɛrɛʃ/"
+  },
+  {
+    "h": "játékos",
+    "e": "player",
+    "m": "Spoken like \"játékos\".",
+    "i": "/jaːteːkoʃ/"
+  },
+  {
+    "h": "ágy",
+    "e": "bed",
+    "m": "Spoken like \"ády\".",
+    "i": "/aːɟ/"
+  },
+  {
+    "h": "tiszt",
+    "e": "officer; clean",
+    "m": "Spoken like \"teest\".",
+    "i": "/tist/"
+  },
+  {
+    "h": "győzelem",
+    "e": "victory",
+    "m": "Spoken like \"dyőzelem\".",
+    "i": "/ɟøːzɛlɛm/"
+  },
+  {
+    "h": "maradjunk",
+    "e": "already",
+    "m": "Spoken like \"maradjoonk\" — already.",
+    "i": "/mɒrɒdjunk/"
+  },
+  {
+    "h": "nemes",
+    "e": "no; not",
+    "m": "Spoken like \"nemes\" — no.",
+    "i": "/nɛmɛʃ/"
+  },
+  {
+    "h": "sötétben",
+    "e": "in the dark",
+    "m": "Spoken like \"sötétben\".",
+    "i": "/ʃøteːtbɛn/"
+  },
+  {
+    "h": "energiát",
+    "e": "I",
+    "m": "Spoken like \"energeeát\" — I.",
+    "i": "/ɛnɛrɡiaːt/"
+  },
+  {
+    "h": "abszolút",
+    "e": "absolute",
+    "m": "Spoken like \"absolút\".",
+    "i": "/ɒbsoluːt/"
+  },
+  {
+    "h": "megkapta",
+    "e": "still; yet",
+    "m": "Spoken like \"megkapta\" — still.",
+    "i": "/mɛɡkɒptɒ/"
+  },
+  {
+    "h": "suliba",
+    "e": "to school",
+    "m": "Spoken like \"sooleeba\".",
+    "i": "/ʃulibɒ/"
+  },
+  {
+    "h": "érj",
+    "e": "reach (imperative)",
+    "m": "Spoken like \"érj\".",
+    "i": "/eːrj/"
+  },
+  {
+    "h": "pihenj",
+    "e": "rest (imperative)",
+    "m": "Spoken like \"peehenj\".",
+    "i": "/pihɛnj/"
+  },
+  {
+    "h": "alkalmas",
+    "e": "suitable",
+    "m": "Spoken like \"alkalmas\".",
+    "i": "/ɒlkɒlmɒʃ/"
+  },
+  {
+    "h": "kelet",
+    "e": "east",
+    "m": "Spoken like \"kelet\".",
+    "i": "/kɛlɛt/"
+  },
+  {
+    "h": "végezni",
+    "e": "to finish",
+    "m": "Spoken like \"végeznee\".",
+    "i": "/veːɡɛzni/"
+  },
+  {
+    "h": "hibás",
+    "e": "faulty",
+    "m": "Spoken like \"heebás\".",
+    "i": "/hibaːʃ/"
+  },
+  {
+    "h": "kapjuk",
+    "e": "let's get it",
+    "m": "Spoken like \"kapjook\".",
+    "i": "/kɒpjuk/"
+  },
+  {
+    "h": "író",
+    "e": "writer",
+    "m": "Spoken like \"író\".",
+    "i": "/iːroː/"
+  },
+  {
+    "h": "lányát",
+    "e": "his/her daughter (acc.)",
+    "m": "Spoken like \"lányát\".",
+    "i": "/laːɲaːt/"
+  },
+  {
+    "h": "hasznos",
+    "e": "if",
+    "m": "Spoken like \"hasnos\" — if.",
+    "i": "/hɒsnoʃ/"
+  },
+  {
+    "h": "házi",
+    "e": "homemade; domestic",
+    "m": "Spoken like \"házee\".",
+    "i": "/haːzi/"
+  },
+  {
+    "h": "veszély",
+    "e": "buys; takes",
+    "m": "Spoken like \"veséy\" — buys.",
+    "i": "/vɛseːj/"
+  },
+  {
+    "h": "foglalkozik",
+    "e": "tooth",
+    "m": "Spoken like \"foglalkozeek\" — tooth.",
+    "i": "/foɡlɒlkozik/"
+  },
+  {
+    "h": "lépést",
+    "e": "step (acc.)",
+    "m": "Spoken like \"lépést\".",
+    "i": "/leːpeːʃt/"
+  },
+  {
+    "h": "hívtalak",
+    "e": "I called you",
+    "m": "Spoken like \"hívtalak\".",
+    "i": "/hiːvtɒlɒk/"
+  },
+  {
+    "h": "beszélhetek",
+    "e": "into; in",
+    "m": "Spoken like \"besélhetek\" — into.",
+    "i": "/bɛseːlhɛtɛk/"
+  },
+  {
+    "h": "megtalálom",
+    "e": "still; yet",
+    "m": "Spoken like \"megtalálom\" — still.",
+    "i": "/mɛɡtɒlaːlom/"
+  },
+  {
+    "h": "fizetett",
+    "e": "he/she paid",
+    "m": "Spoken like \"feezetett\".",
+    "i": "/fizɛtɛtː/"
+  },
+  {
+    "h": "kérdésre",
+    "e": "to a question",
+    "m": "Spoken like \"kérdésre\".",
+    "i": "/keːrdeːʃrɛ/"
+  },
+  {
+    "h": "náluk",
+    "e": "at their place",
+    "m": "Spoken like \"nálook\".",
+    "i": "/naːluk/"
+  },
+  {
+    "h": "pénzét",
+    "e": "his/her money (acc.)",
+    "m": "Spoken like \"pénzét\".",
+    "i": "/peːnzeːt/"
+  },
+  {
+    "h": "önző",
+    "e": "selfish",
+    "m": "Spoken like \"önző\".",
+    "i": "/ønzøː/"
+  },
+  {
+    "h": "beleértve",
+    "e": "into; in",
+    "m": "Spoken like \"beleértve\" — into.",
+    "i": "/bɛlɛeːrtvɛ/"
+  },
+  {
+    "h": "akarna",
+    "e": "he/she would want",
+    "m": "Spoken like \"akarna\".",
+    "i": "/ɒkɒrnɒ/"
+  },
+  {
+    "h": "csillag",
+    "e": "star",
+    "m": "Spoken like \"cheellag\" — star.",
+    "i": "/tʃilːɒɡ/"
+  },
+  {
+    "h": "vigyük",
+    "e": "let's take it",
+    "m": "Spoken like \"veedyük\".",
+    "i": "/viɟyk/"
+  },
+  {
+    "h": "végeztél",
+    "e": "you finished",
+    "m": "Spoken like \"végeztél\".",
+    "i": "/veːɡɛzteːl/"
+  },
+  {
+    "h": "adtak",
+    "e": "gives",
+    "m": "Spoken like \"adtak\" — gives.",
+    "i": "/ɒdtɒk/"
+  },
+  {
+    "h": "törvényt",
+    "e": "law (acc.)",
+    "m": "Spoken like \"törvényt\".",
+    "i": "/tørveːɲt/"
+  },
+  {
+    "h": "baszki",
+    "e": "damn",
+    "m": "Spoken like \"baskee\".",
+    "i": "/bɒski/"
+  },
+  {
+    "h": "számos",
+    "e": "numerous",
+    "m": "Spoken like \"sámos\".",
+    "i": "/saːmoʃ/"
+  },
+  {
+    "h": "elviselni",
+    "e": "to endure",
+    "m": "Spoken like \"elveeselnee\".",
+    "i": "/ɛlviʃɛlni/"
+  },
+  {
+    "h": "elektromos",
+    "e": "electric",
+    "m": "Spoken like \"elektromos\".",
+    "i": "/ɛlɛktromoʃ/"
+  },
+  {
+    "h": "nyom",
+    "e": "trace; print",
+    "m": "Spoken like \"nyom\".",
+    "i": "/ɲom/"
+  },
+  {
+    "h": "hajad",
+    "e": "if",
+    "m": "Spoken like \"hajad\" — if.",
+    "i": "/hɒjɒd/"
+  },
+  {
+    "h": "valakire",
+    "e": "someone",
+    "m": "Spoken like \"valakeere\" — someone.",
+    "i": "/vɒlɒkirɛ/"
+  },
+  {
+    "h": "valamivel",
+    "e": "with something",
+    "m": "Spoken like \"valameevel\".",
+    "i": "/vɒlɒmivɛl/"
+  },
+  {
+    "h": "valahová",
+    "e": "somewhere (to)",
+    "m": "Spoken like \"valahová\".",
+    "i": "/vɒlɒhovaː/"
+  },
+  {
+    "h": "pályán",
+    "e": "on the field",
+    "m": "Spoken like \"páyán\".",
+    "i": "/paːjaːn/"
+  },
+  {
+    "h": "történhet",
+    "e": "may happen",
+    "m": "Spoken like \"történhet\".",
+    "i": "/tørteːnhɛt/"
+  },
+  {
+    "h": "emberiség",
+    "e": "person",
+    "m": "Spoken like \"embereeség\" — person.",
+    "i": "/ɛmbɛriʃeːɡ/"
+  },
+  {
+    "h": "betegség",
+    "e": "into; in",
+    "m": "Spoken like \"betegség\" — into.",
+    "i": "/bɛtɛɡʃeːɡ/"
+  },
+  {
+    "h": "húst",
+    "e": "meat (acc.)",
+    "m": "Spoken like \"húst\".",
+    "i": "/huːʃt/"
+  },
+  {
+    "h": "küldtek",
+    "e": "they sent",
+    "m": "Spoken like \"küldtek\".",
+    "i": "/kyldtɛk/"
+  },
+  {
+    "h": "démon",
+    "e": "demon",
+    "m": "Spoken like \"démon\".",
+    "i": "/deːmon/"
+  },
+  {
+    "h": "fekszik",
+    "e": "he/she lies (down)",
+    "m": "Spoken like \"fekseek\".",
+    "i": "/fɛksik/"
+  },
+  {
+    "h": "magadat",
+    "e": "today",
+    "m": "Spoken like \"magadat\" — today.",
+    "i": "/mɒɡɒdɒt/"
+  },
+  {
+    "h": "csináltak",
+    "e": "they did",
+    "m": "Spoken like \"cheenáltak\".",
+    "i": "/tʃinaːltɒk/"
+  },
+  {
+    "h": "csukd",
+    "e": "close (imperative)",
+    "m": "Spoken like \"chookd\".",
+    "i": "/tʃukd/"
+  },
+  {
+    "h": "segítsenek",
+    "e": "let them help",
+    "m": "Spoken like \"segítsenek\".",
+    "i": "/ʃɛɡiːtʃɛnɛk/"
+  },
+  {
+    "h": "kérnék",
+    "e": "I would like",
+    "m": "Spoken like \"kérnék\".",
+    "i": "/keːrneːk/"
+  },
+  {
+    "h": "magunk",
+    "e": "today",
+    "m": "Spoken like \"magoonk\" — today.",
+    "i": "/mɒɡunk/"
+  },
+  {
+    "h": "jesszusom",
+    "e": "my God",
+    "m": "Spoken like \"jessoosom\".",
+    "i": "/jɛsːuʃom/"
+  },
+  {
+    "h": "áldozatot",
+    "e": "victim (acc.)",
+    "m": "Spoken like \"áldozatot\".",
+    "i": "/aːldozɒtot/"
+  },
+  {
+    "h": "meccset",
+    "e": "match (acc.)",
+    "m": "Spoken like \"mecchet\".",
+    "i": "/mɛtʃːɛt/"
+  },
+  {
+    "h": "lakom",
+    "e": "I live",
+    "m": "Spoken like \"lakom\".",
+    "i": "/lɒkom/"
+  },
+  {
+    "h": "előttünk",
+    "e": "before us",
+    "m": "Spoken like \"előttünk\".",
+    "i": "/ɛløːtːynk/"
+  },
+  {
+    "h": "érünk",
+    "e": "we reach",
+    "m": "Spoken like \"érünk\".",
+    "i": "/eːrynk/"
+  },
+  {
+    "h": "szerezted",
+    "e": "you obtained",
+    "m": "Spoken like \"serezted\".",
+    "i": "/sɛrɛztɛd/"
+  },
+  {
+    "h": "érezte",
+    "e": "he/she felt",
+    "m": "Spoken like \"érezte\".",
+    "i": "/eːrɛztɛ/"
+  },
+  {
+    "h": "megbeszéljük",
+    "e": "still; yet",
+    "m": "Spoken like \"megbeséljük\" — still.",
+    "i": "/mɛɡbɛseːljyk/"
+  },
+  {
+    "h": "kibaszottul",
+    "e": "who; out",
+    "m": "Spoken like \"keebasottool\" — who.",
+    "i": "/kibɒsotːul/"
+  },
+  {
+    "h": "gyűrű",
+    "e": "ring",
+    "m": "Spoken like \"dyűrű\".",
+    "i": "/ɟyːryː/"
+  },
+  {
+    "h": "figyelni",
+    "e": "to pay attention",
+    "m": "Spoken like \"feedyelnee\".",
+    "i": "/fiɟɛlni/"
+  },
+  {
+    "h": "várjuk",
+    "e": "we wait",
+    "m": "Spoken like \"várjook\".",
+    "i": "/vaːrjuk/"
+  },
+  {
+    "h": "évre",
+    "e": "for a year",
+    "m": "Spoken like \"évre\".",
+    "i": "/eːvrɛ/"
+  },
+  {
+    "h": "elégedett",
+    "e": "satisfied",
+    "m": "Spoken like \"elégedett\".",
+    "i": "/ɛleːɡɛdɛtː/"
+  },
+  {
+    "h": "csajt",
+    "e": "girl (acc., slang)",
+    "m": "Spoken like \"chajt\".",
+    "i": "/tʃɒjt/"
+  },
+  {
+    "h": "lehetnék",
+    "e": "down",
+    "m": "Spoken like \"lehetnék\" — down.",
+    "i": "/lɛhɛtneːk/"
+  },
+  {
+    "h": "tehetsz",
+    "e": "you (sing.)",
+    "m": "Spoken like \"tehets\" — you (sing.).",
+    "i": "/tɛhɛts/"
+  },
+  {
+    "h": "lépjen",
+    "e": "let him/her step",
+    "m": "Spoken like \"lépjen\".",
+    "i": "/leːpjɛn/"
+  },
+  {
+    "h": "láttunk",
+    "e": "we saw",
+    "m": "Spoken like \"láttoonk\".",
+    "i": "/laːtːunk/"
+  },
+  {
+    "h": "mutatja",
+    "e": "he/she shows",
+    "m": "Spoken like \"mootatja\".",
+    "i": "/mutɒtjɒ/"
+  },
+  {
+    "h": "beszélgettünk",
+    "e": "into; in",
+    "m": "Spoken like \"besélgettünk\" — into.",
+    "i": "/bɛseːlɡɛtːynk/"
+  },
+  {
+    "h": "anyádat",
+    "e": "your mother (acc.)",
+    "m": "Spoken like \"anyádat\".",
+    "i": "/ɒɲaːdɒt/"
+  },
+  {
+    "h": "karácsonyi",
+    "e": "arm",
+    "m": "Spoken like \"karáchonyee\" — arm.",
+    "i": "/kɒraːtʃoɲi/"
+  },
+  {
+    "h": "tartod",
+    "e": "you hold",
+    "m": "Spoken like \"tartod\".",
+    "i": "/tɒrtod/"
+  },
+  {
+    "h": "állandó",
+    "e": "constant",
+    "m": "Spoken like \"állandó\".",
+    "i": "/aːlːɒndoː/"
+  },
+  {
+    "h": "pillanatot",
+    "e": "moment (acc.)",
+    "m": "Spoken like \"peellanatot\".",
+    "i": "/pilːɒnɒtot/"
+  },
+  {
+    "h": "kést",
+    "e": "you were late; knife (acc.)",
+    "m": "Spoken like \"kést\".",
+    "i": "/keːʃt/"
+  },
+  {
+    "h": "pajtás",
+    "e": "buddy",
+    "m": "Spoken like \"pajtás\".",
+    "i": "/pɒjtaːʃ/"
+  },
+  {
+    "h": "vízbe",
+    "e": "into water",
+    "m": "Spoken like \"vízbe\".",
+    "i": "/viːzbɛ/"
+  },
+  {
+    "h": "bajnok",
+    "e": "champion",
+    "m": "Spoken like \"bajnok\".",
+    "i": "/bɒjnok/"
+  },
+  {
+    "h": "robot",
+    "e": "robot",
+    "m": "Spoken like \"robot\".",
+    "i": "/robot/"
+  },
+  {
+    "h": "bátyád",
+    "e": "your brother",
+    "m": "Spoken like \"bátyád\".",
+    "i": "/baːcaːd/"
+  },
+  {
+    "h": "csapdába",
+    "e": "into a trap",
+    "m": "Spoken like \"chapdába\".",
+    "i": "/tʃɒpdaːbɒ/"
+  },
+  {
+    "h": "őr",
+    "e": "guard",
+    "m": "Spoken like \"őr\".",
+    "i": "/øːr/"
+  },
+  {
+    "h": "teste",
+    "e": "you (sing.)",
+    "m": "Spoken like \"teste\" — you (sing.).",
+    "i": "/tɛʃtɛ/"
+  },
+  {
+    "h": "osztály",
+    "e": "autumn",
+    "m": "Spoken like \"ostáy\" — autumn.",
+    "i": "/ostaːj/"
+  },
+  {
+    "h": "pisztoly",
+    "e": "pistol",
+    "m": "Spoken like \"peestoy\".",
+    "i": "/pistoj/"
+  },
+  {
+    "h": "konyhában",
+    "e": "stone",
+    "m": "Spoken like \"konyhában\" — stone.",
+    "i": "/koɲhaːbɒn/"
+  },
+  {
+    "h": "mexikói",
+    "e": "Mexican",
+    "m": "Spoken like \"mexeekóee\".",
+    "i": "/mɛksikoːi/"
+  },
+  {
+    "h": "blah",
+    "e": "blah",
+    "m": "Spoken like \"blah\".",
+    "i": "/blɒh/"
+  },
+  {
+    "h": "pici",
+    "e": "tiny",
+    "m": "Spoken like \"peecee\".",
+    "i": "/pit͡si/"
+  },
+  {
+    "h": "sikerülni",
+    "e": "to succeed",
+    "m": "Spoken like \"seekerülnee\".",
+    "i": "/ʃikɛrylni/"
+  },
+  {
+    "h": "emlékeztet",
+    "e": "reminds",
+    "m": "Spoken like \"emlékeztet\".",
+    "i": "/ɛmleːkɛztɛt/"
+  },
+  {
+    "h": "veszik",
+    "e": "buys; takes",
+    "m": "Spoken like \"veseek\" — buys.",
+    "i": "/vɛsik/"
+  },
+  {
+    "h": "évad",
+    "e": "season",
+    "m": "Spoken like \"évad\".",
+    "i": "/eːvɒd/"
+  },
+  {
+    "h": "tisztességes",
+    "e": "decent; fair",
+    "m": "Spoken like \"teestességes\".",
+    "i": "/tistɛʃːeːɡɛʃ/"
+  },
+  {
+    "h": "süket",
+    "e": "deaf",
+    "m": "Spoken like \"süket\".",
+    "i": "/ʃykɛt/"
+  },
+  {
+    "h": "egyből",
+    "e": "one; a",
+    "m": "Spoken like \"edyből\" — one.",
+    "i": "/ɛɟbøːl/"
+  },
+  {
+    "h": "emeleten",
+    "e": "on the floor",
+    "m": "Spoken like \"emeleten\".",
+    "i": "/ɛmɛlɛtɛn/"
+  },
+  {
+    "h": "gondot",
+    "e": "problem (acc.)",
+    "m": "Spoken like \"gondot\".",
+    "i": "/ɡondot/"
+  },
+  {
+    "h": "érteni",
+    "e": "to understand",
+    "m": "Spoken like \"értenee\".",
+    "i": "/eːrtɛni/"
+  },
+  {
+    "h": "apját",
+    "e": "his/her father (acc.)",
+    "m": "Spoken like \"apját\".",
+    "i": "/ɒpjaːt/"
+  },
+  {
+    "h": "jegyet",
+    "e": "ice",
+    "m": "Spoken like \"jedyet\" — ice.",
+    "i": "/jɛɟɛt/"
+  },
+  {
+    "h": "aggódik",
+    "e": "he/she worries",
+    "m": "Spoken like \"aggódeek\".",
+    "i": "/ɒɡːoːdik/"
+  },
+  {
+    "h": "helyette",
+    "e": "instead of",
+    "m": "Spoken like \"heyette\" — instead of.",
+    "i": "/hɛjɛtːɛ/"
+  },
+  {
+    "h": "máshogy",
+    "e": "differently",
+    "m": "Spoken like \"máshody\".",
+    "i": "/maːʃhoɟ/"
+  },
+  {
+    "h": "tartalmából",
+    "e": "from its content",
+    "m": "Spoken like \"tartalmából\".",
+    "i": "/tɒrtɒlmaːboːl/"
+  },
+  {
+    "h": "semmiféle",
+    "e": "neither; nor",
+    "m": "Spoken like \"semmeeféle\" — neither.",
+    "i": "/ʃɛmːifeːlɛ/"
+  },
+  {
+    "h": "tölteni",
+    "e": "to fill; to spend",
+    "m": "Spoken like \"töltenee\".",
+    "i": "/tøltɛni/"
+  },
+  {
+    "h": "mindenesetre",
+    "e": "what; we",
+    "m": "Spoken like \"meendenesetre\" — what.",
+    "i": "/mindɛnɛʃɛtrɛ/"
+  },
+  {
+    "h": "vesszük",
+    "e": "we take",
+    "m": "Spoken like \"vessük\".",
+    "i": "/vɛsːyk/"
+  },
+  {
+    "h": "földi",
+    "e": "earthly",
+    "m": "Spoken like \"földee\".",
+    "i": "/føldi/"
+  },
+  {
+    "h": "ölt",
+    "e": "he/she dressed; killed",
+    "m": "Spoken like \"ölt\".",
+    "i": "/ølt/"
+  },
+  {
+    "h": "ölték",
+    "e": "they killed",
+    "m": "Spoken like \"ölték\".",
+    "i": "/ølteːk/"
+  },
+  {
+    "h": "szinten",
+    "e": "color",
+    "m": "Spoken like \"seenten\" — color.",
+    "i": "/sintɛn/"
+  },
+  {
+    "h": "kapaszkodj",
+    "e": "hold on (imperative)",
+    "m": "Spoken like \"kapaskodj\".",
+    "i": "/kɒpɒskodj/"
+  },
+  {
+    "h": "kerülsz",
+    "e": "asks; requests",
+    "m": "Spoken like \"kerüls\" — asks.",
+    "i": "/kɛryls/"
+  },
+  {
+    "h": "vigyen",
+    "e": "let him/her take",
+    "m": "Spoken like \"veedyen\".",
+    "i": "/viɟɛn/"
+  },
+  {
+    "h": "hétre",
+    "e": "for a week",
+    "m": "Spoken like \"hétre\".",
+    "i": "/heːtrɛ/"
+  },
+  {
+    "h": "másnap",
+    "e": "the next day",
+    "m": "Spoken like \"másnap\".",
+    "i": "/maːʃnɒp/"
+  },
+  {
+    "h": "tévedés",
+    "e": "mistake",
+    "m": "Spoken like \"tévedés\".",
+    "i": "/teːvɛdeːʃ/"
+  },
+  {
+    "h": "bennünk",
+    "e": "into; in",
+    "m": "Spoken like \"bennünk\" — into.",
+    "i": "/bɛnːynk/"
+  },
+  {
+    "h": "hagyhatom",
+    "e": "if",
+    "m": "Spoken like \"hadyhatom\" — if.",
+    "i": "/hɒɟhɒtom/"
+  },
+  {
+    "h": "küld",
+    "e": "sends",
+    "m": "Spoken like \"küld\".",
+    "i": "/kyld/"
+  },
+  {
+    "h": "gondoltuk",
+    "e": "we thought",
+    "m": "Spoken like \"gondoltook\".",
+    "i": "/ɡondoltuk/"
+  },
+  {
+    "h": "lányod",
+    "e": "your daughter",
+    "m": "Spoken like \"lányod\".",
+    "i": "/laːɲod/"
+  },
+  {
+    "h": "szerzek",
+    "e": "I get",
+    "m": "Spoken like \"serzek\".",
+    "i": "/sɛrzɛk/"
+  },
+  {
+    "h": "boldogok",
+    "e": "happy",
+    "m": "Spoken like \"boldogok\" — happy.",
+    "i": "/boldoɡok/"
+  },
+  {
+    "h": "lakást",
+    "e": "apartment (acc.)",
+    "m": "Spoken like \"lakást\".",
+    "i": "/lɒkaːʃt/"
+  },
+  {
+    "h": "rendkívüli",
+    "e": "extraordinary",
+    "m": "Spoken like \"rendkívülee\".",
+    "i": "/rɛndkiːvyli/"
+  },
+  {
+    "h": "sétálni",
+    "e": "to walk",
+    "m": "Spoken like \"sétálnee\".",
+    "i": "/ʃeːtaːlni/"
+  },
+  {
+    "h": "mindössze",
+    "e": "what; we",
+    "m": "Spoken like \"meendösse\" — what.",
+    "i": "/mindøsːɛ/"
+  },
+  {
+    "h": "híreket",
+    "e": "news (acc.)",
+    "m": "Spoken like \"híreket\".",
+    "i": "/hiːrɛkɛt/"
+  },
+  {
+    "h": "újat",
+    "e": "new (acc.)",
+    "m": "Spoken like \"újat\".",
+    "i": "/uːjɒt/"
+  },
+  {
+    "h": "akárki",
+    "e": "whoever",
+    "m": "Spoken like \"akárkee\".",
+    "i": "/ɒkaːrki/"
+  },
+  {
+    "h": "önre",
+    "e": "onto you (formal)",
+    "m": "Spoken like \"önre\".",
+    "i": "/ønrɛ/"
+  },
+  {
+    "h": "gyerekeknek",
+    "e": "child",
+    "m": "Spoken like \"dyerekeknek\" — child.",
+    "i": "/ɟɛrɛkɛknɛk/"
+  },
+  {
+    "h": "szombaton",
+    "e": "Saturday",
+    "m": "Spoken like \"sombaton\" — Saturday.",
+    "i": "/sombɒton/"
+  },
+  {
+    "h": "férjed",
+    "e": "your husband",
+    "m": "Spoken like \"férjed\".",
+    "i": "/feːrjɛd/"
+  },
+  {
+    "h": "ígérd",
+    "e": "promise (imperative)",
+    "m": "Spoken like \"ígérd\".",
+    "i": "/iːɡeːrd/"
+  },
+  {
+    "h": "maradnak",
+    "e": "already",
+    "m": "Spoken like \"maradnak\" — already.",
+    "i": "/mɒrɒdnɒk/"
+  },
+  {
+    "h": "bulit",
+    "e": "party (acc.)",
+    "m": "Spoken like \"booleet\".",
+    "i": "/bulit/"
+  },
+  {
+    "h": "parkban",
+    "e": "in the park",
+    "m": "Spoken like \"parkban\".",
+    "i": "/pɒrkbɒn/"
+  },
+  {
+    "h": "viszi",
+    "e": "carries; takes",
+    "m": "Spoken like \"veesee\" — carries.",
+    "i": "/visi/"
+  },
+  {
+    "h": "véres",
+    "e": "bloody",
+    "m": "Spoken like \"véres\".",
+    "i": "/veːrɛʃ/"
+  },
+  {
+    "h": "célja",
+    "e": "his/her goal",
+    "m": "Spoken like \"célja\".",
+    "i": "/t͡seːljɒ/"
+  },
+  {
+    "h": "indult",
+    "e": "he/she started",
+    "m": "Spoken like \"eendoolt\".",
+    "i": "/indult/"
+  },
+  {
+    "h": "szeretnek",
+    "e": "loves; likes",
+    "m": "Spoken like \"seretnek\" — loves.",
+    "i": "/sɛrɛtnɛk/"
+  },
+  {
+    "h": "sziget",
+    "e": "island",
+    "m": "Spoken like \"seeget\".",
+    "i": "/siɡɛt/"
+  },
+  {
+    "h": "szándékosan",
+    "e": "deliberately",
+    "m": "Spoken like \"sándékosan\".",
+    "i": "/saːndeːkoʃɒn/"
+  },
+  {
+    "h": "érdekelne",
+    "e": "would interest me",
+    "m": "Spoken like \"érdekelne\".",
+    "i": "/eːrdɛkɛlnɛ/"
+  },
+  {
+    "h": "születtem",
+    "e": "I was born",
+    "m": "Spoken like \"sülettem\".",
+    "i": "/sylɛtːɛm/"
+  },
+  {
+    "h": "álltam",
+    "e": "I stood",
+    "m": "Spoken like \"álltam\".",
+    "i": "/aːlːtɒm/"
+  },
+  {
+    "h": "fegyvere",
+    "e": "his/her weapon",
+    "m": "Spoken like \"fedyvere\".",
+    "i": "/fɛɟvɛrɛ/"
+  },
+  {
+    "h": "fair",
+    "e": "tree",
+    "m": "Spoken like \"faeer\" — tree.",
+    "i": "/fɒir/"
+  },
+  {
+    "h": "elfelejteni",
+    "e": "to forget",
+    "m": "Spoken like \"elfelejtenee\".",
+    "i": "/ɛlfɛlɛjtɛni/"
+  },
+  {
+    "h": "nagyszerűen",
+    "e": "big",
+    "m": "Spoken like \"nadyserűen\" — big.",
+    "i": "/nɒɟsɛryːɛn/"
+  },
+  {
+    "h": "Jesszus",
+    "e": "Jesus",
+    "m": "Spoken like \"jessoos\".",
+    "i": "/jɛsːuʃ/"
+  },
+  {
+    "h": "magasabb",
+    "e": "today",
+    "m": "Spoken like \"magasabb\" — today.",
+    "i": "/mɒɡɒʃɒbː/"
+  },
+  {
+    "h": "játszott",
+    "e": "he/she played",
+    "m": "Spoken like \"játsott\".",
+    "i": "/jaːtsotː/"
+  },
+  {
+    "h": "hozzon",
+    "e": "snow",
+    "m": "Spoken like \"hozzon\" — snow.",
+    "i": "/hozːon/"
+  },
+  {
+    "h": "gombot",
+    "e": "button (acc.)",
+    "m": "Spoken like \"gombot\".",
+    "i": "/ɡombot/"
+  },
+  {
+    "h": "rémes",
+    "e": "dreadful",
+    "m": "Spoken like \"rémes\".",
+    "i": "/reːmɛʃ/"
+  },
+  {
+    "h": "vennem",
+    "e": "I must buy",
+    "m": "Spoken like \"vennem\".",
+    "i": "/vɛnːɛm/"
+  },
+  {
+    "h": "odafent",
+    "e": "up there",
+    "m": "Spoken like \"odafent\".",
+    "i": "/odɒfɛnt/"
+  },
+  {
+    "h": "kb.",
+    "e": "approx.",
+    "m": "Spoken like \"kb.\".",
+    "i": "/kb/"
+  },
+  {
+    "h": "megnézzük",
+    "e": "still; yet",
+    "m": "Spoken like \"megnézzük\" — still.",
+    "i": "/mɛɡneːzːyk/"
+  },
+  {
+    "h": "ugyanis",
+    "e": "so; that way",
+    "m": "Spoken like \"oodyanees\" — so.",
+    "i": "/uɟɒniʃ/"
+  },
+  {
+    "h": "kaput",
+    "e": "gate (acc.)",
+    "m": "Spoken like \"kapoot\".",
+    "i": "/kɒput/"
+  },
+  {
+    "h": "kié",
+    "e": "who; out",
+    "m": "Spoken like \"keeé\" — who.",
+    "i": "/kieː/"
+  },
+  {
+    "h": "barátunk",
+    "e": "our friend",
+    "m": "Spoken like \"barátoonk\".",
+    "i": "/bɒraːtunk/"
+  },
+  {
+    "h": "szarházi",
+    "e": "bastard",
+    "m": "Spoken like \"sarházee\".",
+    "i": "/sɒrhaːzi/"
+  },
+  {
+    "h": "adjuk",
+    "e": "gives",
+    "m": "Spoken like \"adjook\" — gives.",
+    "i": "/ɒdjuk/"
+  },
+  {
+    "h": "rúgva",
+    "e": "kicking",
+    "m": "Spoken like \"rúgva\".",
+    "i": "/ruːɡvɒ/"
+  },
+  {
+    "h": "tervem",
+    "e": "you (sing.)",
+    "m": "Spoken like \"tervem\" — you (sing.).",
+    "i": "/tɛrvɛm/"
+  },
+  {
+    "h": "elképzelni",
+    "e": "to imagine",
+    "m": "Spoken like \"elképzelnee\".",
+    "i": "/ɛlkeːpzɛlni/"
+  },
+  {
+    "h": "hulla",
+    "e": "corpse",
+    "m": "Spoken like \"hoolla\".",
+    "i": "/hulːɒ/"
+  },
+  {
+    "h": "típus",
+    "e": "type",
+    "m": "Spoken like \"típoos\".",
+    "i": "/tiːpuʃ/"
+  },
+  {
+    "h": "gondolat",
+    "e": "thought",
+    "m": "Spoken like \"gondolat\" — thought.",
+    "i": "/ɡondolɒt/"
+  },
+  {
+    "h": "est",
+    "e": "and",
+    "m": "Spoken like \"est\" — and.",
+    "i": "/ɛʃt/"
+  },
+  {
+    "h": "tennék",
+    "e": "you (sing.)",
+    "m": "Spoken like \"tennék\" — you (sing.).",
+    "i": "/tɛnːeːk/"
+  },
+  {
+    "h": "brit",
+    "e": "British",
+    "m": "Spoken like \"breet\".",
+    "i": "/brit/"
+  },
+  {
+    "h": "belőlük",
+    "e": "into; in",
+    "m": "Spoken like \"belőlük\" — into.",
+    "i": "/bɛløːlyk/"
+  },
+  {
+    "h": "küldtem",
+    "e": "I sent",
+    "m": "Spoken like \"küldtem\".",
+    "i": "/kyldtɛm/"
+  },
+  {
+    "h": "tervet",
+    "e": "you (sing.)",
+    "m": "Spoken like \"tervet\" — you (sing.).",
+    "i": "/tɛrvɛt/"
+  },
+  {
+    "h": "megláttam",
+    "e": "still; yet",
+    "m": "Spoken like \"megláttam\" — still.",
+    "i": "/mɛɡlaːtːɒm/"
+  },
+  {
+    "h": "közvetlen",
+    "e": "direct",
+    "m": "Spoken like \"közvetlen\".",
+    "i": "/køzvɛtlɛn/"
+  },
+  {
+    "h": "tucat",
+    "e": "dozen",
+    "m": "Spoken like \"toocat\".",
+    "i": "/tut͡sɒt/"
+  },
+  {
+    "h": "engedély",
+    "e": "I",
+    "m": "Spoken like \"engedéy\" — I.",
+    "i": "/ɛnɡɛdeːj/"
+  },
+  {
+    "h": "iszik",
+    "e": "also; too",
+    "m": "Spoken like \"eeseek\" — also.",
+    "i": "/isik/"
+  },
+  {
+    "h": "változás",
+    "e": "change",
+    "m": "Spoken like \"változás\".",
+    "i": "/vaːltozaːʃ/"
+  },
+  {
+    "h": "nyílt",
+    "e": "open; opened",
+    "m": "Spoken like \"nyílt\".",
+    "i": "/ɲiːlt/"
+  },
+  {
+    "h": "pénteken",
+    "e": "on Friday",
+    "m": "Spoken like \"pénteken\".",
+    "i": "/peːntɛkɛn/"
+  },
+  {
+    "h": "lám",
+    "e": "behold",
+    "m": "Spoken like \"lám\".",
+    "i": "/laːm/"
+  },
+  {
+    "h": "éjszakára",
+    "e": "for the night",
+    "m": "Spoken like \"éjsakára\".",
+    "i": "/eːjsɒkaːrɒ/"
+  },
+  {
+    "h": "kő",
+    "e": "stone",
+    "m": "Spoken like \"kő\".",
+    "i": "/køː/"
+  },
+  {
+    "h": "látható",
+    "e": "visible",
+    "m": "Spoken like \"látható\".",
+    "i": "/laːthɒtoː/"
+  },
+  {
+    "h": "beszélgetés",
+    "e": "into; in",
+    "m": "Spoken like \"besélgetés\" — into.",
+    "i": "/bɛseːlɡɛteːʃ/"
+  },
+  {
+    "h": "gyógyszert",
+    "e": "medicine (acc.)",
+    "m": "Spoken like \"dyódysert\".",
+    "i": "/ɟoːɟsɛrt/"
+  },
+  {
+    "h": "keresik",
+    "e": "asks; requests",
+    "m": "Spoken like \"kereseek\" — asks.",
+    "i": "/kɛrɛʃik/"
+  },
+  {
+    "h": "ülsz",
+    "e": "you sit",
+    "m": "Spoken like \"üls\".",
+    "i": "/yls/"
+  },
+  {
+    "h": "akiről",
+    "e": "about whom (relative)",
+    "m": "Spoken like \"akeeről\".",
+    "i": "/ɒkirøːl/"
+  },
+  {
+    "h": "országot",
+    "e": "country (acc.)",
+    "m": "Spoken like \"orságot\".",
+    "i": "/orsaːɡot/"
+  },
+  {
+    "h": "felejtse",
+    "e": "up",
+    "m": "Spoken like \"felejtse\" — up.",
+    "i": "/fɛlɛjtʃɛ/"
+  },
+  {
+    "h": "alszol",
+    "e": "you sleep",
+    "m": "Spoken like \"alsol\".",
+    "i": "/ɒlsol/"
+  },
+  {
+    "h": "kört",
+    "e": "circle (acc.)",
+    "m": "Spoken like \"kört\".",
+    "i": "/kørt/"
+  },
+  {
+    "h": "megpróbál",
+    "e": "still; yet",
+    "m": "Spoken like \"megpróbál\" — still.",
+    "i": "/mɛɡproːbaːl/"
+  },
+  {
+    "h": "hölgyek",
+    "e": "ladies",
+    "m": "Spoken like \"höldyek\".",
+    "i": "/hølɟɛk/"
+  },
+  {
+    "h": "egyetemre",
+    "e": "one; a",
+    "m": "Spoken like \"edyetemre\" — one.",
+    "i": "/ɛɟɛtɛmrɛ/"
+  },
+  {
+    "h": "mondhatnék",
+    "e": "says",
+    "m": "Spoken like \"mondhatnék\" — says.",
+    "i": "/mondhɒtneːk/"
+  },
+  {
+    "h": "másfél",
+    "e": "one and a half",
+    "m": "Spoken like \"másfél\".",
+    "i": "/maːʃfeːl/"
+  },
+  {
+    "h": "gyermekem",
+    "e": "my child",
+    "m": "Spoken like \"dyermekem\".",
+    "i": "/ɟɛrmɛkɛm/"
+  },
+  {
+    "h": "fickók",
+    "e": "guys (acc.)",
+    "m": "Spoken like \"feeckók\".",
+    "i": "/fit͡skoːk/"
+  },
+  {
+    "h": "labda",
+    "e": "leg; foot",
+    "m": "Spoken like \"labda\" — leg.",
+    "i": "/lɒbdɒ/"
+  },
+  {
+    "h": "valóra",
+    "e": "into reality",
+    "m": "Spoken like \"valóra\".",
+    "i": "/vɒloːrɒ/"
+  },
+  {
+    "h": "fordítás",
+    "e": "translation",
+    "m": "Spoken like \"fordítás\".",
+    "i": "/fordiːtaːʃ/"
+  },
+  {
+    "h": "ittam",
+    "e": "here",
+    "m": "Spoken like \"eettam\" — here.",
+    "i": "/itːɒm/"
+  },
+  {
+    "h": "tánc",
+    "e": "dance",
+    "m": "Spoken like \"tánc\".",
+    "i": "/taːnt͡s/"
+  },
+  {
+    "h": "vigyázok",
+    "e": "I take care",
+    "m": "Spoken like \"veedyázok\".",
+    "i": "/viɟaːzok/"
+  },
+  {
+    "h": "tesztet",
+    "e": "you (sing.)",
+    "m": "Spoken like \"testet\" — you (sing.).",
+    "i": "/tɛstɛt/"
+  },
+  {
+    "h": "ilyeneket",
+    "e": "such things (acc.)",
+    "m": "Spoken like \"eeyeneket\".",
+    "i": "/ijɛnɛkɛt/"
+  },
+  {
+    "h": "arrébb",
+    "e": "aside",
+    "m": "Spoken like \"arrébb\".",
+    "i": "/ɒrːeːbː/"
+  },
+  {
+    "h": "gyűrűt",
+    "e": "ring (acc.)",
+    "m": "Spoken like \"dyűrűt\".",
+    "i": "/ɟyːryːt/"
+  },
+  {
+    "h": "meghalunk",
+    "e": "still; yet",
+    "m": "Spoken like \"meghaloonk\" — still.",
+    "i": "/mɛɡhɒlunk/"
+  },
+  {
+    "h": "kérj",
+    "e": "ask (imperative)",
+    "m": "Spoken like \"kérj\".",
+    "i": "/keːrj/"
+  },
+  {
+    "h": "tudlak",
+    "e": "knows; can",
+    "m": "Spoken like \"toodlak\" — knows.",
+    "i": "/tudlɒk/"
+  },
+  {
+    "h": "néven",
+    "e": "by name",
+    "m": "Spoken like \"néven\".",
+    "i": "/neːvɛn/"
+  },
+  {
+    "h": "nyugton",
+    "e": "calm (adverbial)",
+    "m": "Spoken like \"nyoogton\".",
+    "i": "/ɲuɡton/"
+  },
+  {
+    "h": "próbált",
+    "e": "he/she tried",
+    "m": "Spoken like \"próbált\".",
+    "i": "/proːbaːlt/"
+  },
+  {
+    "h": "esze",
+    "e": "and",
+    "m": "Spoken like \"ese\" — and.",
+    "i": "/ɛsɛ/"
+  },
+  {
+    "h": "vettél",
+    "e": "you bought",
+    "m": "Spoken like \"vettél\".",
+    "i": "/vɛtːeːl/"
+  },
+  {
+    "h": "fordult",
+    "e": "he/she turned",
+    "m": "Spoken like \"fordoolt\".",
+    "i": "/fordult/"
+  },
+  {
+    "h": "kussolj",
+    "e": "shut up (imperative)",
+    "m": "Spoken like \"koossolj\".",
+    "i": "/kuʃːolj/"
+  },
+  {
+    "h": "megszökött",
+    "e": "still; yet",
+    "m": "Spoken like \"megsökött\" — still.",
+    "i": "/mɛɡsøkøtː/"
+  },
+  {
+    "h": "kocsiból",
+    "e": "stone",
+    "m": "Spoken like \"kocheeból\" — stone.",
+    "i": "/kotʃiboːl/"
+  },
+  {
+    "h": "innét",
+    "e": "from here",
+    "m": "Spoken like \"eennét\".",
+    "i": "/inːeːt/"
+  },
+  {
+    "h": "haldoklik",
+    "e": "if",
+    "m": "Spoken like \"haldokleek\" — if.",
+    "i": "/hɒldoklik/"
+  },
+  {
+    "h": "vezeti",
+    "e": "he/she leads",
+    "m": "Spoken like \"vezetee\".",
+    "i": "/vɛzɛti/"
+  },
+  {
+    "h": "vére",
+    "e": "his/her blood",
+    "m": "Spoken like \"vére\".",
+    "i": "/veːrɛ/"
+  },
+  {
+    "h": "hali",
+    "e": "if",
+    "m": "Spoken like \"halee\" — if.",
+    "i": "/hɒli/"
+  },
+  {
+    "h": "érnek",
+    "e": "they reach",
+    "m": "Spoken like \"érnek\".",
+    "i": "/eːrnɛk/"
+  },
+  {
+    "h": "frászt",
+    "e": "fright (acc.)",
+    "m": "Spoken like \"frást\".",
+    "i": "/fraːst/"
+  },
+  {
+    "h": "órában",
+    "e": "in an hour",
+    "m": "Spoken like \"órában\".",
+    "i": "/oːraːbɒn/"
+  },
+  {
+    "h": "szólna",
+    "e": "would speak",
+    "m": "Spoken like \"sólna\".",
+    "i": "/soːlnɒ/"
+  },
+  {
+    "h": "apádat",
+    "e": "your father (acc.)",
+    "m": "Spoken like \"apádat\".",
+    "i": "/ɒpaːdɒt/"
+  },
+  {
+    "h": "öné",
+    "e": "yours (formal)",
+    "m": "Spoken like \"öné\".",
+    "i": "/øneː/"
+  },
+  {
+    "h": "közeledik",
+    "e": "approaches",
+    "m": "Spoken like \"közeledeek\".",
+    "i": "/køzɛlɛdik/"
+  },
+  {
+    "h": "jártunk",
+    "e": "we visited",
+    "m": "Spoken like \"jártoonk\".",
+    "i": "/jaːrtunk/"
+  },
+  {
+    "h": "hittük",
+    "e": "we believed",
+    "m": "Spoken like \"heettük\".",
+    "i": "/hitːyk/"
+  },
+  {
+    "h": "lőj",
+    "e": "shoot (imperative)",
+    "m": "Spoken like \"lőj\".",
+    "i": "/løːj/"
+  },
+  {
+    "h": "bemegyek",
+    "e": "into; in",
+    "m": "Spoken like \"bemedyek\" — into.",
+    "i": "/bɛmɛɟɛk/"
+  },
+  {
+    "h": "modern",
+    "e": "modern",
+    "m": "Spoken like \"modern\".",
+    "i": "/modɛrn/"
+  },
+  {
+    "h": "papír",
+    "e": "paper",
+    "m": "Spoken like \"papír\".",
+    "i": "/pɒpiːr/"
+  },
+  {
+    "h": "kérdezhetek",
+    "e": "may I ask",
+    "m": "Spoken like \"kérdezhetek\".",
+    "i": "/keːrdɛzhɛtɛk/"
+  },
+  {
+    "h": "megtörténik",
+    "e": "still; yet",
+    "m": "Spoken like \"megtörténeek\" — still.",
+    "i": "/mɛɡtørteːnik/"
+  },
+  {
+    "h": "ölj",
+    "e": "kill (imperative)",
+    "m": "Spoken like \"ölj\".",
+    "i": "/ølj/"
+  },
+  {
+    "h": "városból",
+    "e": "from the city",
+    "m": "Spoken like \"városból\".",
+    "i": "/vaːroʃboːl/"
+  },
+  {
+    "h": "sorban",
+    "e": "salt",
+    "m": "Spoken like \"sorban\" — salt.",
+    "i": "/ʃorbɒn/"
+  },
+  {
+    "h": "szavakat",
+    "e": "words (acc.)",
+    "m": "Spoken like \"savakat\".",
+    "i": "/sɒvɒkɒt/"
+  },
+  {
+    "h": "megkeresem",
+    "e": "still; yet",
+    "m": "Spoken like \"megkeresem\" — still.",
+    "i": "/mɛɡkɛrɛʃɛm/"
+  },
+  {
+    "h": "arcod",
+    "e": "face",
+    "m": "Spoken like \"arcod\" — face.",
+    "i": "/ɒrt͡sod/"
+  },
+  {
+    "h": "években",
+    "e": "in years",
+    "m": "Spoken like \"években\".",
+    "i": "/eːvɛkbɛn/"
+  },
+  {
+    "h": "lehető",
+    "e": "down",
+    "m": "Spoken like \"lehető\" — down.",
+    "i": "/lɛhɛtøː/"
+  },
+  {
+    "h": "napok",
+    "e": "day; sun",
+    "m": "Spoken like \"napok\" — day.",
+    "i": "/nɒpok/"
+  },
+  {
+    "h": "nyugat",
+    "e": "west",
+    "m": "Spoken like \"nyoogat\".",
+    "i": "/ɲuɡɒt/"
+  },
+  {
+    "h": "kinn",
+    "e": "who; out",
+    "m": "Spoken like \"keenn\" — who.",
+    "i": "/kinː/"
+  },
+  {
+    "h": "épületben",
+    "e": "in the building",
+    "m": "Spoken like \"épületben\".",
+    "i": "/eːpylɛtbɛn/"
+  },
+  {
+    "h": "lába",
+    "e": "his/her leg",
+    "m": "Spoken like \"lába\".",
+    "i": "/laːbɒ/"
+  },
+  {
+    "h": "életedben",
+    "e": "in your life",
+    "m": "Spoken like \"életedben\".",
+    "i": "/eːlɛtɛdbɛn/"
+  },
+  {
+    "h": "felső",
+    "e": "up",
+    "m": "Spoken like \"felső\" — up.",
+    "i": "/fɛlʃøː/"
+  },
+  {
+    "h": "félnek",
+    "e": "they are afraid",
+    "m": "Spoken like \"félnek\".",
+    "i": "/feːlnɛk/"
+  },
+  {
+    "h": "picsa",
+    "e": "pussy",
+    "m": "Spoken like \"peecha\".",
+    "i": "/pitʃɒ/"
+  },
+  {
+    "h": "bájos",
+    "e": "charming",
+    "m": "Spoken like \"bájos\".",
+    "i": "/baːjoʃ/"
+  },
+  {
+    "h": "tengeri",
+    "e": "you (sing.)",
+    "m": "Spoken like \"tengeree\" — you (sing.).",
+    "i": "/tɛnɡɛri/"
+  },
+  {
+    "h": "csináltunk",
+    "e": "we did",
+    "m": "Spoken like \"cheenáltoonk\".",
+    "i": "/tʃinaːltunk/"
+  },
+  {
+    "h": "csirke",
+    "e": "chicken",
+    "m": "Spoken like \"cheerke\".",
+    "i": "/tʃirkɛ/"
+  },
+  {
+    "h": "híd",
+    "e": "bridge",
+    "m": "Spoken like \"híd\".",
+    "i": "/hiːd/"
+  },
+  {
+    "h": "képek",
+    "e": "pictures",
+    "m": "Spoken like \"képek\".",
+    "i": "/keːpɛk/"
+  },
+  {
+    "h": "akire",
+    "e": "who (relative, onto)",
+    "m": "Spoken like \"akeere\".",
+    "i": "/ɒkirɛ/"
+  },
+  {
+    "h": "hazudni",
+    "e": "if",
+    "m": "Spoken like \"hazoodnee\" — if.",
+    "i": "/hɒzudni/"
+  },
+  {
+    "h": "hallgasd",
+    "e": "if",
+    "m": "Spoken like \"hallgasd\" — if.",
+    "i": "/hɒlːɡɒʃd/"
+  },
+  {
+    "h": "vették",
+    "e": "they took",
+    "m": "Spoken like \"vették\".",
+    "i": "/vɛtːeːk/"
+  },
+  {
+    "h": "sofőr",
+    "e": "salt",
+    "m": "Spoken like \"sofőr\" — salt.",
+    "i": "/ʃoføːr/"
+  },
+  {
+    "h": "szállt",
+    "e": "he/she landed; flew",
+    "m": "Spoken like \"sállt\".",
+    "i": "/saːlːt/"
+  },
+  {
+    "h": "nesze",
+    "e": "don't",
+    "m": "Spoken like \"nese\" — don't.",
+    "i": "/nɛsɛ/"
+  },
+  {
+    "h": "éjszakai",
+    "e": "nighttime",
+    "m": "Spoken like \"éjsakaee\".",
+    "i": "/eːjsɒkɒi/"
+  },
+  {
+    "h": "ugyanakkor",
+    "e": "so; that way",
+    "m": "Spoken like \"oodyanakkor\" — so.",
+    "i": "/uɟɒnɒkːor/"
+  },
+  {
+    "h": "ura",
+    "e": "his/her lord",
+    "m": "Spoken like \"oora\".",
+    "i": "/urɒ/"
+  },
+  {
+    "h": "tettünk",
+    "e": "you (sing.)",
+    "m": "Spoken like \"tettünk\" — you (sing.).",
+    "i": "/tɛtːynk/"
+  },
+  {
+    "h": "szemembe",
+    "e": "eye",
+    "m": "Spoken like \"semembe\" — eye.",
+    "i": "/sɛmɛmbɛ/"
+  },
+  {
+    "h": "adunk",
+    "e": "gives",
+    "m": "Spoken like \"adoonk\" — gives.",
+    "i": "/ɒdunk/"
+  },
+  {
+    "h": "szünetet",
+    "e": "break (acc.)",
+    "m": "Spoken like \"sünetet\".",
+    "i": "/synɛtɛt/"
+  },
+  {
+    "h": "megkaptad",
+    "e": "still; yet",
+    "m": "Spoken like \"megkaptad\" — still.",
+    "i": "/mɛɡkɒptɒd/"
+  },
+  {
+    "h": "magukkal",
+    "e": "today",
+    "m": "Spoken like \"magookkal\" — today.",
+    "i": "/mɒɡukːɒl/"
+  },
+  {
+    "h": "csávó",
+    "e": "guy",
+    "m": "Spoken like \"chávó\".",
+    "i": "/tʃaːvoː/"
+  },
+  {
+    "h": "felkészülni",
+    "e": "up",
+    "m": "Spoken like \"felkésülnee\" — up.",
+    "i": "/fɛlkeːsylni/"
+  },
+  {
+    "h": "tenné",
+    "e": "you (sing.)",
+    "m": "Spoken like \"tenné\" — you (sing.).",
+    "i": "/tɛnːeː/"
+  },
+  {
+    "h": "elvette",
+    "e": "he/she took it",
+    "m": "Spoken like \"elvette\".",
+    "i": "/ɛlvɛtːɛ/"
+  },
+  {
+    "h": "mértékben",
+    "e": "to the extent",
+    "m": "Spoken like \"mértékben\".",
+    "i": "/meːrteːkbɛn/"
+  },
+  {
+    "h": "perverz",
+    "e": "pervert",
+    "m": "Spoken like \"perverz\".",
+    "i": "/pɛrvɛrz/"
+  },
+  {
+    "h": "megtette",
+    "e": "still; yet",
+    "m": "Spoken like \"megtette\" — still.",
+    "i": "/mɛɡtɛtːɛ/"
+  },
+  {
+    "h": "zseniális",
+    "e": "brilliant",
+    "m": "Spoken like \"zheneeálees\".",
+    "i": "/ʒɛniaːliʃ/"
+  },
+  {
+    "h": "bátyja",
+    "e": "his/her brother",
+    "m": "Spoken like \"bátyja\".",
+    "i": "/baːcjɒ/"
+  },
+  {
+    "h": "tűnjön",
+    "e": "let him/her disappear",
+    "m": "Spoken like \"tűnjön\".",
+    "i": "/tyːnjøn/"
+  },
+  {
+    "h": "kör",
+    "e": "circle",
+    "m": "Spoken like \"kör\".",
+    "i": "/kør/"
+  },
+  {
+    "h": "lődd",
+    "e": "shoot it (imperative)",
+    "m": "Spoken like \"lődd\".",
+    "i": "/løːdː/"
+  },
+  {
+    "h": "meglepő",
+    "e": "still; yet",
+    "m": "Spoken like \"meglepő\" — still.",
+    "i": "/mɛɡlɛpøː/"
+  },
+  {
+    "h": "nyer",
+    "e": "wins",
+    "m": "Spoken like \"nyer\".",
+    "i": "/ɲɛr/"
+  },
+  {
+    "h": "szemébe",
+    "e": "eye",
+    "m": "Spoken like \"semébe\" — eye.",
+    "i": "/sɛmeːbɛ/"
+  },
+  {
+    "h": "világnak",
+    "e": "to the world",
+    "m": "Spoken like \"veelágnak\".",
+    "i": "/vilaːɡnɒk/"
+  },
+  {
+    "h": "szigorúan",
+    "e": "strictly",
+    "m": "Spoken like \"seegorúan\".",
+    "i": "/siɡoruːɒn/"
+  },
+  {
+    "h": "bánni",
+    "e": "to deal with",
+    "m": "Spoken like \"bánnee\".",
+    "i": "/baːnːi/"
+  },
+  {
+    "h": "fedélzeten",
+    "e": "on board",
+    "m": "Spoken like \"fedélzeten\".",
+    "i": "/fɛdeːlzɛtɛn/"
+  },
+  {
+    "h": "álljanak",
+    "e": "let them stand",
+    "m": "Spoken like \"álljanak\".",
+    "i": "/aːlːjɒnɒk/"
+  },
+  {
+    "h": "elkapjuk",
+    "e": "let's catch him",
+    "m": "Spoken like \"elkapjook\".",
+    "i": "/ɛlkɒpjuk/"
+  },
+  {
+    "h": "félelmetes",
+    "e": "frightening",
+    "m": "Spoken like \"félelmetes\".",
+    "i": "/feːlɛlmɛtɛʃ/"
+  },
+  {
+    "h": "kígyó",
+    "e": "snake",
+    "m": "Spoken like \"kídyó\".",
+    "i": "/kiːɟoː/"
+  },
+  {
+    "h": "sütit",
+    "e": "bakes; cookie",
+    "m": "Spoken like \"süteet\".",
+    "i": "/ʃytit/"
+  },
+  {
+    "h": "dologra",
+    "e": "to a thing",
+    "m": "Spoken like \"dologra\".",
+    "i": "/doloɡrɒ/"
+  },
+  {
+    "h": "helyszínen",
+    "e": "on location",
+    "m": "Spoken like \"heysínen\".",
+    "i": "/hɛjsiːnɛn/"
+  },
+  {
+    "h": "jelentés",
+    "e": "report",
+    "m": "Spoken like \"jelentés\".",
+    "i": "/jɛlɛnteːʃ/"
+  },
+  {
+    "h": "gyerekem",
+    "e": "child",
+    "m": "Spoken like \"dyerekem\" — child.",
+    "i": "/ɟɛrɛkɛm/"
+  },
+  {
+    "h": "rádió",
+    "e": "radio",
+    "m": "Spoken like \"rádeeó\".",
+    "i": "/raːdioː/"
+  },
+  {
+    "h": "húzza",
+    "e": "pulls",
+    "m": "Spoken like \"húzza\".",
+    "i": "/huːzːɒ/"
+  },
+  {
+    "h": "jelentsen",
+    "e": "let it mean",
+    "m": "Spoken like \"jelentsen\".",
+    "i": "/jɛlɛntʃɛn/"
+  },
+  {
+    "h": "nyúlj",
+    "e": "reach (imperative)",
+    "m": "Spoken like \"nyúlj\".",
+    "i": "/ɲuːlj/"
+  },
+  {
+    "h": "fizetnek",
+    "e": "they pay",
+    "m": "Spoken like \"feezetnek\".",
+    "i": "/fizɛtnɛk/"
+  },
+  {
+    "h": "adhatok",
+    "e": "gives",
+    "m": "Spoken like \"adhatok\" — gives.",
+    "i": "/ɒdhɒtok/"
+  },
+  {
+    "h": "jég",
+    "e": "ice",
+    "m": "Spoken like \"jég\".",
+    "i": "/jeːɡ/"
+  },
+  {
+    "h": "ébresztő",
+    "e": "wake-up call",
+    "m": "Spoken like \"ébrestő\".",
+    "i": "/eːbrɛstøː/"
+  },
+  {
+    "h": "előtted",
+    "e": "before you",
+    "m": "Spoken like \"előtted\".",
+    "i": "/ɛløːtːɛd/"
+  },
+  {
+    "h": "látunk",
+    "e": "we see",
+    "m": "Spoken like \"látoonk\".",
+    "i": "/laːtunk/"
+  },
+  {
+    "h": "megvagyok",
+    "e": "still; yet",
+    "m": "Spoken like \"megvadyok\" — still.",
+    "i": "/mɛɡvɒɟok/"
+  },
+  {
+    "h": "mutassa",
+    "e": "let him/her show",
+    "m": "Spoken like \"mootassa\".",
+    "i": "/mutɒʃːɒ/"
+  },
+  {
+    "h": "forog",
+    "e": "rotates; turns",
+    "m": "Spoken like \"forog\".",
+    "i": "/foroɡ/"
+  },
+  {
+    "h": "könyörgöm",
+    "e": "I beg you",
+    "m": "Spoken like \"könyörgöm\".",
+    "i": "/køɲørɡøm/"
+  },
+  {
+    "h": "miniszter",
+    "e": "what; we",
+    "m": "Spoken like \"meeneester\" — what.",
+    "i": "/ministɛr/"
+  },
+  {
+    "h": "esélyed",
+    "e": "and",
+    "m": "Spoken like \"eséyed\" — and.",
+    "i": "/ɛʃeːjɛd/"
+  },
+  {
+    "h": "szülinapot",
+    "e": "birthday (acc.)",
+    "m": "Spoken like \"süleenapot\".",
+    "i": "/sylinɒpot/"
+  },
+  {
+    "h": "gyilkossági",
+    "e": "murder (adjective)",
+    "m": "Spoken like \"dyeelkosságee\".",
+    "i": "/ɟilkoʃːaːɡi/"
+  },
+  {
+    "h": "időbe",
+    "e": "into time",
+    "m": "Spoken like \"eedőbe\".",
+    "i": "/idøːbɛ/"
+  },
+  {
+    "h": "haja",
+    "e": "if",
+    "m": "Spoken like \"haja\" — if.",
+    "i": "/hɒjɒ/"
+  },
+  {
+    "h": "támadt",
+    "e": "attacked",
+    "m": "Spoken like \"támadt\".",
+    "i": "/taːmɒdt/"
+  },
+  {
+    "h": "jóval",
+    "e": "much (by far)",
+    "m": "Spoken like \"jóval\".",
+    "i": "/joːvɒl/"
+  },
+  {
+    "h": "írva",
+    "e": "written",
+    "m": "Spoken like \"írva\".",
+    "i": "/iːrvɒ/"
+  },
+  {
+    "h": "utánad",
+    "e": "road; way",
+    "m": "Spoken like \"ootánad\" — road.",
+    "i": "/utaːnɒd/"
+  },
+  {
+    "h": "hoztad",
+    "e": "snow",
+    "m": "Spoken like \"hoztad\" — snow.",
+    "i": "/hoztɒd/"
+  },
+  {
+    "h": "veszel",
+    "e": "buys; takes",
+    "m": "Spoken like \"vesel\" — buys.",
+    "i": "/vɛsɛl/"
+  },
+  {
+    "h": "felhívtam",
+    "e": "up",
+    "m": "Spoken like \"felhívtam\" — up.",
+    "i": "/fɛlhiːvtɒm/"
+  },
+  {
+    "h": "sötétség",
+    "e": "darkness",
+    "m": "Spoken like \"sötétség\".",
+    "i": "/ʃøteːtʃeːɡ/"
+  },
+  {
+    "h": "haltak",
+    "e": "if",
+    "m": "Spoken like \"haltak\" — if.",
+    "i": "/hɒltɒk/"
+  },
+  {
+    "h": "tisztelettel",
+    "e": "respectfully",
+    "m": "Spoken like \"teestelettel\".",
+    "i": "/tistɛlɛtːɛl/"
+  },
+  {
+    "h": "közeli",
+    "e": "nearby",
+    "m": "Spoken like \"közelee\".",
+    "i": "/køzɛli/"
+  },
+  {
+    "h": "biztonság",
+    "e": "security",
+    "m": "Spoken like \"beeztonság\".",
+    "i": "/biztonʃaːɡ/"
+  },
+  {
+    "h": "ellenséges",
+    "e": "against",
+    "m": "Spoken like \"ellenséges\" — against.",
+    "i": "/ɛlːɛnʃeːɡɛʃ/"
+  },
+  {
+    "h": "szemetet",
+    "e": "eye",
+    "m": "Spoken like \"semetet\" — eye.",
+    "i": "/sɛmɛtɛt/"
+  },
+  {
+    "h": "apuci",
+    "e": "daddy",
+    "m": "Spoken like \"apoocee\".",
+    "i": "/ɒput͡si/"
+  },
+  {
+    "h": "akkoriban",
+    "e": "then",
+    "m": "Spoken like \"akkoreeban\" — then.",
+    "i": "/ɒkːoribɒn/"
+  },
+  {
+    "h": "boszorkány",
+    "e": "witch",
+    "m": "Spoken like \"bosorkány\".",
+    "i": "/bosorkaːɲ/"
+  },
+  {
+    "h": "legenda",
+    "e": "down",
+    "m": "Spoken like \"legenda\" — down.",
+    "i": "/lɛɡɛndɒ/"
+  },
+  {
+    "h": "területet",
+    "e": "you (sing.)",
+    "m": "Spoken like \"területet\" — you (sing.).",
+    "i": "/tɛrylɛtɛt/"
+  },
+  {
+    "h": "virágot",
+    "e": "flower (acc.)",
+    "m": "Spoken like \"veerágot\".",
+    "i": "/viraːɡot/"
+  },
+  {
+    "h": "folytatjuk",
+    "e": "we continue",
+    "m": "Spoken like \"foytatjook\".",
+    "i": "/fojtɒtjuk/"
+  },
+  {
+    "h": "kutyák",
+    "e": "dogs",
+    "m": "Spoken like \"kootyák\".",
+    "i": "/kucaːk/"
+  },
+  {
+    "h": "fényes",
+    "e": "bright",
+    "m": "Spoken like \"fényes\".",
+    "i": "/feːɲɛʃ/"
+  },
+  {
+    "h": "kaphatnék",
+    "e": "could I get",
+    "m": "Spoken like \"kaphatnék\".",
+    "i": "/kɒphɒtneːk/"
+  },
+  {
+    "h": "szabadna",
+    "e": "may one",
+    "m": "Spoken like \"sabadna\".",
+    "i": "/sɒbɒdnɒ/"
+  },
+  {
+    "h": "furcsán",
+    "e": "grass",
+    "m": "Spoken like \"foorchán\" — grass.",
+    "i": "/furtʃaːn/"
+  },
+  {
+    "h": "akármit",
+    "e": "anything (acc.)",
+    "m": "Spoken like \"akármeet\".",
+    "i": "/ɒkaːrmit/"
+  },
+  {
+    "h": "spanyol",
+    "e": "Spanish",
+    "m": "Spoken like \"spanyol\" — Spanish.",
+    "i": "/ʃpɒɲol/"
+  },
+  {
+    "h": "telefonált",
+    "e": "you (sing.)",
+    "m": "Spoken like \"telefonált\" — you (sing.).",
+    "i": "/tɛlɛfonaːlt/"
+  },
+  {
+    "h": "munkámat",
+    "e": "my work (acc.)",
+    "m": "Spoken like \"moonkámat\".",
+    "i": "/munkaːmɒt/"
+  },
+  {
+    "h": "házam",
+    "e": "my house",
+    "m": "Spoken like \"házam\".",
+    "i": "/haːzɒm/"
+  },
+  {
+    "h": "cím",
+    "e": "title; address",
+    "m": "Spoken like \"cím\".",
+    "i": "/t͡siːm/"
+  },
+  {
+    "h": "elkezdtem",
+    "e": "I started",
+    "m": "Spoken like \"elkezdtem\".",
+    "i": "/ɛlkɛzdtɛm/"
+  },
+  {
+    "h": "kölykök",
+    "e": "kids",
+    "m": "Spoken like \"köykök\".",
+    "i": "/køjkøk/"
+  },
+  {
+    "h": "testvére",
+    "e": "you (sing.)",
+    "m": "Spoken like \"testvére\" — you (sing.).",
+    "i": "/tɛʃtveːrɛ/"
+  },
+  {
+    "h": "cuki",
+    "e": "cute",
+    "m": "Spoken like \"cookee\".",
+    "i": "/t͡suki/"
+  },
+  {
+    "h": "elmentél",
+    "e": "you left",
+    "m": "Spoken like \"elmentél\".",
+    "i": "/ɛlmɛnteːl/"
+  },
+  {
+    "h": "ronda",
+    "e": "ugly",
+    "m": "Spoken like \"ronda\".",
+    "i": "/rondɒ/"
+  },
+  {
+    "h": "elvitték",
+    "e": "they took it",
+    "m": "Spoken like \"elveették\".",
+    "i": "/ɛlvitːeːk/"
+  },
+  {
+    "h": "kerültem",
+    "e": "asks; requests",
+    "m": "Spoken like \"kerültem\" — asks.",
+    "i": "/kɛryltɛm/"
+  },
+  {
+    "h": "elnöke",
+    "e": "its president",
+    "m": "Spoken like \"elnöke\".",
+    "i": "/ɛlnøkɛ/"
+  },
+  {
+    "h": "baseball",
+    "e": "baseball",
+    "m": "Spoken like \"baseball\".",
+    "i": "/bɒʃɛbɒlː/"
+  },
+  {
+    "h": "egymásra",
+    "e": "one; a",
+    "m": "Spoken like \"edymásra\" — one.",
+    "i": "/ɛɟmaːʃrɒ/"
+  },
+  {
+    "h": "megéri",
+    "e": "still; yet",
+    "m": "Spoken like \"megéree\" — still.",
+    "i": "/mɛɡeːri/"
+  },
+  {
+    "h": "rendet",
+    "e": "order (acc.)",
+    "m": "Spoken like \"rendet\".",
+    "i": "/rɛndɛt/"
+  },
+  {
+    "h": "vonal",
+    "e": "line",
+    "m": "Spoken like \"vonal\" — line.",
+    "i": "/vonɒl/"
+  },
+  {
+    "h": "találnak",
+    "e": "maybe",
+    "m": "Spoken like \"találnak\" — maybe.",
+    "i": "/tɒlaːlnɒk/"
+  },
+  {
+    "h": "okot",
+    "e": "reason (acc.)",
+    "m": "Spoken like \"okot\".",
+    "i": "/okot/"
+  },
+  {
+    "h": "terved",
+    "e": "you (sing.)",
+    "m": "Spoken like \"terved\" — you (sing.).",
+    "i": "/tɛrvɛd/"
+  },
+  {
+    "h": "háborús",
+    "e": "war (adjective)",
+    "m": "Spoken like \"háborús\".",
+    "i": "/haːboruːʃ/"
+  },
+  {
+    "h": "jónak",
+    "e": "good (dative)",
+    "m": "Spoken like \"jónak\".",
+    "i": "/joːnɒk/"
+  },
+  {
+    "h": "faszom",
+    "e": "tree",
+    "m": "Spoken like \"fasom\" — tree.",
+    "i": "/fɒsom/"
+  },
+  {
+    "h": "mennék",
+    "e": "I would go",
+    "m": "Spoken like \"mennék\".",
+    "i": "/mɛnːeːk/"
+  },
+  {
+    "h": "fegyverrel",
+    "e": "with a weapon",
+    "m": "Spoken like \"fedyverrel\".",
+    "i": "/fɛɟvɛrːɛl/"
+  },
+  {
+    "h": "fok",
+    "e": "degree; step",
+    "m": "Spoken like \"fok\".",
+    "i": "/fok/"
+  },
+  {
+    "h": "szombat",
+    "e": "Saturday",
+    "m": "Spoken like \"sombat\" — Saturday.",
+    "i": "/sombɒt/"
+  },
+  {
+    "h": "mindenről",
+    "e": "what; we",
+    "m": "Spoken like \"meendenről\" — what.",
+    "i": "/mindɛnrøːl/"
+  },
+  {
+    "h": "csinálnom",
+    "e": "I must do",
+    "m": "Spoken like \"cheenálnom\".",
+    "i": "/tʃinaːlnom/"
+  },
+  {
+    "h": "műtét",
+    "e": "surgery",
+    "m": "Spoken like \"műtét\".",
+    "i": "/myːteːt/"
+  },
+  {
+    "h": "elmondtad",
+    "e": "you told",
+    "m": "Spoken like \"elmondtad\".",
+    "i": "/ɛlmondtɒd/"
+  },
+  {
+    "h": "őfelsége",
+    "e": "His/Her Majesty",
+    "m": "Spoken like \"őfelsége\".",
+    "i": "/øːfɛlʃeːɡɛ/"
+  },
+  {
+    "h": "menne",
+    "e": "he/she would go",
+    "m": "Spoken like \"menne\".",
+    "i": "/mɛnːɛ/"
+  },
+  {
+    "h": "évekig",
+    "e": "for years",
+    "m": "Spoken like \"évekeeg\".",
+    "i": "/eːvɛkiɡ/"
+  },
+  {
+    "h": "busz",
+    "e": "bus",
+    "m": "Spoken like \"boos\".",
+    "i": "/bus/"
+  },
+  {
+    "h": "bánod",
+    "e": "do you mind",
+    "m": "Spoken like \"bánod\".",
+    "i": "/baːnod/"
+  },
+  {
+    "h": "hiányzott",
+    "e": "I missed it",
+    "m": "Spoken like \"heeányzott\".",
+    "i": "/hiaːɲzotː/"
+  },
+  {
+    "h": "anyukám",
+    "e": "my mom",
+    "m": "Spoken like \"anyookám\".",
+    "i": "/ɒɲukaːm/"
+  },
+  {
+    "h": "templom",
+    "e": "you (sing.)",
+    "m": "Spoken like \"templom\" — you (sing.).",
+    "i": "/tɛmplom/"
+  },
+  {
+    "h": "agy",
+    "e": "bed",
+    "m": "Spoken like \"ady\" — bed.",
+    "i": "/ɒɟ/"
+  },
+  {
+    "h": "valamint",
+    "e": "as well as",
+    "m": "Spoken like \"valameent\".",
+    "i": "/vɒlɒmint/"
+  },
+  {
+    "h": "küldje",
+    "e": "let him/her send",
+    "m": "Spoken like \"küldje\".",
+    "i": "/kyldjɛ/"
+  },
+  {
+    "h": "faszfej",
+    "e": "tree",
+    "m": "Spoken like \"fasfej\" — tree.",
+    "i": "/fɒsfɛj/"
+  },
+  {
+    "h": "árt",
+    "e": "harms",
+    "m": "Spoken like \"árt\".",
+    "i": "/aːrt/"
+  },
+  {
+    "h": "tudós",
+    "e": "knows; can",
+    "m": "Spoken like \"toodós\" — knows.",
+    "i": "/tudoːʃ/"
+  },
+  {
+    "h": "jelentett",
+    "e": "it meant",
+    "m": "Spoken like \"jelentett\".",
+    "i": "/jɛlɛntɛtː/"
+  },
+  {
+    "h": "ötös",
+    "e": "five (grade)",
+    "m": "Spoken like \"ötös\".",
+    "i": "/øtøʃ/"
+  },
+  {
+    "h": "ameddig",
+    "e": "until",
+    "m": "Spoken like \"ameddeeg\".",
+    "i": "/ɒmɛdːiɡ/"
+  },
+  {
+    "h": "számlát",
+    "e": "bill (acc.)",
+    "m": "Spoken like \"sámlát\".",
+    "i": "/saːmlaːt/"
+  },
+  {
+    "h": "végét",
+    "e": "its end (acc.)",
+    "m": "Spoken like \"végét\".",
+    "i": "/veːɡeːt/"
+  },
+  {
+    "h": "Miami",
+    "e": "what; we",
+    "m": "Spoken like \"meeamee\" — what.",
+    "i": "/miɒmi/"
+  },
+  {
+    "h": "olvasd",
+    "e": "reads",
+    "m": "Spoken like \"olvasd\" — reads.",
+    "i": "/olvɒʃd/"
+  },
+  {
+    "h": "testvérek",
+    "e": "you (sing.)",
+    "m": "Spoken like \"testvérek\" — you (sing.).",
+    "i": "/tɛʃtveːrɛk/"
+  },
+  {
+    "h": "láttak",
+    "e": "they saw",
+    "m": "Spoken like \"láttak\".",
+    "i": "/laːtːɒk/"
+  },
+  {
+    "h": "aggódtam",
+    "e": "I was worried",
+    "m": "Spoken like \"aggódtam\".",
+    "i": "/ɒɡːoːdtɒm/"
+  },
+  {
+    "h": "terve",
+    "e": "you (sing.)",
+    "m": "Spoken like \"terve\" — you (sing.).",
+    "i": "/tɛrvɛ/"
+  },
+  {
+    "h": "csomag",
+    "e": "package",
+    "m": "Spoken like \"chomag\" — package.",
+    "i": "/tʃomɒɡ/"
+  },
+  {
+    "h": "helyzetbe",
+    "e": "into situation",
+    "m": "Spoken like \"heyzetbe\".",
+    "i": "/hɛjzɛtbɛ/"
+  },
+  {
+    "h": "idejét",
+    "e": "its time (acc.)",
+    "m": "Spoken like \"eedejét\".",
+    "i": "/idɛjeːt/"
+  },
+  {
+    "h": "főnöke",
+    "e": "his/her boss",
+    "m": "Spoken like \"főnöke\".",
+    "i": "/føːnøkɛ/"
+  },
+  {
+    "h": "kívánom",
+    "e": "I wish",
+    "m": "Spoken like \"kívánom\".",
+    "i": "/kiːvaːnom/"
+  },
+  {
+    "h": "küldd",
+    "e": "send (imperative)",
+    "m": "Spoken like \"küldd\".",
+    "i": "/kyldː/"
+  },
+  {
+    "h": "készítette",
+    "e": "he/she made",
+    "m": "Spoken like \"késítette\".",
+    "i": "/keːsiːtɛtːɛ/"
+  },
+  {
+    "h": "barátomat",
+    "e": "my friend (acc.)",
+    "m": "Spoken like \"barátomat\".",
+    "i": "/bɒraːtomɒt/"
+  },
+  {
+    "h": "címet",
+    "e": "address (acc.)",
+    "m": "Spoken like \"címet\".",
+    "i": "/t͡siːmɛt/"
+  },
+  {
+    "h": "hazamegyek",
+    "e": "if",
+    "m": "Spoken like \"hazamedyek\" — if.",
+    "i": "/hɒzɒmɛɟɛk/"
+  },
+  {
+    "h": "eladni",
+    "e": "to sell",
+    "m": "Spoken like \"eladnee\".",
+    "i": "/ɛlɒdni/"
+  },
+  {
+    "h": "akárhogy",
+    "e": "however",
+    "m": "Spoken like \"akárhody\".",
+    "i": "/ɒkaːrhoɟ/"
+  },
+  {
+    "h": "legutóbbi",
+    "e": "down",
+    "m": "Spoken like \"legootóbbee\" — down.",
+    "i": "/lɛɡutoːbːi/"
+  },
+  {
+    "h": "úszni",
+    "e": "to swim",
+    "m": "Spoken like \"úsnee\".",
+    "i": "/uːsni/"
+  },
+  {
+    "h": "sárkány",
+    "e": "dragon",
+    "m": "Spoken like \"sárkány\".",
+    "i": "/ʃaːrkaːɲ/"
+  },
+  {
+    "h": "fák",
+    "e": "trees",
+    "m": "Spoken like \"fák\".",
+    "i": "/faːk/"
+  },
+  {
+    "h": "gondolkozz",
+    "e": "think (imperative)",
+    "m": "Spoken like \"gondolkozz\".",
+    "i": "/ɡondolkozː/"
+  },
+  {
+    "h": "kocsim",
+    "e": "stone",
+    "m": "Spoken like \"kocheem\" — stone.",
+    "i": "/kotʃim/"
+  },
+  {
+    "h": "idővel",
+    "e": "with time",
+    "m": "Spoken like \"eedővel\".",
+    "i": "/idøːvɛl/"
+  },
+  {
+    "h": "nőtt",
+    "e": "grew",
+    "m": "Spoken like \"nőtt\".",
+    "i": "/nøːtː/"
+  },
+  {
+    "h": "maradtam",
+    "e": "already",
+    "m": "Spoken like \"maradtam\" — already.",
+    "i": "/mɒrɒdtɒm/"
+  },
+  {
+    "h": "ellenem",
+    "e": "against",
+    "m": "Spoken like \"ellenem\" — against.",
+    "i": "/ɛlːɛnɛm/"
+  },
+  {
+    "h": "tegyem",
+    "e": "you (sing.)",
+    "m": "Spoken like \"tedyem\" — you (sing.).",
+    "i": "/tɛɟɛm/"
+  },
+  {
+    "h": "húzzunk",
+    "e": "let's pull",
+    "m": "Spoken like \"húzzoonk\".",
+    "i": "/huːzːunk/"
+  },
+  {
+    "h": "öcsi",
+    "e": "little brother",
+    "m": "Spoken like \"öchee\".",
+    "i": "/øtʃi/"
+  },
+  {
+    "h": "akartunk",
+    "e": "we wanted",
+    "m": "Spoken like \"akartoonk\".",
+    "i": "/ɒkɒrtunk/"
+  },
+  {
+    "h": "többen",
+    "e": "more (people)",
+    "m": "Spoken like \"többen\".",
+    "i": "/tøbːɛn/"
+  },
+  {
+    "h": "elvesztettük",
+    "e": "we lost",
+    "m": "Spoken like \"elvestettük\".",
+    "i": "/ɛlvɛstɛtːyk/"
+  },
+  {
+    "h": "ügyében",
+    "e": "in his/her case",
+    "m": "Spoken like \"üdyében\".",
+    "i": "/yɟeːbɛn/"
+  },
+  {
+    "h": "lista",
+    "e": "list",
+    "m": "Spoken like \"leesta\".",
+    "i": "/liʃtɒ/"
+  },
+  {
+    "h": "álmom",
+    "e": "my dream",
+    "m": "Spoken like \"álmom\".",
+    "i": "/aːlmom/"
+  },
+  {
+    "h": "klub",
+    "e": "club",
+    "m": "Spoken like \"kloob\".",
+    "i": "/klub/"
+  },
+  {
+    "h": "fogni",
+    "e": "tooth",
+    "m": "Spoken like \"fognee\" — tooth.",
+    "i": "/foɡni/"
+  },
+  {
+    "h": "partra",
+    "e": "to the shore",
+    "m": "Spoken like \"partra\".",
+    "i": "/pɒrtrɒ/"
+  },
+  {
+    "h": "csekket",
+    "e": "check (acc.)",
+    "m": "Spoken like \"chekket\".",
+    "i": "/tʃɛkːɛt/"
+  },
+  {
+    "h": "vizsgálat",
+    "e": "water",
+    "m": "Spoken like \"veezhgálat\" — water.",
+    "i": "/viʒɡaːlɒt/"
+  },
+  {
+    "h": "lassú",
+    "e": "slow",
+    "m": "Spoken like \"lassú\".",
+    "i": "/lɒʃːuː/"
+  },
+  {
+    "h": "emeld",
+    "e": "lift (imperative)",
+    "m": "Spoken like \"emeld\".",
+    "i": "/ɛmɛld/"
+  },
+  {
+    "h": "katasztrófa",
+    "e": "catastrophe",
+    "m": "Spoken like \"katastrófa\".",
+    "i": "/kɒtɒstroːfɒ/"
+  },
+  {
+    "h": "házában",
+    "e": "in his/her house",
+    "m": "Spoken like \"házában\".",
+    "i": "/haːzaːbɒn/"
+  },
+  {
+    "h": "jövőben",
+    "e": "in the future",
+    "m": "Spoken like \"jövőben\".",
+    "i": "/jøvøːbɛn/"
+  },
+  {
+    "h": "történtek",
+    "e": "happened (things)",
+    "m": "Spoken like \"történtek\".",
+    "i": "/tørteːntɛk/"
+  },
+  {
+    "h": "szeretjük",
+    "e": "loves; likes",
+    "m": "Spoken like \"seretjük\" — loves.",
+    "i": "/sɛrɛtjyk/"
+  },
+  {
+    "h": "választott",
+    "e": "he/she chose",
+    "m": "Spoken like \"válastott\".",
+    "i": "/vaːlɒstotː/"
+  },
+  {
+    "h": "szívi",
+    "e": "he/she takes it (to heart)",
+    "m": "Spoken like \"sívee\".",
+    "i": "/siːvi/"
+  },
+  {
+    "h": "valamiért",
+    "e": "for something",
+    "m": "Spoken like \"valameeért\".",
+    "i": "/vɒlɒmieːrt/"
+  },
+  {
+    "h": "seggem",
+    "e": "my ass",
+    "m": "Spoken like \"seggem\".",
+    "i": "/ʃɛɡːɛm/"
+  },
+  {
+    "h": "jelenlegi",
+    "e": "current",
+    "m": "Spoken like \"jelenlegee\".",
+    "i": "/jɛlɛnlɛɡi/"
+  },
+  {
+    "h": "találkozom",
+    "e": "maybe",
+    "m": "Spoken like \"találkozom\" — maybe.",
+    "i": "/tɒlaːlkozom/"
+  },
+  {
+    "h": "adag",
+    "e": "gives",
+    "m": "Spoken like \"adag\" — gives.",
+    "i": "/ɒdɒɡ/"
+  },
+  {
+    "h": "ötödik",
+    "e": "fifth",
+    "m": "Spoken like \"ötödeek\".",
+    "i": "/øtødik/"
+  },
+  {
+    "h": "próbálta",
+    "e": "he/she tried",
+    "m": "Spoken like \"próbálta\".",
+    "i": "/proːbaːltɒ/"
+  },
+  {
+    "h": "házasok",
+    "e": "married couple",
+    "m": "Spoken like \"házasok\".",
+    "i": "/haːzɒʃok/"
+  },
+  {
+    "h": "teheti",
+    "e": "you (sing.)",
+    "m": "Spoken like \"tehetee\" — you (sing.).",
+    "i": "/tɛhɛti/"
+  },
+  {
+    "h": "ajánlatot",
+    "e": "offer (acc.)",
+    "m": "Spoken like \"ajánlatot\".",
+    "i": "/ɒjaːnlɒtot/"
+  },
+  {
+    "h": "dolcsi",
+    "e": "bucks (slang)",
+    "m": "Spoken like \"dolchee\".",
+    "i": "/doltʃi/"
+  },
+  {
+    "h": "fogadja",
+    "e": "tooth",
+    "m": "Spoken like \"fogadja\" — tooth.",
+    "i": "/foɡɒdjɒ/"
+  },
+  {
+    "h": "asztalt",
+    "e": "table",
+    "m": "Spoken like \"astalt\" — table.",
+    "i": "/ɒstɒlt/"
+  },
+  {
+    "h": "taxi",
+    "e": "taxi",
+    "m": "Spoken like \"taxee\".",
+    "i": "/tɒksi/"
+  },
+  {
+    "h": "szerezte",
+    "e": "he/she obtained",
+    "m": "Spoken like \"serezte\".",
+    "i": "/sɛrɛztɛ/"
+  },
+  {
+    "h": "pozitív",
+    "e": "positive",
+    "m": "Spoken like \"pozeetív\".",
+    "i": "/pozitiːv/"
+  },
+  {
+    "h": "aggódsz",
+    "e": "you worry",
+    "m": "Spoken like \"aggóds\".",
+    "i": "/ɒɡːoːds/"
+  },
+  {
+    "h": "adod",
+    "e": "gives",
+    "m": "Spoken like \"adod\" — gives.",
+    "i": "/ɒdod/"
+  },
+  {
+    "h": "beszélhetünk",
+    "e": "into; in",
+    "m": "Spoken like \"besélhetünk\" — into.",
+    "i": "/bɛseːlhɛtynk/"
+  },
+  {
+    "h": "térkép",
+    "e": "map",
+    "m": "Spoken like \"térkép\".",
+    "i": "/teːrkeːp/"
+  },
+  {
+    "h": "tudomány",
+    "e": "I know",
+    "m": "Spoken like \"toodomány\" — I know.",
+    "i": "/tudomaːɲ/"
+  },
+  {
+    "h": "véleményem",
+    "e": "my opinion",
+    "m": "Spoken like \"véleményem\".",
+    "i": "/veːlɛmeːɲɛm/"
+  },
+  {
+    "h": "viselkedik",
+    "e": "behaves",
+    "m": "Spoken like \"veeselkedeek\".",
+    "i": "/viʃɛlkɛdik/"
+  },
+  {
+    "h": "aggódni",
+    "e": "to worry",
+    "m": "Spoken like \"aggódnee\".",
+    "i": "/ɒɡːoːdni/"
+  },
+  {
+    "h": "engedjenek",
+    "e": "I",
+    "m": "Spoken like \"engedjenek\" — I.",
+    "i": "/ɛnɡɛdjɛnɛk/"
+  },
+  {
+    "h": "bánt",
+    "e": "hurts; bothers",
+    "m": "Spoken like \"bánt\".",
+    "i": "/baːnt/"
+  },
+  {
+    "h": "kérdezte",
+    "e": "he/she asked",
+    "m": "Spoken like \"kérdezte\".",
+    "i": "/keːrdɛztɛ/"
+  },
+  {
+    "h": "ital",
+    "e": "drink",
+    "m": "Spoken like \"eetal\" — drink.",
+    "i": "/itɒl/"
+  },
+  {
+    "h": "gyűlölöm",
+    "e": "I hate",
+    "m": "Spoken like \"dyűlölöm\".",
+    "i": "/ɟyːløløm/"
+  },
+  {
+    "h": "hátam",
+    "e": "my back",
+    "m": "Spoken like \"hátam\".",
+    "i": "/haːtɒm/"
+  },
+  {
+    "h": "vád",
+    "e": "accusation",
+    "m": "Spoken like \"vád\".",
+    "i": "/vaːd/"
+  },
+  {
+    "h": "kiló",
+    "e": "who; out",
+    "m": "Spoken like \"keeló\" — who.",
+    "i": "/kiloː/"
+  },
+  {
+    "h": "heti",
+    "e": "week; seven",
+    "m": "Spoken like \"hetee\" — week.",
+    "i": "/hɛti/"
+  },
+  {
+    "h": "tartotta",
+    "e": "he/she held",
+    "m": "Spoken like \"tartotta\".",
+    "i": "/tɒrtotːɒ/"
+  },
+  {
+    "h": "Párizsban",
+    "e": "in Paris",
+    "m": "Spoken like \"páreezhban\".",
+    "i": "/paːriʒbɒn/"
+  },
+  {
+    "h": "négyes",
+    "e": "four's",
+    "m": "Spoken like \"nédyes\".",
+    "i": "/neːɟɛʃ/"
+  },
+  {
+    "h": "lesztek",
+    "e": "will be",
+    "m": "Spoken like \"lestek\" — will be.",
+    "i": "/lɛstɛk/"
+  },
+  {
+    "h": "örültem",
+    "e": "I was glad",
+    "m": "Spoken like \"örültem\".",
+    "i": "/øryltɛm/"
+  },
+  {
+    "h": "északra",
+    "e": "to the north",
+    "m": "Spoken like \"ésakra\".",
+    "i": "/eːsɒkrɒ/"
+  },
+  {
+    "h": "szóltál",
+    "e": "you spoke",
+    "m": "Spoken like \"sóltál\".",
+    "i": "/soːltaːl/"
+  },
+  {
+    "h": "megtaláltad",
+    "e": "still; yet",
+    "m": "Spoken like \"megtaláltad\" — still.",
+    "i": "/mɛɡtɒlaːltɒd/"
+  },
+  {
+    "h": "szégyen",
+    "e": "shame",
+    "m": "Spoken like \"sédyen\".",
+    "i": "/seːɟɛn/"
+  },
+  {
+    "h": "jelenteni",
+    "e": "to mean; to report",
+    "m": "Spoken like \"jelentenee\".",
+    "i": "/jɛlɛntɛni/"
+  },
+  {
+    "h": "szobájában",
+    "e": "word",
+    "m": "Spoken like \"sobájában\" — word.",
+    "i": "/sobaːjaːbɒn/"
+  },
+  {
+    "h": "díjat",
+    "e": "prize (acc.)",
+    "m": "Spoken like \"díjat\".",
+    "i": "/diːjɒt/"
+  },
+  {
+    "h": "tűnnek",
+    "e": "they seem",
+    "m": "Spoken like \"tűnnek\".",
+    "i": "/tyːnːɛk/"
+  },
+  {
+    "h": "álljunk",
+    "e": "let's stand",
+    "m": "Spoken like \"álljoonk\".",
+    "i": "/aːlːjunk/"
+  },
+  {
+    "h": "láttátok",
+    "e": "you (plural) saw",
+    "m": "Spoken like \"láttátok\".",
+    "i": "/laːtːaːtok/"
+  },
+  {
+    "h": "illetve",
+    "e": "or rather",
+    "m": "Spoken like \"eelletve\".",
+    "i": "/ilːɛtvɛ/"
+  },
+  {
+    "h": "hihetetlenül",
+    "e": "incredibly",
+    "m": "Spoken like \"heehetetlenül\".",
+    "i": "/hihɛtɛtlɛnyl/"
+  },
+  {
+    "h": "téma",
+    "e": "topic",
+    "m": "Spoken like \"téma\".",
+    "i": "/teːmɒ/"
+  },
+  {
+    "h": "klasszikus",
+    "e": "classic",
+    "m": "Spoken like \"klasseekoos\".",
+    "i": "/klɒsːikuʃ/"
+  },
+  {
+    "h": "jövőre",
+    "e": "next year",
+    "m": "Spoken like \"jövőre\".",
+    "i": "/jøvøːrɛ/"
+  },
+  {
+    "h": "amelyet",
+    "e": "which (acc.)",
+    "m": "Spoken like \"ameyet\".",
+    "i": "/ɒmɛjɛt/"
+  },
+  {
+    "h": "éri",
+    "e": "reaches it",
+    "m": "Spoken like \"éree\".",
+    "i": "/eːri/"
+  },
+  {
+    "h": "lányomat",
+    "e": "my daughter (acc.)",
+    "m": "Spoken like \"lányomat\".",
+    "i": "/laːɲomɒt/"
+  },
+  {
+    "h": "méghozzá",
+    "e": "namely",
+    "m": "Spoken like \"méghozzá\".",
+    "i": "/meːɡhozːaː/"
+  },
+  {
+    "h": "szerezz",
+    "e": "get (imperative)",
+    "m": "Spoken like \"serezz\".",
+    "i": "/sɛrɛzː/"
+  },
+  {
+    "h": "itteni",
+    "e": "here",
+    "m": "Spoken like \"eettenee\" — here.",
+    "i": "/itːɛni/"
+  },
+  {
+    "h": "lépcsőn",
+    "e": "on the stairs",
+    "m": "Spoken like \"lépchőn\".",
+    "i": "/leːptʃøːn/"
+  },
+  {
+    "h": "fejjel",
+    "e": "head",
+    "m": "Spoken like \"fejjel\" — head.",
+    "i": "/fɛjːɛl/"
+  },
+  {
+    "h": "elnököt",
+    "e": "president (acc.)",
+    "m": "Spoken like \"elnököt\".",
+    "i": "/ɛlnøkøt/"
+  },
+  {
+    "h": "nős",
+    "e": "married (man)",
+    "m": "Spoken like \"nős\".",
+    "i": "/nøːʃ/"
+  },
+  {
+    "h": "meztelen",
+    "e": "naked",
+    "m": "Spoken like \"meztelen\".",
+    "i": "/mɛztɛlɛn/"
+  },
+  {
+    "h": "melót",
+    "e": "work (acc., slang)",
+    "m": "Spoken like \"melót\".",
+    "i": "/mɛloːt/"
+  },
+  {
+    "h": "rendőrségi",
+    "e": "police (adjective)",
+    "m": "Spoken like \"rendőrségee\".",
+    "i": "/rɛndøːrʃeːɡi/"
+  },
+  {
+    "h": "megnéztem",
+    "e": "still; yet",
+    "m": "Spoken like \"megnéztem\" — still.",
+    "i": "/mɛɡneːztɛm/"
+  },
+  {
+    "h": "többieket",
+    "e": "the others (acc.)",
+    "m": "Spoken like \"többeeeket\".",
+    "i": "/tøbːiɛkɛt/"
+  },
+  {
+    "h": "hírem",
+    "e": "my news",
+    "m": "Spoken like \"hírem\".",
+    "i": "/hiːrɛm/"
+  },
+  {
+    "h": "maradhat",
+    "e": "already",
+    "m": "Spoken like \"maradhat\" — already.",
+    "i": "/mɒrɒdhɒt/"
+  },
+  {
+    "h": "köszönni",
+    "e": "to greet",
+    "m": "Spoken like \"kösönnee\".",
+    "i": "/køsønːi/"
+  },
+  {
+    "h": "kísérlet",
+    "e": "attempt",
+    "m": "Spoken like \"kísérlet\".",
+    "i": "/kiːʃeːrlɛt/"
+  },
+  {
+    "h": "szállni",
+    "e": "to fly; to land",
+    "m": "Spoken like \"sállnee\".",
+    "i": "/saːlːni/"
+  },
+  {
+    "h": "legújabb",
+    "e": "down",
+    "m": "Spoken like \"legújabb\" — down.",
+    "i": "/lɛɡuːjɒbː/"
+  },
+  {
+    "h": "kocsival",
+    "e": "stone",
+    "m": "Spoken like \"kocheeval\" — stone.",
+    "i": "/kotʃivɒl/"
+  },
+  {
+    "h": "bor",
+    "e": "wine",
+    "m": "Spoken like \"bor\" — wine.",
+    "i": "/bor/"
+  },
+  {
+    "h": "rettenetes",
+    "e": "terrible",
+    "m": "Spoken like \"rettenetes\".",
+    "i": "/rɛtːɛnɛtɛʃ/"
+  },
+  {
+    "h": "általános",
+    "e": "general",
+    "m": "Spoken like \"általános\".",
+    "i": "/aːltɒlaːnoʃ/"
+  },
+  {
+    "h": "hagyjál",
+    "e": "if",
+    "m": "Spoken like \"hadyjál\" — if.",
+    "i": "/hɒɟjaːl/"
+  },
+  {
+    "h": "Londonban",
+    "e": "horse",
+    "m": "Spoken like \"londonban\" — horse.",
+    "i": "/londonbɒn/"
+  },
+  {
+    "h": "legjobbat",
+    "e": "down",
+    "m": "Spoken like \"legjobbat\" — down.",
+    "i": "/lɛɡjobːɒt/"
+  },
+  {
+    "h": "lila",
+    "e": "purple",
+    "m": "Spoken like \"leela\".",
+    "i": "/lilɒ/"
+  },
+  {
+    "h": "megpróbálja",
+    "e": "still; yet",
+    "m": "Spoken like \"megpróbálja\" — still.",
+    "i": "/mɛɡproːbaːljɒ/"
+  },
+  {
+    "h": "lássa",
+    "e": "let him/her see",
+    "m": "Spoken like \"lássa\".",
+    "i": "/laːʃːɒ/"
+  },
+  {
+    "h": "hangosan",
+    "e": "if",
+    "m": "Spoken like \"hangosan\" — if.",
+    "i": "/hɒnɡoʃɒn/"
+  },
+  {
+    "h": "színész",
+    "e": "actor",
+    "m": "Spoken like \"sínés\".",
+    "i": "/siːneːs/"
+  },
+  {
+    "h": "eljárás",
+    "e": "procedure",
+    "m": "Spoken like \"eljárás\".",
+    "i": "/ɛljaːraːʃ/"
+  },
+  {
+    "h": "várják",
+    "e": "they wait for",
+    "m": "Spoken like \"várják\".",
+    "i": "/vaːrjaːk/"
+  },
+  {
+    "h": "halok",
+    "e": "if",
+    "m": "Spoken like \"halok\" — if.",
+    "i": "/hɒlok/"
+  },
+  {
+    "h": "aludt",
+    "e": "he/she slept",
+    "m": "Spoken like \"aloodt\".",
+    "i": "/ɒludt/"
+  },
+  {
+    "h": "órás",
+    "e": "hourly",
+    "m": "Spoken like \"órás\".",
+    "i": "/oːraːʃ/"
+  },
+  {
+    "h": "útban",
+    "e": "on the way",
+    "m": "Spoken like \"útban\".",
+    "i": "/uːtbɒn/"
+  },
+  {
+    "h": "sztár",
+    "e": "star",
+    "m": "Spoken like \"stár\".",
+    "i": "/staːr/"
+  },
+  {
+    "h": "csók",
+    "e": "kiss",
+    "m": "Spoken like \"chók\".",
+    "i": "/tʃoːk/"
+  },
+  {
+    "h": "állati",
+    "e": "animal (adjective)",
+    "m": "Spoken like \"állatee\".",
+    "i": "/aːlːɒti/"
+  },
+  {
+    "h": "számítógép",
+    "e": "computer",
+    "m": "Spoken like \"sámítógép\".",
+    "i": "/saːmiːtoːɡeːp/"
+  },
+  {
+    "h": "ügyvédet",
+    "e": "lawyer (acc.)",
+    "m": "Spoken like \"üdyvédet\".",
+    "i": "/yɟveːdɛt/"
+  },
+  {
+    "h": "nyomja",
+    "e": "presses",
+    "m": "Spoken like \"nyomja\".",
+    "i": "/ɲomjɒ/"
+  },
+  {
+    "h": "tanú",
+    "e": "witness",
+    "m": "Spoken like \"tanú\".",
+    "i": "/tɒnuː/"
+  },
+  {
+    "h": "tag",
+    "e": "member",
+    "m": "Spoken like \"tag\".",
+    "i": "/tɒɡ/"
+  },
+  {
+    "h": "mindenben",
+    "e": "what; we",
+    "m": "Spoken like \"meendenben\" — what.",
+    "i": "/mindɛnbɛn/"
+  },
+  {
+    "h": "segítettem",
+    "e": "I helped",
+    "m": "Spoken like \"segítettem\".",
+    "i": "/ʃɛɡiːtɛtːɛm/"
+  },
+  {
+    "h": "vigyáz",
+    "e": "takes care",
+    "m": "Spoken like \"veedyáz\".",
+    "i": "/viɟaːz/"
+  },
+  {
+    "h": "listán",
+    "e": "on the list",
+    "m": "Spoken like \"leestán\".",
+    "i": "/liʃtaːn/"
+  },
+  {
+    "h": "fizikai",
+    "e": "physical",
+    "m": "Spoken like \"feezeekaee\".",
+    "i": "/fizikɒi/"
+  },
+  {
+    "h": "felvételt",
+    "e": "up",
+    "m": "Spoken like \"felvételt\" — up.",
+    "i": "/fɛlveːtɛlt/"
+  },
+  {
+    "h": "bolygón",
+    "e": "on the planet",
+    "m": "Spoken like \"boygón\".",
+    "i": "/bojɡoːn/"
+  },
+  {
+    "h": "kapjátok",
+    "e": "you (plural) get",
+    "m": "Spoken like \"kapjátok\".",
+    "i": "/kɒpjaːtok/"
+  },
+  {
+    "h": "laksz",
+    "e": "you live",
+    "m": "Spoken like \"laks\".",
+    "i": "/lɒks/"
+  },
+  {
+    "h": "észrevettem",
+    "e": "I noticed",
+    "m": "Spoken like \"ésrevettem\".",
+    "i": "/eːsrɛvɛtːɛm/"
+  },
+  {
+    "h": "rablás",
+    "e": "robbery",
+    "m": "Spoken like \"rablás\".",
+    "i": "/rɒblaːʃ/"
+  },
+  {
+    "h": "koromban",
+    "e": "stone",
+    "m": "Spoken like \"koromban\" — stone.",
+    "i": "/korombɒn/"
+  },
+  {
+    "h": "tört",
+    "e": "broke",
+    "m": "Spoken like \"tört\".",
+    "i": "/tørt/"
+  },
+  {
+    "h": "elkapták",
+    "e": "they caught",
+    "m": "Spoken like \"elkapták\".",
+    "i": "/ɛlkɒptaːk/"
+  },
+  {
+    "h": "felvenni",
+    "e": "up",
+    "m": "Spoken like \"felvennee\" — up.",
+    "i": "/fɛlvɛnːi/"
+  },
+  {
+    "h": "akikkel",
+    "e": "with whom (relative, plural)",
+    "m": "Spoken like \"akeekkel\".",
+    "i": "/ɒkikːɛl/"
+  },
+  {
+    "h": "kamerát",
+    "e": "camera (acc.)",
+    "m": "Spoken like \"kamerát\".",
+    "i": "/kɒmɛraːt/"
+  },
+  {
+    "h": "magunkra",
+    "e": "today",
+    "m": "Spoken like \"magoonkra\" — today.",
+    "i": "/mɒɡunkrɒ/"
+  },
+  {
+    "h": "fájni",
+    "e": "to hurt",
+    "m": "Spoken like \"fájnee\".",
+    "i": "/faːjni/"
+  },
+  {
+    "h": "italra",
+    "e": "drink",
+    "m": "Spoken like \"eetalra\" — drink.",
+    "i": "/itɒlrɒ/"
+  },
+  {
+    "h": "vendég",
+    "e": "guest",
+    "m": "Spoken like \"vendég\".",
+    "i": "/vɛndeːɡ/"
+  },
+  {
+    "h": "családját",
+    "e": "his/her family (acc.)",
+    "m": "Spoken like \"chaládját\".",
+    "i": "/tʃɒlaːdjaːt/"
+  },
+  {
+    "h": "szórakozni",
+    "e": "to have fun",
+    "m": "Spoken like \"sórakoznee\".",
+    "i": "/soːrɒkozni/"
+  },
+  {
+    "h": "pofád",
+    "e": "your face (vulgar)",
+    "m": "Spoken like \"pofád\".",
+    "i": "/pofaːd/"
+  },
+  {
+    "h": "engedem",
+    "e": "I",
+    "m": "Spoken like \"engedem\" — I.",
+    "i": "/ɛnɡɛdɛm/"
+  },
+  {
+    "h": "esni",
+    "e": "and",
+    "m": "Spoken like \"esnee\" — and.",
+    "i": "/ɛʃni/"
+  },
+  {
+    "h": "fájdalmas",
+    "e": "painful",
+    "m": "Spoken like \"fájdalmas\".",
+    "i": "/faːjdɒlmɒʃ/"
+  },
+  {
+    "h": "pénzügyi",
+    "e": "financial",
+    "m": "Spoken like \"pénzüdyee\".",
+    "i": "/peːnzyɟi/"
+  },
+  {
+    "h": "tárgyalás",
+    "e": "trial",
+    "m": "Spoken like \"tárdyalás\".",
+    "i": "/taːrɟɒlaːʃ/"
+  },
+  {
+    "h": "kapod",
+    "e": "you get it",
+    "m": "Spoken like \"kapod\".",
+    "i": "/kɒpod/"
+  },
+  {
+    "h": "elviszlek",
+    "e": "I'll take you",
+    "m": "Spoken like \"elveeslek\".",
+    "i": "/ɛlvislɛk/"
+  },
+  {
+    "h": "békét",
+    "e": "peace (acc.)",
+    "m": "Spoken like \"békét\".",
+    "i": "/beːkeːt/"
+  },
+  {
+    "h": "történne",
+    "e": "would happen",
+    "m": "Spoken like \"történne\".",
+    "i": "/tørteːnːɛ/"
+  },
+  {
+    "h": "iszol",
+    "e": "also; too",
+    "m": "Spoken like \"eesol\" — also.",
+    "i": "/isol/"
+  },
+  {
+    "h": "áldozatok",
+    "e": "victims",
+    "m": "Spoken like \"áldozatok\".",
+    "i": "/aːldozɒtok/"
+  },
+  {
+    "h": "bíróságon",
+    "e": "in court",
+    "m": "Spoken like \"bíróságon\".",
+    "i": "/biːroːʃaːɡon/"
+  },
+  {
+    "h": "kitől",
+    "e": "who; out",
+    "m": "Spoken like \"keetől\" — who.",
+    "i": "/kitøːl/"
+  },
+  {
+    "h": "repül",
+    "e": "flies",
+    "m": "Spoken like \"repül\".",
+    "i": "/rɛpyl/"
+  },
+  {
+    "h": "mindenképpen",
+    "e": "what; we",
+    "m": "Spoken like \"meendenképpen\" — what.",
+    "i": "/mindɛnkeːpːɛn/"
+  },
+  {
+    "h": "kényelmes",
+    "e": "comfortable",
+    "m": "Spoken like \"kényelmes\".",
+    "i": "/keːɲɛlmɛʃ/"
+  },
+  {
+    "h": "könyörgök",
+    "e": "I beg you",
+    "m": "Spoken like \"könyörgök\".",
+    "i": "/køɲørɡøk/"
+  },
+  {
+    "h": "beszélgetünk",
+    "e": "into; in",
+    "m": "Spoken like \"besélgetünk\" — into.",
+    "i": "/bɛseːlɡɛtynk/"
+  },
+  {
+    "h": "véleménye",
+    "e": "his/her opinion",
+    "m": "Spoken like \"véleménye\".",
+    "i": "/veːlɛmeːɲɛ/"
+  },
+  {
+    "h": "amihez",
+    "e": "which (relative, to)",
+    "m": "Spoken like \"ameehez\".",
+    "i": "/ɒmihɛz/"
+  },
+  {
+    "h": "elmondjam",
+    "e": "should I tell",
+    "m": "Spoken like \"elmondjam\".",
+    "i": "/ɛlmondjɒm/"
+  },
+  {
+    "h": "békében",
+    "e": "in peace",
+    "m": "Spoken like \"békében\".",
+    "i": "/beːkeːbɛn/"
+  },
+  {
+    "h": "vezetek",
+    "e": "I drive",
+    "m": "Spoken like \"vezetek\".",
+    "i": "/vɛzɛtɛk/"
+  },
+  {
+    "h": "térdre",
+    "e": "to knee(s)",
+    "m": "Spoken like \"térdre\".",
+    "i": "/teːrdrɛ/"
+  },
+  {
+    "h": "kezdte",
+    "e": "hand",
+    "m": "Spoken like \"kezdte\" — hand.",
+    "i": "/kɛzdtɛ/"
+  },
+  {
+    "h": "eltűntek",
+    "e": "they disappeared",
+    "m": "Spoken like \"eltűntek\".",
+    "i": "/ɛltyːntɛk/"
+  },
+  {
+    "h": "hétfőn",
+    "e": "on Monday",
+    "m": "Spoken like \"hétfőn\".",
+    "i": "/heːtføːn/"
+  },
+  {
+    "h": "művész",
+    "e": "artist",
+    "m": "Spoken like \"művés\".",
+    "i": "/myːveːs/"
+  },
+  {
+    "h": "házból",
+    "e": "from the house",
+    "m": "Spoken like \"házból\".",
+    "i": "/haːzboːl/"
+  },
+  {
+    "h": "boltban",
+    "e": "shop",
+    "m": "Spoken like \"boltban\" — shop.",
+    "i": "/boltbɒn/"
+  },
+  {
+    "h": "odaát",
+    "e": "over there",
+    "m": "Spoken like \"odaát\".",
+    "i": "/odɒaːt/"
+  },
+  {
+    "h": "megértettem",
+    "e": "still; yet",
+    "m": "Spoken like \"megértettem\" — still.",
+    "i": "/mɛɡeːrtɛtːɛm/"
+  },
+  {
+    "h": "száll",
+    "e": "he/she flies; lands",
+    "m": "Spoken like \"sáll\".",
+    "i": "/saːlː/"
+  },
+  {
+    "h": "engedi",
+    "e": "I",
+    "m": "Spoken like \"engedee\" — I.",
+    "i": "/ɛnɡɛdi/"
+  },
+  {
+    "h": "halat",
+    "e": "if",
+    "m": "Spoken like \"halat\" — if.",
+    "i": "/hɒlɒt/"
+  },
+  {
+    "h": "jutnunk",
+    "e": "we must reach",
+    "m": "Spoken like \"jootnoonk\".",
+    "i": "/jutnunk/"
+  },
+  {
+    "h": "tudtak",
+    "e": "knows; can",
+    "m": "Spoken like \"toodtak\" — knows.",
+    "i": "/tudtɒk/"
+  },
+  {
+    "h": "bizottság",
+    "e": "committee",
+    "m": "Spoken like \"beezottság\".",
+    "i": "/bizotːʃaːɡ/"
+  },
+  {
+    "h": "hozhatok",
+    "e": "snow",
+    "m": "Spoken like \"hozhatok\" — snow.",
+    "i": "/hozhɒtok/"
+  },
+  {
+    "h": "zárd",
+    "e": "close (imperative, formal)",
+    "m": "Spoken like \"zárd\".",
+    "i": "/zaːrd/"
+  },
+  {
+    "h": "gondolkodni",
+    "e": "to think",
+    "m": "Spoken like \"gondolkodnee\".",
+    "i": "/ɡondolkodni/"
+  },
+  {
+    "h": "foglaljon",
+    "e": "tooth",
+    "m": "Spoken like \"foglaljon\" — tooth.",
+    "i": "/foɡlɒljon/"
+  },
+  {
+    "h": "oldalt",
+    "e": "to the side",
+    "m": "Spoken like \"oldalt\".",
+    "i": "/oldɒlt/"
+  },
+  {
+    "h": "értük",
+    "e": "for them",
+    "m": "Spoken like \"értük\".",
+    "i": "/eːrtyk/"
+  },
+  {
+    "h": "áron",
+    "e": "at a price",
+    "m": "Spoken like \"áron\".",
+    "i": "/aːron/"
+  },
+  {
+    "h": "értitek",
+    "e": "you (plural) understand",
+    "m": "Spoken like \"érteetek\".",
+    "i": "/eːrtitɛk/"
+  },
+  {
+    "h": "eltűnik",
+    "e": "disappears",
+    "m": "Spoken like \"eltűneek\".",
+    "i": "/ɛltyːnik/"
+  },
+  {
+    "h": "sztorit",
+    "e": "story (acc.)",
+    "m": "Spoken like \"storeet\".",
+    "i": "/storit/"
+  },
+  {
+    "h": "törődik",
+    "e": "cares",
+    "m": "Spoken like \"törődeek\".",
+    "i": "/tørøːdik/"
+  },
+  {
+    "h": "egek",
+    "e": "heavens",
+    "m": "Spoken like \"egek\".",
+    "i": "/ɛɡɛk/"
+  },
+  {
+    "h": "nigger",
+    "e": "n-word (racial slur)",
+    "m": "Spoken like \"neegger\".",
+    "i": "/niɡːɛr/"
+  },
+  {
+    "h": "kapom",
+    "e": "I get",
+    "m": "Spoken like \"kapom\".",
+    "i": "/kɒpom/"
+  },
+  {
+    "h": "farkas",
+    "e": "wolf",
+    "m": "Spoken like \"farkas\" — wolf.",
+    "i": "/fɒrkɒʃ/"
+  },
+  {
+    "h": "darabokra",
+    "e": "piece",
+    "m": "Spoken like \"darabokra\" — piece.",
+    "i": "/dɒrɒbokrɒ/"
+  },
+  {
+    "h": "lelőtték",
+    "e": "down",
+    "m": "Spoken like \"lelőtték\" — down.",
+    "i": "/lɛløːtːeːk/"
+  },
+  {
+    "h": "találtad",
+    "e": "maybe",
+    "m": "Spoken like \"találtad\" — maybe.",
+    "i": "/tɒlaːltɒd/"
+  },
+  {
+    "h": "fickónak",
+    "e": "to the guy",
+    "m": "Spoken like \"feeckónak\".",
+    "i": "/fit͡skoːnɒk/"
+  },
+  {
+    "h": "akarná",
+    "e": "he/she would want",
+    "m": "Spoken like \"akarná\".",
+    "i": "/ɒkɒrnaː/"
+  },
+  {
+    "h": "pajti",
+    "e": "buddy",
+    "m": "Spoken like \"pajtee\".",
+    "i": "/pɒjti/"
+  },
+  {
+    "h": "fejében",
+    "e": "head",
+    "m": "Spoken like \"fejében\" — head.",
+    "i": "/fɛjeːbɛn/"
+  },
+  {
+    "h": "papírokat",
+    "e": "papers (acc.)",
+    "m": "Spoken like \"papírokat\".",
+    "i": "/pɒpiːrokɒt/"
+  },
+  {
+    "h": "csináljon",
+    "e": "let him/her do",
+    "m": "Spoken like \"cheenáljon\".",
+    "i": "/tʃinaːljon/"
+  },
+  {
+    "h": "veszünk",
+    "e": "buys; takes",
+    "m": "Spoken like \"vesünk\" — buys.",
+    "i": "/vɛsynk/"
+  },
+  {
+    "h": "működnek",
+    "e": "they work",
+    "m": "Spoken like \"működnek\".",
+    "i": "/myːkødnɛk/"
+  },
+  {
+    "h": "felejtettem",
+    "e": "up",
+    "m": "Spoken like \"felejtettem\" — up.",
+    "i": "/fɛlɛjtɛtːɛm/"
+  },
+  {
+    "h": "imádni",
+    "e": "to love; to adore",
+    "m": "Spoken like \"eemádnee\".",
+    "i": "/imaːdni/"
+  },
+  {
+    "h": "hívsz",
+    "e": "you call",
+    "m": "Spoken like \"hívs\".",
+    "i": "/hiːvs/"
+  },
+  {
+    "h": "megadom",
+    "e": "still; yet",
+    "m": "Spoken like \"megadom\" — still.",
+    "i": "/mɛɡɒdom/"
+  },
+  {
+    "h": "iskolai",
+    "e": "also; too",
+    "m": "Spoken like \"eeskolaee\" — also.",
+    "i": "/iʃkolɒi/"
+  },
+  {
+    "h": "kerestek",
+    "e": "asks; requests",
+    "m": "Spoken like \"kerestek\" — asks.",
+    "i": "/kɛrɛʃtɛk/"
+  },
+  {
+    "h": "univerzum",
+    "e": "universe",
+    "m": "Spoken like \"ooneeverzoom\".",
+    "i": "/univɛrzum/"
+  },
+  {
+    "h": "harci",
+    "e": "if",
+    "m": "Spoken like \"harcee\" — if.",
+    "i": "/hɒrt͡si/"
+  },
+  {
+    "h": "ablakot",
+    "e": "window",
+    "m": "Spoken like \"ablakot\" — window.",
+    "i": "/ɒblɒkot/"
+  },
+  {
+    "h": "szebb",
+    "e": "prettier",
+    "m": "Spoken like \"sebb\".",
+    "i": "/sɛbː/"
+  },
+  {
+    "h": "nyilvános",
+    "e": "public",
+    "m": "Spoken like \"nyeelvános\".",
+    "i": "/ɲilvaːnoʃ/"
+  },
+  {
+    "h": "állás",
+    "e": "job; position",
+    "m": "Spoken like \"állás\".",
+    "i": "/aːlːaːʃ/"
+  },
+  {
+    "h": "kém",
+    "e": "spy",
+    "m": "Spoken like \"kém\".",
+    "i": "/keːm/"
+  },
+  {
+    "h": "kódot",
+    "e": "code (acc.)",
+    "m": "Spoken like \"kódot\".",
+    "i": "/koːdot/"
+  },
+  {
+    "h": "kés",
+    "e": "knife",
+    "m": "Spoken like \"kés\".",
+    "i": "/keːʃ/"
+  },
+  {
+    "h": "eredmény",
+    "e": "result",
+    "m": "Spoken like \"eredmény\".",
+    "i": "/ɛrɛdmeːɲ/"
+  },
+  {
+    "h": "nyomot",
+    "e": "trace (acc.)",
+    "m": "Spoken like \"nyomot\".",
+    "i": "/ɲomot/"
+  },
+  {
+    "h": "csúnyán",
+    "e": "ugly (adverbial)",
+    "m": "Spoken like \"chúnyán\".",
+    "i": "/tʃuːɲaːn/"
+  },
+  {
+    "h": "hajóra",
+    "e": "if",
+    "m": "Spoken like \"hajóra\" — if.",
+    "i": "/hɒjoːrɒ/"
+  },
+  {
+    "h": "egyértelműen",
+    "e": "one; a",
+    "m": "Spoken like \"edyértelműen\" — one.",
+    "i": "/ɛɟeːrtɛlmyːɛn/"
+  },
+  {
+    "h": "meglehetősen",
+    "e": "still; yet",
+    "m": "Spoken like \"meglehetősen\" — still.",
+    "i": "/mɛɡlɛhɛtøːʃɛn/"
+  },
+  {
+    "h": "hazudok",
+    "e": "if",
+    "m": "Spoken like \"hazoodok\" — if.",
+    "i": "/hɒzudok/"
+  },
+  {
+    "h": "bánom",
+    "e": "I mind",
+    "m": "Spoken like \"bánom\".",
+    "i": "/baːnom/"
+  },
+  {
+    "h": "kárt",
+    "e": "damage (acc.)",
+    "m": "Spoken like \"kárt\".",
+    "i": "/kaːrt/"
+  },
+  {
+    "h": "hagyhatjuk",
+    "e": "if",
+    "m": "Spoken like \"hadyhatjook\" — if.",
+    "i": "/hɒɟhɒtjuk/"
+  },
+  {
+    "h": "többre",
+    "e": "for more",
+    "m": "Spoken like \"többre\".",
+    "i": "/tøbːrɛ/"
+  },
+  {
+    "h": "előtti",
+    "e": "before (it)",
+    "m": "Spoken like \"előttee\".",
+    "i": "/ɛløːtːi/"
+  },
+  {
+    "h": "hármat",
+    "e": "three (acc.)",
+    "m": "Spoken like \"hármat\".",
+    "i": "/haːrmɒt/"
+  },
+  {
+    "h": "támadást",
+    "e": "attack (acc.)",
+    "m": "Spoken like \"támadást\".",
+    "i": "/taːmɒdaːʃt/"
+  },
+  {
+    "h": "kapcsolatos",
+    "e": "related",
+    "m": "Spoken like \"kapcholatos\".",
+    "i": "/kɒptʃolɒtoʃ/"
+  },
+  {
+    "h": "műsort",
+    "e": "show (acc.)",
+    "m": "Spoken like \"műsort\".",
+    "i": "/myːʃort/"
+  },
+  {
+    "h": "mibe",
+    "e": "what; we",
+    "m": "Spoken like \"meebe\" — what.",
+    "i": "/mibɛ/"
+  },
+  {
+    "h": "medve",
+    "e": "bear",
+    "m": "Spoken like \"medve\" — bear.",
+    "i": "/mɛdvɛ/"
+  },
+  {
+    "h": "nézzetek",
+    "e": "look (plural, imper.)",
+    "m": "Spoken like \"nézzetek\".",
+    "i": "/neːzːɛtɛk/"
+  },
+  {
+    "h": "vitték",
+    "e": "they took",
+    "m": "Spoken like \"veették\".",
+    "i": "/vitːeːk/"
+  },
+  {
+    "h": "tért",
+    "e": "he/she turned",
+    "m": "Spoken like \"tért\".",
+    "i": "/teːrt/"
+  },
+  {
+    "h": "táskát",
+    "e": "bag (acc.)",
+    "m": "Spoken like \"táskát\".",
+    "i": "/taːʃkaːt/"
+  },
+  {
+    "h": "bőven",
+    "e": "plenty",
+    "m": "Spoken like \"bőven\".",
+    "i": "/bøːvɛn/"
+  },
+  {
+    "h": "falat",
+    "e": "wall",
+    "m": "Spoken like \"falat\" — wall.",
+    "i": "/fɒlɒt/"
+  },
+  {
+    "h": "utal",
+    "e": "road; way",
+    "m": "Spoken like \"ootal\" — road.",
+    "i": "/utɒl/"
+  },
+  {
+    "h": "mókás",
+    "e": "funny",
+    "m": "Spoken like \"mókás\".",
+    "i": "/moːkaːʃ/"
+  },
+  {
+    "h": "mennyibe",
+    "e": "how much (cost)",
+    "m": "Spoken like \"mennyeebe\".",
+    "i": "/mɛɲːibɛ/"
+  },
+  {
+    "h": "templomba",
+    "e": "you (sing.)",
+    "m": "Spoken like \"templomba\" — you (sing.).",
+    "i": "/tɛmplombɒ/"
+  },
+  {
+    "h": "elfelejtetted",
+    "e": "you forgot",
+    "m": "Spoken like \"elfelejtetted\".",
+    "i": "/ɛlfɛlɛjtɛtːɛd/"
+  },
+  {
+    "h": "érdekelt",
+    "e": "interested",
+    "m": "Spoken like \"érdekelt\".",
+    "i": "/eːrdɛkɛlt/"
+  },
+  {
+    "h": "éles",
+    "e": "sharp",
+    "m": "Spoken like \"éles\".",
+    "i": "/eːlɛʃ/"
+  },
+  {
+    "h": "hangját",
+    "e": "if",
+    "m": "Spoken like \"hangját\" — if.",
+    "i": "/hɒnɡjaːt/"
+  },
+  {
+    "h": "használjuk",
+    "e": "if",
+    "m": "Spoken like \"hasnáljook\" — if.",
+    "i": "/hɒsnaːljuk/"
+  },
+  {
+    "h": "nyomozás",
+    "e": "investigation",
+    "m": "Spoken like \"nyomozás\".",
+    "i": "/ɲomozaːʃ/"
+  },
+  {
+    "h": "magyarázat",
+    "e": "today",
+    "m": "Spoken like \"madyarázat\" — today.",
+    "i": "/mɒɟɒraːzɒt/"
+  },
+  {
+    "h": "beszélgetést",
+    "e": "into; in",
+    "m": "Spoken like \"besélgetést\" — into.",
+    "i": "/bɛseːlɡɛteːʃt/"
+  },
+  {
+    "h": "vágod",
+    "e": "do you get it",
+    "m": "Spoken like \"vágod\".",
+    "i": "/vaːɡod/"
+  },
+  {
+    "h": "végez",
+    "e": "he/she finishes",
+    "m": "Spoken like \"végez\".",
+    "i": "/veːɡɛz/"
+  },
+  {
+    "h": "témát",
+    "e": "topic (acc.)",
+    "m": "Spoken like \"témát\".",
+    "i": "/teːmaːt/"
+  },
+  {
+    "h": "állítsa",
+    "e": "set it (formal)",
+    "m": "Spoken like \"állítsa\".",
+    "i": "/aːlːiːtʃɒ/"
+  },
+  {
+    "h": "jelentkezz",
+    "e": "sign up (imperative)",
+    "m": "Spoken like \"jelentkezz\".",
+    "i": "/jɛlɛntkɛzː/"
+  },
+  {
+    "h": "gyanús",
+    "e": "suspicious",
+    "m": "Spoken like \"dyanús\".",
+    "i": "/ɟɒnuːʃ/"
+  },
+  {
+    "h": "sráccal",
+    "e": "with the guy",
+    "m": "Spoken like \"sráccal\".",
+    "i": "/ʃraːt͡sːɒl/"
+  },
+  {
+    "h": "emberre",
+    "e": "person",
+    "m": "Spoken like \"emberre\" — person.",
+    "i": "/ɛmbɛrːɛ/"
+  },
+  {
+    "h": "párat",
+    "e": "a few (acc.)",
+    "m": "Spoken like \"párat\".",
+    "i": "/paːrɒt/"
+  },
+  {
+    "h": "negyed",
+    "e": "don't",
+    "m": "Spoken like \"nedyed\" — don't.",
+    "i": "/nɛɟɛd/"
+  },
+  {
+    "h": "nulla",
+    "e": "zero",
+    "m": "Spoken like \"noolla\".",
+    "i": "/nulːɒ/"
+  },
+  {
+    "h": "urat",
+    "e": "lord (acc.)",
+    "m": "Spoken like \"oorat\".",
+    "i": "/urɒt/"
+  },
+  {
+    "h": "kérdezem",
+    "e": "I ask",
+    "m": "Spoken like \"kérdezem\".",
+    "i": "/keːrdɛzɛm/"
+  },
+  {
+    "h": "védelem",
+    "e": "defense",
+    "m": "Spoken like \"védelem\".",
+    "i": "/veːdɛlɛm/"
+  },
+  {
+    "h": "császár",
+    "e": "emperor",
+    "m": "Spoken like \"chásár\".",
+    "i": "/tʃaːsaːr/"
+  },
+  {
+    "h": "áruld",
+    "e": "tell (imperative)",
+    "m": "Spoken like \"ároold\".",
+    "i": "/aːruld/"
+  },
+  {
+    "h": "taxit",
+    "e": "taxi (acc.)",
+    "m": "Spoken like \"taxeet\".",
+    "i": "/tɒksit/"
+  },
+  {
+    "h": "illata",
+    "e": "its scent",
+    "m": "Spoken like \"eellata\".",
+    "i": "/ilːɒtɒ/"
+  },
+  {
+    "h": "eszel",
+    "e": "and",
+    "m": "Spoken like \"esel\" — and.",
+    "i": "/ɛsɛl/"
+  },
+  {
+    "h": "történjen",
+    "e": "let it happen",
+    "m": "Spoken like \"történjen\".",
+    "i": "/tørteːnjɛn/"
+  },
+  {
+    "h": "köszönhetően",
+    "e": "thanks to",
+    "m": "Spoken like \"kösönhetően\".",
+    "i": "/køsønhɛtøːɛn/"
+  },
+  {
+    "h": "kedvencem",
+    "e": "my favorite",
+    "m": "Spoken like \"kedvencem\".",
+    "i": "/kɛdvɛnt͡sɛm/"
+  },
+  {
+    "h": "alkut",
+    "e": "deal (acc.)",
+    "m": "Spoken like \"alkoot\".",
+    "i": "/ɒlkut/"
+  },
+  {
+    "h": "nyomorult",
+    "e": "miserable",
+    "m": "Spoken like \"nyomoroolt\".",
+    "i": "/ɲomorult/"
+  },
+  {
+    "h": "férfival",
+    "e": "with a man",
+    "m": "Spoken like \"férfeeval\".",
+    "i": "/feːrfivɒl/"
+  },
+  {
+    "h": "hetes",
+    "e": "week; seven",
+    "m": "Spoken like \"hetes\" — week.",
+    "i": "/hɛtɛʃ/"
+  },
+  {
+    "h": "óceán",
+    "e": "ocean",
+    "m": "Spoken like \"óceán\".",
+    "i": "/oːt͡sɛaːn/"
+  },
+  {
+    "h": "megoldom",
+    "e": "still; yet",
+    "m": "Spoken like \"megoldom\" — still.",
+    "i": "/mɛɡoldom/"
+  },
+  {
+    "h": "erejét",
+    "e": "his/her strength (acc.)",
+    "m": "Spoken like \"erejét\".",
+    "i": "/ɛrɛjeːt/"
+  },
+  {
+    "h": "gondoljuk",
+    "e": "let's think",
+    "m": "Spoken like \"gondoljook\".",
+    "i": "/ɡondoljuk/"
+  },
+  {
+    "h": "milliót",
+    "e": "what; we",
+    "m": "Spoken like \"meelleeót\" — what.",
+    "i": "/milːioːt/"
+  },
+  {
+    "h": "kocsija",
+    "e": "stone",
+    "m": "Spoken like \"kocheeja\" — stone.",
+    "i": "/kotʃijɒ/"
+  },
+  {
+    "h": "olyasmit",
+    "e": "something like that (acc.)",
+    "m": "Spoken like \"oyasmeet\".",
+    "i": "/ojɒʃmit/"
+  },
+  {
+    "h": "esélyem",
+    "e": "and",
+    "m": "Spoken like \"eséyem\" — and.",
+    "i": "/ɛʃeːjɛm/"
+  },
+  {
+    "h": "esetre",
+    "e": "and",
+    "m": "Spoken like \"esetre\" — and.",
+    "i": "/ɛʃɛtrɛ/"
+  },
+  {
+    "h": "hotelben",
+    "e": "snow",
+    "m": "Spoken like \"hotelben\" — snow.",
+    "i": "/hotɛlbɛn/"
+  },
+  {
+    "h": "nukleáris",
+    "e": "nuclear",
+    "m": "Spoken like \"nookleárees\".",
+    "i": "/nuklɛaːriʃ/"
+  },
+  {
+    "h": "megölnek",
+    "e": "still; yet",
+    "m": "Spoken like \"megölnek\" — still.",
+    "i": "/mɛɡølnɛk/"
+  },
+  {
+    "h": "istent",
+    "e": "also; too",
+    "m": "Spoken like \"eestent\" — also.",
+    "i": "/iʃtɛnt/"
+  },
+  {
+    "h": "viselkedsz",
+    "e": "you behave",
+    "m": "Spoken like \"veeselkeds\".",
+    "i": "/viʃɛlkɛds/"
+  },
+  {
+    "h": "azokra",
+    "e": "the; that",
+    "m": "Spoken like \"azokra\" — the.",
+    "i": "/ɒzokrɒ/"
+  },
+  {
+    "h": "elfogadom",
+    "e": "I accept",
+    "m": "Spoken like \"elfogadom\".",
+    "i": "/ɛlfoɡɒdom/"
+  },
+  {
+    "h": "fickóval",
+    "e": "with the guy",
+    "m": "Spoken like \"feeckóval\".",
+    "i": "/fit͡skoːvɒl/"
+  },
+  {
+    "h": "kora",
+    "e": "stone",
+    "m": "Spoken like \"kora\" — stone.",
+    "i": "/korɒ/"
+  },
+  {
+    "h": "csésze",
+    "e": "cup",
+    "m": "Spoken like \"chése\".",
+    "i": "/tʃeːsɛ/"
+  },
+  {
+    "h": "alku",
+    "e": "deal",
+    "m": "Spoken like \"alkoo\".",
+    "i": "/ɒlku/"
+  },
+  {
+    "h": "délre",
+    "e": "to the south",
+    "m": "Spoken like \"délre\".",
+    "i": "/deːlrɛ/"
+  },
+  {
+    "h": "vegyék",
+    "e": "let them take",
+    "m": "Spoken like \"vedyék\".",
+    "i": "/vɛɟeːk/"
+  },
+  {
+    "h": "halljam",
+    "e": "if",
+    "m": "Spoken like \"halljam\" — if.",
+    "i": "/hɒlːjɒm/"
+  },
+  {
+    "h": "kérdezi",
+    "e": "he/she asks",
+    "m": "Spoken like \"kérdezee\".",
+    "i": "/keːrdɛzi/"
+  },
+  {
+    "h": "befejeztem",
+    "e": "into; in",
+    "m": "Spoken like \"befejeztem\" — into.",
+    "i": "/bɛfɛjɛztɛm/"
+  },
+  {
+    "h": "abbahagyni",
+    "e": "to stop; to quit",
+    "m": "Spoken like \"abbahadynee\".",
+    "i": "/ɒbːɒhɒɟni/"
+  },
+  {
+    "h": "megbízható",
+    "e": "still; yet",
+    "m": "Spoken like \"megbízható\" — still.",
+    "i": "/mɛɡbiːzhɒtoː/"
+  },
+  {
+    "h": "bőr",
+    "e": "skin",
+    "m": "Spoken like \"bőr\".",
+    "i": "/bøːr/"
+  },
+  {
+    "h": "nézve",
+    "e": "looking at",
+    "m": "Spoken like \"nézve\".",
+    "i": "/neːzvɛ/"
+  },
+  {
+    "h": "felelősséget",
+    "e": "up",
+    "m": "Spoken like \"felelősséget\" — up.",
+    "i": "/fɛlɛløːʃːeːɡɛt/"
+  },
+  {
+    "h": "megtörténni",
+    "e": "still; yet",
+    "m": "Spoken like \"megtörténnee\" — still.",
+    "i": "/mɛɡtørteːnːi/"
+  },
+  {
+    "h": "törni",
+    "e": "to break",
+    "m": "Spoken like \"törnee\".",
+    "i": "/tørni/"
+  },
+  {
+    "h": "megpróbálok",
+    "e": "still; yet",
+    "m": "Spoken like \"megpróbálok\" — still.",
+    "i": "/mɛɡproːbaːlok/"
+  },
+  {
+    "h": "gondolkodom",
+    "e": "I think",
+    "m": "Spoken like \"gondolkodom\".",
+    "i": "/ɡondolkodom/"
+  },
+  {
+    "h": "kapu",
+    "e": "gate",
+    "m": "Spoken like \"kapoo\".",
+    "i": "/kɒpu/"
+  },
+  {
+    "h": "gyerekekkel",
+    "e": "child",
+    "m": "Spoken like \"dyerekekkel\" — child.",
+    "i": "/ɟɛrɛkɛkːɛl/"
+  },
+  {
+    "h": "ezekben",
+    "e": "this",
+    "m": "Spoken like \"ezekben\" — this.",
+    "i": "/ɛzɛkbɛn/"
+  },
+  {
+    "h": "koncentrálj",
+    "e": "stone",
+    "m": "Spoken like \"koncentrálj\" — stone.",
+    "i": "/kont͡sɛntraːlj/"
+  },
+  {
+    "h": "fiatalok",
+    "e": "young",
+    "m": "Spoken like \"feeatalok\" — young.",
+    "i": "/fiɒtɒlok/"
+  },
+  {
+    "h": "hetet",
+    "e": "week; seven",
+    "m": "Spoken like \"hetet\" — week.",
+    "i": "/hɛtɛt/"
+  },
+  {
+    "h": "közülünk",
+    "e": "among us",
+    "m": "Spoken like \"közülünk\".",
+    "i": "/køzylynk/"
+  },
+  {
+    "h": "képen",
+    "e": "on the picture",
+    "m": "Spoken like \"képen\".",
+    "i": "/keːpɛn/"
+  },
+  {
+    "h": "magáért",
+    "e": "today",
+    "m": "Spoken like \"magáért\" — today.",
+    "i": "/mɒɡaːeːrt/"
+  },
+  {
+    "h": "per",
+    "e": "lawsuit; minute",
+    "m": "Spoken like \"per\".",
+    "i": "/pɛr/"
+  },
+  {
+    "h": "kezdet",
+    "e": "hand",
+    "m": "Spoken like \"kezdet\" — hand.",
+    "i": "/kɛzdɛt/"
+  },
+  {
+    "h": "evett",
+    "e": "year",
+    "m": "Spoken like \"evett\" — year.",
+    "i": "/ɛvɛtː/"
+  },
+  {
+    "h": "faj",
+    "e": "tree",
+    "m": "Spoken like \"faj\" — tree.",
+    "i": "/fɒj/"
+  },
+  {
+    "h": "vonalban",
+    "e": "line",
+    "m": "Spoken like \"vonalban\" — line.",
+    "i": "/vonɒlbɒn/"
+  },
+  {
+    "h": "eljössz",
+    "e": "you'll come",
+    "m": "Spoken like \"eljöss\".",
+    "i": "/ɛljøsː/"
+  },
+  {
+    "h": "áh",
+    "e": "ah",
+    "m": "Spoken like \"áh\".",
+    "i": "/aːh/"
+  },
+  {
+    "h": "állapota",
+    "e": "his/her condition",
+    "m": "Spoken like \"állapota\".",
+    "i": "/aːlːɒpotɒ/"
+  },
+  {
+    "h": "felesleges",
+    "e": "up",
+    "m": "Spoken like \"felesleges\" — up.",
+    "i": "/fɛlɛʃlɛɡɛʃ/"
+  },
+  {
+    "h": "sír",
+    "e": "he/she cries; grave",
+    "m": "Spoken like \"sír\".",
+    "i": "/ʃiːr/"
+  },
+  {
+    "h": "gépen",
+    "e": "on the machine",
+    "m": "Spoken like \"gépen\".",
+    "i": "/ɡeːpɛn/"
+  },
+  {
+    "h": "dolgokra",
+    "e": "to things",
+    "m": "Spoken like \"dolgokra\".",
+    "i": "/dolɡokrɒ/"
+  },
+  {
+    "h": "szerződést",
+    "e": "contract (acc.)",
+    "m": "Spoken like \"serződést\".",
+    "i": "/sɛrzøːdeːʃt/"
+  },
+  {
+    "h": "rájönni",
+    "e": "to realize",
+    "m": "Spoken like \"rájönnee\".",
+    "i": "/raːjønːi/"
+  },
+  {
+    "h": "egyfolytában",
+    "e": "one; a",
+    "m": "Spoken like \"edyfoytában\" — one.",
+    "i": "/ɛɟfojtaːbɒn/"
+  },
+  {
+    "h": "mindannyiunkat",
+    "e": "what; we",
+    "m": "Spoken like \"meendannyeeoonkat\" — what.",
+    "i": "/mindɒɲːiunkɒt/"
+  },
+  {
+    "h": "éltek",
+    "e": "they lived",
+    "m": "Spoken like \"éltek\".",
+    "i": "/eːltɛk/"
+  },
+  {
+    "h": "közöd",
+    "e": "your business (none of)",
+    "m": "Spoken like \"közöd\".",
+    "i": "/køzød/"
+  },
+  {
+    "h": "nagyapa",
+    "e": "big",
+    "m": "Spoken like \"nadyapa\" — big.",
+    "i": "/nɒɟɒpɒ/"
+  },
+  {
+    "h": "ken",
+    "e": "smear; to know (slang)",
+    "m": "Spoken like \"ken\".",
+    "i": "/kɛn/"
+  },
+  {
+    "h": "gyorsabb",
+    "e": "fast",
+    "m": "Spoken like \"dyorsabb\" — fast.",
+    "i": "/ɟorʃɒbː/"
+  },
+  {
+    "h": "idegenek",
+    "e": "strangers",
+    "m": "Spoken like \"eedegenek\".",
+    "i": "/idɛɡɛnɛk/"
+  },
+  {
+    "h": "gondolnak",
+    "e": "they think",
+    "m": "Spoken like \"gondolnak\".",
+    "i": "/ɡondolnɒk/"
+  },
+  {
+    "h": "mutassam",
+    "e": "let me show",
+    "m": "Spoken like \"mootassam\".",
+    "i": "/mutɒʃːɒm/"
+  },
+  {
+    "h": "eszébe",
+    "e": "and",
+    "m": "Spoken like \"esébe\" — and.",
+    "i": "/ɛseːbɛ/"
+  },
+  {
+    "h": "vesznek",
+    "e": "buys; takes",
+    "m": "Spoken like \"vesnek\" — buys.",
+    "i": "/vɛsnɛk/"
+  },
+  {
+    "h": "tudnunk",
+    "e": "knows; can",
+    "m": "Spoken like \"toodnoonk\" — knows.",
+    "i": "/tudnunk/"
+  },
+  {
+    "h": "nemi",
+    "e": "no; not",
+    "m": "Spoken like \"nemee\" — no.",
+    "i": "/nɛmi/"
+  },
+  {
+    "h": "józan",
+    "e": "sober",
+    "m": "Spoken like \"józan\".",
+    "i": "/joːzɒn/"
+  },
+  {
+    "h": "fest",
+    "e": "paints",
+    "m": "Spoken like \"fest\".",
+    "i": "/fɛʃt/"
+  },
+  {
+    "h": "ritkán",
+    "e": "rarely",
+    "m": "Spoken like \"reetkán\".",
+    "i": "/ritkaːn/"
+  },
+  {
+    "h": "beszéljük",
+    "e": "into; in",
+    "m": "Spoken like \"beséljük\" — into.",
+    "i": "/bɛseːljyk/"
+  },
+  {
+    "h": "vízben",
+    "e": "in water",
+    "m": "Spoken like \"vízben\".",
+    "i": "/viːzbɛn/"
+  },
+  {
+    "h": "tetején",
+    "e": "you (sing.)",
+    "m": "Spoken like \"tetején\" — you (sing.).",
+    "i": "/tɛtɛjeːn/"
+  },
+  {
+    "h": "csalódást",
+    "e": "disappointment (acc.)",
+    "m": "Spoken like \"chalódást\".",
+    "i": "/tʃɒloːdaːʃt/"
+  },
+  {
+    "h": "lenn",
+    "e": "down",
+    "m": "Spoken like \"lenn\" — down.",
+    "i": "/lɛnː/"
+  },
+  {
+    "h": "utazás",
+    "e": "road; way",
+    "m": "Spoken like \"ootazás\" — road.",
+    "i": "/utɒzaːʃ/"
+  },
+  {
+    "h": "megoldást",
+    "e": "still; yet",
+    "m": "Spoken like \"megoldást\" — still.",
+    "i": "/mɛɡoldaːʃt/"
+  },
+  {
+    "h": "meghalnak",
+    "e": "still; yet",
+    "m": "Spoken like \"meghalnak\" — still.",
+    "i": "/mɛɡhɒlnɒk/"
+  },
+  {
+    "h": "anyát",
+    "e": "mother (acc.)",
+    "m": "Spoken like \"anyát\".",
+    "i": "/ɒɲaːt/"
+  },
+  {
+    "h": "haj",
+    "e": "if",
+    "m": "Spoken like \"haj\" — if.",
+    "i": "/hɒj/"
+  },
+  {
+    "h": "részem",
+    "e": "my part",
+    "m": "Spoken like \"résem\".",
+    "i": "/reːsɛm/"
+  },
+  {
+    "h": "választásunk",
+    "e": "our choice",
+    "m": "Spoken like \"válastásoonk\".",
+    "i": "/vaːlɒstaːʃunk/"
+  },
+  {
+    "h": "találod",
+    "e": "maybe",
+    "m": "Spoken like \"találod\" — maybe.",
+    "i": "/tɒlaːlod/"
+  },
+  {
+    "h": "gazember",
+    "e": "villain",
+    "m": "Spoken like \"gazember\".",
+    "i": "/ɡɒzɛmbɛr/"
+  },
+  {
+    "h": "speciális",
+    "e": "special",
+    "m": "Spoken like \"speceeálees\".",
+    "i": "/ʃpɛt͡siaːliʃ/"
+  },
+  {
+    "h": "területen",
+    "e": "you (sing.)",
+    "m": "Spoken like \"területen\" — you (sing.).",
+    "i": "/tɛrylɛtɛn/"
+  },
+  {
+    "h": "száraz",
+    "e": "dry",
+    "m": "Spoken like \"sáraz\".",
+    "i": "/saːrɒz/"
+  },
+  {
+    "h": "fejedben",
+    "e": "head",
+    "m": "Spoken like \"fejedben\" — head.",
+    "i": "/fɛjɛdbɛn/"
+  },
+  {
+    "h": "lelépett",
+    "e": "down",
+    "m": "Spoken like \"lelépett\" — down.",
+    "i": "/lɛleːpɛtː/"
+  },
+  {
+    "h": "ragyogó",
+    "e": "shining",
+    "m": "Spoken like \"radyogó\".",
+    "i": "/rɒɟoɡoː/"
+  },
+  {
+    "h": "fasza",
+    "e": "tree",
+    "m": "Spoken like \"fasa\" — tree.",
+    "i": "/fɒsɒ/"
+  },
+  {
+    "h": "vettek",
+    "e": "they bought",
+    "m": "Spoken like \"vettek\".",
+    "i": "/vɛtːɛk/"
+  },
+  {
+    "h": "tehetnék",
+    "e": "you (sing.)",
+    "m": "Spoken like \"tehetnék\" — you (sing.).",
+    "i": "/tɛhɛtneːk/"
+  },
+  {
+    "h": "kíván",
+    "e": "wishes",
+    "m": "Spoken like \"kíván\".",
+    "i": "/kiːvaːn/"
+  },
+  {
+    "h": "oldalra",
+    "e": "to the side",
+    "m": "Spoken like \"oldalra\".",
+    "i": "/oldɒlrɒ/"
+  },
+  {
+    "h": "falu",
+    "e": "wall",
+    "m": "Spoken like \"faloo\" — wall.",
+    "i": "/fɒlu/"
+  },
+  {
+    "h": "álljatok",
+    "e": "stand (plural, imper.)",
+    "m": "Spoken like \"álljatok\".",
+    "i": "/aːlːjɒtok/"
+  },
+  {
+    "h": "meglátja",
+    "e": "still; yet",
+    "m": "Spoken like \"meglátja\" — still.",
+    "i": "/mɛɡlaːtjɒ/"
+  },
+  {
+    "h": "becsületes",
+    "e": "into; in",
+    "m": "Spoken like \"bechületes\" — into.",
+    "i": "/bɛtʃylɛtɛʃ/"
+  },
+  {
+    "h": "kaptak",
+    "e": "they got",
+    "m": "Spoken like \"kaptak\".",
+    "i": "/kɒptɒk/"
+  },
+  {
+    "h": "terveztem",
+    "e": "you (sing.)",
+    "m": "Spoken like \"terveztem\" — you (sing.).",
+    "i": "/tɛrvɛztɛm/"
+  },
+  {
+    "h": "visszahívlak",
+    "e": "I'll call you back",
+    "m": "Spoken like \"veessahívlak\".",
+    "i": "/visːɒhiːvlɒk/"
+  },
+  {
+    "h": "oldani",
+    "e": "to solve",
+    "m": "Spoken like \"oldanee\".",
+    "i": "/oldɒni/"
+  },
+  {
+    "h": "Sue",
+    "e": "Sue",
+    "m": "Spoken like \"sooe\".",
+    "i": "/ʃuɛ/"
+  },
+  {
+    "h": "értik",
+    "e": "they understand",
+    "m": "Spoken like \"érteek\".",
+    "i": "/eːrtik/"
+  },
+  {
+    "h": "vásárolni",
+    "e": "to shop",
+    "m": "Spoken like \"vásárolnee\".",
+    "i": "/vaːʃaːrolni/"
+  },
+  {
+    "h": "agya",
+    "e": "bed",
+    "m": "Spoken like \"adya\" — bed.",
+    "i": "/ɒɟɒ/"
+  },
+  {
+    "h": "hangzott",
+    "e": "if",
+    "m": "Spoken like \"hangzott\" — if.",
+    "i": "/hɒnɡzotː/"
+  },
+  {
+    "h": "játszottam",
+    "e": "I played",
+    "m": "Spoken like \"játsottam\".",
+    "i": "/jaːtsotːɒm/"
+  },
+  {
+    "h": "igazságos",
+    "e": "true",
+    "m": "Spoken like \"eegazhágos\" — true.",
+    "i": "/iɡɒʒaːɡoʃ/"
+  },
+  {
+    "h": "ezüst",
+    "e": "this",
+    "m": "Spoken like \"ezüst\" — this.",
+    "i": "/ɛzyʃt/"
+  },
+  {
+    "h": "fut",
+    "e": "grass",
+    "m": "Spoken like \"foot\" — grass.",
+    "i": "/fut/"
+  },
+  {
+    "h": "megcsináltuk",
+    "e": "still; yet",
+    "m": "Spoken like \"megcheenáltook\" — still.",
+    "i": "/mɛɡtʃinaːltuk/"
+  },
+  {
+    "h": "megtalálják",
+    "e": "still; yet",
+    "m": "Spoken like \"megtalálják\" — still.",
+    "i": "/mɛɡtɒlaːljaːk/"
+  },
+  {
+    "h": "civil",
+    "e": "civilian",
+    "m": "Spoken like \"ceeveel\".",
+    "i": "/t͡sivil/"
+  },
+  {
+    "h": "törött",
+    "e": "broken",
+    "m": "Spoken like \"törött\".",
+    "i": "/tørøtː/"
+  },
+  {
+    "h": "hoppá",
+    "e": "snow",
+    "m": "Spoken like \"hoppá\" — snow.",
+    "i": "/hopːaː/"
+  },
+  {
+    "h": "tömeg",
+    "e": "crowd",
+    "m": "Spoken like \"tömeg\".",
+    "i": "/tømɛɡ/"
+  },
+  {
+    "h": "római",
+    "e": "Roman",
+    "m": "Spoken like \"rómaee\".",
+    "i": "/roːmɒi/"
+  },
+  {
+    "h": "legközelebbi",
+    "e": "down",
+    "m": "Spoken like \"legközelebbee\" — down.",
+    "i": "/lɛɡkøzɛlɛbːi/"
+  },
+  {
+    "h": "elfogyott",
+    "e": "ran out",
+    "m": "Spoken like \"elfodyott\".",
+    "i": "/ɛlfoɟotː/"
+  },
+  {
+    "h": "egyiket",
+    "e": "one; a",
+    "m": "Spoken like \"edyeeket\" — one.",
+    "i": "/ɛɟikɛt/"
+  },
+  {
+    "h": "kérdezze",
+    "e": "let him/her ask",
+    "m": "Spoken like \"kérdezze\".",
+    "i": "/keːrdɛzːɛ/"
+  },
+  {
+    "h": "megteszed",
+    "e": "still; yet",
+    "m": "Spoken like \"megtesed\" — still.",
+    "i": "/mɛɡtɛsɛd/"
+  },
+  {
+    "h": "válaszol",
+    "e": "he/she answers",
+    "m": "Spoken like \"válasol\".",
+    "i": "/vaːlɒsol/"
+  },
+  {
+    "h": "nyomozást",
+    "e": "investigation (acc.)",
+    "m": "Spoken like \"nyomozást\".",
+    "i": "/ɲomozaːʃt/"
+  },
+  {
+    "h": "találkozik",
+    "e": "maybe",
+    "m": "Spoken like \"találkozeek\" — maybe.",
+    "i": "/tɒlaːlkozik/"
+  },
+  {
+    "h": "elveszíteni",
+    "e": "to lose",
+    "m": "Spoken like \"elvesítenee\".",
+    "i": "/ɛlvɛsiːtɛni/"
+  },
+  {
+    "h": "száját",
+    "e": "his/her mouth (acc.)",
+    "m": "Spoken like \"sáját\".",
+    "i": "/saːjaːt/"
+  },
+  {
+    "h": "végtelen",
+    "e": "endless",
+    "m": "Spoken like \"végtelen\".",
+    "i": "/veːɡtɛlɛn/"
+  },
+  {
+    "h": "gyógyszer",
+    "e": "medicine",
+    "m": "Spoken like \"dyódyser\".",
+    "i": "/ɟoːɟsɛr/"
+  },
+  {
+    "h": "csillagok",
+    "e": "star",
+    "m": "Spoken like \"cheellagok\" — star.",
+    "i": "/tʃilːɒɡok/"
+  },
+  {
+    "h": "jönnie",
+    "e": "he/she must come",
+    "m": "Spoken like \"jönneee\".",
+    "i": "/jønːiɛ/"
+  },
+  {
+    "h": "válaszoljon",
+    "e": "let him/her answer",
+    "m": "Spoken like \"válasoljon\".",
+    "i": "/vaːlɒsoljon/"
+  },
+  {
+    "h": "igyekszem",
+    "e": "I try my best",
+    "m": "Spoken like \"eedyeksem\".",
+    "i": "/iɟɛksɛm/"
+  },
+  {
+    "h": "lelki",
+    "e": "down",
+    "m": "Spoken like \"lelkee\" — down.",
+    "i": "/lɛlki/"
+  },
+  {
+    "h": "hatása",
+    "e": "if",
+    "m": "Spoken like \"hatása\" — if.",
+    "i": "/hɒtaːʃɒ/"
+  },
+  {
+    "h": "főnököm",
+    "e": "my boss",
+    "m": "Spoken like \"főnököm\".",
+    "i": "/føːnøkøm/"
+  },
+  {
+    "h": "bízol",
+    "e": "you trust",
+    "m": "Spoken like \"bízol\".",
+    "i": "/biːzol/"
+  },
+  {
+    "h": "szarok",
+    "e": "I don't give a shit",
+    "m": "Spoken like \"sarok\".",
+    "i": "/sɒrok/"
+  },
+  {
+    "h": "helikopter",
+    "e": "helicopter",
+    "m": "Spoken like \"heleekopter\".",
+    "i": "/hɛlikoptɛr/"
+  },
+  {
+    "h": "tegyétek",
+    "e": "you (sing.)",
+    "m": "Spoken like \"tedyétek\" — you (sing.).",
+    "i": "/tɛɟeːtɛk/"
+  },
+  {
+    "h": "adjak",
+    "e": "gives",
+    "m": "Spoken like \"adjak\" — gives.",
+    "i": "/ɒdjɒk/"
+  },
+  {
+    "h": "helyettes",
+    "e": "instead of",
+    "m": "Spoken like \"heyettes\" — instead of.",
+    "i": "/hɛjɛtːɛʃ/"
+  },
+  {
+    "h": "tea",
+    "e": "you (sing.)",
+    "m": "Spoken like \"tea\" — you (sing.).",
+    "i": "/tɛɒ/"
+  },
+  {
+    "h": "szóra",
+    "e": "to talk",
+    "m": "Spoken like \"sóra\".",
+    "i": "/soːrɒ/"
+  },
+  {
+    "h": "mondaná",
+    "e": "says",
+    "m": "Spoken like \"mondaná\" — says.",
+    "i": "/mondɒnaː/"
+  },
+  {
+    "h": "története",
+    "e": "its story",
+    "m": "Spoken like \"története\".",
+    "i": "/tørteːnɛtɛ/"
+  },
+  {
+    "h": "seb",
+    "e": "wound",
+    "m": "Spoken like \"seb\".",
+    "i": "/ʃɛb/"
+  },
+  {
+    "h": "okozni",
+    "e": "to cause",
+    "m": "Spoken like \"okoznee\".",
+    "i": "/okozni/"
+  },
+  {
+    "h": "üsd",
+    "e": "hit (imperative)",
+    "m": "Spoken like \"üsd\".",
+    "i": "/yʃd/"
+  },
+  {
+    "h": "ivott",
+    "e": "he/she drank",
+    "m": "Spoken like \"eevott\".",
+    "i": "/ivotː/"
+  },
+  {
+    "h": "lyuk",
+    "e": "hole",
+    "m": "Spoken like \"yook\".",
+    "i": "/juk/"
+  },
+  {
+    "h": "megengedi",
+    "e": "still; yet",
+    "m": "Spoken like \"megengedee\" — still.",
+    "i": "/mɛɡɛnɡɛdi/"
+  },
+  {
+    "h": "pénzre",
+    "e": "for money",
+    "m": "Spoken like \"pénzre\".",
+    "i": "/peːnzrɛ/"
+  },
+  {
+    "h": "bármely",
+    "e": "any",
+    "m": "Spoken like \"bármey\".",
+    "i": "/baːrmɛj/"
+  },
+  {
+    "h": "drogot",
+    "e": "drug (acc.)",
+    "m": "Spoken like \"drogot\".",
+    "i": "/droɡot/"
+  },
+  {
+    "h": "tetszene",
+    "e": "you (sing.)",
+    "m": "Spoken like \"tetsene\" — you (sing.).",
+    "i": "/tɛtsɛnɛ/"
+  },
+  {
+    "h": "részvétem",
+    "e": "my condolences",
+    "m": "Spoken like \"résvétem\".",
+    "i": "/reːsveːtɛm/"
+  },
+  {
+    "h": "megérted",
+    "e": "still; yet",
+    "m": "Spoken like \"megérted\" — still.",
+    "i": "/mɛɡeːrtɛd/"
+  },
+  {
+    "h": "választotta",
+    "e": "he/she chose",
+    "m": "Spoken like \"válastotta\".",
+    "i": "/vaːlɒstotːɒ/"
+  },
+  {
+    "h": "zavarja",
+    "e": "bothers him/her",
+    "m": "Spoken like \"zavarja\".",
+    "i": "/zɒvɒrjɒ/"
+  },
+  {
+    "h": "önért",
+    "e": "for you (formal)",
+    "m": "Spoken like \"önért\".",
+    "i": "/øneːrt/"
+  },
+  {
+    "h": "négyszemközt",
+    "e": "face to face",
+    "m": "Spoken like \"nédysemközt\".",
+    "i": "/neːɟsɛmkøzt/"
+  },
+  {
+    "h": "játszanak",
+    "e": "they play",
+    "m": "Spoken like \"játsanak\".",
+    "i": "/jaːtsɒnɒk/"
+  },
+  {
+    "h": "vesztes",
+    "e": "buys; takes",
+    "m": "Spoken like \"vestes\" — buys.",
+    "i": "/vɛstɛʃ/"
+  },
+  {
+    "h": "pokoli",
+    "e": "hellish",
+    "m": "Spoken like \"pokolee\".",
+    "i": "/pokoli/"
+  },
+  {
+    "h": "íze",
+    "e": "its taste",
+    "m": "Spoken like \"íze\".",
+    "i": "/iːzɛ/"
+  },
+  {
+    "h": "királya",
+    "e": "who; out",
+    "m": "Spoken like \"keeráya\" — who.",
+    "i": "/kiraːjɒ/"
+  },
+  {
+    "h": "szövetség",
+    "e": "alliance; federation",
+    "m": "Spoken like \"sövetség\".",
+    "i": "/søvɛtʃeːɡ/"
+  },
+  {
+    "h": "kimegyek",
+    "e": "who; out",
+    "m": "Spoken like \"keemedyek\" — who.",
+    "i": "/kimɛɟɛk/"
+  },
+  {
+    "h": "megkérdeztem",
+    "e": "still; yet",
+    "m": "Spoken like \"megkérdeztem\" — still.",
+    "i": "/mɛɡkeːrdɛztɛm/"
+  },
+  {
+    "h": "égnek",
+    "e": "they burn",
+    "m": "Spoken like \"égnek\".",
+    "i": "/eːɡnɛk/"
+  },
+  {
+    "h": "megoldani",
+    "e": "still; yet",
+    "m": "Spoken like \"megoldanee\" — still.",
+    "i": "/mɛɡoldɒni/"
+  },
+  {
+    "h": "one",
+    "e": "one",
+    "m": "Spoken like \"one\".",
+    "i": "/onɛ/"
+  },
+  {
+    "h": "semmivel",
+    "e": "neither; nor",
+    "m": "Spoken like \"semmeevel\" — neither.",
+    "i": "/ʃɛmːivɛl/"
+  },
+  {
+    "h": "tutira",
+    "e": "for sure",
+    "m": "Spoken like \"tooteera\".",
+    "i": "/tutirɒ/"
+  },
+  {
+    "h": "sírni",
+    "e": "to cry",
+    "m": "Spoken like \"sírnee\".",
+    "i": "/ʃiːrni/"
+  },
+  {
+    "h": "kedvellek",
+    "e": "I like you",
+    "m": "Spoken like \"kedvellek\".",
+    "i": "/kɛdvɛlːɛk/"
+  },
+  {
+    "h": "németek",
+    "e": "Germans",
+    "m": "Spoken like \"németek\".",
+    "i": "/neːmɛtɛk/"
+  },
+  {
+    "h": "mindennap",
+    "e": "what; we",
+    "m": "Spoken like \"meendennap\" — what.",
+    "i": "/mindɛnːɒp/"
+  },
+  {
+    "h": "hagysz",
+    "e": "if",
+    "m": "Spoken like \"hadys\" — if.",
+    "i": "/hɒɟs/"
+  },
+  {
+    "h": "vágni",
+    "e": "to cut",
+    "m": "Spoken like \"vágnee\".",
+    "i": "/vaːɡni/"
+  },
+  {
+    "h": "jelentős",
+    "e": "significant",
+    "m": "Spoken like \"jelentős\".",
+    "i": "/jɛlɛntøːʃ/"
+  },
+  {
+    "h": "hallgatom",
+    "e": "if",
+    "m": "Spoken like \"hallgatom\" — if.",
+    "i": "/hɒlːɡɒtom/"
+  },
+  {
+    "h": "hazafelé",
+    "e": "if",
+    "m": "Spoken like \"hazafelé\" — if.",
+    "i": "/hɒzɒfɛleː/"
+  },
+  {
+    "h": "dobozt",
+    "e": "box (acc.)",
+    "m": "Spoken like \"dobozt\".",
+    "i": "/dobozt/"
+  },
+  {
+    "h": "szoros",
+    "e": "word",
+    "m": "Spoken like \"soros\" — word.",
+    "i": "/soroʃ/"
+  },
+  {
+    "h": "részben",
+    "e": "partly",
+    "m": "Spoken like \"résben\".",
+    "i": "/reːsbɛn/"
+  },
+  {
+    "h": "figyelmét",
+    "e": "his/her attention (acc.)",
+    "m": "Spoken like \"feedyelmét\".",
+    "i": "/fiɟɛlmeːt/"
+  },
+  {
+    "h": "használtam",
+    "e": "if",
+    "m": "Spoken like \"hasnáltam\" — if.",
+    "i": "/hɒsnaːltɒm/"
+  },
+  {
+    "h": "történnek",
+    "e": "they happen",
+    "m": "Spoken like \"történnek\".",
+    "i": "/tørteːnːɛk/"
+  },
+  {
+    "h": "egyenes",
+    "e": "one; a",
+    "m": "Spoken like \"edyenes\" — one.",
+    "i": "/ɛɟɛnɛʃ/"
+  },
+  {
+    "h": "megtennéd",
+    "e": "still; yet",
+    "m": "Spoken like \"megtennéd\" — still.",
+    "i": "/mɛɡtɛnːeːd/"
+  },
+  {
+    "h": "milliárd",
+    "e": "what; we",
+    "m": "Spoken like \"meelleeárd\" — what.",
+    "i": "/milːiaːrd/"
+  },
+  {
+    "h": "hagytál",
+    "e": "if",
+    "m": "Spoken like \"hadytál\" — if.",
+    "i": "/hɒɟtaːl/"
+  },
+  {
+    "h": "dologban",
+    "e": "in a thing",
+    "m": "Spoken like \"dologban\".",
+    "i": "/doloɡbɒn/"
+  },
+  {
+    "h": "meséltem",
+    "e": "I told",
+    "m": "Spoken like \"meséltem\".",
+    "i": "/mɛʃeːltɛm/"
+  },
+  {
+    "h": "gyilkosságot",
+    "e": "murder (acc.)",
+    "m": "Spoken like \"dyeelkosságot\".",
+    "i": "/ɟilkoʃːaːɡot/"
+  },
+  {
+    "h": "foglalt",
+    "e": "tooth",
+    "m": "Spoken like \"foglalt\" — tooth.",
+    "i": "/foɡlɒlt/"
+  },
+  {
+    "h": "csapatban",
+    "e": "in the team",
+    "m": "Spoken like \"chapatban\".",
+    "i": "/tʃɒpɒtbɒn/"
+  },
+  {
+    "h": "elhagyni",
+    "e": "to leave (behind)",
+    "m": "Spoken like \"elhadynee\".",
+    "i": "/ɛlhɒɟni/"
+  },
+  {
+    "h": "vettük",
+    "e": "we took",
+    "m": "Spoken like \"vettük\".",
+    "i": "/vɛtːyk/"
+  },
+  {
+    "h": "kettesben",
+    "e": "the two of us",
+    "m": "Spoken like \"kettesben\".",
+    "i": "/kɛtːɛʃbɛn/"
+  },
+  {
+    "h": "érsz",
+    "e": "you reach",
+    "m": "Spoken like \"érs\".",
+    "i": "/eːrs/"
+  },
+  {
+    "h": "kedve",
+    "e": "his/her mood",
+    "m": "Spoken like \"kedve\".",
+    "i": "/kɛdvɛ/"
+  },
+  {
+    "h": "intézni",
+    "e": "to arrange",
+    "m": "Spoken like \"eentéznee\".",
+    "i": "/inteːzni/"
+  },
+  {
+    "h": "kard",
+    "e": "arm",
+    "m": "Spoken like \"kard\" — arm.",
+    "i": "/kɒrd/"
+  },
+  {
+    "h": "mindenképp",
+    "e": "what; we",
+    "m": "Spoken like \"meendenképp\" — what.",
+    "i": "/mindɛnkeːpː/"
+  },
+  {
+    "h": "font",
+    "e": "pound",
+    "m": "Spoken like \"font\".",
+    "i": "/font/"
+  },
+  {
+    "h": "tévedek",
+    "e": "I am wrong",
+    "m": "Spoken like \"tévedek\".",
+    "i": "/teːvɛdɛk/"
+  },
+  {
+    "h": "próbálni",
+    "e": "to try",
+    "m": "Spoken like \"próbálnee\".",
+    "i": "/proːbaːlni/"
+  },
+  {
+    "h": "dolgokról",
+    "e": "about things",
+    "m": "Spoken like \"dolgokról\".",
+    "i": "/dolɡokroːl/"
+  },
+  {
+    "h": "megjelent",
+    "e": "still; yet",
+    "m": "Spoken like \"megjelent\" — still.",
+    "i": "/mɛɡjɛlɛnt/"
+  },
+  {
+    "h": "utcára",
+    "e": "road; way",
+    "m": "Spoken like \"ootcára\" — road.",
+    "i": "/utt͡saːrɒ/"
+  },
+  {
+    "h": "sarkon",
+    "e": "on the corner",
+    "m": "Spoken like \"sarkon\".",
+    "i": "/ʃɒrkon/"
+  },
+  {
+    "h": "másokat",
+    "e": "others (acc.)",
+    "m": "Spoken like \"másokat\".",
+    "i": "/maːʃokɒt/"
+  },
+  {
+    "h": "elbűvölő",
+    "e": "charming",
+    "m": "Spoken like \"elbűvölő\".",
+    "i": "/ɛlbyːvøløː/"
+  },
+  {
+    "h": "szerencsém",
+    "e": "my luck",
+    "m": "Spoken like \"serenchém\".",
+    "i": "/sɛrɛntʃeːm/"
+  },
+  {
+    "h": "kettőnk",
+    "e": "the two of us",
+    "m": "Spoken like \"kettőnk\".",
+    "i": "/kɛtːøːnk/"
+  },
+  {
+    "h": "kérnem",
+    "e": "I must ask",
+    "m": "Spoken like \"kérnem\".",
+    "i": "/keːrnɛm/"
+  },
+  {
+    "h": "Palmer",
+    "e": "Palmer",
+    "m": "Spoken like \"palmer\".",
+    "i": "/pɒlmɛr/"
+  },
+  {
+    "h": "szendvicset",
+    "e": "sandwich (acc.)",
+    "m": "Spoken like \"sendveechet\".",
+    "i": "/sɛndvitʃɛt/"
+  },
+  {
+    "h": "szenved",
+    "e": "suffers",
+    "m": "Spoken like \"senved\".",
+    "i": "/sɛnvɛd/"
+  },
+  {
+    "h": "ravaszt",
+    "e": "trigger (acc.)",
+    "m": "Spoken like \"ravast\".",
+    "i": "/rɒvɒst/"
+  },
+  {
+    "h": "megérti",
+    "e": "still; yet",
+    "m": "Spoken like \"megértee\" — still.",
+    "i": "/mɛɡeːrti/"
+  },
+  {
+    "h": "akartuk",
+    "e": "we wanted it",
+    "m": "Spoken like \"akartook\".",
+    "i": "/ɒkɒrtuk/"
+  },
+  {
+    "h": "egyetemi",
+    "e": "one; a",
+    "m": "Spoken like \"edyetemee\" — one.",
+    "i": "/ɛɟɛtɛmi/"
+  },
+  {
+    "h": "tehettem",
+    "e": "you (sing.)",
+    "m": "Spoken like \"tehettem\" — you (sing.).",
+    "i": "/tɛhɛtːɛm/"
+  },
+  {
+    "h": "beszédet",
+    "e": "into; in",
+    "m": "Spoken like \"besédet\" — into.",
+    "i": "/bɛseːdɛt/"
+  },
+  {
+    "h": "egyedülálló",
+    "e": "one; a",
+    "m": "Spoken like \"edyedülálló\" — one.",
+    "i": "/ɛɟɛdylaːlːoː/"
+  },
+  {
+    "h": "lelőtte",
+    "e": "down",
+    "m": "Spoken like \"lelőtte\" — down.",
+    "i": "/lɛløːtːɛ/"
+  },
+  {
+    "h": "szint",
+    "e": "color",
+    "m": "Spoken like \"seent\" — color.",
+    "i": "/sint/"
+  },
+  {
+    "h": "szülők",
+    "e": "parents",
+    "m": "Spoken like \"sülők\".",
+    "i": "/syløːk/"
+  },
+  {
+    "h": "tudtunk",
+    "e": "knows; can",
+    "m": "Spoken like \"toodtoonk\" — knows.",
+    "i": "/tudtunk/"
+  },
+  {
+    "h": "modell",
+    "e": "model",
+    "m": "Spoken like \"modell\".",
+    "i": "/modɛlː/"
+  },
+  {
+    "h": "húzni",
+    "e": "to pull",
+    "m": "Spoken like \"húznee\".",
+    "i": "/huːzni/"
+  },
+  {
+    "h": "görög",
+    "e": "Greek",
+    "m": "Spoken like \"görög\".",
+    "i": "/ɡørøɡ/"
+  },
+  {
+    "h": "hülyeséget",
+    "e": "nonsense (acc.)",
+    "m": "Spoken like \"hüyeséget\".",
+    "i": "/hyjɛʃeːɡɛt/"
+  },
+  {
+    "h": "férjét",
+    "e": "her husband (acc.)",
+    "m": "Spoken like \"férjét\".",
+    "i": "/feːrjeːt/"
+  },
+  {
+    "h": "szerepel",
+    "e": "appears; stars",
+    "m": "Spoken like \"serepel\".",
+    "i": "/sɛrɛpɛl/"
+  },
+  {
+    "h": "engedhetem",
+    "e": "I",
+    "m": "Spoken like \"engedhetem\" — I.",
+    "i": "/ɛnɡɛdhɛtɛm/"
+  },
+  {
+    "h": "találják",
+    "e": "maybe",
+    "m": "Spoken like \"találják\" — maybe.",
+    "i": "/tɒlaːljaːk/"
+  },
+  {
+    "h": "harminc",
+    "e": "if",
+    "m": "Spoken like \"harmeenc\" — if.",
+    "i": "/hɒrmint͡s/"
+  },
+  {
+    "h": "amilyennek",
+    "e": "as it is",
+    "m": "Spoken like \"ameeyennek\".",
+    "i": "/ɒmijɛnːɛk/"
+  },
+  {
+    "h": "magyarázni",
+    "e": "today",
+    "m": "Spoken like \"madyaráznee\" — today.",
+    "i": "/mɒɟɒraːzni/"
+  },
+  {
+    "h": "követi",
+    "e": "he/she follows",
+    "m": "Spoken like \"követee\".",
+    "i": "/køvɛti/"
+  },
+  {
+    "h": "vitt",
+    "e": "he/she took",
+    "m": "Spoken like \"veett\".",
+    "i": "/vitː/"
+  },
+  {
+    "h": "elkapta",
+    "e": "he/she caught",
+    "m": "Spoken like \"elkapta\".",
+    "i": "/ɛlkɒptɒ/"
+  },
+  {
+    "h": "sajtó",
+    "e": "cheese",
+    "m": "Spoken like \"sajtó\" — cheese.",
+    "i": "/ʃɒjtoː/"
+  },
+  {
+    "h": "utáni",
+    "e": "road; way",
+    "m": "Spoken like \"ootánee\" — road.",
+    "i": "/utaːni/"
+  },
+  {
+    "h": "állomás",
+    "e": "station",
+    "m": "Spoken like \"állomás\".",
+    "i": "/aːlːomaːʃ/"
+  },
+  {
+    "h": "héj",
+    "e": "crust; shell",
+    "m": "Spoken like \"héj\".",
+    "i": "/heːj/"
+  },
+  {
+    "h": "fejbe",
+    "e": "head",
+    "m": "Spoken like \"fejbe\" — head.",
+    "i": "/fɛjbɛ/"
+  },
+  {
+    "h": "győztes",
+    "e": "winner",
+    "m": "Spoken like \"dyőztes\".",
+    "i": "/ɟøːztɛʃ/"
+  },
+  {
+    "h": "erősítést",
+    "e": "reinforcement (acc.)",
+    "m": "Spoken like \"erősítést\".",
+    "i": "/ɛrøːʃiːteːʃt/"
+  },
+  {
+    "h": "szünet",
+    "e": "break",
+    "m": "Spoken like \"sünet\".",
+    "i": "/synɛt/"
+  },
+  {
+    "h": "hajam",
+    "e": "if",
+    "m": "Spoken like \"hajam\" — if.",
+    "i": "/hɒjɒm/"
+  },
+  {
+    "h": "helyedben",
+    "e": "in your place",
+    "m": "Spoken like \"heyedben\".",
+    "i": "/hɛjɛdbɛn/"
+  },
+  {
+    "h": "folytatni",
+    "e": "to continue",
+    "m": "Spoken like \"foytatnee\".",
+    "i": "/fojtɒtni/"
+  },
+  {
+    "h": "félreértés",
+    "e": "misunderstanding",
+    "m": "Spoken like \"félreértés\".",
+    "i": "/feːlrɛeːrteːʃ/"
+  },
+  {
+    "h": "összesen",
+    "e": "in total",
+    "m": "Spoken like \"össesen\".",
+    "i": "/øsːɛʃɛn/"
+  },
+  {
+    "h": "szoktál",
+    "e": "word",
+    "m": "Spoken like \"soktál\" — word.",
+    "i": "/soktaːl/"
+  },
+  {
+    "h": "fiúkat",
+    "e": "boys (acc.)",
+    "m": "Spoken like \"feeúkat\".",
+    "i": "/fiuːkɒt/"
+  },
+  {
+    "h": "templomban",
+    "e": "you (sing.)",
+    "m": "Spoken like \"templomban\" — you (sing.).",
+    "i": "/tɛmplombɒn/"
+  },
+  {
+    "h": "szenvedett",
+    "e": "he/she suffered",
+    "m": "Spoken like \"senvedett\".",
+    "i": "/sɛnvɛdɛtː/"
+  },
+  {
+    "h": "verni",
+    "e": "blood",
+    "m": "Spoken like \"vernee\" — blood.",
+    "i": "/vɛrni/"
+  },
+  {
+    "h": "értelemben",
+    "e": "in the sense",
+    "m": "Spoken like \"értelemben\".",
+    "i": "/eːrtɛlɛmbɛn/"
+  },
+  {
+    "h": "soká",
+    "e": "salt",
+    "m": "Spoken like \"soká\" — salt.",
+    "i": "/ʃokaː/"
+  },
+  {
+    "h": "hoztak",
+    "e": "snow",
+    "m": "Spoken like \"hoztak\" — snow.",
+    "i": "/hoztɒk/"
+  },
+  {
+    "h": "szarban",
+    "e": "in shit",
+    "m": "Spoken like \"sarban\".",
+    "i": "/sɒrbɒn/"
+  },
+  {
+    "h": "nézed",
+    "e": "you watch",
+    "m": "Spoken like \"nézed\".",
+    "i": "/neːzɛd/"
+  },
+  {
+    "h": "nézzünk",
+    "e": "let's look",
+    "m": "Spoken like \"nézzünk\".",
+    "i": "/neːzːynk/"
+  },
+  {
+    "h": "rakd",
+    "e": "put (imperative)",
+    "m": "Spoken like \"rakd\".",
+    "i": "/rɒkd/"
+  },
+  {
+    "h": "félt",
+    "e": "he/she was afraid",
+    "m": "Spoken like \"félt\".",
+    "i": "/feːlt/"
+  },
+  {
+    "h": "lakott",
+    "e": "he/she lived",
+    "m": "Spoken like \"lakott\".",
+    "i": "/lɒkotː/"
+  },
+  {
+    "h": "motor",
+    "e": "motorcycle",
+    "m": "Spoken like \"motor\".",
+    "i": "/motor/"
+  },
+  {
+    "h": "élőben",
+    "e": "live (broadcast)",
+    "m": "Spoken like \"élőben\".",
+    "i": "/eːløːbɛn/"
+  },
+  {
+    "h": "magunknak",
+    "e": "today",
+    "m": "Spoken like \"magoonknak\" — today.",
+    "i": "/mɒɡunknɒk/"
+  },
+  {
+    "h": "meztelenül",
+    "e": "naked",
+    "m": "Spoken like \"meztelenül\".",
+    "i": "/mɛztɛlɛnyl/"
+  },
+  {
+    "h": "varázsló",
+    "e": "waits; castle",
+    "m": "Spoken like \"varázhló\" — waits.",
+    "i": "/vɒraːʒloː/"
+  },
+  {
+    "h": "irányítást",
+    "e": "writes",
+    "m": "Spoken like \"eerányítást\" — writes.",
+    "i": "/iraːɲiːtaːʃt/"
+  },
+  {
+    "h": "vinnünk",
+    "e": "we must take",
+    "m": "Spoken like \"veennünk\".",
+    "i": "/vinːynk/"
+  },
+  {
+    "h": "bírod",
+    "e": "you can stand it",
+    "m": "Spoken like \"bírod\".",
+    "i": "/biːrod/"
+  },
+  {
+    "h": "problémája",
+    "e": "his/her problem",
+    "m": "Spoken like \"problémája\".",
+    "i": "/probleːmaːjɒ/"
+  },
+  {
+    "h": "számok",
+    "e": "numbers",
+    "m": "Spoken like \"sámok\".",
+    "i": "/saːmok/"
+  },
+  {
+    "h": "meglátom",
+    "e": "still; yet",
+    "m": "Spoken like \"meglátom\" — still.",
+    "i": "/mɛɡlaːtom/"
+  },
+  {
+    "h": "gyalog",
+    "e": "on foot",
+    "m": "Spoken like \"dyalog\".",
+    "i": "/ɟɒloɡ/"
+  },
+  {
+    "h": "gyereknek",
+    "e": "child",
+    "m": "Spoken like \"dyereknek\" — child.",
+    "i": "/ɟɛrɛknɛk/"
+  },
+  {
+    "h": "apámnak",
+    "e": "to my father",
+    "m": "Spoken like \"apámnak\".",
+    "i": "/ɒpaːmnɒk/"
+  },
+  {
+    "h": "tanult",
+    "e": "studies; learns",
+    "m": "Spoken like \"tanoolt\" — studies.",
+    "i": "/tɒnult/"
+  },
+  {
+    "h": "tejet",
+    "e": "you (sing.)",
+    "m": "Spoken like \"tejet\" — you (sing.).",
+    "i": "/tɛjɛt/"
+  },
+  {
+    "h": "dagadt",
+    "e": "fat; swollen",
+    "m": "Spoken like \"dagadt\".",
+    "i": "/dɒɡɒdt/"
+  },
+  {
+    "h": "nyúl",
+    "e": "rabbit; reaches",
+    "m": "Spoken like \"nyúl\".",
+    "i": "/ɲuːl/"
+  },
+  {
+    "h": "lassíts",
+    "e": "slow down (imperative)",
+    "m": "Spoken like \"lassíts\".",
+    "i": "/lɒʃːiːtʃ/"
+  },
+  {
+    "h": "testem",
+    "e": "you (sing.)",
+    "m": "Spoken like \"testem\" — you (sing.).",
+    "i": "/tɛʃtɛm/"
+  },
+  {
+    "h": "segítenek",
+    "e": "they help",
+    "m": "Spoken like \"segítenek\".",
+    "i": "/ʃɛɡiːtɛnɛk/"
+  },
+  {
+    "h": "maradjak",
+    "e": "already",
+    "m": "Spoken like \"maradjak\" — already.",
+    "i": "/mɒrɒdjɒk/"
+  },
+  {
+    "h": "bosszú",
+    "e": "revenge",
+    "m": "Spoken like \"bossú\".",
+    "i": "/bosːuː/"
+  },
+  {
+    "h": "öngyilkosság",
+    "e": "suicide",
+    "m": "Spoken like \"öndyeelkosság\".",
+    "i": "/ønɟilkoʃːaːɡ/"
+  },
+  {
+    "h": "hallgat",
+    "e": "if",
+    "m": "Spoken like \"hallgat\" — if.",
+    "i": "/hɒlːɡɒt/"
+  },
+  {
+    "h": "bárkinek",
+    "e": "to anyone",
+    "m": "Spoken like \"bárkeenek\".",
+    "i": "/baːrkinɛk/"
+  },
+  {
+    "h": "lelke",
+    "e": "down",
+    "m": "Spoken like \"lelke\" — down.",
+    "i": "/lɛlkɛ/"
+  },
+  {
+    "h": "évente",
+    "e": "annually",
+    "m": "Spoken like \"évente\".",
+    "i": "/eːvɛntɛ/"
+  },
+  {
+    "h": "vérzik",
+    "e": "bleeds",
+    "m": "Spoken like \"vérzeek\".",
+    "i": "/veːrzik/"
+  },
+  {
+    "h": "testvéred",
+    "e": "you (sing.)",
+    "m": "Spoken like \"testvéred\" — you (sing.).",
+    "i": "/tɛʃtveːrɛd/"
+  },
+  {
+    "h": "szerencséd",
+    "e": "your luck",
+    "m": "Spoken like \"serenchéd\".",
+    "i": "/sɛrɛntʃeːd/"
+  },
+  {
+    "h": "szarul",
+    "e": "shitty (adverbial)",
+    "m": "Spoken like \"sarool\".",
+    "i": "/sɒrul/"
+  },
+  {
+    "h": "egyesek",
+    "e": "one; a",
+    "m": "Spoken like \"edyesek\" — one.",
+    "i": "/ɛɟɛʃɛk/"
+  },
+  {
+    "h": "elfogadni",
+    "e": "to accept",
+    "m": "Spoken like \"elfogadnee\".",
+    "i": "/ɛlfoɡɒdni/"
+  },
+  {
+    "h": "alakult",
+    "e": "formed",
+    "m": "Spoken like \"alakoolt\".",
+    "i": "/ɒlɒkult/"
+  },
+  {
+    "h": "bízik",
+    "e": "he/she trusts",
+    "m": "Spoken like \"bízeek\".",
+    "i": "/biːzik/"
+  },
+  {
+    "h": "elindult",
+    "e": "he/she started off",
+    "m": "Spoken like \"eleendoolt\".",
+    "i": "/ɛlindult/"
+  },
+  {
+    "h": "hülyének",
+    "e": "stupid (dative)",
+    "m": "Spoken like \"hüyének\".",
+    "i": "/hyjeːnɛk/"
+  },
+  {
+    "h": "életünket",
+    "e": "our life (acc.)",
+    "m": "Spoken like \"életünket\".",
+    "i": "/eːlɛtynkɛt/"
+  },
+  {
+    "h": "érdekelnek",
+    "e": "interest me",
+    "m": "Spoken like \"érdekelnek\".",
+    "i": "/eːrdɛkɛlnɛk/"
+  },
+  {
+    "h": "csináltuk",
+    "e": "we did it",
+    "m": "Spoken like \"cheenáltook\".",
+    "i": "/tʃinaːltuk/"
+  },
+  {
+    "h": "emelet",
+    "e": "floor; story",
+    "m": "Spoken like \"emelet\".",
+    "i": "/ɛmɛlɛt/"
+  },
+  {
+    "h": "felfelé",
+    "e": "up",
+    "m": "Spoken like \"felfelé\" — up.",
+    "i": "/fɛlfɛleː/"
+  },
+  {
+    "h": "szoktak",
+    "e": "word",
+    "m": "Spoken like \"soktak\" — word.",
+    "i": "/soktɒk/"
+  },
+  {
+    "h": "mérget",
+    "e": "poison (acc.)",
+    "m": "Spoken like \"mérget\".",
+    "i": "/meːrɡɛt/"
+  },
+  {
+    "h": "urak",
+    "e": "gentlemen",
+    "m": "Spoken like \"oorak\".",
+    "i": "/urɒk/"
+  },
+  {
+    "h": "őrök",
+    "e": "guards",
+    "m": "Spoken like \"őrök\".",
+    "i": "/øːrøk/"
+  },
+  {
+    "h": "elérhető",
+    "e": "available",
+    "m": "Spoken like \"elérhető\".",
+    "i": "/ɛleːrhɛtøː/"
+  },
+  {
+    "h": "készített",
+    "e": "he/she made",
+    "m": "Spoken like \"késített\".",
+    "i": "/keːsiːtɛtː/"
+  },
+  {
+    "h": "szórakozást",
+    "e": "entertainment (acc.)",
+    "m": "Spoken like \"sórakozást\".",
+    "i": "/soːrɒkozaːʃt/"
+  },
+  {
+    "h": "papírt",
+    "e": "paper (acc.)",
+    "m": "Spoken like \"papírt\".",
+    "i": "/pɒpiːrt/"
+  },
+  {
+    "h": "anyának",
+    "e": "to mother",
+    "m": "Spoken like \"anyának\".",
+    "i": "/ɒɲaːnɒk/"
+  },
+  {
+    "h": "biztosak",
+    "e": "sure; certain",
+    "m": "Spoken like \"beeztosak\" — sure.",
+    "i": "/biztoʃɒk/"
+  },
+  {
+    "h": "helyem",
+    "e": "my place",
+    "m": "Spoken like \"heyem\".",
+    "i": "/hɛjɛm/"
+  },
+  {
+    "h": "eszünk",
+    "e": "and",
+    "m": "Spoken like \"esünk\" — and.",
+    "i": "/ɛsynk/"
+  },
+  {
+    "h": "gépek",
+    "e": "machines",
+    "m": "Spoken like \"gépek\".",
+    "i": "/ɡeːpɛk/"
+  },
+  {
+    "h": "mondhatod",
+    "e": "says",
+    "m": "Spoken like \"mondhatod\" — says.",
+    "i": "/mondhɒtod/"
+  },
+  {
+    "h": "lejjebb",
+    "e": "down",
+    "m": "Spoken like \"lejjebb\" — down.",
+    "i": "/lɛjːɛbː/"
+  },
+  {
+    "h": "kérdezzek",
+    "e": "should I ask",
+    "m": "Spoken like \"kérdezzek\".",
+    "i": "/keːrdɛzːɛk/"
+  },
+  {
+    "h": "leesett",
+    "e": "down",
+    "m": "Spoken like \"leesett\" — down.",
+    "i": "/lɛɛʃɛtː/"
+  },
+  {
+    "h": "kötni",
+    "e": "to tie; to knit",
+    "m": "Spoken like \"kötnee\".",
+    "i": "/køtni/"
+  },
+  {
+    "h": "megtanultam",
+    "e": "still; yet",
+    "m": "Spoken like \"megtanooltam\" — still.",
+    "i": "/mɛɡtɒnultɒm/"
+  },
+  {
+    "h": "szer",
+    "e": "device; apparatus",
+    "m": "Spoken like \"ser\".",
+    "i": "/sɛr/"
+  },
+  {
+    "h": "megoldjuk",
+    "e": "still; yet",
+    "m": "Spoken like \"megoldjook\" — still.",
+    "i": "/mɛɡoldjuk/"
+  },
+  {
+    "h": "férfinak",
+    "e": "to a man",
+    "m": "Spoken like \"férfeenak\".",
+    "i": "/feːrfinɒk/"
+  },
+  {
+    "h": "méreg",
+    "e": "poison",
+    "m": "Spoken like \"méreg\".",
+    "i": "/meːrɛɡ/"
+  },
+  {
+    "h": "időkben",
+    "e": "in times",
+    "m": "Spoken like \"eedőkben\".",
+    "i": "/idøːkbɛn/"
+  },
+  {
+    "h": "ültem",
+    "e": "I sat",
+    "m": "Spoken like \"ültem\".",
+    "i": "/yltɛm/"
+  },
+  {
+    "h": "jártak",
+    "e": "they visited",
+    "m": "Spoken like \"jártak\".",
+    "i": "/jaːrtɒk/"
+  },
+  {
+    "h": "ablak",
+    "e": "window",
+    "m": "Spoken like \"ablak\" — window.",
+    "i": "/ɒblɒk/"
+  },
+  {
+    "h": "por",
+    "e": "dust",
+    "m": "Spoken like \"por\".",
+    "i": "/por/"
+  },
+  {
+    "h": "mégse",
+    "e": "nevertheless",
+    "m": "Spoken like \"mégse\".",
+    "i": "/meːɡʃɛ/"
+  },
+  {
+    "h": "falon",
+    "e": "wall",
+    "m": "Spoken like \"falon\" — wall.",
+    "i": "/fɒlon/"
+  },
+  {
+    "h": "apát",
+    "e": "father (acc.)",
+    "m": "Spoken like \"apát\".",
+    "i": "/ɒpaːt/"
+  },
+  {
+    "h": "von",
+    "e": "pulls; draws",
+    "m": "Spoken like \"von\".",
+    "i": "/von/"
+  },
+  {
+    "h": "szerepet",
+    "e": "role (acc.)",
+    "m": "Spoken like \"serepet\".",
+    "i": "/sɛrɛpɛt/"
+  },
+  {
+    "h": "képtelenség",
+    "e": "impossibility",
+    "m": "Spoken like \"képtelenség\".",
+    "i": "/keːptɛlɛnʃeːɡ/"
+  },
+  {
+    "h": "edd",
+    "e": "eat (imperative)",
+    "m": "Spoken like \"edd\".",
+    "i": "/ɛdː/"
+  },
+  {
+    "h": "veszélybe",
+    "e": "buys; takes",
+    "m": "Spoken like \"veséybe\" — buys.",
+    "i": "/vɛseːjbɛ/"
+  },
+  {
+    "h": "méterre",
+    "e": "meter (to)",
+    "m": "Spoken like \"méterre\".",
+    "i": "/meːtɛrːɛ/"
+  },
+  {
+    "h": "jen",
+    "e": "Jen",
+    "m": "Spoken like \"jen\".",
+    "i": "/jɛn/"
+  },
+  {
+    "h": "kedvel",
+    "e": "like (imperative)",
+    "m": "Spoken like \"kedvel\".",
+    "i": "/kɛdvɛl/"
+  },
+  {
+    "h": "adták",
+    "e": "gives",
+    "m": "Spoken like \"adták\" — gives.",
+    "i": "/ɒdtaːk/"
+  },
+  {
+    "h": "apádnak",
+    "e": "to your father",
+    "m": "Spoken like \"apádnak\".",
+    "i": "/ɒpaːdnɒk/"
+  },
+  {
+    "h": "adatokat",
+    "e": "gives",
+    "m": "Spoken like \"adatokat\" — gives.",
+    "i": "/ɒdɒtokɒt/"
+  },
+  {
+    "h": "ajánlat",
+    "e": "offer",
+    "m": "Spoken like \"ajánlat\".",
+    "i": "/ɒjaːnlɒt/"
+  },
+  {
+    "h": "nyári",
+    "e": "summer (adjective)",
+    "m": "Spoken like \"nyáree\".",
+    "i": "/ɲaːri/"
+  },
+  {
+    "h": "szépség",
+    "e": "beauty",
+    "m": "Spoken like \"sépség\".",
+    "i": "/seːpʃeːɡ/"
+  },
+  {
+    "h": "tisztára",
+    "e": "clean (adverbial)",
+    "m": "Spoken like \"teestára\".",
+    "i": "/tistaːrɒ/"
+  },
+  {
+    "h": "kent",
+    "e": "smeared",
+    "m": "Spoken like \"kent\".",
+    "i": "/kɛnt/"
+  },
+  {
+    "h": "klubban",
+    "e": "in the club",
+    "m": "Spoken like \"kloobban\".",
+    "i": "/klubːɒn/"
+  },
+  {
+    "h": "hagyjatok",
+    "e": "if",
+    "m": "Spoken like \"hadyjatok\" — if.",
+    "i": "/hɒɟjɒtok/"
+  },
+  {
+    "h": "végzek",
+    "e": "I finish",
+    "m": "Spoken like \"végzek\".",
+    "i": "/veːɡzɛk/"
+  },
+  {
+    "h": "feleségemet",
+    "e": "up",
+    "m": "Spoken like \"feleségemet\" — up.",
+    "i": "/fɛlɛʃeːɡɛmɛt/"
+  },
+  {
+    "h": "kiment",
+    "e": "who; out",
+    "m": "Spoken like \"keement\" — who.",
+    "i": "/kimɛnt/"
+  },
+  {
+    "h": "azonnali",
+    "e": "the; that",
+    "m": "Spoken like \"azonnalee\" — the.",
+    "i": "/ɒzonːɒli/"
+  },
+  {
+    "h": "lámpát",
+    "e": "lamp (acc.)",
+    "m": "Spoken like \"lámpát\".",
+    "i": "/laːmpaːt/"
+  },
+  {
+    "h": "bújj",
+    "e": "hide (imperative)",
+    "m": "Spoken like \"bújj\".",
+    "i": "/buːjː/"
+  },
+  {
+    "h": "bámulatos",
+    "e": "amazing",
+    "m": "Spoken like \"bámoolatos\".",
+    "i": "/baːmulɒtoʃ/"
+  },
+  {
+    "h": "eressz",
+    "e": "let go (imperative)",
+    "m": "Spoken like \"eress\".",
+    "i": "/ɛrɛsː/"
+  },
+  {
+    "h": "meghaltál",
+    "e": "still; yet",
+    "m": "Spoken like \"meghaltál\" — still.",
+    "i": "/mɛɡhɒltaːl/"
+  },
+  {
+    "h": "fogadd",
+    "e": "tooth",
+    "m": "Spoken like \"fogadd\" — tooth.",
+    "i": "/foɡɒdː/"
+  },
+  {
+    "h": "filmben",
+    "e": "movie",
+    "m": "Spoken like \"feelmben\" — movie.",
+    "i": "/filmbɛn/"
+  },
+  {
+    "h": "lettünk",
+    "e": "down",
+    "m": "Spoken like \"lettünk\" — down.",
+    "i": "/lɛtːynk/"
+  },
+  {
+    "h": "csinálnunk",
+    "e": "we must do",
+    "m": "Spoken like \"cheenálnoonk\".",
+    "i": "/tʃinaːlnunk/"
+  },
+  {
+    "h": "imádja",
+    "e": "he/she loves it",
+    "m": "Spoken like \"eemádja\".",
+    "i": "/imaːdjɒ/"
+  },
+  {
+    "h": "fér",
+    "e": "fits",
+    "m": "Spoken like \"fér\".",
+    "i": "/feːr/"
+  },
+  {
+    "h": "meghaltam",
+    "e": "still; yet",
+    "m": "Spoken like \"meghaltam\" — still.",
+    "i": "/mɛɡhɒltɒm/"
+  },
+  {
+    "h": "öntől",
+    "e": "from you (formal)",
+    "m": "Spoken like \"öntől\".",
+    "i": "/øntøːl/"
+  },
+  {
+    "h": "párszor",
+    "e": "a few times",
+    "m": "Spoken like \"pársor\".",
+    "i": "/paːrsor/"
+  },
+  {
+    "h": "kitalálni",
+    "e": "who; out",
+    "m": "Spoken like \"keetalálnee\" — who.",
+    "i": "/kitɒlaːlni/"
+  },
+  {
+    "h": "dolgát",
+    "e": "his/her work (acc.)",
+    "m": "Spoken like \"dolgát\".",
+    "i": "/dolɡaːt/"
+  },
+  {
+    "h": "házamban",
+    "e": "in my house",
+    "m": "Spoken like \"házamban\".",
+    "i": "/haːzɒmbɒn/"
+  },
+  {
+    "h": "áram",
+    "e": "electricity",
+    "m": "Spoken like \"áram\".",
+    "i": "/aːrɒm/"
+  },
+  {
+    "h": "úriember",
+    "e": "gentleman",
+    "m": "Spoken like \"úreeember\".",
+    "i": "/uːriɛmbɛr/"
+  },
+  {
+    "h": "néztek",
+    "e": "they looked",
+    "m": "Spoken like \"néztek\".",
+    "i": "/neːztɛk/"
+  },
+  {
+    "h": "rémálom",
+    "e": "nightmare",
+    "m": "Spoken like \"rémálom\".",
+    "i": "/reːmaːlom/"
+  },
+  {
+    "h": "kezemben",
+    "e": "hand",
+    "m": "Spoken like \"kezemben\" — hand.",
+    "i": "/kɛzɛmbɛn/"
+  },
+  {
+    "h": "légi",
+    "e": "air (adjective)",
+    "m": "Spoken like \"légee\".",
+    "i": "/leːɡi/"
+  },
+  {
+    "h": "helytelen",
+    "e": "incorrect",
+    "m": "Spoken like \"heytelen\".",
+    "i": "/hɛjtɛlɛn/"
+  },
+  {
+    "h": "agyam",
+    "e": "bed",
+    "m": "Spoken like \"adyam\" — bed.",
+    "i": "/ɒɟɒm/"
+  },
+  {
+    "h": "örülni",
+    "e": "to be glad",
+    "m": "Spoken like \"örülnee\".",
+    "i": "/ørylni/"
+  },
+  {
+    "h": "birodalom",
+    "e": "empire",
+    "m": "Spoken like \"beerodalom\".",
+    "i": "/birodɒlom/"
+  },
+  {
+    "h": "eltört",
+    "e": "broke",
+    "m": "Spoken like \"eltört\".",
+    "i": "/ɛltørt/"
+  },
+  {
+    "h": "kulcsa",
+    "e": "its key",
+    "m": "Spoken like \"koolcha\".",
+    "i": "/kultʃɒ/"
+  },
+  {
+    "h": "megcsináltad",
+    "e": "still; yet",
+    "m": "Spoken like \"megcheenáltad\" — still.",
+    "i": "/mɛɡtʃinaːltɒd/"
+  },
+  {
+    "h": "alfa",
+    "e": "alpha",
+    "m": "Spoken like \"alfa\".",
+    "i": "/ɒlfɒ/"
+  },
+  {
+    "h": "irodájában",
+    "e": "writer",
+    "m": "Spoken like \"eerodájában\" — writer.",
+    "i": "/irodaːjaːbɒn/"
+  },
+  {
+    "h": "kockázatot",
+    "e": "stone",
+    "m": "Spoken like \"kockázatot\" — stone.",
+    "i": "/kot͡skaːzɒtot/"
+  },
+  {
+    "h": "akadt",
+    "e": "he/she got stuck",
+    "m": "Spoken like \"akadt\".",
+    "i": "/ɒkɒdt/"
+  },
+  {
+    "h": "gondom",
+    "e": "my problem",
+    "m": "Spoken like \"gondom\".",
+    "i": "/ɡondom/"
+  },
+  {
+    "h": "csatorna",
+    "e": "channel",
+    "m": "Spoken like \"chatorna\".",
+    "i": "/tʃɒtornɒ/"
+  },
+  {
+    "h": "go",
+    "e": "go",
+    "m": "Spoken like \"go\".",
+    "i": "/ɡo/"
+  },
+  {
+    "h": "kocsiját",
+    "e": "stone",
+    "m": "Spoken like \"kocheeját\" — stone.",
+    "i": "/kotʃijaːt/"
+  },
+  {
+    "h": "hátulról",
+    "e": "from behind",
+    "m": "Spoken like \"hátoolról\".",
+    "i": "/haːtulroːl/"
+  },
+  {
+    "h": "hozzuk",
+    "e": "snow",
+    "m": "Spoken like \"hozzook\" — snow.",
+    "i": "/hozːuk/"
+  },
+  {
+    "h": "elhiszem",
+    "e": "I believe it",
+    "m": "Spoken like \"elheesem\".",
+    "i": "/ɛlhisɛm/"
+  },
+  {
+    "h": "érzelmi",
+    "e": "emotional",
+    "m": "Spoken like \"érzelmee\".",
+    "i": "/eːrzɛlmi/"
+  },
+  {
+    "h": "perced",
+    "e": "your minute",
+    "m": "Spoken like \"perced\".",
+    "i": "/pɛrt͡sɛd/"
+  },
+  {
+    "h": "néznem",
+    "e": "I must look",
+    "m": "Spoken like \"néznem\".",
+    "i": "/neːznɛm/"
+  },
+  {
+    "h": "dönt",
+    "e": "he/she decides",
+    "m": "Spoken like \"dönt\".",
+    "i": "/dønt/"
+  },
+  {
+    "h": "dologról",
+    "e": "about a thing",
+    "m": "Spoken like \"dologról\".",
+    "i": "/doloɡroːl/"
+  },
+  {
+    "h": "készülsz",
+    "e": "you prepare",
+    "m": "Spoken like \"késüls\".",
+    "i": "/keːsyls/"
+  },
+  {
+    "h": "fát",
+    "e": "tree (acc.)",
+    "m": "Spoken like \"fát\".",
+    "i": "/faːt/"
+  },
+  {
+    "h": "öl",
+    "e": "kills; area",
+    "m": "Spoken like \"öl\".",
+    "i": "/øl/"
+  },
+  {
+    "h": "ismerni",
+    "e": "also; too",
+    "m": "Spoken like \"eesmernee\" — also.",
+    "i": "/iʃmɛrni/"
+  },
+  {
+    "h": "kértek",
+    "e": "I ask for; they ask",
+    "m": "Spoken like \"kértek\".",
+    "i": "/keːrtɛk/"
+  },
+  {
+    "h": "segítségére",
+    "e": "to his/her help",
+    "m": "Spoken like \"segítségére\".",
+    "i": "/ʃɛɡiːtʃeːɡeːrɛ/"
+  },
+  {
+    "h": "szaga",
+    "e": "its smell",
+    "m": "Spoken like \"saga\".",
+    "i": "/sɒɡɒ/"
+  },
+  {
+    "h": "mindenkivel",
+    "e": "what; we",
+    "m": "Spoken like \"meendenkeevel\" — what.",
+    "i": "/mindɛnkivɛl/"
+  },
+  {
+    "h": "engedjék",
+    "e": "I",
+    "m": "Spoken like \"engedjék\" — I.",
+    "i": "/ɛnɡɛdjeːk/"
+  },
+  {
+    "h": "megkérdezem",
+    "e": "still; yet",
+    "m": "Spoken like \"megkérdezem\" — still.",
+    "i": "/mɛɡkeːrdɛzɛm/"
+  },
+  {
+    "h": "kaphatok",
+    "e": "can I get",
+    "m": "Spoken like \"kaphatok\".",
+    "i": "/kɒphɒtok/"
+  },
+  {
+    "h": "bűnösnek",
+    "e": "guilty (dative)",
+    "m": "Spoken like \"bűnösnek\".",
+    "i": "/byːnøʃnɛk/"
+  },
+  {
+    "h": "hit",
+    "e": "faith",
+    "m": "Spoken like \"heet\".",
+    "i": "/hit/"
+  },
+  {
+    "h": "megölik",
+    "e": "still; yet",
+    "m": "Spoken like \"megöleek\" — still.",
+    "i": "/mɛɡølik/"
+  },
+  {
+    "h": "aludtál",
+    "e": "you slept",
+    "m": "Spoken like \"aloodtál\".",
+    "i": "/ɒludtaːl/"
+  },
+  {
+    "h": "tojás",
+    "e": "lake",
+    "m": "Spoken like \"tojás\" — lake.",
+    "i": "/tojaːʃ/"
+  },
+  {
+    "h": "jövőt",
+    "e": "future (acc.)",
+    "m": "Spoken like \"jövőt\".",
+    "i": "/jøvøːt/"
+  },
+  {
+    "h": "fiatalabb",
+    "e": "young",
+    "m": "Spoken like \"feeatalabb\" — young.",
+    "i": "/fiɒtɒlɒbː/"
+  },
+  {
+    "h": "szavamat",
+    "e": "my word (acc.)",
+    "m": "Spoken like \"savamat\".",
+    "i": "/sɒvɒmɒt/"
+  },
+  {
+    "h": "század",
+    "e": "century",
+    "m": "Spoken like \"sázad\".",
+    "i": "/saːzɒd/"
+  },
+  {
+    "h": "örülnék",
+    "e": "I'd be glad",
+    "m": "Spoken like \"örülnék\".",
+    "i": "/ørylneːk/"
+  },
+  {
+    "h": "hallottuk",
+    "e": "if",
+    "m": "Spoken like \"hallottook\" — if.",
+    "i": "/hɒlːotːuk/"
+  },
+  {
+    "h": "bunkó",
+    "e": "rude; club",
+    "m": "Spoken like \"boonkó\".",
+    "i": "/bunkoː/"
+  },
+  {
+    "h": "elkaptam",
+    "e": "I caught",
+    "m": "Spoken like \"elkaptam\".",
+    "i": "/ɛlkɒptɒm/"
+  },
+  {
+    "h": "céget",
+    "e": "company (acc.)",
+    "m": "Spoken like \"céget\".",
+    "i": "/t͡seːɡɛt/"
+  },
+  {
+    "h": "pezsgőt",
+    "e": "champagne (acc.)",
+    "m": "Spoken like \"pezhgőt\".",
+    "i": "/pɛʒɡøːt/"
+  },
+  {
+    "h": "darabot",
+    "e": "piece",
+    "m": "Spoken like \"darabot\" — piece.",
+    "i": "/dɒrɒbot/"
+  },
+  {
+    "h": "segítsetek",
+    "e": "help (plural, imper.)",
+    "m": "Spoken like \"segítsetek\".",
+    "i": "/ʃɛɡiːtʃɛtɛk/"
+  },
+  {
+    "h": "addigra",
+    "e": "gives",
+    "m": "Spoken like \"addeegra\" — gives.",
+    "i": "/ɒdːiɡrɒ/"
+  },
+  {
+    "h": "elkezdődött",
+    "e": "it started",
+    "m": "Spoken like \"elkezdődött\".",
+    "i": "/ɛlkɛzdøːdøtː/"
+  },
+  {
+    "h": "jutottam",
+    "e": "I reached",
+    "m": "Spoken like \"jootottam\".",
+    "i": "/jutotːɒm/"
+  },
+  {
+    "h": "problémám",
+    "e": "my problem",
+    "m": "Spoken like \"problémám\".",
+    "i": "/probleːmaːm/"
+  },
+  {
+    "h": "világra",
+    "e": "to the world",
+    "m": "Spoken like \"veelágra\".",
+    "i": "/vilaːɡrɒ/"
+  },
+  {
+    "h": "küldök",
+    "e": "I send",
+    "m": "Spoken like \"küldök\".",
+    "i": "/kyldøk/"
+  },
+  {
+    "h": "árulja",
+    "e": "let him/her tell",
+    "m": "Spoken like \"ároolja\".",
+    "i": "/aːruljɒ/"
+  },
+  {
+    "h": "zárt",
+    "e": "closed",
+    "m": "Spoken like \"zárt\".",
+    "i": "/zaːrt/"
+  },
+  {
+    "h": "mindnyájan",
+    "e": "what; we",
+    "m": "Spoken like \"meendnyájan\" — what.",
+    "i": "/mindɲaːjɒn/"
+  },
+  {
+    "h": "adjunk",
+    "e": "gives",
+    "m": "Spoken like \"adjoonk\" — gives.",
+    "i": "/ɒdjunk/"
+  },
+  {
+    "h": "kormányzó",
+    "e": "stone",
+    "m": "Spoken like \"kormányzó\" — stone.",
+    "i": "/kormaːɲzoː/"
+  },
+  {
+    "h": "megköszönni",
+    "e": "still; yet",
+    "m": "Spoken like \"megkösönnee\" — still.",
+    "i": "/mɛɡkøsønːi/"
+  },
+  {
+    "h": "csinálnod",
+    "e": "you must do",
+    "m": "Spoken like \"cheenálnod\".",
+    "i": "/tʃinaːlnod/"
+  },
+  {
+    "h": "mindannyiunknak",
+    "e": "what; we",
+    "m": "Spoken like \"meendannyeeoonknak\" — what.",
+    "i": "/mindɒɲːiunknɒk/"
+  },
+  {
+    "h": "válaszolni",
+    "e": "to answer",
+    "m": "Spoken like \"válasolnee\".",
+    "i": "/vaːlɒsolni/"
+  },
+  {
+    "h": "tartson",
+    "e": "let him/her hold",
+    "m": "Spoken like \"tartson\".",
+    "i": "/tɒrtʃon/"
+  },
+  {
+    "h": "rózsaszín",
+    "e": "pink",
+    "m": "Spoken like \"rózhasín\".",
+    "i": "/roːʒɒsiːn/"
+  },
+  {
+    "h": "tévét",
+    "e": "TV (acc.)",
+    "m": "Spoken like \"tévét\".",
+    "i": "/teːveːt/"
+  },
+  {
+    "h": "társa",
+    "e": "his/her companion",
+    "m": "Spoken like \"társa\".",
+    "i": "/taːrʃɒ/"
+  },
+  {
+    "h": "fox",
+    "e": "Fox",
+    "m": "Spoken like \"fox\".",
+    "i": "/foks/"
+  },
+  {
+    "h": "kerülnek",
+    "e": "asks; requests",
+    "m": "Spoken like \"kerülnek\" — asks.",
+    "i": "/kɛrylnɛk/"
+  },
+  {
+    "h": "biztosíthatom",
+    "e": "sure; certain",
+    "m": "Spoken like \"beeztosíthatom\" — sure.",
+    "i": "/biztoʃiːthɒtom/"
+  },
+  {
+    "h": "eggyel",
+    "e": "by one",
+    "m": "Spoken like \"egdyel\".",
+    "i": "/ɛɟːɛl/"
+  },
+  {
+    "h": "jóban",
+    "e": "on good terms",
+    "m": "Spoken like \"jóban\".",
+    "i": "/joːbɒn/"
+  },
+  {
+    "h": "munkába",
+    "e": "to work",
+    "m": "Spoken like \"moonkába\".",
+    "i": "/munkaːbɒ/"
+  },
+  {
+    "h": "kérdéseket",
+    "e": "questions (acc.)",
+    "m": "Spoken like \"kérdéseket\".",
+    "i": "/keːrdeːʃɛkɛt/"
+  },
+  {
+    "h": "sírj",
+    "e": "cry (imperative)",
+    "m": "Spoken like \"sírj\".",
+    "i": "/ʃiːrj/"
+  },
+  {
+    "h": "láthatatlan",
+    "e": "invisible",
+    "m": "Spoken like \"láthatatlan\".",
+    "i": "/laːthɒtɒtlɒn/"
+  },
+  {
+    "h": "mutatok",
+    "e": "I show",
+    "m": "Spoken like \"mootatok\".",
+    "i": "/mutɒtok/"
+  },
+  {
+    "h": "olaj",
+    "e": "oil",
+    "m": "Spoken like \"olaj\" — oil.",
+    "i": "/olɒj/"
+  },
+  {
+    "h": "finoman",
+    "e": "gently",
+    "m": "Spoken like \"feenoman\".",
+    "i": "/finomɒn/"
+  },
+  {
+    "h": "csináljátok",
+    "e": "you (plural) do",
+    "m": "Spoken like \"cheenáljátok\".",
+    "i": "/tʃinaːljaːtok/"
+  },
+  {
+    "h": "vizsgálatot",
+    "e": "water",
+    "m": "Spoken like \"veezhgálatot\" — water.",
+    "i": "/viʒɡaːlɒtot/"
+  },
+  {
+    "h": "léteznek",
+    "e": "they exist",
+    "m": "Spoken like \"léteznek\".",
+    "i": "/leːtɛznɛk/"
+  },
+  {
+    "h": "kívánok",
+    "e": "I wish",
+    "m": "Spoken like \"kívánok\".",
+    "i": "/kiːvaːnok/"
+  },
+  {
+    "h": "figyeljenek",
+    "e": "let them pay attention",
+    "m": "Spoken like \"feedyeljenek\".",
+    "i": "/fiɟɛljɛnɛk/"
+  },
+  {
+    "h": "változtat",
+    "e": "changes",
+    "m": "Spoken like \"változtat\".",
+    "i": "/vaːltoztɒt/"
+  },
+  {
+    "h": "kapják",
+    "e": "let them get it",
+    "m": "Spoken like \"kapják\".",
+    "i": "/kɒpjaːk/"
+  },
+  {
+    "h": "hallak",
+    "e": "if",
+    "m": "Spoken like \"hallak\" — if.",
+    "i": "/hɒlːɒk/"
+  },
+  {
+    "h": "olvassa",
+    "e": "reads",
+    "m": "Spoken like \"olvassa\" — reads.",
+    "i": "/olvɒʃːɒ/"
+  },
+  {
+    "h": "kötött",
+    "e": "he/she tied",
+    "m": "Spoken like \"kötött\".",
+    "i": "/køtøtː/"
+  },
+  {
+    "h": "hatos",
+    "e": "if",
+    "m": "Spoken like \"hatos\" — if.",
+    "i": "/hɒtoʃ/"
+  },
+  {
+    "h": "élvezni",
+    "e": "to enjoy",
+    "m": "Spoken like \"élveznee\".",
+    "i": "/eːlvɛzni/"
+  },
+  {
+    "h": "rejtett",
+    "e": "hidden",
+    "m": "Spoken like \"rejtett\".",
+    "i": "/rɛjtɛtː/"
+  },
+  {
+    "h": "próba",
+    "e": "test; rehearsal",
+    "m": "Spoken like \"próba\".",
+    "i": "/proːbɒ/"
+  },
+  {
+    "h": "mocsok",
+    "e": "dirt",
+    "m": "Spoken like \"mochok\".",
+    "i": "/motʃok/"
+  },
+  {
+    "h": "találkozásnak",
+    "e": "maybe",
+    "m": "Spoken like \"találkozásnak\" — maybe.",
+    "i": "/tɒlaːlkozaːʃnɒk/"
+  },
+  {
+    "h": "vadász",
+    "e": "hunter",
+    "m": "Spoken like \"vadás\".",
+    "i": "/vɒdaːs/"
+  },
+  {
+    "h": "véleményed",
+    "e": "your opinion",
+    "m": "Spoken like \"véleményed\".",
+    "i": "/veːlɛmeːɲɛd/"
+  },
+  {
+    "h": "szerelmet",
+    "e": "love (acc.)",
+    "m": "Spoken like \"serelmet\".",
+    "i": "/sɛrɛlmɛt/"
+  },
+  {
+    "h": "jelentkezett",
+    "e": "he/she applied",
+    "m": "Spoken like \"jelentkezett\".",
+    "i": "/jɛlɛntkɛzɛtː/"
+  },
+  {
+    "h": "fúj",
+    "e": "blows",
+    "m": "Spoken like \"fúj\".",
+    "i": "/fuːj/"
+  },
+  {
+    "h": "kifejezés",
+    "e": "who; out",
+    "m": "Spoken like \"keefejezés\" — who.",
+    "i": "/kifɛjɛzeːʃ/"
+  },
+  {
+    "h": "küldi",
+    "e": "he/she sends",
+    "m": "Spoken like \"küldee\".",
+    "i": "/kyldi/"
+  },
+  {
+    "h": "megcsináltam",
+    "e": "still; yet",
+    "m": "Spoken like \"megcheenáltam\" — still.",
+    "i": "/mɛɡtʃinaːltɒm/"
+  },
+  {
+    "h": "zavart",
+    "e": "disturbance",
+    "m": "Spoken like \"zavart\".",
+    "i": "/zɒvɒrt/"
+  },
+  {
+    "h": "fertőzés",
+    "e": "infection",
+    "m": "Spoken like \"fertőzés\".",
+    "i": "/fɛrtøːzeːʃ/"
+  },
+  {
+    "h": "vágd",
+    "e": "cut (imperative)",
+    "m": "Spoken like \"vágd\".",
+    "i": "/vaːɡd/"
+  },
+  {
+    "h": "szürke",
+    "e": "gray",
+    "m": "Spoken like \"sürke\".",
+    "i": "/syrkɛ/"
+  },
+  {
+    "h": "évekkel",
+    "e": "with years",
+    "m": "Spoken like \"évekkel\".",
+    "i": "/eːvɛkːɛl/"
+  },
+  {
+    "h": "veszett",
+    "e": "buys; takes",
+    "m": "Spoken like \"vesett\" — buys.",
+    "i": "/vɛsɛtː/"
+  },
+  {
+    "h": "órakor",
+    "e": "at o'clock",
+    "m": "Spoken like \"órakor\".",
+    "i": "/oːrɒkor/"
+  },
+  {
+    "h": "visszajöttem",
+    "e": "I came back",
+    "m": "Spoken like \"veessajöttem\".",
+    "i": "/visːɒjøtːɛm/"
+  },
+  {
+    "h": "vigyázzatok",
+    "e": "take care (plural, imper.)",
+    "m": "Spoken like \"veedyázzatok\".",
+    "i": "/viɟaːzːɒtok/"
+  },
+  {
+    "h": "figyelek",
+    "e": "I pay attention",
+    "m": "Spoken like \"feedyelek\".",
+    "i": "/fiɟɛlɛk/"
+  },
+  {
+    "h": "kártyát",
+    "e": "card (acc.)",
+    "m": "Spoken like \"kártyát\".",
+    "i": "/kaːrcaːt/"
+  },
+  {
+    "h": "kislányom",
+    "e": "who; out",
+    "m": "Spoken like \"keeslányom\" — who.",
+    "i": "/kiʃlaːɲom/"
+  },
+  {
+    "h": "bácsikám",
+    "e": "my uncle",
+    "m": "Spoken like \"bácheekám\".",
+    "i": "/baːtʃikaːm/"
+  },
+  {
+    "h": "átok",
+    "e": "curse",
+    "m": "Spoken like \"átok\".",
+    "i": "/aːtok/"
+  },
+  {
+    "h": "újságot",
+    "e": "newspaper (acc.)",
+    "m": "Spoken like \"újságot\".",
+    "i": "/uːjʃaːɡot/"
+  },
+  {
+    "h": "visel",
+    "e": "wears; behaves",
+    "m": "Spoken like \"veesel\".",
+    "i": "/viʃɛl/"
+  },
+  {
+    "h": "adtad",
+    "e": "gives",
+    "m": "Spoken like \"adtad\" — gives.",
+    "i": "/ɒdtɒd/"
+  },
+  {
+    "h": "választottam",
+    "e": "I chose",
+    "m": "Spoken like \"válastottam\".",
+    "i": "/vaːlɒstotːɒm/"
+  },
+  {
+    "h": "utcai",
+    "e": "street",
+    "m": "Spoken like \"ootcaee\" — street.",
+    "i": "/utt͡sɒi/"
+  },
+  {
+    "h": "irodába",
+    "e": "writer",
+    "m": "Spoken like \"eerodába\" — writer.",
+    "i": "/irodaːbɒ/"
+  },
+  {
+    "h": "átadom",
+    "e": "I hand over",
+    "m": "Spoken like \"átadom\".",
+    "i": "/aːtɒdom/"
+  },
+  {
+    "h": "mars",
+    "e": "already",
+    "m": "Spoken like \"mars\" — already.",
+    "i": "/mɒrʃ/"
+  },
+  {
+    "h": "reggelit",
+    "e": "morning",
+    "m": "Spoken like \"reggeleet\" — morning.",
+    "i": "/rɛɡːɛlit/"
+  },
+  {
+    "h": "lefeküdni",
+    "e": "down",
+    "m": "Spoken like \"lefeküdnee\" — down.",
+    "i": "/lɛfɛkydni/"
+  },
+  {
+    "h": "eljönni",
+    "e": "to come",
+    "m": "Spoken like \"eljönnee\".",
+    "i": "/ɛljønːi/"
+  },
+  {
+    "h": "pizzát",
+    "e": "pizza (acc.)",
+    "m": "Spoken like \"peezzát\".",
+    "i": "/pizːaːt/"
+  },
+  {
+    "h": "békés",
+    "e": "peaceful",
+    "m": "Spoken like \"békés\".",
+    "i": "/beːkeːʃ/"
+  },
+  {
+    "h": "segítségedre",
+    "e": "to your help",
+    "m": "Spoken like \"segítségedre\".",
+    "i": "/ʃɛɡiːtʃeːɡɛdrɛ/"
+  },
+  {
+    "h": "hitt",
+    "e": "he/she believed",
+    "m": "Spoken like \"heett\".",
+    "i": "/hitː/"
+  },
+  {
+    "h": "ezekre",
+    "e": "this",
+    "m": "Spoken like \"ezekre\" — this.",
+    "i": "/ɛzɛkrɛ/"
+  },
+  {
+    "h": "közlegény",
+    "e": "private (rank)",
+    "m": "Spoken like \"közlegény\".",
+    "i": "/køzlɛɡeːɲ/"
+  },
+  {
+    "h": "nézi",
+    "e": "he/she looks",
+    "m": "Spoken like \"nézee\".",
+    "i": "/neːzi/"
+  },
+  {
+    "h": "szórakoztató",
+    "e": "entertaining",
+    "m": "Spoken like \"sórakoztató\".",
+    "i": "/soːrɒkoztɒtoː/"
+  },
+  {
+    "h": "ütés",
+    "e": "hit; blow",
+    "m": "Spoken like \"ütés\".",
+    "i": "/yteːʃ/"
+  },
+  {
+    "h": "ügyön",
+    "e": "on the case",
+    "m": "Spoken like \"üdyön\".",
+    "i": "/yɟøn/"
+  },
+  {
+    "h": "mögötted",
+    "e": "behind you",
+    "m": "Spoken like \"mögötted\".",
+    "i": "/møɡøtːɛd/"
+  },
+  {
+    "h": "ellopták",
+    "e": "they stole",
+    "m": "Spoken like \"ellopták\".",
+    "i": "/ɛlːoptaːk/"
+  },
+  {
+    "h": "jói",
+    "e": "good ones",
+    "m": "Spoken like \"jóee\".",
+    "i": "/joːi/"
+  },
+  {
+    "h": "volnék",
+    "e": "I would be",
+    "m": "Spoken like \"volnék\".",
+    "i": "/volneːk/"
+  },
+  {
+    "h": "virág",
+    "e": "flower",
+    "m": "Spoken like \"veerág\".",
+    "i": "/viraːɡ/"
+  },
+  {
+    "h": "figyeltem",
+    "e": "I paid attention",
+    "m": "Spoken like \"feedyeltem\".",
+    "i": "/fiɟɛltɛm/"
+  },
+  {
+    "h": "maradék",
+    "e": "already",
+    "m": "Spoken like \"maradék\" — already.",
+    "i": "/mɒrɒdeːk/"
+  },
+  {
+    "h": "bravó",
+    "e": "bravo",
+    "m": "Spoken like \"bravó\".",
+    "i": "/brɒvoː/"
+  },
+  {
+    "h": "étterem",
+    "e": "restaurant",
+    "m": "Spoken like \"étterem\".",
+    "i": "/eːtːɛrɛm/"
+  },
+  {
+    "h": "sorba",
+    "e": "salt",
+    "m": "Spoken like \"sorba\" — salt.",
+    "i": "/ʃorbɒ/"
+  },
+  {
+    "h": "előlem",
+    "e": "from me",
+    "m": "Spoken like \"előlem\".",
+    "i": "/ɛløːlɛm/"
+  },
+  {
+    "h": "esküvői",
+    "e": "and",
+    "m": "Spoken like \"esküvőee\" — and.",
+    "i": "/ɛʃkyvøːi/"
+  },
+  {
+    "h": "veszélyt",
+    "e": "buys; takes",
+    "m": "Spoken like \"veséyt\" — buys.",
+    "i": "/vɛseːjt/"
+  },
+  {
+    "h": "készítettem",
+    "e": "I had made",
+    "m": "Spoken like \"késítettem\".",
+    "i": "/keːsiːtɛtːɛm/"
+  },
+  {
+    "h": "vonzó",
+    "e": "attractive",
+    "m": "Spoken like \"vonzó\".",
+    "i": "/vonzoː/"
+  },
+  {
+    "h": "reményt",
+    "e": "hope (acc.)",
+    "m": "Spoken like \"reményt\".",
+    "i": "/rɛmeːɲt/"
+  },
+  {
+    "h": "csomagot",
+    "e": "package",
+    "m": "Spoken like \"chomagot\" — package.",
+    "i": "/tʃomɒɡot/"
+  },
+  {
+    "h": "részleteket",
+    "e": "details (acc.)",
+    "m": "Spoken like \"résleteket\".",
+    "i": "/reːslɛtɛkɛt/"
+  },
+  {
+    "h": "gondja",
+    "e": "his/her problem",
+    "m": "Spoken like \"gondja\".",
+    "i": "/ɡondjɒ/"
+  },
+  {
+    "h": "illetően",
+    "e": "regarding",
+    "m": "Spoken like \"eelletően\".",
+    "i": "/ilːɛtøːɛn/"
+  },
+  {
+    "h": "mintát",
+    "e": "what; we",
+    "m": "Spoken like \"meentát\" — what.",
+    "i": "/mintaːt/"
+  },
+  {
+    "h": "szerető",
+    "e": "loves; likes",
+    "m": "Spoken like \"serető\" — loves.",
+    "i": "/sɛrɛtøː/"
+  },
+  {
+    "h": "vádat",
+    "e": "accusation (acc.)",
+    "m": "Spoken like \"vádat\".",
+    "i": "/vaːdɒt/"
+  },
+  {
+    "h": "remélhetőleg",
+    "e": "hopefully",
+    "m": "Spoken like \"remélhetőleg\".",
+    "i": "/rɛmeːlhɛtøːlɛɡ/"
+  },
+  {
+    "h": "kerüljön",
+    "e": "asks; requests",
+    "m": "Spoken like \"kerüljön\" — asks.",
+    "i": "/kɛryljøn/"
+  },
+  {
+    "h": "határ",
+    "e": "if",
+    "m": "Spoken like \"határ\" — if.",
+    "i": "/hɒtaːr/"
+  },
+  {
+    "h": "aggódnod",
+    "e": "you must worry",
+    "m": "Spoken like \"aggódnod\".",
+    "i": "/ɒɡːoːdnod/"
+  },
+  {
+    "h": "köszönet",
+    "e": "thanks",
+    "m": "Spoken like \"kösönet\".",
+    "i": "/køsønɛt/"
+  },
+  {
+    "h": "varázslat",
+    "e": "waits; castle",
+    "m": "Spoken like \"varázhlat\" — waits.",
+    "i": "/vɒraːʒlɒt/"
+  },
+  {
+    "h": "törvényes",
+    "e": "legal",
+    "m": "Spoken like \"törvényes\".",
+    "i": "/tørveːɲɛʃ/"
+  },
+  {
+    "h": "szellemek",
+    "e": "wind; edge",
+    "m": "Spoken like \"sellemek\" — wind.",
+    "i": "/sɛlːɛmɛk/"
+  },
+  {
+    "h": "értette",
+    "e": "he/she understood",
+    "m": "Spoken like \"értette\".",
+    "i": "/eːrtɛtːɛ/"
+  },
+  {
+    "h": "istenre",
+    "e": "also; too",
+    "m": "Spoken like \"eestenre\" — also.",
+    "i": "/iʃtɛnrɛ/"
+  },
+  {
+    "h": "hozták",
+    "e": "snow",
+    "m": "Spoken like \"hozták\" — snow.",
+    "i": "/hoztaːk/"
+  },
+  {
+    "h": "ügyész",
+    "e": "prosecutor",
+    "m": "Spoken like \"üdyés\".",
+    "i": "/yɟeːs/"
+  },
+  {
+    "h": "moziba",
+    "e": "to the cinema",
+    "m": "Spoken like \"mozeeba\".",
+    "i": "/mozibɒ/"
+  },
+  {
+    "h": "akad",
+    "e": "there is; occurs",
+    "m": "Spoken like \"akad\".",
+    "i": "/ɒkɒd/"
+  },
+  {
+    "h": "nyitni",
+    "e": "to open",
+    "m": "Spoken like \"nyeetnee\".",
+    "i": "/ɲitni/"
+  },
+  {
+    "h": "meglehet",
+    "e": "still; yet",
+    "m": "Spoken like \"meglehet\" — still.",
+    "i": "/mɛɡlɛhɛt/"
+  },
+  {
+    "h": "fölé",
+    "e": "above it",
+    "m": "Spoken like \"fölé\".",
+    "i": "/føleː/"
+  },
+  {
+    "h": "elöl",
+    "e": "from the front",
+    "m": "Spoken like \"elöl\".",
+    "i": "/ɛløl/"
+  },
+  {
+    "h": "ötven",
+    "e": "fifty",
+    "m": "Spoken like \"ötven\".",
+    "i": "/øtvɛn/"
+  },
+  {
+    "h": "csaló",
+    "e": "cheat; fraud",
+    "m": "Spoken like \"chaló\".",
+    "i": "/tʃɒloː/"
+  },
+  {
+    "h": "vállalat",
+    "e": "company",
+    "m": "Spoken like \"vállalat\".",
+    "i": "/vaːlːɒlɒt/"
+  },
+  {
+    "h": "segítünk",
+    "e": "we help",
+    "m": "Spoken like \"segítünk\".",
+    "i": "/ʃɛɡiːtynk/"
+  },
+  {
+    "h": "haverom",
+    "e": "if",
+    "m": "Spoken like \"haverom\" — if.",
+    "i": "/hɒvɛrom/"
+  },
+  {
+    "h": "utálja",
+    "e": "road; way",
+    "m": "Spoken like \"ootálja\" — road.",
+    "i": "/utaːljɒ/"
+  },
+  {
+    "h": "szeretünk",
+    "e": "loves; likes",
+    "m": "Spoken like \"seretünk\" — loves.",
+    "i": "/sɛrɛtynk/"
+  },
+  {
+    "h": "bolt",
+    "e": "shop",
+    "m": "Spoken like \"bolt\" — shop.",
+    "i": "/bolt/"
+  },
+  {
+    "h": "versenyt",
+    "e": "blood",
+    "m": "Spoken like \"versenyt\" — blood.",
+    "i": "/vɛrʃɛɲt/"
+  },
+  {
+    "h": "kezdenek",
+    "e": "hand",
+    "m": "Spoken like \"kezdenek\" — hand.",
+    "i": "/kɛzdɛnɛk/"
+  },
+  {
+    "h": "mindkettőt",
+    "e": "what; we",
+    "m": "Spoken like \"meendkettőt\" — what.",
+    "i": "/mindkɛtːøːt/"
+  },
+  {
+    "h": "admirális",
+    "e": "gives",
+    "m": "Spoken like \"admeerálees\" — gives.",
+    "i": "/ɒdmiraːliʃ/"
+  },
+  {
+    "h": "hozol",
+    "e": "snow",
+    "m": "Spoken like \"hozol\" — snow.",
+    "i": "/hozol/"
+  },
+  {
+    "h": "határt",
+    "e": "if",
+    "m": "Spoken like \"határt\" — if.",
+    "i": "/hɒtaːrt/"
+  },
+  {
+    "h": "feladatot",
+    "e": "up",
+    "m": "Spoken like \"feladatot\" — up.",
+    "i": "/fɛlɒdɒtot/"
+  },
+  {
+    "h": "lények",
+    "e": "beings",
+    "m": "Spoken like \"lények\".",
+    "i": "/leːɲɛk/"
+  },
+  {
+    "h": "hűséges",
+    "e": "loyal",
+    "m": "Spoken like \"hűséges\".",
+    "i": "/hyːʃeːɡɛʃ/"
+  },
+  {
+    "h": "közénk",
+    "e": "between us",
+    "m": "Spoken like \"közénk\".",
+    "i": "/køzeːnk/"
+  },
+  {
+    "h": "apának",
+    "e": "to father",
+    "m": "Spoken like \"apának\".",
+    "i": "/ɒpaːnɒk/"
+  },
+  {
+    "h": "lassabban",
+    "e": "slower",
+    "m": "Spoken like \"lassabban\".",
+    "i": "/lɒʃːɒbːɒn/"
+  },
+  {
+    "h": "oroszok",
+    "e": "Russians",
+    "m": "Spoken like \"orosok\".",
+    "i": "/orosok/"
+  },
+  {
+    "h": "tanítani",
+    "e": "to teach",
+    "m": "Spoken like \"tanítanee\".",
+    "i": "/tɒniːtɒni/"
+  },
+  {
+    "h": "kezekkel",
+    "e": "hand",
+    "m": "Spoken like \"kezekkel\" — hand.",
+    "i": "/kɛzɛkːɛl/"
+  },
+  {
+    "h": "késni",
+    "e": "to be late",
+    "m": "Spoken like \"késnee\".",
+    "i": "/keːʃni/"
+  },
+  {
+    "h": "csúcs",
+    "e": "peak; top",
+    "m": "Spoken like \"chúch\".",
+    "i": "/tʃuːtʃ/"
+  },
+  {
+    "h": "található",
+    "e": "maybe",
+    "m": "Spoken like \"található\" — maybe.",
+    "i": "/tɒlaːlhɒtoː/"
+  },
+  {
+    "h": "ezennel",
+    "e": "this",
+    "m": "Spoken like \"ezennel\" — this.",
+    "i": "/ɛzɛnːɛl/"
+  },
+  {
+    "h": "elkaptuk",
+    "e": "we caught",
+    "m": "Spoken like \"elkaptook\".",
+    "i": "/ɛlkɒptuk/"
+  },
+  {
+    "h": "kénytelen",
+    "e": "forced; obliged",
+    "m": "Spoken like \"kénytelen\".",
+    "i": "/keːɲtɛlɛn/"
+  },
+  {
+    "h": "melyiket",
+    "e": "which (one, acc.)",
+    "m": "Spoken like \"meyeeket\".",
+    "i": "/mɛjikɛt/"
+  },
+  {
+    "h": "levegőben",
+    "e": "down",
+    "m": "Spoken like \"levegőben\" — down.",
+    "i": "/lɛvɛɡøːbɛn/"
+  },
+  {
+    "h": "vidám",
+    "e": "cheerful",
+    "m": "Spoken like \"veedám\".",
+    "i": "/vidaːm/"
+  },
+  {
+    "h": "édesanyád",
+    "e": "your mother",
+    "m": "Spoken like \"édesanyád\".",
+    "i": "/eːdɛʃɒɲaːd/"
+  },
+  {
+    "h": "jóvá",
+    "e": "right; correct",
+    "m": "Spoken like \"jóvá\".",
+    "i": "/joːvaː/"
+  },
+  {
+    "h": "tojást",
+    "e": "lake",
+    "m": "Spoken like \"tojást\" — lake.",
+    "i": "/tojaːʃt/"
+  },
+  {
+    "h": "tartó",
+    "e": "lasting; holding",
+    "m": "Spoken like \"tartó\".",
+    "i": "/tɒrtoː/"
+  },
+  {
+    "h": "leszarom",
+    "e": "will be",
+    "m": "Spoken like \"lesarom\" — will be.",
+    "i": "/lɛsɒrom/"
+  },
+  {
+    "h": "hívod",
+    "e": "you call",
+    "m": "Spoken like \"hívod\".",
+    "i": "/hiːvod/"
+  },
+  {
+    "h": "pillantást",
+    "e": "glance (acc.)",
+    "m": "Spoken like \"peellantást\".",
+    "i": "/pilːɒntaːʃt/"
+  },
+  {
+    "h": "módszer",
+    "e": "method",
+    "m": "Spoken like \"módser\".",
+    "i": "/moːdsɛr/"
+  },
+  {
+    "h": "rendőrségnek",
+    "e": "to the police",
+    "m": "Spoken like \"rendőrségnek\".",
+    "i": "/rɛndøːrʃeːɡnɛk/"
+  },
+  {
+    "h": "mindenem",
+    "e": "what; we",
+    "m": "Spoken like \"meendenem\" — what.",
+    "i": "/mindɛnɛm/"
+  },
+  {
+    "h": "követte",
+    "e": "he/she followed",
+    "m": "Spoken like \"követte\".",
+    "i": "/køvɛtːɛ/"
+  },
+  {
+    "h": "helyben",
+    "e": "on the spot",
+    "m": "Spoken like \"heyben\".",
+    "i": "/hɛjbɛn/"
+  },
+  {
+    "h": "teremben",
+    "e": "you (sing.)",
+    "m": "Spoken like \"teremben\" — you (sing.).",
+    "i": "/tɛrɛmbɛn/"
+  },
+  {
+    "h": "szórakozol",
+    "e": "you have fun",
+    "m": "Spoken like \"sórakozol\".",
+    "i": "/soːrɒkozol/"
+  },
+  {
+    "h": "lényege",
+    "e": "its essence",
+    "m": "Spoken like \"lényege\".",
+    "i": "/leːɲɛɡɛ/"
+  },
+  {
+    "h": "lyukat",
+    "e": "hole (acc.)",
+    "m": "Spoken like \"yookat\".",
+    "i": "/jukɒt/"
+  },
+  {
+    "h": "várhat",
+    "e": "he/she can wait",
+    "m": "Spoken like \"várhat\".",
+    "i": "/vaːrhɒt/"
+  },
+  {
+    "h": "formában",
+    "e": "in a form",
+    "m": "Spoken like \"formában\".",
+    "i": "/formaːbɒn/"
+  },
+  {
+    "h": "eljöttek",
+    "e": "they came",
+    "m": "Spoken like \"eljöttek\".",
+    "i": "/ɛljøtːɛk/"
+  }
+];
