@@ -278,33 +278,58 @@ header {
   font-weight: 600;
 }
 
-/* Stats list */
-.stats-list {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.stat-row {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 6px 8px;
-  border-radius: var(--radius-sm);
-  font-size: 0.83rem;
-}
-
-.stat-icon { font-size: 1rem; }
-.stat-label { color: var(--text-secondary); }
-.stat-value {
-  margin-left: auto;
-  font-weight: 700;
-  color: var(--text);
-}
-
 /* ---------- Content Area ---------- */
 .content-area {
   min-height: 70vh;
+}
+
+/* Floating Alphabet Bar */
+.alpha-float {
+  position: sticky;
+  top: 80px;
+  z-index: 50;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 8px 12px;
+  margin-bottom: 16px;
+  box-shadow: var(--shadow);
+  display: none;
+}
+
+.alpha-float.visible {
+  display: block;
+}
+
+.alpha-float-inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+  justify-content: center;
+}
+
+.alpha-float-btn {
+  padding: 4px 8px;
+  text-align: center;
+  font-size: 0.72rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: transparent;
+  color: var(--text-secondary);
+  transition: all var(--transition);
+  font-family: var(--font);
+}
+
+.alpha-float-btn:hover {
+  background: var(--hover-bg);
+  color: var(--accent);
+}
+
+.alpha-float-btn.active {
+  background: var(--accent);
+  color: white;
 }
 
 /* ---------- Search Bar ---------- */

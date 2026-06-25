@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
@@ -61,32 +61,15 @@
           </button>
         </div>
       </div>
-
-      <!-- Quick Stats -->
-      <div class="sidebar-section">
-        <div class="sidebar-title">Stats</div>
-        <div class="stats-list">
-          <div class="stat-row">
-            <span class="stat-icon">📚</span>
-            <span class="stat-label">Total</span>
-            <span class="stat-value" id="totalWords">0</span>
-          </div>
-          <div class="stat-row">
-            <span class="stat-icon">��</span>
-            <span class="stat-label">Translated</span>
-            <span class="stat-value" id="knownWords">0</span>
-          </div>
-          <div class="stat-row">
-            <span class="stat-icon">⭐</span>
-            <span class="stat-label">Bookmarked</span>
-            <span class="stat-value" id="bookmarkCount">0</span>
-          </div>
-        </div>
-      </div>
     </aside>
 
     <!-- ===== CONTENT ===== -->
     <main class="content-area">
+
+      <!-- Floating Alphabet Bar (sticky on scroll) -->
+      <div class="alpha-float" id="alphaFloat">
+        <div class="alpha-float-inner" id="alphaFloatInner"></div>
+      </div>
 
       <!-- Tab Bar -->
       <div class="tab-bar">

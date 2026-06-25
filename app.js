@@ -70,13 +70,6 @@ const App = (() => {
   // ---------- Render ----------
   function render() {
     const words = getFilteredWords();
-    const count = wordDatabase.length;
-    const known = wordDatabase.filter(w => w.e && w.e !== "(Hungarian word)").length;
-
-    // Update sidebar stats
-    document.getElementById("totalWords").textContent = count;
-    document.getElementById("knownWords").textContent = known;
-    document.getElementById("bookmarkCount").textContent = state.bookmarks.size;
 
     // Update result count
     const label = state.currentTab === "bookmarks" ? "bookmarked" : "words";
@@ -170,6 +163,12 @@ const App = (() => {
         : b.dataset.letter === state.selectedLetter;
       b.classList.toggle("active", isActive);
     });
+    $$("#alphaFloatInner .alpha-float-btn").forEach(b => {
+      const isActive = state.selectedLetter === null
+        ? b.dataset.letter === ""
+        : b.dataset.letter === state.selectedLetter;
+      b.classList.toggle("active", isActive);
+    });
     render();
   }
 
@@ -236,6 +235,16 @@ const App = (() => {
     });
     document.getElementById("alphaIndex").innerHTML = alphaHTML;
 
+    // Build floating alphabet bar
+    let floatHTML = `<button class="alpha-float-btn active" data-letter="">All</button>`;
+    letters.forEach(l => {
+      const c = counts[l] || 0;
+      if (c > 0) {
+        floatHTML += `<button class="alpha-float-btn" data-letter="${l}">${l}</button>`;
+      }
+    });
+    document.getElementById("alphaFloatInner").innerHTML = floatHTML;
+
     // Difficulty counts
     const easy = wordDatabase.filter(w => getDifficulty(w) === "easy").length;
     const medium = wordDatabase.filter(w => getDifficulty(w) === "medium").length;
@@ -257,6 +266,21 @@ const App = (() => {
       const btn = e.target.closest(".alpha-btn");
       if (btn) onLetterClick(btn.dataset.letter);
     });
+
+    document.getElementById("alphaFloatInner").addEventListener("click", e => {
+      const btn = e.target.closest(".alpha-float-btn");
+      if (btn) onLetterClick(btn.dataset.letter);
+    });
+
+    // Show floating alphabet when sidebar alphabet scrolls out of view
+    const sidebarAlpha = document.getElementById("alphaIndex");
+    const floatBar = document.getElementById("alphaFloat");
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        floatBar.classList.toggle("visible", !entry.isIntersecting);
+      });
+    }, { root: null, threshold: 0 });
+    observer.observe(sidebarAlpha);
 
     $$(".diff-btn").forEach(btn => {
       btn.addEventListener("click", () => onDifficultyClick(btn.dataset.diff));
