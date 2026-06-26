@@ -159,7 +159,7 @@ const wordDatabase = [
   },
   {
     "h": "mit",
-    "e": "what; we",
+    "e": "what (accusative)",
     "m": "Spoken like \"meet\" — what.",
     "i": "/mit/"
   },
@@ -171,13 +171,13 @@ const wordDatabase = [
   },
   {
     "h": "vagyok",
-    "e": "or; you are",
+    "e": "I am",
     "m": "Spoken like \"vadyok\" — or.",
     "i": "/vɒɟok/"
   },
   {
     "h": "ezt",
-    "e": "this",
+    "e": "this (accusative)",
     "m": "Spoken like \"ezt\" — this.",
     "i": "/ɛzt/"
   },
@@ -201,13 +201,13 @@ const wordDatabase = [
   },
   {
     "h": "miért",
-    "e": "what; we",
+    "e": "why",
     "m": "Spoken like \"meeért\" — what.",
     "i": "/mieːrt/"
   },
   {
     "h": "mint",
-    "e": "what; we",
+    "e": "as; like; than",
     "m": "Spoken like \"meent\" — what.",
     "i": "/mint/"
   },
@@ -333,7 +333,7 @@ const wordDatabase = [
   },
   {
     "h": "maga",
-    "e": "today",
+    "e": "himself; herself; itself; you (formal)",
     "m": "Spoken like \"maga\" — today.",
     "i": "/mɒɡɒ/"
   },
@@ -375,7 +375,7 @@ const wordDatabase = [
   },
   {
     "h": "mindig",
-    "e": "what; we",
+    "e": "always",
     "m": "Spoken like \"meendeeg\" — what.",
     "i": "/mindiɡ/"
   },
@@ -387,7 +387,7 @@ const wordDatabase = [
   },
   {
     "h": "semmi",
-    "e": "neither; nor",
+    "e": "nothing",
     "m": "Spoken like \"semmee\" — neither.",
     "i": "/ʃɛmːi/"
   },
@@ -519,13 +519,13 @@ const wordDatabase = [
   },
   {
     "h": "lenne",
-    "e": "down",
+    "e": "would be",
     "m": "Spoken like \"lenne\" — down.",
     "i": "/lɛnːɛ/"
   },
   {
     "h": "milyen",
-    "e": "what; we",
+    "e": "what; what kind of",
     "m": "Spoken like \"meeyen\" — what.",
     "i": "/mijɛn/"
   },
@@ -567,13 +567,13 @@ const wordDatabase = [
   },
   {
     "h": "vannak",
-    "e": "is; there is",
+    "e": "they are; there are",
     "m": "Spoken like \"vannak\" — is.",
     "i": "/vɒnːɒk/"
   },
   {
     "h": "vagyunk",
-    "e": "or; you are",
+    "e": "we are",
     "m": "Spoken like \"vadyoonk\" — or.",
     "i": "/vɒɟunk/"
   },
@@ -603,7 +603,7 @@ const wordDatabase = [
   },
   {
     "h": "mikor",
-    "e": "what; we",
+    "e": "when",
     "m": "Spoken like \"meekor\" — what.",
     "i": "/mikor/"
   },
@@ -615,7 +615,7 @@ const wordDatabase = [
   },
   {
     "h": "nos",
-    "e": "woman; grows",
+    "e": "well; so",
     "m": "Spoken like \"nos\" — woman.",
     "i": "/noʃ/"
   },
@@ -687,7 +687,7 @@ const wordDatabase = [
   },
   {
     "h": "kicsit",
-    "e": "who; out",
+    "e": "a little; a bit",
     "m": "Spoken like \"keecheet\" — who.",
     "i": "/kitʃit/"
   },
@@ -699,7 +699,7 @@ const wordDatabase = [
   },
   {
     "h": "engem",
-    "e": "I",
+    "e": "me (accusative of én)",
     "m": "Spoken like \"engem\" — I.",
     "i": "/ɛnɡɛm/"
   },
@@ -723,7 +723,7 @@ const wordDatabase = [
   },
   {
     "h": "mondtam",
-    "e": "says",
+    "e": "I said",
     "m": "Spoken like \"mondtam\" — says.",
     "i": "/mondtɒm/"
   },
@@ -753,7 +753,7 @@ const wordDatabase = [
   },
   {
     "h": "mindent",
-    "e": "what; we",
+    "e": "everything (accusative)",
     "m": "Spoken like \"meendent\" — what.",
     "i": "/mindɛnt/"
   },
@@ -783,13 +783,13 @@ const wordDatabase = [
   },
   {
     "h": "semmit",
-    "e": "neither; nor",
+    "e": "nothing (accusative)",
     "m": "Spoken like \"semmeet\" — neither.",
     "i": "/ʃɛmːit/"
   },
   {
     "h": "benne",
-    "e": "into; in",
+    "e": "in it; in him/her",
     "m": "Spoken like \"benne\" — into.",
     "i": "/bɛnːɛ/"
   },
@@ -825,7 +825,7 @@ const wordDatabase = [
   },
   {
     "h": "ezért",
-    "e": "this",
+    "e": "therefore; for this; because of this",
     "m": "Spoken like \"ezért\" — this.",
     "i": "/ɛzeːrt/"
   },
@@ -861,7 +861,7 @@ const wordDatabase = [
   },
   {
     "h": "mindenki",
-    "e": "what; we",
+    "e": "everyone; everybody",
     "m": "Spoken like \"meendenkee\" — what.",
     "i": "/mindɛnki/"
   },
@@ -909,7 +909,7 @@ const wordDatabase = [
   },
   {
     "h": "magát",
-    "e": "today",
+    "e": "himself/herself/itself (accusative)",
     "m": "Spoken like \"magát\" — today.",
     "i": "/mɒɡaːt/"
   },
@@ -939,7 +939,7 @@ const wordDatabase = [
   },
   {
     "h": "ezek",
-    "e": "this",
+    "e": "these",
     "m": "Spoken like \"ezek\" — this.",
     "i": "/ɛzɛk/"
   },
@@ -951,13 +951,13 @@ const wordDatabase = [
   },
   {
     "h": "istenem",
-    "e": "also; too",
+    "e": "my God",
     "m": "Spoken like \"eestenem\" — also.",
     "i": "/iʃtɛnɛm/"
   },
   {
     "h": "miatt",
-    "e": "what; we",
+    "e": "because of",
     "m": "Spoken like \"meeatt\" — what.",
     "i": "/miɒtː/"
   },
@@ -969,7 +969,7 @@ const wordDatabase = [
   },
   {
     "h": "emberek",
-    "e": "person",
+    "e": "people",
     "m": "Spoken like \"emberek\" — person.",
     "i": "/ɛmbɛrɛk/"
   },
@@ -987,19 +987,19 @@ const wordDatabase = [
   },
   {
     "h": "minket",
-    "e": "what; we",
+    "e": "us (accusative)",
     "m": "Spoken like \"meenket\" — what.",
     "i": "/minkɛt/"
   },
   {
     "h": "este",
-    "e": "and",
+    "e": "in the evening; evening",
     "m": "Spoken like \"este\" — and.",
     "i": "/ɛʃtɛ/"
   },
   {
     "h": "mintha",
-    "e": "what; we",
+    "e": "as if; as though",
     "m": "Spoken like \"meentha\" — what.",
     "i": "/minthɒ/"
   },
@@ -1047,7 +1047,7 @@ const wordDatabase = [
   },
   {
     "h": "igazán",
-    "e": "true",
+    "e": "really; truly",
     "m": "Spoken like \"eegazán\" — true.",
     "i": "/iɡɒzaːn/"
   },
@@ -1059,7 +1059,7 @@ const wordDatabase = [
   },
   {
     "h": "mondja",
-    "e": "says",
+    "e": "he/she says (it)",
     "m": "Spoken like \"mondja\" — says.",
     "i": "/mondjɒ/"
   },
@@ -1095,7 +1095,7 @@ const wordDatabase = [
   },
   {
     "h": "sosem",
-    "e": "salt",
+    "e": "never",
     "m": "Spoken like \"sosem\" — salt.",
     "i": "/ʃoʃɛm/"
   },
@@ -1119,7 +1119,7 @@ const wordDatabase = [
   },
   {
     "h": "tudtam",
-    "e": "knows; can",
+    "e": "I knew; I could",
     "m": "Spoken like \"toodtam\" — knows.",
     "i": "/tudtɒm/"
   },
@@ -1167,7 +1167,7 @@ const wordDatabase = [
   },
   {
     "h": "megyek",
-    "e": "still; yet",
+    "e": "I go",
     "m": "Spoken like \"medyek\" — still.",
     "i": "/mɛɟɛk/"
   },
@@ -1185,7 +1185,7 @@ const wordDatabase = [
   },
   {
     "h": "lenni",
-    "e": "down",
+    "e": "to be",
     "m": "Spoken like \"lennee\" — down.",
     "i": "/lɛnːi/"
   },
@@ -1221,7 +1221,7 @@ const wordDatabase = [
   },
   {
     "h": "isten",
-    "e": "also; too",
+    "e": "God",
     "m": "Spoken like \"eesten\" — also.",
     "i": "/iʃtɛn/"
   },
@@ -1239,7 +1239,7 @@ const wordDatabase = [
   },
   {
     "h": "jobban",
-    "e": "good",
+    "e": "better (adverb)",
     "m": "Spoken like \"jobban\" — good.",
     "i": "/jobːɒn/"
   },
@@ -1269,7 +1269,7 @@ const wordDatabase = [
   },
   {
     "h": "magam",
-    "e": "today",
+    "e": "myself",
     "m": "Spoken like \"magam\" — today.",
     "i": "/mɒɡɒm/"
   },
@@ -1305,25 +1305,25 @@ const wordDatabase = [
   },
   {
     "h": "ezzel",
-    "e": "this",
+    "e": "with this",
     "m": "Spoken like \"ezzel\" — this.",
     "i": "/ɛzːɛl/"
   },
   {
     "h": "magad",
-    "e": "today",
+    "e": "yourself",
     "m": "Spoken like \"magad\" — today.",
     "i": "/mɒɡɒd/"
   },
   {
     "h": "mind",
-    "e": "what; we",
+    "e": "all; everything",
     "m": "Spoken like \"meend\" — what.",
     "i": "/mind/"
   },
   {
     "h": "egyetlen",
-    "e": "one; a",
+    "e": "single; only one",
     "m": "Spoken like \"edyetlen\" — one.",
     "i": "/ɛɟɛtlɛn/"
   },
@@ -1335,7 +1335,7 @@ const wordDatabase = [
   },
   {
     "h": "teljesen",
-    "e": "you (sing.)",
+    "e": "completely; fully",
     "m": "Spoken like \"teljesen\" — you (sing.).",
     "i": "/tɛljɛʃɛn/"
   },
@@ -1353,7 +1353,7 @@ const wordDatabase = [
   },
   {
     "h": "haver",
-    "e": "if",
+    "e": "buddy; friend (informal)",
     "m": "Spoken like \"haver\" — if.",
     "i": "/hɒvɛr/"
   },
@@ -1371,7 +1371,7 @@ const wordDatabase = [
   },
   {
     "h": "hozzá",
-    "e": "snow",
+    "e": "to him/her/it",
     "m": "Spoken like \"hozzá\" — snow.",
     "i": "/hozːaː/"
   },
@@ -1389,7 +1389,7 @@ const wordDatabase = [
   },
   {
     "h": "mire",
-    "e": "what; we",
+    "e": "onto what; until; for what",
     "m": "Spoken like \"meere\" — what.",
     "i": "/mirɛ/"
   },
@@ -1401,7 +1401,7 @@ const wordDatabase = [
   },
   {
     "h": "mielőtt",
-    "e": "what; we",
+    "e": "before",
     "m": "Spoken like \"meeelőtt\" — what.",
     "i": "/miɛløːtː/"
   },
@@ -1455,7 +1455,7 @@ const wordDatabase = [
   },
   {
     "h": "hadd",
-    "e": "if",
+    "e": "let (imperative particle)",
     "m": "Spoken like \"hadd\" — if.",
     "i": "/hɒdː/"
   },
@@ -1467,7 +1467,7 @@ const wordDatabase = [
   },
   {
     "h": "micsoda",
-    "e": "what; we",
+    "e": "what (exclamatory)",
     "m": "Spoken like \"meechoda\" — what.",
     "i": "/mitʃodɒ/"
   },
@@ -1491,13 +1491,13 @@ const wordDatabase = [
   },
   {
     "h": "komolyan",
-    "e": "stone",
+    "e": "seriously",
     "m": "Spoken like \"komoyan\" — stone.",
     "i": "/komojɒn/"
   },
   {
     "h": "szeretném",
-    "e": "loves; likes",
+    "e": "I would like; I would love",
     "m": "Spoken like \"seretném\" — loves.",
     "i": "/sɛrɛtneːm/"
   },
@@ -1557,7 +1557,7 @@ const wordDatabase = [
   },
   {
     "h": "ben",
-    "e": "into; in",
+    "e": "in (variant suffix form)",
     "m": "Spoken like \"ben\" — into.",
     "i": "/bɛn/"
   },
@@ -1605,13 +1605,13 @@ const wordDatabase = [
   },
   {
     "h": "ennek",
-    "e": "I",
+    "e": "to this; for this",
     "m": "Spoken like \"ennek\" — I.",
     "i": "/ɛnːɛk/"
   },
   {
     "h": "gyorsan",
-    "e": "fast",
+    "e": "fast; quickly",
     "m": "Spoken like \"dyorsan\" — fast.",
     "i": "/ɟorʃɒn/"
   },
@@ -1665,7 +1665,7 @@ const wordDatabase = [
   },
   {
     "h": "beszélni",
-    "e": "into; in",
+    "e": "to speak; to talk",
     "m": "Spoken like \"besélnee\" — into.",
     "i": "/bɛseːlni/"
   },
@@ -1677,7 +1677,7 @@ const wordDatabase = [
   },
   {
     "h": "igazi",
-    "e": "true",
+    "e": "real; genuine",
     "m": "Spoken like \"eegazee\" — true.",
     "i": "/iɡɒzi/"
   },
@@ -1707,7 +1707,7 @@ const wordDatabase = [
   },
   {
     "h": "fogja",
-    "e": "tooth",
+    "e": "he/she holds/catches (it)",
     "m": "Spoken like \"fogja\" — tooth.",
     "i": "/foɡjɒ/"
   },
@@ -1731,13 +1731,13 @@ const wordDatabase = [
   },
   {
     "h": "nekik",
-    "e": "don't",
+    "e": "to them",
     "m": "Spoken like \"nekeek\" — don't.",
     "i": "/nɛkik/"
   },
   {
     "h": "fogok",
-    "e": "tooth",
+    "e": "I will; I catch",
     "m": "Spoken like \"fogok\" — tooth.",
     "i": "/foɡok/"
   },
@@ -1761,7 +1761,7 @@ const wordDatabase = [
   },
   {
     "h": "haza",
-    "e": "if",
+    "e": "home; homeland",
     "m": "Spoken like \"haza\" — if.",
     "i": "/hɒzɒ/"
   },
@@ -1779,7 +1779,7 @@ const wordDatabase = [
   },
   {
     "h": "sokat",
-    "e": "salt",
+    "e": "a lot (accusative)",
     "m": "Spoken like \"sokat\" — salt.",
     "i": "/ʃokɒt/"
   },
@@ -1791,7 +1791,7 @@ const wordDatabase = [
   },
   {
     "h": "hagyd",
-    "e": "if",
+    "e": "leave it! (imperative)",
     "m": "Spoken like \"hadyd\" — if.",
     "i": "/hɒɟd/"
   },
@@ -1809,7 +1809,7 @@ const wordDatabase = [
   },
   {
     "h": "hallottam",
-    "e": "if",
+    "e": "I heard",
     "m": "Spoken like \"hallottam\" — if.",
     "i": "/hɒlːotːɒm/"
   },
@@ -1827,25 +1827,25 @@ const wordDatabase = [
   },
   {
     "h": "magának",
-    "e": "today",
+    "e": "to himself/herself",
     "m": "Spoken like \"magának\" — today.",
     "i": "/mɒɡaːnɒk/"
   },
   {
     "h": "szeretnék",
-    "e": "loves; likes",
+    "e": "I would like; I would love",
     "m": "Spoken like \"seretnék\" — loves.",
     "i": "/sɛrɛtneːk/"
   },
   {
     "h": "azonnal",
-    "e": "the; that",
+    "e": "immediately; right away",
     "m": "Spoken like \"azonnal\" — the.",
     "i": "/ɒzonːɒl/"
   },
   {
     "h": "ennyi",
-    "e": "I",
+    "e": "this much; this many",
     "m": "Spoken like \"ennyee\" — I.",
     "i": "/ɛɲːi/"
   },
@@ -1857,25 +1857,25 @@ const wordDatabase = [
   },
   {
     "h": "ezen",
-    "e": "this",
+    "e": "on this",
     "m": "Spoken like \"ezen\" — this.",
     "i": "/ɛzɛn/"
   },
   {
     "h": "csinálni",
-    "e": "to do; to make",
+    "e": "to make; to do",
     "m": "Spoken like \"cheenálnee\".",
     "i": "/tʃinaːlni/"
   },
   {
     "h": "hanem",
-    "e": "if",
+    "e": "but rather; but",
     "m": "Spoken like \"hanem\" — if.",
     "i": "/hɒnɛm/"
   },
   {
     "h": "nagyszerű",
-    "e": "big",
+    "e": "great; wonderful",
     "m": "Spoken like \"nadyserű\" — big.",
     "i": "/nɒɟsɛryː/"
   },
@@ -1893,13 +1893,13 @@ const wordDatabase = [
   },
   {
     "h": "mondtad",
-    "e": "says",
+    "e": "you said",
     "m": "Spoken like \"mondtad\" — says.",
     "i": "/mondtɒd/"
   },
   {
     "h": "fogom",
-    "e": "tooth",
+    "e": "I hold/catch (it)",
     "m": "Spoken like \"fogom\" — tooth.",
     "i": "/foɡom/"
   },
@@ -1923,7 +1923,7 @@ const wordDatabase = [
   },
   {
     "h": "többet",
-    "e": "more",
+    "e": "more (accusative)",
     "m": "Spoken like \"többet\".",
     "i": "/tøbːɛt/"
   },
@@ -1935,13 +1935,13 @@ const wordDatabase = [
   },
   {
     "h": "halott",
-    "e": "if",
+    "e": "dead; deceased",
     "m": "Spoken like \"halott\" — if.",
     "i": "/hɒlotː/"
   },
   {
     "h": "fogsz",
-    "e": "tooth",
+    "e": "you will; you catch",
     "m": "Spoken like \"fogs\" — tooth.",
     "i": "/foɡs/"
   },
@@ -1959,7 +1959,7 @@ const wordDatabase = [
   },
   {
     "h": "bele",
-    "e": "into; in",
+    "e": "into it",
     "m": "Spoken like \"bele\" — into.",
     "i": "/bɛlɛ/"
   },
@@ -1977,13 +1977,13 @@ const wordDatabase = [
   },
   {
     "h": "add",
-    "e": "gives",
+    "e": "give! (imperative)",
     "m": "Spoken like \"add\" — gives.",
     "i": "/ɒdː/"
   },
   {
     "h": "miről",
-    "e": "what; we",
+    "e": "about what",
     "m": "Spoken like \"meeről\" — what.",
     "i": "/mirøːl/"
   },
@@ -2019,7 +2019,7 @@ const wordDatabase = [
   },
   {
     "h": "meghalt",
-    "e": "still; yet",
+    "e": "died",
     "m": "Spoken like \"meghalt\" — still.",
     "i": "/mɛɡhɒlt/"
   },
@@ -2061,13 +2061,13 @@ const wordDatabase = [
   },
   {
     "h": "sokkal",
-    "e": "salt",
+    "e": "by a lot; much",
     "m": "Spoken like \"sokkal\" — salt.",
     "i": "/ʃokːɒl/"
   },
   {
     "h": "szeretlek",
-    "e": "loves; likes",
+    "e": "I love you",
     "m": "Spoken like \"seretlek\" — loves.",
     "i": "/sɛrɛtlɛk/"
   },
@@ -2157,7 +2157,7 @@ const wordDatabase = [
   },
   {
     "h": "mivel",
-    "e": "what; we",
+    "e": "with what; since; because",
     "m": "Spoken like \"meevel\" — what.",
     "i": "/mivɛl/"
   },
@@ -2199,7 +2199,7 @@ const wordDatabase = [
   },
   {
     "h": "szeretem",
-    "e": "loves; likes",
+    "e": "I love (it/him/her)",
     "m": "Spoken like \"seretem\" — loves.",
     "i": "/sɛrɛtɛm/"
   },
@@ -2223,13 +2223,13 @@ const wordDatabase = [
   },
   {
     "h": "beszélsz",
-    "e": "into; in",
+    "e": "you speak",
     "m": "Spoken like \"beséls\" — into.",
     "i": "/bɛseːls/"
   },
   {
     "h": "megyünk",
-    "e": "still; yet",
+    "e": "we go",
     "m": "Spoken like \"medyünk\" — still.",
     "i": "/mɛɟynk/"
   },
@@ -2253,7 +2253,7 @@ const wordDatabase = [
   },
   {
     "h": "vagytok",
-    "e": "or; you are",
+    "e": "you are (plural)",
     "m": "Spoken like \"vadytok\" — or.",
     "i": "/vɒɟtok/"
   },
@@ -2265,7 +2265,7 @@ const wordDatabase = [
   },
   {
     "h": "ezeket",
-    "e": "this",
+    "e": "these (accusative)",
     "m": "Spoken like \"ezeket\" — this.",
     "i": "/ɛzɛkɛt/"
   },
@@ -2307,13 +2307,13 @@ const wordDatabase = [
   },
   {
     "h": "éppen",
-    "e": "just; currently",
+    "e": "just; right now; currently",
     "m": "Spoken like \"éppen\".",
     "i": "/eːpːɛn/"
   },
   {
     "h": "beszél",
-    "e": "into; in",
+    "e": "he/she speaks",
     "m": "Spoken like \"besél\" — into.",
     "i": "/bɛseːl/"
   },
@@ -2391,7 +2391,7 @@ const wordDatabase = [
   },
   {
     "h": "találkozunk",
-    "e": "maybe",
+    "e": "we meet",
     "m": "Spoken like \"találkozoonk\" — maybe.",
     "i": "/tɒlaːlkozunk/"
   },
@@ -2403,13 +2403,13 @@ const wordDatabase = [
   },
   {
     "h": "majdnem",
-    "e": "today",
+    "e": "almost; nearly",
     "m": "Spoken like \"majdnem\" — today.",
     "i": "/mɒjdnɛm/"
   },
   {
     "h": "mindjárt",
-    "e": "what; we",
+    "e": "right away; just now",
     "m": "Spoken like \"meendjárt\" — what.",
     "i": "/mindjaːrt/"
   },
@@ -2439,7 +2439,7 @@ const wordDatabase = [
   },
   {
     "h": "maradj",
-    "e": "already",
+    "e": "stay! (imperative)",
     "m": "Spoken like \"maradj\" — already.",
     "i": "/mɒrɒdj/"
   },
@@ -2463,7 +2463,7 @@ const wordDatabase = [
   },
   {
     "h": "biztosan",
-    "e": "sure; certain",
+    "e": "surely; certainly",
     "m": "Spoken like \"beeztosan\" — sure.",
     "i": "/biztoʃɒn/"
   },
@@ -2511,7 +2511,7 @@ const wordDatabase = [
   },
   {
     "h": "enyém",
-    "e": "I",
+    "e": "mine",
     "m": "Spoken like \"enyém\" — I.",
     "i": "/ɛɲeːm/"
   },
@@ -2547,7 +2547,7 @@ const wordDatabase = [
   },
   {
     "h": "hozzám",
-    "e": "snow",
+    "e": "to me",
     "m": "Spoken like \"hozzám\" — snow.",
     "i": "/hozːaːm/"
   },
@@ -2565,7 +2565,7 @@ const wordDatabase = [
   },
   {
     "h": "valakit",
-    "e": "someone",
+    "e": "someone (accusative)",
     "m": "Spoken like \"valakeet\" — someone.",
     "i": "/vɒlɒkit/"
   },
@@ -2595,7 +2595,7 @@ const wordDatabase = [
   },
   {
     "h": "köszi",
-    "e": "thanks",
+    "e": "thanks (informal)",
     "m": "Spoken like \"kösee\".",
     "i": "/køsi/"
   },
@@ -2649,7 +2649,7 @@ const wordDatabase = [
   },
   {
     "h": "addig",
-    "e": "gives",
+    "e": "until then; up to that point",
     "m": "Spoken like \"addeeg\" — gives.",
     "i": "/ɒdːiɡ/"
   },
@@ -2667,7 +2667,7 @@ const wordDatabase = [
   },
   {
     "h": "viszlát",
-    "e": "carries; takes",
+    "e": "goodbye; see you",
     "m": "Spoken like \"veeslát\" — carries.",
     "i": "/vislaːt/"
   },
@@ -2721,13 +2721,13 @@ const wordDatabase = [
   },
   {
     "h": "bármit",
-    "e": "anything",
+    "e": "anything (accusative)",
     "m": "Spoken like \"bármeet\".",
     "i": "/baːrmit/"
   },
   {
     "h": "fogd",
-    "e": "tooth",
+    "e": "catch it! (imperative)",
     "m": "Spoken like \"fogd\" — tooth.",
     "i": "/foɡd/"
   },
@@ -2775,7 +2775,7 @@ const wordDatabase = [
   },
   {
     "h": "tettem",
-    "e": "you (sing.)",
+    "e": "I did; I put",
     "m": "Spoken like \"tettem\" — you (sing.).",
     "i": "/tɛtːɛm/"
   },
@@ -2787,13 +2787,13 @@ const wordDatabase = [
   },
   {
     "h": "fognak",
-    "e": "tooth",
+    "e": "they will; they catch",
     "m": "Spoken like \"fognak\" — tooth.",
     "i": "/foɡnɒk/"
   },
   {
     "h": "beszélek",
-    "e": "into; in",
+    "e": "I speak",
     "m": "Spoken like \"besélek\" — into.",
     "i": "/bɛseːlɛk/"
   },
@@ -2841,7 +2841,7 @@ const wordDatabase = [
   },
   {
     "h": "napot",
-    "e": "day; sun",
+    "e": "day (accusative)",
     "m": "Spoken like \"napot\" — day.",
     "i": "/nɒpot/"
   },
@@ -2883,7 +2883,7 @@ const wordDatabase = [
   },
   {
     "h": "mennyire",
-    "e": "how much",
+    "e": "how much; to what extent",
     "m": "Spoken like \"mennyeere\".",
     "i": "/mɛɲːirɛ/"
   },
@@ -2913,7 +2913,7 @@ const wordDatabase = [
   },
   {
     "h": "fogunk",
-    "e": "tooth",
+    "e": "we will; we catch",
     "m": "Spoken like \"fogoonk\" — tooth.",
     "i": "/foɡunk/"
   },
@@ -2955,7 +2955,7 @@ const wordDatabase = [
   },
   {
     "h": "egyszerűen",
-    "e": "one; a",
+    "e": "simply",
     "m": "Spoken like \"edyserűen\" — one.",
     "i": "/ɛɟsɛryːɛn/"
   },
@@ -3021,7 +3021,7 @@ const wordDatabase = [
   },
   {
     "h": "utána",
-    "e": "road; way",
+    "e": "afterwards; then",
     "m": "Spoken like \"ootána\" — road.",
     "i": "/utaːnɒ/"
   },
@@ -3057,7 +3057,7 @@ const wordDatabase = [
   },
   {
     "h": "reggelt",
-    "e": "morning",
+    "e": "morning (accusative)",
     "m": "Spoken like \"reggelt\" — morning.",
     "i": "/rɛɡːɛlt/"
   },
@@ -3087,7 +3087,7 @@ const wordDatabase = [
   },
   {
     "h": "miután",
-    "e": "what; we",
+    "e": "after",
     "m": "Spoken like \"meeootán\" — what.",
     "i": "/miutaːn/"
   },
@@ -3099,13 +3099,13 @@ const wordDatabase = [
   },
   {
     "h": "hat",
-    "e": "if",
+    "e": "six; to affect",
     "m": "Spoken like \"hat\" — if.",
     "i": "/hɒt/"
   },
   {
     "h": "mióta",
-    "e": "what; we",
+    "e": "since when; for how long",
     "m": "Spoken like \"meeóta\" — what.",
     "i": "/mioːtɒ/"
   },
@@ -3135,31 +3135,31 @@ const wordDatabase = [
   },
   {
     "h": "belőle",
-    "e": "into; in",
+    "e": "from it; out of it",
     "m": "Spoken like \"belőle\" — into.",
     "i": "/bɛløːlɛ/"
   },
   {
     "h": "természetesen",
-    "e": "you (sing.)",
+    "e": "naturally; of course",
     "m": "Spoken like \"termésetesen\" — you (sing.).",
     "i": "/tɛrmeːsɛtɛʃɛn/"
   },
   {
     "h": "ezelőtt",
-    "e": "this",
+    "e": "before this",
     "m": "Spoken like \"ezelőtt\" — this.",
     "i": "/ɛzɛløːtː/"
   },
   {
     "h": "fogod",
-    "e": "tooth",
+    "e": "you hold/catch (it)",
     "m": "Spoken like \"fogod\" — tooth.",
     "i": "/foɡod/"
   },
   {
     "h": "halló",
-    "e": "if",
+    "e": "hello (phone)",
     "m": "Spoken like \"halló\" — if.",
     "i": "/hɒlːoː/"
   },
@@ -3177,7 +3177,7 @@ const wordDatabase = [
   },
   {
     "h": "michael",
-    "e": "what; we",
+    "e": "Michael",
     "m": "Spoken like \"meechael\" — what.",
     "i": "/mixɒɛl/"
   },
@@ -3189,13 +3189,13 @@ const wordDatabase = [
   },
   {
     "h": "maguk",
-    "e": "today",
+    "e": "themselves; you (formal plural)",
     "m": "Spoken like \"magook\" — today.",
     "i": "/mɒɡuk/"
   },
   {
     "h": "találtam",
-    "e": "maybe",
+    "e": "I found",
     "m": "Spoken like \"találtam\" — maybe.",
     "i": "/tɒlaːltɒm/"
   },
@@ -3207,7 +3207,7 @@ const wordDatabase = [
   },
   {
     "h": "igaza",
-    "e": "true",
+    "e": "he/she is right",
     "m": "Spoken like \"eegaza\" — true.",
     "i": "/iɡɒzɒ/"
   },
@@ -3231,7 +3231,7 @@ const wordDatabase = [
   },
   {
     "h": "belül",
-    "e": "into; in",
+    "e": "inside; within",
     "m": "Spoken like \"belül\" — into.",
     "i": "/bɛlyl/"
   },
@@ -3243,13 +3243,13 @@ const wordDatabase = [
   },
   {
     "h": "melyik",
-    "e": "which",
+    "e": "which (one)",
     "m": "Spoken like \"meyeek\".",
     "i": "/mɛjik/"
   },
   {
     "h": "nevem",
-    "e": "don't",
+    "e": "my name",
     "m": "Spoken like \"nevem\" — don't.",
     "i": "/nɛvɛm/"
   },
@@ -3273,13 +3273,13 @@ const wordDatabase = [
   },
   {
     "h": "igazából",
-    "e": "true",
+    "e": "actually; truly",
     "m": "Spoken like \"eegazából\" — true.",
     "i": "/iɡɒzaːboːl/"
   },
   {
     "h": "tette",
-    "e": "you (sing.)",
+    "e": "he/she did/put (it)",
     "m": "Spoken like \"tette\" — you (sing.).",
     "i": "/tɛtːɛ/"
   },
@@ -3303,7 +3303,7 @@ const wordDatabase = [
   },
   {
     "h": "ismerem",
-    "e": "also; too",
+    "e": "I know (it/him/her)",
     "m": "Spoken like \"eesmerem\" — also.",
     "i": "/iʃmɛrɛm/"
   },
@@ -3315,7 +3315,7 @@ const wordDatabase = [
   },
   {
     "h": "igazad",
-    "e": "true",
+    "e": "you are right",
     "m": "Spoken like \"eegazad\" — true.",
     "i": "/iɡɒzɒd/"
   },
@@ -3345,7 +3345,7 @@ const wordDatabase = [
   },
   {
     "h": "hangzik",
-    "e": "if",
+    "e": "sounds",
     "m": "Spoken like \"hangzeek\" — if.",
     "i": "/hɒnɡzik/"
   },
@@ -3417,7 +3417,7 @@ const wordDatabase = [
   },
   {
     "h": "egymást",
-    "e": "one; a",
+    "e": "each other (accusative)",
     "m": "Spoken like \"edymást\" — one.",
     "i": "/ɛɟmaːʃt/"
   },
@@ -3441,13 +3441,13 @@ const wordDatabase = [
   },
   {
     "h": "magával",
-    "e": "today",
+    "e": "with himself/herself",
     "m": "Spoken like \"magával\" — today.",
     "i": "/mɒɡaːvɒl/"
   },
   {
     "h": "beteg",
-    "e": "into; in",
+    "e": "sick; ill",
     "m": "Spoken like \"beteg\" — into.",
     "i": "/bɛtɛɡ/"
   },
@@ -3471,7 +3471,7 @@ const wordDatabase = [
   },
   {
     "h": "bennem",
-    "e": "into; in",
+    "e": "in me",
     "m": "Spoken like \"bennem\" — into.",
     "i": "/bɛnːɛm/"
   },
@@ -3489,7 +3489,7 @@ const wordDatabase = [
   },
   {
     "h": "hamarosan",
-    "e": "if",
+    "e": "soon; shortly",
     "m": "Spoken like \"hamarosan\" — if.",
     "i": "/hɒmɒroʃɒn/"
   },
@@ -3501,7 +3501,7 @@ const wordDatabase = [
   },
   {
     "h": "gyerekek",
-    "e": "child",
+    "e": "children",
     "m": "Spoken like \"dyerekek\" — child.",
     "i": "/ɟɛrɛkɛk/"
   },
@@ -3579,7 +3579,7 @@ const wordDatabase = [
   },
   {
     "h": "lennék",
-    "e": "down",
+    "e": "I would be",
     "m": "Spoken like \"lennék\" — down.",
     "i": "/lɛnːeːk/"
   },
@@ -3609,7 +3609,7 @@ const wordDatabase = [
   },
   {
     "h": "maradt",
-    "e": "already",
+    "e": "stayed; remained",
     "m": "Spoken like \"maradt\" — already.",
     "i": "/mɒrɒdt/"
   },
@@ -3621,13 +3621,13 @@ const wordDatabase = [
   },
   {
     "h": "rosszul",
-    "e": "bad",
+    "e": "badly; wrong",
     "m": "Spoken like \"rossool\" — bad.",
     "i": "/rosːul/"
   },
   {
     "h": "egyszerű",
-    "e": "one; a",
+    "e": "simple",
     "m": "Spoken like \"edyserű\" — one.",
     "i": "/ɛɟsɛryː/"
   },
@@ -3639,7 +3639,7 @@ const wordDatabase = [
   },
   {
     "h": "sokáig",
-    "e": "salt",
+    "e": "for a long time",
     "m": "Spoken like \"sokáeeg\" — salt.",
     "i": "/ʃokaːiɡ/"
   },
@@ -3657,7 +3657,7 @@ const wordDatabase = [
   },
   {
     "h": "előre",
-    "e": "forward; ahead",
+    "e": "forward; ahead; in advance",
     "m": "Spoken like \"előre\".",
     "i": "/ɛløːrɛ/"
   },
@@ -3669,13 +3669,13 @@ const wordDatabase = [
   },
   {
     "h": "embereket",
-    "e": "person",
+    "e": "people (accusative)",
     "m": "Spoken like \"embereket\" — person.",
     "i": "/ɛmbɛrɛkɛt/"
   },
   {
     "h": "hiszi",
-    "e": "believes",
+    "e": "he/she believes",
     "m": "Spoken like \"heesee\".",
     "i": "/hisi/"
   },
@@ -3729,7 +3729,7 @@ const wordDatabase = [
   },
   {
     "h": "lennie",
-    "e": "down",
+    "e": "for him/her to be",
     "m": "Spoken like \"lenneee\" — down.",
     "i": "/lɛnːiɛ/"
   },
@@ -3741,7 +3741,7 @@ const wordDatabase = [
   },
   {
     "h": "viszont",
-    "e": "carries; takes",
+    "e": "on the other hand; however",
     "m": "Spoken like \"veesont\" — carries.",
     "i": "/visont/"
   },
@@ -3759,7 +3759,7 @@ const wordDatabase = [
   },
   {
     "h": "mondják",
-    "e": "says",
+    "e": "they say (it)",
     "m": "Spoken like \"mondják\" — says.",
     "i": "/mondjaːk/"
   },
@@ -3777,7 +3777,7 @@ const wordDatabase = [
   },
   {
     "h": "nincsenek",
-    "e": "there isn't",
+    "e": "there are no; they are not",
     "m": "Spoken like \"neenchenek\" — there isn't.",
     "i": "/nintʃɛnɛk/"
   },
@@ -3789,13 +3789,13 @@ const wordDatabase = [
   },
   {
     "h": "keresztül",
-    "e": "asks; requests",
+    "e": "through; across",
     "m": "Spoken like \"kerestül\" — asks.",
     "i": "/kɛrɛstyl/"
   },
   {
     "h": "minek",
-    "e": "what; we",
+    "e": "what for; why",
     "m": "Spoken like \"meenek\" — what.",
     "i": "/minɛk/"
   },
@@ -3813,7 +3813,7 @@ const wordDatabase = [
   },
   {
     "h": "igazság",
-    "e": "true",
+    "e": "truth; justice",
     "m": "Spoken like \"eegazhág\" — true.",
     "i": "/iɡɒʒaːɡ/"
   },
@@ -3843,7 +3843,7 @@ const wordDatabase = [
   },
   {
     "h": "mindegy",
-    "e": "what; we",
+    "e": "it doesn't matter; either way",
     "m": "Spoken like \"meendedy\" — what.",
     "i": "/mindɛɟ/"
   },
@@ -3861,7 +3861,7 @@ const wordDatabase = [
   },
   {
     "h": "bent",
-    "e": "into; in",
+    "e": "inside; indoors",
     "m": "Spoken like \"bent\" — into.",
     "i": "/bɛnt/"
   },
@@ -3879,7 +3879,7 @@ const wordDatabase = [
   },
   {
     "h": "nagyobb",
-    "e": "big",
+    "e": "bigger; larger",
     "m": "Spoken like \"nadyobb\" — big.",
     "i": "/nɒɟobː/"
   },
@@ -3891,13 +3891,13 @@ const wordDatabase = [
   },
   {
     "h": "azokat",
-    "e": "the; that",
+    "e": "those (accusative)",
     "m": "Spoken like \"azokat\" — the.",
     "i": "/ɒzokɒt/"
   },
   {
     "h": "kicsim",
-    "e": "who; out",
+    "e": "my little one; darling",
     "m": "Spoken like \"keecheem\" — who.",
     "i": "/kitʃim/"
   },
@@ -3933,13 +3933,13 @@ const wordDatabase = [
   },
   {
     "h": "mindenkinek",
-    "e": "what; we",
+    "e": "to everyone",
     "m": "Spoken like \"meendenkeenek\" — what.",
     "i": "/mindɛnkinɛk/"
   },
   {
     "h": "hatalmas",
-    "e": "if",
+    "e": "huge; enormous",
     "m": "Spoken like \"hatalmas\" — if.",
     "i": "/hɒtɒlmɒʃ/"
   },
@@ -3957,7 +3957,7 @@ const wordDatabase = [
   },
   {
     "h": "adj",
-    "e": "gives",
+    "e": "give! (imperative)",
     "m": "Spoken like \"adj\" — gives.",
     "i": "/ɒdj/"
   },
@@ -3999,13 +3999,13 @@ const wordDatabase = [
   },
   {
     "h": "ennyire",
-    "e": "I",
+    "e": "this much (to this extent)",
     "m": "Spoken like \"ennyeere\" — I.",
     "i": "/ɛɲːirɛ/"
   },
   {
     "h": "vagyis",
-    "e": "or; you are",
+    "e": "that is; namely; or rather",
     "m": "Spoken like \"vadyees\" — or.",
     "i": "/vɒɟiʃ/"
   },
@@ -4065,7 +4065,7 @@ const wordDatabase = [
   },
   {
     "h": "halál",
-    "e": "if",
+    "e": "death",
     "m": "Spoken like \"halál\" — if.",
     "i": "/hɒlaːl/"
   },
@@ -4089,7 +4089,7 @@ const wordDatabase = [
   },
   {
     "h": "esetleg",
-    "e": "and",
+    "e": "possibly; perhaps",
     "m": "Spoken like \"esetleg\" — and.",
     "i": "/ɛʃɛtlɛɡ/"
   },
@@ -4101,7 +4101,7 @@ const wordDatabase = [
   },
   {
     "h": "lehetséges",
-    "e": "down",
+    "e": "possible",
     "m": "Spoken like \"lehetséges\" — down.",
     "i": "/lɛhɛtʃeːɡɛʃ/"
   },
@@ -4137,7 +4137,7 @@ const wordDatabase = [
   },
   {
     "h": "adja",
-    "e": "gives",
+    "e": "he/she gives (it)",
     "m": "Spoken like \"adja\" — gives.",
     "i": "/ɒdjɒ/"
   },
@@ -4173,7 +4173,7 @@ const wordDatabase = [
   },
   {
     "h": "mindketten",
-    "e": "what; we",
+    "e": "both of them",
     "m": "Spoken like \"meendketten\" — what.",
     "i": "/mindkɛtːɛn/"
   },
@@ -4203,7 +4203,7 @@ const wordDatabase = [
   },
   {
     "h": "korábban",
-    "e": "stone",
+    "e": "earlier; previously",
     "m": "Spoken like \"korábban\" — stone.",
     "i": "/koraːbːɒn/"
   },
@@ -4227,7 +4227,7 @@ const wordDatabase = [
   },
   {
     "h": "mondjuk",
-    "e": "says",
+    "e": "let's say; I mean",
     "m": "Spoken like \"mondjook\" — says.",
     "i": "/mondjuk/"
   },
@@ -4263,13 +4263,13 @@ const wordDatabase = [
   },
   {
     "h": "magukat",
-    "e": "today",
+    "e": "themselves (accusative)",
     "m": "Spoken like \"magookat\" — today.",
     "i": "/mɒɡukɒt/"
   },
   {
     "h": "hagyja",
-    "e": "if",
+    "e": "let him/her leave (imperative)",
     "m": "Spoken like \"hadyja\" — if.",
     "i": "/hɒɟjɒ/"
   },
@@ -4305,13 +4305,13 @@ const wordDatabase = [
   },
   {
     "h": "beszéltem",
-    "e": "into; in",
+    "e": "I spoke",
     "m": "Spoken like \"beséltem\" — into.",
     "i": "/bɛseːltɛm/"
   },
   {
     "h": "veszélyes",
-    "e": "buys; takes",
+    "e": "dangerous",
     "m": "Spoken like \"veséyes\" — buys.",
     "i": "/vɛseːjɛʃ/"
   },
@@ -4347,7 +4347,7 @@ const wordDatabase = [
   },
   {
     "h": "mindenkit",
-    "e": "what; we",
+    "e": "everyone (accusative)",
     "m": "Spoken like \"meendenkeet\" — what.",
     "i": "/mindɛnkit/"
   },
@@ -4419,7 +4419,7 @@ const wordDatabase = [
   },
   {
     "h": "igazat",
-    "e": "true",
+    "e": "true (accusative)",
     "m": "Spoken like \"eegazat\" — true.",
     "i": "/iɡɒzɒt/"
   },
@@ -4443,13 +4443,13 @@ const wordDatabase = [
   },
   {
     "h": "fogják",
-    "e": "tooth",
+    "e": "they hold/catch (it)",
     "m": "Spoken like \"fogják\" — tooth.",
     "i": "/foɡjaːk/"
   },
   {
     "h": "fogjuk",
-    "e": "tooth",
+    "e": "let's hold/catch",
     "m": "Spoken like \"fogjook\" — tooth.",
     "i": "/foɡjuk/"
   },
@@ -4461,7 +4461,7 @@ const wordDatabase = [
   },
   {
     "h": "feleségem",
-    "e": "up",
+    "e": "my wife",
     "m": "Spoken like \"feleségem\" — up.",
     "i": "/fɛlɛʃeːɡɛm/"
   },
@@ -4479,7 +4479,7 @@ const wordDatabase = [
   },
   {
     "h": "dehogy",
-    "e": "but",
+    "e": "of course not; no way",
     "m": "Spoken like \"dehody\" — but.",
     "i": "/dɛhoɟ/"
   },
@@ -4491,19 +4491,19 @@ const wordDatabase = [
   },
   {
     "h": "hozzád",
-    "e": "snow",
+    "e": "to you",
     "m": "Spoken like \"hozzád\" — snow.",
     "i": "/hozːaːd/"
   },
   {
     "h": "szereti",
-    "e": "loves; likes",
+    "e": "he/she loves (it)",
     "m": "Spoken like \"seretee\" — loves.",
     "i": "/sɛrɛti/"
   },
   {
     "h": "régen",
-    "e": "long ago",
+    "e": "long ago; for a long time",
     "m": "Spoken like \"régen\".",
     "i": "/reːɡɛn/"
   },
@@ -4521,7 +4521,7 @@ const wordDatabase = [
   },
   {
     "h": "adni",
-    "e": "gives",
+    "e": "to give",
     "m": "Spoken like \"adnee\" — gives.",
     "i": "/ɒdni/"
   },
@@ -4545,7 +4545,7 @@ const wordDatabase = [
   },
   {
     "h": "biztonsági",
-    "e": "security",
+    "e": "security (adjective)",
     "m": "Spoken like \"beeztonságee\".",
     "i": "/biztonʃaːɡi/"
   },
@@ -4593,7 +4593,7 @@ const wordDatabase = [
   },
   {
     "h": "lehetne",
-    "e": "down",
+    "e": "could be; it would be possible",
     "m": "Spoken like \"lehetne\" — down.",
     "i": "/lɛhɛtnɛ/"
   },
@@ -4617,7 +4617,7 @@ const wordDatabase = [
   },
   {
     "h": "szemét",
-    "e": "eye",
+    "e": "his/her eye; trash/garbage",
     "m": "Spoken like \"semét\" — eye.",
     "i": "/sɛmeːt/"
   },
@@ -4635,13 +4635,13 @@ const wordDatabase = [
   },
   {
     "h": "adott",
-    "e": "gives",
+    "e": "given; he/she gave",
     "m": "Spoken like \"adott\" — gives.",
     "i": "/ɒdotː/"
   },
   {
     "h": "esküszöm",
-    "e": "and",
+    "e": "I swear",
     "m": "Spoken like \"esküsöm\" — and.",
     "i": "/ɛʃkysøm/"
   },
@@ -4665,7 +4665,7 @@ const wordDatabase = [
   },
   {
     "h": "ismered",
-    "e": "also; too",
+    "e": "you know (it)",
     "m": "Spoken like \"eesmered\" — also.",
     "i": "/iʃmɛrɛd/"
   },
@@ -4695,7 +4695,7 @@ const wordDatabase = [
   },
   {
     "h": "mai",
-    "e": "today",
+    "e": "today's; of today",
     "m": "Spoken like \"maee\" — today.",
     "i": "/mɒi/"
   },
@@ -4731,7 +4731,7 @@ const wordDatabase = [
   },
   {
     "h": "hallom",
-    "e": "if",
+    "e": "I hear it",
     "m": "Spoken like \"hallom\" — if.",
     "i": "/hɒlːom/"
   },
@@ -4755,7 +4755,7 @@ const wordDatabase = [
   },
   {
     "h": "tudtad",
-    "e": "knows; can",
+    "e": "you knew (it)",
     "m": "Spoken like \"toodtad\" — knows.",
     "i": "/tudtɒd/"
   },
@@ -4779,7 +4779,7 @@ const wordDatabase = [
   },
   {
     "h": "lehetett",
-    "e": "down",
+    "e": "could be; was possible",
     "m": "Spoken like \"lehetett\" — down.",
     "i": "/lɛhɛtɛtː/"
   },
@@ -4797,7 +4797,7 @@ const wordDatabase = [
   },
   {
     "h": "napja",
-    "e": "day; sun",
+    "e": "his/her day; days ago",
     "m": "Spoken like \"napja\" — day.",
     "i": "/nɒpjɒ/"
   },
@@ -4815,7 +4815,7 @@ const wordDatabase = [
   },
   {
     "h": "millió",
-    "e": "what; we",
+    "e": "million",
     "m": "Spoken like \"meelleeó\" — what.",
     "i": "/milːioː/"
   },
@@ -4833,37 +4833,37 @@ const wordDatabase = [
   },
   {
     "h": "senkit",
-    "e": "no one",
+    "e": "nobody (accusative)",
     "m": "Spoken like \"senkeet\" — no one.",
     "i": "/ʃɛnkit/"
   },
   {
     "h": "hallani",
-    "e": "if",
+    "e": "to hear",
     "m": "Spoken like \"hallanee\" — if.",
     "i": "/hɒlːɒni/"
   },
   {
     "h": "mindannyian",
-    "e": "what; we",
+    "e": "everyone; all of them",
     "m": "Spoken like \"meendannyeean\" — what.",
     "i": "/mindɒɲːiɒn/"
   },
   {
     "h": "ezer",
-    "e": "this",
+    "e": "thousand",
     "m": "Spoken like \"ezer\" — this.",
     "i": "/ɛzɛr/"
   },
   {
     "h": "beszélt",
-    "e": "into; in",
+    "e": "he/she spoke",
     "m": "Spoken like \"besélt\" — into.",
     "i": "/bɛseːlt/"
   },
   {
     "h": "ismeri",
-    "e": "also; too",
+    "e": "he/she knows",
     "m": "Spoken like \"eesmeree\" — also.",
     "i": "/iʃmɛri/"
   },
@@ -4899,19 +4899,19 @@ const wordDatabase = [
   },
   {
     "h": "került",
-    "e": "asks; requests",
+    "e": "cost; avoided; became",
     "m": "Spoken like \"került\" — asks.",
     "i": "/kɛrylt/"
   },
   {
     "h": "halt",
-    "e": "if",
+    "e": "died",
     "m": "Spoken like \"halt\" — if.",
     "i": "/hɒlt/"
   },
   {
     "h": "estét",
-    "e": "and",
+    "e": "evening (accusative)",
     "m": "Spoken like \"estét\" — and.",
     "i": "/ɛʃteːt/"
   },
@@ -4965,13 +4965,13 @@ const wordDatabase = [
   },
   {
     "h": "maradjon",
-    "e": "already",
+    "e": "let him/her stay",
     "m": "Spoken like \"maradjon\" — already.",
     "i": "/mɒrɒdjon/"
   },
   {
     "h": "hoztam",
-    "e": "snow",
+    "e": "I brought",
     "m": "Spoken like \"hoztam\" — snow.",
     "i": "/hoztɒm/"
   },
@@ -4995,7 +4995,7 @@ const wordDatabase = [
   },
   {
     "h": "valakinek",
-    "e": "someone",
+    "e": "to someone",
     "m": "Spoken like \"valakeenek\" — someone.",
     "i": "/vɒlɒkinɛk/"
   },
@@ -5025,13 +5025,13 @@ const wordDatabase = [
   },
   {
     "h": "magára",
-    "e": "today",
+    "e": "onto himself/herself",
     "m": "Spoken like \"magára\" — today.",
     "i": "/mɒɡaːrɒ/"
   },
   {
     "h": "felesége",
-    "e": "up",
+    "e": "his/her wife",
     "m": "Spoken like \"felesége\" — up.",
     "i": "/fɛlɛʃeːɡɛ/"
   },
@@ -5061,7 +5061,7 @@ const wordDatabase = [
   },
   {
     "h": "senkinek",
-    "e": "no one",
+    "e": "to nobody",
     "m": "Spoken like \"senkeenek\" — no one.",
     "i": "/ʃɛnkinɛk/"
   },
@@ -5091,7 +5091,7 @@ const wordDatabase = [
   },
   {
     "h": "beszélj",
-    "e": "into; in",
+    "e": "speak! (imperative)",
     "m": "Spoken like \"besélj\" — into.",
     "i": "/bɛseːlj/"
   },
@@ -5103,7 +5103,7 @@ const wordDatabase = [
   },
   {
     "h": "benned",
-    "e": "into; in",
+    "e": "in you",
     "m": "Spoken like \"benned\" — into.",
     "i": "/bɛnːɛd/"
   },
@@ -5115,7 +5115,7 @@ const wordDatabase = [
   },
   {
     "h": "találkoztunk",
-    "e": "maybe",
+    "e": "we met",
     "m": "Spoken like \"találkoztoonk\" — maybe.",
     "i": "/tɒlaːlkoztunk/"
   },
@@ -5127,7 +5127,7 @@ const wordDatabase = [
   },
   {
     "h": "ezredes",
-    "e": "this",
+    "e": "colonel",
     "m": "Spoken like \"ezredes\" — this.",
     "i": "/ɛzrɛdɛʃ/"
   },
@@ -5145,13 +5145,13 @@ const wordDatabase = [
   },
   {
     "h": "ennél",
-    "e": "I",
+    "e": "than this; at this",
     "m": "Spoken like \"ennél\" — I.",
     "i": "/ɛnːeːl/"
   },
   {
     "h": "egyébként",
-    "e": "one; a",
+    "e": "by the way; otherwise",
     "m": "Spoken like \"edyébként\" — one.",
     "i": "/ɛɟeːbkeːnt/"
   },
@@ -5163,7 +5163,7 @@ const wordDatabase = [
   },
   {
     "h": "felejtsd",
-    "e": "up",
+    "e": "forget it (imperative)",
     "m": "Spoken like \"felejtsd\" — up.",
     "i": "/fɛlɛjtʃd/"
   },
@@ -5175,7 +5175,7 @@ const wordDatabase = [
   },
   {
     "h": "bocsi",
-    "e": "sorry",
+    "e": "sorry (informal)",
     "m": "Spoken like \"bochee\".",
     "i": "/botʃi/"
   },
@@ -5205,7 +5205,7 @@ const wordDatabase = [
   },
   {
     "h": "megölni",
-    "e": "still; yet",
+    "e": "to kill",
     "m": "Spoken like \"megölnee\" — still.",
     "i": "/mɛɡølni/"
   },
@@ -5223,7 +5223,7 @@ const wordDatabase = [
   },
   {
     "h": "kislány",
-    "e": "who; out",
+    "e": "little girl",
     "m": "Spoken like \"keeslány\" — who.",
     "i": "/kiʃlaːɲ/"
   },
@@ -5259,19 +5259,19 @@ const wordDatabase = [
   },
   {
     "h": "itthon",
-    "e": "here",
+    "e": "at home",
     "m": "Spoken like \"eetthon\" — here.",
     "i": "/itːhon/"
   },
   {
     "h": "napon",
-    "e": "day; sun",
+    "e": "on a day",
     "m": "Spoken like \"napon\" — day.",
     "i": "/nɒpon/"
   },
   {
     "h": "ugyanaz",
-    "e": "so; that way",
+    "e": "the same",
     "m": "Spoken like \"oodyanaz\" — so.",
     "i": "/uɟɒnɒz/"
   },
@@ -5331,7 +5331,7 @@ const wordDatabase = [
   },
   {
     "h": "keresel",
-    "e": "asks; requests",
+    "e": "you search/look for",
     "m": "Spoken like \"keresel\" — asks.",
     "i": "/kɛrɛʃɛl/"
   },
@@ -5343,13 +5343,13 @@ const wordDatabase = [
   },
   {
     "h": "beszélünk",
-    "e": "into; in",
+    "e": "we speak",
     "m": "Spoken like \"besélünk\" — into.",
     "i": "/bɛseːlynk/"
   },
   {
     "h": "tudnak",
-    "e": "knows; can",
+    "e": "they know; they can",
     "m": "Spoken like \"toodnak\" — knows.",
     "i": "/tudnɒk/"
   },
@@ -5415,7 +5415,7 @@ const wordDatabase = [
   },
   {
     "h": "szeretne",
-    "e": "loves; likes",
+    "e": "he/she would like; would love",
     "m": "Spoken like \"seretne\" — loves.",
     "i": "/sɛrɛtnɛ/"
   },
@@ -5499,7 +5499,7 @@ const wordDatabase = [
   },
   {
     "h": "szeretnél",
-    "e": "loves; likes",
+    "e": "would you like; would you love",
     "m": "Spoken like \"seretnél\" — loves.",
     "i": "/sɛrɛtneːl/"
   },
@@ -5511,13 +5511,13 @@ const wordDatabase = [
   },
   {
     "h": "teszi",
-    "e": "you (sing.)",
+    "e": "he/she does/puts (it)",
     "m": "Spoken like \"tesee\" — you (sing.).",
     "i": "/tɛsi/"
   },
   {
     "h": "lehetetlen",
-    "e": "down",
+    "e": "impossible",
     "m": "Spoken like \"lehetetlen\" — down.",
     "i": "/lɛhɛtɛtlɛn/"
   },
@@ -5535,13 +5535,13 @@ const wordDatabase = [
   },
   {
     "h": "szereted",
-    "e": "loves; likes",
+    "e": "you love (it)",
     "m": "Spoken like \"sereted\" — loves.",
     "i": "/sɛrɛtɛd/"
   },
   {
     "h": "talált",
-    "e": "maybe",
+    "e": "found",
     "m": "Spoken like \"talált\" — maybe.",
     "i": "/tɒlaːlt/"
   },
@@ -5589,7 +5589,7 @@ const wordDatabase = [
   },
   {
     "h": "hajó",
-    "e": "if",
+    "e": "ship; boat",
     "m": "Spoken like \"hajó\" — if.",
     "i": "/hɒjoː/"
   },
@@ -5607,7 +5607,7 @@ const wordDatabase = [
   },
   {
     "h": "hallgass",
-    "e": "if",
+    "e": "listen! (imperative)",
     "m": "Spoken like \"hallgass\" — if.",
     "i": "/hɒlːɡɒʃː/"
   },
@@ -5625,7 +5625,7 @@ const wordDatabase = [
   },
   {
     "h": "adok",
-    "e": "gives",
+    "e": "I give",
     "m": "Spoken like \"adok\" — gives.",
     "i": "/ɒdok/"
   },
@@ -5715,7 +5715,7 @@ const wordDatabase = [
   },
   {
     "h": "hagyjuk",
-    "e": "if",
+    "e": "let's leave/let",
     "m": "Spoken like \"hadyjook\" — if.",
     "i": "/hɒɟjuk/"
   },
@@ -5757,7 +5757,7 @@ const wordDatabase = [
   },
   {
     "h": "rosszabb",
-    "e": "bad",
+    "e": "worse",
     "m": "Spoken like \"rossabb\" — bad.",
     "i": "/rosːɒbː/"
   },
@@ -5781,13 +5781,13 @@ const wordDatabase = [
   },
   {
     "h": "fogalmam",
-    "e": "tooth",
+    "e": "my concept/idea",
     "m": "Spoken like \"fogalmam\" — tooth.",
     "i": "/foɡɒlmɒm/"
   },
   {
     "h": "hagyj",
-    "e": "if",
+    "e": "leave! (imperative)",
     "m": "Spoken like \"hadyj\" — if.",
     "i": "/hɒɟj/"
   },
@@ -5805,7 +5805,7 @@ const wordDatabase = [
   },
   {
     "h": "megfelelő",
-    "e": "still; yet",
+    "e": "appropriate; suitable",
     "m": "Spoken like \"megfelelő\" — still.",
     "i": "/mɛɡfɛlɛløː/"
   },
@@ -5823,13 +5823,13 @@ const wordDatabase = [
   },
   {
     "h": "normális",
-    "e": "woman; grows",
+    "e": "normal",
     "m": "Spoken like \"normálees\" — woman.",
     "i": "/normaːliʃ/"
   },
   {
     "h": "magas",
-    "e": "today",
+    "e": "tall; high",
     "m": "Spoken like \"magas\" — today.",
     "i": "/mɒɡɒʃ/"
   },
@@ -5865,19 +5865,19 @@ const wordDatabase = [
   },
   {
     "h": "tettél",
-    "e": "you (sing.)",
+    "e": "you did (informal)",
     "m": "Spoken like \"tettél\" — you (sing.).",
     "i": "/tɛtːeːl/"
   },
   {
     "h": "fasz",
-    "e": "tree",
+    "e": "dick (vulgar)",
     "m": "Spoken like \"fas\" — tree.",
     "i": "/fɒs/"
   },
   {
     "h": "megölte",
-    "e": "still; yet",
+    "e": "he/she killed (him/her)",
     "m": "Spoken like \"megölte\" — still.",
     "i": "/mɛɡøltɛ/"
   },
@@ -5907,7 +5907,7 @@ const wordDatabase = [
   },
   {
     "h": "lennél",
-    "e": "down",
+    "e": "you would be",
     "m": "Spoken like \"lennél\" — down.",
     "i": "/lɛnːeːl/"
   },
@@ -5925,7 +5925,7 @@ const wordDatabase = [
   },
   {
     "h": "hadnagy",
-    "e": "if",
+    "e": "lieutenant",
     "m": "Spoken like \"hadnady\" — if.",
     "i": "/hɒdnɒɟ/"
   },
@@ -5967,7 +5967,7 @@ const wordDatabase = [
   },
   {
     "h": "harmadik",
-    "e": "if",
+    "e": "third",
     "m": "Spoken like \"harmadeek\" — if.",
     "i": "/hɒrmɒdik/"
   },
@@ -5979,7 +5979,7 @@ const wordDatabase = [
   },
   {
     "h": "tehetek",
-    "e": "you (sing.)",
+    "e": "I can do",
     "m": "Spoken like \"tehetek\" — you (sing.).",
     "i": "/tɛhɛtɛk/"
   },
@@ -5997,13 +5997,13 @@ const wordDatabase = [
   },
   {
     "h": "ennyit",
-    "e": "I",
+    "e": "this much (accusative)",
     "m": "Spoken like \"ennyeet\" — I.",
     "i": "/ɛɲːit/"
   },
   {
     "h": "szerettem",
-    "e": "loves; likes",
+    "e": "I loved (it)",
     "m": "Spoken like \"serettem\" — loves.",
     "i": "/sɛrɛtːɛm/"
   },
@@ -6015,7 +6015,7 @@ const wordDatabase = [
   },
   {
     "h": "engedd",
-    "e": "I",
+    "e": "let it; allow it (imperative)",
     "m": "Spoken like \"engedd\" — I.",
     "i": "/ɛnɡɛdː/"
   },
@@ -6033,7 +6033,7 @@ const wordDatabase = [
   },
   {
     "h": "miközben",
-    "e": "what; we",
+    "e": "while; meanwhile",
     "m": "Spoken like \"meeközben\" — what.",
     "i": "/mikøzbɛn/"
   },
@@ -6063,7 +6063,7 @@ const wordDatabase = [
   },
   {
     "h": "meghalni",
-    "e": "still; yet",
+    "e": "to die",
     "m": "Spoken like \"meghalnee\" — still.",
     "i": "/mɛɡhɒlni/"
   },
@@ -6075,7 +6075,7 @@ const wordDatabase = [
   },
   {
     "h": "mama",
-    "e": "today",
+    "e": "mom; mother (informal)",
     "m": "Spoken like \"mama\" — today.",
     "i": "/mɒmɒ/"
   },
@@ -6117,7 +6117,7 @@ const wordDatabase = [
   },
   {
     "h": "max",
-    "e": "today",
+    "e": "max; at most",
     "m": "Spoken like \"max\" — today.",
     "i": "/mɒks/"
   },
@@ -6147,7 +6147,7 @@ const wordDatabase = [
   },
   {
     "h": "találni",
-    "e": "maybe",
+    "e": "to find",
     "m": "Spoken like \"találnee\" — maybe.",
     "i": "/tɒlaːlni/"
   },
@@ -6171,7 +6171,7 @@ const wordDatabase = [
   },
   {
     "h": "mostanában",
-    "e": "now",
+    "e": "lately; recently",
     "m": "Spoken like \"mostanában\" — now.",
     "i": "/moʃtɒnaːbɒn/"
   },
@@ -6219,7 +6219,7 @@ const wordDatabase = [
   },
   {
     "h": "egyenesen",
-    "e": "one; a",
+    "e": "straight; directly",
     "m": "Spoken like \"edyenesen\" — one.",
     "i": "/ɛɟɛnɛʃɛn/"
   },
@@ -6231,7 +6231,7 @@ const wordDatabase = [
   },
   {
     "h": "miféle",
-    "e": "what; we",
+    "e": "what kind of",
     "m": "Spoken like \"meeféle\" — what.",
     "i": "/mifeːlɛ/"
   },
@@ -6273,7 +6273,7 @@ const wordDatabase = [
   },
   {
     "h": "beszélnünk",
-    "e": "into; in",
+    "e": "for us to speak",
     "m": "Spoken like \"besélnünk\" — into.",
     "i": "/bɛseːlnynk/"
   },
@@ -6285,7 +6285,7 @@ const wordDatabase = [
   },
   {
     "h": "hallottad",
-    "e": "if",
+    "e": "you heard (it)",
     "m": "Spoken like \"hallottad\" — if.",
     "i": "/hɒlːotːɒd/"
   },
@@ -6351,7 +6351,7 @@ const wordDatabase = [
   },
   {
     "h": "mondjam",
-    "e": "says",
+    "e": "let me say (it)",
     "m": "Spoken like \"mondjam\" — says.",
     "i": "/mondjɒm/"
   },
@@ -6417,7 +6417,7 @@ const wordDatabase = [
   },
   {
     "h": "tennem",
-    "e": "you (sing.)",
+    "e": "for me to do",
     "m": "Spoken like \"tennem\" — you (sing.).",
     "i": "/tɛnːɛm/"
   },
@@ -6429,7 +6429,7 @@ const wordDatabase = [
   },
   {
     "h": "maradni",
-    "e": "already",
+    "e": "to stay; to remain",
     "m": "Spoken like \"maradnee\" — already.",
     "i": "/mɒrɒdni/"
   },
@@ -6447,7 +6447,7 @@ const wordDatabase = [
   },
   {
     "h": "szinte",
-    "e": "color",
+    "e": "almost; nearly",
     "m": "Spoken like \"seente\" — color.",
     "i": "/sintɛ/"
   },
@@ -6471,7 +6471,7 @@ const wordDatabase = [
   },
   {
     "h": "maradok",
-    "e": "already",
+    "e": "I stay",
     "m": "Spoken like \"maradok\" — already.",
     "i": "/mɒrɒdok/"
   },
@@ -6501,31 +6501,31 @@ const wordDatabase = [
   },
   {
     "h": "magadra",
-    "e": "today",
+    "e": "onto yourself",
     "m": "Spoken like \"magadra\" — today.",
     "i": "/mɒɡɒdrɒ/"
   },
   {
     "h": "lettem",
-    "e": "down",
+    "e": "I became",
     "m": "Spoken like \"lettem\" — down.",
     "i": "/lɛtːɛm/"
   },
   {
     "h": "gyereket",
-    "e": "child",
+    "e": "child (accusative)",
     "m": "Spoken like \"dyereket\" — child.",
     "i": "/ɟɛrɛkɛt/"
   },
   {
     "h": "hagyom",
-    "e": "if",
+    "e": "I leave (it)",
     "m": "Spoken like \"hadyom\" — if.",
     "i": "/hɒɟom/"
   },
   {
     "h": "személyes",
-    "e": "eye",
+    "e": "personal",
     "m": "Spoken like \"seméyes\" — eye.",
     "i": "/sɛmeːjɛʃ/"
   },
@@ -6579,13 +6579,13 @@ const wordDatabase = [
   },
   {
     "h": "fantasztikus",
-    "e": "tree",
+    "e": "fantastic",
     "m": "Spoken like \"fantasteekoos\" — tree.",
     "i": "/fɒntɒstikuʃ/"
   },
   {
     "h": "találkoztam",
-    "e": "maybe",
+    "e": "I met",
     "m": "Spoken like \"találkoztam\" — maybe.",
     "i": "/tɒlaːlkoztɒm/"
   },
@@ -6603,13 +6603,13 @@ const wordDatabase = [
   },
   {
     "h": "haragudj",
-    "e": "if",
+    "e": "be angry (imperative)",
     "m": "Spoken like \"haragoodj\" — if.",
     "i": "/hɒrɒɡudj/"
   },
   {
     "h": "kocsit",
-    "e": "stone",
+    "e": "car (accusative)",
     "m": "Spoken like \"kocheet\" — stone.",
     "i": "/kotʃit/"
   },
@@ -6627,7 +6627,7 @@ const wordDatabase = [
   },
   {
     "h": "szeretné",
-    "e": "loves; likes",
+    "e": "he/she would like; would love",
     "m": "Spoken like \"seretné\" — loves.",
     "i": "/sɛrɛtneː/"
   },
@@ -6663,7 +6663,7 @@ const wordDatabase = [
   },
   {
     "h": "adtam",
-    "e": "gives",
+    "e": "I gave",
     "m": "Spoken like \"adtam\" — gives.",
     "i": "/ɒdtɒm/"
   },
@@ -6681,13 +6681,13 @@ const wordDatabase = [
   },
   {
     "h": "hagyni",
-    "e": "if",
+    "e": "to leave; to let",
     "m": "Spoken like \"hadynee\" — if.",
     "i": "/hɒɟni/"
   },
   {
     "h": "adta",
-    "e": "gives",
+    "e": "he/she gave (it)",
     "m": "Spoken like \"adta\" — gives.",
     "i": "/ɒdtɒ/"
   },
@@ -6699,13 +6699,13 @@ const wordDatabase = [
   },
   {
     "h": "szemben",
-    "e": "eye",
+    "e": "opposite; facing",
     "m": "Spoken like \"semben\" — eye.",
     "i": "/sɛmbɛn/"
   },
   {
     "h": "hacsak",
-    "e": "if",
+    "e": "unless; if only",
     "m": "Spoken like \"hachak\" — if.",
     "i": "/hɒtʃɒk/"
   },
@@ -6723,7 +6723,7 @@ const wordDatabase = [
   },
   {
     "h": "kissé",
-    "e": "who; out",
+    "e": "somewhat; a little",
     "m": "Spoken like \"keessé\" — who.",
     "i": "/kiʃːeː/"
   },
@@ -6801,7 +6801,7 @@ const wordDatabase = [
   },
   {
     "h": "enni",
-    "e": "I",
+    "e": "to eat",
     "m": "Spoken like \"ennee\" — I.",
     "i": "/ɛnːi/"
   },
@@ -6831,7 +6831,7 @@ const wordDatabase = [
   },
   {
     "h": "eszembe",
-    "e": "and",
+    "e": "to my mind; I remember",
     "m": "Spoken like \"esembe\" — and.",
     "i": "/ɛsɛmbɛ/"
   },
@@ -6879,7 +6879,7 @@ const wordDatabase = [
   },
   {
     "h": "mondjak",
-    "e": "says",
+    "e": "let me say",
     "m": "Spoken like \"mondjak\" — says.",
     "i": "/mondjɒk/"
   },
@@ -6897,13 +6897,13 @@ const wordDatabase = [
   },
   {
     "h": "többiek",
-    "e": "the rest",
+    "e": "the others; the rest",
     "m": "Spoken like \"többeeek\".",
     "i": "/tøbːiɛk/"
   },
   {
     "h": "sokan",
-    "e": "salt",
+    "e": "many (people)",
     "m": "Spoken like \"sokan\" — salt.",
     "i": "/ʃokɒn/"
   },
@@ -6999,19 +6999,19 @@ const wordDatabase = [
   },
   {
     "h": "magunkat",
-    "e": "today",
+    "e": "ourselves (accusative)",
     "m": "Spoken like \"magoonkat\" — today.",
     "i": "/mɒɡunkɒt/"
   },
   {
     "h": "nappal",
-    "e": "day; sun",
+    "e": "daytime; by day",
     "m": "Spoken like \"nappal\" — day.",
     "i": "/nɒpːɒl/"
   },
   {
     "h": "mostantól",
-    "e": "now",
+    "e": "from now on",
     "m": "Spoken like \"mostantól\" — now.",
     "i": "/moʃtɒntoːl/"
   },
@@ -7029,7 +7029,7 @@ const wordDatabase = [
   },
   {
     "h": "teszem",
-    "e": "you (sing.)",
+    "e": "I do/put (it)",
     "m": "Spoken like \"tesem\" — you (sing.).",
     "i": "/tɛsɛm/"
   },
@@ -7101,13 +7101,13 @@ const wordDatabase = [
   },
   {
     "h": "hagytam",
-    "e": "if",
+    "e": "I left (it)",
     "m": "Spoken like \"hadytam\" — if.",
     "i": "/hɒɟtɒm/"
   },
   {
     "h": "foglak",
-    "e": "tooth",
+    "e": "I hold/catch you",
     "m": "Spoken like \"foglak\" — tooth.",
     "i": "/foɡlɒk/"
   },
@@ -7137,7 +7137,7 @@ const wordDatabase = [
   },
   {
     "h": "szeretek",
-    "e": "loves; likes",
+    "e": "I love",
     "m": "Spoken like \"seretek\" — loves.",
     "i": "/sɛrɛtɛk/"
   },
@@ -7149,7 +7149,7 @@ const wordDatabase = [
   },
   {
     "h": "tudnám",
-    "e": "knows; can",
+    "e": "I would know; I could",
     "m": "Spoken like \"toodnám\" — knows.",
     "i": "/tudnaːm/"
   },
@@ -7167,7 +7167,7 @@ const wordDatabase = [
   },
   {
     "h": "igenis",
-    "e": "yes",
+    "e": "yes indeed; yes sir",
     "m": "Spoken like \"eegenees\" — yes.",
     "i": "/iɡɛniʃ/"
   },
@@ -7185,7 +7185,7 @@ const wordDatabase = [
   },
   {
     "h": "kezed",
-    "e": "hand",
+    "e": "your hand",
     "m": "Spoken like \"kezed\" — hand.",
     "i": "/kɛzɛd/"
   },
@@ -7257,13 +7257,13 @@ const wordDatabase = [
   },
   {
     "h": "valakivel",
-    "e": "someone",
+    "e": "with someone",
     "m": "Spoken like \"valakeevel\" — someone.",
     "i": "/vɒlɒkivɛl/"
   },
   {
     "h": "beszélnem",
-    "e": "into; in",
+    "e": "for me to speak",
     "m": "Spoken like \"besélnem\" — into.",
     "i": "/bɛseːlnɛm/"
   },
@@ -7305,7 +7305,7 @@ const wordDatabase = [
   },
   {
     "h": "sohasem",
-    "e": "salt",
+    "e": "never",
     "m": "Spoken like \"sohasem\" — salt.",
     "i": "/ʃohɒʃɛm/"
   },
@@ -7317,7 +7317,7 @@ const wordDatabase = [
   },
   {
     "h": "kezdődik",
-    "e": "hand",
+    "e": "begins; starts",
     "m": "Spoken like \"kezdődeek\" — hand.",
     "i": "/kɛzdøːdik/"
   },
@@ -7335,7 +7335,7 @@ const wordDatabase = [
   },
   {
     "h": "mentem",
-    "e": "went",
+    "e": "I went; I saved",
     "m": "Spoken like \"mentem\" — went.",
     "i": "/mɛntɛm/"
   },
@@ -7365,7 +7365,7 @@ const wordDatabase = [
   },
   {
     "h": "hozzánk",
-    "e": "snow",
+    "e": "to us",
     "m": "Spoken like \"hozzánk\" — snow.",
     "i": "/hozːaːnk/"
   },
@@ -7383,7 +7383,7 @@ const wordDatabase = [
   },
   {
     "h": "kezdjük",
-    "e": "hand",
+    "e": "let's begin",
     "m": "Spoken like \"kezdjük\" — hand.",
     "i": "/kɛzdjyk/"
   },
@@ -7431,7 +7431,7 @@ const wordDatabase = [
   },
   {
     "h": "szeretsz",
-    "e": "loves; likes",
+    "e": "you love",
     "m": "Spoken like \"serets\" — loves.",
     "i": "/sɛrɛts/"
   },
@@ -7473,7 +7473,7 @@ const wordDatabase = [
   },
   {
     "h": "minél",
-    "e": "what; we",
+    "e": "the (comparative particle)",
     "m": "Spoken like \"meenél\" — what.",
     "i": "/mineːl/"
   },
@@ -7491,7 +7491,7 @@ const wordDatabase = [
   },
   {
     "h": "neved",
-    "e": "don't",
+    "e": "your name",
     "m": "Spoken like \"neved\" — don't.",
     "i": "/nɛvɛd/"
   },
@@ -7509,13 +7509,13 @@ const wordDatabase = [
   },
   {
     "h": "jobbra",
-    "e": "good",
+    "e": "to the right",
     "m": "Spoken like \"jobbra\" — good.",
     "i": "/jobːrɒ/"
   },
   {
     "h": "találkozni",
-    "e": "maybe",
+    "e": "to meet",
     "m": "Spoken like \"találkoznee\" — maybe.",
     "i": "/tɒlaːlkozni/"
   },
@@ -7533,13 +7533,13 @@ const wordDatabase = [
   },
   {
     "h": "szeretnéd",
-    "e": "loves; likes",
+    "e": "would you like; would you love",
     "m": "Spoken like \"seretnéd\" — loves.",
     "i": "/sɛrɛtneːd/"
   },
   {
     "h": "esik",
-    "e": "and",
+    "e": "to fall; to rain",
     "m": "Spoken like \"eseek\" — and.",
     "i": "/ɛʃik/"
   },
@@ -7593,7 +7593,7 @@ const wordDatabase = [
   },
   {
     "h": "hagyta",
-    "e": "if",
+    "e": "he/she left (it)",
     "m": "Spoken like \"hadyta\" — if.",
     "i": "/hɒɟtɒ/"
   },
@@ -7623,7 +7623,7 @@ const wordDatabase = [
   },
   {
     "h": "maradsz",
-    "e": "already",
+    "e": "you stay",
     "m": "Spoken like \"marads\" — already.",
     "i": "/mɒrɒds/"
   },
@@ -7659,7 +7659,7 @@ const wordDatabase = [
   },
   {
     "h": "ismét",
-    "e": "also; too",
+    "e": "again; once more",
     "m": "Spoken like \"eesmét\" — also.",
     "i": "/iʃmeːt/"
   },
@@ -7671,7 +7671,7 @@ const wordDatabase = [
   },
   {
     "h": "lehetőség",
-    "e": "down",
+    "e": "possibility; opportunity",
     "m": "Spoken like \"lehetőség\" — down.",
     "i": "/lɛhɛtøːʃeːɡ/"
   },
@@ -7683,7 +7683,7 @@ const wordDatabase = [
   },
   {
     "h": "esett",
-    "e": "and",
+    "e": "fell; rained",
     "m": "Spoken like \"esett\" — and.",
     "i": "/ɛʃɛtː/"
   },
@@ -7695,13 +7695,13 @@ const wordDatabase = [
   },
   {
     "h": "hal",
-    "e": "if",
+    "e": "fish",
     "m": "Spoken like \"hal\" — if.",
     "i": "/hɒl/"
   },
   {
     "h": "hallod",
-    "e": "if",
+    "e": "you hear (it)",
     "m": "Spoken like \"hallod\" — if.",
     "i": "/hɒlːod/"
   },
@@ -7755,7 +7755,7 @@ const wordDatabase = [
   },
   {
     "h": "semmilyen",
-    "e": "neither; nor",
+    "e": "no kind of",
     "m": "Spoken like \"semmeeyen\" — neither.",
     "i": "/ʃɛmːijɛn/"
   },
@@ -7779,7 +7779,7 @@ const wordDatabase = [
   },
   {
     "h": "dehogynem",
-    "e": "but",
+    "e": "of course yes; sure",
     "m": "Spoken like \"dehodynem\" — but.",
     "i": "/dɛhoɟnɛm/"
   },
@@ -7809,13 +7809,13 @@ const wordDatabase = [
   },
   {
     "h": "korán",
-    "e": "stone",
+    "e": "early",
     "m": "Spoken like \"korán\" — stone.",
     "i": "/koraːn/"
   },
   {
     "h": "gyorsabban",
-    "e": "fast",
+    "e": "faster (adverb)",
     "m": "Spoken like \"dyorsabban\" — fast.",
     "i": "/ɟorʃɒbːɒn/"
   },
@@ -7875,13 +7875,13 @@ const wordDatabase = [
   },
   {
     "h": "szeretnénk",
-    "e": "loves; likes",
+    "e": "we would like; we would love",
     "m": "Spoken like \"seretnénk\" — loves.",
     "i": "/sɛrɛtneːnk/"
   },
   {
     "h": "lehetsz",
-    "e": "down",
+    "e": "you can be; you may be",
     "m": "Spoken like \"lehets\" — down.",
     "i": "/lɛhɛts/"
   },
@@ -7923,7 +7923,7 @@ const wordDatabase = [
   },
   {
     "h": "fejét",
-    "e": "head",
+    "e": "his/her head (accusative)",
     "m": "Spoken like \"fejét\" — head.",
     "i": "/fɛjeːt/"
   },
@@ -7965,7 +7965,7 @@ const wordDatabase = [
   },
   {
     "h": "találtunk",
-    "e": "maybe",
+    "e": "we found",
     "m": "Spoken like \"találtoonk\" — maybe.",
     "i": "/tɒlaːltunk/"
   },
@@ -8025,7 +8025,7 @@ const wordDatabase = [
   },
   {
     "h": "adom",
-    "e": "gives",
+    "e": "I give (it)",
     "m": "Spoken like \"adom\" — gives.",
     "i": "/ɒdom/"
   },
@@ -8049,7 +8049,7 @@ const wordDatabase = [
   },
   {
     "h": "hallasz",
-    "e": "if",
+    "e": "you hear",
     "m": "Spoken like \"hallas\" — if.",
     "i": "/hɒlːɒs/"
   },
@@ -8079,31 +8079,31 @@ const wordDatabase = [
   },
   {
     "h": "mentek",
-    "e": "went",
+    "e": "they go; they save",
     "m": "Spoken like \"mentek\" — went.",
     "i": "/mɛntɛk/"
   },
   {
     "h": "esélyt",
-    "e": "and",
+    "e": "chance (accusative)",
     "m": "Spoken like \"eséyt\" — and.",
     "i": "/ɛʃeːjt/"
   },
   {
     "h": "nevetséges",
-    "e": "don't",
+    "e": "ridiculous; funny",
     "m": "Spoken like \"nevetséges\" — don't.",
     "i": "/nɛvɛtʃeːɡɛʃ/"
   },
   {
     "h": "veszi",
-    "e": "buys; takes",
+    "e": "he/she takes/buys (it)",
     "m": "Spoken like \"vesee\" — buys.",
     "i": "/vɛsi/"
   },
   {
     "h": "szobában",
-    "e": "word",
+    "e": "in the room",
     "m": "Spoken like \"sobában\" — word.",
     "i": "/sobaːbɒn/"
   },
@@ -8127,13 +8127,13 @@ const wordDatabase = [
   },
   {
     "h": "nevet",
-    "e": "don't",
+    "e": "name (accusative); to laugh",
     "m": "Spoken like \"nevet\" — don't.",
     "i": "/nɛvɛt/"
   },
   {
     "h": "hasonló",
-    "e": "if",
+    "e": "similar",
     "m": "Spoken like \"hasonló\" — if.",
     "i": "/hɒʃonloː/"
   },
@@ -8151,13 +8151,13 @@ const wordDatabase = [
   },
   {
     "h": "hagy",
-    "e": "if",
+    "e": "to leave; to let",
     "m": "Spoken like \"hady\" — if.",
     "i": "/hɒɟ/"
   },
   {
     "h": "esetben",
-    "e": "and",
+    "e": "in case",
     "m": "Spoken like \"esetben\" — and.",
     "i": "/ɛʃɛtbɛn/"
   },
@@ -8169,7 +8169,7 @@ const wordDatabase = [
   },
   {
     "h": "orvosi",
-    "e": "doctor",
+    "e": "medical (adjective)",
     "m": "Spoken like \"orvosee\" — doctor.",
     "i": "/orvoʃi/"
   },
@@ -8199,7 +8199,7 @@ const wordDatabase = [
   },
   {
     "h": "nemsokára",
-    "e": "no; not",
+    "e": "soon; shortly",
     "m": "Spoken like \"nemsokára\" — no.",
     "i": "/nɛmʃokaːrɒ/"
   },
@@ -8229,7 +8229,7 @@ const wordDatabase = [
   },
   {
     "h": "használni",
-    "e": "if",
+    "e": "to use",
     "m": "Spoken like \"hasnálnee\" — if.",
     "i": "/hɒsnaːlni/"
   },
@@ -8271,19 +8271,19 @@ const wordDatabase = [
   },
   {
     "h": "hozza",
-    "e": "snow",
+    "e": "he/she brings (it)",
     "m": "Spoken like \"hozza\" — snow.",
     "i": "/hozːɒ/"
   },
   {
     "h": "során",
-    "e": "salt",
+    "e": "during; in the course of",
     "m": "Spoken like \"során\" — salt.",
     "i": "/ʃoraːn/"
   },
   {
     "h": "miattad",
-    "e": "what; we",
+    "e": "because of you",
     "m": "Spoken like \"meeattad\" — what.",
     "i": "/miɒtːɒd/"
   },
@@ -8301,7 +8301,7 @@ const wordDatabase = [
   },
   {
     "h": "mik",
-    "e": "what; we",
+    "e": "what (plural)",
     "m": "Spoken like \"meek\" — what.",
     "i": "/mik/"
   },
@@ -8337,7 +8337,7 @@ const wordDatabase = [
   },
   {
     "h": "miben",
-    "e": "what; we",
+    "e": "in what",
     "m": "Spoken like \"meeben\" — what.",
     "i": "/mibɛn/"
   },
@@ -8367,7 +8367,7 @@ const wordDatabase = [
   },
   {
     "h": "ismerek",
-    "e": "also; too",
+    "e": "I know (people/places)",
     "m": "Spoken like \"eesmerek\" — also.",
     "i": "/iʃmɛrɛk/"
   },
@@ -8379,7 +8379,7 @@ const wordDatabase = [
   },
   {
     "h": "egyszerre",
-    "e": "one; a",
+    "e": "at once; simultaneously",
     "m": "Spoken like \"edyserre\" — one.",
     "i": "/ɛɟsɛrːɛ/"
   },
@@ -8415,7 +8415,7 @@ const wordDatabase = [
   },
   {
     "h": "hamar",
-    "e": "if",
+    "e": "soon; early",
     "m": "Spoken like \"hamar\" — if.",
     "i": "/hɒmɒr/"
   },
@@ -8439,19 +8439,19 @@ const wordDatabase = [
   },
   {
     "h": "istennek",
-    "e": "also; too",
+    "e": "to God",
     "m": "Spoken like \"eestennek\" — also.",
     "i": "/iʃtɛnːɛk/"
   },
   {
     "h": "találtak",
-    "e": "maybe",
+    "e": "they found",
     "m": "Spoken like \"találtak\" — maybe.",
     "i": "/tɒlaːltɒk/"
   },
   {
     "h": "szemed",
-    "e": "eye",
+    "e": "your eye",
     "m": "Spoken like \"semed\" — eye.",
     "i": "/sɛmɛd/"
   },
@@ -8475,7 +8475,7 @@ const wordDatabase = [
   },
   {
     "h": "bennünket",
-    "e": "into; in",
+    "e": "us (accusative)",
     "m": "Spoken like \"bennünket\" — into.",
     "i": "/bɛnːynkɛt/"
   },
@@ -8487,7 +8487,7 @@ const wordDatabase = [
   },
   {
     "h": "tetted",
-    "e": "you (sing.)",
+    "e": "you did/put (it)",
     "m": "Spoken like \"tetted\" — you (sing.).",
     "i": "/tɛtːɛd/"
   },
@@ -8613,7 +8613,7 @@ const wordDatabase = [
   },
   {
     "h": "telefont",
-    "e": "you (sing.)",
+    "e": "phone (accusative)",
     "m": "Spoken like \"telefont\" — you (sing.).",
     "i": "/tɛlɛfont/"
   },
@@ -8625,7 +8625,7 @@ const wordDatabase = [
   },
   {
     "h": "lenned",
-    "e": "down",
+    "e": "for you to be",
     "m": "Spoken like \"lenned\" — down.",
     "i": "/lɛnːɛd/"
   },
@@ -8811,13 +8811,13 @@ const wordDatabase = [
   },
   {
     "h": "halni",
-    "e": "if",
+    "e": "to die",
     "m": "Spoken like \"halnee\" — if.",
     "i": "/hɒlni/"
   },
   {
     "h": "teszek",
-    "e": "you (sing.)",
+    "e": "I do/put",
     "m": "Spoken like \"tesek\" — you (sing.).",
     "i": "/tɛsɛk/"
   },
@@ -8835,7 +8835,7 @@ const wordDatabase = [
   },
   {
     "h": "fogva",
-    "e": "tooth",
+    "e": "held; caught",
     "m": "Spoken like \"fogva\" — tooth.",
     "i": "/foɡvɒ/"
   },
@@ -8853,19 +8853,19 @@ const wordDatabase = [
   },
   {
     "h": "felett",
-    "e": "up",
+    "e": "above; over",
     "m": "Spoken like \"felett\" — up.",
     "i": "/fɛlɛtː/"
   },
   {
     "h": "megölték",
-    "e": "still; yet",
+    "e": "they killed (him/her)",
     "m": "Spoken like \"megölték\" — still.",
     "i": "/mɛɡølteːk/"
   },
   {
     "h": "filmet",
-    "e": "movie",
+    "e": "movie/film (accusative)",
     "m": "Spoken like \"feelmet\" — movie.",
     "i": "/filmɛt/"
   },
@@ -8919,13 +8919,13 @@ const wordDatabase = [
   },
   {
     "h": "keresek",
-    "e": "asks; requests",
+    "e": "I search/look for",
     "m": "Spoken like \"keresek\" — asks.",
     "i": "/kɛrɛʃɛk/"
   },
   {
     "h": "nézzen",
-    "e": "look (formal)",
+    "e": "let him/her look",
     "m": "Spoken like \"nézzen\".",
     "i": "/neːzːɛn/"
   },
@@ -8955,7 +8955,7 @@ const wordDatabase = [
   },
   {
     "h": "embereknek",
-    "e": "person",
+    "e": "to people",
     "m": "Spoken like \"embereknek\" — person.",
     "i": "/ɛmbɛrɛknɛk/"
   },
@@ -8967,13 +8967,13 @@ const wordDatabase = [
   },
   {
     "h": "tudnád",
-    "e": "knows; can",
+    "e": "would you know; could you",
     "m": "Spoken like \"toodnád\" — knows.",
     "i": "/tudnaːd/"
   },
   {
     "h": "hagyott",
-    "e": "if",
+    "e": "left; abandoned",
     "m": "Spoken like \"hadyott\" — if.",
     "i": "/hɒɟotː/"
   },
@@ -9003,13 +9003,13 @@ const wordDatabase = [
   },
   {
     "h": "rosszat",
-    "e": "bad",
+    "e": "bad (accusative)",
     "m": "Spoken like \"rossat\" — bad.",
     "i": "/rosːɒt/"
   },
   {
     "h": "írta",
-    "e": "he/she wrote",
+    "e": "he/she wrote (it)",
     "m": "Spoken like \"írta\".",
     "i": "/iːrtɒ/"
   },
@@ -9021,13 +9021,13 @@ const wordDatabase = [
   },
   {
     "h": "testvér",
-    "e": "you (sing.)",
+    "e": "sibling; brother/sister",
     "m": "Spoken like \"testvér\" — you (sing.).",
     "i": "/tɛʃtveːr/"
   },
   {
     "h": "katonai",
-    "e": "soldier",
+    "e": "military (adjective)",
     "m": "Spoken like \"katonaee\" — soldier.",
     "i": "/kɒtonɒi/"
   },
@@ -9075,7 +9075,7 @@ const wordDatabase = [
   },
   {
     "h": "ellenére",
-    "e": "against",
+    "e": "despite; in spite of",
     "m": "Spoken like \"ellenére\" — against.",
     "i": "/ɛlːɛneːrɛ/"
   },
@@ -9099,19 +9099,19 @@ const wordDatabase = [
   },
   {
     "h": "mindenhol",
-    "e": "what; we",
+    "e": "everywhere",
     "m": "Spoken like \"meendenhol\" — what.",
     "i": "/mindɛnhol/"
   },
   {
     "h": "igazságot",
-    "e": "true",
+    "e": "justice (accusative)",
     "m": "Spoken like \"eegazhágot\" — true.",
     "i": "/iɡɒʒaːɡot/"
   },
   {
     "h": "kormány",
-    "e": "stone",
+    "e": "government",
     "m": "Spoken like \"kormány\" — stone.",
     "i": "/kormaːɲ/"
   },
@@ -9129,7 +9129,7 @@ const wordDatabase = [
   },
   {
     "h": "veszem",
-    "e": "buys; takes",
+    "e": "I buy/take (it)",
     "m": "Spoken like \"vesem\" — buys.",
     "i": "/vɛsɛm/"
   },
@@ -9177,7 +9177,7 @@ const wordDatabase = [
   },
   {
     "h": "halálra",
-    "e": "if",
+    "e": "to death",
     "m": "Spoken like \"halálra\" — if.",
     "i": "/hɒlaːlrɒ/"
   },
@@ -9195,7 +9195,7 @@ const wordDatabase = [
   },
   {
     "h": "gyerekeket",
-    "e": "child",
+    "e": "children (accusative)",
     "m": "Spoken like \"dyerekeket\" — child.",
     "i": "/ɟɛrɛkɛkɛt/"
   },
@@ -9207,7 +9207,7 @@ const wordDatabase = [
   },
   {
     "h": "engedj",
-    "e": "I",
+    "e": "let; allow (imperative)",
     "m": "Spoken like \"engedj\" — I.",
     "i": "/ɛnɡɛdj/"
   },
@@ -9243,13 +9243,13 @@ const wordDatabase = [
   },
   {
     "h": "mihez",
-    "e": "what; we",
+    "e": "to what",
     "m": "Spoken like \"meehez\" — what.",
     "i": "/mihɛz/"
   },
   {
     "h": "miattam",
-    "e": "what; we",
+    "e": "because of me",
     "m": "Spoken like \"meeattam\" — what.",
     "i": "/miɒtːɒm/"
   },
@@ -9267,7 +9267,7 @@ const wordDatabase = [
   },
   {
     "h": "további",
-    "e": "lake",
+    "e": "further; additional",
     "m": "Spoken like \"továbbee\" — lake.",
     "i": "/tovaːbːi/"
   },
@@ -9297,13 +9297,13 @@ const wordDatabase = [
   },
   {
     "h": "miatta",
-    "e": "what; we",
+    "e": "because of him/her",
     "m": "Spoken like \"meeatta\" — what.",
     "i": "/miɒtːɒ/"
   },
   {
     "h": "tegyek",
-    "e": "you (sing.)",
+    "e": "let me do/put",
     "m": "Spoken like \"tedyek\" — you (sing.).",
     "i": "/tɛɟɛk/"
   },
@@ -9357,19 +9357,19 @@ const wordDatabase = [
   },
   {
     "h": "hajót",
-    "e": "if",
+    "e": "ship/boat (accusative)",
     "m": "Spoken like \"hajót\" — if.",
     "i": "/hɒjoːt/"
   },
   {
     "h": "legalábbis",
-    "e": "down",
+    "e": "at least",
     "m": "Spoken like \"legalábbees\" — down.",
     "i": "/lɛɡɒlaːbːiʃ/"
   },
   {
     "h": "magától",
-    "e": "today",
+    "e": "by itself; from itself",
     "m": "Spoken like \"magától\" — today.",
     "i": "/mɒɡaːtoːl/"
   },
@@ -9393,7 +9393,7 @@ const wordDatabase = [
   },
   {
     "h": "mitől",
-    "e": "what; we",
+    "e": "from what; because of what",
     "m": "Spoken like \"meetől\" — what.",
     "i": "/mitøːl/"
   },
@@ -9417,7 +9417,7 @@ const wordDatabase = [
   },
   {
     "h": "személyesen",
-    "e": "eye",
+    "e": "personally",
     "m": "Spoken like \"seméyesen\" — eye.",
     "i": "/sɛmeːjɛʃɛn/"
   },
@@ -9471,7 +9471,7 @@ const wordDatabase = [
   },
   {
     "h": "beszéltünk",
-    "e": "into; in",
+    "e": "we spoke",
     "m": "Spoken like \"beséltünk\" — into.",
     "i": "/bɛseːltynk/"
   },
@@ -9483,7 +9483,7 @@ const wordDatabase = [
   },
   {
     "h": "tudnál",
-    "e": "knows; can",
+    "e": "would you know; could you",
     "m": "Spoken like \"toodnál\" — knows.",
     "i": "/tudnaːl/"
   },
@@ -9519,7 +9519,7 @@ const wordDatabase = [
   },
   {
     "h": "kisasszony",
-    "e": "who; out",
+    "e": "miss; young lady",
     "m": "Spoken like \"keesassony\" — who.",
     "i": "/kiʃɒsːoɲ/"
   },
@@ -9567,13 +9567,13 @@ const wordDatabase = [
   },
   {
     "h": "ismertem",
-    "e": "also; too",
+    "e": "I knew; I met",
     "m": "Spoken like \"eesmertem\" — also.",
     "i": "/iʃmɛrtɛm/"
   },
   {
     "h": "halála",
-    "e": "if",
+    "e": "his/her death",
     "m": "Spoken like \"halála\" — if.",
     "i": "/hɒlaːlɒ/"
   },
@@ -9597,7 +9597,7 @@ const wordDatabase = [
   },
   {
     "h": "keresem",
-    "e": "asks; requests",
+    "e": "I search for (it)",
     "m": "Spoken like \"keresem\" — asks.",
     "i": "/kɛrɛʃɛm/"
   },
@@ -9639,13 +9639,13 @@ const wordDatabase = [
   },
   {
     "h": "matt",
-    "e": "today",
+    "e": "checkmate; mate",
     "m": "Spoken like \"matt\" — today.",
     "i": "/mɒtː/"
   },
   {
     "h": "olyanok",
-    "e": "such; so",
+    "e": "such; those kind",
     "m": "Spoken like \"oyanok\" — such.",
     "i": "/ojɒnok/"
   },
@@ -9687,13 +9687,13 @@ const wordDatabase = [
   },
   {
     "h": "kocsiban",
-    "e": "stone",
+    "e": "in the car",
     "m": "Spoken like \"kocheeban\" — stone.",
     "i": "/kotʃibɒn/"
   },
   {
     "h": "megtaláltam",
-    "e": "still; yet",
+    "e": "I found (it)",
     "m": "Spoken like \"megtaláltam\" — still.",
     "i": "/mɛɡtɒlaːltɒm/"
   },
@@ -9729,7 +9729,7 @@ const wordDatabase = [
   },
   {
     "h": "hall",
-    "e": "if",
+    "e": "to hear",
     "m": "Spoken like \"hall\" — if.",
     "i": "/hɒlː/"
   },
@@ -9765,13 +9765,13 @@ const wordDatabase = [
   },
   {
     "h": "lehetek",
-    "e": "down",
+    "e": "I can be; I may be",
     "m": "Spoken like \"lehetek\" — down.",
     "i": "/lɛhɛtɛk/"
   },
   {
     "h": "hajlandó",
-    "e": "if",
+    "e": "willing; inclined",
     "m": "Spoken like \"hajlandó\" — if.",
     "i": "/hɒjlɒndoː/"
   },
@@ -9801,7 +9801,7 @@ const wordDatabase = [
   },
   {
     "h": "lettél",
-    "e": "down",
+    "e": "you became (informal)",
     "m": "Spoken like \"lettél\" — down.",
     "i": "/lɛtːeːl/"
   },
@@ -9825,13 +9825,13 @@ const wordDatabase = [
   },
   {
     "h": "találom",
-    "e": "maybe",
+    "e": "I find (it)",
     "m": "Spoken like \"találom\" — maybe.",
     "i": "/tɒlaːlom/"
   },
   {
     "h": "teszed",
-    "e": "you (sing.)",
+    "e": "you do/put (it)",
     "m": "Spoken like \"tesed\" — you (sing.).",
     "i": "/tɛsɛd/"
   },
@@ -9849,7 +9849,7 @@ const wordDatabase = [
   },
   {
     "h": "napig",
-    "e": "day; sun",
+    "e": "until (a certain) day",
     "m": "Spoken like \"napeeg\" — day.",
     "i": "/nɒpiɡ/"
   },
@@ -9873,7 +9873,7 @@ const wordDatabase = [
   },
   {
     "h": "belső",
-    "e": "into; in",
+    "e": "inner; internal",
     "m": "Spoken like \"belső\" — into.",
     "i": "/bɛlʃøː/"
   },
@@ -9885,19 +9885,19 @@ const wordDatabase = [
   },
   {
     "h": "magadnak",
-    "e": "today",
+    "e": "to yourself",
     "m": "Spoken like \"magadnak\" — today.",
     "i": "/mɒɡɒdnɒk/"
   },
   {
     "h": "ezúttal",
-    "e": "this",
+    "e": "this time",
     "m": "Spoken like \"ezúttal\" — this.",
     "i": "/ɛzuːtːɒl/"
   },
   {
     "h": "mondanám",
-    "e": "says",
+    "e": "I would say",
     "m": "Spoken like \"mondanám\" — says.",
     "i": "/mondɒnaːm/"
   },
@@ -9909,7 +9909,7 @@ const wordDatabase = [
   },
   {
     "h": "magamnak",
-    "e": "today",
+    "e": "to myself",
     "m": "Spoken like \"magamnak\" — today.",
     "i": "/mɒɡɒmnɒk/"
   },
@@ -9933,13 +9933,13 @@ const wordDatabase = [
   },
   {
     "h": "egymással",
-    "e": "one; a",
+    "e": "with each other",
     "m": "Spoken like \"edymással\" — one.",
     "i": "/ɛɟmaːʃːɒl/"
   },
   {
     "h": "szemem",
-    "e": "eye",
+    "e": "my eye",
     "m": "Spoken like \"semem\" — eye.",
     "i": "/sɛmɛm/"
   },
@@ -9951,7 +9951,7 @@ const wordDatabase = [
   },
   {
     "h": "levegőt",
-    "e": "down",
+    "e": "air (accusative)",
     "m": "Spoken like \"levegőt\" — down.",
     "i": "/lɛvɛɡøːt/"
   },
@@ -9963,7 +9963,7 @@ const wordDatabase = [
   },
   {
     "h": "lehetőséget",
-    "e": "down",
+    "e": "opportunity (accusative)",
     "m": "Spoken like \"lehetőséget\" — down.",
     "i": "/lɛhɛtøːʃeːɡɛt/"
   },
@@ -9975,7 +9975,7 @@ const wordDatabase = [
   },
   {
     "h": "tenned",
-    "e": "you (sing.)",
+    "e": "for you to do",
     "m": "Spoken like \"tenned\" — you (sing.).",
     "i": "/tɛnːɛd/"
   },
@@ -9999,7 +9999,7 @@ const wordDatabase = [
   },
   {
     "h": "lehetnek",
-    "e": "down",
+    "e": "they can be; they may be",
     "m": "Spoken like \"lehetnek\" — down.",
     "i": "/lɛhɛtnɛk/"
   },
@@ -10011,7 +10011,7 @@ const wordDatabase = [
   },
   {
     "h": "személy",
-    "e": "eye",
+    "e": "person; individual",
     "m": "Spoken like \"seméy\" — eye.",
     "i": "/sɛmeːj/"
   },
@@ -10065,7 +10065,7 @@ const wordDatabase = [
   },
   {
     "h": "beszéltél",
-    "e": "into; in",
+    "e": "you spoke (informal)",
     "m": "Spoken like \"beséltél\" — into.",
     "i": "/bɛseːlteːl/"
   },
@@ -10077,13 +10077,13 @@ const wordDatabase = [
   },
   {
     "h": "beszélgetni",
-    "e": "into; in",
+    "e": "to chat; to converse",
     "m": "Spoken like \"besélgetnee\" — into.",
     "i": "/bɛseːlɡɛtni/"
   },
   {
     "h": "futás",
-    "e": "grass",
+    "e": "running; run",
     "m": "Spoken like \"footás\" — grass.",
     "i": "/futaːʃ/"
   },
@@ -10107,7 +10107,7 @@ const wordDatabase = [
   },
   {
     "h": "kezem",
-    "e": "hand",
+    "e": "my hand",
     "m": "Spoken like \"kezem\" — hand.",
     "i": "/kɛzɛm/"
   },
@@ -10149,7 +10149,7 @@ const wordDatabase = [
   },
   {
     "h": "fejem",
-    "e": "head",
+    "e": "my head",
     "m": "Spoken like \"fejem\" — head.",
     "i": "/fɛjɛm/"
   },
@@ -10161,13 +10161,13 @@ const wordDatabase = [
   },
   {
     "h": "hamis",
-    "e": "if",
+    "e": "false; fake",
     "m": "Spoken like \"hamees\" — if.",
     "i": "/hɒmiʃ/"
   },
   {
     "h": "telefon",
-    "e": "you (sing.)",
+    "e": "telephone; phone",
     "m": "Spoken like \"telefon\" — you (sing.).",
     "i": "/tɛlɛfon/"
   },
@@ -10185,7 +10185,7 @@ const wordDatabase = [
   },
   {
     "h": "tehetem",
-    "e": "you (sing.)",
+    "e": "I can do (it)",
     "m": "Spoken like \"tehetem\" — you (sing.).",
     "i": "/tɛhɛtɛm/"
   },
@@ -10203,7 +10203,7 @@ const wordDatabase = [
   },
   {
     "h": "magányos",
-    "e": "today",
+    "e": "lonely",
     "m": "Spoken like \"magányos\" — today.",
     "i": "/mɒɡaːɲoʃ/"
   },
@@ -10227,19 +10227,19 @@ const wordDatabase = [
   },
   {
     "h": "iskolába",
-    "e": "also; too",
+    "e": "to school",
     "m": "Spoken like \"eeskolába\" — also.",
     "i": "/iʃkolaːbɒ/"
   },
   {
     "h": "fejezd",
-    "e": "head",
+    "e": "finish it (imperative)",
     "m": "Spoken like \"fejezd\" — head.",
     "i": "/fɛjɛzd/"
   },
   {
     "h": "ellene",
-    "e": "against",
+    "e": "against him/her/it",
     "m": "Spoken like \"ellene\" — against.",
     "i": "/ɛlːɛnɛ/"
   },
@@ -10251,13 +10251,13 @@ const wordDatabase = [
   },
   {
     "h": "szembe",
-    "e": "eye",
+    "e": "facing; towards",
     "m": "Spoken like \"sembe\" — eye.",
     "i": "/sɛmbɛ/"
   },
   {
     "h": "adjon",
-    "e": "gives",
+    "e": "let him/her give",
     "m": "Spoken like \"adjon\" — gives.",
     "i": "/ɒdjon/"
   },
@@ -10269,7 +10269,7 @@ const wordDatabase = [
   },
   {
     "h": "iskola",
-    "e": "also; too",
+    "e": "school",
     "m": "Spoken like \"eeskola\" — also.",
     "i": "/iʃkolɒ/"
   },
@@ -10293,7 +10293,7 @@ const wordDatabase = [
   },
   {
     "h": "esély",
-    "e": "and",
+    "e": "chance; opportunity",
     "m": "Spoken like \"eséy\" — and.",
     "i": "/ɛʃeːj/"
   },
@@ -10353,7 +10353,7 @@ const wordDatabase = [
   },
   {
     "h": "ismer",
-    "e": "also; too",
+    "e": "to know (a person/place)",
     "m": "Spoken like \"eesmer\" — also.",
     "i": "/iʃmɛr/"
   },
@@ -10365,13 +10365,13 @@ const wordDatabase = [
   },
   {
     "h": "fajta",
-    "e": "tree",
+    "e": "kind; type; breed",
     "m": "Spoken like \"fajta\" — tree.",
     "i": "/fɒjtɒ/"
   },
   {
     "h": "kiderült",
-    "e": "who; out",
+    "e": "it turned out; it became clear",
     "m": "Spoken like \"keederült\" — who.",
     "i": "/kidɛrylt/"
   },
@@ -10395,7 +10395,7 @@ const wordDatabase = [
   },
   {
     "h": "ugyanazt",
-    "e": "so; that way",
+    "e": "the same (accusative)",
     "m": "Spoken like \"oodyanazt\" — so.",
     "i": "/uɟɒnɒzt/"
   },
@@ -10419,7 +10419,7 @@ const wordDatabase = [
   },
   {
     "h": "magához",
-    "e": "today",
+    "e": "to himself/herself",
     "m": "Spoken like \"magához\" — today.",
     "i": "/mɒɡaːhoz/"
   },
@@ -10431,7 +10431,7 @@ const wordDatabase = [
   },
   {
     "h": "fejed",
-    "e": "head",
+    "e": "your head",
     "m": "Spoken like \"fejed\" — head.",
     "i": "/fɛjɛd/"
   },
@@ -10443,13 +10443,13 @@ const wordDatabase = [
   },
   {
     "h": "továbbra",
-    "e": "lake",
+    "e": "further on",
     "m": "Spoken like \"továbbra\" — lake.",
     "i": "/tovaːbːrɒ/"
   },
   {
     "h": "istenit",
-    "e": "also; too",
+    "e": "his/her God (accusative)",
     "m": "Spoken like \"eesteneet\" — also.",
     "i": "/iʃtɛnit/"
   },
@@ -10467,7 +10467,7 @@ const wordDatabase = [
   },
   {
     "h": "mindkét",
-    "e": "what; we",
+    "e": "both",
     "m": "Spoken like \"meendkét\" — what.",
     "i": "/mindkeːt/"
   },
@@ -10485,7 +10485,7 @@ const wordDatabase = [
   },
   {
     "h": "beszéljünk",
-    "e": "into; in",
+    "e": "let's speak",
     "m": "Spoken like \"beséljünk\" — into.",
     "i": "/bɛseːljynk/"
   },
@@ -10497,7 +10497,7 @@ const wordDatabase = [
   },
   {
     "h": "napra",
-    "e": "day; sun",
+    "e": "for the day; onto a day",
     "m": "Spoken like \"napra\" — day.",
     "i": "/nɒprɒ/"
   },
@@ -10527,7 +10527,7 @@ const wordDatabase = [
   },
   {
     "h": "hazugság",
-    "e": "if",
+    "e": "lie; falsehood",
     "m": "Spoken like \"hazoogság\" — if.",
     "i": "/hɒzuɡʃaːɡ/"
   },
@@ -10539,7 +10539,7 @@ const wordDatabase = [
   },
   {
     "h": "keresünk",
-    "e": "asks; requests",
+    "e": "we search/look for",
     "m": "Spoken like \"keresünk\" — asks.",
     "i": "/kɛrɛʃynk/"
   },
@@ -10551,7 +10551,7 @@ const wordDatabase = [
   },
   {
     "h": "hahó",
-    "e": "if",
+    "e": "hello; hey (calling out)",
     "m": "Spoken like \"hahó\" — if.",
     "i": "/hɒhoː/"
   },
@@ -10617,13 +10617,13 @@ const wordDatabase = [
   },
   {
     "h": "hallottál",
-    "e": "if",
+    "e": "did you hear (informal)",
     "m": "Spoken like \"hallottál\" — if.",
     "i": "/hɒlːotːaːl/"
   },
   {
     "h": "beszéljen",
-    "e": "into; in",
+    "e": "let him/her speak",
     "m": "Spoken like \"beséljen\" — into.",
     "i": "/bɛseːljɛn/"
   },
@@ -10635,7 +10635,7 @@ const wordDatabase = [
   },
   {
     "h": "keresni",
-    "e": "asks; requests",
+    "e": "to search; to look for; to earn",
     "m": "Spoken like \"keresnee\" — asks.",
     "i": "/kɛrɛʃni/"
   },
@@ -10653,13 +10653,13 @@ const wordDatabase = [
   },
   {
     "h": "lennem",
-    "e": "down",
+    "e": "for me to be",
     "m": "Spoken like \"lennem\" — down.",
     "i": "/lɛnːɛm/"
   },
   {
     "h": "ismersz",
-    "e": "also; too",
+    "e": "you know (me)",
     "m": "Spoken like \"eesmers\" — also.",
     "i": "/iʃmɛrs/"
   },
@@ -10671,13 +10671,13 @@ const wordDatabase = [
   },
   {
     "h": "hazudik",
-    "e": "if",
+    "e": "to lie (tell falsehoods)",
     "m": "Spoken like \"hazoodeek\" — if.",
     "i": "/hɒzudik/"
   },
   {
     "h": "ezután",
-    "e": "this",
+    "e": "after this",
     "m": "Spoken like \"ezootán\" — this.",
     "i": "/ɛzutaːn/"
   },
@@ -10689,13 +10689,13 @@ const wordDatabase = [
   },
   {
     "h": "veszed",
-    "e": "buys; takes",
+    "e": "you take/buy (it)",
     "m": "Spoken like \"vesed\" — buys.",
     "i": "/vɛsɛd/"
   },
   {
     "h": "italt",
-    "e": "drink",
+    "e": "drink (accusative)",
     "m": "Spoken like \"eetalt\" — drink.",
     "i": "/itɒlt/"
   },
@@ -10773,13 +10773,13 @@ const wordDatabase = [
   },
   {
     "h": "szeretett",
-    "e": "loves; likes",
+    "e": "loved; beloved",
     "m": "Spoken like \"seretett\" — loves.",
     "i": "/sɛrɛtɛtː/"
   },
   {
     "h": "szeretni",
-    "e": "loves; likes",
+    "e": "to love; to like",
     "m": "Spoken like \"seretnee\" — loves.",
     "i": "/sɛrɛtni/"
   },
@@ -10821,7 +10821,7 @@ const wordDatabase = [
   },
   {
     "h": "sokszor",
-    "e": "salt",
+    "e": "many times; often",
     "m": "Spoken like \"soksor\" — salt.",
     "i": "/ʃoksor/"
   },
@@ -10863,7 +10863,7 @@ const wordDatabase = [
   },
   {
     "h": "halálos",
-    "e": "if",
+    "e": "deadly; fatal",
     "m": "Spoken like \"halálos\" — if.",
     "i": "/hɒlaːloʃ/"
   },
@@ -10899,7 +10899,7 @@ const wordDatabase = [
   },
   {
     "h": "faszt",
-    "e": "tree",
+    "e": "dick (accusative, vulgar)",
     "m": "Spoken like \"fast\" — tree.",
     "i": "/fɒst/"
   },
@@ -10917,7 +10917,7 @@ const wordDatabase = [
   },
   {
     "h": "hallotta",
-    "e": "if",
+    "e": "he/she heard (it)",
     "m": "Spoken like \"hallotta\" — if.",
     "i": "/hɒlːotːɒ/"
   },
@@ -10929,19 +10929,19 @@ const wordDatabase = [
   },
   {
     "h": "hallott",
-    "e": "if",
+    "e": "heard",
     "m": "Spoken like \"hallott\" — if.",
     "i": "/hɒlːotː/"
   },
   {
     "h": "megtettem",
-    "e": "still; yet",
+    "e": "I did (it)",
     "m": "Spoken like \"megtettem\" — still.",
     "i": "/mɛɡtɛtːɛm/"
   },
   {
     "h": "mindet",
-    "e": "what; we",
+    "e": "all of them (accusative)",
     "m": "Spoken like \"meendet\" — what.",
     "i": "/mindɛt/"
   },
@@ -10953,7 +10953,7 @@ const wordDatabase = [
   },
   {
     "h": "miénk",
-    "e": "what; we",
+    "e": "ours",
     "m": "Spoken like \"meeénk\" — what.",
     "i": "/mieːnk/"
   },
@@ -10965,7 +10965,7 @@ const wordDatabase = [
   },
   {
     "h": "legjobban",
-    "e": "down",
+    "e": "best (adverb)",
     "m": "Spoken like \"legjobban\" — down.",
     "i": "/lɛɡjobːɒn/"
   },
@@ -10977,7 +10977,7 @@ const wordDatabase = [
   },
   {
     "h": "esti",
-    "e": "and",
+    "e": "evening (adjective)",
     "m": "Spoken like \"estee\" — and.",
     "i": "/ɛʃti/"
   },
@@ -10995,7 +10995,7 @@ const wordDatabase = [
   },
   {
     "h": "találta",
-    "e": "maybe",
+    "e": "he/she found (it)",
     "m": "Spoken like \"találta\" — maybe.",
     "i": "/tɒlaːltɒ/"
   },
@@ -11007,7 +11007,7 @@ const wordDatabase = [
   },
   {
     "h": "eset",
-    "e": "and",
+    "e": "case; instance",
     "m": "Spoken like \"eset\" — and.",
     "i": "/ɛʃɛt/"
   },
@@ -11025,7 +11025,7 @@ const wordDatabase = [
   },
   {
     "h": "találtál",
-    "e": "maybe",
+    "e": "did you find (informal)",
     "m": "Spoken like \"találtál\" — maybe.",
     "i": "/tɒlaːltaːl/"
   },
@@ -11049,13 +11049,13 @@ const wordDatabase = [
   },
   {
     "h": "min",
-    "e": "what; we",
+    "e": "on which; than",
     "m": "Spoken like \"meen\" — what.",
     "i": "/min/"
   },
   {
     "h": "mindenre",
-    "e": "what; we",
+    "e": "to/onto everything",
     "m": "Spoken like \"meendenre\" — what.",
     "i": "/mindɛnrɛ/"
   },
@@ -11079,13 +11079,13 @@ const wordDatabase = [
   },
   {
     "h": "beléd",
-    "e": "into; in",
+    "e": "into you",
     "m": "Spoken like \"beléd\" — into.",
     "i": "/bɛleːd/"
   },
   {
     "h": "természetes",
-    "e": "you (sing.)",
+    "e": "natural",
     "m": "Spoken like \"termésetes\" — you (sing.).",
     "i": "/tɛrmeːsɛtɛʃ/"
   },
@@ -11163,7 +11163,7 @@ const wordDatabase = [
   },
   {
     "h": "ugyanúgy",
-    "e": "so; that way",
+    "e": "the same way; similarly",
     "m": "Spoken like \"oodyanúdy\" — so.",
     "i": "/uɟɒnuːɟ/"
   },
@@ -11199,19 +11199,19 @@ const wordDatabase = [
   },
   {
     "h": "legyenek",
-    "e": "down",
+    "e": "let them be",
     "m": "Spoken like \"ledyenek\" — down.",
     "i": "/lɛɟɛnɛk/"
   },
   {
     "h": "keresi",
-    "e": "asks; requests",
+    "e": "he/she searches for",
     "m": "Spoken like \"keresee\" — asks.",
     "i": "/kɛrɛʃi/"
   },
   {
     "h": "magáról",
-    "e": "today",
+    "e": "about himself/herself",
     "m": "Spoken like \"magáról\" — today.",
     "i": "/mɒɡaːroːl/"
   },
@@ -11229,7 +11229,7 @@ const wordDatabase = [
   },
   {
     "h": "semmire",
-    "e": "neither; nor",
+    "e": "to nothing",
     "m": "Spoken like \"semmeere\" — neither.",
     "i": "/ʃɛmːirɛ/"
   },
@@ -11241,7 +11241,7 @@ const wordDatabase = [
   },
   {
     "h": "ahogyan",
-    "e": "as; how",
+    "e": "as; the way",
     "m": "Spoken like \"ahodyan\".",
     "i": "/ɒhoɟɒn/"
   },
@@ -11265,7 +11265,7 @@ const wordDatabase = [
   },
   {
     "h": "kisebb",
-    "e": "who; out",
+    "e": "smaller",
     "m": "Spoken like \"keesebb\" — who.",
     "i": "/kiʃɛbː/"
   },
@@ -11277,7 +11277,7 @@ const wordDatabase = [
   },
   {
     "h": "nyilvánvalóan",
-    "e": "obviously",
+    "e": "obviously; evidently",
     "m": "Spoken like \"nyeelvánvalóan\".",
     "i": "/ɲilvaːnvɒloːɒn/"
   },
@@ -11301,7 +11301,7 @@ const wordDatabase = [
   },
   {
     "h": "felelős",
-    "e": "up",
+    "e": "responsible",
     "m": "Spoken like \"felelős\" — up.",
     "i": "/fɛlɛløːʃ/"
   },
@@ -11349,7 +11349,7 @@ const wordDatabase = [
   },
   {
     "h": "testvérem",
-    "e": "you (sing.)",
+    "e": "my sibling",
     "m": "Spoken like \"testvérem\" — you (sing.).",
     "i": "/tɛʃtveːrɛm/"
   },
@@ -11361,7 +11361,7 @@ const wordDatabase = [
   },
   {
     "h": "mindezt",
-    "e": "what; we",
+    "e": "all this (accusative)",
     "m": "Spoken like \"meendezt\" — what.",
     "i": "/mindɛzt/"
   },
@@ -11373,13 +11373,13 @@ const wordDatabase = [
   },
   {
     "h": "egyesült",
-    "e": "one; a",
+    "e": "united",
     "m": "Spoken like \"edyesült\" — one.",
     "i": "/ɛɟɛʃylt/"
   },
   {
     "h": "nemrég",
-    "e": "no; not",
+    "e": "recently; not long ago",
     "m": "Spoken like \"nemrég\" — no.",
     "i": "/nɛmreːɡ/"
   },
@@ -11391,13 +11391,13 @@ const wordDatabase = [
   },
   {
     "h": "ismert",
-    "e": "also; too",
+    "e": "known; familiar",
     "m": "Spoken like \"eesmert\" — also.",
     "i": "/iʃmɛrt/"
   },
   {
     "h": "esélye",
-    "e": "and",
+    "e": "his/her chance",
     "m": "Spoken like \"eséye\" — and.",
     "i": "/ɛʃeːjɛ/"
   },
@@ -11415,7 +11415,7 @@ const wordDatabase = [
   },
   {
     "h": "fogadok",
-    "e": "tooth",
+    "e": "I accept; I bet",
     "m": "Spoken like \"fogadok\" — tooth.",
     "i": "/foɡɒdok/"
   },
@@ -11439,19 +11439,19 @@ const wordDatabase = [
   },
   {
     "h": "igazgató",
-    "e": "true",
+    "e": "director; manager",
     "m": "Spoken like \"eegazgató\" — true.",
     "i": "/iɡɒzɡɒtoː/"
   },
   {
     "h": "megpróbáltam",
-    "e": "still; yet",
+    "e": "I tried",
     "m": "Spoken like \"megpróbáltam\" — still.",
     "i": "/mɛɡproːbaːltɒm/"
   },
   {
     "h": "teszel",
-    "e": "you (sing.)",
+    "e": "you do/put",
     "m": "Spoken like \"tesel\" — you (sing.).",
     "i": "/tɛsɛl/"
   },
@@ -11463,7 +11463,7 @@ const wordDatabase = [
   },
   {
     "h": "igazam",
-    "e": "true",
+    "e": "I am right",
     "m": "Spoken like \"eegazam\" — true.",
     "i": "/iɡɒzɒm/"
   },
@@ -11493,7 +11493,7 @@ const wordDatabase = [
   },
   {
     "h": "kezdtem",
-    "e": "hand",
+    "e": "I began",
     "m": "Spoken like \"kezdtem\" — hand.",
     "i": "/kɛzdtɛm/"
   },
@@ -11541,7 +11541,7 @@ const wordDatabase = [
   },
   {
     "h": "nemet",
-    "e": "no; not",
+    "e": "no (accusative); German (adjective)",
     "m": "Spoken like \"nemet\" — no.",
     "i": "/nɛmɛt/"
   },
@@ -11553,7 +11553,7 @@ const wordDatabase = [
   },
   {
     "h": "miből",
-    "e": "what; we",
+    "e": "from what; out of what",
     "m": "Spoken like \"meeből\" — what.",
     "i": "/mibøːl/"
   },
@@ -11619,13 +11619,13 @@ const wordDatabase = [
   },
   {
     "h": "hajrá",
-    "e": "if",
+    "e": "come on; go for it",
     "m": "Spoken like \"hajrá\" — if.",
     "i": "/hɒjraː/"
   },
   {
     "h": "fontosabb",
-    "e": "important",
+    "e": "more important",
     "m": "Spoken like \"fontosabb\" — important.",
     "i": "/fontoʃɒbː/"
   },
@@ -11637,13 +11637,13 @@ const wordDatabase = [
   },
   {
     "h": "veszek",
-    "e": "buys; takes",
+    "e": "I buy/take",
     "m": "Spoken like \"vesek\" — buys.",
     "i": "/vɛsɛk/"
   },
   {
     "h": "mindez",
-    "e": "what; we",
+    "e": "all this",
     "m": "Spoken like \"meendez\" — what.",
     "i": "/mindɛz/"
   },
@@ -11661,7 +11661,7 @@ const wordDatabase = [
   },
   {
     "h": "hamarabb",
-    "e": "if",
+    "e": "sooner; earlier",
     "m": "Spoken like \"hamarabb\" — if.",
     "i": "/hɒmɒrɒbː/"
   },
@@ -11673,7 +11673,7 @@ const wordDatabase = [
   },
   {
     "h": "kocsiba",
-    "e": "stone",
+    "e": "into the car",
     "m": "Spoken like \"kocheeba\" — stone.",
     "i": "/kotʃibɒ/"
   },
@@ -11709,13 +11709,13 @@ const wordDatabase = [
   },
   {
     "h": "nemde",
-    "e": "no; not",
+    "e": "isn't it? right?",
     "m": "Spoken like \"nemde\" — no.",
     "i": "/nɛmdɛ/"
   },
   {
     "h": "nagyi",
-    "e": "big",
+    "e": "grandma; grandmother (informal)",
     "m": "Spoken like \"nadyee\" — big.",
     "i": "/nɒɟi/"
   },
@@ -11751,7 +11751,7 @@ const wordDatabase = [
   },
   {
     "h": "utánam",
-    "e": "road; way",
+    "e": "after me",
     "m": "Spoken like \"ootánam\" — road.",
     "i": "/utaːnɒm/"
   },
@@ -11763,7 +11763,7 @@ const wordDatabase = [
   },
   {
     "h": "találták",
-    "e": "maybe",
+    "e": "they found (it)",
     "m": "Spoken like \"találták\" — maybe.",
     "i": "/tɒlaːltaːk/"
   },
@@ -11775,13 +11775,13 @@ const wordDatabase = [
   },
   {
     "h": "kezdett",
-    "e": "hand",
+    "e": "began; started",
     "m": "Spoken like \"kezdett\" — hand.",
     "i": "/kɛzdɛtː/"
   },
   {
     "h": "ugyanolyan",
-    "e": "so; that way",
+    "e": "the same kind of",
     "m": "Spoken like \"oodyanoyan\" — so.",
     "i": "/uɟɒnojɒn/"
   },
@@ -11799,7 +11799,7 @@ const wordDatabase = [
   },
   {
     "h": "emberekkel",
-    "e": "person",
+    "e": "with people",
     "m": "Spoken like \"emberekkel\" — person.",
     "i": "/ɛmbɛrɛkːɛl/"
   },
@@ -11811,7 +11811,7 @@ const wordDatabase = [
   },
   {
     "h": "feleséged",
-    "e": "up",
+    "e": "your wife",
     "m": "Spoken like \"feleséged\" — up.",
     "i": "/fɛlɛʃeːɡɛd/"
   },
@@ -11823,7 +11823,7 @@ const wordDatabase = [
   },
   {
     "h": "hang",
-    "e": "if",
+    "e": "voice; sound",
     "m": "Spoken like \"hang\" — if.",
     "i": "/hɒnɡ/"
   },
@@ -11835,7 +11835,7 @@ const wordDatabase = [
   },
   {
     "h": "benneteket",
-    "e": "into; in",
+    "e": "you (plural accusative)",
     "m": "Spoken like \"benneteket\" — into.",
     "i": "/bɛnːɛtɛkɛt/"
   },
@@ -11859,7 +11859,7 @@ const wordDatabase = [
   },
   {
     "h": "keresnek",
-    "e": "asks; requests",
+    "e": "they search",
     "m": "Spoken like \"keresnek\" — asks.",
     "i": "/kɛrɛʃnɛk/"
   },
@@ -11895,7 +11895,7 @@ const wordDatabase = [
   },
   {
     "h": "beszélnek",
-    "e": "into; in",
+    "e": "they speak",
     "m": "Spoken like \"besélnek\" — into.",
     "i": "/bɛseːlnɛk/"
   },
@@ -11925,7 +11925,7 @@ const wordDatabase = [
   },
   {
     "h": "szeme",
-    "e": "eye",
+    "e": "his/her eye",
     "m": "Spoken like \"seme\" — eye.",
     "i": "/sɛmɛ/"
   },
@@ -11943,13 +11943,13 @@ const wordDatabase = [
   },
   {
     "h": "azonban",
-    "e": "the; that",
+    "e": "however; but",
     "m": "Spoken like \"azonban\" — the.",
     "i": "/ɒzonbɒn/"
   },
   {
     "h": "megpróbálom",
-    "e": "still; yet",
+    "e": "I try (it)",
     "m": "Spoken like \"megpróbálom\" — still.",
     "i": "/mɛɡproːbaːlom/"
   },
@@ -11973,7 +11973,7 @@ const wordDatabase = [
   },
   {
     "h": "hagyják",
-    "e": "if",
+    "e": "they leave (it)",
     "m": "Spoken like \"hadyják\" — if.",
     "i": "/hɒɟjaːk/"
   },
@@ -12003,7 +12003,7 @@ const wordDatabase = [
   },
   {
     "h": "feje",
-    "e": "head",
+    "e": "his/her head",
     "m": "Spoken like \"feje\" — head.",
     "i": "/fɛjɛ/"
   },
@@ -12015,13 +12015,13 @@ const wordDatabase = [
   },
   {
     "h": "arcát",
-    "e": "face",
+    "e": "his/her face (accusative)",
     "m": "Spoken like \"arcát\" — face.",
     "i": "/ɒrt͡saːt/"
   },
   {
     "h": "hűha",
-    "e": "wow",
+    "e": "wow; oh my",
     "m": "Spoken like \"hűha\".",
     "i": "/hyːhɒ/"
   },
@@ -12033,7 +12033,7 @@ const wordDatabase = [
   },
   {
     "h": "halottak",
-    "e": "if",
+    "e": "the dead",
     "m": "Spoken like \"halottak\" — if.",
     "i": "/hɒlotːɒk/"
   },
@@ -12051,7 +12051,7 @@ const wordDatabase = [
   },
   {
     "h": "harcolni",
-    "e": "if",
+    "e": "to fight; to battle",
     "m": "Spoken like \"harcolnee\" — if.",
     "i": "/hɒrt͡solni/"
   },
@@ -12111,7 +12111,7 @@ const wordDatabase = [
   },
   {
     "h": "szintén",
-    "e": "color",
+    "e": "also; too; likewise",
     "m": "Spoken like \"seentén\" — color.",
     "i": "/sinteːn/"
   },
@@ -12183,19 +12183,19 @@ const wordDatabase = [
   },
   {
     "h": "lennének",
-    "e": "down",
+    "e": "they would be",
     "m": "Spoken like \"lennének\" — down.",
     "i": "/lɛnːeːnɛk/"
   },
   {
     "h": "ezekkel",
-    "e": "this",
+    "e": "with these",
     "m": "Spoken like \"ezekkel\" — this.",
     "i": "/ɛzɛkːɛl/"
   },
   {
     "h": "megvannak",
-    "e": "still; yet",
+    "e": "they are done/available",
     "m": "Spoken like \"megvannak\" — still.",
     "i": "/mɛɡvɒnːɒk/"
   },
@@ -12207,7 +12207,7 @@ const wordDatabase = [
   },
   {
     "h": "egyetértek",
-    "e": "one; a",
+    "e": "I agree",
     "m": "Spoken like \"edyetértek\" — one.",
     "i": "/ɛɟɛteːrtɛk/"
   },
@@ -12219,7 +12219,7 @@ const wordDatabase = [
   },
   {
     "h": "maguknak",
-    "e": "today",
+    "e": "to themselves",
     "m": "Spoken like \"magooknak\" — today.",
     "i": "/mɒɡuknɒk/"
   },
@@ -12237,13 +12237,13 @@ const wordDatabase = [
   },
   {
     "h": "kezdeni",
-    "e": "hand",
+    "e": "to begin; to start",
     "m": "Spoken like \"kezdenee\" — hand.",
     "i": "/kɛzdɛni/"
   },
   {
     "h": "tettek",
-    "e": "you (sing.)",
+    "e": "they did/put",
     "m": "Spoken like \"tettek\" — you (sing.).",
     "i": "/tɛtːɛk/"
   },
@@ -12255,13 +12255,13 @@ const wordDatabase = [
   },
   {
     "h": "reggeli",
-    "e": "morning",
+    "e": "breakfast; morning (adjective)",
     "m": "Spoken like \"reggelee\" — morning.",
     "i": "/rɛɡːɛli/"
   },
   {
     "h": "engedje",
-    "e": "I",
+    "e": "let him/her; allow (imperative)",
     "m": "Spoken like \"engedje\" — I.",
     "i": "/ɛnɡɛdjɛ/"
   },
@@ -12303,7 +12303,7 @@ const wordDatabase = [
   },
   {
     "h": "magáé",
-    "e": "today",
+    "e": "his/her own",
     "m": "Spoken like \"magáé\" — today.",
     "i": "/mɒɡaːeː/"
   },
@@ -12315,7 +12315,7 @@ const wordDatabase = [
   },
   {
     "h": "hadsereg",
-    "e": "if",
+    "e": "army; military force",
     "m": "Spoken like \"hadsereg\" — if.",
     "i": "/hɒdʃɛrɛɡ/"
   },
@@ -12333,7 +12333,7 @@ const wordDatabase = [
   },
   {
     "h": "használja",
-    "e": "if",
+    "e": "he/she uses (it)",
     "m": "Spoken like \"hasnálja\" — if.",
     "i": "/hɒsnaːljɒ/"
   },
@@ -12345,13 +12345,13 @@ const wordDatabase = [
   },
   {
     "h": "hagyjon",
-    "e": "if",
+    "e": "let him/her leave",
     "m": "Spoken like \"hadyjon\" — if.",
     "i": "/hɒɟjon/"
   },
   {
     "h": "hozzátok",
-    "e": "snow",
+    "e": "to you (plural)",
     "m": "Spoken like \"hozzátok\" — snow.",
     "i": "/hozːaːtok/"
   },
@@ -12387,7 +12387,7 @@ const wordDatabase = [
   },
   {
     "h": "mami",
-    "e": "today",
+    "e": "mommy",
     "m": "Spoken like \"mamee\" — today.",
     "i": "/mɒmi/"
   },
@@ -12435,7 +12435,7 @@ const wordDatabase = [
   },
   {
     "h": "ellenség",
-    "e": "against",
+    "e": "enemy",
     "m": "Spoken like \"ellenség\" — against.",
     "i": "/ɛlːɛnʃeːɡ/"
   },
@@ -12477,13 +12477,13 @@ const wordDatabase = [
   },
   {
     "h": "magaddal",
-    "e": "today",
+    "e": "with yourself",
     "m": "Spoken like \"magaddal\" — today.",
     "i": "/mɒɡɒdːɒl/"
   },
   {
     "h": "kezdődött",
-    "e": "hand",
+    "e": "began; started",
     "m": "Spoken like \"kezdődött\" — hand.",
     "i": "/kɛzdøːdøtː/"
   },
@@ -12495,7 +12495,7 @@ const wordDatabase = [
   },
   {
     "h": "emberei",
-    "e": "person",
+    "e": "his/her people/subordinates",
     "m": "Spoken like \"embereee\" — person.",
     "i": "/ɛmbɛrɛi/"
   },
@@ -12513,13 +12513,13 @@ const wordDatabase = [
   },
   {
     "h": "kerülni",
-    "e": "asks; requests",
+    "e": "to cost; to avoid; to go around",
     "m": "Spoken like \"kerülnee\" — asks.",
     "i": "/kɛrylni/"
   },
   {
     "h": "azoknak",
-    "e": "the; that",
+    "e": "to those",
     "m": "Spoken like \"azoknak\" — the.",
     "i": "/ɒzoknɒk/"
   },
@@ -12549,7 +12549,7 @@ const wordDatabase = [
   },
   {
     "h": "ismerjük",
-    "e": "also; too",
+    "e": "we know",
     "m": "Spoken like \"eesmerjük\" — also.",
     "i": "/iʃmɛrjyk/"
   },
@@ -12561,13 +12561,13 @@ const wordDatabase = [
   },
   {
     "h": "találnunk",
-    "e": "maybe",
+    "e": "for us to find",
     "m": "Spoken like \"találnoonk\" — maybe.",
     "i": "/tɒlaːlnunk/"
   },
   {
     "h": "akkora",
-    "e": "then",
+    "e": "so big; that big",
     "m": "Spoken like \"akkora\" — then.",
     "i": "/ɒkːorɒ/"
   },
@@ -12585,7 +12585,7 @@ const wordDatabase = [
   },
   {
     "h": "belőled",
-    "e": "into; in",
+    "e": "from you; out of you",
     "m": "Spoken like \"belőled\" — into.",
     "i": "/bɛløːlɛd/"
   },
@@ -12609,19 +12609,19 @@ const wordDatabase = [
   },
   {
     "h": "tehetünk",
-    "e": "you (sing.)",
+    "e": "we can do",
     "m": "Spoken like \"tehetünk\" — you (sing.).",
     "i": "/tɛhɛtynk/"
   },
   {
     "h": "mindegyik",
-    "e": "what; we",
+    "e": "each; every one",
     "m": "Spoken like \"meendedyeek\" — what.",
     "i": "/mindɛɟik/"
   },
   {
     "h": "maradunk",
-    "e": "already",
+    "e": "we stay",
     "m": "Spoken like \"maradoonk\" — already.",
     "i": "/mɒrɒdunk/"
   },
@@ -12639,7 +12639,7 @@ const wordDatabase = [
   },
   {
     "h": "ismerlek",
-    "e": "also; too",
+    "e": "I know you",
     "m": "Spoken like \"eesmerlek\" — also.",
     "i": "/iʃmɛrlɛk/"
   },
@@ -12675,13 +12675,13 @@ const wordDatabase = [
   },
   {
     "h": "tegyen",
-    "e": "you (sing.)",
+    "e": "let him/her do/put",
     "m": "Spoken like \"tedyen\" — you (sing.).",
     "i": "/tɛɟɛn/"
   },
   {
     "h": "hagyjátok",
-    "e": "if",
+    "e": "leave it (imperative, plural)",
     "m": "Spoken like \"hadyjátok\" — if.",
     "i": "/hɒɟjaːtok/"
   },
@@ -12717,13 +12717,13 @@ const wordDatabase = [
   },
   {
     "h": "emberrel",
-    "e": "person",
+    "e": "with a person",
     "m": "Spoken like \"emberrel\" — person.",
     "i": "/ɛmbɛrːɛl/"
   },
   {
     "h": "feleségét",
-    "e": "up",
+    "e": "his/her wife (accusative)",
     "m": "Spoken like \"feleségét\" — up.",
     "i": "/fɛlɛʃeːɡeːt/"
   },
@@ -12759,7 +12759,7 @@ const wordDatabase = [
   },
   {
     "h": "tudnia",
-    "e": "knows; can",
+    "e": "he/she must know",
     "m": "Spoken like \"toodneea\" — knows.",
     "i": "/tudniɒ/"
   },
@@ -12813,7 +12813,7 @@ const wordDatabase = [
   },
   {
     "h": "belőlem",
-    "e": "into; in",
+    "e": "from me; out of me",
     "m": "Spoken like \"belőlem\" — into.",
     "i": "/bɛløːlɛm/"
   },
@@ -12867,7 +12867,7 @@ const wordDatabase = [
   },
   {
     "h": "engedélyt",
-    "e": "I",
+    "e": "permission (accusative)",
     "m": "Spoken like \"engedéyt\" — I.",
     "i": "/ɛnɡɛdeːjt/"
   },
@@ -12879,25 +12879,25 @@ const wordDatabase = [
   },
   {
     "h": "megőrültél",
-    "e": "still; yet",
+    "e": "you went crazy",
     "m": "Spoken like \"megőrültél\" — still.",
     "i": "/mɛɡøːrylteːl/"
   },
   {
     "h": "iskolában",
-    "e": "also; too",
+    "e": "in school",
     "m": "Spoken like \"eeskolában\" — also.",
     "i": "/iʃkolaːbɒn/"
   },
   {
     "h": "veszélyben",
-    "e": "buys; takes",
+    "e": "in danger",
     "m": "Spoken like \"veséyben\" — buys.",
     "i": "/vɛseːjbɛn/"
   },
   {
     "h": "használd",
-    "e": "if",
+    "e": "use it (imperative)",
     "m": "Spoken like \"hasnáld\" — if.",
     "i": "/hɒsnaːld/"
   },
@@ -12951,7 +12951,7 @@ const wordDatabase = [
   },
   {
     "h": "szellem",
-    "e": "wind; edge",
+    "e": "spirit; ghost",
     "m": "Spoken like \"sellem\" — wind.",
     "i": "/sɛlːɛm/"
   },
@@ -12963,13 +12963,13 @@ const wordDatabase = [
   },
   {
     "h": "keressük",
-    "e": "asks; requests",
+    "e": "let's search for",
     "m": "Spoken like \"keressük\" — asks.",
     "i": "/kɛrɛʃːyk/"
   },
   {
     "h": "kezeket",
-    "e": "hand",
+    "e": "hands (accusative plural)",
     "m": "Spoken like \"kezeket\" — hand.",
     "i": "/kɛzɛkɛt/"
   },
@@ -12981,13 +12981,13 @@ const wordDatabase = [
   },
   {
     "h": "hajón",
-    "e": "if",
+    "e": "on a ship/boat",
     "m": "Spoken like \"hajón\" — if.",
     "i": "/hɒjoːn/"
   },
   {
     "h": "feledd",
-    "e": "up",
+    "e": "forget it (imperative)",
     "m": "Spoken like \"feledd\" — up.",
     "i": "/fɛlɛdː/"
   },
@@ -13005,7 +13005,7 @@ const wordDatabase = [
   },
   {
     "h": "kellenek",
-    "e": "must; is needed",
+    "e": "are needed; are necessary",
     "m": "Spoken like \"kellenek\" — must.",
     "i": "/kɛlːɛnɛk/"
   },
@@ -13029,13 +13029,13 @@ const wordDatabase = [
   },
   {
     "h": "had",
-    "e": "if",
+    "e": "army; horde",
     "m": "Spoken like \"had\" — if.",
     "i": "/hɒd/"
   },
   {
     "h": "estére",
-    "e": "and",
+    "e": "by evening",
     "m": "Spoken like \"estére\" — and.",
     "i": "/ɛʃteːrɛ/"
   },
@@ -13083,7 +13083,7 @@ const wordDatabase = [
   },
   {
     "h": "lennénk",
-    "e": "down",
+    "e": "we would be",
     "m": "Spoken like \"lennénk\" — down.",
     "i": "/lɛnːeːnk/"
   },
@@ -13101,7 +13101,7 @@ const wordDatabase = [
   },
   {
     "h": "anyag",
-    "e": "mother",
+    "e": "material; matter",
     "m": "Spoken like \"anyag\" — mother.",
     "i": "/ɒɲɒɡ/"
   },
@@ -13131,7 +13131,7 @@ const wordDatabase = [
   },
   {
     "h": "utóbbi",
-    "e": "road; way",
+    "e": "latter; recent",
     "m": "Spoken like \"ootóbbee\" — road.",
     "i": "/utoːbːi/"
   },
@@ -13149,7 +13149,7 @@ const wordDatabase = [
   },
   {
     "h": "ismeretlen",
-    "e": "also; too",
+    "e": "unknown; stranger",
     "m": "Spoken like \"eesmeretlen\" — also.",
     "i": "/iʃmɛrɛtlɛn/"
   },
@@ -13179,7 +13179,7 @@ const wordDatabase = [
   },
   {
     "h": "hagyod",
-    "e": "if",
+    "e": "you leave (it)",
     "m": "Spoken like \"hadyod\" — if.",
     "i": "/hɒɟod/"
   },
@@ -13191,7 +13191,7 @@ const wordDatabase = [
   },
   {
     "h": "eszed",
-    "e": "and",
+    "e": "your mind/brain",
     "m": "Spoken like \"esed\" — and.",
     "i": "/ɛsɛd/"
   },
@@ -13203,7 +13203,7 @@ const wordDatabase = [
   },
   {
     "h": "okés",
-    "e": "okay",
+    "e": "okay (informal)",
     "m": "Spoken like \"okés\".",
     "i": "/okeːʃ/"
   },
@@ -13215,13 +13215,13 @@ const wordDatabase = [
   },
   {
     "h": "nagyra",
-    "e": "big",
+    "e": "onto big; greatly",
     "m": "Spoken like \"nadyra\" — big.",
     "i": "/nɒɟrɒ/"
   },
   {
     "h": "harcos",
-    "e": "if",
+    "e": "warrior; fighter",
     "m": "Spoken like \"harcos\" — if.",
     "i": "/hɒrt͡soʃ/"
   },
@@ -13239,7 +13239,7 @@ const wordDatabase = [
   },
   {
     "h": "mellettem",
-    "e": "next to",
+    "e": "beside me",
     "m": "Spoken like \"mellettem\" — next to.",
     "i": "/mɛlːɛtːɛm/"
   },
@@ -13293,13 +13293,13 @@ const wordDatabase = [
   },
   {
     "h": "borzalmas",
-    "e": "wine",
+    "e": "terrible; awful",
     "m": "Spoken like \"borzalmas\" — wine.",
     "i": "/borzɒlmɒʃ/"
   },
   {
     "h": "megértetted",
-    "e": "still; yet",
+    "e": "you understood",
     "m": "Spoken like \"megértetted\" — still.",
     "i": "/mɛɡeːrtɛtːɛd/"
   },
@@ -13365,13 +13365,13 @@ const wordDatabase = [
   },
   {
     "h": "ugyanezt",
-    "e": "so; that way",
+    "e": "this same (accusative)",
     "m": "Spoken like \"oodyanezt\" — so.",
     "i": "/uɟɒnɛzt/"
   },
   {
     "h": "karácsonyt",
-    "e": "arm",
+    "e": "Christmas (accusative)",
     "m": "Spoken like \"karáchonyt\" — arm.",
     "i": "/kɒraːtʃoɲt/"
   },
@@ -13395,7 +13395,7 @@ const wordDatabase = [
   },
   {
     "h": "keresett",
-    "e": "asks; requests",
+    "e": "he/she searched/earned",
     "m": "Spoken like \"keresett\" — asks.",
     "i": "/kɛrɛʃɛtː/"
   },
@@ -13425,7 +13425,7 @@ const wordDatabase = [
   },
   {
     "h": "nagyjából",
-    "e": "big",
+    "e": "approximately; roughly",
     "m": "Spoken like \"nadyjából\" — big.",
     "i": "/nɒɟjaːboːl/"
   },
@@ -13443,13 +13443,13 @@ const wordDatabase = [
   },
   {
     "h": "szokásos",
-    "e": "word",
+    "e": "usual; customary",
     "m": "Spoken like \"sokásos\" — word.",
     "i": "/sokaːʃoʃ/"
   },
   {
     "h": "kerestem",
-    "e": "asks; requests",
+    "e": "I searched",
     "m": "Spoken like \"kerestem\" — asks.",
     "i": "/kɛrɛʃtɛm/"
   },
@@ -13473,25 +13473,25 @@ const wordDatabase = [
   },
   {
     "h": "harc",
-    "e": "if",
+    "e": "battle; fight",
     "m": "Spoken like \"harc\" — if.",
     "i": "/hɒrt͡s/"
   },
   {
     "h": "magamat",
-    "e": "today",
+    "e": "myself (accusative)",
     "m": "Spoken like \"magamat\" — today.",
     "i": "/mɒɡɒmɒt/"
   },
   {
     "h": "tudnánk",
-    "e": "knows; can",
+    "e": "we would know; we could",
     "m": "Spoken like \"toodnánk\" — knows.",
     "i": "/tudnaːnk/"
   },
   {
     "h": "habár",
-    "e": "if",
+    "e": "although; though",
     "m": "Spoken like \"habár\" — if.",
     "i": "/hɒbaːr/"
   },
@@ -13533,13 +13533,13 @@ const wordDatabase = [
   },
   {
     "h": "megölöm",
-    "e": "still; yet",
+    "e": "I kill",
     "m": "Spoken like \"megölöm\" — still.",
     "i": "/mɛɡøløm/"
   },
   {
     "h": "tudjam",
-    "e": "knows; can",
+    "e": "let me know",
     "m": "Spoken like \"toodjam\" — knows.",
     "i": "/tudjɒm/"
   },
@@ -13551,7 +13551,7 @@ const wordDatabase = [
   },
   {
     "h": "mindennek",
-    "e": "what; we",
+    "e": "of/to everything",
     "m": "Spoken like \"meendennek\" — what.",
     "i": "/mindɛnːɛk/"
   },
@@ -13563,13 +13563,13 @@ const wordDatabase = [
   },
   {
     "h": "találok",
-    "e": "maybe",
+    "e": "I find",
     "m": "Spoken like \"találok\" — maybe.",
     "i": "/tɒlaːlok/"
   },
   {
     "h": "szeretik",
-    "e": "loves; likes",
+    "e": "they love each other",
     "m": "Spoken like \"sereteek\" — loves.",
     "i": "/sɛrɛtik/"
   },
@@ -13599,7 +13599,7 @@ const wordDatabase = [
   },
   {
     "h": "hazudott",
-    "e": "if",
+    "e": "he/she lied",
     "m": "Spoken like \"hazoodott\" — if.",
     "i": "/hɒzudotː/"
   },
@@ -13611,7 +13611,7 @@ const wordDatabase = [
   },
   {
     "h": "eszem",
-    "e": "and",
+    "e": "my mind/brain; I eat",
     "m": "Spoken like \"esem\" — and.",
     "i": "/ɛsɛm/"
   },
@@ -13647,7 +13647,7 @@ const wordDatabase = [
   },
   {
     "h": "mentél",
-    "e": "went",
+    "e": "you went; you saved",
     "m": "Spoken like \"mentél\" — went.",
     "i": "/mɛnteːl/"
   },
@@ -13659,13 +13659,13 @@ const wordDatabase = [
   },
   {
     "h": "telefonon",
-    "e": "you (sing.)",
+    "e": "on the phone",
     "m": "Spoken like \"telefonon\" — you (sing.).",
     "i": "/tɛlɛfonon/"
   },
   {
     "h": "kezdek",
-    "e": "hand",
+    "e": "I begin",
     "m": "Spoken like \"kezdek\" — hand.",
     "i": "/kɛzdɛk/"
   },
@@ -13797,19 +13797,19 @@ const wordDatabase = [
   },
   {
     "h": "magamra",
-    "e": "today",
+    "e": "onto myself",
     "m": "Spoken like \"magamra\" — today.",
     "i": "/mɒɡɒmrɒ/"
   },
   {
     "h": "hagytad",
-    "e": "if",
+    "e": "you left (it)",
     "m": "Spoken like \"hadytad\" — if.",
     "i": "/hɒɟtɒd/"
   },
   {
     "h": "hazudsz",
-    "e": "if",
+    "e": "you lie",
     "m": "Spoken like \"hazoods\" — if.",
     "i": "/hɒzuds/"
   },
@@ -13845,7 +13845,7 @@ const wordDatabase = [
   },
   {
     "h": "mindenütt",
-    "e": "what; we",
+    "e": "everywhere",
     "m": "Spoken like \"meendenütt\" — what.",
     "i": "/mindɛnytː/"
   },
@@ -13857,7 +13857,7 @@ const wordDatabase = [
   },
   {
     "h": "fogalmad",
-    "e": "tooth",
+    "e": "your concept/idea",
     "m": "Spoken like \"fogalmad\" — tooth.",
     "i": "/foɡɒlmɒd/"
   },
@@ -13887,7 +13887,7 @@ const wordDatabase = [
   },
   {
     "h": "találkozott",
-    "e": "maybe",
+    "e": "he/she met",
     "m": "Spoken like \"találkozott\" — maybe.",
     "i": "/tɒlaːlkozotː/"
   },
@@ -13905,7 +13905,7 @@ const wordDatabase = [
   },
   {
     "h": "királynő",
-    "e": "who; out",
+    "e": "queen",
     "m": "Spoken like \"keeráynő\" — who.",
     "i": "/kiraːjnøː/"
   },
@@ -13929,7 +13929,7 @@ const wordDatabase = [
   },
   {
     "h": "elleni",
-    "e": "against",
+    "e": "against (adjective)",
     "m": "Spoken like \"ellenee\" — against.",
     "i": "/ɛlːɛni/"
   },
@@ -13947,7 +13947,7 @@ const wordDatabase = [
   },
   {
     "h": "teszünk",
-    "e": "you (sing.)",
+    "e": "we do/put",
     "m": "Spoken like \"tesünk\" — you (sing.).",
     "i": "/tɛsynk/"
   },
@@ -14013,19 +14013,19 @@ const wordDatabase = [
   },
   {
     "h": "megöltem",
-    "e": "still; yet",
+    "e": "I killed",
     "m": "Spoken like \"megöltem\" — still.",
     "i": "/mɛɡøltɛm/"
   },
   {
     "h": "kitűnő",
-    "e": "who; out",
+    "e": "excellent; outstanding",
     "m": "Spoken like \"keetűnő\" — who.",
     "i": "/kityːnøː/"
   },
   {
     "h": "ismerte",
-    "e": "also; too",
+    "e": "he/she knew",
     "m": "Spoken like \"eesmerte\" — also.",
     "i": "/iʃmɛrtɛ/"
   },
@@ -14043,7 +14043,7 @@ const wordDatabase = [
   },
   {
     "h": "semmiség",
-    "e": "neither; nor",
+    "e": "nothing; trifle",
     "m": "Spoken like \"semmeeség\" — neither.",
     "i": "/ʃɛmːiʃeːɡ/"
   },
@@ -14055,7 +14055,7 @@ const wordDatabase = [
   },
   {
     "h": "csakis",
-    "e": "only; just",
+    "e": "only; exclusively",
     "m": "Spoken like \"chakees\" — only.",
     "i": "/tʃɒkiʃ/"
   },
@@ -14067,13 +14067,13 @@ const wordDatabase = [
   },
   {
     "h": "ezeknek",
-    "e": "this",
+    "e": "to these",
     "m": "Spoken like \"ezeknek\" — this.",
     "i": "/ɛzɛknɛk/"
   },
   {
     "h": "szerette",
-    "e": "loves; likes",
+    "e": "he/she loved (it)",
     "m": "Spoken like \"serette\" — loves.",
     "i": "/sɛrɛtːɛ/"
   },
@@ -14103,7 +14103,7 @@ const wordDatabase = [
   },
   {
     "h": "ismerős",
-    "e": "also; too",
+    "e": "acquaintance; familiar",
     "m": "Spoken like \"eesmerős\" — also.",
     "i": "/iʃmɛrøːʃ/"
   },
@@ -14115,7 +14115,7 @@ const wordDatabase = [
   },
   {
     "h": "egymásnak",
-    "e": "one; a",
+    "e": "to each other",
     "m": "Spoken like \"edymásnak\" — one.",
     "i": "/ɛɟmaːʃnɒk/"
   },
@@ -14133,13 +14133,13 @@ const wordDatabase = [
   },
   {
     "h": "magában",
-    "e": "today",
+    "e": "by himself/herself; in itself",
     "m": "Spoken like \"magában\" — today.",
     "i": "/mɒɡaːbɒn/"
   },
   {
     "h": "lehetünk",
-    "e": "down",
+    "e": "we can be; we may be",
     "m": "Spoken like \"lehetünk\" — down.",
     "i": "/lɛhɛtynk/"
   },
@@ -14181,7 +14181,7 @@ const wordDatabase = [
   },
   {
     "h": "feleségül",
-    "e": "up",
+    "e": "as a wife; in marriage",
     "m": "Spoken like \"feleségül\" — up.",
     "i": "/fɛlɛʃeːɡyl/"
   },
@@ -14199,7 +14199,7 @@ const wordDatabase = [
   },
   {
     "h": "magán",
-    "e": "today",
+    "e": "on himself/herself; private",
     "m": "Spoken like \"magán\" — today.",
     "i": "/mɒɡaːn/"
   },
@@ -14211,7 +14211,7 @@ const wordDatabase = [
   },
   {
     "h": "tanultam",
-    "e": "studies; learns",
+    "e": "I learned; I studied",
     "m": "Spoken like \"tanooltam\" — studies.",
     "i": "/tɒnultɒm/"
   },
@@ -14277,7 +14277,7 @@ const wordDatabase = [
   },
   {
     "h": "magammal",
-    "e": "today",
+    "e": "with myself",
     "m": "Spoken like \"magammal\" — today.",
     "i": "/mɒɡɒmːɒl/"
   },
@@ -14295,7 +14295,7 @@ const wordDatabase = [
   },
   {
     "h": "találja",
-    "e": "maybe",
+    "e": "he/she finds (it)",
     "m": "Spoken like \"találja\" — maybe.",
     "i": "/tɒlaːljɒ/"
   },
@@ -14307,7 +14307,7 @@ const wordDatabase = [
   },
   {
     "h": "következik",
-    "e": "follows",
+    "e": "follows; comes next",
     "m": "Spoken like \"következeek\".",
     "i": "/køvɛtkɛzik/"
   },
@@ -14349,7 +14349,7 @@ const wordDatabase = [
   },
   {
     "h": "csakhogy",
-    "e": "only; just",
+    "e": "however; except that",
     "m": "Spoken like \"chakhody\" — only.",
     "i": "/tʃɒkhoɟ/"
   },
@@ -14373,7 +14373,7 @@ const wordDatabase = [
   },
   {
     "h": "meghaltak",
-    "e": "still; yet",
+    "e": "died (plural); the dead",
     "m": "Spoken like \"meghaltak\" — still.",
     "i": "/mɛɡhɒltɒk/"
   },
@@ -14397,7 +14397,7 @@ const wordDatabase = [
   },
   {
     "h": "viszem",
-    "e": "carries; takes",
+    "e": "I take/carry (it)",
     "m": "Spoken like \"veesem\" — carries.",
     "i": "/visɛm/"
   },
@@ -14421,7 +14421,7 @@ const wordDatabase = [
   },
   {
     "h": "befelé",
-    "e": "into; in",
+    "e": "inward; inside",
     "m": "Spoken like \"befelé\" — into.",
     "i": "/bɛfɛleː/"
   },
@@ -14469,7 +14469,7 @@ const wordDatabase = [
   },
   {
     "h": "kezdem",
-    "e": "hand",
+    "e": "I begin (it)",
     "m": "Spoken like \"kezdem\" — hand.",
     "i": "/kɛzdɛm/"
   },
@@ -14499,7 +14499,7 @@ const wordDatabase = [
   },
   {
     "h": "találd",
-    "e": "maybe",
+    "e": "find it (imperative)",
     "m": "Spoken like \"találd\" — maybe.",
     "i": "/tɒlaːld/"
   },
@@ -14511,25 +14511,25 @@ const wordDatabase = [
   },
   {
     "h": "korai",
-    "e": "stone",
+    "e": "early",
     "m": "Spoken like \"koraee\" — stone.",
     "i": "/korɒi/"
   },
   {
     "h": "kezet",
-    "e": "hand",
+    "e": "hand (accusative)",
     "m": "Spoken like \"kezet\" — hand.",
     "i": "/kɛzɛt/"
   },
   {
     "h": "hasonlít",
-    "e": "if",
+    "e": "to compare; to resemble",
     "m": "Spoken like \"hasonlít\" — if.",
     "i": "/hɒʃonliːt/"
   },
   {
     "h": "mellette",
-    "e": "next to",
+    "e": "beside it/him/her",
     "m": "Spoken like \"mellette\" — next to.",
     "i": "/mɛlːɛtːɛ/"
   },
@@ -14565,7 +14565,7 @@ const wordDatabase = [
   },
   {
     "h": "beszéljek",
-    "e": "into; in",
+    "e": "let me speak",
     "m": "Spoken like \"beséljek\" — into.",
     "i": "/bɛseːljɛk/"
   },
@@ -14583,7 +14583,7 @@ const wordDatabase = [
   },
   {
     "h": "szemmel",
-    "e": "eye",
+    "e": "with the eye",
     "m": "Spoken like \"semmel\" — eye.",
     "i": "/sɛmːɛl/"
   },
@@ -14601,7 +14601,7 @@ const wordDatabase = [
   },
   {
     "h": "isteni",
-    "e": "also; too",
+    "e": "divine",
     "m": "Spoken like \"eestenee\" — also.",
     "i": "/iʃtɛni/"
   },
@@ -14619,7 +14619,7 @@ const wordDatabase = [
   },
   {
     "h": "manapság",
-    "e": "today",
+    "e": "nowadays; these days",
     "m": "Spoken like \"manapság\" — today.",
     "i": "/mɒnɒpʃaːɡ/"
   },
@@ -14631,13 +14631,13 @@ const wordDatabase = [
   },
   {
     "h": "meghalok",
-    "e": "still; yet",
+    "e": "I die",
     "m": "Spoken like \"meghalok\" — still.",
     "i": "/mɛɡhɒlok/"
   },
   {
     "h": "beszélhetnénk",
-    "e": "into; in",
+    "e": "we could speak",
     "m": "Spoken like \"besélhetnénk\" — into.",
     "i": "/bɛseːlhɛtneːnk/"
   },
@@ -14661,7 +14661,7 @@ const wordDatabase = [
   },
   {
     "h": "hazug",
-    "e": "if",
+    "e": "liar; false",
     "m": "Spoken like \"hazoog\" — if.",
     "i": "/hɒzuɡ/"
   },
@@ -14673,7 +14673,7 @@ const wordDatabase = [
   },
   {
     "h": "napi",
-    "e": "day; sun",
+    "e": "daily (adjective)",
     "m": "Spoken like \"napee\" — day.",
     "i": "/nɒpi/"
   },
@@ -14691,7 +14691,7 @@ const wordDatabase = [
   },
   {
     "h": "hazudtam",
-    "e": "if",
+    "e": "I lied",
     "m": "Spoken like \"hazoodtam\" — if.",
     "i": "/hɒzudtɒm/"
   },
@@ -14745,7 +14745,7 @@ const wordDatabase = [
   },
   {
     "h": "találjuk",
-    "e": "maybe",
+    "e": "we find (it); let's find",
     "m": "Spoken like \"találjook\" — maybe.",
     "i": "/tɒlaːljuk/"
   },
@@ -14757,7 +14757,7 @@ const wordDatabase = [
   },
   {
     "h": "belém",
-    "e": "into; in",
+    "e": "into me",
     "m": "Spoken like \"belém\" — into.",
     "i": "/bɛleːm/"
   },
@@ -14799,7 +14799,7 @@ const wordDatabase = [
   },
   {
     "h": "azokkal",
-    "e": "the; that",
+    "e": "with those",
     "m": "Spoken like \"azokkal\" — the.",
     "i": "/ɒzokːɒl/"
   },
@@ -14823,7 +14823,7 @@ const wordDatabase = [
   },
   {
     "h": "esélyünk",
-    "e": "and",
+    "e": "our chance",
     "m": "Spoken like \"eséyünk\" — and.",
     "i": "/ɛʃeːjynk/"
   },
@@ -14835,7 +14835,7 @@ const wordDatabase = [
   },
   {
     "h": "angolul",
-    "e": "English",
+    "e": "in English; English (adverb)",
     "m": "Spoken like \"angolool\" — English.",
     "i": "/ɒnɡolul/"
   },
@@ -14853,7 +14853,7 @@ const wordDatabase = [
   },
   {
     "h": "fogjátok",
-    "e": "tooth",
+    "e": "hold/catch it (imperative, plural)",
     "m": "Spoken like \"fogjátok\" — tooth.",
     "i": "/foɡjaːtok/"
   },
@@ -14865,13 +14865,13 @@ const wordDatabase = [
   },
   {
     "h": "találunk",
-    "e": "maybe",
+    "e": "we find",
     "m": "Spoken like \"találoonk\" — maybe.",
     "i": "/tɒlaːlunk/"
   },
   {
     "h": "egyikük",
-    "e": "one; a",
+    "e": "one of them",
     "m": "Spoken like \"edyeekük\" — one.",
     "i": "/ɛɟikyk/"
   },
@@ -14925,7 +14925,7 @@ const wordDatabase = [
   },
   {
     "h": "találsz",
-    "e": "maybe",
+    "e": "you find",
     "m": "Spoken like \"találs\" — maybe.",
     "i": "/tɒlaːls/"
   },
@@ -14949,7 +14949,7 @@ const wordDatabase = [
   },
   {
     "h": "vitte",
-    "e": "he/she took",
+    "e": "he/she took/carried (it)",
     "m": "Spoken like \"veette\".",
     "i": "/vitːɛ/"
   },
@@ -15003,7 +15003,7 @@ const wordDatabase = [
   },
   {
     "h": "hallgatni",
-    "e": "if",
+    "e": "to listen; to be silent",
     "m": "Spoken like \"hallgatnee\" — if.",
     "i": "/hɒlːɡɒtni/"
   },
@@ -15027,7 +15027,7 @@ const wordDatabase = [
   },
   {
     "h": "halad",
-    "e": "if",
+    "e": "to proceed; to advance",
     "m": "Spoken like \"halad\" — if.",
     "i": "/hɒlɒd/"
   },
@@ -15039,25 +15039,25 @@ const wordDatabase = [
   },
   {
     "h": "lettek",
-    "e": "down",
+    "e": "they became",
     "m": "Spoken like \"lettek\" — down.",
     "i": "/lɛtːɛk/"
   },
   {
     "h": "megöllek",
-    "e": "still; yet",
+    "e": "I'll kill you",
     "m": "Spoken like \"megöllek\" — still.",
     "i": "/mɛɡølːɛk/"
   },
   {
     "h": "telik",
-    "e": "you (sing.)",
+    "e": "to fill; to be spent",
     "m": "Spoken like \"teleek\" — you (sing.).",
     "i": "/tɛlik/"
   },
   {
     "h": "találkozzunk",
-    "e": "maybe",
+    "e": "let's meet",
     "m": "Spoken like \"találkozzoonk\" — maybe.",
     "i": "/tɒlaːlkozːunk/"
   },
@@ -15129,7 +15129,7 @@ const wordDatabase = [
   },
   {
     "h": "használt",
-    "e": "if",
+    "e": "used",
     "m": "Spoken like \"hasnált\" — if.",
     "i": "/hɒsnaːlt/"
   },
@@ -15183,7 +15183,7 @@ const wordDatabase = [
   },
   {
     "h": "nemcsak",
-    "e": "no; not",
+    "e": "not only",
     "m": "Spoken like \"nemchak\" — no.",
     "i": "/nɛmtʃɒk/"
   },
@@ -15219,7 +15219,7 @@ const wordDatabase = [
   },
   {
     "h": "teszik",
-    "e": "you (sing.)",
+    "e": "they do/put (it)",
     "m": "Spoken like \"teseek\" — you (sing.).",
     "i": "/tɛsik/"
   },
@@ -15249,7 +15249,7 @@ const wordDatabase = [
   },
   {
     "h": "ablakon",
-    "e": "window",
+    "e": "on/at the window",
     "m": "Spoken like \"ablakon\" — window.",
     "i": "/ɒblɒkon/"
   },
@@ -15279,13 +15279,13 @@ const wordDatabase = [
   },
   {
     "h": "bort",
-    "e": "wine",
+    "e": "wine (accusative)",
     "m": "Spoken like \"bort\" — wine.",
     "i": "/bort/"
   },
   {
     "h": "istenverte",
-    "e": "also; too",
+    "e": "godforsaken; damned",
     "m": "Spoken like \"eestenverte\" — also.",
     "i": "/iʃtɛnvɛrtɛ/"
   },
@@ -15321,7 +15321,7 @@ const wordDatabase = [
   },
   {
     "h": "nemzeti",
-    "e": "no; not",
+    "e": "national",
     "m": "Spoken like \"nemzetee\" — no.",
     "i": "/nɛmzɛti/"
   },
@@ -15375,7 +15375,7 @@ const wordDatabase = [
   },
   {
     "h": "halált",
-    "e": "if",
+    "e": "death (accusative)",
     "m": "Spoken like \"halált\" — if.",
     "i": "/hɒlaːlt/"
   },
@@ -15459,7 +15459,7 @@ const wordDatabase = [
   },
   {
     "h": "hangja",
-    "e": "if",
+    "e": "his/her voice",
     "m": "Spoken like \"hangja\" — if.",
     "i": "/hɒnɡjɒ/"
   },
@@ -15477,7 +15477,7 @@ const wordDatabase = [
   },
   {
     "h": "negyedik",
-    "e": "don't",
+    "e": "fourth",
     "m": "Spoken like \"nedyedeek\" — don't.",
     "i": "/nɛɟɛdik/"
   },
@@ -15513,7 +15513,7 @@ const wordDatabase = [
   },
   {
     "h": "hozzák",
-    "e": "snow",
+    "e": "they bring (it)",
     "m": "Spoken like \"hozzák\" — snow.",
     "i": "/hozːaːk/"
   },
@@ -15531,7 +15531,7 @@ const wordDatabase = [
   },
   {
     "h": "magyar",
-    "e": "today",
+    "e": "Hungarian",
     "m": "Spoken like \"madyar\" — today.",
     "i": "/mɒɟɒr/"
   },
@@ -15585,7 +15585,7 @@ const wordDatabase = [
   },
   {
     "h": "tesznek",
-    "e": "you (sing.)",
+    "e": "they do/put",
     "m": "Spoken like \"tesnek\" — you (sing.).",
     "i": "/tɛsnɛk/"
   },
@@ -15615,7 +15615,7 @@ const wordDatabase = [
   },
   {
     "h": "megölt",
-    "e": "still; yet",
+    "e": "killed",
     "m": "Spoken like \"megölt\" — still.",
     "i": "/mɛɡølt/"
   },
@@ -15627,7 +15627,7 @@ const wordDatabase = [
   },
   {
     "h": "maradjanak",
-    "e": "already",
+    "e": "let them stay",
     "m": "Spoken like \"maradjanak\" — already.",
     "i": "/mɒrɒdjɒnɒk/"
   },
@@ -15681,13 +15681,13 @@ const wordDatabase = [
   },
   {
     "h": "meghalsz",
-    "e": "still; yet",
+    "e": "you die",
     "m": "Spoken like \"meghals\" — still.",
     "i": "/mɛɡhɒls/"
   },
   {
     "h": "hallja",
-    "e": "if",
+    "e": "he/she hears (it)",
     "m": "Spoken like \"hallja\" — if.",
     "i": "/hɒlːjɒ/"
   },
@@ -15699,7 +15699,7 @@ const wordDatabase = [
   },
   {
     "h": "fogtok",
-    "e": "tooth",
+    "e": "you (plural) will; you catch",
     "m": "Spoken like \"fogtok\" — tooth.",
     "i": "/foɡtok/"
   },
@@ -15735,7 +15735,7 @@ const wordDatabase = [
   },
   {
     "h": "igent",
-    "e": "yes",
+    "e": "yes (accusative)",
     "m": "Spoken like \"eegent\" — yes.",
     "i": "/iɡɛnt/"
   },
@@ -15753,13 +15753,13 @@ const wordDatabase = [
   },
   {
     "h": "találtuk",
-    "e": "maybe",
+    "e": "we found (it)",
     "m": "Spoken like \"találtook\" — maybe.",
     "i": "/tɒlaːltuk/"
   },
   {
     "h": "benn",
-    "e": "into; in",
+    "e": "in (variant); inside",
     "m": "Spoken like \"benn\" — into.",
     "i": "/bɛnː/"
   },
@@ -15771,13 +15771,13 @@ const wordDatabase = [
   },
   {
     "h": "energia",
-    "e": "I",
+    "e": "energy",
     "m": "Spoken like \"energeea\" — I.",
     "i": "/ɛnɛrɡiɒ/"
   },
   {
     "h": "adsz",
-    "e": "gives",
+    "e": "you give",
     "m": "Spoken like \"ads\" — gives.",
     "i": "/ɒds/"
   },
@@ -15819,7 +15819,7 @@ const wordDatabase = [
   },
   {
     "h": "királyi",
-    "e": "who; out",
+    "e": "royal",
     "m": "Spoken like \"keeráyee\" — who.",
     "i": "/kiraːji/"
   },
@@ -15843,13 +15843,13 @@ const wordDatabase = [
   },
   {
     "h": "holtan",
-    "e": "snow",
+    "e": "dead (adverb); lifelessly",
     "m": "Spoken like \"holtan\" — snow.",
     "i": "/holtɒn/"
   },
   {
     "h": "mindenféle",
-    "e": "what; we",
+    "e": "all kinds of",
     "m": "Spoken like \"meendenféle\" — what.",
     "i": "/mindɛnfeːlɛ/"
   },
@@ -15897,7 +15897,7 @@ const wordDatabase = [
   },
   {
     "h": "kezdve",
-    "e": "hand",
+    "e": "starting; begun",
     "m": "Spoken like \"kezdve\" — hand.",
     "i": "/kɛzdvɛ/"
   },
@@ -15933,7 +15933,7 @@ const wordDatabase = [
   },
   {
     "h": "irodában",
-    "e": "writer",
+    "e": "in an office",
     "m": "Spoken like \"eerodában\" — writer.",
     "i": "/irodaːbɒn/"
   },
@@ -15999,7 +15999,7 @@ const wordDatabase = [
   },
   {
     "h": "nagyot",
-    "e": "big",
+    "e": "big (accusative)",
     "m": "Spoken like \"nadyot\" — big.",
     "i": "/nɒɟot/"
   },
@@ -16023,7 +16023,7 @@ const wordDatabase = [
   },
   {
     "h": "tudományos",
-    "e": "I know",
+    "e": "scientific",
     "m": "Spoken like \"toodományos\" — I know.",
     "i": "/tudomaːɲoʃ/"
   },
@@ -16053,13 +16053,13 @@ const wordDatabase = [
   },
   {
     "h": "sors",
-    "e": "salt",
+    "e": "fate; destiny",
     "m": "Spoken like \"sors\" — salt.",
     "i": "/ʃorʃ/"
   },
   {
     "h": "ismétlem",
-    "e": "also; too",
+    "e": "I repeat",
     "m": "Spoken like \"eesmétlem\" — also.",
     "i": "/iʃmeːtlɛm/"
   },
@@ -16089,19 +16089,19 @@ const wordDatabase = [
   },
   {
     "h": "nemzetközi",
-    "e": "no; not",
+    "e": "international",
     "m": "Spoken like \"nemzetközee\" — no.",
     "i": "/nɛmzɛtkøzi/"
   },
   {
     "h": "hallgasson",
-    "e": "if",
+    "e": "let him/her listen",
     "m": "Spoken like \"hallgasson\" — if.",
     "i": "/hɒlːɡɒʃːon/"
   },
   {
     "h": "fogadni",
-    "e": "tooth",
+    "e": "to accept; to receive; to bet",
     "m": "Spoken like \"fogadnee\" — tooth.",
     "i": "/foɡɒdni/"
   },
@@ -16113,13 +16113,13 @@ const wordDatabase = [
   },
   {
     "h": "boldoggá",
-    "e": "happy",
+    "e": "happy (into); making happy",
     "m": "Spoken like \"boldoggá\" — happy.",
     "i": "/boldoɡːaː/"
   },
   {
     "h": "kezelni",
-    "e": "hand",
+    "e": "to treat; to handle",
     "m": "Spoken like \"kezelnee\" — hand.",
     "i": "/kɛzɛlni/"
   },
@@ -16161,7 +16161,7 @@ const wordDatabase = [
   },
   {
     "h": "hallok",
-    "e": "if",
+    "e": "I hear (things)",
     "m": "Spoken like \"hallok\" — if.",
     "i": "/hɒlːok/"
   },
@@ -16173,7 +16173,7 @@ const wordDatabase = [
   },
   {
     "h": "lennünk",
-    "e": "down",
+    "e": "for us to be",
     "m": "Spoken like \"lennünk\" — down.",
     "i": "/lɛnːynk/"
   },
@@ -16203,13 +16203,13 @@ const wordDatabase = [
   },
   {
     "h": "egyike",
-    "e": "one; a",
+    "e": "one of (them)",
     "m": "Spoken like \"edyeeke\" — one.",
     "i": "/ɛɟikɛ/"
   },
   {
     "h": "keresd",
-    "e": "asks; requests",
+    "e": "search for it (imperative)",
     "m": "Spoken like \"keresd\" — asks.",
     "i": "/kɛrɛʃd/"
   },
@@ -16293,7 +16293,7 @@ const wordDatabase = [
   },
   {
     "h": "hatással",
-    "e": "if",
+    "e": "with effect",
     "m": "Spoken like \"hatással\" — if.",
     "i": "/hɒtaːʃːɒl/"
   },
@@ -16323,7 +16323,7 @@ const wordDatabase = [
   },
   {
     "h": "közülük",
-    "e": "among them",
+    "e": "among them; of them",
     "m": "Spoken like \"közülük\".",
     "i": "/køzylyk/"
   },
@@ -16347,7 +16347,7 @@ const wordDatabase = [
   },
   {
     "h": "eső",
-    "e": "and",
+    "e": "rain",
     "m": "Spoken like \"eső\" — and.",
     "i": "/ɛʃøː/"
   },
@@ -16359,13 +16359,13 @@ const wordDatabase = [
   },
   {
     "h": "magánál",
-    "e": "today",
+    "e": "at himself/herself",
     "m": "Spoken like \"magánál\" — today.",
     "i": "/mɒɡaːnaːl/"
   },
   {
     "h": "irányba",
-    "e": "writes",
+    "e": "in the direction",
     "m": "Spoken like \"eerányba\" — writes.",
     "i": "/iraːɲbɒ/"
   },
@@ -16377,7 +16377,7 @@ const wordDatabase = [
   },
   {
     "h": "miket",
-    "e": "what; we",
+    "e": "what (plural accusative)",
     "m": "Spoken like \"meeket\" — what.",
     "i": "/mikɛt/"
   },
@@ -16407,7 +16407,7 @@ const wordDatabase = [
   },
   {
     "h": "boldogan",
-    "e": "happy",
+    "e": "happily",
     "m": "Spoken like \"boldogan\" — happy.",
     "i": "/boldoɡɒn/"
   },
@@ -16425,7 +16425,7 @@ const wordDatabase = [
   },
   {
     "h": "beszéltek",
-    "e": "into; in",
+    "e": "they spoke",
     "m": "Spoken like \"beséltek\" — into.",
     "i": "/bɛseːltɛk/"
   },
@@ -16449,7 +16449,7 @@ const wordDatabase = [
   },
   {
     "h": "hagylak",
-    "e": "if",
+    "e": "I leave you",
     "m": "Spoken like \"hadylak\" — if.",
     "i": "/hɒɟlɒk/"
   },
@@ -16473,19 +16473,19 @@ const wordDatabase = [
   },
   {
     "h": "maradjatok",
-    "e": "already",
+    "e": "you (plural) stay",
     "m": "Spoken like \"maradjatok\" — already.",
     "i": "/mɒrɒdjɒtok/"
   },
   {
     "h": "használ",
-    "e": "if",
+    "e": "to use",
     "m": "Spoken like \"hasnál\" — if.",
     "i": "/hɒsnaːl/"
   },
   {
     "h": "megöli",
-    "e": "still; yet",
+    "e": "he/she kills (him/her)",
     "m": "Spoken like \"megölee\" — still.",
     "i": "/mɛɡøli/"
   },
@@ -16503,7 +16503,7 @@ const wordDatabase = [
   },
   {
     "h": "madár",
-    "e": "today",
+    "e": "bird",
     "m": "Spoken like \"madár\" — today.",
     "i": "/mɒdaːr/"
   },
@@ -16515,19 +16515,19 @@ const wordDatabase = [
   },
   {
     "h": "megpróbált",
-    "e": "still; yet",
+    "e": "tried",
     "m": "Spoken like \"megpróbált\" — still.",
     "i": "/mɛɡproːbaːlt/"
   },
   {
     "h": "naponta",
-    "e": "day; sun",
+    "e": "daily; per day",
     "m": "Spoken like \"naponta\" — day.",
     "i": "/nɒpontɒ/"
   },
   {
     "h": "tették",
-    "e": "you (sing.)",
+    "e": "they did/put (it)",
     "m": "Spoken like \"tették\" — you (sing.).",
     "i": "/tɛtːeːk/"
   },
@@ -16569,7 +16569,7 @@ const wordDatabase = [
   },
   {
     "h": "eszik",
-    "e": "and",
+    "e": "to eat",
     "m": "Spoken like \"eseek\" — and.",
     "i": "/ɛsik/"
   },
@@ -16581,7 +16581,7 @@ const wordDatabase = [
   },
   {
     "h": "darabig",
-    "e": "piece",
+    "e": "piece (until); for a piece",
     "m": "Spoken like \"darabeeg\" — piece.",
     "i": "/dɒrɒbiɡ/"
   },
@@ -16593,13 +16593,13 @@ const wordDatabase = [
   },
   {
     "h": "egymáshoz",
-    "e": "one; a",
+    "e": "to each other",
     "m": "Spoken like \"edymáshoz\" — one.",
     "i": "/ɛɟmaːʃhoz/"
   },
   {
     "h": "bemutatom",
-    "e": "into; in",
+    "e": "I introduce/present (it)",
     "m": "Spoken like \"bemootatom\" — into.",
     "i": "/bɛmutɒtom/"
   },
@@ -16611,7 +16611,7 @@ const wordDatabase = [
   },
   {
     "h": "felét",
-    "e": "up",
+    "e": "half of it (accusative)",
     "m": "Spoken like \"felét\" — up.",
     "i": "/fɛleːt/"
   },
@@ -16635,7 +16635,7 @@ const wordDatabase = [
   },
   {
     "h": "istenek",
-    "e": "also; too",
+    "e": "gods",
     "m": "Spoken like \"eestenek\" — also.",
     "i": "/iʃtɛnɛk/"
   },
@@ -16659,7 +16659,7 @@ const wordDatabase = [
   },
   {
     "h": "irányítani",
-    "e": "writes",
+    "e": "to control; to manage; to direct",
     "m": "Spoken like \"eerányítanee\" — writes.",
     "i": "/iraːɲiːtɒni/"
   },
@@ -16689,7 +16689,7 @@ const wordDatabase = [
   },
   {
     "h": "bejött",
-    "e": "into; in",
+    "e": "he/she came in; it worked",
     "m": "Spoken like \"bejött\" — into.",
     "i": "/bɛjøtː/"
   },
@@ -16707,7 +16707,7 @@ const wordDatabase = [
   },
   {
     "h": "feleség",
-    "e": "up",
+    "e": "wife",
     "m": "Spoken like \"feleség\" — up.",
     "i": "/fɛlɛʃeːɡ/"
   },
@@ -16719,13 +16719,13 @@ const wordDatabase = [
   },
   {
     "h": "kezdesz",
-    "e": "hand",
+    "e": "you begin",
     "m": "Spoken like \"kezdes\" — hand.",
     "i": "/kɛzdɛs/"
   },
   {
     "h": "tenném",
-    "e": "you (sing.)",
+    "e": "I would do/put (it)",
     "m": "Spoken like \"tenném\" — you (sing.).",
     "i": "/tɛnːeːm/"
   },
@@ -16749,7 +16749,7 @@ const wordDatabase = [
   },
   {
     "h": "megölted",
-    "e": "still; yet",
+    "e": "you killed (him/her)",
     "m": "Spoken like \"megölted\" — still.",
     "i": "/mɛɡøltɛd/"
   },
@@ -16761,13 +16761,13 @@ const wordDatabase = [
   },
   {
     "h": "adtál",
-    "e": "gives",
+    "e": "you gave (informal)",
     "m": "Spoken like \"adtál\" — gives.",
     "i": "/ɒdtaːl/"
   },
   {
     "h": "teszt",
-    "e": "you (sing.)",
+    "e": "test",
     "m": "Spoken like \"test\" — you (sing.).",
     "i": "/tɛst/"
   },
@@ -16779,7 +16779,7 @@ const wordDatabase = [
   },
   {
     "h": "fejemben",
-    "e": "head",
+    "e": "in my head",
     "m": "Spoken like \"fejemben\" — head.",
     "i": "/fɛjɛmbɛn/"
   },
@@ -16827,7 +16827,7 @@ const wordDatabase = [
   },
   {
     "h": "adják",
-    "e": "gives",
+    "e": "they give (it)",
     "m": "Spoken like \"adják\" — gives.",
     "i": "/ɒdjaːk/"
   },
@@ -16851,7 +16851,7 @@ const wordDatabase = [
   },
   {
     "h": "adnak",
-    "e": "gives",
+    "e": "they give",
     "m": "Spoken like \"adnak\" — gives.",
     "i": "/ɒdnɒk/"
   },
@@ -16893,7 +16893,7 @@ const wordDatabase = [
   },
   {
     "h": "jobbat",
-    "e": "good",
+    "e": "better (accusative)",
     "m": "Spoken like \"jobbat\" — good.",
     "i": "/jobːɒt/"
   },
@@ -16911,7 +16911,7 @@ const wordDatabase = [
   },
   {
     "h": "mentünk",
-    "e": "went",
+    "e": "we went; we saved",
     "m": "Spoken like \"mentünk\" — went.",
     "i": "/mɛntynk/"
   },
@@ -16923,7 +16923,7 @@ const wordDatabase = [
   },
   {
     "h": "hozzájuk",
-    "e": "snow",
+    "e": "to them",
     "m": "Spoken like \"hozzájook\" — snow.",
     "i": "/hozːaːjuk/"
   },
@@ -16941,7 +16941,7 @@ const wordDatabase = [
   },
   {
     "h": "szeretet",
-    "e": "loves; likes",
+    "e": "love (noun)",
     "m": "Spoken like \"seretet\" — loves.",
     "i": "/sɛrɛtɛt/"
   },
@@ -16953,7 +16953,7 @@ const wordDatabase = [
   },
   {
     "h": "esküvő",
-    "e": "and",
+    "e": "wedding",
     "m": "Spoken like \"esküvő\" — and.",
     "i": "/ɛʃkyvøː/"
   },
@@ -16977,7 +16977,7 @@ const wordDatabase = [
   },
   {
     "h": "keress",
-    "e": "asks; requests",
+    "e": "search! (imperative)",
     "m": "Spoken like \"keress\" — asks.",
     "i": "/kɛrɛʃː/"
   },
@@ -17025,7 +17025,7 @@ const wordDatabase = [
   },
   {
     "h": "fogalma",
-    "e": "tooth",
+    "e": "his/her concept/idea",
     "m": "Spoken like \"fogalma\" — tooth.",
     "i": "/foɡɒlmɒ/"
   },
@@ -17049,7 +17049,7 @@ const wordDatabase = [
   },
   {
     "h": "orvost",
-    "e": "doctor",
+    "e": "doctor (accusative)",
     "m": "Spoken like \"orvost\" — doctor.",
     "i": "/orvoʃt/"
   },
@@ -17073,13 +17073,13 @@ const wordDatabase = [
   },
   {
     "h": "mondjon",
-    "e": "says",
+    "e": "let him/her say",
     "m": "Spoken like \"mondjon\" — says.",
     "i": "/mondjon/"
   },
   {
     "h": "teheted",
-    "e": "you (sing.)",
+    "e": "you can do",
     "m": "Spoken like \"teheted\" — you (sing.).",
     "i": "/tɛhɛtɛd/"
   },
@@ -17121,7 +17121,7 @@ const wordDatabase = [
   },
   {
     "h": "beszélhetnék",
-    "e": "into; in",
+    "e": "I could speak",
     "m": "Spoken like \"besélhetnék\" — into.",
     "i": "/bɛseːlhɛtneːk/"
   },
@@ -17223,13 +17223,13 @@ const wordDatabase = [
   },
   {
     "h": "melletted",
-    "e": "next to",
+    "e": "beside you",
     "m": "Spoken like \"melletted\" — next to.",
     "i": "/mɛlːɛtːɛd/"
   },
   {
     "h": "kisfiú",
-    "e": "who; out",
+    "e": "little boy",
     "m": "Spoken like \"keesfeeú\" — who.",
     "i": "/kiʃfiuː/"
   },
@@ -17253,7 +17253,7 @@ const wordDatabase = [
   },
   {
     "h": "határozottan",
-    "e": "if",
+    "e": "decidedly; firmly",
     "m": "Spoken like \"határozottan\" — if.",
     "i": "/hɒtaːrozotːɒn/"
   },
@@ -17271,7 +17271,7 @@ const wordDatabase = [
   },
   {
     "h": "megkaptam",
-    "e": "still; yet",
+    "e": "I received (it)",
     "m": "Spoken like \"megkaptam\" — still.",
     "i": "/mɛɡkɒptɒm/"
   },
@@ -17283,7 +17283,7 @@ const wordDatabase = [
   },
   {
     "h": "tehetséges",
-    "e": "you (sing.)",
+    "e": "talented",
     "m": "Spoken like \"tehetséges\" — you (sing.).",
     "i": "/tɛhɛtʃeːɡɛʃ/"
   },
@@ -17301,7 +17301,7 @@ const wordDatabase = [
   },
   {
     "h": "derek",
-    "e": "but",
+    "e": "waist; lower back",
     "m": "Spoken like \"derek\" — but.",
     "i": "/dɛrɛk/"
   },
@@ -17331,7 +17331,7 @@ const wordDatabase = [
   },
   {
     "h": "hatalom",
-    "e": "if",
+    "e": "power; authority",
     "m": "Spoken like \"hatalom\" — if.",
     "i": "/hɒtɒlom/"
   },
@@ -17349,7 +17349,7 @@ const wordDatabase = [
   },
   {
     "h": "magatokat",
-    "e": "today",
+    "e": "yourselves (accusative)",
     "m": "Spoken like \"magatokat\" — today.",
     "i": "/mɒɡɒtokɒt/"
   },
@@ -17367,7 +17367,7 @@ const wordDatabase = [
   },
   {
     "h": "bejön",
-    "e": "into; in",
+    "e": "comes in; it works",
     "m": "Spoken like \"bejön\" — into.",
     "i": "/bɛjøn/"
   },
@@ -17427,7 +17427,7 @@ const wordDatabase = [
   },
   {
     "h": "beszéd",
-    "e": "into; in",
+    "e": "speech; talk",
     "m": "Spoken like \"beséd\" — into.",
     "i": "/bɛseːd/"
   },
@@ -17457,7 +17457,7 @@ const wordDatabase = [
   },
   {
     "h": "eszedbe",
-    "e": "and",
+    "e": "to your mind",
     "m": "Spoken like \"esedbe\" — and.",
     "i": "/ɛsɛdbɛ/"
   },
@@ -17505,7 +17505,7 @@ const wordDatabase = [
   },
   {
     "h": "bennük",
-    "e": "into; in",
+    "e": "in them",
     "m": "Spoken like \"bennük\" — into.",
     "i": "/bɛnːyk/"
   },
@@ -17529,7 +17529,7 @@ const wordDatabase = [
   },
   {
     "h": "enyémet",
-    "e": "I",
+    "e": "mine (accusative)",
     "m": "Spoken like \"enyémet\" — I.",
     "i": "/ɛɲeːmɛt/"
   },
@@ -17559,7 +17559,7 @@ const wordDatabase = [
   },
   {
     "h": "dehogyis",
-    "e": "but",
+    "e": "of course not; no way",
     "m": "Spoken like \"dehodyees\" — but.",
     "i": "/dɛhoɟiʃ/"
   },
@@ -17571,7 +17571,7 @@ const wordDatabase = [
   },
   {
     "h": "napom",
-    "e": "day; sun",
+    "e": "my day",
     "m": "Spoken like \"napom\" — day.",
     "i": "/nɒpom/"
   },
@@ -17589,7 +17589,7 @@ const wordDatabase = [
   },
   {
     "h": "megpróbálta",
-    "e": "still; yet",
+    "e": "he/she tried (it)",
     "m": "Spoken like \"megpróbálta\" — still.",
     "i": "/mɛɡproːbaːltɒ/"
   },
@@ -17649,7 +17649,7 @@ const wordDatabase = [
   },
   {
     "h": "hajnali",
-    "e": "if",
+    "e": "dawn (adjective)",
     "m": "Spoken like \"hajnalee\" — if.",
     "i": "/hɒjnɒli/"
   },
@@ -17661,7 +17661,7 @@ const wordDatabase = [
   },
   {
     "h": "macska",
-    "e": "today",
+    "e": "cat",
     "m": "Spoken like \"machka\" — today.",
     "i": "/mɒtʃkɒ/"
   },
@@ -17673,7 +17673,7 @@ const wordDatabase = [
   },
   {
     "h": "mondjátok",
-    "e": "says",
+    "e": "say it (imperative, plural)",
     "m": "Spoken like \"mondjátok\" — says.",
     "i": "/mondjaːtok/"
   },
@@ -17733,7 +17733,7 @@ const wordDatabase = [
   },
   {
     "h": "hazudtál",
-    "e": "if",
+    "e": "you lied (informal)",
     "m": "Spoken like \"hazoodtál\" — if.",
     "i": "/hɒzudtaːl/"
   },
@@ -17781,7 +17781,7 @@ const wordDatabase = [
   },
   {
     "h": "tennie",
-    "e": "you (sing.)",
+    "e": "for him/her to do",
     "m": "Spoken like \"tenneee\" — you (sing.).",
     "i": "/tɛnːiɛ/"
   },
@@ -17805,7 +17805,7 @@ const wordDatabase = [
   },
   {
     "h": "gyereke",
-    "e": "child",
+    "e": "his/her child",
     "m": "Spoken like \"dyereke\" — child.",
     "i": "/ɟɛrɛkɛ/"
   },
@@ -17817,7 +17817,7 @@ const wordDatabase = [
   },
   {
     "h": "egyetem",
-    "e": "one; a",
+    "e": "university",
     "m": "Spoken like \"edyetem\" — one.",
     "i": "/ɛɟɛtɛm/"
   },
@@ -17949,7 +17949,7 @@ const wordDatabase = [
   },
   {
     "h": "használják",
-    "e": "if",
+    "e": "they use (it)",
     "m": "Spoken like \"hasnálják\" — if.",
     "i": "/hɒsnaːljaːk/"
   },
@@ -17973,7 +17973,7 @@ const wordDatabase = [
   },
   {
     "h": "emberem",
-    "e": "person",
+    "e": "my person; my man",
     "m": "Spoken like \"emberem\" — person.",
     "i": "/ɛmbɛrɛm/"
   },
@@ -18009,19 +18009,19 @@ const wordDatabase = [
   },
   {
     "h": "szemétláda",
-    "e": "eye",
+    "e": "trash can; garbage bin",
     "m": "Spoken like \"semétláda\" — eye.",
     "i": "/sɛmeːtlaːdɒ/"
   },
   {
     "h": "embereim",
-    "e": "person",
+    "e": "my people",
     "m": "Spoken like \"embereeem\" — person.",
     "i": "/ɛmbɛrɛim/"
   },
   {
     "h": "napod",
-    "e": "day; sun",
+    "e": "your day",
     "m": "Spoken like \"napod\" — day.",
     "i": "/nɒpod/"
   },
@@ -18051,13 +18051,13 @@ const wordDatabase = [
   },
   {
     "h": "mostanra",
-    "e": "now",
+    "e": "by now",
     "m": "Spoken like \"mostanra\" — now.",
     "i": "/moʃtɒnrɒ/"
   },
   {
     "h": "egyetemen",
-    "e": "one; a",
+    "e": "at a university",
     "m": "Spoken like \"edyetemen\" — one.",
     "i": "/ɛɟɛtɛmɛn/"
   },
@@ -18135,7 +18135,7 @@ const wordDatabase = [
   },
   {
     "h": "találkoztál",
-    "e": "maybe",
+    "e": "did you meet (informal)",
     "m": "Spoken like \"találkoztál\" — maybe.",
     "i": "/tɒlaːlkoztaːl/"
   },
@@ -18177,7 +18177,7 @@ const wordDatabase = [
   },
   {
     "h": "orvosok",
-    "e": "doctor",
+    "e": "doctors",
     "m": "Spoken like \"orvosok\" — doctor.",
     "i": "/orvoʃok/"
   },
@@ -18189,7 +18189,7 @@ const wordDatabase = [
   },
   {
     "h": "változik",
-    "e": "changes",
+    "e": "to change",
     "m": "Spoken like \"változeek\".",
     "i": "/vaːltozik/"
   },
@@ -18207,7 +18207,7 @@ const wordDatabase = [
   },
   {
     "h": "használta",
-    "e": "if",
+    "e": "he/she used (it)",
     "m": "Spoken like \"hasnálta\" — if.",
     "i": "/hɒsnaːltɒ/"
   },
@@ -18237,7 +18237,7 @@ const wordDatabase = [
   },
   {
     "h": "biztosra",
-    "e": "sure; certain",
+    "e": "for sure; certain (accusative)",
     "m": "Spoken like \"beeztosra\" — sure.",
     "i": "/biztoʃrɒ/"
   },
@@ -18255,7 +18255,7 @@ const wordDatabase = [
   },
   {
     "h": "engedjen",
-    "e": "I",
+    "e": "let him/her (imperative)",
     "m": "Spoken like \"engedjen\" — I.",
     "i": "/ɛnɡɛdjɛn/"
   },
@@ -18351,7 +18351,7 @@ const wordDatabase = [
   },
   {
     "h": "mondtak",
-    "e": "says",
+    "e": "they said",
     "m": "Spoken like \"mondtak\" — says.",
     "i": "/mondtɒk/"
   },
@@ -18393,7 +18393,7 @@ const wordDatabase = [
   },
   {
     "h": "futni",
-    "e": "grass",
+    "e": "to run",
     "m": "Spoken like \"footnee\" — grass.",
     "i": "/futni/"
   },
@@ -18405,7 +18405,7 @@ const wordDatabase = [
   },
   {
     "h": "arca",
-    "e": "face",
+    "e": "his/her face",
     "m": "Spoken like \"arca\" — face.",
     "i": "/ɒrt͡sɒ/"
   },
@@ -18423,13 +18423,13 @@ const wordDatabase = [
   },
   {
     "h": "nocsak",
-    "e": "woman; grows",
+    "e": "well well; look at that",
     "m": "Spoken like \"nochak\" — woman.",
     "i": "/notʃɒk/"
   },
   {
     "h": "halljuk",
-    "e": "if",
+    "e": "we hear (it)",
     "m": "Spoken like \"halljook\" — if.",
     "i": "/hɒlːjuk/"
   },
@@ -18459,7 +18459,7 @@ const wordDatabase = [
   },
   {
     "h": "halálát",
-    "e": "if",
+    "e": "his/her death (accusative)",
     "m": "Spoken like \"halálát\" — if.",
     "i": "/hɒlaːlaːt/"
   },
@@ -18495,7 +18495,7 @@ const wordDatabase = [
   },
   {
     "h": "egyikünk",
-    "e": "one; a",
+    "e": "one of us",
     "m": "Spoken like \"edyeekünk\" — one.",
     "i": "/ɛɟikynk/"
   },
@@ -18519,7 +18519,7 @@ const wordDatabase = [
   },
   {
     "h": "kezdünk",
-    "e": "hand",
+    "e": "we begin",
     "m": "Spoken like \"kezdünk\" — hand.",
     "i": "/kɛzdynk/"
   },
@@ -18537,7 +18537,7 @@ const wordDatabase = [
   },
   {
     "h": "iszom",
-    "e": "also; too",
+    "e": "I drink",
     "m": "Spoken like \"eesom\" — also.",
     "i": "/isom/"
   },
@@ -18603,13 +18603,13 @@ const wordDatabase = [
   },
   {
     "h": "korábbi",
-    "e": "stone",
+    "e": "earlier; previous",
     "m": "Spoken like \"korábbee\" — stone.",
     "i": "/koraːbːi/"
   },
   {
     "h": "hangot",
-    "e": "if",
+    "e": "voice/sound (accusative)",
     "m": "Spoken like \"hangot\" — if.",
     "i": "/hɒnɡot/"
   },
@@ -18627,13 +18627,13 @@ const wordDatabase = [
   },
   {
     "h": "borzasztó",
-    "e": "wine",
+    "e": "terrible; awful",
     "m": "Spoken like \"borzastó\" — wine.",
     "i": "/borzɒstoː/"
   },
   {
     "h": "holnapra",
-    "e": "tomorrow",
+    "e": "by tomorrow; for tomorrow",
     "m": "Spoken like \"holnapra\" — tomorrow.",
     "i": "/holnɒprɒ/"
   },
@@ -18675,13 +18675,13 @@ const wordDatabase = [
   },
   {
     "h": "találnom",
-    "e": "maybe",
+    "e": "I must find",
     "m": "Spoken like \"találnom\" — maybe.",
     "i": "/tɒlaːlnom/"
   },
   {
     "h": "menteni",
-    "e": "went",
+    "e": "to save; to rescue",
     "m": "Spoken like \"mentenee\" — went.",
     "i": "/mɛntɛni/"
   },
@@ -18741,7 +18741,7 @@ const wordDatabase = [
   },
   {
     "h": "majom",
-    "e": "today",
+    "e": "monkey; ape",
     "m": "Spoken like \"majom\" — today.",
     "i": "/mɒjom/"
   },
@@ -18795,7 +18795,7 @@ const wordDatabase = [
   },
   {
     "h": "napján",
-    "e": "day; sun",
+    "e": "on the day of",
     "m": "Spoken like \"napján\" — day.",
     "i": "/nɒpjaːn/"
   },
@@ -18807,7 +18807,7 @@ const wordDatabase = [
   },
   {
     "h": "fiatalember",
-    "e": "young",
+    "e": "young man",
     "m": "Spoken like \"feeatalember\" — young.",
     "i": "/fiɒtɒlɛmbɛr/"
   },
@@ -18837,7 +18837,7 @@ const wordDatabase = [
   },
   {
     "h": "anyagot",
-    "e": "mother",
+    "e": "material (accusative)",
     "m": "Spoken like \"anyagot\" — mother.",
     "i": "/ɒɲɒɡot/"
   },
@@ -18861,7 +18861,7 @@ const wordDatabase = [
   },
   {
     "h": "senkivel",
-    "e": "no one",
+    "e": "with nobody",
     "m": "Spoken like \"senkeevel\" — no one.",
     "i": "/ʃɛnkivɛl/"
   },
@@ -18897,7 +18897,7 @@ const wordDatabase = [
   },
   {
     "h": "testet",
-    "e": "you (sing.)",
+    "e": "body (accusative)",
     "m": "Spoken like \"testet\" — you (sing.).",
     "i": "/tɛʃtɛt/"
   },
@@ -18915,7 +18915,7 @@ const wordDatabase = [
   },
   {
     "h": "testét",
-    "e": "you (sing.)",
+    "e": "his/her body (accusative)",
     "m": "Spoken like \"testét\" — you (sing.).",
     "i": "/tɛʃteːt/"
   },
@@ -18939,7 +18939,7 @@ const wordDatabase = [
   },
   {
     "h": "ismerik",
-    "e": "also; too",
+    "e": "they know",
     "m": "Spoken like \"eesmereek\" — also.",
     "i": "/iʃmɛrik/"
   },
@@ -18951,7 +18951,7 @@ const wordDatabase = [
   },
   {
     "h": "mindkettő",
-    "e": "what; we",
+    "e": "both",
     "m": "Spoken like \"meendkettő\" — what.",
     "i": "/mindkɛtːøː/"
   },
@@ -19029,13 +19029,13 @@ const wordDatabase = [
   },
   {
     "h": "maradjunk",
-    "e": "already",
+    "e": "let's stay",
     "m": "Spoken like \"maradjoonk\" — already.",
     "i": "/mɒrɒdjunk/"
   },
   {
     "h": "nemes",
-    "e": "no; not",
+    "e": "noble",
     "m": "Spoken like \"nemes\" — no.",
     "i": "/nɛmɛʃ/"
   },
@@ -19047,7 +19047,7 @@ const wordDatabase = [
   },
   {
     "h": "energiát",
-    "e": "I",
+    "e": "energy (accusative)",
     "m": "Spoken like \"energeeát\" — I.",
     "i": "/ɛnɛrɡiaːt/"
   },
@@ -19125,7 +19125,7 @@ const wordDatabase = [
   },
   {
     "h": "hasznos",
-    "e": "if",
+    "e": "useful",
     "m": "Spoken like \"hasnos\" — if.",
     "i": "/hɒsnoʃ/"
   },
@@ -19137,13 +19137,13 @@ const wordDatabase = [
   },
   {
     "h": "veszély",
-    "e": "buys; takes",
+    "e": "danger",
     "m": "Spoken like \"veséy\" — buys.",
     "i": "/vɛseːj/"
   },
   {
     "h": "foglalkozik",
-    "e": "tooth",
+    "e": "to deal with; to be busy with",
     "m": "Spoken like \"foglalkozeek\" — tooth.",
     "i": "/foɡlɒlkozik/"
   },
@@ -19161,7 +19161,7 @@ const wordDatabase = [
   },
   {
     "h": "beszélhetek",
-    "e": "into; in",
+    "e": "I can speak",
     "m": "Spoken like \"besélhetek\" — into.",
     "i": "/bɛseːlhɛtɛk/"
   },
@@ -19203,7 +19203,7 @@ const wordDatabase = [
   },
   {
     "h": "beleértve",
-    "e": "into; in",
+    "e": "including",
     "m": "Spoken like \"beleértve\" — into.",
     "i": "/bɛlɛeːrtvɛ/"
   },
@@ -19233,7 +19233,7 @@ const wordDatabase = [
   },
   {
     "h": "adtak",
-    "e": "gives",
+    "e": "they gave",
     "m": "Spoken like \"adtak\" — gives.",
     "i": "/ɒdtɒk/"
   },
@@ -19275,13 +19275,13 @@ const wordDatabase = [
   },
   {
     "h": "hajad",
-    "e": "if",
+    "e": "your hair",
     "m": "Spoken like \"hajad\" — if.",
     "i": "/hɒjɒd/"
   },
   {
     "h": "valakire",
-    "e": "someone",
+    "e": "onto someone",
     "m": "Spoken like \"valakeere\" — someone.",
     "i": "/vɒlɒkirɛ/"
   },
@@ -19311,13 +19311,13 @@ const wordDatabase = [
   },
   {
     "h": "emberiség",
-    "e": "person",
+    "e": "humanity; mankind",
     "m": "Spoken like \"embereeség\" — person.",
     "i": "/ɛmbɛriʃeːɡ/"
   },
   {
     "h": "betegség",
-    "e": "into; in",
+    "e": "illness; disease",
     "m": "Spoken like \"betegség\" — into.",
     "i": "/bɛtɛɡʃeːɡ/"
   },
@@ -19347,7 +19347,7 @@ const wordDatabase = [
   },
   {
     "h": "magadat",
-    "e": "today",
+    "e": "yourself (accusative)",
     "m": "Spoken like \"magadat\" — today.",
     "i": "/mɒɡɒdɒt/"
   },
@@ -19377,7 +19377,7 @@ const wordDatabase = [
   },
   {
     "h": "magunk",
-    "e": "today",
+    "e": "ourselves",
     "m": "Spoken like \"magoonk\" — today.",
     "i": "/mɒɡunk/"
   },
@@ -19437,7 +19437,7 @@ const wordDatabase = [
   },
   {
     "h": "kibaszottul",
-    "e": "who; out",
+    "e": "fucking (intensifier)",
     "m": "Spoken like \"keebasottool\" — who.",
     "i": "/kibɒsotːul/"
   },
@@ -19479,13 +19479,13 @@ const wordDatabase = [
   },
   {
     "h": "lehetnék",
-    "e": "down",
+    "e": "I could be",
     "m": "Spoken like \"lehetnék\" — down.",
     "i": "/lɛhɛtneːk/"
   },
   {
     "h": "tehetsz",
-    "e": "you (sing.)",
+    "e": "you can do",
     "m": "Spoken like \"tehets\" — you (sing.).",
     "i": "/tɛhɛts/"
   },
@@ -19509,7 +19509,7 @@ const wordDatabase = [
   },
   {
     "h": "beszélgettünk",
-    "e": "into; in",
+    "e": "we chatted",
     "m": "Spoken like \"besélgettünk\" — into.",
     "i": "/bɛseːlɡɛtːynk/"
   },
@@ -19521,7 +19521,7 @@ const wordDatabase = [
   },
   {
     "h": "karácsonyi",
-    "e": "arm",
+    "e": "Christmas (adjective)",
     "m": "Spoken like \"karáchonyee\" — arm.",
     "i": "/kɒraːtʃoɲi/"
   },
@@ -19593,7 +19593,7 @@ const wordDatabase = [
   },
   {
     "h": "teste",
-    "e": "you (sing.)",
+    "e": "his/her body",
     "m": "Spoken like \"teste\" — you (sing.).",
     "i": "/tɛʃtɛ/"
   },
@@ -19647,7 +19647,7 @@ const wordDatabase = [
   },
   {
     "h": "veszik",
-    "e": "buys; takes",
+    "e": "to be bought; to be taken",
     "m": "Spoken like \"veseek\" — buys.",
     "i": "/vɛsik/"
   },
@@ -19713,7 +19713,7 @@ const wordDatabase = [
   },
   {
     "h": "helyette",
-    "e": "instead of",
+    "e": "instead of him/her/it",
     "m": "Spoken like \"heyette\" — instead of.",
     "i": "/hɛjɛtːɛ/"
   },
@@ -19731,7 +19731,7 @@ const wordDatabase = [
   },
   {
     "h": "semmiféle",
-    "e": "neither; nor",
+    "e": "no kind of; no such",
     "m": "Spoken like \"semmeeféle\" — neither.",
     "i": "/ʃɛmːifeːlɛ/"
   },
@@ -19743,7 +19743,7 @@ const wordDatabase = [
   },
   {
     "h": "mindenesetre",
-    "e": "what; we",
+    "e": "in any case; anyway",
     "m": "Spoken like \"meendenesetre\" — what.",
     "i": "/mindɛnɛʃɛtrɛ/"
   },
@@ -19773,7 +19773,7 @@ const wordDatabase = [
   },
   {
     "h": "szinten",
-    "e": "color",
+    "e": "level (adverb); at level",
     "m": "Spoken like \"seenten\" — color.",
     "i": "/sintɛn/"
   },
@@ -19785,7 +19785,7 @@ const wordDatabase = [
   },
   {
     "h": "kerülsz",
-    "e": "asks; requests",
+    "e": "you cost; you avoid",
     "m": "Spoken like \"kerüls\" — asks.",
     "i": "/kɛryls/"
   },
@@ -19815,13 +19815,13 @@ const wordDatabase = [
   },
   {
     "h": "bennünk",
-    "e": "into; in",
+    "e": "in us",
     "m": "Spoken like \"bennünk\" — into.",
     "i": "/bɛnːynk/"
   },
   {
     "h": "hagyhatom",
-    "e": "if",
+    "e": "I may leave/let",
     "m": "Spoken like \"hadyhatom\" — if.",
     "i": "/hɒɟhɒtom/"
   },
@@ -19851,7 +19851,7 @@ const wordDatabase = [
   },
   {
     "h": "boldogok",
-    "e": "happy",
+    "e": "happy (plural)",
     "m": "Spoken like \"boldogok\" — happy.",
     "i": "/boldoɡok/"
   },
@@ -19875,7 +19875,7 @@ const wordDatabase = [
   },
   {
     "h": "mindössze",
-    "e": "what; we",
+    "e": "only; merely; all in all",
     "m": "Spoken like \"meendösse\" — what.",
     "i": "/mindøsːɛ/"
   },
@@ -19905,13 +19905,13 @@ const wordDatabase = [
   },
   {
     "h": "gyerekeknek",
-    "e": "child",
+    "e": "to children",
     "m": "Spoken like \"dyerekeknek\" — child.",
     "i": "/ɟɛrɛkɛknɛk/"
   },
   {
     "h": "szombaton",
-    "e": "Saturday",
+    "e": "on Saturday",
     "m": "Spoken like \"sombaton\" — Saturday.",
     "i": "/sombɒton/"
   },
@@ -19929,7 +19929,7 @@ const wordDatabase = [
   },
   {
     "h": "maradnak",
-    "e": "already",
+    "e": "they stay",
     "m": "Spoken like \"maradnak\" — already.",
     "i": "/mɒrɒdnɒk/"
   },
@@ -19947,7 +19947,7 @@ const wordDatabase = [
   },
   {
     "h": "viszi",
-    "e": "carries; takes",
+    "e": "he/she takes/carries (it)",
     "m": "Spoken like \"veesee\" — carries.",
     "i": "/visi/"
   },
@@ -19971,7 +19971,7 @@ const wordDatabase = [
   },
   {
     "h": "szeretnek",
-    "e": "loves; likes",
+    "e": "they would like; they love",
     "m": "Spoken like \"seretnek\" — loves.",
     "i": "/sɛrɛtnɛk/"
   },
@@ -20013,7 +20013,7 @@ const wordDatabase = [
   },
   {
     "h": "fair",
-    "e": "tree",
+    "e": "fair",
     "m": "Spoken like \"faeer\" — tree.",
     "i": "/fɒir/"
   },
@@ -20025,7 +20025,7 @@ const wordDatabase = [
   },
   {
     "h": "nagyszerűen",
-    "e": "big",
+    "e": "wonderfully; greatly",
     "m": "Spoken like \"nadyserűen\" — big.",
     "i": "/nɒɟsɛryːɛn/"
   },
@@ -20037,7 +20037,7 @@ const wordDatabase = [
   },
   {
     "h": "magasabb",
-    "e": "today",
+    "e": "taller; higher",
     "m": "Spoken like \"magasabb\" — today.",
     "i": "/mɒɡɒʃɒbː/"
   },
@@ -20049,7 +20049,7 @@ const wordDatabase = [
   },
   {
     "h": "hozzon",
-    "e": "snow",
+    "e": "let him/her bring",
     "m": "Spoken like \"hozzon\" — snow.",
     "i": "/hozːon/"
   },
@@ -20091,7 +20091,7 @@ const wordDatabase = [
   },
   {
     "h": "ugyanis",
-    "e": "so; that way",
+    "e": "namely; since; because",
     "m": "Spoken like \"oodyanees\" — so.",
     "i": "/uɟɒniʃ/"
   },
@@ -20121,7 +20121,7 @@ const wordDatabase = [
   },
   {
     "h": "adjuk",
-    "e": "gives",
+    "e": "let's give (it)",
     "m": "Spoken like \"adjook\" — gives.",
     "i": "/ɒdjuk/"
   },
@@ -20133,7 +20133,7 @@ const wordDatabase = [
   },
   {
     "h": "tervem",
-    "e": "you (sing.)",
+    "e": "my plan",
     "m": "Spoken like \"tervem\" — you (sing.).",
     "i": "/tɛrvɛm/"
   },
@@ -20163,13 +20163,13 @@ const wordDatabase = [
   },
   {
     "h": "est",
-    "e": "and",
+    "e": "evening",
     "m": "Spoken like \"est\" — and.",
     "i": "/ɛʃt/"
   },
   {
     "h": "tennék",
-    "e": "you (sing.)",
+    "e": "I would do/put",
     "m": "Spoken like \"tennék\" — you (sing.).",
     "i": "/tɛnːeːk/"
   },
@@ -20181,7 +20181,7 @@ const wordDatabase = [
   },
   {
     "h": "belőlük",
-    "e": "into; in",
+    "e": "from them; out of them",
     "m": "Spoken like \"belőlük\" — into.",
     "i": "/bɛløːlyk/"
   },
@@ -20193,7 +20193,7 @@ const wordDatabase = [
   },
   {
     "h": "tervet",
-    "e": "you (sing.)",
+    "e": "plan (accusative)",
     "m": "Spoken like \"tervet\" — you (sing.).",
     "i": "/tɛrvɛt/"
   },
@@ -20217,13 +20217,13 @@ const wordDatabase = [
   },
   {
     "h": "engedély",
-    "e": "I",
+    "e": "permission; permit",
     "m": "Spoken like \"engedéy\" — I.",
     "i": "/ɛnɡɛdeːj/"
   },
   {
     "h": "iszik",
-    "e": "also; too",
+    "e": "to drink",
     "m": "Spoken like \"eeseek\" — also.",
     "i": "/isik/"
   },
@@ -20271,7 +20271,7 @@ const wordDatabase = [
   },
   {
     "h": "beszélgetés",
-    "e": "into; in",
+    "e": "conversation; chat",
     "m": "Spoken like \"besélgetés\" — into.",
     "i": "/bɛseːlɡɛteːʃ/"
   },
@@ -20283,7 +20283,7 @@ const wordDatabase = [
   },
   {
     "h": "keresik",
-    "e": "asks; requests",
+    "e": "they search for; are sought",
     "m": "Spoken like \"kereseek\" — asks.",
     "i": "/kɛrɛʃik/"
   },
@@ -20307,7 +20307,7 @@ const wordDatabase = [
   },
   {
     "h": "felejtse",
-    "e": "up",
+    "e": "let him/her forget",
     "m": "Spoken like \"felejtse\" — up.",
     "i": "/fɛlɛjtʃɛ/"
   },
@@ -20337,7 +20337,7 @@ const wordDatabase = [
   },
   {
     "h": "egyetemre",
-    "e": "one; a",
+    "e": "to university",
     "m": "Spoken like \"edyetemre\" — one.",
     "i": "/ɛɟɛtɛmrɛ/"
   },
@@ -20385,7 +20385,7 @@ const wordDatabase = [
   },
   {
     "h": "ittam",
-    "e": "here",
+    "e": "I drank",
     "m": "Spoken like \"eettam\" — here.",
     "i": "/itːɒm/"
   },
@@ -20403,7 +20403,7 @@ const wordDatabase = [
   },
   {
     "h": "tesztet",
-    "e": "you (sing.)",
+    "e": "test (accusative)",
     "m": "Spoken like \"testet\" — you (sing.).",
     "i": "/tɛstɛt/"
   },
@@ -20427,7 +20427,7 @@ const wordDatabase = [
   },
   {
     "h": "meghalunk",
-    "e": "still; yet",
+    "e": "we die",
     "m": "Spoken like \"meghaloonk\" — still.",
     "i": "/mɛɡhɒlunk/"
   },
@@ -20463,7 +20463,7 @@ const wordDatabase = [
   },
   {
     "h": "esze",
-    "e": "and",
+    "e": "his/her mind/brain",
     "m": "Spoken like \"ese\" — and.",
     "i": "/ɛsɛ/"
   },
@@ -20493,7 +20493,7 @@ const wordDatabase = [
   },
   {
     "h": "kocsiból",
-    "e": "stone",
+    "e": "from the car",
     "m": "Spoken like \"kocheeból\" — stone.",
     "i": "/kotʃiboːl/"
   },
@@ -20505,7 +20505,7 @@ const wordDatabase = [
   },
   {
     "h": "haldoklik",
-    "e": "if",
+    "e": "is dying",
     "m": "Spoken like \"haldokleek\" — if.",
     "i": "/hɒldoklik/"
   },
@@ -20523,7 +20523,7 @@ const wordDatabase = [
   },
   {
     "h": "hali",
-    "e": "if",
+    "e": "hi (informal greeting)",
     "m": "Spoken like \"halee\" — if.",
     "i": "/hɒli/"
   },
@@ -20589,7 +20589,7 @@ const wordDatabase = [
   },
   {
     "h": "bemegyek",
-    "e": "into; in",
+    "e": "I go in; I enter",
     "m": "Spoken like \"bemedyek\" — into.",
     "i": "/bɛmɛɟɛk/"
   },
@@ -20631,7 +20631,7 @@ const wordDatabase = [
   },
   {
     "h": "sorban",
-    "e": "salt",
+    "e": "in a row; in line; in turn",
     "m": "Spoken like \"sorban\" — salt.",
     "i": "/ʃorbɒn/"
   },
@@ -20649,7 +20649,7 @@ const wordDatabase = [
   },
   {
     "h": "arcod",
-    "e": "face",
+    "e": "your face",
     "m": "Spoken like \"arcod\" — face.",
     "i": "/ɒrt͡sod/"
   },
@@ -20661,13 +20661,13 @@ const wordDatabase = [
   },
   {
     "h": "lehető",
-    "e": "down",
+    "e": "possible",
     "m": "Spoken like \"lehető\" — down.",
     "i": "/lɛhɛtøː/"
   },
   {
     "h": "napok",
-    "e": "day; sun",
+    "e": "days",
     "m": "Spoken like \"napok\" — day.",
     "i": "/nɒpok/"
   },
@@ -20727,7 +20727,7 @@ const wordDatabase = [
   },
   {
     "h": "tengeri",
-    "e": "you (sing.)",
+    "e": "marine; sea (adjective)",
     "m": "Spoken like \"tengeree\" — you (sing.).",
     "i": "/tɛnɡɛri/"
   },
@@ -20763,13 +20763,13 @@ const wordDatabase = [
   },
   {
     "h": "hazudni",
-    "e": "if",
+    "e": "to lie",
     "m": "Spoken like \"hazoodnee\" — if.",
     "i": "/hɒzudni/"
   },
   {
     "h": "hallgasd",
-    "e": "if",
+    "e": "listen to it (imperative)",
     "m": "Spoken like \"hallgasd\" — if.",
     "i": "/hɒlːɡɒʃd/"
   },
@@ -20805,7 +20805,7 @@ const wordDatabase = [
   },
   {
     "h": "ugyanakkor",
-    "e": "so; that way",
+    "e": "at the same time; however",
     "m": "Spoken like \"oodyanakkor\" — so.",
     "i": "/uɟɒnɒkːor/"
   },
@@ -20817,19 +20817,19 @@ const wordDatabase = [
   },
   {
     "h": "tettünk",
-    "e": "you (sing.)",
+    "e": "we did/put",
     "m": "Spoken like \"tettünk\" — you (sing.).",
     "i": "/tɛtːynk/"
   },
   {
     "h": "szemembe",
-    "e": "eye",
+    "e": "into my eye",
     "m": "Spoken like \"semembe\" — eye.",
     "i": "/sɛmɛmbɛ/"
   },
   {
     "h": "adunk",
-    "e": "gives",
+    "e": "we give",
     "m": "Spoken like \"adoonk\" — gives.",
     "i": "/ɒdunk/"
   },
@@ -20841,13 +20841,13 @@ const wordDatabase = [
   },
   {
     "h": "megkaptad",
-    "e": "still; yet",
+    "e": "you received (it)",
     "m": "Spoken like \"megkaptad\" — still.",
     "i": "/mɛɡkɒptɒd/"
   },
   {
     "h": "magukkal",
-    "e": "today",
+    "e": "with themselves",
     "m": "Spoken like \"magookkal\" — today.",
     "i": "/mɒɡukːɒl/"
   },
@@ -20937,7 +20937,7 @@ const wordDatabase = [
   },
   {
     "h": "szemébe",
-    "e": "eye",
+    "e": "into his/her eye",
     "m": "Spoken like \"semébe\" — eye.",
     "i": "/sɛmeːbɛ/"
   },
@@ -21015,7 +21015,7 @@ const wordDatabase = [
   },
   {
     "h": "gyerekem",
-    "e": "child",
+    "e": "my child",
     "m": "Spoken like \"dyerekem\" — child.",
     "i": "/ɟɛrɛkɛm/"
   },
@@ -21051,7 +21051,7 @@ const wordDatabase = [
   },
   {
     "h": "adhatok",
-    "e": "gives",
+    "e": "I can give",
     "m": "Spoken like \"adhatok\" — gives.",
     "i": "/ɒdhɒtok/"
   },
@@ -21081,7 +21081,7 @@ const wordDatabase = [
   },
   {
     "h": "megvagyok",
-    "e": "still; yet",
+    "e": "I'm fine; I'm doing okay",
     "m": "Spoken like \"megvadyok\" — still.",
     "i": "/mɛɡvɒɟok/"
   },
@@ -21105,13 +21105,13 @@ const wordDatabase = [
   },
   {
     "h": "miniszter",
-    "e": "what; we",
+    "e": "minister",
     "m": "Spoken like \"meeneester\" — what.",
     "i": "/ministɛr/"
   },
   {
     "h": "esélyed",
-    "e": "and",
+    "e": "your chance",
     "m": "Spoken like \"eséyed\" — and.",
     "i": "/ɛʃeːjɛd/"
   },
@@ -21135,7 +21135,7 @@ const wordDatabase = [
   },
   {
     "h": "haja",
-    "e": "if",
+    "e": "his/her hair",
     "m": "Spoken like \"haja\" — if.",
     "i": "/hɒjɒ/"
   },
@@ -21159,19 +21159,19 @@ const wordDatabase = [
   },
   {
     "h": "utánad",
-    "e": "road; way",
+    "e": "after you",
     "m": "Spoken like \"ootánad\" — road.",
     "i": "/utaːnɒd/"
   },
   {
     "h": "hoztad",
-    "e": "snow",
+    "e": "you brought (it)",
     "m": "Spoken like \"hoztad\" — snow.",
     "i": "/hoztɒd/"
   },
   {
     "h": "veszel",
-    "e": "buys; takes",
+    "e": "you buy/take",
     "m": "Spoken like \"vesel\" — buys.",
     "i": "/vɛsɛl/"
   },
@@ -21189,7 +21189,7 @@ const wordDatabase = [
   },
   {
     "h": "haltak",
-    "e": "if",
+    "e": "they died",
     "m": "Spoken like \"haltak\" — if.",
     "i": "/hɒltɒk/"
   },
@@ -21213,13 +21213,13 @@ const wordDatabase = [
   },
   {
     "h": "ellenséges",
-    "e": "against",
+    "e": "hostile; enemy (adjective)",
     "m": "Spoken like \"ellenséges\" — against.",
     "i": "/ɛlːɛnʃeːɡɛʃ/"
   },
   {
     "h": "szemetet",
-    "e": "eye",
+    "e": "trash/garbage (accusative)",
     "m": "Spoken like \"semetet\" — eye.",
     "i": "/sɛmɛtɛt/"
   },
@@ -21231,7 +21231,7 @@ const wordDatabase = [
   },
   {
     "h": "akkoriban",
-    "e": "then",
+    "e": "at that time; in those days",
     "m": "Spoken like \"akkoreeban\" — then.",
     "i": "/ɒkːoribɒn/"
   },
@@ -21249,7 +21249,7 @@ const wordDatabase = [
   },
   {
     "h": "területet",
-    "e": "you (sing.)",
+    "e": "area/territory (accusative)",
     "m": "Spoken like \"területet\" — you (sing.).",
     "i": "/tɛrylɛtɛt/"
   },
@@ -21309,7 +21309,7 @@ const wordDatabase = [
   },
   {
     "h": "telefonált",
-    "e": "you (sing.)",
+    "e": "he/she called (by phone)",
     "m": "Spoken like \"telefonált\" — you (sing.).",
     "i": "/tɛlɛfonaːlt/"
   },
@@ -21345,7 +21345,7 @@ const wordDatabase = [
   },
   {
     "h": "testvére",
-    "e": "you (sing.)",
+    "e": "his/her sibling",
     "m": "Spoken like \"testvére\" — you (sing.).",
     "i": "/tɛʃtveːrɛ/"
   },
@@ -21375,7 +21375,7 @@ const wordDatabase = [
   },
   {
     "h": "kerültem",
-    "e": "asks; requests",
+    "e": "I cost; I avoided",
     "m": "Spoken like \"kerültem\" — asks.",
     "i": "/kɛryltɛm/"
   },
@@ -21393,7 +21393,7 @@ const wordDatabase = [
   },
   {
     "h": "egymásra",
-    "e": "one; a",
+    "e": "onto each other",
     "m": "Spoken like \"edymásra\" — one.",
     "i": "/ɛɟmaːʃrɒ/"
   },
@@ -21417,7 +21417,7 @@ const wordDatabase = [
   },
   {
     "h": "találnak",
-    "e": "maybe",
+    "e": "they find",
     "m": "Spoken like \"találnak\" — maybe.",
     "i": "/tɒlaːlnɒk/"
   },
@@ -21429,7 +21429,7 @@ const wordDatabase = [
   },
   {
     "h": "terved",
-    "e": "you (sing.)",
+    "e": "your plan",
     "m": "Spoken like \"terved\" — you (sing.).",
     "i": "/tɛrvɛd/"
   },
@@ -21447,7 +21447,7 @@ const wordDatabase = [
   },
   {
     "h": "faszom",
-    "e": "tree",
+    "e": "my dick (vulgar)",
     "m": "Spoken like \"fasom\" — tree.",
     "i": "/fɒsom/"
   },
@@ -21477,7 +21477,7 @@ const wordDatabase = [
   },
   {
     "h": "mindenről",
-    "e": "what; we",
+    "e": "about everything",
     "m": "Spoken like \"meendenről\" — what.",
     "i": "/mindɛnrøːl/"
   },
@@ -21567,7 +21567,7 @@ const wordDatabase = [
   },
   {
     "h": "faszfej",
-    "e": "tree",
+    "e": "dickhead (vulgar)",
     "m": "Spoken like \"fasfej\" — tree.",
     "i": "/fɒsfɛj/"
   },
@@ -21615,7 +21615,7 @@ const wordDatabase = [
   },
   {
     "h": "Miami",
-    "e": "what; we",
+    "e": "Miami",
     "m": "Spoken like \"meeamee\" — what.",
     "i": "/miɒmi/"
   },
@@ -21627,7 +21627,7 @@ const wordDatabase = [
   },
   {
     "h": "testvérek",
-    "e": "you (sing.)",
+    "e": "siblings",
     "m": "Spoken like \"testvérek\" — you (sing.).",
     "i": "/tɛʃtveːrɛk/"
   },
@@ -21645,7 +21645,7 @@ const wordDatabase = [
   },
   {
     "h": "terve",
-    "e": "you (sing.)",
+    "e": "his/her plan",
     "m": "Spoken like \"terve\" — you (sing.).",
     "i": "/tɛrvɛ/"
   },
@@ -21687,7 +21687,7 @@ const wordDatabase = [
   },
   {
     "h": "készítette",
-    "e": "he/she made",
+    "e": "he/she made/prepared (it)",
     "m": "Spoken like \"késítette\".",
     "i": "/keːsiːtɛtːɛ/"
   },
@@ -21705,7 +21705,7 @@ const wordDatabase = [
   },
   {
     "h": "hazamegyek",
-    "e": "if",
+    "e": "I'm going home",
     "m": "Spoken like \"hazamedyek\" — if.",
     "i": "/hɒzɒmɛɟɛk/"
   },
@@ -21723,7 +21723,7 @@ const wordDatabase = [
   },
   {
     "h": "legutóbbi",
-    "e": "down",
+    "e": "latest; most recent",
     "m": "Spoken like \"legootóbbee\" — down.",
     "i": "/lɛɡutoːbːi/"
   },
@@ -21753,7 +21753,7 @@ const wordDatabase = [
   },
   {
     "h": "kocsim",
-    "e": "stone",
+    "e": "my car",
     "m": "Spoken like \"kocheem\" — stone.",
     "i": "/kotʃim/"
   },
@@ -21771,19 +21771,19 @@ const wordDatabase = [
   },
   {
     "h": "maradtam",
-    "e": "already",
+    "e": "I stayed",
     "m": "Spoken like \"maradtam\" — already.",
     "i": "/mɒrɒdtɒm/"
   },
   {
     "h": "ellenem",
-    "e": "against",
+    "e": "against me",
     "m": "Spoken like \"ellenem\" — against.",
     "i": "/ɛlːɛnɛm/"
   },
   {
     "h": "tegyem",
-    "e": "you (sing.)",
+    "e": "let me do/put (it)",
     "m": "Spoken like \"tedyem\" — you (sing.).",
     "i": "/tɛɟɛm/"
   },
@@ -21843,7 +21843,7 @@ const wordDatabase = [
   },
   {
     "h": "fogni",
-    "e": "tooth",
+    "e": "to catch; to hold; to grasp",
     "m": "Spoken like \"fognee\" — tooth.",
     "i": "/foɡni/"
   },
@@ -21903,7 +21903,7 @@ const wordDatabase = [
   },
   {
     "h": "szeretjük",
-    "e": "loves; likes",
+    "e": "we love (it)",
     "m": "Spoken like \"seretjük\" — loves.",
     "i": "/sɛrɛtjyk/"
   },
@@ -21939,13 +21939,13 @@ const wordDatabase = [
   },
   {
     "h": "találkozom",
-    "e": "maybe",
+    "e": "I meet",
     "m": "Spoken like \"találkozom\" — maybe.",
     "i": "/tɒlaːlkozom/"
   },
   {
     "h": "adag",
-    "e": "gives",
+    "e": "portion; dose; serving",
     "m": "Spoken like \"adag\" — gives.",
     "i": "/ɒdɒɡ/"
   },
@@ -21957,7 +21957,7 @@ const wordDatabase = [
   },
   {
     "h": "próbálta",
-    "e": "he/she tried",
+    "e": "he/she tried (it)",
     "m": "Spoken like \"próbálta\".",
     "i": "/proːbaːltɒ/"
   },
@@ -21969,7 +21969,7 @@ const wordDatabase = [
   },
   {
     "h": "teheti",
-    "e": "you (sing.)",
+    "e": "he/she can do",
     "m": "Spoken like \"tehetee\" — you (sing.).",
     "i": "/tɛhɛti/"
   },
@@ -21987,13 +21987,13 @@ const wordDatabase = [
   },
   {
     "h": "fogadja",
-    "e": "tooth",
+    "e": "he/she accepts (it)",
     "m": "Spoken like \"fogadja\" — tooth.",
     "i": "/foɡɒdjɒ/"
   },
   {
     "h": "asztalt",
-    "e": "table",
+    "e": "table (accusative)",
     "m": "Spoken like \"astalt\" — table.",
     "i": "/ɒstɒlt/"
   },
@@ -22023,13 +22023,13 @@ const wordDatabase = [
   },
   {
     "h": "adod",
-    "e": "gives",
+    "e": "you give (it)",
     "m": "Spoken like \"adod\" — gives.",
     "i": "/ɒdod/"
   },
   {
     "h": "beszélhetünk",
-    "e": "into; in",
+    "e": "we can speak",
     "m": "Spoken like \"besélhetünk\" — into.",
     "i": "/bɛseːlhɛtynk/"
   },
@@ -22041,7 +22041,7 @@ const wordDatabase = [
   },
   {
     "h": "tudomány",
-    "e": "I know",
+    "e": "science",
     "m": "Spoken like \"toodomány\" — I know.",
     "i": "/tudomaːɲ/"
   },
@@ -22065,7 +22065,7 @@ const wordDatabase = [
   },
   {
     "h": "engedjenek",
-    "e": "I",
+    "e": "let them (imperative)",
     "m": "Spoken like \"engedjenek\" — I.",
     "i": "/ɛnɡɛdjɛnɛk/"
   },
@@ -22161,7 +22161,7 @@ const wordDatabase = [
   },
   {
     "h": "megtaláltad",
-    "e": "still; yet",
+    "e": "you found (it)",
     "m": "Spoken like \"megtaláltad\" — still.",
     "i": "/mɛɡtɒlaːltɒd/"
   },
@@ -22269,7 +22269,7 @@ const wordDatabase = [
   },
   {
     "h": "itteni",
-    "e": "here",
+    "e": "from here; local",
     "m": "Spoken like \"eettenee\" — here.",
     "i": "/itːɛni/"
   },
@@ -22281,7 +22281,7 @@ const wordDatabase = [
   },
   {
     "h": "fejjel",
-    "e": "head",
+    "e": "with the head",
     "m": "Spoken like \"fejjel\" — head.",
     "i": "/fɛjːɛl/"
   },
@@ -22335,7 +22335,7 @@ const wordDatabase = [
   },
   {
     "h": "maradhat",
-    "e": "already",
+    "e": "can stay",
     "m": "Spoken like \"maradhat\" — already.",
     "i": "/mɒrɒdhɒt/"
   },
@@ -22365,7 +22365,7 @@ const wordDatabase = [
   },
   {
     "h": "kocsival",
-    "e": "stone",
+    "e": "by car",
     "m": "Spoken like \"kocheeval\" — stone.",
     "i": "/kotʃivɒl/"
   },
@@ -22389,7 +22389,7 @@ const wordDatabase = [
   },
   {
     "h": "hagyjál",
-    "e": "if",
+    "e": "leave (imperative, informal)",
     "m": "Spoken like \"hadyjál\" — if.",
     "i": "/hɒɟjaːl/"
   },
@@ -22401,7 +22401,7 @@ const wordDatabase = [
   },
   {
     "h": "legjobbat",
-    "e": "down",
+    "e": "best (accusative)",
     "m": "Spoken like \"legjobbat\" — down.",
     "i": "/lɛɡjobːɒt/"
   },
@@ -22413,7 +22413,7 @@ const wordDatabase = [
   },
   {
     "h": "megpróbálja",
-    "e": "still; yet",
+    "e": "he/she tries (it)",
     "m": "Spoken like \"megpróbálja\" — still.",
     "i": "/mɛɡproːbaːljɒ/"
   },
@@ -22425,7 +22425,7 @@ const wordDatabase = [
   },
   {
     "h": "hangosan",
-    "e": "if",
+    "e": "loudly; aloud",
     "m": "Spoken like \"hangosan\" — if.",
     "i": "/hɒnɡoʃɒn/"
   },
@@ -22449,7 +22449,7 @@ const wordDatabase = [
   },
   {
     "h": "halok",
-    "e": "if",
+    "e": "I die; fishes",
     "m": "Spoken like \"halok\" — if.",
     "i": "/hɒlok/"
   },
@@ -22521,7 +22521,7 @@ const wordDatabase = [
   },
   {
     "h": "mindenben",
-    "e": "what; we",
+    "e": "in everything",
     "m": "Spoken like \"meendenben\" — what.",
     "i": "/mindɛnbɛn/"
   },
@@ -22551,7 +22551,7 @@ const wordDatabase = [
   },
   {
     "h": "felvételt",
-    "e": "up",
+    "e": "recording; admission (accusative)",
     "m": "Spoken like \"felvételt\" — up.",
     "i": "/fɛlveːtɛlt/"
   },
@@ -22587,7 +22587,7 @@ const wordDatabase = [
   },
   {
     "h": "koromban",
-    "e": "stone",
+    "e": "at my age",
     "m": "Spoken like \"koromban\" — stone.",
     "i": "/korombɒn/"
   },
@@ -22623,7 +22623,7 @@ const wordDatabase = [
   },
   {
     "h": "magunkra",
-    "e": "today",
+    "e": "onto ourselves",
     "m": "Spoken like \"magoonkra\" — today.",
     "i": "/mɒɡunkrɒ/"
   },
@@ -22635,7 +22635,7 @@ const wordDatabase = [
   },
   {
     "h": "italra",
-    "e": "drink",
+    "e": "to a drink",
     "m": "Spoken like \"eetalra\" — drink.",
     "i": "/itɒlrɒ/"
   },
@@ -22665,13 +22665,13 @@ const wordDatabase = [
   },
   {
     "h": "engedem",
-    "e": "I",
+    "e": "I let; I allow",
     "m": "Spoken like \"engedem\" — I.",
     "i": "/ɛnɡɛdɛm/"
   },
   {
     "h": "esni",
-    "e": "and",
+    "e": "to fall",
     "m": "Spoken like \"esnee\" — and.",
     "i": "/ɛʃni/"
   },
@@ -22719,7 +22719,7 @@ const wordDatabase = [
   },
   {
     "h": "iszol",
-    "e": "also; too",
+    "e": "you drink",
     "m": "Spoken like \"eesol\" — also.",
     "i": "/isol/"
   },
@@ -22737,7 +22737,7 @@ const wordDatabase = [
   },
   {
     "h": "kitől",
-    "e": "who; out",
+    "e": "from whom",
     "m": "Spoken like \"keetől\" — who.",
     "i": "/kitøːl/"
   },
@@ -22749,7 +22749,7 @@ const wordDatabase = [
   },
   {
     "h": "mindenképpen",
-    "e": "what; we",
+    "e": "by all means; certainly",
     "m": "Spoken like \"meendenképpen\" — what.",
     "i": "/mindɛnkeːpːɛn/"
   },
@@ -22767,7 +22767,7 @@ const wordDatabase = [
   },
   {
     "h": "beszélgetünk",
-    "e": "into; in",
+    "e": "we chat; we converse",
     "m": "Spoken like \"besélgetünk\" — into.",
     "i": "/bɛseːlɡɛtynk/"
   },
@@ -22809,7 +22809,7 @@ const wordDatabase = [
   },
   {
     "h": "kezdte",
-    "e": "hand",
+    "e": "he/she began",
     "m": "Spoken like \"kezdte\" — hand.",
     "i": "/kɛzdtɛ/"
   },
@@ -22839,7 +22839,7 @@ const wordDatabase = [
   },
   {
     "h": "boltban",
-    "e": "shop",
+    "e": "in a shop/store",
     "m": "Spoken like \"boltban\" — shop.",
     "i": "/boltbɒn/"
   },
@@ -22851,7 +22851,7 @@ const wordDatabase = [
   },
   {
     "h": "megértettem",
-    "e": "still; yet",
+    "e": "I understood",
     "m": "Spoken like \"megértettem\" — still.",
     "i": "/mɛɡeːrtɛtːɛm/"
   },
@@ -22863,13 +22863,13 @@ const wordDatabase = [
   },
   {
     "h": "engedi",
-    "e": "I",
+    "e": "he/she lets; allows",
     "m": "Spoken like \"engedee\" — I.",
     "i": "/ɛnɡɛdi/"
   },
   {
     "h": "halat",
-    "e": "if",
+    "e": "fish (accusative)",
     "m": "Spoken like \"halat\" — if.",
     "i": "/hɒlɒt/"
   },
@@ -22881,7 +22881,7 @@ const wordDatabase = [
   },
   {
     "h": "tudtak",
-    "e": "knows; can",
+    "e": "they knew; they could",
     "m": "Spoken like \"toodtak\" — knows.",
     "i": "/tudtɒk/"
   },
@@ -22911,7 +22911,7 @@ const wordDatabase = [
   },
   {
     "h": "foglaljon",
-    "e": "tooth",
+    "e": "let him/her book/reserve",
     "m": "Spoken like \"foglaljon\" — tooth.",
     "i": "/foɡlɒljon/"
   },
@@ -22983,7 +22983,7 @@ const wordDatabase = [
   },
   {
     "h": "darabokra",
-    "e": "piece",
+    "e": "into pieces",
     "m": "Spoken like \"darabokra\" — piece.",
     "i": "/dɒrɒbokrɒ/"
   },
@@ -22995,7 +22995,7 @@ const wordDatabase = [
   },
   {
     "h": "találtad",
-    "e": "maybe",
+    "e": "you found (it)",
     "m": "Spoken like \"találtad\" — maybe.",
     "i": "/tɒlaːltɒd/"
   },
@@ -23019,7 +23019,7 @@ const wordDatabase = [
   },
   {
     "h": "fejében",
-    "e": "head",
+    "e": "in his/her head",
     "m": "Spoken like \"fejében\" — head.",
     "i": "/fɛjeːbɛn/"
   },
@@ -23037,7 +23037,7 @@ const wordDatabase = [
   },
   {
     "h": "veszünk",
-    "e": "buys; takes",
+    "e": "we buy/take",
     "m": "Spoken like \"vesünk\" — buys.",
     "i": "/vɛsynk/"
   },
@@ -23049,7 +23049,7 @@ const wordDatabase = [
   },
   {
     "h": "felejtettem",
-    "e": "up",
+    "e": "I forgot",
     "m": "Spoken like \"felejtettem\" — up.",
     "i": "/fɛlɛjtɛtːɛm/"
   },
@@ -23073,13 +23073,13 @@ const wordDatabase = [
   },
   {
     "h": "iskolai",
-    "e": "also; too",
+    "e": "school (adjective)",
     "m": "Spoken like \"eeskolaee\" — also.",
     "i": "/iʃkolɒi/"
   },
   {
     "h": "kerestek",
-    "e": "asks; requests",
+    "e": "you (plural) searched",
     "m": "Spoken like \"kerestek\" — asks.",
     "i": "/kɛrɛʃtɛk/"
   },
@@ -23091,13 +23091,13 @@ const wordDatabase = [
   },
   {
     "h": "harci",
-    "e": "if",
+    "e": "combat; battle (adjective)",
     "m": "Spoken like \"harcee\" — if.",
     "i": "/hɒrt͡si/"
   },
   {
     "h": "ablakot",
-    "e": "window",
+    "e": "window (accusative)",
     "m": "Spoken like \"ablakot\" — window.",
     "i": "/ɒblɒkot/"
   },
@@ -23157,25 +23157,25 @@ const wordDatabase = [
   },
   {
     "h": "hajóra",
-    "e": "if",
+    "e": "onto a ship/boat",
     "m": "Spoken like \"hajóra\" — if.",
     "i": "/hɒjoːrɒ/"
   },
   {
     "h": "egyértelműen",
-    "e": "one; a",
+    "e": "clearly; unambiguously",
     "m": "Spoken like \"edyértelműen\" — one.",
     "i": "/ɛɟeːrtɛlmyːɛn/"
   },
   {
     "h": "meglehetősen",
-    "e": "still; yet",
+    "e": "considerably; fairly",
     "m": "Spoken like \"meglehetősen\" — still.",
     "i": "/mɛɡlɛhɛtøːʃɛn/"
   },
   {
     "h": "hazudok",
-    "e": "if",
+    "e": "I lie",
     "m": "Spoken like \"hazoodok\" — if.",
     "i": "/hɒzudok/"
   },
@@ -23193,7 +23193,7 @@ const wordDatabase = [
   },
   {
     "h": "hagyhatjuk",
-    "e": "if",
+    "e": "we may leave/let",
     "m": "Spoken like \"hadyhatjook\" — if.",
     "i": "/hɒɟhɒtjuk/"
   },
@@ -23235,7 +23235,7 @@ const wordDatabase = [
   },
   {
     "h": "mibe",
-    "e": "what; we",
+    "e": "into what",
     "m": "Spoken like \"meebe\" — what.",
     "i": "/mibɛ/"
   },
@@ -23277,7 +23277,7 @@ const wordDatabase = [
   },
   {
     "h": "falat",
-    "e": "wall",
+    "e": "wall (accusative); bite/morsel",
     "m": "Spoken like \"falat\" — wall.",
     "i": "/fɒlɒt/"
   },
@@ -23301,7 +23301,7 @@ const wordDatabase = [
   },
   {
     "h": "templomba",
-    "e": "you (sing.)",
+    "e": "into a church/temple",
     "m": "Spoken like \"templomba\" — you (sing.).",
     "i": "/tɛmplombɒ/"
   },
@@ -23325,13 +23325,13 @@ const wordDatabase = [
   },
   {
     "h": "hangját",
-    "e": "if",
+    "e": "his/her voice (accusative)",
     "m": "Spoken like \"hangját\" — if.",
     "i": "/hɒnɡjaːt/"
   },
   {
     "h": "használjuk",
-    "e": "if",
+    "e": "we use (it)",
     "m": "Spoken like \"hasnáljook\" — if.",
     "i": "/hɒsnaːljuk/"
   },
@@ -23343,13 +23343,13 @@ const wordDatabase = [
   },
   {
     "h": "magyarázat",
-    "e": "today",
+    "e": "explanation",
     "m": "Spoken like \"madyarázat\" — today.",
     "i": "/mɒɟɒraːzɒt/"
   },
   {
     "h": "beszélgetést",
-    "e": "into; in",
+    "e": "conversation (accusative)",
     "m": "Spoken like \"besélgetést\" — into.",
     "i": "/bɛseːlɡɛteːʃt/"
   },
@@ -23463,7 +23463,7 @@ const wordDatabase = [
   },
   {
     "h": "eszel",
-    "e": "and",
+    "e": "you eat",
     "m": "Spoken like \"esel\" — and.",
     "i": "/ɛsɛl/"
   },
@@ -23505,7 +23505,7 @@ const wordDatabase = [
   },
   {
     "h": "hetes",
-    "e": "week; seven",
+    "e": "seven (number); seven-year-old",
     "m": "Spoken like \"hetes\" — week.",
     "i": "/hɛtɛʃ/"
   },
@@ -23535,13 +23535,13 @@ const wordDatabase = [
   },
   {
     "h": "milliót",
-    "e": "what; we",
+    "e": "million (accusative)",
     "m": "Spoken like \"meelleeót\" — what.",
     "i": "/milːioːt/"
   },
   {
     "h": "kocsija",
-    "e": "stone",
+    "e": "his/her car",
     "m": "Spoken like \"kocheeja\" — stone.",
     "i": "/kotʃijɒ/"
   },
@@ -23553,19 +23553,19 @@ const wordDatabase = [
   },
   {
     "h": "esélyem",
-    "e": "and",
+    "e": "my chance",
     "m": "Spoken like \"eséyem\" — and.",
     "i": "/ɛʃeːjɛm/"
   },
   {
     "h": "esetre",
-    "e": "and",
+    "e": "in case of; onto a case",
     "m": "Spoken like \"esetre\" — and.",
     "i": "/ɛʃɛtrɛ/"
   },
   {
     "h": "hotelben",
-    "e": "snow",
+    "e": "in a hotel",
     "m": "Spoken like \"hotelben\" — snow.",
     "i": "/hotɛlbɛn/"
   },
@@ -23577,13 +23577,13 @@ const wordDatabase = [
   },
   {
     "h": "megölnek",
-    "e": "still; yet",
+    "e": "they kill",
     "m": "Spoken like \"megölnek\" — still.",
     "i": "/mɛɡølnɛk/"
   },
   {
     "h": "istent",
-    "e": "also; too",
+    "e": "God (accusative)",
     "m": "Spoken like \"eestent\" — also.",
     "i": "/iʃtɛnt/"
   },
@@ -23595,7 +23595,7 @@ const wordDatabase = [
   },
   {
     "h": "azokra",
-    "e": "the; that",
+    "e": "onto those",
     "m": "Spoken like \"azokra\" — the.",
     "i": "/ɒzokrɒ/"
   },
@@ -23613,7 +23613,7 @@ const wordDatabase = [
   },
   {
     "h": "kora",
-    "e": "stone",
+    "e": "his/her age; early",
     "m": "Spoken like \"kora\" — stone.",
     "i": "/korɒ/"
   },
@@ -23643,7 +23643,7 @@ const wordDatabase = [
   },
   {
     "h": "halljam",
-    "e": "if",
+    "e": "let me hear (it)",
     "m": "Spoken like \"halljam\" — if.",
     "i": "/hɒlːjɒm/"
   },
@@ -23655,7 +23655,7 @@ const wordDatabase = [
   },
   {
     "h": "befejeztem",
-    "e": "into; in",
+    "e": "I finished",
     "m": "Spoken like \"befejeztem\" — into.",
     "i": "/bɛfɛjɛztɛm/"
   },
@@ -23685,7 +23685,7 @@ const wordDatabase = [
   },
   {
     "h": "felelősséget",
-    "e": "up",
+    "e": "responsibility (accusative)",
     "m": "Spoken like \"felelősséget\" — up.",
     "i": "/fɛlɛløːʃːeːɡɛt/"
   },
@@ -23703,7 +23703,7 @@ const wordDatabase = [
   },
   {
     "h": "megpróbálok",
-    "e": "still; yet",
+    "e": "I try",
     "m": "Spoken like \"megpróbálok\" — still.",
     "i": "/mɛɡproːbaːlok/"
   },
@@ -23721,13 +23721,13 @@ const wordDatabase = [
   },
   {
     "h": "gyerekekkel",
-    "e": "child",
+    "e": "with children",
     "m": "Spoken like \"dyerekekkel\" — child.",
     "i": "/ɟɛrɛkɛkːɛl/"
   },
   {
     "h": "ezekben",
-    "e": "this",
+    "e": "in these",
     "m": "Spoken like \"ezekben\" — this.",
     "i": "/ɛzɛkbɛn/"
   },
@@ -23739,13 +23739,13 @@ const wordDatabase = [
   },
   {
     "h": "fiatalok",
-    "e": "young",
+    "e": "young people",
     "m": "Spoken like \"feeatalok\" — young.",
     "i": "/fiɒtɒlok/"
   },
   {
     "h": "hetet",
-    "e": "week; seven",
+    "e": "seven (accusative)",
     "m": "Spoken like \"hetet\" — week.",
     "i": "/hɛtɛt/"
   },
@@ -23763,7 +23763,7 @@ const wordDatabase = [
   },
   {
     "h": "magáért",
-    "e": "today",
+    "e": "for himself/herself",
     "m": "Spoken like \"magáért\" — today.",
     "i": "/mɒɡaːeːrt/"
   },
@@ -23775,7 +23775,7 @@ const wordDatabase = [
   },
   {
     "h": "kezdet",
-    "e": "hand",
+    "e": "beginning; start",
     "m": "Spoken like \"kezdet\" — hand.",
     "i": "/kɛzdɛt/"
   },
@@ -23787,13 +23787,13 @@ const wordDatabase = [
   },
   {
     "h": "faj",
-    "e": "tree",
+    "e": "species; race; breed",
     "m": "Spoken like \"faj\" — tree.",
     "i": "/fɒj/"
   },
   {
     "h": "vonalban",
-    "e": "line",
+    "e": "in line; in a row",
     "m": "Spoken like \"vonalban\" — line.",
     "i": "/vonɒlbɒn/"
   },
@@ -23817,7 +23817,7 @@ const wordDatabase = [
   },
   {
     "h": "felesleges",
-    "e": "up",
+    "e": "unnecessary; superfluous",
     "m": "Spoken like \"felesleges\" — up.",
     "i": "/fɛlɛʃlɛɡɛʃ/"
   },
@@ -23859,7 +23859,7 @@ const wordDatabase = [
   },
   {
     "h": "mindannyiunkat",
-    "e": "what; we",
+    "e": "all of us (accusative)",
     "m": "Spoken like \"meendannyeeoonkat\" — what.",
     "i": "/mindɒɲːiunkɒt/"
   },
@@ -23877,7 +23877,7 @@ const wordDatabase = [
   },
   {
     "h": "nagyapa",
-    "e": "big",
+    "e": "grandfather",
     "m": "Spoken like \"nadyapa\" — big.",
     "i": "/nɒɟɒpɒ/"
   },
@@ -23889,7 +23889,7 @@ const wordDatabase = [
   },
   {
     "h": "gyorsabb",
-    "e": "fast",
+    "e": "faster",
     "m": "Spoken like \"dyorsabb\" — fast.",
     "i": "/ɟorʃɒbː/"
   },
@@ -23913,13 +23913,13 @@ const wordDatabase = [
   },
   {
     "h": "eszébe",
-    "e": "and",
+    "e": "to his/her mind",
     "m": "Spoken like \"esébe\" — and.",
     "i": "/ɛseːbɛ/"
   },
   {
     "h": "vesznek",
-    "e": "buys; takes",
+    "e": "they buy/take",
     "m": "Spoken like \"vesnek\" — buys.",
     "i": "/vɛsnɛk/"
   },
@@ -23931,7 +23931,7 @@ const wordDatabase = [
   },
   {
     "h": "nemi",
-    "e": "no; not",
+    "e": "sexual; gender",
     "m": "Spoken like \"nemee\" — no.",
     "i": "/nɛmi/"
   },
@@ -23955,7 +23955,7 @@ const wordDatabase = [
   },
   {
     "h": "beszéljük",
-    "e": "into; in",
+    "e": "we speak (it)",
     "m": "Spoken like \"beséljük\" — into.",
     "i": "/bɛseːljyk/"
   },
@@ -23991,13 +23991,13 @@ const wordDatabase = [
   },
   {
     "h": "megoldást",
-    "e": "still; yet",
+    "e": "solution (accusative)",
     "m": "Spoken like \"megoldást\" — still.",
     "i": "/mɛɡoldaːʃt/"
   },
   {
     "h": "meghalnak",
-    "e": "still; yet",
+    "e": "they die",
     "m": "Spoken like \"meghalnak\" — still.",
     "i": "/mɛɡhɒlnɒk/"
   },
@@ -24009,7 +24009,7 @@ const wordDatabase = [
   },
   {
     "h": "haj",
-    "e": "if",
+    "e": "hair",
     "m": "Spoken like \"haj\" — if.",
     "i": "/hɒj/"
   },
@@ -24027,7 +24027,7 @@ const wordDatabase = [
   },
   {
     "h": "találod",
-    "e": "maybe",
+    "e": "you find (it)",
     "m": "Spoken like \"találod\" — maybe.",
     "i": "/tɒlaːlod/"
   },
@@ -24045,7 +24045,7 @@ const wordDatabase = [
   },
   {
     "h": "területen",
-    "e": "you (sing.)",
+    "e": "in an area; on a territory",
     "m": "Spoken like \"területen\" — you (sing.).",
     "i": "/tɛrylɛtɛn/"
   },
@@ -24057,7 +24057,7 @@ const wordDatabase = [
   },
   {
     "h": "fejedben",
-    "e": "head",
+    "e": "in your head",
     "m": "Spoken like \"fejedben\" — head.",
     "i": "/fɛjɛdbɛn/"
   },
@@ -24075,7 +24075,7 @@ const wordDatabase = [
   },
   {
     "h": "fasza",
-    "e": "tree",
+    "e": "great; awesome (slang); his/her dick",
     "m": "Spoken like \"fasa\" — tree.",
     "i": "/fɒsɒ/"
   },
@@ -24087,7 +24087,7 @@ const wordDatabase = [
   },
   {
     "h": "tehetnék",
-    "e": "you (sing.)",
+    "e": "I could do",
     "m": "Spoken like \"tehetnék\" — you (sing.).",
     "i": "/tɛhɛtneːk/"
   },
@@ -24105,7 +24105,7 @@ const wordDatabase = [
   },
   {
     "h": "falu",
-    "e": "wall",
+    "e": "village",
     "m": "Spoken like \"faloo\" — wall.",
     "i": "/fɒlu/"
   },
@@ -24123,7 +24123,7 @@ const wordDatabase = [
   },
   {
     "h": "becsületes",
-    "e": "into; in",
+    "e": "honest",
     "m": "Spoken like \"bechületes\" — into.",
     "i": "/bɛtʃylɛtɛʃ/"
   },
@@ -24135,7 +24135,7 @@ const wordDatabase = [
   },
   {
     "h": "terveztem",
-    "e": "you (sing.)",
+    "e": "I planned",
     "m": "Spoken like \"terveztem\" — you (sing.).",
     "i": "/tɛrvɛztɛm/"
   },
@@ -24171,13 +24171,13 @@ const wordDatabase = [
   },
   {
     "h": "agya",
-    "e": "bed",
+    "e": "his/her brain",
     "m": "Spoken like \"adya\" — bed.",
     "i": "/ɒɟɒ/"
   },
   {
     "h": "hangzott",
-    "e": "if",
+    "e": "sounded",
     "m": "Spoken like \"hangzott\" — if.",
     "i": "/hɒnɡzotː/"
   },
@@ -24189,13 +24189,13 @@ const wordDatabase = [
   },
   {
     "h": "igazságos",
-    "e": "true",
+    "e": "just; fair",
     "m": "Spoken like \"eegazhágos\" — true.",
     "i": "/iɡɒʒaːɡoʃ/"
   },
   {
     "h": "ezüst",
-    "e": "this",
+    "e": "silver",
     "m": "Spoken like \"ezüst\" — this.",
     "i": "/ɛzyʃt/"
   },
@@ -24249,7 +24249,7 @@ const wordDatabase = [
   },
   {
     "h": "legközelebbi",
-    "e": "down",
+    "e": "nearest; next",
     "m": "Spoken like \"legközelebbee\" — down.",
     "i": "/lɛɡkøzɛlɛbːi/"
   },
@@ -24261,7 +24261,7 @@ const wordDatabase = [
   },
   {
     "h": "egyiket",
-    "e": "one; a",
+    "e": "one of them (accusative)",
     "m": "Spoken like \"edyeeket\" — one.",
     "i": "/ɛɟikɛt/"
   },
@@ -24291,7 +24291,7 @@ const wordDatabase = [
   },
   {
     "h": "találkozik",
-    "e": "maybe",
+    "e": "to meet; to encounter",
     "m": "Spoken like \"találkozeek\" — maybe.",
     "i": "/tɒlaːlkozik/"
   },
@@ -24321,7 +24321,7 @@ const wordDatabase = [
   },
   {
     "h": "csillagok",
-    "e": "star",
+    "e": "stars",
     "m": "Spoken like \"cheellagok\" — star.",
     "i": "/tʃilːɒɡok/"
   },
@@ -24351,7 +24351,7 @@ const wordDatabase = [
   },
   {
     "h": "hatása",
-    "e": "if",
+    "e": "its effect",
     "m": "Spoken like \"hatása\" — if.",
     "i": "/hɒtaːʃɒ/"
   },
@@ -24387,13 +24387,13 @@ const wordDatabase = [
   },
   {
     "h": "adjak",
-    "e": "gives",
+    "e": "let me give",
     "m": "Spoken like \"adjak\" — gives.",
     "i": "/ɒdjɒk/"
   },
   {
     "h": "helyettes",
-    "e": "instead of",
+    "e": "substitute; deputy",
     "m": "Spoken like \"heyettes\" — instead of.",
     "i": "/hɛjɛtːɛʃ/"
   },
@@ -24525,7 +24525,7 @@ const wordDatabase = [
   },
   {
     "h": "vesztes",
-    "e": "buys; takes",
+    "e": "loser",
     "m": "Spoken like \"vestes\" — buys.",
     "i": "/vɛstɛʃ/"
   },
@@ -24543,7 +24543,7 @@ const wordDatabase = [
   },
   {
     "h": "királya",
-    "e": "who; out",
+    "e": "his/her king",
     "m": "Spoken like \"keeráya\" — who.",
     "i": "/kiraːjɒ/"
   },
@@ -24555,7 +24555,7 @@ const wordDatabase = [
   },
   {
     "h": "kimegyek",
-    "e": "who; out",
+    "e": "I go out; I exit",
     "m": "Spoken like \"keemedyek\" — who.",
     "i": "/kimɛɟɛk/"
   },
@@ -24585,7 +24585,7 @@ const wordDatabase = [
   },
   {
     "h": "semmivel",
-    "e": "neither; nor",
+    "e": "with nothing",
     "m": "Spoken like \"semmeevel\" — neither.",
     "i": "/ʃɛmːivɛl/"
   },
@@ -24615,13 +24615,13 @@ const wordDatabase = [
   },
   {
     "h": "mindennap",
-    "e": "what; we",
+    "e": "every day",
     "m": "Spoken like \"meendennap\" — what.",
     "i": "/mindɛnːɒp/"
   },
   {
     "h": "hagysz",
-    "e": "if",
+    "e": "you leave",
     "m": "Spoken like \"hadys\" — if.",
     "i": "/hɒɟs/"
   },
@@ -24639,13 +24639,13 @@ const wordDatabase = [
   },
   {
     "h": "hallgatom",
-    "e": "if",
+    "e": "I listen to (it)",
     "m": "Spoken like \"hallgatom\" — if.",
     "i": "/hɒlːɡɒtom/"
   },
   {
     "h": "hazafelé",
-    "e": "if",
+    "e": "homeward; on the way home",
     "m": "Spoken like \"hazafelé\" — if.",
     "i": "/hɒzɒfɛleː/"
   },
@@ -24675,7 +24675,7 @@ const wordDatabase = [
   },
   {
     "h": "használtam",
-    "e": "if",
+    "e": "I used (it)",
     "m": "Spoken like \"hasnáltam\" — if.",
     "i": "/hɒsnaːltɒm/"
   },
@@ -24699,13 +24699,13 @@ const wordDatabase = [
   },
   {
     "h": "milliárd",
-    "e": "what; we",
+    "e": "billion",
     "m": "Spoken like \"meelleeárd\" — what.",
     "i": "/milːiaːrd/"
   },
   {
     "h": "hagytál",
-    "e": "if",
+    "e": "you left (informal)",
     "m": "Spoken like \"hadytál\" — if.",
     "i": "/hɒɟtaːl/"
   },
@@ -24729,7 +24729,7 @@ const wordDatabase = [
   },
   {
     "h": "foglalt",
-    "e": "tooth",
+    "e": "reserved; occupied",
     "m": "Spoken like \"foglalt\" — tooth.",
     "i": "/foɡlɒlt/"
   },
@@ -24783,7 +24783,7 @@ const wordDatabase = [
   },
   {
     "h": "mindenképp",
-    "e": "what; we",
+    "e": "by all means; definitely",
     "m": "Spoken like \"meendenképp\" — what.",
     "i": "/mindɛnkeːpː/"
   },
@@ -24897,25 +24897,25 @@ const wordDatabase = [
   },
   {
     "h": "egyetemi",
-    "e": "one; a",
+    "e": "university (adjective)",
     "m": "Spoken like \"edyetemee\" — one.",
     "i": "/ɛɟɛtɛmi/"
   },
   {
     "h": "tehettem",
-    "e": "you (sing.)",
+    "e": "I could do; I did",
     "m": "Spoken like \"tehettem\" — you (sing.).",
     "i": "/tɛhɛtːɛm/"
   },
   {
     "h": "beszédet",
-    "e": "into; in",
+    "e": "speech (accusative)",
     "m": "Spoken like \"besédet\" — into.",
     "i": "/bɛseːdɛt/"
   },
   {
     "h": "egyedülálló",
-    "e": "one; a",
+    "e": "single; living alone",
     "m": "Spoken like \"edyedülálló\" — one.",
     "i": "/ɛɟɛdylaːlːoː/"
   },
@@ -24981,19 +24981,19 @@ const wordDatabase = [
   },
   {
     "h": "engedhetem",
-    "e": "I",
+    "e": "I can let; I can allow",
     "m": "Spoken like \"engedhetem\" — I.",
     "i": "/ɛnɡɛdhɛtɛm/"
   },
   {
     "h": "találják",
-    "e": "maybe",
+    "e": "they find (it)",
     "m": "Spoken like \"találják\" — maybe.",
     "i": "/tɒlaːljaːk/"
   },
   {
     "h": "harminc",
-    "e": "if",
+    "e": "thirty",
     "m": "Spoken like \"harmeenc\" — if.",
     "i": "/hɒrmint͡s/"
   },
@@ -25005,7 +25005,7 @@ const wordDatabase = [
   },
   {
     "h": "magyarázni",
-    "e": "today",
+    "e": "to explain",
     "m": "Spoken like \"madyaráznee\" — today.",
     "i": "/mɒɟɒraːzni/"
   },
@@ -25035,7 +25035,7 @@ const wordDatabase = [
   },
   {
     "h": "utáni",
-    "e": "road; way",
+    "e": "after; subsequent; following",
     "m": "Spoken like \"ootánee\" — road.",
     "i": "/utaːni/"
   },
@@ -25053,7 +25053,7 @@ const wordDatabase = [
   },
   {
     "h": "fejbe",
-    "e": "head",
+    "e": "into the head",
     "m": "Spoken like \"fejbe\" — head.",
     "i": "/fɛjbɛ/"
   },
@@ -25077,7 +25077,7 @@ const wordDatabase = [
   },
   {
     "h": "hajam",
-    "e": "if",
+    "e": "my hair",
     "m": "Spoken like \"hajam\" — if.",
     "i": "/hɒjɒm/"
   },
@@ -25119,7 +25119,7 @@ const wordDatabase = [
   },
   {
     "h": "templomban",
-    "e": "you (sing.)",
+    "e": "in a church/temple",
     "m": "Spoken like \"templomban\" — you (sing.).",
     "i": "/tɛmplombɒn/"
   },
@@ -25143,13 +25143,13 @@ const wordDatabase = [
   },
   {
     "h": "soká",
-    "e": "salt",
+    "e": "for a long time",
     "m": "Spoken like \"soká\" — salt.",
     "i": "/ʃokaː/"
   },
   {
     "h": "hoztak",
-    "e": "snow",
+    "e": "they brought",
     "m": "Spoken like \"hoztak\" — snow.",
     "i": "/hoztɒk/"
   },
@@ -25203,13 +25203,13 @@ const wordDatabase = [
   },
   {
     "h": "magunknak",
-    "e": "today",
+    "e": "to ourselves",
     "m": "Spoken like \"magoonknak\" — today.",
     "i": "/mɒɡunknɒk/"
   },
   {
     "h": "meztelenül",
-    "e": "naked",
+    "e": "naked; bare",
     "m": "Spoken like \"meztelenül\".",
     "i": "/mɛztɛlɛnyl/"
   },
@@ -25221,7 +25221,7 @@ const wordDatabase = [
   },
   {
     "h": "irányítást",
-    "e": "writes",
+    "e": "control; management (accusative)",
     "m": "Spoken like \"eerányítást\" — writes.",
     "i": "/iraːɲiːtaːʃt/"
   },
@@ -25263,7 +25263,7 @@ const wordDatabase = [
   },
   {
     "h": "gyereknek",
-    "e": "child",
+    "e": "to a child",
     "m": "Spoken like \"dyereknek\" — child.",
     "i": "/ɟɛrɛknɛk/"
   },
@@ -25305,7 +25305,7 @@ const wordDatabase = [
   },
   {
     "h": "testem",
-    "e": "you (sing.)",
+    "e": "my body",
     "m": "Spoken like \"testem\" — you (sing.).",
     "i": "/tɛʃtɛm/"
   },
@@ -25317,7 +25317,7 @@ const wordDatabase = [
   },
   {
     "h": "maradjak",
-    "e": "already",
+    "e": "let me stay",
     "m": "Spoken like \"maradjak\" — already.",
     "i": "/mɒrɒdjɒk/"
   },
@@ -25335,7 +25335,7 @@ const wordDatabase = [
   },
   {
     "h": "hallgat",
-    "e": "if",
+    "e": "to listen; to be silent",
     "m": "Spoken like \"hallgat\" — if.",
     "i": "/hɒlːɡɒt/"
   },
@@ -25365,7 +25365,7 @@ const wordDatabase = [
   },
   {
     "h": "testvéred",
-    "e": "you (sing.)",
+    "e": "your sibling",
     "m": "Spoken like \"testvéred\" — you (sing.).",
     "i": "/tɛʃtveːrɛd/"
   },
@@ -25383,7 +25383,7 @@ const wordDatabase = [
   },
   {
     "h": "egyesek",
-    "e": "one; a",
+    "e": "some; ones",
     "m": "Spoken like \"edyesek\" — one.",
     "i": "/ɛɟɛʃɛk/"
   },
@@ -25503,7 +25503,7 @@ const wordDatabase = [
   },
   {
     "h": "biztosak",
-    "e": "sure; certain",
+    "e": "sure (plural)",
     "m": "Spoken like \"beeztosak\" — sure.",
     "i": "/biztoʃɒk/"
   },
@@ -25515,7 +25515,7 @@ const wordDatabase = [
   },
   {
     "h": "eszünk",
-    "e": "and",
+    "e": "we eat; our food",
     "m": "Spoken like \"esünk\" — and.",
     "i": "/ɛsynk/"
   },
@@ -25623,7 +25623,7 @@ const wordDatabase = [
   },
   {
     "h": "falon",
-    "e": "wall",
+    "e": "on the wall",
     "m": "Spoken like \"falon\" — wall.",
     "i": "/fɒlon/"
   },
@@ -25659,7 +25659,7 @@ const wordDatabase = [
   },
   {
     "h": "veszélybe",
-    "e": "buys; takes",
+    "e": "into danger",
     "m": "Spoken like \"veséybe\" — buys.",
     "i": "/vɛseːjbɛ/"
   },
@@ -25683,7 +25683,7 @@ const wordDatabase = [
   },
   {
     "h": "adták",
-    "e": "gives",
+    "e": "they gave (it)",
     "m": "Spoken like \"adták\" — gives.",
     "i": "/ɒdtaːk/"
   },
@@ -25695,7 +25695,7 @@ const wordDatabase = [
   },
   {
     "h": "adatokat",
-    "e": "gives",
+    "e": "data (accusative plural)",
     "m": "Spoken like \"adatokat\" — gives.",
     "i": "/ɒdɒtokɒt/"
   },
@@ -25737,7 +25737,7 @@ const wordDatabase = [
   },
   {
     "h": "hagyjatok",
-    "e": "if",
+    "e": "let you (plural) leave",
     "m": "Spoken like \"hadyjatok\" — if.",
     "i": "/hɒɟjɒtok/"
   },
@@ -25749,19 +25749,19 @@ const wordDatabase = [
   },
   {
     "h": "feleségemet",
-    "e": "up",
+    "e": "my wife (accusative)",
     "m": "Spoken like \"feleségemet\" — up.",
     "i": "/fɛlɛʃeːɡɛmɛt/"
   },
   {
     "h": "kiment",
-    "e": "who; out",
+    "e": "goes out; exits",
     "m": "Spoken like \"keement\" — who.",
     "i": "/kimɛnt/"
   },
   {
     "h": "azonnali",
-    "e": "the; that",
+    "e": "immediate; instant",
     "m": "Spoken like \"azonnalee\" — the.",
     "i": "/ɒzonːɒli/"
   },
@@ -25791,25 +25791,25 @@ const wordDatabase = [
   },
   {
     "h": "meghaltál",
-    "e": "still; yet",
+    "e": "you died (informal)",
     "m": "Spoken like \"meghaltál\" — still.",
     "i": "/mɛɡhɒltaːl/"
   },
   {
     "h": "fogadd",
-    "e": "tooth",
+    "e": "accept it (imperative)",
     "m": "Spoken like \"fogadd\" — tooth.",
     "i": "/foɡɒdː/"
   },
   {
     "h": "filmben",
-    "e": "movie",
+    "e": "in a movie/film",
     "m": "Spoken like \"feelmben\" — movie.",
     "i": "/filmbɛn/"
   },
   {
     "h": "lettünk",
-    "e": "down",
+    "e": "we became",
     "m": "Spoken like \"lettünk\" — down.",
     "i": "/lɛtːynk/"
   },
@@ -25833,7 +25833,7 @@ const wordDatabase = [
   },
   {
     "h": "meghaltam",
-    "e": "still; yet",
+    "e": "I died",
     "m": "Spoken like \"meghaltam\" — still.",
     "i": "/mɛɡhɒltɒm/"
   },
@@ -25851,7 +25851,7 @@ const wordDatabase = [
   },
   {
     "h": "kitalálni",
-    "e": "who; out",
+    "e": "to invent; to figure out",
     "m": "Spoken like \"keetalálnee\" — who.",
     "i": "/kitɒlaːlni/"
   },
@@ -25893,7 +25893,7 @@ const wordDatabase = [
   },
   {
     "h": "kezemben",
-    "e": "hand",
+    "e": "in my hand",
     "m": "Spoken like \"kezemben\" — hand.",
     "i": "/kɛzɛmbɛn/"
   },
@@ -25911,7 +25911,7 @@ const wordDatabase = [
   },
   {
     "h": "agyam",
-    "e": "bed",
+    "e": "my brain",
     "m": "Spoken like \"adyam\" — bed.",
     "i": "/ɒɟɒm/"
   },
@@ -25989,7 +25989,7 @@ const wordDatabase = [
   },
   {
     "h": "kocsiját",
-    "e": "stone",
+    "e": "his/her car (accusative)",
     "m": "Spoken like \"kocheeját\" — stone.",
     "i": "/kotʃijaːt/"
   },
@@ -26001,7 +26001,7 @@ const wordDatabase = [
   },
   {
     "h": "hozzuk",
-    "e": "snow",
+    "e": "let's bring (it)",
     "m": "Spoken like \"hozzook\" — snow.",
     "i": "/hozːuk/"
   },
@@ -26061,7 +26061,7 @@ const wordDatabase = [
   },
   {
     "h": "ismerni",
-    "e": "also; too",
+    "e": "to know; to be familiar with",
     "m": "Spoken like \"eesmernee\" — also.",
     "i": "/iʃmɛrni/"
   },
@@ -26085,13 +26085,13 @@ const wordDatabase = [
   },
   {
     "h": "mindenkivel",
-    "e": "what; we",
+    "e": "with everyone",
     "m": "Spoken like \"meendenkeevel\" — what.",
     "i": "/mindɛnkivɛl/"
   },
   {
     "h": "engedjék",
-    "e": "I",
+    "e": "let them (imperative, definite)",
     "m": "Spoken like \"engedjék\" — I.",
     "i": "/ɛnɡɛdjeːk/"
   },
@@ -26121,7 +26121,7 @@ const wordDatabase = [
   },
   {
     "h": "megölik",
-    "e": "still; yet",
+    "e": "they kill him/her",
     "m": "Spoken like \"megöleek\" — still.",
     "i": "/mɛɡølik/"
   },
@@ -26145,7 +26145,7 @@ const wordDatabase = [
   },
   {
     "h": "fiatalabb",
-    "e": "young",
+    "e": "younger",
     "m": "Spoken like \"feeatalabb\" — young.",
     "i": "/fiɒtɒlɒbː/"
   },
@@ -26169,7 +26169,7 @@ const wordDatabase = [
   },
   {
     "h": "hallottuk",
-    "e": "if",
+    "e": "we heard (it)",
     "m": "Spoken like \"hallottook\" — if.",
     "i": "/hɒlːotːuk/"
   },
@@ -26199,7 +26199,7 @@ const wordDatabase = [
   },
   {
     "h": "darabot",
-    "e": "piece",
+    "e": "piece (accusative)",
     "m": "Spoken like \"darabot\" — piece.",
     "i": "/dɒrɒbot/"
   },
@@ -26211,7 +26211,7 @@ const wordDatabase = [
   },
   {
     "h": "addigra",
-    "e": "gives",
+    "e": "by then; by that time",
     "m": "Spoken like \"addeegra\" — gives.",
     "i": "/ɒdːiɡrɒ/"
   },
@@ -26259,19 +26259,19 @@ const wordDatabase = [
   },
   {
     "h": "mindnyájan",
-    "e": "what; we",
+    "e": "everyone; all",
     "m": "Spoken like \"meendnyájan\" — what.",
     "i": "/mindɲaːjɒn/"
   },
   {
     "h": "adjunk",
-    "e": "gives",
+    "e": "let's give",
     "m": "Spoken like \"adjoonk\" — gives.",
     "i": "/ɒdjunk/"
   },
   {
     "h": "kormányzó",
-    "e": "stone",
+    "e": "governor",
     "m": "Spoken like \"kormányzó\" — stone.",
     "i": "/kormaːɲzoː/"
   },
@@ -26289,7 +26289,7 @@ const wordDatabase = [
   },
   {
     "h": "mindannyiunknak",
-    "e": "what; we",
+    "e": "to all of us",
     "m": "Spoken like \"meendannyeeoonknak\" — what.",
     "i": "/mindɒɲːiunknɒk/"
   },
@@ -26331,13 +26331,13 @@ const wordDatabase = [
   },
   {
     "h": "kerülnek",
-    "e": "asks; requests",
+    "e": "they cost; they avoid",
     "m": "Spoken like \"kerülnek\" — asks.",
     "i": "/kɛrylnɛk/"
   },
   {
     "h": "biztosíthatom",
-    "e": "sure; certain",
+    "e": "I can assure you",
     "m": "Spoken like \"beeztosíthatom\" — sure.",
     "i": "/biztoʃiːthɒtom/"
   },
@@ -26403,7 +26403,7 @@ const wordDatabase = [
   },
   {
     "h": "vizsgálatot",
-    "e": "water",
+    "e": "examination (accusative)",
     "m": "Spoken like \"veezhgálatot\" — water.",
     "i": "/viʒɡaːlɒtot/"
   },
@@ -26427,7 +26427,7 @@ const wordDatabase = [
   },
   {
     "h": "változtat",
-    "e": "changes",
+    "e": "to change; to alter",
     "m": "Spoken like \"változtat\".",
     "i": "/vaːltoztɒt/"
   },
@@ -26439,7 +26439,7 @@ const wordDatabase = [
   },
   {
     "h": "hallak",
-    "e": "if",
+    "e": "I am heard; fishes",
     "m": "Spoken like \"hallak\" — if.",
     "i": "/hɒlːɒk/"
   },
@@ -26457,7 +26457,7 @@ const wordDatabase = [
   },
   {
     "h": "hatos",
-    "e": "if",
+    "e": "six (number/grade)",
     "m": "Spoken like \"hatos\" — if.",
     "i": "/hɒtoʃ/"
   },
@@ -26487,7 +26487,7 @@ const wordDatabase = [
   },
   {
     "h": "találkozásnak",
-    "e": "maybe",
+    "e": "to a meeting",
     "m": "Spoken like \"találkozásnak\" — maybe.",
     "i": "/tɒlaːlkozaːʃnɒk/"
   },
@@ -26571,7 +26571,7 @@ const wordDatabase = [
   },
   {
     "h": "veszett",
-    "e": "buys; takes",
+    "e": "rabid; crazy; bought",
     "m": "Spoken like \"vesett\" — buys.",
     "i": "/vɛsɛtː/"
   },
@@ -26607,7 +26607,7 @@ const wordDatabase = [
   },
   {
     "h": "kislányom",
-    "e": "who; out",
+    "e": "my little girl",
     "m": "Spoken like \"keeslányom\" — who.",
     "i": "/kiʃlaːɲom/"
   },
@@ -26637,7 +26637,7 @@ const wordDatabase = [
   },
   {
     "h": "adtad",
-    "e": "gives",
+    "e": "you gave (it)",
     "m": "Spoken like \"adtad\" — gives.",
     "i": "/ɒdtɒd/"
   },
@@ -26649,7 +26649,7 @@ const wordDatabase = [
   },
   {
     "h": "utcai",
-    "e": "street",
+    "e": "street (adjective)",
     "m": "Spoken like \"ootcaee\" — street.",
     "i": "/utt͡sɒi/"
   },
@@ -26673,7 +26673,7 @@ const wordDatabase = [
   },
   {
     "h": "reggelit",
-    "e": "morning",
+    "e": "breakfast (accusative)",
     "m": "Spoken like \"reggeleet\" — morning.",
     "i": "/rɛɡːɛlit/"
   },
@@ -26715,7 +26715,7 @@ const wordDatabase = [
   },
   {
     "h": "ezekre",
-    "e": "this",
+    "e": "to these",
     "m": "Spoken like \"ezekre\" — this.",
     "i": "/ɛzɛkrɛ/"
   },
@@ -26787,7 +26787,7 @@ const wordDatabase = [
   },
   {
     "h": "maradék",
-    "e": "already",
+    "e": "remainder; leftover",
     "m": "Spoken like \"maradék\" — already.",
     "i": "/mɒrɒdeːk/"
   },
@@ -26805,7 +26805,7 @@ const wordDatabase = [
   },
   {
     "h": "sorba",
-    "e": "salt",
+    "e": "in a row; in line",
     "m": "Spoken like \"sorba\" — salt.",
     "i": "/ʃorbɒ/"
   },
@@ -26817,13 +26817,13 @@ const wordDatabase = [
   },
   {
     "h": "esküvői",
-    "e": "and",
+    "e": "wedding (adjective)",
     "m": "Spoken like \"esküvőee\" — and.",
     "i": "/ɛʃkyvøːi/"
   },
   {
     "h": "veszélyt",
-    "e": "buys; takes",
+    "e": "danger (accusative)",
     "m": "Spoken like \"veséyt\" — buys.",
     "i": "/vɛseːjt/"
   },
@@ -26847,7 +26847,7 @@ const wordDatabase = [
   },
   {
     "h": "csomagot",
-    "e": "package",
+    "e": "package (accusative)",
     "m": "Spoken like \"chomagot\" — package.",
     "i": "/tʃomɒɡot/"
   },
@@ -26871,13 +26871,13 @@ const wordDatabase = [
   },
   {
     "h": "mintát",
-    "e": "what; we",
+    "e": "pattern (accusative)",
     "m": "Spoken like \"meentát\" — what.",
     "i": "/mintaːt/"
   },
   {
     "h": "szerető",
-    "e": "loves; likes",
+    "e": "lover; beloved",
     "m": "Spoken like \"serető\" — loves.",
     "i": "/sɛrɛtøː/"
   },
@@ -26895,13 +26895,13 @@ const wordDatabase = [
   },
   {
     "h": "kerüljön",
-    "e": "asks; requests",
+    "e": "let it cost; let him/her avoid",
     "m": "Spoken like \"kerüljön\" — asks.",
     "i": "/kɛryljøn/"
   },
   {
     "h": "határ",
-    "e": "if",
+    "e": "border; boundary; limit",
     "m": "Spoken like \"határ\" — if.",
     "i": "/hɒtaːr/"
   },
@@ -26913,7 +26913,7 @@ const wordDatabase = [
   },
   {
     "h": "köszönet",
-    "e": "thanks",
+    "e": "thanks; gratitude",
     "m": "Spoken like \"kösönet\".",
     "i": "/køsønɛt/"
   },
@@ -26931,7 +26931,7 @@ const wordDatabase = [
   },
   {
     "h": "szellemek",
-    "e": "wind; edge",
+    "e": "spirits; ghosts",
     "m": "Spoken like \"sellemek\" — wind.",
     "i": "/sɛlːɛmɛk/"
   },
@@ -26943,7 +26943,7 @@ const wordDatabase = [
   },
   {
     "h": "istenre",
-    "e": "also; too",
+    "e": "to God",
     "m": "Spoken like \"eestenre\" — also.",
     "i": "/iʃtɛnrɛ/"
   },
@@ -27021,7 +27021,7 @@ const wordDatabase = [
   },
   {
     "h": "haverom",
-    "e": "if",
+    "e": "my buddy/friend",
     "m": "Spoken like \"haverom\" — if.",
     "i": "/hɒvɛrom/"
   },
@@ -27033,7 +27033,7 @@ const wordDatabase = [
   },
   {
     "h": "szeretünk",
-    "e": "loves; likes",
+    "e": "we love",
     "m": "Spoken like \"seretünk\" — loves.",
     "i": "/sɛrɛtynk/"
   },
@@ -27045,25 +27045,25 @@ const wordDatabase = [
   },
   {
     "h": "versenyt",
-    "e": "blood",
+    "e": "competition (accusative)",
     "m": "Spoken like \"versenyt\" — blood.",
     "i": "/vɛrʃɛɲt/"
   },
   {
     "h": "kezdenek",
-    "e": "hand",
+    "e": "they begin",
     "m": "Spoken like \"kezdenek\" — hand.",
     "i": "/kɛzdɛnɛk/"
   },
   {
     "h": "mindkettőt",
-    "e": "what; we",
+    "e": "both (accusative)",
     "m": "Spoken like \"meendkettőt\" — what.",
     "i": "/mindkɛtːøːt/"
   },
   {
     "h": "admirális",
-    "e": "gives",
+    "e": "admiral",
     "m": "Spoken like \"admeerálees\" — gives.",
     "i": "/ɒdmiraːliʃ/"
   },
@@ -27075,13 +27075,13 @@ const wordDatabase = [
   },
   {
     "h": "határt",
-    "e": "if",
+    "e": "border/limit (accusative)",
     "m": "Spoken like \"határt\" — if.",
     "i": "/hɒtaːrt/"
   },
   {
     "h": "feladatot",
-    "e": "up",
+    "e": "task (accusative)",
     "m": "Spoken like \"feladatot\" — up.",
     "i": "/fɛlɒdɒtot/"
   },
@@ -27129,7 +27129,7 @@ const wordDatabase = [
   },
   {
     "h": "kezekkel",
-    "e": "hand",
+    "e": "with hands",
     "m": "Spoken like \"kezekkel\" — hand.",
     "i": "/kɛzɛkːɛl/"
   },
@@ -27147,13 +27147,13 @@ const wordDatabase = [
   },
   {
     "h": "található",
-    "e": "maybe",
+    "e": "can be found; available",
     "m": "Spoken like \"található\" — maybe.",
     "i": "/tɒlaːlhɒtoː/"
   },
   {
     "h": "ezennel",
-    "e": "this",
+    "e": "hereby",
     "m": "Spoken like \"ezennel\" — this.",
     "i": "/ɛzɛnːɛl/"
   },
@@ -27177,7 +27177,7 @@ const wordDatabase = [
   },
   {
     "h": "levegőben",
-    "e": "down",
+    "e": "in the air",
     "m": "Spoken like \"levegőben\" — down.",
     "i": "/lɛvɛɡøːbɛn/"
   },
@@ -27201,7 +27201,7 @@ const wordDatabase = [
   },
   {
     "h": "tojást",
-    "e": "lake",
+    "e": "egg (accusative)",
     "m": "Spoken like \"tojást\" — lake.",
     "i": "/tojaːʃt/"
   },
@@ -27243,7 +27243,7 @@ const wordDatabase = [
   },
   {
     "h": "mindenem",
-    "e": "what; we",
+    "e": "everything I have; my all",
     "m": "Spoken like \"meendenem\" — what.",
     "i": "/mindɛnɛm/"
   },
