@@ -652,6 +652,14 @@ header {
   position: sticky;
   top: 80px;
   z-index: 45;
+  transition: all var(--transition);
+}
+
+.tab-bar.floating {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  border-color: var(--border);
+  background: rgba(var(--bg-card-rgb), 0.95);
+  backdrop-filter: blur(8px);
 }
 
 /* ---------- Translator ---------- */

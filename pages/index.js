@@ -9,7 +9,7 @@ export default function Home() {
   useEffect(() => {
     if (typeof window === "undefined") return;
 
-    const ALLOWED_KEYS = new Set(["huBookmarks", "huTheme"]);
+    const ALLOWED_KEYS = new Set(["huTheme"]);
 
     function cleanupOldSessions() {
       const toRemove = [];
@@ -27,7 +27,6 @@ export default function Home() {
       searchQuery: "",
       selectedLetter: null,
       selectedDifficulty: null,
-      bookmarks: new Set(JSON.parse(localStorage.getItem("huBookmarks") || "[]")),
       theme: localStorage.getItem("huTheme") || "light",
     };
 
@@ -44,9 +43,6 @@ export default function Home() {
     function getFilteredWords() {
       let words = wordDatabase;
 
-      if (state.currentTab === "bookmarks") {
-        words = words.filter((w) => state.bookmarks.has(w.h));
-      }
       if (state.searchQuery) {
         const q = state.searchQuery.toLowerCase();
         words = words.filter(
@@ -72,9 +68,8 @@ export default function Home() {
     function render() {
       const words = getFilteredWords();
 
-      const label = state.currentTab === "bookmarks" ? "bookmarked" : "words";
       const countEl = document.getElementById("resultCount");
-      if (countEl) countEl.innerHTML = `Showing <strong>${words.length}</strong> ${label}`;
+      if (countEl) countEl.innerHTML = `Showing <strong>${words.length}</strong> words`;
 
       if (state.currentView === "cards") renderCards(words);
       else renderList(words);
@@ -91,16 +86,11 @@ export default function Home() {
         .map((w) => {
           const diff = getDifficulty(w);
           const hasMeaning = w.e && w.e !== "(Hungarian word)";
-          const bookmarked = state.bookmarks.has(w.h);
           const ipa = w.i || "";
           return `
             <div class="word-card" data-word="${w.h}">
               <div class="word-header">
                 <span class="word">${w.h}</span>
-                <button class="bookmark-btn ${bookmarked ? "bookmarked" : ""}"
-                        onclick="window.AppToggleBookmark('${w.h.replace(/'/g, "\\'")}')">
-                  ${bookmarked ? "★" : "☆"}
-                </button>
               </div>
               ${ipa ? `<div class="ipa">${ipa}</div>` : ""}
               <div class="meaning ${hasMeaning ? "" : "no-meaning"}">${hasMeaning ? w.e : "—"}</div>
@@ -123,17 +113,12 @@ export default function Home() {
       list.innerHTML = words
         .map((w) => {
           const hasMeaning = w.e && w.e !== "(Hungarian word)";
-          const bookmarked = state.bookmarks.has(w.h);
           const ipa = w.i || "";
           return `
             <div class="list-item">
               <span class="word">${w.h}</span>
               ${ipa ? `<span class="ipa">${ipa}</span>` : ""}
               <span class="meaning ${hasMeaning ? "" : "no-meaning"}">${hasMeaning ? w.e : "—"}</span>
-              <button class="bookmark-btn ${bookmarked ? "bookmarked" : ""}"
-                      onclick="window.AppToggleBookmark('${w.h.replace(/'/g, "\\'")}')">
-                ${bookmarked ? "★" : "☆"}
-              </button>
             </div>`;
         })
         .join("");
@@ -212,17 +197,6 @@ export default function Home() {
       const toggleBtn = document.getElementById("themeToggle");
       if (toggleBtn) toggleBtn.textContent = state.theme === "light" ? "🌙" : "☀️";
     }
-
-    function toggleBookmark(word) {
-      if (state.bookmarks.has(word)) {
-        state.bookmarks.delete(word);
-      } else {
-        state.bookmarks.add(word);
-      }
-      localStorage.setItem("huBookmarks", JSON.stringify([...state.bookmarks]));
-      render();
-    }
-    window.AppToggleBookmark = toggleBookmark;
 
     function init() {
       cleanupOldSessions();
@@ -318,6 +292,15 @@ export default function Home() {
         toggleSearchFloat();
       }
 
+      const tabBar = document.getElementById("tabBar");
+      if (tabBar) {
+        const toggleTabBarFloat = () => {
+          tabBar.classList.toggle("floating", window.scrollY > 120);
+        };
+        window.addEventListener("scroll", toggleTabBarFloat, { passive: true });
+        toggleTabBarFloat();
+      }
+
       $$(".diff-btn").forEach((btn) => {
         btn.addEventListener("click", () => onDifficultyClick(btn.dataset.diff));
       });
@@ -349,9 +332,6 @@ export default function Home() {
 
     init();
 
-    return () => {
-      window.AppToggleBookmark = undefined;
-    };
   }, []);
 
   const handleTabClick = (tab) => {
@@ -431,20 +411,13 @@ export default function Home() {
             <div className="alpha-float-inner" id="alphaFloatInner"></div>
           </div>
 
-          <div className="tab-bar">
+          <div className="tab-bar" id="tabBar">
             <button
               className={`tab-btn ${activeTab === "all" ? "active" : ""}`}
               data-tab="all"
               onClick={() => handleTabClick("all")}
             >
               All Words
-            </button>
-            <button
-              className={`tab-btn ${activeTab === "bookmarks" ? "active" : ""}`}
-              data-tab="bookmarks"
-              onClick={() => handleTabClick("bookmarks")}
-            >
-              Bookmarks
             </button>
             <button
               className={`tab-btn ${activeTab === "translator" ? "active" : ""}`}
