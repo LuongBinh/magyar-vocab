@@ -282,6 +282,14 @@ const App = (() => {
     }, { root: null, threshold: 0 });
     observer.observe(sidebarAlpha);
 
+    // Float search bar on scroll
+    const searchBar = document.querySelector(".search-bar");
+    const toggleSearchFloat = () => {
+      searchBar.classList.toggle("floating", window.scrollY > 120);
+    };
+    window.addEventListener("scroll", toggleSearchFloat, { passive: true });
+    toggleSearchFloat();
+
     $$(".diff-btn").forEach(btn => {
       btn.addEventListener("click", () => onDifficultyClick(btn.dataset.diff));
     });
