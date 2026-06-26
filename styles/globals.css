@@ -649,6 +649,195 @@ header {
   padding: 4px;
   border: 1px solid var(--border);
   overflow-x: auto;
+  position: sticky;
+  top: 80px;
+  z-index: 45;
+}
+
+/* ---------- Translator ---------- */
+.translator {
+  max-width: 720px;
+}
+
+.translator-card {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  padding: 20px;
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.translator-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.translator-header label {
+  font-weight: 600;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.translator-select {
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.translator-input {
+  width: 100%;
+  padding: 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 1rem;
+  resize: vertical;
+  min-height: 100px;
+}
+
+.translator-input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-bg);
+}
+
+.translator-btn {
+  align-self: flex-start;
+  padding: 12px 24px;
+  border-radius: var(--radius-sm);
+  border: none;
+  background: var(--accent);
+  color: white;
+  font-weight: 600;
+  font-family: var(--font);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.translator-btn:hover:not(:disabled) {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+}
+
+.translator-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.translator-error {
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--error, #ef4444);
+  font-size: 0.9rem;
+}
+
+.translator-result {
+  background: var(--hover-bg);
+  border-radius: var(--radius-sm);
+  padding: 16px;
+  border-left: 4px solid var(--accent);
+}
+
+.translator-result-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-light);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.translator-result-text {
+  font-size: 1.1rem;
+  color: var(--text);
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+.translator-explanation {
+  margin-top: 12px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.translator-dictionary {
+  margin-top: 8px;
+}
+
+.translator-dictionary-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-light);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.translator-dictionary-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-height: 260px;
+  overflow-y: auto;
+}
+
+.translator-dictionary-item {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: var(--radius-sm);
+  background: var(--bg);
+  font-size: 0.88rem;
+}
+
+.translator-dictionary-item .word {
+  font-weight: 700;
+  color: var(--text);
+  min-width: 110px;
+}
+
+.translator-dictionary-item .ipa {
+  font-family: var(--font-mono);
+  color: var(--accent);
+  min-width: 100px;
+  font-size: 0.8rem;
+}
+
+.translator-dictionary-item .meaning {
+  color: var(--text-secondary);
+  flex: 1;
+}
+
+@media (max-width: 600px) {
+  .translator-dictionary-item {
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .translator-dictionary-item .ipa,
+  .translator-dictionary-item .word {
+    min-width: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .tab-bar {
+    top: 72px;
+  }
 }
 
 .tab-btn {
