@@ -15,15 +15,12 @@ function detectLanguage(text) {
 
 function buildPrompt(text, direction, dictionary) {
   let sourceLang, targetLang;
-  if (direction === "en2hu") {
-    sourceLang = "English";
+  if (direction === "mixed2hu") {
+    sourceLang = "mixed English and/or Vietnamese";
     targetLang = "Hungarian";
   } else if (direction === "hu2en") {
     sourceLang = "Hungarian";
     targetLang = "English";
-  } else if (direction === "vi2hu") {
-    sourceLang = "Vietnamese";
-    targetLang = "Hungarian";
   } else {
     const detected = detectLanguage(text);
     if (detected === "hu") {
@@ -76,7 +73,7 @@ export default async function handler(req, res) {
   if (text.length > MAX_INPUT_LENGTH) {
     return res.status(400).json({ error: "Input too long" });
   }
-  if (!["auto", "en2hu", "hu2en", "vi2hu"].includes(direction)) {
+  if (!["auto", "mixed2hu", "hu2en"].includes(direction)) {
     return res.status(400).json({ error: "Invalid direction" });
   }
 

@@ -3,9 +3,8 @@ import { wordDatabase } from "@/lib/words";
 
 const DIRECTIONS = {
   auto: { label: "Auto-detect", source: "auto", target: "Hungarian / English" },
-  en2hu: { label: "English → Hungarian", source: "English", target: "Hungarian" },
+  mixed2hu: { label: "English/Vietnamese → Hungarian", source: "mixed English/Vietnamese", target: "Hungarian" },
   hu2en: { label: "Hungarian → English", source: "Hungarian", target: "English" },
-  vi2hu: { label: "Vietnamese → Hungarian", source: "Vietnamese", target: "Hungarian" },
 };
 
 function findRelevantWords(input) {
@@ -87,7 +86,7 @@ export default function Translator() {
 
         <textarea
           className="translator-input"
-          placeholder="Type English, Vietnamese, or Hungarian..."
+          placeholder="Type English, Vietnamese, or mixed input..."
           value={input}
           onChange={(e) => setInput(e.target.value)}
           rows={4}
