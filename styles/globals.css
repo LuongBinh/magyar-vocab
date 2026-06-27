@@ -346,7 +346,7 @@ header {
   transition: all var(--transition);
   margin-bottom: 16px;
   position: sticky;
-  top: 80px;
+  top: 128px;
   z-index: 50;
 }
 
@@ -845,6 +845,9 @@ header {
 @media (max-width: 768px) {
   .tab-bar {
     top: 72px;
+  }
+  .search-bar {
+    top: 120px;
   }
 }
 
