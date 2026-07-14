@@ -27,8 +27,30 @@ export default function Home() {
       searchQuery: "",
       selectedLetter: null,
       selectedDifficulty: null,
+      selectedPOS: null,
+      selectedTheme: null,
+      sortOrder: "default",
       theme: localStorage.getItem("huTheme") || "light",
+      _searchTimer: null,
+      _cacheKey: null,
     };
+
+    const POS_LABELS = {
+      n: "Noun", v: "Verb", adj: "Adj", adv: "Adv",
+      pron: "Pron", func: "Func", num: "Num", interj: "Interj", pref: "Pref",
+    };
+    const POS_ORDER = ["n", "v", "adj", "adv", "pron", "func", "num", "interj", "pref"];
+
+    const THEME_LABELS = {
+      people: "People", action: "Action", state: "State", time: "Time",
+      space: "Space", quantity: "Quantity", quality: "Quality",
+      nature: "Nature", food: "Food", body: "Body",
+      abstract: "Abstract", communication: "Comm",  "function": "Function",
+    };
+    const THEME_ORDER = [
+      "people", "action", "state", "time", "space", "quantity", "quality",
+      "nature", "food", "body", "abstract", "communication", "function",
+    ];
 
     const $ = (sel, ctx = document) => ctx.querySelector(sel);
     const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
@@ -62,10 +84,33 @@ export default function Home() {
       if (state.selectedDifficulty) {
         words = words.filter((w) => getDifficulty(w) === state.selectedDifficulty);
       }
+      if (state.selectedPOS) {
+        words = words.filter((w) => w.p === state.selectedPOS);
+      }
+      if (state.selectedTheme) {
+        words = words.filter((w) => w.t && w.t.includes(state.selectedTheme));
+      }
+
+      // Sort
+      if (state.sortOrder === "alpha-asc") {
+        words = [...words].sort((a, b) =>
+          a.h.localeCompare(b.h, "hu", { sensitivity: "base" })
+        );
+      } else if (state.sortOrder === "alpha-desc") {
+        words = [...words].sort((a, b) =>
+          b.h.localeCompare(a.h, "hu", { sensitivity: "base" })
+        );
+      }
+
       return words;
     }
 
     function render() {
+      // ponytail: string-key memoization — skip recompute when filters haven't changed
+      const key = `${state.searchQuery}|${state.selectedLetter}|${state.selectedDifficulty}|${state.selectedPOS}|${state.selectedTheme}|${state.sortOrder}|${state.currentView}`;
+      if (state._cacheKey === key) return;
+      state._cacheKey = key;
+
       const words = getFilteredWords();
 
       const countEl = document.getElementById("resultCount");
@@ -87,10 +132,12 @@ export default function Home() {
           const diff = getDifficulty(w);
           const hasMeaning = w.e && w.e !== "(Hungarian word)";
           const ipa = w.i || "";
+          const posLabel = w.p ? POS_LABELS[w.p] || w.p : "";
           return `
             <div class="word-card" data-word="${w.h}">
               <div class="word-header">
                 <span class="word">${w.h}</span>
+                ${posLabel ? `<span class="pos-badge pos-${w.p}">${posLabel}</span>` : ""}
               </div>
               ${ipa ? `<div class="ipa">${ipa}</div>` : ""}
               <div class="meaning ${hasMeaning ? "" : "no-meaning"}">${hasMeaning ? w.e : "—"}</div>
@@ -114,9 +161,11 @@ export default function Home() {
         .map((w) => {
           const hasMeaning = w.e && w.e !== "(Hungarian word)";
           const ipa = w.i || "";
+          const posLabel = w.p ? POS_LABELS[w.p] || w.p : "";
           return `
             <div class="list-item">
               <span class="word">${w.h}</span>
+              ${posLabel ? `<span class="pos-badge pos-${w.p} list-pos-badge">${posLabel}</span>` : ""}
               ${ipa ? `<span class="ipa">${ipa}</span>` : ""}
               <span class="meaning ${hasMeaning ? "" : "no-meaning"}">${hasMeaning ? w.e : "—"}</span>
             </div>`;
@@ -132,7 +181,9 @@ export default function Home() {
       state.searchQuery = e.target.value;
       const clearBtn = document.getElementById("searchClear");
       if (clearBtn) clearBtn.style.display = state.searchQuery ? "block" : "none";
-      render();
+      // ponytail: debounce search — wait 150ms after last keystroke before re-rendering
+      clearTimeout(state._searchTimer);
+      state._searchTimer = setTimeout(() => render(), 150);
     }
 
     function onClearSearch() {
@@ -141,6 +192,8 @@ export default function Home() {
       const clearBtn = document.getElementById("searchClear");
       if (input) input.value = "";
       if (clearBtn) clearBtn.style.display = "none";
+      clearTimeout(state._searchTimer);
+      state._cacheKey = null;
       render();
     }
 
@@ -170,6 +223,27 @@ export default function Home() {
       $$(".diff-btn").forEach((b) =>
         b.classList.toggle("active", b.dataset.diff === (state.selectedDifficulty || ""))
       );
+      render();
+    }
+
+    function onPOSClick(pos) {
+      state.selectedPOS = state.selectedPOS === pos ? null : pos;
+      $$(".pos-btn").forEach((b) =>
+        b.classList.toggle("active", b.dataset.pos === (state.selectedPOS || ""))
+      );
+      render();
+    }
+
+    function onThemeClick(theme) {
+      state.selectedTheme = state.selectedTheme === theme ? null : theme;
+      $$(".theme-btn").forEach((b) =>
+        b.classList.toggle("active", b.dataset.theme === (state.selectedTheme || ""))
+      );
+      render();
+    }
+
+    function onSortChange(e) {
+      state.sortOrder = e.target.value;
       render();
     }
 
@@ -245,6 +319,42 @@ export default function Home() {
       if (mediumCount) mediumCount.textContent = medium;
       if (hardCount) hardCount.textContent = hard;
 
+      // POS filter counts and buttons
+      const posCounts = {};
+      wordDatabase.forEach((w) => {
+        if (w.p) posCounts[w.p] = (posCounts[w.p] || 0) + 1;
+      });
+      const posAll = document.getElementById("posAllCount");
+      if (posAll) posAll.textContent = wordDatabase.length;
+
+      let posHTML = `<button class="pos-btn active" data-pos="">All <span class="filter-count" id="posAllCount">${wordDatabase.length}</span></button>`;
+      POS_ORDER.forEach((p) => {
+        const c = posCounts[p] || 0;
+        if (c > 0) {
+          posHTML += `<button class="pos-btn" data-pos="${p}">${POS_LABELS[p]} <span class="filter-count">(${c})</span></button>`;
+        }
+      });
+      const posFilters = document.getElementById("posFilters");
+      if (posFilters) posFilters.innerHTML = posHTML;
+
+      // Theme filter counts and buttons
+      const themeCounts = {};
+      wordDatabase.forEach((w) => {
+        if (w.t) w.t.forEach((t) => { themeCounts[t] = (themeCounts[t] || 0) + 1; });
+      });
+      const themeAll = document.getElementById("themeAllCount");
+      if (themeAll) themeAll.textContent = wordDatabase.length;
+
+      let themeHTML = `<button class="theme-btn active" data-theme="">All <span class="filter-count" id="themeAllCount">${wordDatabase.length}</span></button>`;
+      THEME_ORDER.forEach((t) => {
+        const c = themeCounts[t] || 0;
+        if (c > 0) {
+          themeHTML += `<button class="theme-btn" data-theme="${t}">${THEME_LABELS[t]} <span class="filter-count">(${c})</span></button>`;
+        }
+      });
+      const themeFilters = document.getElementById("themeFilters");
+      if (themeFilters) themeFilters.innerHTML = themeHTML;
+
       const grid = document.getElementById("wordGrid");
       const list = document.getElementById("listView");
       if (grid) grid.style.display = "";
@@ -304,6 +414,26 @@ export default function Home() {
       $$(".diff-btn").forEach((btn) => {
         btn.addEventListener("click", () => onDifficultyClick(btn.dataset.diff));
       });
+
+      // POS and theme filters use event delegation (buttons are dynamically generated)
+      const posFiltersEl = document.getElementById("posFilters");
+      if (posFiltersEl) {
+        posFiltersEl.addEventListener("click", (e) => {
+          const btn = e.target.closest(".pos-btn");
+          if (btn) onPOSClick(btn.dataset.pos);
+        });
+      }
+
+      const themeFiltersEl = document.getElementById("themeFilters");
+      if (themeFiltersEl) {
+        themeFiltersEl.addEventListener("click", (e) => {
+          const btn = e.target.closest(".theme-btn");
+          if (btn) onThemeClick(btn.dataset.theme);
+        });
+      }
+
+      const sortSelect = document.getElementById("sortSelect");
+      if (sortSelect) sortSelect.addEventListener("change", onSortChange);
 
       $$(".tab-btn").forEach((btn) => {
         btn.addEventListener("click", () => {
@@ -404,6 +534,20 @@ export default function Home() {
               </button>
             </div>
           </div>
+
+          <div className="sidebar-section">
+            <div className="sidebar-title">Part of Speech</div>
+            <div className="filter-list" id="posFilters">
+              <button className="pos-btn active" data-pos="">All <span className="filter-count" id="posAllCount">0</span></button>
+            </div>
+          </div>
+
+          <div className="sidebar-section">
+            <div className="sidebar-title">Theme</div>
+            <div className="filter-list" id="themeFilters">
+              <button className="theme-btn active" data-theme="">All <span className="filter-count" id="themeAllCount">0</span></button>
+            </div>
+          </div>
         </aside>
 
         <main className="content-area">
@@ -448,13 +592,20 @@ export default function Home() {
                 <div className="count" id="resultCount">
                   Showing <strong>0</strong> words
                 </div>
-                <div className="view-toggles">
-                  <button className="view-btn active" data-view="cards">
-                    Cards
-                  </button>
-                  <button className="view-btn" data-view="list">
-                    List
-                  </button>
+                <div className="stats-controls">
+                  <select className="sort-select" id="sortSelect">
+                    <option value="default">Frequency ↓</option>
+                    <option value="alpha-asc">Alphabetical A–Z</option>
+                    <option value="alpha-desc">Alphabetical Z–A</option>
+                  </select>
+                  <div className="view-toggles">
+                    <button className="view-btn active" data-view="cards">
+                      Cards
+                    </button>
+                    <button className="view-btn" data-view="list">
+                      List
+                    </button>
+                  </div>
                 </div>
               </div>
 
